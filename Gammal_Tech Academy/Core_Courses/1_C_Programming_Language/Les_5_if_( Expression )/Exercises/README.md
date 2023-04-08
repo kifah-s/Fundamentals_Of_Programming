@@ -6,7 +6,7 @@
 
 3. A program for traders, requires a person to enter two different numbers the first expressing the value of the initial money and the second expressing the total money after a month and calculating the value of the difference, if the profit prints "profit =.... "And if the loss prints" loss =...... "
 
-4. Asancer Programme (elevator) : Some elevators should not be entered by more than 5 people and their total weight should be less than 500 kilos so that the elevator does not collapse.  
+4. Elevator Programme : Some elevators should not be entered by more than 5 people and their total weight should be less than 500 kilos so that the elevator does not collapse.  
    Required : Write a program that asks a person to enter 5 numbers and collect them, if the total is greater than 500 prints "Error, more than 500 kg", and if the total is less than or equal to 500 prints "Okay"
 
 5. The playstation program : when playing Match Football on the playstation is calculated the earner and loser based on the number of goals.  
