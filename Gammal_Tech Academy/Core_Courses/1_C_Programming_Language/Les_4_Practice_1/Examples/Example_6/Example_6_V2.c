@@ -12,6 +12,7 @@ int main()
 
     printf("Please Enter your birthday : ");
     scanf("%d/%d/%d", &day, &month, &year);
+
     printf("\n--> %d %d %d\n\n\n", day, month, year);
 
     return 0;

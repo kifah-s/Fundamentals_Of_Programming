@@ -1,11 +1,13 @@
 
 
-/* Example if ( Expression ) */
+/* >>> Example <<< */
 
 #include <stdio.h>
 
 int main(void)
 {
+    printf("\n\nYou welcome in Example ..\n\n");
+
     int ticket;
 
     printf("Please, enter price: ");
