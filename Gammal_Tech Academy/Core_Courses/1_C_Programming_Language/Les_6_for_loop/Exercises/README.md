@@ -17,3 +17,5 @@
 8. A program that asks a person to enter two numbers, second one smaller than the first one; then prints the numbers from to first one to the second one.
 
 9. A program that asks a person to enter two different numbers and print the numbers from the smallest to the largest.
+
+10. A program that asks the user for the password if the user enters any number other than 12345 refers the question. If 12345 goes in it says "password is correct".
