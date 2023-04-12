@@ -2,7 +2,7 @@
 
 /* >>> Positive Or Negative Program  - ( Version - 2 )<<< */
 
-/* >>> A program that asks a person to enter different numbers if the number is positive and his side applies the word "is positive" and if he negatively applies the number and his side applies the word "is negative" and the program closes to what enters 0 (using while). <<< */
+/* >>> A program that asks a person to enter different numbers if the number is positive and his side applies the word "is positive" and if he negatively applies the number and his side applies the word "is negative" (using while). <<< */
 
 #include <stdio.h>
 
