@@ -1,6 +1,4 @@
-
-
-/* >>> Problem Solving <<< */
+/* >>> Problem Solving - ( Version - 2 ) <<< */
 
 /* >>> Problem statement
 
@@ -28,17 +26,29 @@ Print "Incorrect" if the password is wrong, otherwise print "Correct". <<< */
 
 int main(void)
 {
-    printf("\n\nYou welcome in Problem Solving ..\n\n");
+    printf("\n\nYou welcome in Problem Solving - ( Version - 2 ) ..\n\n");
 
-    int password, pass_1 = 1111, pass_2 = 2222, pass_3 = 3333;
+    int password, pass_1 = 1111, pass_2 = 2222, pass_3 = 3333, i = 1;
 
-    do
+    printf("Please enter a password : ");
+    scanf("%d", &password);
+
+    if (password == pass_1 || password == pass_2 || password == pass_3)
     {
-        printf("Please enter a password : ");
-        scanf("%d", &password);
-    } while (password != pass_1 && password != pass_2 && password != pass_3);
+        printf("\n\' Correct \'");
+    }
+    else
+    {
+        do
+        {
+            i++;
+            printf("\n\'  InCorrect \'");
+            printf("\n\nPlease enter a password : ");
+            scanf("%d", &password);
+        } while (i < 5 && password != pass_1 && password != pass_2 && password != pass_3);
 
-    printf("\n\' Correct \'");
+        printf("\n\" Please Try again after 5 minutes \"");
+    }
 
     printf("\n\n\n");
 }
