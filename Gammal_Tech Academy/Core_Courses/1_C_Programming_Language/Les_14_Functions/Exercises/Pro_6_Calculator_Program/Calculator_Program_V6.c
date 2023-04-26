@@ -1,6 +1,6 @@
 
 
-/* >>> Calculator Program - ( Version -  ) <<< */
+/* >>> Calculator Program - ( Version - 6 ) <<< */
 
 /* >>> A program calculator that performs operations (combination, subtraction, multiplication and division) using the functions. <<< */
 
