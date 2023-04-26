@@ -1,6 +1,6 @@
 
 
-/* >>> Border Program <<< */
+/* >>> Border Program - ( Version - 1 ) <<< */
 
 /* >>> A program in which function her job is to draw a line like "= = = = = = = =". <<< */
 
@@ -10,7 +10,7 @@ void border();
 
 int main()
 {
-    printf("\n\nYou welcome in Border Program .. \n\n");
+    printf("\n\nYou welcome in Border Program - ( Version - 1 ) .. \n\n");
 
     border();
     border();

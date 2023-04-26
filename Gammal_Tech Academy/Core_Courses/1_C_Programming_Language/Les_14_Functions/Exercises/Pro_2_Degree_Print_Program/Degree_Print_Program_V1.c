@@ -1,6 +1,6 @@
 
 
-/* >>> Degree Print Program <<< */
+/* >>> Degree Print Program - ( Version - 1 ) <<< */
 
 /* >>> A program in which function her job is to print the word "degree = 98%". <<< */
 
@@ -10,7 +10,7 @@ void degree();
 
 int main()
 {
-    printf("\n\nYou welcome in Degree Print Program .. \n\n");
+    printf("\n\nYou welcome in Degree Print Program - ( Version - 1 ) .. \n\n");
 
     degree();
 
