@@ -17,6 +17,7 @@ int main()
     return 0;
 }
 
+// Function ..
 void gammal_tech()
 {
     printf("Hello Gammal Tech\n\n\n");

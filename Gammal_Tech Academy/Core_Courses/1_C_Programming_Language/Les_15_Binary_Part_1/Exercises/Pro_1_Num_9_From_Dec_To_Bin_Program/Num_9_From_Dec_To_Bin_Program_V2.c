@@ -21,7 +21,7 @@ int main(void)
     return 0;
 }
 
-// Function
+// Function ..
 void decimal_to_binary(int n)
 {
     int binary[32], i = 0;

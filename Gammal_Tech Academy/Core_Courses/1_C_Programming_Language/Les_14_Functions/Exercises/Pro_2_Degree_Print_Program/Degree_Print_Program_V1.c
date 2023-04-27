@@ -17,6 +17,7 @@ int main()
     return 0;
 }
 
+// Function ..
 void degree()
 {
     printf("Degree = 98 %\n\n\n");

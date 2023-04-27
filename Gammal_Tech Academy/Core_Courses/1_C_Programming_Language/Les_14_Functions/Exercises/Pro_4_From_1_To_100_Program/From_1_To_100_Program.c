@@ -19,6 +19,7 @@ int main()
     return 0;
 }
 
+// Function ..
 int from_1_to_100()
 {
     int i;

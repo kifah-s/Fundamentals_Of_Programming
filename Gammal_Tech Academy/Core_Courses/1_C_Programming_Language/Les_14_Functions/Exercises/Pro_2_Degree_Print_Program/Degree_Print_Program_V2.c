@@ -22,6 +22,7 @@ int main()
     return 0;
 }
 
+// Function ..
 void degree(int deg)
 {
     printf("\nDegree = %d %\n\n\n", deg);
