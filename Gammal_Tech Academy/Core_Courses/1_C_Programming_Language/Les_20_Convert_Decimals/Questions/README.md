@@ -3,7 +3,7 @@
 #### Answer the following questions according to what you learned from the video.
 
 1. 5 in Decimal is ....... in Binary  
-   1010
+   101
 
 2. 8 in Decimal is ....... in Binary  
    1000
