@@ -1,21 +1,13 @@
 # Advanced_Exercises ..
 
-1.
+1.  A program that prints a triangle in the form of :
 
-2.
+        1
 
-3.
+        22
 
-4.
+        333
 
-5.
+        4444
 
-6.
-
-7.
-
-8.
-
-9.
-
-10 .
+        55555
