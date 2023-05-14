@@ -20,6 +20,7 @@ int main()
 // Functions;
 int name_and_age()
 {
+    // Declaration array of characters and variable;
     char name[20];
     int age;
 

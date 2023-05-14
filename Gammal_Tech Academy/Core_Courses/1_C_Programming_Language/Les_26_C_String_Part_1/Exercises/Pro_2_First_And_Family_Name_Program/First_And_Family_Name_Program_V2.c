@@ -20,6 +20,7 @@ int main()
 // Functions;
 int first_and_family_name()
 {
+    // Declaration array of characters;
     char first_name[20], family_name[20];
 
     // Receive values from the user;
