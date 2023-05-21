@@ -26,7 +26,7 @@ int check()
     int i, letters = 0, special_marks = 0, numbers = 0, spaces = 0;
 
     // Receive values from the user;
-    printf("Please enter a sentence \" max - 50 characters \" : \n");
+    printf("Please enter a sentence \" max - 100 characters \" : \n");
     fgets(arr, 100, stdin);
 
     for (i = 0; i <= strlen(arr); i++)
