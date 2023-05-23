@@ -30,7 +30,7 @@ int structs()
 
     struct student s_1 = {"kifah", 27, 98};
 
-    printf("Name : %s,  Age : %d,   total_grades = %d\n\n", s_1.name, s_1.age, s_1.total_grades);
+    printf("Name : %s,  Age : %d,   Total grades = %d\n\n", s_1.name, s_1.age, s_1.total_grades);
 
     return 0;
 }
