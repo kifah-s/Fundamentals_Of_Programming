@@ -1,6 +1,6 @@
 
 
-/* >>> Example <<< */
+/* >>> Example 1 <<< */
 
 /* >>> From decimal to octal <<< */
 

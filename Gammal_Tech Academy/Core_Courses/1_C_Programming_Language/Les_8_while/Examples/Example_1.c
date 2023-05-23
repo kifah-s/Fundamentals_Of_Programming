@@ -1,6 +1,6 @@
 
 
-/* >>> Example - 1 <<< */
+/* >>> Example 1 <<< */
 
 /* >>> A program that prints the numbers from 0 to 4 <<< */
 

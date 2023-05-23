@@ -1,6 +1,6 @@
 
 
-/* >>> Example <<< */
+/* >>> Example 1 <<< */
 
 #include <stdio.h>
 #include <math.h>
