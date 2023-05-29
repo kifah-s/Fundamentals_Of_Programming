@@ -1,6 +1,6 @@
 
 
-/* >>> Name Print Program <<< */
+/* >>> Name Print Program ( Version 1 ) <<< */
 
 /* >>> A program that prints your name on the screen <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Name Print Program ..\n\n");
+    printf("\n\nYou welcome in Name Print Program ( Version 1 ) ..\n\n");
     printf("My name is kifah saloum\n\n\n");
 
     return 0;
