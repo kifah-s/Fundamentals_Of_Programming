@@ -6,12 +6,13 @@
 
 #include <stdio.h>
 
-void welcome_message();
+void welcome_message(char message[]);
 void print_hello(char h1[]);
 
 int main()
 {
-    welcome_message();
+    char message[] = {"\n\nYou welcome in Hello 5 Times Program ( Version 3 ) ..\n\n"};
+    welcome_message(message);
 
     char hello[] = {"Hello"};
     print_hello(hello);
@@ -22,9 +23,9 @@ int main()
 // Functions ..
 
 // Welcome message function;
-void welcome_message()
+void welcome_message(char message[])
 {
-    printf("\n\nYou welcome in Hello 5 Times Program ( Version 3 ) ..\n\n");
+    printf("%s", message);
 }
 
 // Printing hello function;

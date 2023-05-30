@@ -6,12 +6,12 @@
 
 #include <stdio.h>
 
-void welcome_message();
+void welcome_message(char message[]);
 void name_function(char name[]);
 
 int main()
 {
-    welcome_message();
+    welcome_message("\n\nYou welcome in Name Print Program ( Version 3 ) ..\n\n");
     name_function("kifah saloum");
 
     return 0;
@@ -20,9 +20,9 @@ int main()
 // Functions ..
 
 // Welcome message function;
-void welcome_message()
+void welcome_message(char message[])
 {
-    printf("\n\nYou welcome in Name Print Program ( Version 3 ) ..\n\n");
+    printf("%s",message);
 }
 
 void name_function(char name[])

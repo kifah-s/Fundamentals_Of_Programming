@@ -7,12 +7,13 @@ Required : Write a program that prints the names of your close friends and their
 
 #include <stdio.h>
 
-void welcome_massage();
+void welcome_massage(char message[]);
 void close_friends(char close_friends[], char phone[]);
 
 int main()
 {
-    welcome_massage();
+    char message[] = {"\n\nYou welcome in Phone Number Program ( Version 4 ) ..\n\n"};
+    welcome_massage(message);
 
     char close_friend[] = {"My close friends and their phone numbers they :"};
     char phone[] = {"- kifah : 0998621421"};
@@ -25,9 +26,9 @@ int main()
 // Functions ..
 
 // Welcome massage function;
-void welcome_massage()
+void welcome_massage(char message[])
 {
-    printf("\n\nYou welcome in Phone Number Program ( Version 4 ) ..\n\n");
+    printf("%s", message);
 }
 
 // close friends function;
