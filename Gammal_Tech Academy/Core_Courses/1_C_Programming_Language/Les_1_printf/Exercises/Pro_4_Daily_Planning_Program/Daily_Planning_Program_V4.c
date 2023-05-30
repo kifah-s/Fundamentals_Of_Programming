@@ -7,23 +7,21 @@ Required : Write a program that prints out the tasks you have to do tomorrow. <<
 
 #include <stdio.h>
 
-void welcome_massage(char welcome[]);
-void daily_program(char program[], char university[], char english[], char programming[], char gym[], char private[], char sleeping[], char dreams[]);
+void welcome_massage(char welcome_massage[]);
+void daily_program(char program[]);
 
 int main()
 {
-    char welcome[] = {"\n\nYou welcome in Daily Planning Program ( Version 4 ) ..\n\n"};
-    welcome_massage(welcome);
+    welcome_massage("\n\nYou welcome in Daily Planning Program ( Version 4 ) ..\n\n");
 
-    char program[] = {"My daily program is : \n"};
-    char university[] = {"1 - University study from 5 am to 7 am.\n"};
-    char english[] = {"2 - English study from 7 am to 9 am.\n"};
-    char programming[] = {"3 - study and work in program from 9 am to 5 pm.\n"};
-    char gym[] = {"4 - go to the gym from 5 pm to 7 pm.\n"};
-    char private[] = {"5 - this is my private time from 7 pm to 10 pm.\n"};
-    char sleeping[] = {"6 - this is sleeping time 10 pm.\n"};
-    char dreams[] = {"and happy dreams\n\n\n"};
-    daily_program(program, university, english, programming, gym, private, sleeping, dreams);
+    daily_program("My daily program is : \n");
+    daily_program("1 - University study from 5 am to 7 am.\n");
+    daily_program("2 - English study from 7 am to 9 am.\n");
+    daily_program("3 - study and work in program from 9 am to 5 pm.\n");
+    daily_program("4 - go to the gym from 5 pm to 7 pm.\n");
+    daily_program("5 - this is my private time from 7 pm to 10 pm.\n");
+    daily_program("6 - this is sleeping time 10 pm.\n");
+    daily_program("and happy dreams\n\n\n");
 
     return 0;
 }
@@ -31,20 +29,14 @@ int main()
 // Functions ..
 
 // Welcome massage function;
-void welcome_massage(char welcome[])
+void welcome_massage(char welcome_massage[])
 {
-    printf("%s", welcome);
+    printf("%s", welcome_massage);
 }
 
 // Daily program function;
-void daily_program(char program[], char university[], char english[], char programming[], char gym[], char private[], char sleeping[], char dreams[])
+void daily_program(char program[])
 {
     printf("%s", program);
-    printf("%s", university);
-    printf("%s", english);
-    printf("%s", programming);
-    printf("%s", gym);
-    printf("%s", private);
-    printf("%s", sleeping);
-    printf("%s", dreams);
+    
 }
