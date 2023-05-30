@@ -8,18 +8,19 @@ Required : Write a program that prints the names of your close friends and their
 #include <stdio.h>
 
 void welcome_massage(char message[]);
-void close_friends(char close_friends[], char phone[]);
+void close_friends_phone(char close_friends_phone[]);
 
 int main()
 {
-    char message[] = {"\n\nYou welcome in Phone Number Program ( Version 4 ) ..\n\n"};
-    welcome_massage(message);
-
-    char close_friend[] = {"My close friends and their phone numbers they :"};
-    char phone[] = {"- kifah : 0998621421"};
-
-    close_friends(close_friend, phone);
-
+    welcome_massage("\n\nYou welcome in Phone Number Program ( Version 4 ) ..\n\n");
+    
+    close_friends_phone("My close friends and their phone numbers they :");
+    close_friends_phone("- kifah : 0998621421");
+    close_friends_phone("- kifah : 0998621421");
+    close_friends_phone("- kifah : 0998621421");
+    close_friends_phone("- kifah : 0998621421");
+    close_friends_phone("- kifah : 0998621421");
+    
     return 0;
 }
 
@@ -32,12 +33,8 @@ void welcome_massage(char message[])
 }
 
 // close friends function;
-void close_friends(char close_friends[], char phone[])
+void close_friends_phone(char close_friends_phone[])
 {
-    printf("%s\n", close_friends);
-    printf("%s\n", phone);
-    printf("%s\n", phone);
-    printf("%s\n", phone);
-    printf("%s\n", phone);
-    printf("%s\n\n\n", phone);
+    
+    printf("%s\n\n", close_friends_phone);
 }

@@ -1,6 +1,6 @@
 
 
-/* >>> Hello 5 Times Program ( Version 4 ) <<< */
+/* >>> Hello 5 Times Program ( Version 5 ) <<< */
 
 /* >>> A program that prints the word "Hello" using 5 different printf orders <<< */
 
@@ -11,12 +11,11 @@ void print_hello(char h1[]);
 
 int main()
 {
-    welcome_message("\n\nYou welcome in Hello 5 Times Program ( Version 4 ) ..\n\n");
-    print_hello("Hello");
-    print_hello("Hello");
-    print_hello("Hello");
-    print_hello("Hello");
-    print_hello("Hello");
+    char message[] = {"\n\nYou welcome in Hello 5 Times Program ( Version 5 ) ..\n\n"};
+    welcome_message(message);
+
+    char hello[] = {"Hello"};
+    print_hello(hello);
 
     return 0;
 }
@@ -32,6 +31,9 @@ void welcome_message(char message[])
 // Printing hello function;
 void print_hello(char h1[])
 {
-    
-    printf("%s\n\n", h1);
+    printf("%s\n", h1);
+    printf("%s\n", h1);
+    printf("%s\n", h1);
+    printf("%s\n", h1);
+    printf("%s\n\n\n", h1);
 }
