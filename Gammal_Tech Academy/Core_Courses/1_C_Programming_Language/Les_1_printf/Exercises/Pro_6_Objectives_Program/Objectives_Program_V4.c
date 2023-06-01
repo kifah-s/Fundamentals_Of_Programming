@@ -25,6 +25,7 @@ int main()
     return 0;
 }
 
+// Function ..
 // Welcome massage function;
 void welcome_massage(char massage[])
 {
