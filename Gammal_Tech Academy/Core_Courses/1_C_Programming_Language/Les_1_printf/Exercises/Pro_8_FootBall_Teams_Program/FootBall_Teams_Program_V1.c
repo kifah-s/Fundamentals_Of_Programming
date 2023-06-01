@@ -1,6 +1,6 @@
 
 
-/* >>> FootBall Teams Program <<< */
+/* >>> FootBall Teams Program ( Version 1 ) <<< */
 
 /* >>> FootBall Teams Program : If you are a fan of football there are some games you enjoy watching when two particular teams face off..
 Required : Write a program that prints 3 football matches such as:( barcelona vs real madrid )  <<< */
@@ -9,7 +9,7 @@ Required : Write a program that prints 3 football matches such as:( barcelona vs
 
 int main()
 {
-    printf("\n\nYou welcome in FootBall Teams Program ..\n\n");
+    printf("\n\nYou welcome in FootBall Teams Program ( Version 1 ) ..\n\n");
     printf("This is 3 matches for champion league : \n");
     printf("( Barcelona vs Real madrid )\n");
     printf("( Barcelona vs Bayern munich )\n");
