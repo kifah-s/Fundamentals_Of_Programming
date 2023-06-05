@@ -1,6 +1,6 @@
 
 
-/* >>> Program Favorite Foods And The Ingredients <<< */
+/* >>> Program Favorite Foods And The Ingredients ( Version 1 ) <<< */
 
 /* >>> A program prints your favorite foods and the ingredients of each meal <<< */
 
@@ -8,7 +8,8 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Program Favorite Foods And The Ingredients\n\n");
+    printf("\n\nYou welcome in Program Favorite Foods And The Ingredients ( Version 1 ) ..\n\n");
+    
     printf("The favorite foods :\n");
     printf("1 - Pizza\n2 - Pizza\n3 - Pizza\n\n");
     printf("Ingredients of each meal :\n");
