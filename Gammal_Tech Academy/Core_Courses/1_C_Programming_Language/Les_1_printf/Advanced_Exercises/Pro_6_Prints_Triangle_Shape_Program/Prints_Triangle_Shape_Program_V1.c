@@ -1,6 +1,6 @@
 
 
-/* >>> Triangle Shape Drawing Program <<< */
+/* >>> Triangle Shape Drawing Program ( Version 1 ) <<< */
 
 /* >>> A program that drawing triangle shape using * <<< */
 
@@ -8,7 +8,8 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Triangle Shape Drawing Program\n\n");
+    printf("\n\nYou welcome in Triangle Shape Drawing Program ( Version 1 ) ..\n\n");
+
     printf("\n               *\n");
     printf("             *   *\n");
     printf("            *     *\n");
