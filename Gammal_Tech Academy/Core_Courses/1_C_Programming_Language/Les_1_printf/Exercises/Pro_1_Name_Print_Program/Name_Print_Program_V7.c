@@ -1,6 +1,6 @@
 
 
-/* >>> Name Print Program ( Version 6 ) <<< */
+/* >>> Name Print Program ( Version 7 ) <<< */
 
 /* >>> A program that prints your name on the screen <<< */
 
@@ -12,7 +12,7 @@ char *name_function(char name[]);
 int main()
 {
     
-    printf(welcome_message("\n\nYou welcome in Name Print Program ( Version 6 ) ..\n\n"));
+    printf(welcome_message("\n\nYou welcome in Name Print Program ( Version 7 ) ..\n\n"));
 
     printf("My name is %s\n\n\n", name_function("kifah saloum"));
 
