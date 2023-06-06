@@ -11,10 +11,10 @@ void name_function(char name[]);
 
 int main()
 {
-    char message[] = {"\n\nYou welcome in Name Print Program ( Version 4 ) ..\n\n"};
-    welcome_message(message);
+    char mas[] = {"\n\nYou welcome in Name Print Program ( Version 4 ) ..\n\n"};
+    welcome_message(mas);
 
-    char name[] = "kifah saloum";
+    char name[] = {"kifah saloum"};
     name_function(name);
 
     return 0;
@@ -25,7 +25,7 @@ int main()
 // Welcome message function;
 void welcome_message(char message[])
 {
-    printf("%s", message);
+    printf("%s",message);
 }
 
 void name_function(char name[])
