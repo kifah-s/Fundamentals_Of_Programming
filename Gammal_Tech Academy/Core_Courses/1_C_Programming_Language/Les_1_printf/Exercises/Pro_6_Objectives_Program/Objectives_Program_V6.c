@@ -46,21 +46,25 @@ void objectives(char obj[])
     printf("%s", obj);
 }
 
+// professional function;
 void professional(char pro[])
 {
     printf("%s", pro);
 }
 
+// buying function;
 void buying(char buy[])
 {
     printf("%s", buy);
 }
 
+// traveling function;
 void traveling(char tra[])
 {
     printf("%s", tra);
 }
 
+// fitness function;
 void fitness(char fit[])
 {
     printf("%s", fit);

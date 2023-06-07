@@ -1,6 +1,6 @@
 
 
-/* >>> Objectives Program ( Version 7 ) <<< */
+/* >>> Objectives Program ( Version 8 ) <<< */
 
 /* >>> Objectives Program : Every person has some goals that he dreams of achieving in his life and you always have to make your goals ahead of you to remember them constantly..
 Required : write a program that prints out the goals you dream of achieving. <<< */
@@ -16,34 +16,28 @@ char *fitness(char fit[]);
 
 int main()
 {
-    char massage[] = {"\n\nYou welcome in Objectives Program ( Version 7 ) ..\n\n"};
-    welcome_massage(massage);
-    char *mas[] = {massage};
+    char massage[] = {"\n\nYou welcome in Objectives Program ( Version 8 ) ..\n\n"};
+    char *mas[] = {welcome_massage(massage)};
     printf(*mas);
 
     char obj[] = {"My Objectives is : \n\n"};
-    objectives(obj);
-    char *o[] = {obj};
+    char *o[] = {objectives(obj)};
     printf(*o);
 
     char pro[] = {"- Professional software engineer\n"};
-    professional(pro);
-    char *p[] = {pro};
+    char *p[] = {professional(pro)};
     printf(*p);
 
     char buy[] = {"- Buying a car\n"};
-    buying(buy);
-    char *b[] = {buy};
+    char *b[] = {buying(buy)};
     printf(*b);
 
     char tra[] = {"- Traveling\n"};
-    traveling(tra);
-    char *t[] = {tra};
+    char *t[] = {traveling(tra)};
     printf(*t);
 
     char fit[] = {"- Fitness body\n\n\n"};
-    fitness(fit);
-    char *f[] = {fit};
+    char *f[] = {fitness(fit)};
     printf(*f);
 
     return 0;
