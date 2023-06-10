@@ -1,6 +1,6 @@
 
 
-/* >>> Travel Program ( Version 8 ) <<< */
+/* >>> Travel Program ( Version 9 ) <<< */
 
 /* >>> Travel Program : One of the hobbies many people like is to travel to different countries and learn about people's cultures..
 Required : Write a program that prints 5 countries you want to travel to. <<< */
@@ -17,14 +17,27 @@ char *state_5_fun();
 
 int main()
 {
-    printf(wel_mas_fun());
-    printf(tra_fun());
-    printf(state_1_fun());
-    printf(state_2_fun());
-    printf(state_3_fun());
-    printf(state_4_fun());
-    printf(state_5_fun());
-    
+
+    char *wel[] = {wel_mas_fun()};
+    printf(*wel);
+
+    char *tra[] = {tra_fun()};
+    printf(*tra);
+
+    char *sta_1[] = {state_1_fun()};
+    printf(*sta_1);
+
+    char *sta_2[] = {state_2_fun()};
+    printf(*sta_2);
+
+    char *sta_3[] = {state_3_fun()};
+    printf(*sta_3);
+
+    char *sta_4[] = {state_4_fun()};
+    printf(*sta_4);
+
+    char *sta_5[] = {state_5_fun()};
+    printf(*sta_5);
 
     return 0;
 }
@@ -33,7 +46,7 @@ int main()
 // Welcome massage function;
 char *wel_mas_fun()
 {
-    char *mas[] = {("\n\nYou welcome in Travel Program ( Version 8 ) ..\n\n")};
+    char *mas[] = {("\n\nYou welcome in Travel Program ( Version 9 ) ..\n\n")};
 
     return *mas;
 }
@@ -69,7 +82,6 @@ char *state_3_fun()
 
     return *hol;
 }
-
 
 // states fuction;
 char *state_4_fun()
