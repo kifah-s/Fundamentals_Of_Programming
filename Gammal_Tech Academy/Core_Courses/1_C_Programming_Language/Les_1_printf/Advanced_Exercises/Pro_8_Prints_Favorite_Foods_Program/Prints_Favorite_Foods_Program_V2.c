@@ -29,6 +29,5 @@ void fav_food_fun()
 {
     printf("The favorite foods :\n");
     printf("1 - Pizza\n2 - Pizza\n3 - Pizza\n\n");
-    printf("1 - Pizza\n2 - Pizza\n3 - Pizza\n\n");
     printf("1 - :\n.....\n.....\n.....\n\n2 - :\n.....\n.....\n.....\n\n3 - :\n.....\n.....\n.....\n\n\n");
 }
