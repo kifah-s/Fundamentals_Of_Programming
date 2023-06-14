@@ -1,6 +1,6 @@
 
 
-/* >>> Triangle Shape Drawing Program ( Version 11 ) <<< */
+/* >>> Triangle Shape Drawing Program ( Version 10 ) <<< */
 
 /* >>> A program that drawing triangle shape using * <<< */
 
@@ -11,13 +11,15 @@ char *tri_fun(char *tri[]);
 
 int main()
 {
-    char *mas[] = {"\n\nYou welcome in Triangle Shape Drawing Program ( Version 11 ) ..\n\n"};
-    /* char *wel_mas[] = {wel_mas_fun(mas)}; */
-    printf(wel_mas_fun(mas));
+    char *mas[] = {"\n\nYou welcome in Triangle Shape Drawing Program ( Version 10 ) ..\n\n"};
+    char *wel_mas[] = {wel_mas_fun(mas)};
+    /* printf(*wel_mas); */
+    printf("%s", *wel_mas);
 
     char *tri[] = {"\n               *\n             *   *\n            *     *\n           *       *\n          *         *\n         *           *\n        *             *\n       *               *\n      *                 *\n     *********************\n\n\n"};
-    /* char *tri1[] = {tri_fun(tri)}; */
-    printf(tri_fun(tri));
+    char *tri1[] = {tri_fun(tri)};
+    /* printf(*tri1); */
+    printf("%s", *tri1);
 
     return 0;
 }
@@ -26,8 +28,7 @@ int main()
 // Welcome massage function;
 char *wel_mas_fun(char *mas[])
 {
-    /* printf("\n\nYou welcome in Triangle Shape Drawing Program ( Version 11 ) ..\n\n"); */
-
+    /* printf("\n\nYou welcome in Triangle Shape Drawing Program ( Version 10 ) ..\n\n"); */
 
     return *mas;
 }
@@ -45,7 +46,6 @@ char *tri_fun(char *tri[])
         printf("       *               *\n");
         printf("      *                 *\n");
         printf("     *********************\n\n\n"); */
-
 
     return *tri;
 }

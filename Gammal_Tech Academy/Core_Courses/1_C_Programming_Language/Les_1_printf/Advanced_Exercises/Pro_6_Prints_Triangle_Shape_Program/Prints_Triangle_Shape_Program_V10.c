@@ -12,7 +12,7 @@ char *tri_fun(char *tri[]);
 int main()
 {
     char *mas[] = {"\n\nYou welcome in Triangle Shape Drawing Program ( Version 10 ) ..\n\n"};
-    char *wel_mas[] = {(wel_mas_fun(mas))};
+    char *wel_mas[] = {wel_mas_fun(mas)};
     printf(*wel_mas);
 
     char *tri[] = {"\n               *\n             *   *\n            *     *\n           *       *\n          *         *\n         *           *\n        *             *\n       *               *\n      *                 *\n     *********************\n\n\n"};

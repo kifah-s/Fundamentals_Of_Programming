@@ -1,0 +1,41 @@
+
+
+/* >>> Mobile Apps Software ( Version 9 ) <<< */
+
+/* >>> Mobile Apps Software : When you buy a new mobile there are a lot of apps you want to download and enjoy ..
+Required : Write a program that prints the names of apps you like to use. <<< */
+
+#include <stdio.h>
+
+char *wel_mas_fun();
+char *mob_app_fun();
+
+int main()
+{
+    char *wel_com[] = {(wel_mas_fun())};
+    /* printf(*wel_com); */
+    printf("%s", *wel_com);
+
+    char *mop_app[] = {(mob_app_fun())};
+    /* printf(*mop_app); */
+    printf("%s", *mop_app);
+
+    return 0;
+}
+
+// Function ..
+// Welcome massage function;
+char *wel_mas_fun()
+{
+    char *wel_mas = {("\n\nYou welcome in Mobile Apps Software Program ( Version 9 ) ..\n\n")};
+
+    return wel_mas;
+}
+
+// mobile apps fuction;
+char *mob_app_fun()
+{
+    char *mop_app = {("The names of apps my like to use is : YouTube\n\n\n")};
+
+    return mop_app;
+}
