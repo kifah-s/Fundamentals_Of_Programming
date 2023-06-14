@@ -1,23 +1,21 @@
 
 
-/* >>> letter " X " Drawing Program ( Version 13 ) <<< */
+/* >>> letter " X " Drawing Program ( Version 14 ) <<< */
 
 /* >>> A program that drawing letter " X " using * <<< */
 
 #include <stdio.h>
 
-char *wel_mas_fun(char *mas[]);
-char *let_fun(char *let[]);
+char *wel_mas_fun();
+char *let_fun();
 
 int main()
 {
-    char *mas[] = {"\n\nYou welcome in Letter \" X \" Drawing Program ( Version 13 ) ..\n\n\n"};
-    char *wel_mas[] = {wel_mas_fun(mas)};
+    char *wel_mas[] = {wel_mas_fun()};
     /* printf(*wel_mas); */
     printf("%s", *wel_mas);
 
-    char *let[] = {" *                *\n   *            *\n     *        *\n       *    *\n          *\n       *     *\n     *         *\n   *             *\n*                   *\n\n\n"};
-    char *let_x[] = {let_fun(let)};
+    char *let_x[] = {let_fun()};
     /* printf(*let_x); */
     printf("%s", *let_x);
 
@@ -26,15 +24,17 @@ int main()
 
 // Functions ..
 // Welcome massage function;
-char *wel_mas_fun(char *mas[])
+char *wel_mas_fun()
 {
-    /* printf("\n\nYou welcome in Letter \" X \" Drawing Program ( Version 13 ) ..\n\n\n"); */
+    /* printf("\n\nYou welcome in Letter \" X \" Drawing Program ( Version 14 ) ..\n\n\n"); */
+
+    char *mas[] = {"\n\nYou welcome in Letter \" X \" Drawing Program ( Version 14 ) ..\n\n\n"};
 
     return *mas;
 }
 
 // Printing letter function;
-char *let_fun(char *let[])
+char *let_fun()
 {
     /* printf(" *                *\n");
         printf("   *            *\n");
@@ -46,5 +46,7 @@ char *let_fun(char *let[])
         printf("   *             *\n");
         printf("*                   *\n\n\n"); */
 
-    return *let;
+    char *let_x[] = {" *                *\n   *            *\n     *        *\n       *    *\n          *\n       *     *\n     *         *\n   *             *\n*                   *\n\n\n"};
+
+    return *let_x;
 }

@@ -1,6 +1,6 @@
 
 
-/* >>> Letter " h " Drawing Program ( Version 13 ) <<< */
+/* >>> Letter " h " Drawing Program ( Version 15 ) <<< */
 
 /* >>> A program that drawing letter " h " using * <<< */
 
@@ -11,13 +11,11 @@ char *let_fun();
 
 int main()
 {
-    char *wel_mas[] = {wel_mas_fun()};
-    /* printf(*wel_mas); */
-    printf("%s", *wel_mas);
+    /* printf(wel_mas_fun()); */
+    printf("%s", wel_mas_fun());
 
-    char *let_h[] = {let_fun()};
-    /* printf(*let_h); */
-    printf("%s", *let_h);
+    /* printf(let_fun()); */
+    printf("%s", let_fun());
 
     return 0;
 }
@@ -26,9 +24,9 @@ int main()
 // Welcome massage function;
 char *wel_mas_fun()
 {
-    /* printf("\n\nYou welcome in Letter \" h \" Drawing Program ( Version 13 ) ..\n\n"); */
+    /* printf("\n\nYou welcome in Letter \" h \" Drawing Program ( Version 15 ) ..\n\n"); */
 
-    char *mas[] = {"\n\nYou welcome in Letter \" h \" Drawing Program ( Version 13 ) ..\n\n"};
+    char *mas[] = {"\n\nYou welcome in Letter \" h \" Drawing Program ( Version 15 ) ..\n\n"};
 
     return *mas;
 }

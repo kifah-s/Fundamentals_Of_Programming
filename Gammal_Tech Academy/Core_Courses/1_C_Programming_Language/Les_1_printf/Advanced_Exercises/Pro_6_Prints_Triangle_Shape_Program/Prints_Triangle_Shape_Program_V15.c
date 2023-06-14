@@ -1,6 +1,6 @@
 
 
-/* >>> Triangle Shape Drawing Program ( Version 8 ) <<< */
+/* >>> Triangle Shape Drawing Program ( Version 15 ) <<< */
 
 /* >>> A program that drawing triangle shape using * <<< */
 
@@ -12,9 +12,11 @@ char *tri_fun();
 int main()
 {
 
-    printf(wel_mas_fun());
-    
-    printf(tri_fun());
+    /* printf(wel_mas_fun()); */
+    printf("%s", wel_mas_fun());
+
+    /* printf(tri_fun()); */
+    printf("%s", tri_fun());
 
     return 0;
 }
@@ -23,9 +25,9 @@ int main()
 // Welcome massage function;
 char *wel_mas_fun()
 {
-    /* printf("\n\nYou welcome in Triangle Shape Drawing Program ( Version 8 ) ..\n\n"); */
+    /* printf("\n\nYou welcome in Triangle Shape Drawing Program ( Version 15 ) ..\n\n"); */
 
-    char *mas[] = {"\n\nYou welcome in Triangle Shape Drawing Program ( Version 8 ) ..\n\n"};
+    char *mas[] = {"\n\nYou welcome in Triangle Shape Drawing Program ( Version 15 ) ..\n\n"};
 
     return *mas;
 }

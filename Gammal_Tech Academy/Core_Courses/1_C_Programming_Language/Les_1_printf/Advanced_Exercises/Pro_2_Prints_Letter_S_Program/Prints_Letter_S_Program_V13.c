@@ -26,7 +26,7 @@ int main()
 // Welcome massage function:
 char *wel_mas_fun(char *mas[])
 {
-    /* printf("\n\nYou welcome in Letter \" S \" Drawing Program - ( Version - 12 )\n\n\n"); */
+    /* printf("\n\nYou welcome in Letter \" S \" Drawing Program - ( Version - 13 )\n\n\n"); */
 
     return *mas;
 }

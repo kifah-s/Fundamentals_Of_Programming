@@ -1,6 +1,6 @@
 
 
-/* >>> Phone Number Program ( Version 8 ) <<<*/
+/* >>> Phone Number Program ( Version 17 ) <<<*/
 
 /* >>> Phone Number Program : When you get to know a new friend you usually exchange phone numbers so you can communicate together later..
 Required : Write a program that prints the names of your close friends and their phone numbers. <<< */
@@ -12,24 +12,31 @@ char *close_friends(char close_friends_phone[]);
 
 int main()
 {
-    char message[] = {"\n\nYou welcome in Phone Number Program ( Version 8 ) ..\n\n"};
+    char message[] = {"\n\nYou welcome in Phone Number Program ( Version 17 ) ..\n\n"};
     welcome_massage(message);
-    printf(message);
+    /* printf(message); */
+    printf("%s", message);
 
     char close_friend[] = {"My close friends and their phone numbers they :\n\n"};
     char phone[] = {"- kifah : 0998621421\n\n"};
 
-    printf(close_friends(close_friend));
+    /* printf(close_friends(close_friend)); */
+    printf("%s", close_friends(close_friend));
 
-    printf(close_friends(phone));
+    /* printf(close_friends(phone)); */
+    printf("%s", close_friends(phone));
 
-    printf(close_friends(phone));
+    /* printf(close_friends(phone)); */
+    printf("%s", close_friends(phone));
 
-    printf(close_friends(phone));
+    /* printf(close_friends(phone)); */
+    printf("%s", close_friends(phone));
 
-    printf(close_friends(phone));
+    /* printf(close_friends(phone)); */
+    printf("%s", close_friends(phone));
 
-    printf(close_friends(phone));
+    /* printf(close_friends(phone)); */
+    printf("%s", close_friends(phone));
 
     return 0;
 }

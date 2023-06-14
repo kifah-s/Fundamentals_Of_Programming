@@ -28,7 +28,7 @@ int main()
 // Welcome massage function;
 char *wel_mas_fun(char *mas[])
 {
-    /* printf("\n\nYou welcome in Square Shape Drawing Program ( Version 10 ) ..\n\n"); */
+    /* printf("\n\nYou welcome in Square Shape Drawing Program ( Version 11 ) ..\n\n"); */
 
     return *mas;
 }

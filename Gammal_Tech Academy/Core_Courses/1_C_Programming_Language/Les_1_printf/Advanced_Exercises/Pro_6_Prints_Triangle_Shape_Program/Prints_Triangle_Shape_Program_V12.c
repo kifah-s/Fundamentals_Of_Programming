@@ -28,7 +28,7 @@ int main()
 // Welcome massage function;
 char *wel_mas_fun(char *mas[])
 {
-    /* printf("\n\nYou welcome in Triangle Shape Drawing Program ( Version 11 ) ..\n\n"); */
+    /* printf("\n\nYou welcome in Triangle Shape Drawing Program ( Version 12 ) ..\n\n"); */
 
     return *mas;
 }

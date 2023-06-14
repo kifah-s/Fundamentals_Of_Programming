@@ -1,6 +1,6 @@
 
 
-/* >>> letter " i " Drawing Program - ( Version - 8 ) <<< */
+/* >>> letter " i " Drawing Program - ( Version - 15 ) <<< */
 
 /* >>> A program that drawing letter " i " using * <<< */
 
@@ -11,10 +11,12 @@ char *let_fun();
 
 int main()
 {
-    printf(wel_mas_fun());
-    
-    printf(let_fun());
-    
+    /* printf(wel_mas_fun()); */
+    printf("%s", wel_mas_fun());
+
+    /* printf(let_fun()); */
+    printf("%s", let_fun());
+
     return 0;
 }
 
@@ -22,7 +24,7 @@ int main()
 // Welcome massage function;
 char *wel_mas_fun()
 {
-    char *wel_mas[] = {"\nYou welcome in Letter \" i \" Drawing Program - ( Version - 8 )\n\n"};
+    char *wel_mas[] = {"\nYou welcome in Letter \" i \" Drawing Program - ( Version - 15 )\n\n"};
     return *wel_mas;
 }
 

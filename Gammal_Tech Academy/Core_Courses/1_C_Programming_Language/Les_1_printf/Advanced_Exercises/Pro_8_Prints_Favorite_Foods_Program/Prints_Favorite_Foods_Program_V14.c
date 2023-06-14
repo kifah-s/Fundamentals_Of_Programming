@@ -1,6 +1,6 @@
 
 
-/* >>> Program Favorite Foods And The Ingredients ( Version 7 ) <<< */
+/* >>> Program Favorite Foods And The Ingredients ( Version 14 ) <<< */
 
 /* >>> A program prints your favorite foods and the ingredients of each meal <<< */
 
@@ -11,9 +11,11 @@ char *fav_food_fun();
 
 int main()
 {
-    printf(wel_mas_fun());
-    
-    printf(fav_food_fun());
+    /* printf(wel_mas_fun()); */
+    printf("%s", wel_mas_fun());
+
+    /* printf(fav_food_fun()); */
+    printf("%s", fav_food_fun());
 
     return 0;
 }
@@ -22,9 +24,9 @@ int main()
 // Welcome massage function;
 char *wel_mas_fun()
 {
-    /* printf("\n\nYou welcome in Program Favorite Foods And The Ingredients ( Version 7 ) ..\n\n\n"); */
+    /* printf("\n\nYou welcome in Program Favorite Foods And The Ingredients ( Version 14 ) ..\n\n\n"); */
 
-    char *mas[] = {"\n\nYou welcome in Program Favorite Foods And The Ingredients ( Version 7 ) ..\n\n\n"};
+    char *mas[] = {"\n\nYou welcome in Program Favorite Foods And The Ingredients ( Version 14 ) ..\n\n\n"};
 
     return *mas;
 }

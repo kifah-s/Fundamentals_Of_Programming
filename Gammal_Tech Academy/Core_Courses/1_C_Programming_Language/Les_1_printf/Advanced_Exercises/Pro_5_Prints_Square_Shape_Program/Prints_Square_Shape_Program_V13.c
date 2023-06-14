@@ -1,6 +1,6 @@
 
 
-/* >>> Square Shape Drawing Program ( Version 7 ) <<< */
+/* >>> Square Shape Drawing Program ( Version 13 ) <<< */
 
 /* >>> A program that drawing square shape using * <<< */
 
@@ -11,11 +11,13 @@ char *squ_fun();
 
 int main()
 {
-    /* printf(wel_mas_fun()); */
-    printf("%s", wel_mas_fun());
+    char *wel_mas[] = {wel_mas_fun()};
+    /* printf(*wel_mas); */
+    printf("%s", *wel_mas);
 
-    /* printf(squ_fun()); */
-    printf("%s", squ_fun());
+    char *squ[] = {squ_fun()};
+    /* printf(*squ); */
+    printf("%s", *squ);
 
     return 0;
 }
@@ -24,9 +26,9 @@ int main()
 // Welcome massage function;
 char *wel_mas_fun()
 {
-    /* printf("\n\nYou welcome in Square Shape Drawing Program ( Version 7 ) ..\n\n"); */
+    /* printf("\n\nYou welcome in Square Shape Drawing Program ( Version 13 ) ..\n\n"); */
 
-    char *mas[] = {"\n\nYou welcome in Square Shape Drawing Program ( Version 7 ) ..\n\n"};
+    char *mas[] = {"\n\nYou welcome in Square Shape Drawing Program ( Version 13 ) ..\n\n"};
 
     return *mas;
 }

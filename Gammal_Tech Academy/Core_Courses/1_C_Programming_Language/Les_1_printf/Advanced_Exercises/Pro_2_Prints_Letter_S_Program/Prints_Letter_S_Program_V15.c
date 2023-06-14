@@ -1,23 +1,21 @@
 
 
-/* >>> Letter " S " Drawing Program - ( Version - 14 ) <<< */
+/* >>> Letter " S " Drawing Program - ( Version - 15 ) <<< */
 
 /* >>> A program that drawing letter " S " using * <<< */
 
 #include <stdio.h>
 
-char *wel_mas_fun(char *mas[]);
-char *let_fun(char *line[]);
+char *wel_mas_fun();
+char *let_fun();
 
 int main()
 {
-    char *mas1[] = {"\n\nYou welcome in Letter \" S \" Drawing Program - ( Version - 14 )\n\n\n"};
-    char *wel_mas[] = {wel_mas_fun(mas1)};
+    char *wel_mas[] = {wel_mas_fun()};
     /* printf(*wel_mas); */
     printf("%s", *wel_mas);
 
-    char *line[] = {"**********\n*\n*\n*\n*\n*********\n         *\n         *\n         *\n         *\n**********\n\n\n"};
-    char *let[] = {let_fun(line)};
+    char *let[] = {let_fun()};
     /* printf(*let); */
     printf("%s", *let);
 
@@ -26,15 +24,17 @@ int main()
 
 // Function..
 // Welcome massage function:
-char *wel_mas_fun(char *mas[])
+char *wel_mas_fun()
 {
-    /* printf("\n\nYou welcome in Letter \" S \" Drawing Program - ( Version - 14 )\n\n\n"); */
+    /* printf("\n\nYou welcome in Letter \" S \" Drawing Program - ( Version - 15 )\n\n\n"); */
+
+    char *mas[] = {"\n\nYou welcome in Letter \" S \" Drawing Program - ( Version - 15 )\n\n\n"};
 
     return *mas;
 }
 
 // Letter S function;
-char *let_fun(char *line[])
+char *let_fun()
 {
     /* printf("**********\n");
         printf("*\n*\n*\n*\n");
@@ -44,6 +44,8 @@ char *let_fun(char *line[])
         printf("         *\n");
         printf("         *\n");
         printf("**********\n\n\n"); */
+
+    char *line[] = {"**********\n*\n*\n*\n*\n*********\n         *\n         *\n         *\n         *\n**********\n\n\n"};
 
     return *line;
 }

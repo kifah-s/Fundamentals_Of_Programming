@@ -28,7 +28,7 @@ int main()
 // Welcome massage function;
 char *wel_mas_fun(char *mas[])
 {
-    /* printf("\n\nYou welcome in Program Favorite Foods And The Ingredients ( Version 10 ) ..\n\n\n"); */
+    /* printf("\n\nYou welcome in Program Favorite Foods And The Ingredients ( Version 11 ) ..\n\n\n"); */
 
     return *mas;
 }
