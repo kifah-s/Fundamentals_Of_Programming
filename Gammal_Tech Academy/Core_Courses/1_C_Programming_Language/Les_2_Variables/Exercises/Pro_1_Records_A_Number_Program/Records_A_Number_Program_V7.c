@@ -1,6 +1,6 @@
 
 
-/* >>> Records A Number Program ( Version 6 ) <<< */
+/* >>> Records A Number Program ( Version 7 ) <<< */
 
 /* >>> A program that records a number in a variable and prints it <<< */
 
@@ -11,7 +11,7 @@ int var_fun(int num);
 
 int main()
 {
-    char mas[] = {"\n\nYou welcome in Records A Number Program ( Version 6 ) ..\n\n"};
+    char mas[] = {"\n\nYou welcome in Records A Number Program ( Version 7 ) ..\n\n"};
     printf(wel_mas_fun(mas));
     /* printf(mas); */
 
