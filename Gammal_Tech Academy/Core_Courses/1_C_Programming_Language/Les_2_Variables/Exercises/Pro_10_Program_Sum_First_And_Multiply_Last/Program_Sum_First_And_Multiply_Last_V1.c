@@ -1,6 +1,6 @@
 
 
-/* >>> program Sum first numbers and Multiply last numbers <<< */
+/* >>> program Sum first numbers and Multiply last numbers ( Version 1 ) <<< */
 
 /* >>> A program that  that records 4 digits and prints the sum of the first two digits in a line and multiply the other two digits in another line <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in program Sum first numbers and Multiply last numbers ..\n\n");
+    printf("\n\nYou welcome in program Sum first numbers and Multiply last numbers ( Version 1 ) ..\n\n");
 
     int n1 = 1,
         n2 = 2,

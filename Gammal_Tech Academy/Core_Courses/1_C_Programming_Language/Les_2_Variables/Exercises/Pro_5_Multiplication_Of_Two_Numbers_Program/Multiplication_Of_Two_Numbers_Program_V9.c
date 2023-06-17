@@ -6,28 +6,34 @@
 
 #include <stdio.h>
 
-int wel_mas_function();
-int mul_two_num_fun();
+char wel_mas_fun();
+int mul_num_fun(int num_1, int num_2);
+char res_mas_fun(int result);
 
 int main()
 {
-    wel_mas_function();
-
-    mul_two_num_fun();
+    wel_mas_fun();
+    int mul_num = mul_num_fun(10, 5);
+    res_mas_fun(mul_num);
 }
 
 // Functions..
 
 // Welcome massage function;
-int wel_mas_function()
+char wel_mas_fun()
 {
     printf("\n\nYou welcome in Multiplication Of Two Numbers Program - ( Version - 6 ) ..\n\n");
 }
 
-int mul_two_num_fun()
+// Multiplication number function;
+int mul_num_fun(int num_1, int num_2)
 {
-    int num_1 = 5;
-    int num_2 = 10;
-    int result = num_1 * num_2;
+    int res_mul = num_1 * num_2;
+    return res_mul;
+}
+
+// Result massage function;
+char res_mas_fun(int result)
+{
     printf("Result Multiplication the two numbers is : %d\n\n\n", result);
 }
