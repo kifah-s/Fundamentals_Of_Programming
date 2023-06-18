@@ -1,6 +1,6 @@
 
 
-/* >>> Variables Print Program <<< */
+/* >>> Variables Print Program ( Version 1 ) <<< */
 
 /* >>> Now you know how to assigns a number in a variable, but let's do this better.
 Required : Write a program that assigns a number in one variable and another number in another variable and prints the two variables between them with a + sign, then print their sum at the end. Example x + y = 15. <<< */
@@ -9,7 +9,7 @@ Required : Write a program that assigns a number in one variable and another num
 
 int main()
 {
-    printf("\n\nYou welcome in Variables Print Program ..\n\n");
+    printf("\n\nYou welcome in Variables Print Program ( Version 1 ) ..\n\n");
 
     int x = 5,
         y = 5,

@@ -1,6 +1,6 @@
 
 
-/* >>> Program Change Value Of Variable <<< */
+/* >>> Program Change Value Of Variable ( Version 1 ) <<< */
 
 /* >>> A program that assigns a number in a variable and prints it, then assigns another number in the same variable and prints it. <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Program Change Value Of Variable ..\n\n");
+    printf("\n\nYou welcome in Program Change Value Of Variable ( Version 1 )  ..\n\n");
 
     int num = 10;
     printf("Before change : %d\n", num);

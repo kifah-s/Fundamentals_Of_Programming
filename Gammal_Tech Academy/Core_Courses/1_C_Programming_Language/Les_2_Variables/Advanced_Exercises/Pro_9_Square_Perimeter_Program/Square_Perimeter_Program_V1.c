@@ -1,6 +1,6 @@
 
 
-/* >>> Square Perimeter Program <<< */
+/* >>> Square Perimeter Program ( Version 1 ) <<< */
 
 /* >>> Square Perimeter Program.
 Required : Write a program that assigns the side length of the square and calculates the perimeter of the square. <<< */
@@ -9,7 +9,7 @@ Required : Write a program that assigns the side length of the square and calcul
 
 int main()
 {
-    printf("\n\nYou welcome in Square Perimeter Program ..\n\n");
+    printf("\n\nYou welcome in Square Perimeter Program ( Version 1 ) ..\n\n");
 
     int side_length = 5,
         perimeter = side_length * 4;
