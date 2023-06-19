@@ -1,6 +1,6 @@
 
 
-/* >>> Program Enter Number <<< */
+/* >>> Program Enter Number ( Version 1 ) <<< */
 
 /* >>> A program that asks the user to enter a number and the software prints it in a new line <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Program Enter Number ..\n\n");
+    printf("\n\nYou welcome in Program Enter Number ( Version 1 ) ..\n\n");
 
     int n;
 

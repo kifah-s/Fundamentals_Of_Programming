@@ -1,14 +1,14 @@
 
 
-/* >>> Sum Two Numbers Program <<< */
+/* >>> Multiplier Two Numbers Program ( version 1 ) <<< */
 
-/* >>> A program that asks the user to enter two numbers and print the value of their combined product <<< */
+/* >>> A program that asks the user to enter two numbers and print the value of their multiplier <<< */
 
 #include <stdio.h>
 
 int main()
 {
-    printf("\n\nYou welcome in Sum Two Numbers Program ..\n\n");
+    printf("\n\nYou welcome in Multiplier Two Numbers Program ( version 1 ) ..\n\n");
 
     int n_1,
         n_2,
@@ -20,7 +20,7 @@ int main()
     printf("Enter a second number : ");
     scanf("%d", &n_2);
 
-    result = n_1 + n_2;
+    result = n_1 * n_2;
 
     printf("\nThe result is : %d\n\n\n", result);
 

@@ -1,15 +1,32 @@
 
 
-/* >>> Program Collect 3 Numbers In Different Lines ( Version 1 ) <<< */
+/* >>> Program Collect 3 Numbers In Different Lines ( Version 3 ) <<< */
 
 /* >>> A program that requires the user to enter 3 digits and print the sum of each two digits in a separate line <<< */
 
 #include <stdio.h>
 
+void wel_mas_function();
+int coll_num_fun();
+
 int main()
 {
-    printf("\n\nYou welcome in Program Collect 3 Numbers In Different Lines ( Version 1 ) ..\n\n");
+    wel_mas_function();
+    coll_num_fun();
+    
+    return 0;
+}
 
+// Functions ..
+// Welcome massage function;
+void wel_mas_function()
+{
+    printf("\n\nYou welcome in Program Collect 3 Numbers In Different Lines ( Version 3 ) ..\n\n");
+}
+
+// Collect Numbers function;
+int coll_num_fun()
+{
     int n_1,
         n_2,
         n_3,
@@ -33,6 +50,4 @@ int main()
     printf("\nThe result of adding the first number and the second number is : %d\n", result_1);
     printf("The result of adding the second number and the third number is : %d\n", result_2);
     printf("The result of adding the first number and the third number is : %d\n\n\n", result_3);
-
-    return 0;
 }

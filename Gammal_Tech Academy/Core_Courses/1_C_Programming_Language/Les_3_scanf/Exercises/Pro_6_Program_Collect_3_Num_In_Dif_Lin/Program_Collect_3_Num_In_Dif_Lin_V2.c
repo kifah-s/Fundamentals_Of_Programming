@@ -1,6 +1,6 @@
 
 
-/* >>> Program Collect 3 Numbers In Different Lines - ( Version - 2 ) <<< */
+/* >>> Program Collect 3 Numbers In Different Lines ( Version 2 ) <<< */
 
 /* >>> A program that requires the user to enter 3 digits and print the sum of each two digits in a separate line <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Program Collect 3 Numbers In Different Lines - ( Version - 2 ) ..\n\n");
+    printf("\n\nYou welcome in Program Collect 3 Numbers In Different Lines ( Version 2 ) ..\n\n");
 
     int n_1,
         n_2,
