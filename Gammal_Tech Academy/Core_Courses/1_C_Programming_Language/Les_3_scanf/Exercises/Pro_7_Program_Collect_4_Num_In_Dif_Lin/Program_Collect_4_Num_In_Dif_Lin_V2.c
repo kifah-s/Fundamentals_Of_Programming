@@ -1,6 +1,6 @@
 
 
-/* >>> Program Collect 4 Numbers In Different Lines - ( Version - 2 ) <<< */
+/* >>> Program Collect 4 Numbers In Different Lines ( Version 2 ) <<< */
 
 /* >>> A program that requires the user to enter 4 digits and print the sum of the first two digits in a line and the sum of the second two digits in a separate line <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Program Collect 4 Numbers In Different Lines - ( Version - 2 ) ..\n\n");
+    printf("\n\nYou welcome in Program Collect 4 Numbers In Different Lines ( Version 2 ) ..\n\n");
 
     int n_1,
         n_2,

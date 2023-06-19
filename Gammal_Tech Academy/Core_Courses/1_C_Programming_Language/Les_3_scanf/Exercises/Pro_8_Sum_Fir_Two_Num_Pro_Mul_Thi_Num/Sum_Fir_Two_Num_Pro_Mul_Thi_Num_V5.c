@@ -1,6 +1,6 @@
 
 
-/* >>> Sum First Two Numbers Program Multiplied Third Number - ( Version - 5 ) <<< */
+/* >>> Sum First Two Numbers Program Multiplied Third Number ( Version 5 ) <<< */
 
 /* >>> A program that asks the user to enter 3 digits and print the sum of the first two digits multiplied by the third number <<< */
 
@@ -33,7 +33,7 @@ int main()
 // Welcome massage function;
 void wel_mas_function()
 {
-    printf("\n\nYou welcome in Sum First Two Numbers Program Multiplied Third Number - ( Version - 5 ) ..\n\n");
+    printf("\n\nYou welcome in Sum First Two Numbers Program Multiplied Third Number ( Version 5 ) ..\n\n");
 }
 
 /* // Collect Numbers function;

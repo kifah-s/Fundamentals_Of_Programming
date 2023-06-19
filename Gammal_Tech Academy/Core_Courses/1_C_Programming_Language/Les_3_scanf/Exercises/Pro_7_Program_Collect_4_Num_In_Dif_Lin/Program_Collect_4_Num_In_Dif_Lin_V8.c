@@ -1,6 +1,6 @@
 
 
-/* >>> Program Collect 4 Numbers In Different Lines - ( Version - 8 ) <<< */
+/* >>> Program Collect 4 Numbers In Different Lines ( Version 8 ) <<< */
 
 /* >>> A program that requires the user to enter 4 digits and print the sum of the first two digits in a line and the sum of the second two digits in a separate line <<< */
 
@@ -40,7 +40,7 @@ int main()
 // Welcome massage function;
 void wel_mas_function()
 {
-    printf("\n\nYou welcome in Program Collect 4 Numbers In Different Lines - ( Version - 8 ) ..\n\n");
+    printf("\n\nYou welcome in Program Collect 4 Numbers In Different Lines ( Version 8 ) ..\n\n");
 }
 
 /* // Collect Numbers function;
