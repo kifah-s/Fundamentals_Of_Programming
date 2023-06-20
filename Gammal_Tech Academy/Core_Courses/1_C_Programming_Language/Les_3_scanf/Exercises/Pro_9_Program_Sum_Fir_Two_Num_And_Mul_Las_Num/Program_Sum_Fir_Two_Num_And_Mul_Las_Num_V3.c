@@ -1,15 +1,32 @@
 
 
-/* >>> Program Sum First Two Numbers And Multiply Last Numbers - ( Version - 3 ) <<< */
+/* >>> Program Sum First Two Numbers And Multiply Last Numbers ( Version 3 ) <<< */
 
 /* >>> A program that requires the user to enter 4 digits and print the sum of the first two digits in a line and multiply the other two digits in another line <<< */
 
 #include <stdio.h>
 
+void wel_mas_function();
+int coll_num_fun();
+
 int main()
 {
-    printf("\n\nYou welcome in Program Sum First Two Numbers And Multiply Last Numbers - ( Version - 3 ) ..\n\n");
+    wel_mas_function();
+    coll_num_fun();
 
+    return 0;
+}
+
+// Functions ..
+// Welcome massage function;
+void wel_mas_function()
+{
+    printf("\n\nYou welcome in Program Sum First Two Numbers And Multiply Last Numbers ( Version 3 ) ..\n\n");
+}
+
+// Sum and Multiply Numbers function;
+int coll_num_fun()
+{
     int n_1,
         n_2,
         n_3,
@@ -34,6 +51,4 @@ int main()
 
     printf("\nThe result of adding the first number and the second number is : %d\n", result_1);
     printf("The result of adding the third number and the fourth number is : %d\n\n\n", result_2);
-
-    return 0;
 }

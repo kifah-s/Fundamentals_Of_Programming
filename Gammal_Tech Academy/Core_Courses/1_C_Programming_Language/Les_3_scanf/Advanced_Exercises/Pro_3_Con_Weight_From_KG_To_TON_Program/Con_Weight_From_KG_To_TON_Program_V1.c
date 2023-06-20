@@ -1,6 +1,6 @@
 
 
-/* >>> Convert Weight From KG To TON Program <<< */
+/* >>> Convert Weight From KG To TON Program ( Version 1 ) <<< */
 
 /* >>> Program that converts weight from kg to ton (ton = 1000 kg). <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Convert Weight From KG To TON Program ..\n\n");
+    printf("\n\nYou welcome in Convert Weight From KG To TON Program ( Version 1 ) ..\n\n");
 
     int weight;
 

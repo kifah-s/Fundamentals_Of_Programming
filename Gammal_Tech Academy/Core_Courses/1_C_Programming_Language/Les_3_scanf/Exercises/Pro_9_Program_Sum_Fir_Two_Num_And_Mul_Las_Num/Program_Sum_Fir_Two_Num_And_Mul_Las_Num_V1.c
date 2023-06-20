@@ -1,6 +1,6 @@
 
 
-/* >>> Program Sum First Two Numbers And Multiply Last Numbers - ( Version - 1 ) <<< */
+/* >>> Program Sum First Two Numbers And Multiply Last Numbers ( Version 1 ) <<< */
 
 /* >>> A program that requires the user to enter 4 digits and print the sum of the first two digits in a line and multiply the other two digits in another line <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Program Sum First Two Numbers And Multiply Last Numbers - ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Program Sum First Two Numbers And Multiply Last Numbers ( Version 1 ) ..\n\n");
 
     int n_1,
         n_2,

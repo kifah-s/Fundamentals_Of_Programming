@@ -1,6 +1,6 @@
 
 
-/* >>> Age Program In Days <<< */
+/* >>> Age Program In Days ( Version 1 ) <<< */
 
 /* >>> A program that asks a person about his age in years and then prints his age in days without leap years. <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Age Program In Days ..\n\n");
+    printf("\n\nYou welcome in Age Program In Days ( Version 1 ) ..\n\n");
 
     int num_1;
 

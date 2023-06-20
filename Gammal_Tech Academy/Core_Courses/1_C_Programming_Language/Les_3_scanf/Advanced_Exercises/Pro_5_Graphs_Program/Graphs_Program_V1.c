@@ -1,6 +1,6 @@
 
 
-/* >>> Graphs Program <<< */
+/* >>> Graphs Program ( Version 1 ) <<< */
 
 /* >>> There are a lot of students studying graphs in school and we would like to help them.
 Required : Write a program that takes the values of 3 variables x, y and z and then prints the x + z and the y + z in parentheses eg 5 7 8 (15, 13). <<< */
@@ -9,7 +9,7 @@ Required : Write a program that takes the values of 3 variables x, y and z and t
 
 int main()
 {
-    printf("\n\nYou welcome in Graphs Program ..\n\n");
+    printf("\n\nYou welcome in Graphs Program ( Version 1 ) ..\n\n");
 
     int x,
         y,
