@@ -1,6 +1,6 @@
 
 
-/* >>> Internet Companies Program <<< */
+/* >>> Internet Companies Program ( Version 1 ) <<< */
 
 /* >>> Internet Companies Program : Some companies that provide monthly subscription services upon renewal of the subscription migrate the remaining balance in the last month for the new month.
 Required : Write a program that asks the person on the monthly subscription balance and on their consumption in the current month of the balance and prints the new month balance. <<< */
@@ -9,7 +9,7 @@ Required : Write a program that asks the person on the monthly subscription bala
 
 int main()
 {
-    printf("\n\nYou welcome in Internet Companies Program ..\n\n");
+    printf("\n\nYou welcome in Internet Companies Program ( Version 1 ) ..\n\n");
 
     int monthly_subscription,
         quantity_consumed,

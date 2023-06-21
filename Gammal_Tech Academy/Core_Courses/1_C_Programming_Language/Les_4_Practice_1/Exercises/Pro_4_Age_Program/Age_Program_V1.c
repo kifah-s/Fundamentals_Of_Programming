@@ -1,6 +1,6 @@
 
 
-/* >>> Age Program <<< */
+/* >>> Age Program ( Version 1 ) <<< */
 
 /* >>> A program that asks a person about his age and prints for him the year of his birth. <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Age Program ..\n\n");
+    printf("\n\nYou welcome in Age Program ( Version 1 ) ..\n\n");
 
     int age,
         current_year,
