@@ -1,6 +1,6 @@
 
 
-/* >>> Salary Program - ( Version - 1 ) <<< */
+/* >>> Salary Program ( Version 1 ) <<< */
 
 /* >>> Type a program that asks a person to enter the value of his or her salary and the number of days off during the year, if the number of days is less than or equal to 21 is added to the salary 10,000 pounds, if more than 21 the increase is 5000 pounds, and prints the value of the annual increase and the value of the new salary on the screen <<< */
 
@@ -9,7 +9,7 @@
 int main()
 {
 
-    printf("\n\nYou welcome in Salary Program - ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Salary Program ( Version 1 ) ..\n\n");
 
     int salary_v, number_d;
 
