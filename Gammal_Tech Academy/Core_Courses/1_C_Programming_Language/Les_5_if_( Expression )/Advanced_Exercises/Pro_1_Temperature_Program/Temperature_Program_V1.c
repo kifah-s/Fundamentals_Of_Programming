@@ -1,6 +1,6 @@
 
 
-/* >>> Temperature Program <<< */
+/* >>> Temperature Program ( Version 1 ) <<< */
 
 /* >>> Temperature Program : In the summer, we turn on the air conditioner in order to control the temperature to make it lower.
 Required : Write a program if the temperature is above 30 degrees Celsius, it prints "turn on AC", otherwise it prints "Temp is fine". <<< */
@@ -9,7 +9,7 @@ Required : Write a program if the temperature is above 30 degrees Celsius, it pr
 
 int main()
 {
-    printf("\n\nYou welcome in Temperature Program ..\n\n");
+    printf("\n\nYou welcome in Temperature Program ( Version 1 ) ..\n\n");
 
     int temperature;
 

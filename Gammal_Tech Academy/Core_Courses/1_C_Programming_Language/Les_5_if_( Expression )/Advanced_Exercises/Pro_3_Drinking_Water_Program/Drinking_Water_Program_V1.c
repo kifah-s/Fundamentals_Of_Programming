@@ -1,6 +1,6 @@
 
 
-/* >>> Drinking Water Program <<< */
+/* >>> Drinking Water Program ( Version 1 ) <<< */
 
 /* >>> Drinking water program : In order for athletes to function well, they must drink a large amount of water, and non-athletes also, water is the secret of life.
 Required : Write a program if the user drinks less than 3 liters per day, it will print "drink more water", otherwise it will print "good". <<< */
@@ -10,7 +10,7 @@ Required : Write a program if the user drinks less than 3 liters per day, it wil
 int main()
 {
 
-    printf("\n\nYou welcome in Temperature Program ..\n\n");
+    printf("\n\nYou welcome in Drinking Water Program ( Version 1 ) ..\n\n");
 
     int drinking;
 

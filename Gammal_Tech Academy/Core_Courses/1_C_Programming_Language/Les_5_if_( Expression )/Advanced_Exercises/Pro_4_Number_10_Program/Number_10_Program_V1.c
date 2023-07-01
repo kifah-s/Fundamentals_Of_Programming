@@ -1,6 +1,6 @@
 
 
-/* >>> Number 10 Program - ( Version - 1 ) <<< */
+/* >>> Number 10 Program ( Version 1 ) <<< */
 
 /* >>> Write a program. If the user enters a number greater than 10, he will be printed "greater than 10", and if he enters a smaller number, he will print "less than 10", and if he enters the same 10, he will print "equal 10". <<< */
 
@@ -9,7 +9,7 @@
 int main()
 {
 
-    printf("\n\nYou welcome in Number 10 Program - ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Number 10 Program ( Version 1 ) ..\n\n");
 
     int number;
 
