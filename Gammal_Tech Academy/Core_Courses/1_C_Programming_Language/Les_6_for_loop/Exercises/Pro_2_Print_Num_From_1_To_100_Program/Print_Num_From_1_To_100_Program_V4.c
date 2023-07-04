@@ -1,18 +1,19 @@
 
 
-/* >>> Print Numbers From 1 To 100 Program ( Version 2 ) <<< */
+/* >>> Print Numbers From 1 To 100 Program ( Version 4 ) <<< */
 
 /* >>> A program that prints numbers from 1 to 100. <<< */
 
 #include <stdio.h>
 
 void welcomeMassageFun();
-void printNumberFun();
+void printNumberFun(int number);
 
 int main()
 {
     welcomeMassageFun();
-    printNumberFun();
+
+    printNumberFun(1);
     
     return 0;
 }
@@ -21,13 +22,13 @@ int main()
 // Welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Print Numbers From 1 To 100 Program ( Version 2 ) ..\n\n");
+    printf("\n\nYou welcome in Print Numbers From 1 To 100 Program ( Version 4 ) ..\n\n");
 }
 
 // Print number function;
-void printNumberFun()
+void printNumberFun(int number)
 {
-    for (int i = 1; i <= 100; i++)
+    for (int i = number; i <= 100; i++)
     {
         printf("%d\n", i);
     }

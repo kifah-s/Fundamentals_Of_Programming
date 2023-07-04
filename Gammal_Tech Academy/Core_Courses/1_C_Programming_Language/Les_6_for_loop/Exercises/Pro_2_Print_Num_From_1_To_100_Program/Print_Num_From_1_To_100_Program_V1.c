@@ -1,6 +1,6 @@
 
 
-/* >>> Print Numbers From 1 To 100 Program - ( Version - 1 ) <<< */
+/* >>> Print Numbers From 1 To 100 Program ( Version 1 ) <<< */
 
 /* >>> A program that prints numbers from 1 to 100. <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Print Numbers From 1 To 100 Program - ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Print Numbers From 1 To 100 Program ( Version 1 ) ..\n\n");
 
     int i;
 

@@ -1,6 +1,6 @@
 
 
-/* >>> Print Name 10 Times Program - ( Version - 2 ) <<< */
+/* >>> Print Name 10 Times Program ( Version 2 ) <<< */
 
 /* >>> A program that prints person's name 10 times. <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Print Name 10 Times Program - ( Version - 2 ) ..\n\n");
+    printf("\n\nYou welcome in Print Name 10 Times Program ( Version 2 ) ..\n\n");
 
     int i;
     char name[30];
