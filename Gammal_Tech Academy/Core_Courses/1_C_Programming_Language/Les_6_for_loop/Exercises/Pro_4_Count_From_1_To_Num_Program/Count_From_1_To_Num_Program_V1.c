@@ -1,6 +1,6 @@
 
 
-/* >>> Count From 1 To Num Program <<< */
+/* >>> Count From 1 To Num Program ( Version 1 ) <<< */
 
 /* >>> A program that asks a person to enter any number and applies the numbers from 1 to the number that I enter. <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Count From 1 To Num Program ..\n\n");
+    printf("\n\nYou welcome in Count From 1 To Num Program ( Version 1 ) ..\n\n");
 
     int i, num;
 
