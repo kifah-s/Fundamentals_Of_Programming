@@ -1,6 +1,6 @@
 
 
-/* >>> Count From Num To 15 Program - ( Version - 1 )  <<< */
+/* >>> Count From Num To 15 Program ( Version 1 )  <<< */
 
 /* >>> A program that asks the user to enter a number smaller than 15 and then prints all the numbers from this number to the number 15. <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Count From Num To 15 Program - ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Count From Num To 15 Program ( Version 1 ) ..\n\n");
 
     int i, num;
 

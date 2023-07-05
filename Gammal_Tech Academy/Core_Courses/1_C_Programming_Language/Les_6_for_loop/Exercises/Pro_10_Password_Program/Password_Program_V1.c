@@ -1,6 +1,6 @@
 
 
-/* >>> Password Program <<< */
+/* >>> Password Program ( Version 1 ) <<< */
 
 /* >>> A program that asks the user for the password if the user enters any number other than 12345 refers the question. If 12345 goes in it says "password is correct". <<< */
 
@@ -8,7 +8,7 @@
 
 int main(void)
 {
-    printf("\n\nYou welcome in Password Program ..\n\n");
+    printf("\n\nYou welcome in Password Program ( Version 1 ) ..\n\n");
 
     int pass, i;
 

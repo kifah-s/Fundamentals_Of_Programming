@@ -1,6 +1,6 @@
 
 
-/* >>> From Num To Num Program - ( Version - 3 ) <<< */
+/* >>> From Num To Num Program ( Version 3 ) <<< */
 
 /* >>> A program that asks a person to enter two numbers, second one smaller than the first one; then prints the numbers from to first one to the second one. <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in From Num To Num Program - ( Version - 3 ) ..\n\n");
+    printf("\n\nYou welcome in From Num To Num Program ( Version 3 ) ..\n\n");
 
     int i, num_1, num_2;
 

@@ -1,6 +1,6 @@
 
 
-/* >>> Number 20 Program - ( Version - 3 )  <<< */
+/* >>> Number 20 Program ( Version 3 )  <<< */
 
 /* >>> A program that requests the user to enter a number if the number is greater than 20 prints all the numbers from 20 to this number, and if smaller than 20 prints all the numbers from this number to 20. <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Number 20 Program - ( Version - 3 ) ..\n\n");
+    printf("\n\nYou welcome in Number 20 Program ( Version 3 ) ..\n\n");
 
     int i, num;
 
