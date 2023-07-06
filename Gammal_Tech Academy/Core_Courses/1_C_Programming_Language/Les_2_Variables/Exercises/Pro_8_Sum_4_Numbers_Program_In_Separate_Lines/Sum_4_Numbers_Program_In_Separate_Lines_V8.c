@@ -13,6 +13,8 @@ int main()
 {
     wel_mas_fun();
     sum_num_fun();
+
+    return 0;
 }
 
 // Functions..

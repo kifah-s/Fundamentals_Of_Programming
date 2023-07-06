@@ -12,8 +12,9 @@ void mul_two_num_fun();
 int main()
 {
     wel_mas_function();
-
     mul_two_num_fun();
+
+    return 0;
 }
 
 // Functions..

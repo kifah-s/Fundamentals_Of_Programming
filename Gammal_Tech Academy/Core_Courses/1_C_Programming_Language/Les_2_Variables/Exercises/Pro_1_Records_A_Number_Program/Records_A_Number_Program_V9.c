@@ -12,12 +12,13 @@ int var_fun(int num);
 
 int main()
 {
-
     /* printf(wel_mas_fun()); */
     printf("%s", wel_mas_fun());
 
     /* printf(reg_mas_fun(), var_fun(1996)); */
     printf("%s %d", reg_mas_fun(), var_fun(1996));
+
+    return 0;
 }
 
 // Functions ..

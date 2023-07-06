@@ -19,6 +19,8 @@ int main()
         num_3 = 3;
 
     res_tot_mul_num3_fun(res_sum_num1_and_num2_fun(num_1, num_2), num_3);
+
+    return 0;
 }
 
 // Functions..

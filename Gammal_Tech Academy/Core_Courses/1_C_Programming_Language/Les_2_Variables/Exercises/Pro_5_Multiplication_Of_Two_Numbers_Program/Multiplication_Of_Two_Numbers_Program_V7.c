@@ -12,8 +12,9 @@ int mul_two_num_fun(int num_1, int num_2);
 int main()
 {
     wel_mas_function();
-
     mul_two_num_fun(10, 5);
+
+    return 0;
 }
 
 // Functions..

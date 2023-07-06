@@ -12,4 +12,6 @@ int main()
 
     int num_1 = 1996, num_2 = 2023, result = num_1 + num_2;
     printf("Result sum the two numbers is : %d\n\n\n", result);
+
+    return 0;
 }

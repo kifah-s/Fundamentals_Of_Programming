@@ -15,6 +15,7 @@ int main()
 
     int num = 10;
     cha_val_fun(num);
+    
     return 0;
 }
 

@@ -19,7 +19,6 @@ char *dreams_fun();
 
 int main()
 {
-
     /* printf(welcome_massage()); */
     printf("%s", welcome_massage());
 

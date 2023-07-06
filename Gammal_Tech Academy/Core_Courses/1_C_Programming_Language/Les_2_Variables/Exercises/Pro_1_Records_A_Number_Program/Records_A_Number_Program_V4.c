@@ -16,6 +16,8 @@ int main()
 
     int num = 1996;
     var_fun(num);
+
+    return 0;
 }
 
 // Functions ..

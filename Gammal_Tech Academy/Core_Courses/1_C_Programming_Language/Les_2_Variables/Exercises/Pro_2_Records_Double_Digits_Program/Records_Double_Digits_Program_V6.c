@@ -15,6 +15,8 @@ int main()
     printf(wel_mas_fun());
 
     printf("Num_1 = %d\nNum_2 = %d\n\n\n", num_1_fun(), num_2_fun());
+
+    return 0;
 }
 
 // Functions ..

@@ -11,7 +11,6 @@ char *let_fun();
 
 int main()
 {
-
     printf(wel_mas_fun());
     printf(let_fun());
 

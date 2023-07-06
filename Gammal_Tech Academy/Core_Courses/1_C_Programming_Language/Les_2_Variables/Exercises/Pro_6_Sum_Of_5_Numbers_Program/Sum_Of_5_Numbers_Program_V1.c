@@ -17,4 +17,6 @@ int main()
     int num_5 = 5;
 
     printf("Result Sum the five numbers is : %d\n\n\n", num_1 + num_2 + num_3 + num_4 + num_5);
+
+    return 0;
 }

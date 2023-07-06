@@ -11,7 +11,6 @@ void tri_fun();
 
 int main()
 {
-
     wel_mas_fun();
     tri_fun();
 

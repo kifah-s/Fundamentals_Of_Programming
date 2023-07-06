@@ -11,7 +11,6 @@ char *name_function(char name[]);
 
 int main()
 {
-
     /* printf(welcome_message("\n\nYou welcome in Name Print Program ( Version 16 ) ..\n\n")); */
     printf("%s", welcome_message("\n\nYou welcome in Name Print Program ( Version 16 ) ..\n\n"));
 

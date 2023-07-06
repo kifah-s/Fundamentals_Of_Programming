@@ -19,6 +19,7 @@ int main()
     char breaking[] = {"- Breaking bad"};
     char attack[] = {"- Attack on titan"};
     favorite_films(favorite, breaking, attack);
+    
     return 0;
 }
 

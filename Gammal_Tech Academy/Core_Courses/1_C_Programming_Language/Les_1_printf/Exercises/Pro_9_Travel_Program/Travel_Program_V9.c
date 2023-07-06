@@ -17,7 +17,6 @@ char *state_5_fun();
 
 int main()
 {
-
     char *wel[] = {wel_mas_fun()};
     printf(*wel);
 

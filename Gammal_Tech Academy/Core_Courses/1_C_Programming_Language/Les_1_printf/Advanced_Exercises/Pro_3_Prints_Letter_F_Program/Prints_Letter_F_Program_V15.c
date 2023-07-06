@@ -11,7 +11,6 @@ char *let_fun();
 
 int main()
 {
-
     char *mas[] = {wel_mas_fun()};
     /* printf(*mas); */
     printf("%s", *mas);

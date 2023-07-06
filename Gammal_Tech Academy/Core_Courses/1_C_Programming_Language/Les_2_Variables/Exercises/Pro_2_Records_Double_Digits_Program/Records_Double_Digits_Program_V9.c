@@ -21,6 +21,8 @@ int main()
 
     char *pri_var_mas[] = {pri_var_mas_fun()};
     printf(*pri_var_mas, num_1, num_2);
+
+    return 0;
 }
 
 // Functions ..

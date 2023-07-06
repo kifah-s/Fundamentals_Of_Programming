@@ -19,6 +19,8 @@ int main()
 
     int res_mas = res_mas_fun(sub);
     printf("%s",res_mas);
+
+    return 0;
 }
 
 // Functions ..

@@ -14,7 +14,6 @@ char *attack_fun();
 
 int main()
 {
-
     /* printf(welcome_massage_fun()); */
     printf("%s", welcome_massage_fun());
 

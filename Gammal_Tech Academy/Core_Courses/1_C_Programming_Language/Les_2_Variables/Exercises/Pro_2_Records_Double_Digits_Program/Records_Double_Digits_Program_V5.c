@@ -14,6 +14,8 @@ int main()
     char wel_mas[] = {wel_mas_fun()};
 
     int num[] = {num_fun()};
+
+    return 0;
 }
 
 // Functions ..

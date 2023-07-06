@@ -16,6 +16,8 @@ int main()
 
     int result = sum_num_fun();
     printf("Result sum the two numbers is : %d\n\n\n", result);
+
+    return 0;
 }
 
 // Functions ..

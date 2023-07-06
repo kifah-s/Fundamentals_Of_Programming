@@ -15,6 +15,8 @@ int main()
     wel_mas_fun();
     res_mas_fun();
     sub_fun();
+
+    return 0;
 }
 
 // Functions ..

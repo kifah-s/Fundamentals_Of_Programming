@@ -16,6 +16,8 @@ int main()
 
     res_mas_fun("Result Subtraction the two numbers is : ", sub_fun(1996, 2023));
 
+    return 0;
+
 }
 
 // Functions ..

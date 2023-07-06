@@ -12,7 +12,6 @@ char *foo_tea_fun(char mat[]);
 
 int main()
 {
-
     char *mas[] = {wel_mas_fun("\n\nYou welcome in FootBall Teams Program ( Version 7 ) ..\n\n")};
     printf(*mas);
 

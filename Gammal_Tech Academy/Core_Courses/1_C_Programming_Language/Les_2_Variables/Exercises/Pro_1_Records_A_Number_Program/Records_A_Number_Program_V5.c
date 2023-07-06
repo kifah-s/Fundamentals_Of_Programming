@@ -19,6 +19,7 @@ int main()
 
     printf("The number that is registered in the variable is : %d\n\n\n", num);
 
+    return 0;
 }
 
 // Functions ..

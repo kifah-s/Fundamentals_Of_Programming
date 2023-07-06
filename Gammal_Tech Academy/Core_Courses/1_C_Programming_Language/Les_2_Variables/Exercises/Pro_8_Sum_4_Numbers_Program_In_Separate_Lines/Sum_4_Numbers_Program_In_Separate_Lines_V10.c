@@ -18,6 +18,8 @@ int main()
         num_3 = 3,
         num_4 = 4;
     sum_num_fun(num_1, num_2, num_3, num_4);
+
+    return 0;
 }
 
 // Functions..

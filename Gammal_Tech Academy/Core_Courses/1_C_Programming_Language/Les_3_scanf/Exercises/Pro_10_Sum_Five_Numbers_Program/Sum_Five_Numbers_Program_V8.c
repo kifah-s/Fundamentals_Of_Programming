@@ -18,9 +18,7 @@ int sumNumFun();
 
 int main()
 {
-
     sumNumFun();
-
 
     return 0;
 }

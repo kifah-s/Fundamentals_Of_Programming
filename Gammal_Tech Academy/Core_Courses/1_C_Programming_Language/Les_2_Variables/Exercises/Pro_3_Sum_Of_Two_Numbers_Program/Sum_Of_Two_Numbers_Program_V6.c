@@ -14,6 +14,8 @@ int main()
     printf("%s", wel_mas_fun());
 
     printf("Result sum the two numbers is : %d\n\n\n", sum_num_fun());
+
+    return 0;
 }
 
 // Functions ..

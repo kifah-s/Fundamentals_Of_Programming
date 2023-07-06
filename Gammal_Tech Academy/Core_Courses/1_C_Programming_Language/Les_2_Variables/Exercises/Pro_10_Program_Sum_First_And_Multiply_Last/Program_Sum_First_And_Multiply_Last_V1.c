@@ -19,4 +19,6 @@ int main()
         res2 = n3 * n4;
 
     printf("num_1 + num_2 = %d\nnum_3 * num_4 = %d\n\n\n", res1, res2);
+
+    return 0;
 }

@@ -13,6 +13,8 @@ int main()
 {
     wel_mas_fun("\n\nYou welcome in Records A Number Program ( Version 3 ) ..\n\n");
     var_fun(1996);
+
+    return 0;
 }
 
 // Functions ..

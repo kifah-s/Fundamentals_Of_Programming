@@ -18,6 +18,8 @@ int main()
     int num_1 = num_1_fun();
     int num_2 = num_2_fun();
     printf("Num_1 = %d\nNum_2 = %d\n\n\n", num_1, num_2);
+
+    return 0;
 }
 
 // Functions ..

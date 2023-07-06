@@ -13,7 +13,6 @@ int main()
 {
     wel_mas_function();
 
-    
     printf("\nYour number is : %d\n\n\n", ent_num_fun());
 
     return 0;

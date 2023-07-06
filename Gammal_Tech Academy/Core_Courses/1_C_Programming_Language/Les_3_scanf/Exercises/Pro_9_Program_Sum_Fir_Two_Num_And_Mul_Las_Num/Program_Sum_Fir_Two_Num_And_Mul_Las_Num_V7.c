@@ -31,7 +31,6 @@ int main()
     printf("%s",sum_num1_num2);
     printf("%s",mul_num3_num4);
 
-
     return 0;
 }
 

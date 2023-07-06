@@ -6,10 +6,15 @@
 
 #include <stdio.h>
 
+void wel_mas_function();
+int sum_num_fun();
+
 int main()
 {
-
-        return 0;
+    wel_mas_function();
+    sum_num_fun();
+    
+    return 0;
 }
 
 // Functions ..

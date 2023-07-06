@@ -13,4 +13,6 @@ int main()
     int num_1 = 1, num_2 = 2, num_3 = 3, num_4 = 4;
 
     printf("Num_1 + Num_2 = %d\nNum_3 + Num_4 = %d\n\n\n", num_1 + num_2, num_3 + num_4);
+
+    return 0;
 }

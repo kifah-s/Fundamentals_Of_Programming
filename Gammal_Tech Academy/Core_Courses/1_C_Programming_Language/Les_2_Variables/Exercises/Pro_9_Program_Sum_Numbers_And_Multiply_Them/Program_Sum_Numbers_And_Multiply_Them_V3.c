@@ -15,4 +15,6 @@ int main()
     int result_1 = num_1 + num_2, result_2 = result_1 * num_3;
 
     printf("result is : %d\n\n\n", result_2);
+
+    return 0;
 }

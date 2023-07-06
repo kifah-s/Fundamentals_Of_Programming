@@ -13,8 +13,9 @@ int res_mul_mas_fun(int result);
 int main()
 {
     wel_mas_function();
-
     res_mul_mas_fun(mul_two_num_fun(10, 5));
+
+    return 0;
 }
 
 // Functions..

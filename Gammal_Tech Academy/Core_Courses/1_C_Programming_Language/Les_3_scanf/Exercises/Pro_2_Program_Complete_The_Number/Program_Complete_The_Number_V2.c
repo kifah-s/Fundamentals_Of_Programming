@@ -13,6 +13,7 @@ int main()
 {
     wel_mas_function();
     com_num_fun();
+    
     return 0;
 }
 

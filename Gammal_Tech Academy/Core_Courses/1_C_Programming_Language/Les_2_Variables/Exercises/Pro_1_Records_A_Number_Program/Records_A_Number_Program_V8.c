@@ -16,6 +16,8 @@ int main()
     printf(wel_mas_fun());
 
     printf(reg_mas_fun(), var_fun(1996));
+
+    return 0;
 }
 
 // Functions ..

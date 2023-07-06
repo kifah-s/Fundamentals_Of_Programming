@@ -12,7 +12,6 @@ char *close_friends(char close_friends_phone[]);
 
 int main()
 {
-
     printf(welcome_massage("\n\nYou welcome in Phone Number Program ( Version 9 ) ..\n\n"));
     
     printf(close_friends("My close friends and their phone numbers they :\n\n"));

@@ -13,4 +13,6 @@ int main()
     int num_1 = 1, num_2 = 2, num_3 = 3;
 
     printf("Result Sum num_1 and num_2 is : %d\nResult Sum num_2 and num_3 is : %d\nResult Sum num_1 and num_3 is : %d\n\n\n", num_1 + num_2, num_2 + num_3, num_1 + num_3);
+
+    return 0;
 }

@@ -18,4 +18,6 @@ int main()
     int result = num_1 + num_2 + num_3 + num_4 + num_5;
 
     printf("Result Sum the five numbers is : %d\n\n\n", result);
+
+    return 0;
 }

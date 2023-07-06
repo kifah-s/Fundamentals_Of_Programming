@@ -19,6 +19,8 @@ int main()
         n4 = 4;
 
     res_fun(n1, n2, n3, n4);
+
+    return 0;
 }
 
 // Functions..

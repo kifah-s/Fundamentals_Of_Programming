@@ -11,7 +11,6 @@ void let_fun(char let1[], char let2[], char let3[], char let4[], char let5[], ch
 
 int main()
 {
-
     wel_mas_fun("\n\nYou welcome in Letter \" X \" Drawing Program ( Version 4 ) ..\n\n");
     let_fun(" *                *\n", "   *            *\n", "     *        *\n", "       *    *\n", "          *\n", "       *     *\n", "     *         *\n", "   *             *\n", "*                   *\n\n\n");
 

@@ -14,6 +14,7 @@ int main()
 {
     welcome_massage();
     close_friends();
+    
     return 0;
 }
 

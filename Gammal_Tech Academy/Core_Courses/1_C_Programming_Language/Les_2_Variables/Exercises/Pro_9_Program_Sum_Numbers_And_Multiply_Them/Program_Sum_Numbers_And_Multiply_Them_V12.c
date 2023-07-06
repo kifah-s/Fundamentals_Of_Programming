@@ -21,6 +21,8 @@ int main()
     int sum = res_sum_num1_and_num2_fun(num_1, num_2);
 
     res_tot_mul_num3_fun(sum, num_3);
+
+    return 0;
 }
 
 // Functions..

@@ -17,6 +17,8 @@ int main()
         num_2 = 2,
         num_3 = 3;
     res_sum_and_mul_num_fun(num_1, num_2, num_3);
+
+    return 0;
 }
 
 // Functions..

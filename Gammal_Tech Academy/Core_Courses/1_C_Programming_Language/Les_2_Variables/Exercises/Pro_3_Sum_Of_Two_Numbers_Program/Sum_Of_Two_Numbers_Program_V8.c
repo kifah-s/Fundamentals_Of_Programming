@@ -20,6 +20,8 @@ int main()
 
     int result = sum_num_fun();
     printf("%d\n\n\n", result);
+
+    return 0;
 }
 
 // Functions ..

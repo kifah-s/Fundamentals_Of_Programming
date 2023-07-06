@@ -13,11 +13,9 @@ int fromKGtoTON(int weight);
 int main()
 {
     welMasFun();
-    
 
     printf("\nYour weight in TON : %d ton\n\n\n", fromKGtoTON(kgFun()));
     
-
     return 0;
 }
 

@@ -14,4 +14,6 @@ int main()
     int num_2 = 2023;
     int result = num_1 * num_2;
     printf("Result Multiplication the two numbers is : %d\n\n\n", result);
+
+    return 0;
 }

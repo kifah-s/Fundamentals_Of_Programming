@@ -27,6 +27,8 @@ int main()
     sum_two_and_tre_num_fun(num_2, num_3);
 
     sum_one_and_tre_num_fun(num_1, num_3);
+
+    return 0;
 }
 
 // Functions..

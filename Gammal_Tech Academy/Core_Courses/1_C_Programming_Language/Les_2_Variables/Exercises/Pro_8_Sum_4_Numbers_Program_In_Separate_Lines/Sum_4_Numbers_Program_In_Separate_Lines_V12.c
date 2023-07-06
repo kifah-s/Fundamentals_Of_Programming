@@ -20,6 +20,8 @@ int main()
         num_4 = 4;  */
     sum_num1_and_num2_fun(1, 2);
     sum_num3_and_num4_fun(3, 4);
+
+    return 0;
 }
 
 // Functions..

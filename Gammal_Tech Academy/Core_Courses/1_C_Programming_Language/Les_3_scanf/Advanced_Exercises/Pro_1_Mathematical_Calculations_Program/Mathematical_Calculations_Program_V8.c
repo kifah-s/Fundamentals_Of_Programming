@@ -17,16 +17,12 @@ int mathCalcFun();
 
 int main()
 {
-    
-
     /* int n1 = firstNumFun();
         int n2 = secondNumFun();
         int n3 = thirdNumFun();
         int n4 = forthNumFun(); */
 
     mathCalcFun();
-
-    
 
     return 0;
 }

@@ -12,8 +12,9 @@ void sum_five_num_fun();
 int main()
 {
     wel_mas_fun();
-
     sum_five_num_fun();
+
+    return 0;
 }
 
 // Functions..

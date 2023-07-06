@@ -13,10 +13,11 @@ char *pri_var_mas_fun();
 
 int main()
 {
-
     printf(wel_mas_fun());
 
     printf(pri_var_mas_fun(), num_1_fun(1996), num_2_fun(2023));
+
+    return 0;
 }
 
 // Functions ..

@@ -17,4 +17,6 @@ int main()
     printf("Result_1 : num_1 + num_2 = %d\n", result_1);
     printf("Result_2 : num_2 + num_3 = %d\n", result_2);
     printf("Result_3 : num_1 + num_3 = %d\n\n\n", result_3);
+
+    return 0;
 }

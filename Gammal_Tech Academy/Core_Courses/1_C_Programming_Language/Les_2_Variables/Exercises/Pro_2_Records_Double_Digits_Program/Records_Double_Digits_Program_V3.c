@@ -12,4 +12,6 @@ int main()
 
     int num_1 = 1996, num_2 = 2023;
     printf("Num_1 = %d\nNum_2 = %d\n\n\n", num_1, num_2);
+
+    return 0;
 }

@@ -21,6 +21,8 @@ int main()
 
     res_sum_num1_and_num2_fun(1, 2);
     res_mul_num3_and_num4_fun(3, 4);
+
+    return 0;
 }
 
 // Functions..

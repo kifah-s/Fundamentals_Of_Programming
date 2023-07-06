@@ -15,4 +15,6 @@ int main()
     int result_1 = num_1 + num_2, result_2 = num_2 + num_3, result_3 = num_1 + num_3;
 
     printf("Result_1 : num_1 + num_2 = %d\nResult_2 : num_2 + num_3 = %d\nResult_3 : num_1 + num_3 = %d\n\n\n", result_1, result_2, result_3);
+
+    return 0;
 }

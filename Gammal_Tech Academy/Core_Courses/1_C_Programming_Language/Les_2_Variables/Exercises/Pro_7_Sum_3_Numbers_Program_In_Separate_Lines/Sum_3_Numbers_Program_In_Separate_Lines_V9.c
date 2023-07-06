@@ -12,8 +12,9 @@ void sum_num_fun(int num_1, int num_2, int num_3);
 int main()
 {
     wel_mas_fun();
-
     sum_num_fun(1, 2, 3);
+
+    return 0;
 }
 
 // Functions..

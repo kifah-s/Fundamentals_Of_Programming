@@ -8,7 +8,7 @@ Required : Write a program that prints out the tasks you have to do tomorrow. <<
 #include <stdio.h>
 
 void welcome_massage(char welcome[]);
-void daily_program(char program[],char university[],char english[],char programming[],char gym[],char private[],char sleeping[],char dreams[]);
+void daily_program(char program[], char university[], char english[], char programming[], char gym[], char private[], char sleeping[], char dreams[]);
 
 int main()
 {
@@ -23,7 +23,7 @@ int main()
     char private[] = {"5 - this is my private time from 7 pm to 10 pm.\n"};
     char sleeping[] = {"6 - this is sleeping time 10 pm.\n"};
     char dreams[] = {"and happy dreams\n\n\n"};
-    
+
     daily_program(program, university, english, programming, gym, private, sleeping, dreams);
 
     return 0;
@@ -38,7 +38,7 @@ void welcome_massage(char welcome[])
 }
 
 // Daily program function;
-void daily_program(char program[],char university[],char english[],char programming[],char gym[],char private[],char sleeping[],char dreams[])
+void daily_program(char program[], char university[], char english[], char programming[], char gym[], char private[], char sleeping[], char dreams[])
 {
     printf("%s", program);
     printf("%s", university);

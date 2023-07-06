@@ -11,7 +11,6 @@ char *tri_fun();
 
 int main()
 {
-
     printf(wel_mas_fun());
     
     printf(tri_fun());

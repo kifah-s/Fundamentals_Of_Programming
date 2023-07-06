@@ -15,6 +15,8 @@ int main()
     wel_mas_fun();
     int mul_num = mul_num_fun(10, 5);
     res_mas_fun(mul_num);
+
+    return 0;
 }
 
 // Functions..

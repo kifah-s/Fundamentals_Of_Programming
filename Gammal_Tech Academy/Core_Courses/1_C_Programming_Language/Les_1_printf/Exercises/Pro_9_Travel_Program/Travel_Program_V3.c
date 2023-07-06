@@ -12,7 +12,6 @@ void tra_fun(char tra[], char fra[],char spa[],char hol[],char ger[],char mal[])
 
 int main()
 {
-
     wel_mas_fun("\n\nYou welcome in Travel Program ( Version 3 ) ..\n\n");
     tra_fun("I like to travel to the following cities : \n", "- France\n", "- Spain\n", "- Holland\n", "- Germany\n", "- The Maldive Islands\n\n\n");
 

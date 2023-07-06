@@ -13,6 +13,7 @@ int main()
 {
     wel_mas_fun();
     inc_five_fun();
+    
     return 0;
 }
 

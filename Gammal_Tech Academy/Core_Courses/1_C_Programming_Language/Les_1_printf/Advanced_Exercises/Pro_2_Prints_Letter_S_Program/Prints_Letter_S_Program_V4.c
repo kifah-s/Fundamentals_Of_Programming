@@ -11,7 +11,6 @@ void let_fun();
 
 int main()
 {
-
     wel_mas_fun();
     let_fun();
     

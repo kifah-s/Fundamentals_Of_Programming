@@ -17,4 +17,6 @@ int main()
     printf("Result Sum num_1 and num_2 is : %d\n", num_1 + num_2);
     printf("Result Sum num_2 and num_3 is : %d\n", num_2 + num_3);
     printf("Result Sum num_1 and num_3 is : %d\n\n\n", num_1 + num_3);
+
+    return 0;
 }

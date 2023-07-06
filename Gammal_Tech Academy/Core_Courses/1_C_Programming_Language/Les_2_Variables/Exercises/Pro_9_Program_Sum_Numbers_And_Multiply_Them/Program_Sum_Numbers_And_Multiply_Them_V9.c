@@ -20,6 +20,8 @@ int main()
 
     res_sum_num1_and_num2_fun(1, 2);
     res_tot_mul_num3_fun(3);
+
+    return 0;
 }
 
 // Functions..

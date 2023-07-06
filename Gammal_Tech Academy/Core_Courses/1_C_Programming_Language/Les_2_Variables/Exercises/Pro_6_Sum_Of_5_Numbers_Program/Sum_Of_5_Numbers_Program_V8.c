@@ -13,10 +13,10 @@ void res_sum_mas_fun(int result);
 int main()
 {
     wel_mas_fun();
-
     int res = sum_five_num_fun(1, 2, 3, 4, 5);
-
     res_sum_mas_fun(res);
+
+    return 0;
 }
 
 // Functions..

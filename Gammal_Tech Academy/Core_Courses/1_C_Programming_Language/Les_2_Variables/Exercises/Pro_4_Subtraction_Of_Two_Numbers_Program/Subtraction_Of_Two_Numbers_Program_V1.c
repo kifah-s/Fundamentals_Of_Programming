@@ -13,4 +13,6 @@ int main()
     int num_1 = 1996;
     int num_2 = 2023;
     printf("Result Subtraction the two numbers is : %d\n\n\n", num_1 - num_2);
+
+    return 0;
 }

@@ -11,7 +11,6 @@ void tri_fun(char tri[]);
 
 int main()
 {
-
     wel_mas_fun("\n\nYou welcome in Triangle Shape Drawing Program ( Version 3 ) ..\n\n");
     tri_fun("\n               *\n");
     tri_fun("             *   *\n");

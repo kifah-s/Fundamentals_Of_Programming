@@ -22,6 +22,8 @@ int main()
     // printf("%d", result);
 
     printf("%s%d\n\n\n", *res_mas, result);
+
+    return 0;
 }
 
 // Functions ..

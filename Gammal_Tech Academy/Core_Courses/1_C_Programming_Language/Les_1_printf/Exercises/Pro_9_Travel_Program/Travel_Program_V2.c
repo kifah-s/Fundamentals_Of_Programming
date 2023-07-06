@@ -12,7 +12,6 @@ void tra_fun();
 
 int main()
 {
-
     wel_mas_fun();
     tra_fun();
 

@@ -13,6 +13,7 @@ int main()
 {
     wel_mas_fun();
     var_nam_val_fun();
+    
     return 0;
 }
 
