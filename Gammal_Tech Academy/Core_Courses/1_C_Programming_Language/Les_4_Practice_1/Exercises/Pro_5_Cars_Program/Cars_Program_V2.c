@@ -8,15 +8,12 @@ Required : write a program that asks the person how many litres of gasoline in t
 #include <stdio.h>
 
 void welMasFun();
-int litersFun();
-int kiloMFun(int liters);
+int carsFun();
 
 int main()
 {
     welMasFun();
-    
-    int liters = litersFun();
-    kiloMFun(liters);
+    carsFun();
 
     return 0;
 }
@@ -28,19 +25,14 @@ void welMasFun()
     printf("\n\nYou welcome in Cars Program ( Version 2 ) ..\n\n");
 }
 
-// Liters function;
-int litersFun()
+// cars function;
+int carsFun()
 {
-    int liters;
+    int liters,
+        kiloM;
+
     printf("How many liters of petrol in the car : ");
     scanf("%d", &liters);
-    return liters;
-}
-
-// kiloM function;
-int kiloMFun(int liters)
-{
-    int kiloM;
 
     kiloM = liters * 23;
     printf("\nThe car can cover a distance : %d KM\n\n\n", kiloM);

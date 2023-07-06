@@ -21,8 +21,6 @@ int fiscalDeficit();
 int main()
 {
     welMasFun();
-
-
     fiscalDeficit();
     
     return 0;

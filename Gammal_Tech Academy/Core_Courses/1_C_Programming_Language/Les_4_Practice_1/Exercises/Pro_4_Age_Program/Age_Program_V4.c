@@ -1,6 +1,6 @@
 
 
-/* >>> Age Program ( Version 3 ) <<< */
+/* >>> Age Program ( Version 4 ) <<< */
 
 /* >>> A program that asks a person about his age and prints for him the year of his birth. <<< */
 
@@ -9,16 +9,12 @@
 void welMasFun();
 int ageFun();
 int currentYearFun();
-int yearOfBirthFun(int currentYear, int age);
+int yearOfBirthFun();
 
 int main()
 {
     welMasFun();
-
-    int age = ageFun();
-    int currentYear = currentYearFun();
-    
-    yearOfBirthFun(currentYear, age);
+    yearOfBirthFun();
 
     return 0;
 }
@@ -27,7 +23,7 @@ int main()
 // Welcome massage function;
 void welMasFun()
 {
-    printf("\n\nYou welcome in Age Program ( Version 3 ) ..\n\n");
+    printf("\n\nYou welcome in Age Program ( Version 4 ) ..\n\n");
 }
 
 // Age function;
@@ -49,8 +45,11 @@ int currentYearFun()
 }
 
 // Year of Birth function;
-int yearOfBirthFun(int currentYear, int age)
+int yearOfBirthFun()
 {
+    int age = ageFun();
+    int currentYear = currentYearFun();
+
     int yearOfBirth;
     yearOfBirth = currentYear - age;
     printf("\nYear Of Birth : %d\n\n\n", yearOfBirth);

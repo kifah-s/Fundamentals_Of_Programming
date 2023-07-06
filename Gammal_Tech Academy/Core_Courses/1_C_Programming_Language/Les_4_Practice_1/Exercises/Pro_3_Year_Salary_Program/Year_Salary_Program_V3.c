@@ -8,13 +8,12 @@
 
 void welMasFun();
 int monthSalaryFun();
-int yearSalaryFun();
+int yearSalaryFun(int month);
 
 int main()
 {
-
     welMasFun();
-    yearSalaryFun();
+    yearSalaryFun(monthSalaryFun());
 
     return 0;
 }
@@ -35,10 +34,9 @@ int monthSalaryFun()
     return month;
 }
 // Year salary function;
-int yearSalaryFun()
+int yearSalaryFun(int month)
 {
     int year;
-    int month = monthSalaryFun();
 
     year = month * 12;
     printf("\nThe year salary : %d $\n\n\n", year);

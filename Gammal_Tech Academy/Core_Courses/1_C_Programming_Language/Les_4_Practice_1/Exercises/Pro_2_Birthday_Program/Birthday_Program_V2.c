@@ -11,7 +11,6 @@ int birthdayFun();
 
 int main()
 {
-
     welMasFun();
     birthdayFun();
 

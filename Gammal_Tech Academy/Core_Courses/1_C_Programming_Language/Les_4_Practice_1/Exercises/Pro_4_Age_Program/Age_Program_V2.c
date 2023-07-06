@@ -6,27 +6,20 @@
 
 #include <stdio.h>
 
-void welMasFun();
+void welcomeMassageFun();
 int ageFun();
-int currentYearFun();
-int yearOfBirthFun(int currentYear, int age);
 
 int main()
 {
-
-    welMasFun();
-
-    int age = ageFun();
-    int currentYear = currentYearFun();
+    welcomeMassageFun();
+    ageFun();
     
-    yearOfBirthFun(currentYear, age);
-
     return 0;
 }
 
-// Functions ..
+// Function;
 // Welcome massage function;
-void welMasFun()
+void welcomeMassageFun()
 {
     printf("\n\nYou welcome in Age Program ( Version 2 ) ..\n\n");
 }
@@ -34,25 +27,16 @@ void welMasFun()
 // Age function;
 int ageFun()
 {
-    int age;
+    int age,
+        current_year,
+        year_of_Birth;
+
     printf("Enter the age : ");
     scanf("%d", &age);
-    return age;
-}
 
-// Current year function;
-int currentYearFun()
-{
-    int currentYear;
     printf("Enter the current year : ");
-    scanf("%d", &currentYear);
-    return currentYear;
-}
+    scanf("%d", &current_year);
 
-// Year of Birth function;
-int yearOfBirthFun(int currentYear, int age)
-{
-    int yearOfBirth;
-    yearOfBirth = currentYear - age;
-    printf("\nYear Of Birth : %d\n\n\n", yearOfBirth);
+    year_of_Birth = current_year - age;
+    printf("\nYear Of Birth : %d\n\n\n", year_of_Birth);
 }

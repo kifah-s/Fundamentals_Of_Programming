@@ -1,6 +1,6 @@
 
 
-/* >>> Cars Program ( Version 3 ) <<< */
+/* >>> Cars Program ( Version 4 ) <<< */
 
 /* >>> Cars program : Before going to a long drive, you need to make sure there's enough gasoline in the car to go to the trip.
 Required : write a program that asks the person how many litres of gasoline in the car and prints it how many kilo metres a car can cut without having to add gasoline. (If the liter of gasoline is enough for 23 km) <<< */
@@ -9,14 +9,12 @@ Required : write a program that asks the person how many litres of gasoline in t
 
 void welMasFun();
 int litersFun();
-int kiloMFun(int liters);
+int kiloMFun();
 
 int main()
 {
     welMasFun();
-    
-    int liters = litersFun();
-    kiloMFun(liters);
+    kiloMFun();
 
     return 0;
 }
@@ -25,7 +23,7 @@ int main()
 // Welcome massage function;
 void welMasFun()
 {
-    printf("\n\nYou welcome in Cars Program ( Version 3 ) ..\n\n");
+    printf("\n\nYou welcome in Cars Program ( Version 4 ) ..\n\n");
 }
 
 // Liters function;
@@ -38,8 +36,10 @@ int litersFun()
 }
 
 // kiloM function;
-int kiloMFun(int liters)
+int kiloMFun()
 {
+    int liters = litersFun();
+
     int kiloM;
 
     kiloM = liters * 23;
