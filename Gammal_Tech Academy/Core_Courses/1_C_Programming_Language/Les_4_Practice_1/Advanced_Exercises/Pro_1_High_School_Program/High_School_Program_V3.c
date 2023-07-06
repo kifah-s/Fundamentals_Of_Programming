@@ -1,6 +1,6 @@
 
 
-/* >>> High School Program - ( Version - 3 ) <<< */
+/* >>> High School Program ( Version 3 ) <<< */
 
 /* >>> sharif finished his high school exams, and when the result appeared, he wanted to calculate the number of grades he had lost.
 Required : Write a program that asks the person about his grades in 6 different subjects, assuming that each subject is out of 100, and then prints a missing score in all subjects. <<< */
@@ -38,7 +38,7 @@ int main()
 // Welcome massage function;
 void welMasFun()
 {
-    printf("\n\nYou welcome in High School Program - ( Version - 3 ) ..\n\n");
+    printf("\n\nYou welcome in High School Program ( Version 3 ) ..\n\n");
 }
 
 // mathematics Function;

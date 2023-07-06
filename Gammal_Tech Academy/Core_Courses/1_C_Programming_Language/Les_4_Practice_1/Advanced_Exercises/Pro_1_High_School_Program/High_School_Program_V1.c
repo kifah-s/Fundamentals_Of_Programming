@@ -1,6 +1,6 @@
 
 
-/* >>> High School Program - ( Version - 1 ) <<< */
+/* >>> High School Program ( Version 1 ) <<< */
 
 /* >>> sharif finished his high school exams, and when the result appeared, he wanted to calculate the number of grades he had lost.
 Required : Write a program that asks the person about his grades in 6 different subjects, assuming that each subject is out of 100, and then prints a missing score in all subjects. <<< */
@@ -9,7 +9,7 @@ Required : Write a program that asks the person about his grades in 6 different 
 
 int main()
 {
-    printf("\n\nYou welcome in High School Program - ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in High School Program ( Version 1 ) ..\n\n");
 
     int mathematics = 100, Arabic = 100, Chemistry = 100, history = 100, Geography = 100, Physics = 100;
 

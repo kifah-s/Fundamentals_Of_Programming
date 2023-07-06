@@ -1,6 +1,6 @@
 
 
-/* >>> Books Program - ( Version - 3 ) <<< */
+/* >>> Books Program ( Version 3 ) <<< */
 
 /* >>> It is necessary to read books from time to time in order to increase and increase your information.
 Required : Write a program that asks the user to enter the number of books he reads daily and then tells him if he continues at the same level, he will read how many books at the end of the month. <<< */
@@ -9,7 +9,7 @@ Required : Write a program that asks the user to enter the number of books he re
 
 int main()
 {
-    printf("\n\nYou welcome in Books Program - ( Version - 3 ) ..\n\n");
+    printf("\n\nYou welcome in Books Program ( Version 3 ) ..\n\n");
 
     int B_month;
 
