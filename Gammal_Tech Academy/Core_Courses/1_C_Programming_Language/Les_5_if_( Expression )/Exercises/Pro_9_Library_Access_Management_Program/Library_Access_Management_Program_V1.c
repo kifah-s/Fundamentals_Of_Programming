@@ -9,7 +9,6 @@ Required : Type a program that asks the user to enter a number and print "Take t
 
 int main()
 {
-
     printf("\n\nYou welcome in Library Access Management Program ( Version 1 ) ..\n\n");
 
     int num;

@@ -9,7 +9,6 @@ Required : Write a program if the user drinks less than 3 liters per day, it wil
 
 int main()
 {
-
     printf("\n\nYou welcome in Drinking Water Program ( Version 1 ) ..\n\n");
 
     int drinking;

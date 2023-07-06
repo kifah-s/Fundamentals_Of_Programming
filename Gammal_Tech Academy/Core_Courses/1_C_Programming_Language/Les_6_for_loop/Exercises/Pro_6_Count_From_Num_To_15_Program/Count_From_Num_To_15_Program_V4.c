@@ -21,6 +21,7 @@ int main()
     welcomeMassageFun();
     int num = gettingNumFun();
     countFromNumTo15Fun(num);
+    
     return 0;
 }
 

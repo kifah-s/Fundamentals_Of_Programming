@@ -17,6 +17,7 @@ int main()
     int num_1 = getFirstNumberFun();
     int num_2 = getSecondNumberFun();
     fromSmallestToLargestFun(num_1, num_2);
+    
     return 0;
 }
 

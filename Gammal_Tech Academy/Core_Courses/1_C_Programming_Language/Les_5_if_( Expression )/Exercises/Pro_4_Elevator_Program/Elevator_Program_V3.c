@@ -10,7 +10,7 @@ Required : Write a program that asks a person to enter 5 numbers and collect the
 void welcomeMassageFun();
 int elevatorFun();
 
-int main(void)
+int main()
 {
     welcomeMassageFun();
     elevatorFun();

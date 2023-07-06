@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
     printf("\n\nYou welcome in Printing Largest Number Program - ( Version - 2 ) ..\n\n");
 

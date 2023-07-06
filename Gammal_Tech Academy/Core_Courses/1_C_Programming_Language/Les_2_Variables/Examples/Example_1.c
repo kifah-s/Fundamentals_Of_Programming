@@ -13,4 +13,6 @@ int main()
     int z = x + y;
 
     printf("\n\n%d\n\n\n", z);
+
+    return 0;
 }

@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
     printf("\n\nYou welcome in Example ..\n\n");
 
@@ -17,4 +17,6 @@ int main(void)
         printf("Yes\n");
     else
         printf("No\n");
+
+    return 0;
 }

@@ -7,9 +7,8 @@ Required : Write a program that asks the user to enter two numbers, the first ex
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-
     printf("\n\nYou welcome in Playstation Program - ( Version - 1 ) ..\n\n");
 
     int p_1, p_2;

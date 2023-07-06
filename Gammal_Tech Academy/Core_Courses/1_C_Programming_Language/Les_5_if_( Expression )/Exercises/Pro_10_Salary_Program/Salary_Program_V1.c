@@ -8,7 +8,6 @@
 
 int main()
 {
-
     printf("\n\nYou welcome in Salary Program ( Version 1 ) ..\n\n");
 
     int salary_v, number_d;

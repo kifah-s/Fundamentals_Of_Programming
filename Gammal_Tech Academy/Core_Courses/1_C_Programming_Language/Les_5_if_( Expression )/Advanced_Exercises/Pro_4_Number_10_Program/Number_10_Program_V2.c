@@ -8,7 +8,6 @@
 
 int main()
 {
-
     printf("\n\nYou welcome in Number 10 Program ( Version 2 ) ..\n\n");
 
     int number;

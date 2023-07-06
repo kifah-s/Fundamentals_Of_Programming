@@ -15,6 +15,7 @@ int main()
     welcomeMassageFun();
     int num = gettingNumberFun();
     number20Fun(num);
+    
     return 0;
 }
 

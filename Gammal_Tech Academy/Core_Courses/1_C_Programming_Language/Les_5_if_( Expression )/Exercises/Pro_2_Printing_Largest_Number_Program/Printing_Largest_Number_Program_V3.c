@@ -9,7 +9,7 @@
 void welMasFun();
 int largestNumFun();
 
-int main(void)
+int main()
 {
     welMasFun();
     largestNumFun();

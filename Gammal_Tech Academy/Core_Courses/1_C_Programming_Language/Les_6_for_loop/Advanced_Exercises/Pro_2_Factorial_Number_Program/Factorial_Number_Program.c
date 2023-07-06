@@ -8,7 +8,6 @@
 
 int main()
 {
-
     printf("\n\nYou welcome in Factorial Number Program ..\n\n");
 
     int fact = 1, i, num;

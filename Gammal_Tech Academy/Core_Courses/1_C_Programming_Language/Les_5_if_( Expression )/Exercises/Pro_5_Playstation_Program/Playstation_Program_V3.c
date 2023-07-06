@@ -10,7 +10,7 @@ Required : Write a program that asks the user to enter two numbers, the first ex
 void welcomeMassageFun();
 int playstationFun();
 
-int main(void)
+int main()
 {
     welcomeMassageFun();
     playstationFun();

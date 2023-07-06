@@ -9,7 +9,6 @@ Required : Write a program if the student gets a score of 100%, printing “cong
 
 int main()
 {
-
     printf("\n\nYou welcome in Gammal Tech Degree Program ( Version 1 ) ..\n\n");
 
     int degree;

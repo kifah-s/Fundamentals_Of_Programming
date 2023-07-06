@@ -9,7 +9,7 @@
 void welcomeMassageFun();
 int profitAndLossFunction();
 
-int main(void)
+int main()
 {
     welcomeMassageFun();
     profitAndLossFunction();

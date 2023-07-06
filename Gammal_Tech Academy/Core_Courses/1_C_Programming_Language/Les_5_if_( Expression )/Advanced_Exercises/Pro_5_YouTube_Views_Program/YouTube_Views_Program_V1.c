@@ -9,7 +9,6 @@ Required : Write a program that takes input from the user expressing the number 
 
 int main()
 {
-
     printf("\n\nYou welcome in YouTube Views Program ( Version 1 ) ..\n\n");
 
     int views_b, views_n;

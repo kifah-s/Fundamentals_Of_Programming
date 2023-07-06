@@ -11,7 +11,7 @@ int firstNumberFun();
 int secondNumberFun();
 int largestNumFun();
 
-int main(void)
+int main()
 {
     welMasFun();
 

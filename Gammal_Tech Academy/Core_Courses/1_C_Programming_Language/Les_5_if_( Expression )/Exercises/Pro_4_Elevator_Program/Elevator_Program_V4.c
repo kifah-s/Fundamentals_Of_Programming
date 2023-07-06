@@ -15,7 +15,7 @@ int weight4Fun();
 int weight5Fun();
 int elevatorFun(int w1, int w2, int w3, int w4, int w5);
 
-int main(void)
+int main()
 {
     welcomeMassageFun();
 

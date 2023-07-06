@@ -12,7 +12,7 @@ int playerFirstFun();
 int playerSecondFun();
 int playstationFun();
 
-int main(void)
+int main()
 {
     welcomeMassageFun();
 

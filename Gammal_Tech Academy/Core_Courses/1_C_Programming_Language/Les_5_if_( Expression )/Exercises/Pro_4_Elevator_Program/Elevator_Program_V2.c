@@ -7,7 +7,7 @@ Required : Write a program that asks a person to enter 5 numbers and collect the
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
     printf("\n\nYou welcome in the Elevator Program - ( Version - 2 )\n\n");
 

@@ -11,7 +11,7 @@ int amountOfMoneyFunction();
 int amountOfMoneyAfterMonthFunction();
 int differenceFunction(int amountMoney, int afterMonth);
 
-int main(void)
+int main()
 {
     welcomeMassageFun();
 

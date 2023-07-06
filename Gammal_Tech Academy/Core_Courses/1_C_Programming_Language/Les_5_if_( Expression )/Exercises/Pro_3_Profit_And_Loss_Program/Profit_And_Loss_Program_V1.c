@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
     printf("\n\nYou welcome in Profit And Loss Program ( Version 1 ) ..\n\n");
 
