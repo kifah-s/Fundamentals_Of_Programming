@@ -1,6 +1,6 @@
 
 
-/* >>> Factorial Number Program <<< */
+/* >>> Factorial Number Program ( Version 1 ) <<< */
 
 /* >>> A program to calculate the factorial of a given number. <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Factorial Number Program ..\n\n");
+    printf("\n\nYou welcome in Factorial Number Program ( Version 1 ) ..\n\n");
 
     int fact = 1, i, num;
 

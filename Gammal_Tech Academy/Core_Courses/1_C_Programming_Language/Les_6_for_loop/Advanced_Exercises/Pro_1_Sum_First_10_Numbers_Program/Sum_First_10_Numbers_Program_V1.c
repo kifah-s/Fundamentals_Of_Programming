@@ -1,6 +1,6 @@
 
 
-/* >>> Print Name 10 Times Program <<< */
+/* >>> Sum First 10 Numbers Program ( Version 1 ) <<< */
 
 /* >>> A program to find the sum of the first 10 numbers. <<< */
 
@@ -8,10 +8,9 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Print Name 10 Times Program ..\n\n");
+    printf("\n\nYou welcome in Sum First 10 Numbers Program ( Version 1 ) ..\n\n");
 
-    int i,
-        sum = 0;
+    int i, sum = 0;
 
     for (i = 1; i <= 10; i++)
     {
