@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
     printf("\n\nYou welcome in Example 2 ..\n\n");
 
@@ -24,4 +24,6 @@ int main(void)
     {
         printf("\nthe password is wrong\n\n\n");
     }
+
+    return 0;
 }

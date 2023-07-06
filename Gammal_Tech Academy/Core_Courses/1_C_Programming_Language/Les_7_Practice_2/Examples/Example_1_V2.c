@@ -1,14 +1,14 @@
 
 
-/* >>> Example 1 - ( Version - 2 ) <<< */
+/* >>> Example 1 ( Version 2 ) <<< */
 
 /* >>> A program that prints the largest of two numbers entered by the user. <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Example 1 - ( Version - 2 ) ..\n\n");
+    printf("\n\nYou welcome in Example 1 ( Version 2 ) ..\n\n");
 
     int num_1, num_2;
 
@@ -32,4 +32,6 @@ int main(void)
     {
         printf("\nThe numbers equal : %d = %d\n\n\n", num_1, num_2);
     }
+
+    return 0;
 }
