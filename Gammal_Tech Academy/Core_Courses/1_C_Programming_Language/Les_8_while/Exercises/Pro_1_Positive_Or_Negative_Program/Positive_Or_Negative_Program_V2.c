@@ -1,14 +1,14 @@
 
 
-/* >>> Positive Or Negative Program  - ( Version - 2 )<<< */
+/* >>> Positive Or Negative Program ( Version 2 )<<< */
 
 /* >>> A program that asks a person to enter different numbers if the number is positive and his side applies the word "is positive" and if he negatively applies the number and his side applies the word "is negative" (using while). <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Positive Or Negative Program - ( Version - 2 ) ..\n\n");
+    printf("\n\nYou welcome in Positive Or Negative Program ( Version 2 ) ..\n\n");
 
     int num;
 
@@ -30,4 +30,6 @@ int main(void)
         }
     }
     printf("\n\n\n");
+
+    return 0;
 }

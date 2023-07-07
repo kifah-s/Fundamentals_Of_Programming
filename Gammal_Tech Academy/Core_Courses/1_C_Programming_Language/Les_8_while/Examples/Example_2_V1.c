@@ -1,12 +1,12 @@
 
 
-/* >>> Example 2 - ( Version - 1 ) <<< */
+/* >>> Example 2 ( Version 1 ) <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Example 2 - ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Example 2 ( Version 1 ) ..\n\n");
 
     int x, sum = 0;
 

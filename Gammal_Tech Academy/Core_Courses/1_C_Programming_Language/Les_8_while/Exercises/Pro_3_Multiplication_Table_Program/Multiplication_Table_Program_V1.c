@@ -1,14 +1,14 @@
 
 
-/* >>> Multiplication Table Program For Number 8 - ( Version - 1 ) <<< */
+/* >>> Multiplication Table Program For Number 8 ( Version 1 ) <<< */
 
 /* >>> A program that prints 8 Multiplication Table (Using While). <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Multiplication Table Program For Number 8 - ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Multiplication Table Program For Number 8 ( Version 1 ) ..\n\n");
 
     int i = 1, num = 8;
 
@@ -18,4 +18,6 @@ int main(void)
         i++;
     }
     printf("\n\n\n");
+
+    return 0;
 }

@@ -1,14 +1,14 @@
 
 
-/* >>> From 1 To Num Program - ( Version - 1 ) <<< */
+/* >>> From 1 To Num Program ( Version 1 ) <<< */
 
 /* >>> A program that asks a person to enter a number and applies the numbers from 1 to this number (using while). <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in From 1 To Num Program - ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in From 1 To Num Program ( Version 1 ) ..\n\n");
 
     int i = 1, num;
 
@@ -21,4 +21,6 @@ int main(void)
         i++;
     }
     printf("\n\n\n");
+
+    return 0;
 }

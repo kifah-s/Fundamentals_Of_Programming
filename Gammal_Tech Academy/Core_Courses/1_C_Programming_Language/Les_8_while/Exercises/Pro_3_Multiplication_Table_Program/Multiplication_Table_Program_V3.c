@@ -1,14 +1,14 @@
 
 
-/* >>> Multiplication Table Program For Any Number <<< */
+/* >>> Multiplication Table Program For Any Number ( Version 3 ) <<< */
 
 /* >>> A program that prints Multiplication Table For Any Number (Using While). <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Multiplication Table Program For Any Number ..\n\n");
+    printf("\n\nYou welcome in Multiplication Table Program For Any Number ( Version 3 ) ..\n\n");
 
     int i = 1, num, result;
 
@@ -22,4 +22,6 @@ int main(void)
         i++;
     }
     printf("\n\n\n");
+
+    return 0;
 }
