@@ -1,6 +1,6 @@
 
 
-/* >>> From Largest To Smaller Program ( Version 2 ) <<< */
+/* >>> From Largest To Smaller Program ( Version 3 ) <<< */
 
 /* >>> A program that asks a person to enter two different numbers and print the numbers from the largest to the smallest. <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in From Largest To Smaller Program ( Version 2 ) ..\n\n");
+    printf("\n\nYou welcome in From Largest To Smaller Program ( Version 3 ) ..\n\n");
 
     int num_1, num_2, i;
 
@@ -27,7 +27,7 @@ int main()
             i--;
         }
     }
-    else
+    else if (num_1 > num_2)
     {
         i = num_1;
         while (i >= num_2)
@@ -35,6 +35,10 @@ int main()
             printf("\n%d", i);
             i--;
         }
+    }
+    else
+    {
+        printf("\nThe numbers equal : %d = %d", num_1, num_2);
     }
 
     printf("\n\n\n");
