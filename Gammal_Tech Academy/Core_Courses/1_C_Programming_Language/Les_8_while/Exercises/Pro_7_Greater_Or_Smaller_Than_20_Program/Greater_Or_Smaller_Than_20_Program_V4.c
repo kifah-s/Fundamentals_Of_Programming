@@ -1,15 +1,32 @@
 
 
-/* >>> Greater Or Smaller Than 20 Program ( Version 2 ) <<< */
+/* >>> Greater Or Smaller Than 20 Program ( Version 4 ) <<< */
 
 /* >>> A program that asks the user to enter a number if the number is greater than 20 prints all the numbers from 20 to this number, and if smaller than 20 prints all the numbers from this number to 20. <<< */
 
 #include <stdio.h>
 
+void welcomeMassageFun();
+int greaterOrSmallerThan20Fun();
+
 int main()
 {
-    printf("\n\nYou welcome in Greater Or Smaller Than 20 Program ( Version 2 ) ..\n\n");
+    welcomeMassageFun();
+    greaterOrSmallerThan20Fun();
+    
+    return 0;
+}
 
+// Function..
+// Welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Greater Or Smaller Than 20 Program ( Version 4 ) ..\n\n");
+}
+
+// Greater Or Smaller Than 20 function;
+int greaterOrSmallerThan20Fun()
+{
     int num, i;
 
     printf("Please enter number Greater or smaller than 20 : ");
@@ -38,6 +55,4 @@ int main()
         printf("\n%d = 20", num);
     }
     printf("\n\n\n");
-
-    return 0;
 }
