@@ -1,14 +1,14 @@
 
 
-/* >>> Smaller Than 15 Program - ( Version - 2 ) <<< */
+/* >>> Smaller Than 15 Program ( Version 2 ) <<< */
 
 /* >>> A program that asks the user to enter a number smaller than 15 and then prints all the numbers from this number to the number 15 (using while). <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Smaller Than 15 Program - ( Version - 2 ) ..\n\n");
+    printf("\n\nYou welcome in Smaller Than 15 Program ( Version 2 ) ..\n\n");
 
     int i = 1, num;
 
@@ -28,4 +28,6 @@ int main(void)
     }
 
     printf("\n\n\n");
+
+    return 0;
 }

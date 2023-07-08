@@ -1,16 +1,36 @@
 
 
-/* >>> Smaller Than 15 Program ( Version 3 ) <<< */
+/* >>> Smaller Than 15 Program ( Version 5 ) <<< */
 
 /* >>> A program that asks the user to enter a number smaller than 15 and then prints all the numbers from this number to the number 15  and sum this numbers (using while). <<< */
 
 #include <stdio.h>
 
+void welcomeMassageFun();
+int getNumberFun();
+int smallerThan15(int num);
+
 int main()
 {
-    printf("\n\nYou welcome in Smaller Than 15 Program ( Version 3 ) ..\n\n");
+    welcomeMassageFun();
 
-    int i = 1, sum = 0, num;
+    int num = getNumberFun();
+    smallerThan15(num);
+
+    return 0;
+}
+
+// Functions..
+// Welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Smaller Than 15 Program ( Version 5 ) ..\n\n");
+}
+
+// Get Number function;
+int getNumberFun()
+{
+    int num;
 
     printf("Please enter number smaller than 15 : ");
     scanf("%d", &num);
@@ -20,6 +40,13 @@ int main()
         printf("Please enter number smaller than 15 : ");
         scanf("%d", &num);
     }
+    return num;
+}
+
+// Smaller Than 15 function;
+int smallerThan15(int num)
+{
+    int i = 1, sum = 0;
 
     while (i <= num)
     {
@@ -29,6 +56,4 @@ int main()
     }
     printf("\n\nResult Sum numbers from 1 to %d = %d", num, sum);
     printf("\n\n\n");
-
-    return 0;
 }

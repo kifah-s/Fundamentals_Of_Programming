@@ -1,14 +1,14 @@
 
 
-/* >>> From 1 To 100 Program <<< */
+/* >>> From 1 To 100 Program ( Version 1 ) <<< */
 
 /* >>> A program that prints numbers from 1 to 100 (using while). <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in From 1 To 100 Program ..\n\n");
+    printf("\n\nYou welcome in From 1 To 100 Program ( Version 1 ) ..\n\n");
 
     int i = 1;
     while (i <= 100)
@@ -17,4 +17,6 @@ int main(void)
         i++;
     }
     printf("\n\n");
+
+    return 0;
 }
