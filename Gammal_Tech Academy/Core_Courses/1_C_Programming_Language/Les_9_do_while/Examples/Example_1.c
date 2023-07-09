@@ -3,7 +3,8 @@
 /*  >>> Example 1 <<<  */
 
 #include <stdio.h>
-int main(void)
+
+int main()
 {
     printf("\n\nYou welcome in Example ..\n\n");
 

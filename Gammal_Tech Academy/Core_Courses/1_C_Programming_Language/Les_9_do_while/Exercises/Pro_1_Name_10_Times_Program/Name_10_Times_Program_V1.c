@@ -1,14 +1,14 @@
 
 
-/* >>> Name 10 Times Program <<< */
+/* >>> Name 10 Times Program ( Version 1 ) <<< */
 
 /* >>> A program that prints a person's name 10 times (using do.. while ). <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Name 10 Times Program ..\n\n");
+    printf("\n\nYou welcome in Name 10 Times Program ( Version 1 ) ..\n\n");
 
     char name[30];
     int i = 0;
@@ -25,4 +25,6 @@ int main(void)
     } while (i < 10);
 
     printf("\n\n\n");
+
+    return 0;
 }

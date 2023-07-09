@@ -1,6 +1,6 @@
 
 
-/* >>> Problem Solving <<< */
+/* >>> Problem Solving ( Version 1 ) <<< */
 
 /* >>> Problem statement
 
@@ -30,7 +30,7 @@ the total volunteering points <<< */
 
 int main()
 {
-    printf("\n\nYou welcome in Problem Solving for scanf Lesson ..\n\n");
+    printf("\n\nYou welcome in Problem Solving for scanf Lesson ( Version 1 ) ..\n\n");
 
     int hight,
         low,
@@ -38,10 +38,12 @@ int main()
 
     printf("Number video for High Quality : ");
     scanf("%d", &hight);
+    
     printf("Number video for Low Quality : ");
     scanf("%d", &low);
 
-    result = low + hight * 3;
+    result = (low * 1) + (hight * 3);
     printf("\nTotal points : %d\n\n\n", result);
+    
     return 0;
 }
