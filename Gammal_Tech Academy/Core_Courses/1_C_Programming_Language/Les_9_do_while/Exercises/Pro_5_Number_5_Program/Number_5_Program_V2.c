@@ -1,17 +1,33 @@
 
 
-/* >>> Number 5 Program <<< */
+/* >>> Number 5 Program ( Version 2 ) <<< */
 
 /* >>> A program that asks the user to enter numbers without stopping until the entry of number 5, the program stops working and prints "Is Five" (using do.. while ). <<< */
 
 #include <stdio.h>
 
-int main(void)
+void welcomeMassageFun();
+int number5Fun();
+
+int main()
 {
-    printf("\n\nYou welcome in Number 5 Program ..\n\n");
+    welcomeMassageFun();
+    number5Fun();
+    
+    return 0;
+}
 
+// Functions..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Number 5 Program ( Version 2 ) ..\n\n");
+}
+
+// Number 5 function;
+int number5Fun()
+{
     int num;
-
     do
     {
         printf("Please enter number : ");
