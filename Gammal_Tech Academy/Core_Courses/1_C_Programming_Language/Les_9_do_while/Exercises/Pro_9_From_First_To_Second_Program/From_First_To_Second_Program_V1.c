@@ -1,14 +1,14 @@
 
 
-/* >>> From First To Second Program <<< */
+/* >>> From First To Second Program ( Version 1 ) <<< */
 
 /* >>> A program that asks a person to enter two numbers smaller than the second and is printed from the first number to the second number (using do.. while ). <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in From First To Second Program ..\n\n");
+    printf("\n\nYou welcome in From First \' Smaller Number \' To Second \' Bigger Number \' Program ( Version 1 ) ..\n\n");
 
     int num_S, num_B;
 
@@ -26,4 +26,6 @@ int main(void)
     } while (num_S <= num_B);
 
     printf("\n\n\n");
+
+    return 0;
 }

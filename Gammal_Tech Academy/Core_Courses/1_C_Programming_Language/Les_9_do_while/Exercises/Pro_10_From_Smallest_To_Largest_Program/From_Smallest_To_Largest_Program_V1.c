@@ -1,14 +1,14 @@
 
 
-/* >>> From Smallest To Largest Program <<< */
+/* >>> From Smallest To Largest Program ( Version 1 ) <<< */
 
 /* >>> A program that asks a person to enter two different numbers and print the numbers from the smallest to the largest. <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in From Smallest To Largest Program ..\n\n");
+    printf("\n\nYou welcome in From Smallest To Largest Program ( Version 1 ) ..\n\n");
 
     int num_1, num_2;
 
@@ -41,4 +41,6 @@ int main(void)
     }
 
     printf("\n\n\n");
+
+    return 0;
 }
