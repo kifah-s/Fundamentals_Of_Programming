@@ -1,6 +1,6 @@
 
 
-/* >>> Problem Solving <<< */
+/* >>> Problem Solving ( Version 1 ) <<< */
 
 /* >>> Problem statement
 
@@ -22,11 +22,11 @@ Print if Foad will pass the admission phase at the university or not. <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Problem Solving ..\n\n");
+    printf("\n\nYou welcome in Problem Solving ( Version 1 ) ..\n\n");
 
-    float math, physics, chemistry, total, math_and_physics;
+    int math, physics, chemistry, total, math_and_physics;
 
     printf("Please enter the marks of this subjects :");
 
@@ -52,4 +52,7 @@ int main(void)
     }
 
     printf("\n\n\n");
+
+    return 0;
+
 }
