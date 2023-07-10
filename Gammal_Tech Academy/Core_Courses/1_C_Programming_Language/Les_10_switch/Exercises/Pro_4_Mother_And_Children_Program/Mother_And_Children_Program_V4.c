@@ -1,14 +1,14 @@
 
 
-/* >>> Mother And Children Program - ( Version - 4 ) <<< */
+/* >>> Mother And Children Program ( Version 4 ) <<< */
 
 /* >>> A program that asks the mother to enter the number of her children and if they are more than 3 prints (you have a lot of kids) lo 2 prints (you have 2 kids) If 1 asks her he is a boy and not a girl and her hands choose to write number 1 or 2 if I write 1 means a boy. (you have a little prince) and if you write 2 means the daughter of the program prints (you have a little princess). <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Mother And Children Program - ( Version - 4 ) ..\n\n");
+    printf("\n\nYou welcome in Mother And Children Program ( Version 4 ) ..\n\n");
 
     int num, boy_or_girl;
 
@@ -51,4 +51,6 @@ int main(void)
     }
 
     printf("\n\n\n");
+
+    return 0;
 }

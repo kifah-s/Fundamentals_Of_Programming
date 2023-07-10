@@ -1,17 +1,34 @@
 
 
-/* >>> From 1 To 10 Program <<< */
+/* >>> From 1 To 10 Program ( Version 2 ) <<< */
 
 /* >>> A program that asks the user to enter the number from 1 to 10 and prints this number with the name of the number (using the switch). <<< */
 
 #include <stdio.h>
 
-int main(void)
+void welcomeMassageFun();
+int from1To10Fun();
+
+int main()
 {
-    printf("\n\nYou welcome in From 1 To 10 Program ..\n\n");
+    welcomeMassageFun();
+    from1To10Fun();
+    
+    return 0;
+}
+
+// Functions..
+// Welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in From 1 To 10 Program ( Version 2 ) ..\n\n");
+}
+
+// From 1 To 10 function;
+int from1To10Fun()
+{
 
     int num;
-
     printf("Please enter a number from 1 to 10 : ");
     scanf("%d", &num);
 
