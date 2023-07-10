@@ -1,6 +1,6 @@
 
 
-/* >>> Triangle Print Program - ( Version - 2 ) <<< */
+/* >>> Triangle Print Program ( Version 2 ) <<< */
 
 /* >>> A program that prints a triangle in the form of :
 
@@ -16,9 +16,9 @@
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Triangle Print Program - ( Version - 2 ) .. \n\n");
+    printf("\n\nYou welcome in Triangle Print Program ( Version 2 ) .. \n\n");
 
     int i, j;
 
@@ -32,4 +32,6 @@ int main(void)
     }
 
     printf("\n\n");
+
+    return 0;
 }

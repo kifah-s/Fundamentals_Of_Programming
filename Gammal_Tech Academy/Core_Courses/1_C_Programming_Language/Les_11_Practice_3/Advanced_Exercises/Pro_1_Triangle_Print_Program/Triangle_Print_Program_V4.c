@@ -1,6 +1,6 @@
 
 
-/* >>> Triangle Print Program ( Version 3 ) <<< */
+/* >>> Triangle Print Program ( Version 4 ) <<< */
 
 /* >>> A program that prints a triangle in the form of :
 
@@ -16,10 +16,27 @@
 
 #include <stdio.h>
 
+void welcomeMassageFun();
+int trianglePrintFun();
+
 int main()
 {
-    printf("\n\nYou welcome in Triangle Print Program ( Version 3 ) .. \n\n");
+    welcomeMassageFun();
+    trianglePrintFun();
+    
+    return 0;
+}
 
+// Function..
+// Welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Triangle Print Program ( Version 4 ) .. \n\n");
+}
+
+// Triangle Print function;
+int trianglePrintFun()
+{
     int i, j, rows;
 
     printf("Please enter number of rows : ");
@@ -35,6 +52,4 @@ int main()
     }
 
     printf("\n\n");
-
-    return 0;
 }
