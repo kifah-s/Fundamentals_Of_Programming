@@ -1,6 +1,6 @@
 
 
-/* >>> Discount Program ( Version 3 ) <<< */
+/* >>> Discount Program ( Version 6 ) <<< */
 
 /* >>> On holidays, most people go to buy new clothes, so most shops and shops do discounts on clothes.
    Required : Make a program for a clothing store where it prints the discount value according to the number of pieces purchased by the customer.
@@ -19,35 +19,57 @@
 
 #include <stdio.h>
 
+void welcomeMassageFun();
+int getNumberFun();
+int discountFun(int num);
+
 int main()
 {
-    printf("\n\nYou welcome in Discount Program ( Version 3 ) .. \n\n");
+    welcomeMassageFun();
 
+    int num = getNumberFun();
+    discountFun(num);
+
+    return 0;
+}
+
+// Function..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Discount Program ( Version 6 ) .. \n\n");
+}
+
+// Get number Function;
+int getNumberFun()
+{
     int num;
-
     printf("Please enter the number of pieces purchased : ");
     scanf("%d", &num);
+    return num;
+}
 
+// Discount Function;
+int discountFun(int num)
+{
     if (num == 1)
     {
         printf("\nDiscount = 10%\n\n\n");
     }
-    if (num == 2)
+    else if (num == 2)
     {
         printf("\nDiscount = 20%\n\n\n");
     }
-    if (num == 3)
+    else if (num == 3)
     {
         printf("\nDiscount = 30%\n\n\n");
     }
-    if (num == 4)
+    else if (num == 4)
     {
         printf("\nDiscount = 40%\n\n\n");
     }
-    if (num >= 5)
+    else
     {
         printf("\nDiscount = 50%\n\n\n");
     }
-
-    return 0;
 }

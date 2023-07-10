@@ -1,6 +1,6 @@
 
 
-/* >>> Discount Program - ( Version - 1 ) <<< */
+/* >>> Discount Program ( Version 1 ) <<< */
 
 /* >>> On holidays, most people go to buy new clothes, so most shops and shops do discounts on clothes.
    Required : Make a program for a clothing store where it prints the discount value according to the number of pieces purchased by the customer.
@@ -19,9 +19,9 @@
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Discount Program - ( Version - 1 ) .. \n\n");
+    printf("\n\nYou welcome in Discount Program ( Version 1 ) .. \n\n");
 
     int num;
 
@@ -48,4 +48,6 @@ int main(void)
     {
         printf("\nDiscount = 50%\n\n\n");
     }
+
+    return 0;
 }

@@ -1,15 +1,32 @@
 
 
-/* >>> Age Teen Program ( Version 2 ) <<< */
+/* >>> Age Teen Program ( Version 3 ) <<< */
 
 /* >>> A program that asks a person to enter number if more than 10 and less than 20 prints the word "Teen". <<< */
 
 #include <stdio.h>
 
+void welcomeMassageFun();
+int ageTeenFun();
+
 int main()
 {
-    printf("\n\nYou welcome in Age Teen Program ( Version 2 ) .. \n\n");
+    welcomeMassageFun();
+    ageTeenFun();
+    
+    return 0;
+}
 
+// Function..
+// Welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Age Teen Program ( Version 3 ) .. \n\n");
+}
+
+// Age Teen function;
+int ageTeenFun()
+{
     int age;
 
     printf("Please enter your age : ");
@@ -27,6 +44,4 @@ int main()
     {
         printf("\nThis is age awareness\n\n\n");
     }
-
-    return 0;
 }
