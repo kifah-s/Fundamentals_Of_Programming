@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
     printf("\n\nYou welcome in Example ..\n\n");
 
@@ -20,6 +20,10 @@ int main(void)
         break;
     case 2:
         printf("\nTwo\n");
+        break;
+    case 3:
+        printf("\nThree\n");
+        break;
     case 4:
         printf("\nFour\n");
         break;

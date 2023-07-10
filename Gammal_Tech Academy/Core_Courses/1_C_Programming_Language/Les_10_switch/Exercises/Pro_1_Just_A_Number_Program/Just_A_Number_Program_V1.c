@@ -1,14 +1,14 @@
 
 
-/* >>> Just A Number Program <<< */
+/* >>> Just A Number Program ( Version 1 ) <<< */
 
 /* >>> A program that asks a person to enter a number and if the number is equal to 0 prints "not positive or negative" if not printed "just a number" (using switch). <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Just A Number Program ..\n\n");
+    printf("\n\nYou welcome in Just A Number Program ( Version 1 ) ..\n\n");
 
     int num;
 
@@ -27,4 +27,6 @@ int main(void)
     }
 
     printf("\n\n\n");
+
+    return 0;
 }

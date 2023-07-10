@@ -1,17 +1,16 @@
 
 
-/* >>> Week Days Program <<< */
+/* >>> Week Days Program ( Version 1 ) <<< */
 
 /* >>> A program that asks a person to enter the number of a day of the week from 1 to 7 and prints the name of the day this week where Saturday is day number 1 (using switch). <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Week Days Program ..\n\n");
+    printf("\n\nYou welcome in Week Days Program ( Version 1 ) ..\n\n");
 
     int num;
-
     printf("Please enter a number from 1 to 7 : ");
     scanf("%d", &num);
 
@@ -51,4 +50,6 @@ int main(void)
     }
 
     printf("\n\n\n");
+
+    return 0;
 }
