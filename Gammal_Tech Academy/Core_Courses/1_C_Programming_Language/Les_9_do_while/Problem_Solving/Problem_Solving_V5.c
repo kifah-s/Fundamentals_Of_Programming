@@ -1,6 +1,6 @@
 
 
-/* >>> Problem Solving ( Version 3 ) <<< */
+/* >>> Problem Solving ( Version 5 ) <<< */
 
 /* >>> Problem statement
 
@@ -26,31 +26,46 @@ Print "Incorrect" if the password is wrong, otherwise print "Correct". <<< */
 
 #include <stdio.h>
 
+void welcomeMassageFun();
+int getPasswordFun();
+int problemSolvingFun();
+
 int main()
 {
-    printf("\n\nYou welcome in Problem Solving ( Version 3 ) ..\n\n");
-
-    int password, pass_1 = 1111, pass_2 = 2222, pass_3 = 3333, i;
-
-    printf("Please enter a password : ");
-    scanf("%d", &password);
-
-    if (password == pass_1 || password == pass_2 || password == pass_3)
-    {
-        printf("\n\' Correct \'");
-    }
-    else
-    {
-        for (i = 1; i < 5 && password != pass_1 && password != pass_2 && password != pass_3; i++)
-        {
-            printf("\n\' InCorrect \'");
-            printf("\n\nPlease enter a password : ");
-            scanf("%d", &password);
-        }
-        printf("\n\" Please Try again after 5 minutes !!\"");
-    }
-
-    printf("\n\n\n");
+    welcomeMassageFun();
+    problemSolvingFun();
 
     return 0;
+}
+
+// Functions..
+// Welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Problem Solving ( Version 5 ) ..\n\n");
+}
+
+// Get password function;
+int getPasswordFun()
+{
+    int password;
+    printf("Please enter a password : ");
+    scanf("%d", &password);
+    return password;
+}
+
+// Problem Solving function;
+int problemSolvingFun()
+{
+    int password, pass_1 = 1111, pass_2 = 2222, pass_3 = 3333;
+    do
+    {
+
+        password = getPasswordFun();
+
+    } while (password != pass_1 && password != pass_2 && password != pass_3);
+
+    printf("\n\' Correct \'");
+
+    printf("\n\n\n");
 }

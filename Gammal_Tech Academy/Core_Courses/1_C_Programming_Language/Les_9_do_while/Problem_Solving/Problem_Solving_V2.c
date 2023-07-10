@@ -1,4 +1,6 @@
-/* >>> Problem Solving - ( Version - 2 ) <<< */
+
+
+/* >>> Problem Solving ( Version 2 ) <<< */
 
 /* >>> Problem statement
 
@@ -24,9 +26,9 @@ Print "Incorrect" if the password is wrong, otherwise print "Correct". <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Problem Solving - ( Version - 2 ) ..\n\n");
+    printf("\n\nYou welcome in Problem Solving ( Version 2 ) ..\n\n");
 
     int password, pass_1 = 1111, pass_2 = 2222, pass_3 = 3333, i = 1;
 
@@ -51,4 +53,6 @@ int main(void)
     }
 
     printf("\n\n\n");
+
+    return 0;
 }

@@ -1,6 +1,6 @@
 
 
-/* >>> Problem Solving ( Version 1 ) <<< */
+/* >>> Problem Solving ( Version 4 ) <<< */
 
 /* >>> Problem statement
 
@@ -26,12 +26,28 @@ Print "Incorrect" if the password is wrong, otherwise print "Correct". <<< */
 
 #include <stdio.h>
 
+void welcomeMassageFun();
+int problemSolvingFun();
+
 int main()
 {
-    printf("\n\nYou welcome in Problem Solving ( Version 1 ) ..\n\n");
+    welcomeMassageFun();
+    problemSolvingFun();
+    
+    return 0;
+}
 
+// Functions..
+// Welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Problem Solving ( Version 4 ) ..\n\n");
+}
+
+// Problem Solving function;
+int problemSolvingFun()
+{
     int password, pass_1 = 1111, pass_2 = 2222, pass_3 = 3333;
-
     do
     {
         printf("Please enter a password : ");
@@ -41,6 +57,4 @@ int main()
     printf("\n\' Correct \'");
 
     printf("\n\n\n");
-
-    return 0;
 }
