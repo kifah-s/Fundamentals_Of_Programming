@@ -1,15 +1,32 @@
 
 
-/* >>> 10 Digit Printing Program <<< */
+/* >>> 10 Digit Printing Program ( Version 2 ) <<< */
 
 /* >>> A program that asks a person to enter 10 consecutive numbers and when implemented prints each number in a line and prints their total. <<< */
 
 #include <stdio.h>
 
-int main(void)
-{
-    printf("\n\nYou welcome in 10 Digit Printing Program .. \n\n");
+void welcomeMassageFun();
+int digitPrintingFun();
 
+int main()
+{
+    welcomeMassageFun();
+    digitPrintingFun();
+    
+    return 0;
+}
+
+// Function..
+// Welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in 10 Digit Printing Program ( Version 2 ) .. \n\n");
+}
+
+// Digit Printing function;
+int digitPrintingFun()
+{
     int i, num[10], sum = 0;
 
     for (i = 0; i < 10; i++)

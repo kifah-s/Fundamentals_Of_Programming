@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
     printf("\n\nYou welcome in Example - 1 ..\n\n");
 
