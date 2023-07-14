@@ -1,6 +1,6 @@
 
 
-/* >>> Problem Solving <<< */
+/* >>> Problem Solving ( Version 4 ) <<< */
 
 /* >>> Problem statement
 
@@ -20,27 +20,63 @@ Print unique elements in the array. <<< */
 
 #include <stdio.h>
 
-int main(void)
+void welcomeMassageFun();
+int getElementsNumberFun();
+int *getElementsFun(int elementsNumber);
+int problemSolvingFun();
+
+int main()
 {
-    printf("\n\nYou welcome in Problem Solving .. \n\n");
+    welcomeMassageFun();
 
-    int x, i, j;
+    problemSolvingFun();
+
+    return 0;
+}
+
+// Functions ..
+// Welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Problem Solving ( Version 4 ) .. \n\n");
+}
+
+// Get elements number of the array function;
+int getElementsNumberFun()
+{
+    int elementsNumber;
     printf("Please select the number of numbers you want to enter : ");
-    scanf("%d", &x);
-    int arr[x];
+    scanf("%d", &elementsNumber);
 
-    for (i = 0; i < x; i++)
+    return elementsNumber;
+}
+
+// Get elements of the array function;
+int *getElementsFun(int elementsNumber)
+{
+    static int arr[10];
+
+    for (int i = 0; i < elementsNumber; i++)
     {
         printf("\nPlease enter elements in index %d : ", i);
         scanf("%d", &arr[i]);
     }
-
     printf("\n");
 
-    for (i = 0; i < x; i++)
+    return arr;
+}
+
+// Problem Solving Function;
+int problemSolvingFun()
+{
+    int elementsNumber = getElementsNumberFun();
+    int *arr = getElementsFun(elementsNumber);
+
+    for (int i = 0; i < elementsNumber; i++)
     {
         int matched = 0;
-        for (j = 0; j < x; j++)
+
+        for (int j = 0; j < elementsNumber; j++)
         {
             if (arr[i] == arr[j] && i != j)
             {
