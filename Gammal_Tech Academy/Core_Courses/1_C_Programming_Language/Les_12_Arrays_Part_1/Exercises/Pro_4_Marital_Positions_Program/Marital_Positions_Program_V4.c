@@ -13,7 +13,7 @@ int maritalPositionsFun();
 int main()
 {
     welcomeMassageFun();
-    
+
     maritalPositionsFun();
 
     return 0;
@@ -31,7 +31,7 @@ int *gettingNumbersFun()
 {
     int num = 10;
     static int array[10];
-    
+
     for (int i = 0; i < 10; i++)
     {
         printf("Please Enter %d numbers : ", num);
@@ -48,6 +48,8 @@ int maritalPositionsFun()
 {
     int *array = gettingNumbersFun();
 
+    int individual = 0;
+
     printf("The Marital Positions is : \n");
 
     for (int i = 0; i < 10; i++)
@@ -56,6 +58,14 @@ int maritalPositionsFun()
         {
             printf("Index : %d\n", i);
         }
+        else
+        {
+            individual++;
+        }
+    }
+    if (individual == 10)
+    {
+        printf("OOH, There is no place on the index for any even number");
     }
 
     printf("\n\n\n");
