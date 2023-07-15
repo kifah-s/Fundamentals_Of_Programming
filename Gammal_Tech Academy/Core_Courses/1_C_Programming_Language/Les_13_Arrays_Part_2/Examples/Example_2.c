@@ -3,7 +3,8 @@
 /* >>> Example 2 <<< */
 
 #include <stdio.h>
-int main(void)
+
+int main()
 {
     printf("\n\nYou welcome in Example - 2 ..\n\n");
 
@@ -23,5 +24,6 @@ int main(void)
         }
         printf("%d\n", count);
     }
+
     return 0;
 }

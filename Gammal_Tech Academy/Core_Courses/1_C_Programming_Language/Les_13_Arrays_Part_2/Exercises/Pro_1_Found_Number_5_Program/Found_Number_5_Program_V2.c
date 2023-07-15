@@ -1,14 +1,14 @@
 
 
-/* >>> Found Number 5 Program - ( Version - 2 ) <<< */
+/* >>> Found Number 5 Program ( Version 2 ) <<< */
 
 /* >>> A program that asks a person to enter 10 numbers, if he finds that there is an entry number = 5 printed to him "found" and after the program is finished it again on its own. <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Found Number 5 Program - ( Version - 2 ) .. \n\n");
+    printf("\n\nYou welcome in Found Number 5 Program ( Version 2 ) .. \n\n");
 
     int arr[10], i;
 
@@ -31,4 +31,6 @@ int main(void)
             }
         }
     }
+
+    return 0;
 }

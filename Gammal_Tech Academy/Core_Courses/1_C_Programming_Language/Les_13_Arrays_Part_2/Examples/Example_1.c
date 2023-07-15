@@ -2,6 +2,8 @@
 
 /* >>> Example 1 <<< */
 
+#include <stdio.h>
+
 int main()
 {
     printf("\n\nYou welcome in Example - 1 ..\n\n");
@@ -27,4 +29,6 @@ int main()
     }
 
     printf("\n\n\n");
+
+    return 0;
 }
