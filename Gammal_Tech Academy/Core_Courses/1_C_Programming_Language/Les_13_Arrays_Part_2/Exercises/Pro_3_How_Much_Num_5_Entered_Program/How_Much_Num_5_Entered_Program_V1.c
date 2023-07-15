@@ -1,14 +1,14 @@
 
 
-/* >>> How Much Num 5 Entered Program - ( Version - 1 ) <<< */
+/* >>> How Much Num 5 Entered Program ( Version 1 ) <<< */
 
 /* >>> A program that asks a person to enter 10 numbers and calculates how many numbers are entered = 5. If he does not find printing "not found" and after the program is finished, it will be reinstated on its own. <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in How Much Num 5 Entered Program - ( Version - 1 ) .. \n\n");
+    printf("\n\nYou welcome in How Much Num 5 Entered Program ( Version 1 ) .. \n\n");
 
     while (1)
     {
@@ -38,4 +38,6 @@ int main(void)
             printf("\nNumber 5 Not Found\n\n\n");
         }
     }
+
+    return 0;
 }

@@ -1,15 +1,32 @@
 
 
-/* >>> How Much Num 5 Entered Program ( Version 2 ) <<< */
+/* >>> How Much Num 5 Entered Program ( Version 3 ) <<< */
 
 /* >>> A program that asks a person to enter 10 numbers and calculates how many numbers are entered = 5. If he does not find printing "not found" and after the program is finished, it will be reinstated on its own. <<< */
 
 #include <stdio.h>
 
+void welcomeMassageFun();
+int howMuchNum5EnteredFun();
+
 int main()
 {
-    printf("\n\nYou welcome in How Much Num 5 Entered Program ( Version 2 ) .. \n\n");
+    welcomeMassageFun();
+    howMuchNum5EnteredFun();
+    
+    return 0;
+}
 
+// Functions ..
+// Welcome Massage Function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in How Much Num 5 Entered Program ( Version 3 ) .. \n\n");
+}
+
+// How Much Num 5 Entered Function;
+int howMuchNum5EnteredFun()
+{
     while (1)
     {
         int arr[10], i, sum = 0;
@@ -39,6 +56,4 @@ int main()
             printf("\nNumber 5 Not Found\n\n\n");
         }
     }
-
-    return 0;
 }
