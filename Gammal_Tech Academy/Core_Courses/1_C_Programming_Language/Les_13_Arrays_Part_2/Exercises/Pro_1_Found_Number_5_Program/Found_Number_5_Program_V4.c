@@ -59,8 +59,8 @@ int number5FoundFun(int *arr)
     }
 }
 
-/* // Found Number 5 Function;
-int foundFun()
+/* // repeat Function;
+int repeatFun()
 {
     while (1)
     {

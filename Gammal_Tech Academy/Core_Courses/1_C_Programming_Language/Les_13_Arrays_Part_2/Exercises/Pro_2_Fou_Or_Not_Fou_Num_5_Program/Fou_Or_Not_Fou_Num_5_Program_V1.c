@@ -1,14 +1,14 @@
 
 
-/* >>> Found Or Not Found Number 5 Program - ( Version - 1 ) <<< */
+/* >>> Found Or Not Found Number 5 Program ( Version 1 ) <<< */
 
 /* >>> A program that asks a person to enter 10 numbers, if he finds that there is an entry number = 5 printed to him "found" and if he does not find a print "not found" and after the program is finished, it will be reinstated on its own. <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Found Or Not Found Number 5 Program - ( Version - 1 ) .. \n\n");
+    printf("\n\nYou welcome in Found Or Not Found Number 5 Program ( Version 1 ) .. \n\n");
 
     while (1)
     {
@@ -34,4 +34,6 @@ int main(void)
             printf("\nNumber 5 Not Found\n\n\n");
         }
     }
+
+    return 0;
 }

@@ -9,12 +9,12 @@
 void welcomeMassageFun();
 int *enterTenNumbersFun();
 int number5FoundFun(int *arr);
-int foundFun();
+int repeatFun();
 
 int main()
 {
     welcomeMassageFun();
-    foundFun();
+    repeatFun();
 
     return 0;
 }
@@ -55,8 +55,8 @@ int number5FoundFun(int *arr)
     }
 }
 
-// Found Number 5 Function;
-int foundFun()
+// repeat Function;
+int repeatFun()
 {
     while (1)
     {
