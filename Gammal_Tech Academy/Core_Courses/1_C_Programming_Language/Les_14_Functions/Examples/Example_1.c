@@ -9,6 +9,7 @@ void greeting();
 int main()
 {
     greeting();
+    
     return 0;
 }
 

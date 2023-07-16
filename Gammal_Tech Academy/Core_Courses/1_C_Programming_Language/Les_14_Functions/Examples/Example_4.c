@@ -6,7 +6,7 @@
 
 int greeting();
 
-int main(void)
+int main()
 {
     greeting();
 
