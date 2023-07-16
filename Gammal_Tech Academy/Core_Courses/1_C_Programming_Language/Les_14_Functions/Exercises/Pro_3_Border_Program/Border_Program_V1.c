@@ -1,25 +1,17 @@
 
 
-/* >>> Border Program - ( Version - 1 ) <<< */
+/* >>> Border Program ( Version 1 ) <<< */
 
 /* >>> A program in which function her job is to draw a line like "= = = = = = = =". <<< */
 
 #include <stdio.h>
 
-void border();
-
 int main()
 {
-    printf("\n\nYou welcome in Border Program - ( Version - 1 ) .. \n\n");
+    printf("\n\nYou welcome in Border Program ( Version 1 ) .. \n\n");
 
-    border();
-    border();
+    printf("= = = = = = = = = = = = = = = = = = \n\n");
+    printf("= = = = = = = = = = = = = = = = = = \n\n\n");
 
     return 0;
-}
-
-// Function ..
-void border()
-{
-    printf("= = = = = = = = = = = = = = = = = = \n\n\n");
 }

@@ -1,16 +1,17 @@
 
 
-/* >>> Border Program ( Version 2 ) <<< */
+/* >>> Border Program ( Version 3 ) <<< */
 
 /* >>> A program in which function her job is to draw a line like "= = = = = = = =". <<< */
 
 #include <stdio.h>
 
+void welcomeMassageFun();
 void borderFun();
 
 int main()
 {
-    printf("\n\nYou welcome in Border Program ( Version 2 ) .. \n\n");
+    welcomeMassageFun();
 
     borderFun();
     borderFun();
@@ -19,6 +20,12 @@ int main()
 }
 
 // Functions ..
+// Welcome Massage Function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Border Program ( Version 3 ) .. \n\n");
+}
+
 // Border Function;
 void borderFun()
 {
