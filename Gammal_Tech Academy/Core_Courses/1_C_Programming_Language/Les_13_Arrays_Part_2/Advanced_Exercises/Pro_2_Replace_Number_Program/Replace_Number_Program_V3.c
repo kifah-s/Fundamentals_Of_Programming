@@ -1,15 +1,32 @@
 
 
-/* >>> Replace Number Program ( Version 2 ) <<< */
+/* >>> Replace Number Program ( Version 3 ) <<< */
 
 /* >>> A program, in which array contains 5 digits of these numbers is the number 0, asks the user to enter a number and place it inside the array in place zero and print the array on the screen. <<< */
 
 #include <stdio.h>
 
+void welcomeMassageFun();
+int replaceNumberFun();
+
 int main()
 {
-    printf("\n\nYou welcome in Replace Number Program ( Version 2 ) .. \n\n");
+    welcomeMassageFun();
+    replaceNumberFun();
+    
+    return 0;
+}
 
+// Functions ..
+// Welcome Massage Function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Replace Number Program ( Version 3 ) .. \n\n");
+}
+
+// Replace Number Function;
+int replaceNumberFun()
+{
     int arr[5] = {1, 2, 0, 4, 5}, num, i;
 
     printf("Please enter a number : ");
@@ -26,6 +43,4 @@ int main()
         printf("%d ", arr[i]);
     }
     printf("\n\n\n");
-
-    return 0;
 }
