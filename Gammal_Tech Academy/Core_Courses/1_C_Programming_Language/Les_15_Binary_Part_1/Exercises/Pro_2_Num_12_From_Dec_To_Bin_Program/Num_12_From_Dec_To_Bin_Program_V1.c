@@ -1,14 +1,14 @@
 
 
-/* >>> Num 12 From Dec To Bin Program ( Version - 1 ) <<< */
+/* >>> Num 12 From Dec To Bin Program ( Version 1 ) <<< */
 
 /* >>> Convert the number (12) from decimal to Binary. <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Num 12 From Dec To Bin Program ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Num 12 From Dec To Bin Program ( Version 1 ) ..\n\n");
 
     int binary[32], i = 0, n = 12;
 
