@@ -1,32 +1,47 @@
 
 
-/* >>> Any Num From Dec To Bin Program ( Version 2 ) <<< */
+/* >>> Any Num From Dec To Bin Program ( Version 5 ) <<< */
 
 /* >>> Convert any number from decimal to Binary. <<< */
 
 #include <stdio.h>
 
-void decimal_to_binary(int n);
+void welcomeMassageFun();
+int getNumberFun();
+void decimal_to_binary();
 
 int main()
 {
-    printf("\n\nYou welcome in Any Num From Dec To Bin Program ( Version 2 ) ..\n\n");
+    welcomeMassageFun();
 
-    int n;
-    printf("Enter a decimal number: ");
-    scanf("%d", &n);
-
-    printf("\nThe decimal number is : %d", n);
-
-    decimal_to_binary(n);
+    decimal_to_binary();
 
     return 0;
 }
 
 // Functions ..
-// decimal to binary function;
-void decimal_to_binary(int n)
+// Welcome Massage Function;
+void welcomeMassageFun()
 {
+    printf("\n\nYou welcome in Any Num From Dec To Bin Program ( Version 5 ) ..\n\n");
+}
+
+// Get Number Function;
+int getNumberFun()
+{
+    int n;
+    printf("Enter a decimal number: ");
+    scanf("%d", &n);
+    printf("\nThe decimal number is : %d", n);
+
+    return n;
+}
+
+// decimal to binary function;
+void decimal_to_binary()
+{
+    int n = getNumberFun();
+
     int binary[32], i = 0;
 
     while (n > 0)

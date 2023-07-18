@@ -1,12 +1,12 @@
 
 
-/* >>> Any Num From Dec To Bin Program ( Version - 1 ) <<< */
+/* >>> Any Num From Dec To Bin Program ( Version 1 ) <<< */
 
 /* >>> Convert any number from decimal to Binary. <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
     printf("\n\nYou welcome in Any Num From Dec To Bin Program ( Version - 1 ) ..\n\n");
 
