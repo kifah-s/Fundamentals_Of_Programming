@@ -1,6 +1,6 @@
 
 
-/* >>> From 1 To Input Program - ( Version - 1 ) <<< */
+/* >>> From 1 To Input Program ( Version 1 ) <<< */
 
 /* >>> A program that requests the user to enter a number in a function that prints the numbers from 1 to the user's income number. <<< */
 
@@ -10,24 +10,27 @@ int from_1_to_input();
 
 int main()
 {
-    printf("\n\nYou welcome in From 1 To Input Program - ( Version - 1 ) .. \n\n");
+    printf("\n\nYou welcome in From 1 To Input Program ( Version 1 ) .. \n\n");
 
-    from_1_to_input();
+    int num;
 
-    printf("\n\n\n");
+    printf("Please enter a number : ");
+    scanf("%d", &num);
+
+    from_1_to_input(num);
 
     return 0;
 }
 
-// Function ..
-int from_1_to_input()
+// Functions ..
+// from 1 to input function;
+int from_1_to_input(int num)
 {
-    int i, num;
-    printf("Please enter a number : ");
-    scanf("%d", &num);
-
+    int i;
     for (i = 1; i <= num; i++)
     {
         printf("\n%d\n", i);
     }
+
+    printf("\n\n\n");
 }
