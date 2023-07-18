@@ -1,6 +1,6 @@
 
 
-/* >>> Calculator Program - ( Version - 4 ) <<< */
+/* >>> Calculator Program ( Version 4 ) <<< */
 
 /* >>> A program calculator that performs operations (combination, subtraction, multiplication and division) using the functions. <<< */
 
@@ -13,7 +13,7 @@ int division(int x, int y);
 
 int main()
 {
-    printf("\n\nYou welcome in Calculator Program - ( Version - 4 ) .. \n\n");
+    printf("\n\nYou welcome in Calculator Program ( Version 4 ) .. \n\n");
 
     int com = combination(5, 9);
     int sub = subtraction(10, 5);
@@ -31,24 +31,28 @@ int main()
 }
 
 // Functions ..
+// combination function;
 int combination(int x, int y)
 {
     int result = x + y;
     return result;
 }
 
+// subtraction function;
 int subtraction(int x, int y)
 {
     int result = x - y;
     return result;
 }
 
+// multiplication function;
 int multiplication(int x, int y)
 {
     int result = x * y;
     return result;
 }
 
+// division function;
 int division(int x, int y)
 {
     int result = x / y;
