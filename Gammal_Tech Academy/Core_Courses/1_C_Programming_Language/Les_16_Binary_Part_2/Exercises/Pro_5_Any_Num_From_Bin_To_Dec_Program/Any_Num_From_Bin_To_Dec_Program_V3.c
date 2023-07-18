@@ -1,24 +1,30 @@
 
 
-/* >>> Any Num From Bin To Dec Program ( Version 2 ) <<< */
+/* >>> Any Num From Bin To Dec Program ( Version 3 ) <<< */
 
 /* >>> Convert any number from binary to decimal. <<< */
 
 #include <stdio.h>
 #include <math.h>
 
+void welcomeMassageFun();
 int bin_to_dec();
 
 int main()
 {
-    printf("\n\nYou welcome in Any Num From Bin To Dec Program ( Version 2 ) ..\n\n");
-
+    welcomeMassageFun();
     bin_to_dec();
 
     return 0;
 }
 
 // Functions ..
+// Welcome Massage Function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Any Num From Bin To Dec Program ( Version 3 ) ..\n\n");
+}
+
 // bin to dec function;
 int bin_to_dec()
 {

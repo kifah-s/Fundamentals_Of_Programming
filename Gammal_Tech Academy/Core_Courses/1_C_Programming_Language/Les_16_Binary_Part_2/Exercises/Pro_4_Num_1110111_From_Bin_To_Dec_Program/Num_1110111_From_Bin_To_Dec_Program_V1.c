@@ -1,15 +1,15 @@
 
 
-/* >>> Num 1110111 From Bin To Dec Program ( Version - 1 ) <<< */
+/* >>> Num 1110111 From Bin To Dec Program ( Version 1 ) <<< */
 
 /* >>> Convert number (1110111) from binary to decimal. <<< */
 
 #include <stdio.h>
 #include <math.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Num 1110111 From Bin To Dec Program ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Num 1110111 From Bin To Dec Program ( Version 1 ) ..\n\n");
 
     long x = 1110111, y = 0, i = 0, j;
 
@@ -23,5 +23,7 @@ int main(void)
         i++;
     }
     printf("\n\nThe decimal number is : %d\n\n\n", y);
+
+    
     return 0;
 }
