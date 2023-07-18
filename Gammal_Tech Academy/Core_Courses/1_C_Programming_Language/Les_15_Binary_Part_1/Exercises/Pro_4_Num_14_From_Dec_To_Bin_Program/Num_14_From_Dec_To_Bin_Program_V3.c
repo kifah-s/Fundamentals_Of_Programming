@@ -1,30 +1,35 @@
 
 
-/* >>> Num 14 From Dec To Bin Program ( Version 2 ) <<< */
+/* >>> Num 14 From Dec To Bin Program ( Version 3 ) <<< */
 
 /* >>> Convert the number (14) from decimal to Binary. <<< */
 
 #include <stdio.h>
 
-void decimal_to_binary(int n);
+void welcomeMassageFun();
+void decimal_to_binary();
 
 int main()
 {
-    printf("\n\nYou welcome in Num 14 From Dec To Bin Program ( Version 2 ) ..\n\n");
-
-    int n = 14;
-
-    printf("The decimal number is : %d", n);
-
-    decimal_to_binary(n);
+    welcomeMassageFun();
+    decimal_to_binary();
 
     return 0;
 }
 
 // Functions ..
-// decimal to binary function;
-void decimal_to_binary(int n)
+// Welcome Massage Function;
+void welcomeMassageFun()
 {
+    printf("\n\nYou welcome in Num 14 From Dec To Bin Program ( Version 3 ) ..\n\n");
+}
+
+// decimal to binary function;
+void decimal_to_binary()
+{
+    int n = 14;
+    printf("The decimal number is : %d", n);
+
     int binary[32], i = 0;
 
     while (n > 0)
