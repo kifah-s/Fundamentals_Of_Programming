@@ -1,6 +1,6 @@
 
 
-/* >>> Num 111111010011 From Bin To Dec Program ( Version - 2 ) <<< */
+/* >>> Num 111111010011 From Bin To Dec Program ( Version 2 ) <<< */
 
 /* >>> Convert number (111111010011) from binary to decimal. <<< */
 
@@ -8,9 +8,9 @@
 
 int binary_to_decimal();
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Num 111111010011 From Bin To Dec Program ( Version - 2 ) ..\n\n");
+    printf("\n\nYou welcome in Num 111111010011 From Bin To Dec Program ( Version 2 ) ..\n\n");
 
     binary_to_decimal();
 
@@ -18,7 +18,8 @@ int main(void)
     return 0;
 }
 
-// Function ..
+// Functions ..
+// binary to decimal function;
 int binary_to_decimal()
 {
     long long binary = 111111010011;

@@ -1,27 +1,33 @@
 
 
-/* >>> Num 101001001111 From Bin To Dec Program ( Version 2 ) <<< */
+/* >>> Num 111111010011 From Bin To Dec Program ( Version 3 ) <<< */
 
-/* >>> Convert number (101001001111) from binary to decimal. <<< */
+/* >>> Convert number (111111010011) from binary to decimal. <<< */
 
 #include <stdio.h>
 
+void welcomeMassageFun();
 int binary_to_decimal();
 
 int main()
 {
-    printf("\n\nYou welcome in Num 101001001111 From Bin To Dec Program ( Version 2 ) ..\n\n");
-
+    welcomeMassageFun();
     binary_to_decimal();
 
     return 0;
 }
 
 // Functions ..
+// Welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Num 111111010011 From Bin To Dec Program ( Version 3 ) ..\n\n");
+}
+
 // binary to decimal function;
 int binary_to_decimal()
 {
-    long long binary = 101001001111;
+    long long binary = 111111010011;
     int decimal = 0, y = 1;
 
     while (binary)
