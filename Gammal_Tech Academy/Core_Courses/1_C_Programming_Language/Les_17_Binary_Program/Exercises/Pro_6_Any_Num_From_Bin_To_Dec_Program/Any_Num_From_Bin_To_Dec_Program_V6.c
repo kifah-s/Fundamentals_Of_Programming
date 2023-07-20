@@ -1,16 +1,17 @@
 
 
-/* >>> Any Num From Bin To Dec Program ( Version 2 ) <<< */
+/* >>> Any Num From Bin To Dec Program ( Version 6 ) <<< */
 
 /* >>> A program that asks the user to enter a binary number and converts that number to decimal. <<< */
 
 #include <stdio.h>
 
+void welcomeMassageFun();
+int getNumberFun();
 int binary_to_decimal();
 
 int main()
 {
-    printf("\n\nYou welcome in Any Num From Bin To Dec Program ( Version 2 ) ..\n\n");
 
     binary_to_decimal();
 
@@ -18,14 +19,30 @@ int main()
 }
 
 // Functions ..
+// Welcome Massage Function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Any Num From Bin To Dec Program ( Version 6 ) ..\n\n");
+}
+
+// Get Number Function;
+int getNumberFun()
+{
+    int binary;
+    printf("Enter a binary number : ");
+    scanf("%d", &binary);
+
+    return binary;
+}
+
 // binary to decimal function;
 int binary_to_decimal()
 {
-    int binary;
-    int decimal = 0, y = 1;
+    welcomeMassageFun();
 
-    printf("Enter a binary number : ");
-    scanf("%d", &binary);
+    int binary = getNumberFun();
+
+    int decimal = 0, y = 1;
 
     while (binary)
     {
