@@ -1,14 +1,14 @@
 
 
-/* >>> Num 7777777 From Oct To Dec Program ( Version - 1 ) <<< */
+/* >>> Num 7777777 From Oct To Dec Program ( Version 1 ) <<< */
 
 /* >>> Convert number (7777777) from octal to decimal. <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Num 7777777 From Oct To Dec Program ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Num 7777777 From Oct To Dec Program ( Version 1 ) ..\n\n");
 
     int num = 07777777;
 

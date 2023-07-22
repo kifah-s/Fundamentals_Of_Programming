@@ -1,6 +1,6 @@
 
 
-/* >>> Num 7777777 From Oct To Dec Program ( Version - 2 ) <<< */
+/* >>> Num 7777777 From Oct To Dec Program ( Version 2 ) <<< */
 
 /* >>> Convert number (7777777) from octal to decimal. <<< */
 
@@ -8,16 +8,17 @@
 
 int oct_to_dec();
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Num 7777777 From Oct To Dec Program ( Version - 2 ) ..\n\n");
+    printf("\n\nYou welcome in Num 7777777 From Oct To Dec Program ( Version 2 ) ..\n\n");
 
     oct_to_dec();
 
     return 0;
 }
 
-// Function ..
+// Functions ..
+// oct to dec function;
 int oct_to_dec()
 {
     int num = 07777777;
