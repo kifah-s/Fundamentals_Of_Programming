@@ -1,37 +1,36 @@
 
 
-/* >>> Num 524451 From Oct To Dec Program ( Version - 3 ) <<< */
+/* >>> Num 524451 From Oct To Dec Program ( Version 3 ) <<< */
 
 /* >>> Convert number (524451) from octal to decimal. <<< */
 
 #include <stdio.h>
-#include <math.h>
 
-long long convert_octal_to_decimal(int octal_number);
+int oct_to_dec();
+void welcomeMassageFun();
 
 int main()
 {
-
-    printf("\n\nYou welcome in Num 524451 From Oct To Dec Program ( Version - 3 ) ..\n\n");
-
-    printf("524451 in octal = %lld in decimal\n\n\n", convert_octal_to_decimal(524451));
+    welcomeMassageFun();
+    oct_to_dec();
 
     return 0;
 }
 
-// Function ..
-long long convert_octal_to_decimal(int octal_number)
+// Functions ..
+// Welcome Massage Function;
+void welcomeMassageFun()
 {
-    int decimal_number = 0, i = 0;
+    printf("\n\nYou welcome in Num 524451 From Oct To Dec Program ( Version 3 ) ..\n\n");
+}
 
-    while (octal_number != 0)
-    {
-        decimal_number = decimal_number + (octal_number % 10) * pow(8, i);
-        i++;
-        octal_number = octal_number / 10;
-    }
+// oct to dec function;
+int oct_to_dec()
+{
+    int num = 524451;
 
-    i = 1;
+    printf("Octal number : %o\n\n", num);
+    printf("Decimal number : %d\n\n\n", num);
 
-    return decimal_number;
+    return 0;
 }
