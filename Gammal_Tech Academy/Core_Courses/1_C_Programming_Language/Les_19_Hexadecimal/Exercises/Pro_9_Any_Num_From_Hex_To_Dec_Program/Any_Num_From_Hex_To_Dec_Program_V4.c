@@ -1,18 +1,21 @@
 
 
-/* >>> Any Num From Hex To Dec Program ( Version 3 ) <<< */
+/* >>> Any Num From Hex To Dec Program ( Version 4 ) <<< */
 
 /* >>> A program that converts from hexadecimal to decimal. <<< */
 
 #include <stdio.h>
 
 void welcomeMassageFun();
-int hex_to_dec();
+int getHexadecimalNumberFun();
+int hex_to_dec(int num);
 
 int main()
 {
     welcomeMassageFun();
-    hex_to_dec();
+
+    int hexadecimal_number = getHexadecimalNumberFun();
+    hex_to_dec(hexadecimal_number);
 
     return 0;
 }
@@ -21,19 +24,22 @@ int main()
 // welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Any Num From Hex To Dec Program ( Version 3 ) ..\n\n");
+    printf("\n\nYou welcome in Any Num From Hex To Dec Program ( Version 4 ) ..\n\n");
 }
 
-// hex to dec function;
-int hex_to_dec()
+// get hexadecimal number function;
+int getHexadecimalNumberFun()
 {
     int num;
-
     printf("Please enter a Hexadecimal number : ");
     scanf("%X", &num);
 
+    return num;
+}
+
+// hex to dec function;
+int hex_to_dec(int num)
+{
     printf("\nHexadecimal number : %X\n\n", num);
     printf("Decimal number : %d\n\n\n", num);
-
-    return 0;
 }

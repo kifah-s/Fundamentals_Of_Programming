@@ -1,17 +1,16 @@
 
 
-/* >>> Any Num From Hex To Dec Program ( Version - 1 ) <<< */
+/* >>> Any Num From Hex To Dec Program ( Version 1 ) <<< */
 
 /* >>> A program that converts from hexadecimal to decimal. <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Any Num From Hex To Dec Program ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Any Num From Hex To Dec Program ( Version 1 ) ..\n\n");
 
     int num;
-
     printf("Please enter a Hexadecimal number : ");
     scanf("%X", &num);
 
