@@ -1,14 +1,14 @@
 
 
-/* >>> Any Num From Oct To Dec Program ( Version - 1 ) <<< */
+/* >>> Any Num From Oct To Dec Program ( Version 1 ) <<< */
 
 /* >>> Write a program that converts from octal to decimal. <<< */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Any Num From Oct To Dec Program ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Any Num From Oct To Dec Program ( Version 1 ) ..\n\n");
 
     int num;
 

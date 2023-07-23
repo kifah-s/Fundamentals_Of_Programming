@@ -1,6 +1,6 @@
 
 
-/* >>> Any Num From Oct To Dec Program ( Version - 2 ) <<< */
+/* >>> Any Num From Oct To Dec Program ( Version 2 ) <<< */
 
 /* >>> Write a program that converts from octal to decimal. <<< */
 
@@ -8,16 +8,18 @@
 
 int oct_to_dec();
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Any Num From Oct To Dec Program ( Version - 2 ) ..\n\n");
 
+    printf("\n\nYou welcome in Any Num From Oct To Dec Program ( Version 2 ) ..\n\n");
+    
     oct_to_dec();
 
     return 0;
 }
 
-// Function ..
+// Functions ..
+// oct to dec function;
 int oct_to_dec()
 {
     int num;

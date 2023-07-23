@@ -1,42 +1,38 @@
 
 
-/* >>> Any Num From Oct To Dec Program ( Version - 3 ) <<< */
+/* >>> Any Num From Oct To Dec Program ( Version 3 ) <<< */
 
 /* >>> Write a program that converts from octal to decimal. <<< */
 
 #include <stdio.h>
-#include <math.h>
 
-long long convert_octal_to_decimal(int octal_number);
+void welcomeMassageFun();
+int oct_to_dec();
 
 int main()
 {
-
-    printf("\n\nYou welcome in Any Num From Oct To Dec Program ( Version - 3 ) ..\n\n");
-
-    int octal_number;
-
-    printf("Please enet octal number : ");
-    scanf("%d", &octal_number);
-
-    printf("\n%d in octal = %lld in decimal\n\n\n",octal_number, convert_octal_to_decimal(octal_number));
+    welcomeMassageFun();
+    oct_to_dec();
 
     return 0;
 }
 
-// Function ..
-long long convert_octal_to_decimal(int octal_number)
+// Functions ..
+// welcome massage function;
+void welcomeMassageFun()
 {
-    int decimal_number = 0, i = 0;
+    printf("\n\nYou welcome in Any Num From Oct To Dec Program ( Version 3 ) ..\n\n");
+}
 
-    while (octal_number != 0)
-    {
-        decimal_number = decimal_number + (octal_number % 10) * pow(8, i);
-        i++;
-        octal_number = octal_number / 10;
-    }
+// oct to dec function;
+int oct_to_dec()
+{
+    int num;
+    printf("Please enter a number in octal : ");
+    scanf("%o", &num);
 
-    i = 1;
+    printf("\nOctal number : %o\n\n", num);
+    printf("Decimal number : %d\n\n\n", num);
 
-    return decimal_number;
+    return 0;
 }
