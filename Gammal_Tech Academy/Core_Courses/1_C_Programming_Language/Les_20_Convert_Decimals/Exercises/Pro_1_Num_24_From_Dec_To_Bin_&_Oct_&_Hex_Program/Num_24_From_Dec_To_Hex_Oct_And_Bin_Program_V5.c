@@ -9,7 +9,6 @@
 #include <math.h>
 
 void welcomeMassageFun();
-int decimalNumberFun();
 int decimal_to_hexadecimal(int decimal);
 int decimal_to_octal(int decimal);
 int decimal_to_binary(int decimal);
@@ -18,7 +17,9 @@ int main()
 {
     welcomeMassageFun();
 
-    int decimal = decimalNumberFun();
+    int decimal = 24;
+    printf("The decimal number is : %d\n\n", decimal);
+
     decimal_to_hexadecimal(decimal);
     decimal_to_octal(decimal);
     decimal_to_binary(decimal);
@@ -33,15 +34,6 @@ int main()
 void welcomeMassageFun()
 {
     printf("\n\nYou welcome in Num 24 From Dec To Hex, Oct And Bin Program ( Version 5 ) ..\n\n");
-}
-
-// decimal number function;
-int decimalNumberFun()
-{
-    int decimal = 24;
-    printf("The decimal number is : %d\n\n", decimal);
-
-    return decimal;
 }
 
 // Function for convert decimal to hexadecimal ..

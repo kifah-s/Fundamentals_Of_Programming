@@ -1,25 +1,24 @@
 
 
-/* >>> Num 24 From Dec To Hex, Oct And Bin Program ( Version 5 ) <<< */
+/* >>> Any Num From Dec To Hex, Oct And Bin Program ( Version 4 ) <<< */
 
-/* >>> Convert Number (24) from decimal to hexadecimal, octal and binary. <<< */
+/* >>> Convert Any Number from decimal to hexadecimal, octal and binary. <<< */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
 void welcomeMassageFun();
+int decimalNumberFun();
 int decimal_to_hexadecimal(int decimal);
 int decimal_to_octal(int decimal);
 int decimal_to_binary(int decimal);
 
 int main()
 {
-    printf("\n\nYou welcome in Num 24 From Dec To Hex, Oct And Bin Program ( Version 5 ) ..\n\n");
+    welcomeMassageFun();
 
-    int decimal = 24;
-    printf("The decimal number is : %d\n\n", decimal);
-
+    int decimal = decimalNumberFun();
     decimal_to_hexadecimal(decimal);
     decimal_to_octal(decimal);
     decimal_to_binary(decimal);
@@ -30,6 +29,23 @@ int main()
 }
 
 // Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Any Num From Dec To Hex, Oct And Bin Program ( Version 4 ) ..\n\n");
+}
+
+// decimal number function;
+int decimalNumberFun()
+{
+    int decimal;
+    printf("Please enter a number : ");
+    scanf("%d", &decimal);
+    printf("\nThe decimal number is : %d\n\n", decimal);
+
+    return decimal;
+}
+
 // Function for convert decimal to hexadecimal ..
 int decimal_to_hexadecimal(int decimal)
 {
