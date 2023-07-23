@@ -1,6 +1,6 @@
 
 
-/* >>> Num 40 From Dec To Hex, Oct And Bin Program ( Version - 1 ) <<< */
+/* >>> Num 40 From Dec To Hex, Oct And Bin Program ( Version 1 ) <<< */
 
 /* >>> Convert Number (40) from decimal to hexadecimal, octal and binary. <<< */
 
@@ -10,12 +10,11 @@ int dec_to_hex(int n);
 int dec_to_oct(int n);
 int dec_to_bin(int n);
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Num 40 From Dec To Hex, Oct And Bin Program ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Num 40 From Dec To Hex, Oct And Bin Program ( Version 1 ) ..\n\n");
 
     int num = 40;
-
     printf("The decimal number is : %d", num);
 
     dec_to_hex(num);
@@ -28,7 +27,6 @@ int main(void)
 }
 
 // Functions ..
-
 // Function for convert decimal to hexadecimal ..
 int dec_to_hex(int n)
 {
