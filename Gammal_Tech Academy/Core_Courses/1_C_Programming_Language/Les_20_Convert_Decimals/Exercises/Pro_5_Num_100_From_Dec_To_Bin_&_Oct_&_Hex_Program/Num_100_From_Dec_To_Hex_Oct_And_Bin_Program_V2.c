@@ -1,28 +1,26 @@
 
 
-/* >>> Num 100 From Dec To Hex, Oct And Bin Program ( Version - 2 ) <<< */
+/* >>> Num 100 From Dec To Hex, Oct And Bin Program ( Version 2 ) <<< */
 
 /* >>> Convert Number (100) from decimal to hexadecimal, octal and binary. <<< */
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
 
-int decimal_to_hexadecimal(int decimal);
-int decimal_to_octal(int decimal);
-int decimal_to_binary(int decimal);
+void welcomeMassageFun();
+int dec_to_hex(int n);
+int dec_to_oct(int n);
+int dec_to_bin(int n);
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Num 100 From Dec To Hex, Oct And Bin Program ( Version - 2 ) ..\n\n");
+    welcomeMassageFun();
+    
+    int num = 100;
+    printf("The decimal number is : %d", num);
 
-    int decimal = 100;
-
-    printf("The decimal number is : %d\n\n", decimal);
-
-    decimal_to_hexadecimal(decimal);
-    decimal_to_octal(decimal);
-    decimal_to_binary(decimal);
+    dec_to_hex(num);
+    dec_to_oct(num);
+    dec_to_bin(num);
 
     printf("\n\n\n");
 
@@ -30,106 +28,38 @@ int main(void)
 }
 
 // Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Num 100 From Dec To Hex, Oct And Bin Program ( Version 2 ) ..\n\n");
+}
 
 // Function for convert decimal to hexadecimal ..
-int decimal_to_hexadecimal(int decimal)
+int dec_to_hex(int n)
 {
-    // Initialize an array to store the hexadecimal equivalent
-    char hexadecimal[32];
-
-    // Initialize a counter
-    int i = 0;
-
-    // Iterate until the decimal number becomes 0
-    while (decimal != 0)
-    {
-        // Get the remainder when the decimal number is divided by 16
-        int remainder = decimal % 16;
-
-        // Convert the remainder to a hexadecimal digit
-        if (remainder < 10)
-        {
-            hexadecimal[i] = remainder + '0';
-        }
-        else
-        {
-            hexadecimal[i] = remainder - 10 + 'A';
-        }
-        // Divide the decimal number by 16
-        decimal /= 16;
-
-        // Increment the counter
-        i++;
-    }
-
-    // Print the hexadecimal equivalent in reverse order
-    printf("The hexadecimal number is : ");
-    for (int j = i - 1; j >= 0; j--)
-    {
-        printf("%c", hexadecimal[j]);
-    }
-
-    printf("\n\n");
+    printf("\n\nThe hexadecimal number is : %X", n);
 }
 
 // Function for convert decimal to octal ..
-int decimal_to_octal(int decimal)
+int dec_to_oct(int n)
 {
-    // Initialize an array to store the octal equivalent
-    int octal[32];
-
-    // Initialize a counter
-    int i = 0;
-
-    // Iterate until the decimal number becomes 0
-    while (decimal != 0)
-    {
-        // Get the remainder when the decimal number is divided by 8
-        octal[i] = decimal % 8;
-
-        // Divide the decimal number by 8
-        decimal /= 8;
-
-        // Increment the counter
-        i++;
-    }
-
-    // Print the octal equivalent in reverse order
-    printf("The octal number is : ");
-    for (int j = i - 1; j >= 0; j--)
-    {
-        printf("%d", octal[j]);
-    }
-    printf("\n\n");
+    printf("\n\nThe octal number is : %o", n);
 }
 
 // Function for convert decimal to binary ..
-int decimal_to_binary(int decimal)
+int dec_to_bin(int n)
 {
-    // Initialize an array to store the binary equivalent
-    int binary[32];
+    int binary[32], i = 0;
 
-    // Initialize a counter
-    int i = 0;
-
-    // Iterate until the decimal number becomes 0
-    while (decimal != 0)
+    while (n > 0)
     {
-        // Get the remainder when the decimal number is divided by 2
-        binary[i] = decimal % 2;
-
-        // Divide the decimal number by 2
-        decimal /= 2;
-
-        // Increment the counter
+        binary[i] = n % 2;
+        n = n / 2;
         i++;
     }
-
-    // Print the binary equivalent in reverse order
-    printf("The octal number is : ");
+    printf("\n\nThe binary number is : ");
     for (int j = i - 1; j >= 0; j--)
     {
         printf("%d", binary[j]);
     }
-    printf("\n");
 }
