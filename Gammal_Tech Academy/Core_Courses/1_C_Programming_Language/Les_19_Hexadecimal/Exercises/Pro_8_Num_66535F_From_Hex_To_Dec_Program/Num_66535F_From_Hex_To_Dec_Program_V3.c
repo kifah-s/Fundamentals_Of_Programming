@@ -1,62 +1,36 @@
 
 
-/* >>> Num 66535F From Hex To Dec Program ( Version - 3 ) <<< */
+/* >>> Num 66535F From Hex To Dec Program ( Version 3 ) <<< */
 
 /* >>> Convert number (66535F) from hexadecimal to decimal. <<< */
 
 #include <stdio.h>
-#include <string.h>
-#include <math.h>
 
-int hexadecimal_to_decimal(char *hex);
+void welcomeMassageFun();
+int hex_to_dec();
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Num 66535F From Hex To Dec Program ( Version - 3 ) ..\n\n");
-
-    // Print the hexadecimal and decimal numbers
-    printf("66535F in hexadecimal = %d in decimal\n\n\n", hexadecimal_to_decimal("66535F"));
+    welcomeMassageFun();
+    hex_to_dec();
 
     return 0;
 }
 
-// Function ..
-// A function that converts a hexadecimal number to a decimal number
-int hexadecimal_to_decimal(char *hex)
+// Functions ..
+// welcome massage function;
+void welcomeMassageFun()
 {
-    // Initialize the decimal number and the length of the hexadecimal number
-    int decimal = 0, length = strlen(hex);
+    printf("\n\nYou welcome in Num 66535F From Hex To Dec Program ( Version 3 ) ..\n\n");
+}
 
-    // Loop from the end of the hexadecimal number to the beginning
-    for (int i = length - 1; i >= 0; i--)
-    {
-        // Get the current hexadecimal digit
-        char digit = hex[i];
+// hex to dec function;
+int hex_to_dec()
+{
+    int num = 0X66535F;
 
-        // Convert the digit to a decimal value
-        int value;
-        if (digit >= '0' && digit <= '9')
-        {
-            value = digit - '0';
-        }
-        else if (digit >= 'A' && digit <= 'F')
-        {
-            value = digit - 'A' + 10;
-        }
-        else if (digit >= 'a' && digit <= 'f')
-        {
-            value = digit - 'a' + 10;
-        }
-        else
-        {
-            // Invalid hexadecimal digit
-            return -1;
-        }
+    printf("Hexadecimal number : %X\n\n", num);
+    printf("Decimal number : %d\n\n\n", num);
 
-        // Add the value multiplied by the power of 16 to the decimal number
-        decimal += value * pow(16, length - i - 1);
-    }
-
-    // Return the decimal number
-    return decimal;
+    return 0;
 }
