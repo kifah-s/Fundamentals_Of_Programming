@@ -10,7 +10,7 @@ int main()
 {
     printf("\n\nYou welcome in Num 102214 From Oct To Dec Program ( Version 1 ) ..\n\n");
 
-    int num = 102214;
+    int num = 0102214;
 
     printf("Octal number : %o\n\n", num);
     printf("Decimal number : %d\n\n\n", num);

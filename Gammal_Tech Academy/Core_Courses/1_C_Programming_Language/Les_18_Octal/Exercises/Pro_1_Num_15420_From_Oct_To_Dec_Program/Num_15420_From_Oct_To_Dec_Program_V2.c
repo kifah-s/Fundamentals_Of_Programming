@@ -21,7 +21,7 @@ int main()
 // oct to dec function;
 int oct_to_dec()
 {
-    int num = 15420;
+    int num = 015420;
 
     printf("Octal number : %o\n\n", num);
     printf("Decimal number : %d\n\n\n", num);

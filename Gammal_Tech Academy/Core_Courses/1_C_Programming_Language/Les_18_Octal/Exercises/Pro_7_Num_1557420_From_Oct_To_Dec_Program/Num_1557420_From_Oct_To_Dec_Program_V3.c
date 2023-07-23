@@ -27,7 +27,7 @@ int welcomeMassageFun()
 // oct to dec function;
 int oct_to_dec()
 {
-    int num = 1557420;
+    int num = 01557420;
 
     printf("Octal number : %o\n\n", num);
     printf("Decimal number : %d\n\n\n", num);
