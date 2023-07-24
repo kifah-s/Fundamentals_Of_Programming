@@ -1,6 +1,6 @@
 
 
-/* >>> Largest Sum Program ( Version - 1 ) <<< */
+/* >>> Largest Sum Program ( Version 1 ) <<< */
 
 /* >>> A program with 2D array with 15 numbers, that prints every 5 digits in a line and prints the sum of the number of this line and eventually prints the sum of the 3 lines. <<< */
 
@@ -8,9 +8,9 @@
 
 int largest_sum();
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Largest Sum Program ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Largest Sum Program ( Version 1 ) ..\n\n");
 
     largest_sum();
 
@@ -18,6 +18,7 @@ int main(void)
 }
 
 // Functions ..
+// largest sum function;
 int largest_sum()
 {
     // Definition array;

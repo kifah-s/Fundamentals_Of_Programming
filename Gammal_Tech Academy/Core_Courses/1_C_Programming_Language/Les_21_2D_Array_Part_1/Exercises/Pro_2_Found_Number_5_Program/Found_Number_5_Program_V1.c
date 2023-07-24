@@ -1,6 +1,6 @@
 
 
-/* >>> Found Number 5 Program ( Version - 1 ) <<< */
+/* >>> Found Number 5 Program ( Version 1 ) <<< */
 
 /* >>> A program that asks the user to enter a set of numbers and if he finds that there is a number of numbers entered = 5 is applied by "found". <<< */
 
@@ -8,9 +8,9 @@
 
 int found_number_5();
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Found Number 5 Program ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Found Number 5 Program ( Version 1 ) ..\n\n");
 
     found_number_5();
 
@@ -18,6 +18,7 @@ int main(void)
 }
 
 // Functions ..
+// found number 5 function;
 int found_number_5()
 {
     // Definition arrays and counter;

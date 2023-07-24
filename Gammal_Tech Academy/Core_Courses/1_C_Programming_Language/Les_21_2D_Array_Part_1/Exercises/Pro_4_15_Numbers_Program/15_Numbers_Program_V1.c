@@ -1,6 +1,6 @@
 
 
-/* >>> 15 Numbers Program <<< */
+/* >>> 15 Numbers Program ( Version 1 ) <<< */
 
 /* >>> A program with 2D array containing 15 numbers, the program prints every 5 digits in a line and prints the total number of this line. <<< */
 
@@ -8,9 +8,9 @@
 
 int arr_15_num();
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in 15 Numbers Program ..\n\n");
+    printf("\n\nYou welcome in 15 Numbers Program ( Version 1 ) ..\n\n");
 
     arr_15_num();
 
@@ -18,6 +18,7 @@ int main(void)
 }
 
 // Functions ..
+// arr 15 num function;
 int arr_15_num()
 {
     // Definition array;

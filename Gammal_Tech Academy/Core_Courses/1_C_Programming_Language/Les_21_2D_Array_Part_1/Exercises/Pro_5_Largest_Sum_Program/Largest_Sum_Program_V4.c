@@ -1,18 +1,19 @@
 
 
-/* >>> Largest Sum Program ( Version 2 ) <<< */
+/* >>> Largest Sum Program ( Version 4 ) <<< */
 
 /* >>> A program with 2D array with 15 numbers, that prints every 5 digits in a line and prints the sum of the number of this line and eventually prints the sum of the 3 lines. <<< */
 
 #include <stdio.h>
 
 void welcomeMassageFun();
-int largest_sum();
+int *largest_sum();
+int comparingBiggestSum();
 
 int main()
 {
     welcomeMassageFun();
-    largest_sum();
+    comparingBiggestSum();
 
     return 0;
 }
@@ -21,11 +22,11 @@ int main()
 // welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Largest Sum Program ( Version 2 ) ..\n\n");
+    printf("\n\nYou welcome in Largest Sum Program ( Version 4 ) ..\n\n");
 }
 
 // largest sum function;
-int largest_sum()
+int *largest_sum()
 {
     // Definition array;
     int arr[3][5] = {{1, 1, 1, 1, 1},
@@ -33,7 +34,8 @@ int largest_sum()
                      {3, 3, 3, 3, 3}};
 
     // Definition counters;
-    int i, j, sum = 0, comparison[3];
+    int i, j, sum = 0;
+    static int comparison[3];
 
     // Prints the array and the sum result of each row in it;
     for (i = 0; i < 3; i++)
@@ -54,7 +56,14 @@ int largest_sum()
         printf("\n");
     }
 
-    // Comparing the biggest sum result;
+    return comparison;
+}
+
+// Comparing the biggest sum result function;
+int comparingBiggestSum()
+{
+    int *comparison = largest_sum();
+
     if (comparison[0] > comparison[1] && comparison[0] > comparison[2])
     {
         printf("\nThe largest sum is : %d", comparison[0]);
