@@ -1,19 +1,16 @@
 
 
-/* >>> From Num To Num Program ( Version 1 ) <<< */
+/* >>> From Num To Num Program ( Version 4 ) <<< */
 
 /* >>> A program that asks a person to enter two numbers and prints the numbers from the first to the second and prints the total numbers. <<< */
 
 #include <stdio.h>
 
-// Global variables;
-int glo_var_1, glo_var_2;
-
 int from_num_to_num();
 
 int main()
 {
-    printf("\n\nYou welcome in From Num To Num Program ( Version 1 ) ..\n\n");
+    printf("\n\nYou welcome in From Num To Num Program ( Version 4 ) ..\n\n");
 
     from_num_to_num();
 
@@ -24,6 +21,8 @@ int main()
 // from num to num function;
 int from_num_to_num()
 {
+    int glo_var_1, glo_var_2;
+
     // Receive values from the user;
     printf("Please enter first number : ");
     scanf("%d", &glo_var_1);
