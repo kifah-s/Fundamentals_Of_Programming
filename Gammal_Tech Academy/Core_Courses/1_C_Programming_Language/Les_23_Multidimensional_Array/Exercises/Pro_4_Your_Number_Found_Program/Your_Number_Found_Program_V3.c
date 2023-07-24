@@ -1,6 +1,6 @@
 
 
-/* >>> Your Number Found Program ( Version - 3 ) <<< */
+/* >>> Your Number Found Program ( Version 3 ) <<< */
 
 /* >>> A program with 3D array contains 8 digits, and the user is asked to enter a number, if the number exists prints "Found" and conversely prints "not found". <<< */
 
@@ -8,21 +8,22 @@
 
 int your_number_found();
 
-int main(void)
+int main()
 {
-
-    printf("\n\nYou welcome in Your Number Found Program ( Version - 3 ) ..\n\n");
+    printf("\n\nYou welcome in Your Number Found Program ( Version 3 ) ..\n\n");
 
     your_number_found();
 
     return 0;
 }
 
-// Functions;
+// Functions ..
+// your number found;
 int your_number_found()
 {
     // Declaration array;
-    int arr[2][2][2] = {1, 2, 3, 4, 5, 6, 7, 8};
+    int arr[2][2][2] = {{{1, 2}, {3, 4}},
+                        {{5, 6}, {7, 8}}};
 
     // Declaration variables and counters;
     int num, found = 0, i, j, k;

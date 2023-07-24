@@ -1,6 +1,6 @@
 
 
-/* >>> Replacing Number 0 Program ( Version - 1 ) <<< */
+/* >>> Replacing Number 0 Program ( Version 1 ) <<< */
 
 /* >>> A program in which 3D array contains a set of numbers, of which there is a number 0 and the user is asked to enter a number and then records this number in zero place and prints the array on the screen. <<< */
 
@@ -8,20 +8,21 @@
 
 int replacing_number_0();
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Replacing Number 0 Program ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Replacing Number 0 Program ( Version 1 ) ..\n\n");
 
     replacing_number_0();
 
     return 0;
 }
 
-// Functions;
+// Functions ..
+// replacing number 0 function;
 int replacing_number_0()
 {
     // Declaration array;
-    int arr[2][2][2] = {{{1, 1}, {2, 3}},
+    int arr[2][2][2] = {{{0, 0}, {2, 3}},
                         {{1, 5}, {6, 7}}};
 
     // Declaration counters;

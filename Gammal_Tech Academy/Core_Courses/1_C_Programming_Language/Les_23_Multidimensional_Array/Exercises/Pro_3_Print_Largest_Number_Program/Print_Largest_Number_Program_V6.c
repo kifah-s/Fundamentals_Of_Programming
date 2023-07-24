@@ -1,16 +1,20 @@
 
 
-/* >>> Print Largest Number Program ( Version 3 ) <<< */
+/* >>> Print Largest Number Program ( Version 6 ) <<< */
 
 /* >>> A program with 3D array contains 8 digits, and prints the largest number in them. <<< */
 
 #include <stdio.h>
 
+void welcomeMassageFun();
+int get_dimension_1_fun();
+int get_dimension_2_fun();
+int get_dimension_3_fun();
 int print_largest_number();
 
 int main()
 {
-    printf("\n\nYou welcome in Print Largest Number Program ( Version 3 ) ..\n\n");
+    welcomeMassageFun();
 
     print_largest_number();
 
@@ -18,23 +22,53 @@ int main()
 }
 
 // Functions ..
-// print largest number function;
-int print_largest_number()
+// welcome massage function;
+void welcomeMassageFun()
 {
-    // Declaration dimension;
-    int dim_1, dim_2, dim_3;
+    printf("\n\nYou welcome in Print Largest Number Program ( Version 6 ) ..\n\n");
+}
 
-    // Receiving values from user;
+// get dimension 1 function;
+int get_dimension_1_fun()
+{
     printf("Please enter array dimension : \n");
 
+    // Receiving values from user;
+    int dim_1;
     printf("Dimension 1 : ");
     scanf("%d", &dim_1);
 
+    return dim_1;
+}
+
+// get dimension 2 function;
+int get_dimension_2_fun()
+{
+    // Receiving values from user;
+    int dim_2;
     printf("Dimension 2 : ");
     scanf("%d", &dim_2);
 
+    return dim_2;
+}
+
+// get dimension 3 function;
+int get_dimension_3_fun()
+{
+    // Receiving values from user;
+    int dim_3;
     printf("Dimension 3 : ");
     scanf("%d", &dim_3);
+
+    return dim_3;
+}
+
+// print largest number function;
+int print_largest_number()
+{
+    int dim_1 = get_dimension_1_fun();
+    int dim_2 = get_dimension_2_fun();
+    int dim_3 = get_dimension_3_fun();
 
     // Declaration array;
     int arr[dim_1][dim_2][dim_3];

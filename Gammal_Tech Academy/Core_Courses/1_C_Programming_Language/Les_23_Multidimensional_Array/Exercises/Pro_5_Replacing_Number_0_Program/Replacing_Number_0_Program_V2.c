@@ -1,34 +1,41 @@
 
 
-/* >>> Replacing Number 0 Program ( Version - 1 ) <<< */
+/* >>> Replacing Number 0 Program ( Version 2 ) <<< */
 
 /* >>> A program in which 3D array contains a set of numbers, of which there is a number 0 and the user is asked to enter a number and then records this number in zero place and prints the array on the screen. <<< */
 
 #include <stdio.h>
 
+void welcomeMassageFun();
 int replacing_number_0();
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Replacing Number 0 Program ( Version - 1 ) ..\n\n");
-
+    welcomeMassageFun();
     replacing_number_0();
 
     return 0;
 }
 
-// Functions;
+// Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Replacing Number 0 Program ( Version 2 ) ..\n\n");
+}
+
+// replacing number 0 function;
 int replacing_number_0()
 {
     // Declaration array;
-    int arr[2][2][2] = {{{1, 1}, {2, 3}},
-                        {{1, 1}, {6, 7}}};
+    int arr[2][2][2] = {{{0, 0}, {2, 3}},
+                        {{1, 5}, {6, 7}}};
 
     // Declaration counters;
     int i, j, k;
 
     // Printing the  array before changed number 0
-    printf("Array is : \n\n");
+    printf("Array before changed number 0 is : \n\n");
     for (i = 0; i < 2; i++)
     {
         for (j = 0; j < 2; j++)
@@ -41,8 +48,15 @@ int replacing_number_0()
         }
         printf("\n");
     }
+    printf("\n");
 
-    // Check if the array contains a number;
+    // Declaration variable and Receive value from user;
+    int num;
+    printf("Please enter a number that replace a number 0 : ");
+    scanf("%d", &num);
+
+    // replace number 0 and printing array;
+    printf("\nArray after changed number 0 is : \n\n");
     for (i = 0; i < 2; i++)
     {
         for (j = 0; j < 2; j++)
@@ -51,37 +65,15 @@ int replacing_number_0()
             {
                 if (arr[i][j][k] == 0)
                 {
-                    printf("This is array contains number 0\n\n");
-
-                    // Declaration variable and Receive value from user;
-                    int num;
-                    printf("Please enter a number that replace a number 0 : ");
-                    scanf("%d", &num);
-
-                    // replace number 0;
-                    printf("\nArray after changed number 0 is : \n\n");
-                    for (i = 0; i < 2; i++)
-                    {
-                        for (j = 0; j < 2; j++)
-                        {
-                            for (k = 0; k < 2; k++)
-                            {
-                                if (arr[i][j][k] == 0)
-                                {
-                                    arr[i][j][k] = num;
-                                }
-                                printf("%d    ", arr[i][j][k]);
-                            }
-                            printf("\n");
-                        }
-                        printf("\n");
-                    }
-                    printf("\n");
+                    arr[i][j][k] = num;
                 }
+                printf("%d    ", arr[i][j][k]);
             }
+            printf("\n");
         }
+        printf("\n");
     }
-    printf("This is array not contains number 0\n\n\n");
+    printf("\n");
 
     return 0;
 }

@@ -1,23 +1,29 @@
 
 
-/* >>> Replacing Number 0 Program ( Version 3 ) <<< */
+/* >>> Replacing Number 0 Program ( Version 4 ) <<< */
 
 /* >>> A program in which 3D array contains a set of numbers, of which there is a number 0 and the user is asked to enter a number and then records this number in zero place and prints the array on the screen. <<< */
 
 #include <stdio.h>
 
+void welcomeMassageFun();
 int replacing_number_0();
 
 int main()
 {
-    printf("\n\nYou welcome in Replacing Number 0 Program ( Version 3 ) ..\n\n");
-
+    welcomeMassageFun();
     replacing_number_0();
 
     return 0;
 }
 
 // Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Replacing Number 0 Program ( Version 4 ) ..\n\n");
+}
+
 // replacing number 0 function;
 int replacing_number_0()
 {
