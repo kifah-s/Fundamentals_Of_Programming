@@ -1,38 +1,43 @@
 
 
-/* >>> 1 Var 2 Fun Program ( Version - 2 ) <<< */
+/* >>> 1 Var 2 Fun Program ( Version 2 ) <<< */
 
 /* >>> The program reads one variable and prints 2 different functions. <<< */
 
 #include <stdio.h>
 
 // Global variables;
-int glo_var;
+int glo_var = 10;
 
+void welcomeMassageFun();
 int fun_1();
 int fun_2();
 
 int main()
 {
-    printf("\n\nYou welcome in 1 Var 2 Fun Program ( Version - 2 ) ..\n\n");
-
+    welcomeMassageFun();
+    
     fun_1();
     fun_2();
 
     return 0;
 }
 
-// Functions;
-int fun_1()
+// Functions ..
+// welcome massage function;
+void welcomeMassageFun()
 {
-    printf("Please enter a number : ");
-    scanf("%d", &glo_var);
-    printf("\nFunction 1 : %d\n\n", glo_var);
+    printf("\n\nYou welcome in 1 Var 2 Fun Program ( Version 2 ) ..\n\n");
 }
 
+// function 1;
+int fun_1()
+{
+    printf("Function 1 : %d\n\n", glo_var);
+}
+
+// function 2;
 int fun_2()
 {
-    printf("Please enter a number : ");
-    scanf("%d", &glo_var);
-    printf("\nFunction 2 : %d\n\n\n", glo_var);
+    printf("Function 2 : %d\n\n\n", glo_var);
 }
