@@ -1,6 +1,6 @@
 
 
-/* >>> Random Numbers In Array Program ( Version - 1 ) <<< */
+/* >>> Random Numbers In Array Program ( Version 1 ) <<< */
 
 /* >>> A program in which array 2D size 4x5 has random numbers.
    Required : filling array 2D is silver size 4x5 and printing the second array. <<< */
@@ -9,9 +9,9 @@
 
 int random_num();
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Random Numbers In Array Program ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Random Numbers In Array Program ( Version 1 ) ..\n\n");
 
     random_num();
 
@@ -19,6 +19,7 @@ int main(void)
 }
 
 // Functions ..
+// random num function;
 int random_num()
 {
     // Definition array 1;

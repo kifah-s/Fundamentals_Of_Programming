@@ -1,24 +1,31 @@
 
 
-/* >>> Sum One Row In Array Program <<< */
+/* >>> Sum One Row In Array Program ( Version 2 ) <<< */
 
 /* >>> A program in which array 2D sizes 4x5 has random numbers.
    Required: printing each row in the array and after it the sum of the elements within this row and printing the sum of all items at the end. <<< */
 
 #include <stdio.h>
 
+void welcomeMassageFun();
 int sum_one_row();
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Sum One Row In Array Program ..\n\n");
-
+    welcomeMassageFun();
     sum_one_row();
 
     return 0;
 }
 
 // Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Sum One Row In Array Program ( Version 2 ) ..\n\n");
+}
+
+// sum one row function;
 int sum_one_row()
 {
     // Definition array;

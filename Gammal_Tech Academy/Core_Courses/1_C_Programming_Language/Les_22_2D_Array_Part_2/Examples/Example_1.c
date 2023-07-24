@@ -6,7 +6,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Example ..\n\n");
+    printf("\n\nYou welcome in Example 1 ..\n\n");
 
     int i, j;
     int x[6][5] = {{1, 1, 1, 1, 1},
@@ -25,5 +25,6 @@ int main()
         printf("\n");
     }
     printf("\n\n\n");
+    
     return 0;
 }

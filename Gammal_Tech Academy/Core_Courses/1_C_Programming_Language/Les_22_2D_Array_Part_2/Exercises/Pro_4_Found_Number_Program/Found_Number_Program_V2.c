@@ -1,23 +1,30 @@
 
 
-/* >>> Found Number Program <<< */
+/* >>> Found Number Program ( Version 2 ) <<< */
 
 /* >>> A program in which 2D array contains 20 numbers, asks the user to enter a number, if the number is in the array the program prints "Found". <<< */
 
 #include <stdio.h>
 
+void welcomeMassageFun();
 int found_number();
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Found Number Program ..\n\n");
-
+    welcomeMassageFun();
     found_number();
 
     return 0;
 }
 
 // Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Found Number Program ( Version 2 ) ..\n\n");
+}
+
+// found number function;
 int found_number()
 {
     // Definition array;

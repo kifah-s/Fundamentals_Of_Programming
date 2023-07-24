@@ -1,6 +1,6 @@
 
 
-/* >>> Array Size Program ( Version - 1 ) <<< */
+/* >>> Array Size Program ( Version 1 ) <<< */
 
 /* >>> A program that asks a person to enter two numbers expressing the size of the 2D array and records the numbers to be written and printed in the other and printed in all. <<< */
 
@@ -8,9 +8,9 @@
 
 int arr_size();
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Array Size Program ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Array Size Program ( Version 1 ) ..\n\n");
 
     arr_size();
 
@@ -18,6 +18,7 @@ int main(void)
 }
 
 // Functions ..
+// arr size function;
 int arr_size()
 {
     // Definition numbers;

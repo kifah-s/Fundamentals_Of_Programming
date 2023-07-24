@@ -1,57 +1,51 @@
 
 
-/* >>> Array Size Program ( Version - 2 ) <<< */
+/* >>> Array Size Program ( Version 2 ) <<< */
 
 /* >>> A program that asks a person to enter two numbers expressing the size of the 2D array and records the numbers to be written and printed in the other and printed in all. <<< */
 
 #include <stdio.h>
 
+void welcomeMassageFun();
 int arr_size();
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Array Size Program ( Version - 2 ) ..\n\n");
-
+    welcomeMassageFun();
     arr_size();
 
     return 0;
 }
 
 // Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Array Size Program ( Version 2 ) ..\n\n");
+}
+
+// arr size function;
 int arr_size()
 {
-    // Definition numbers, counters and sum;
-    int a, b, i, j, sum = 0;
-
-    printf("Enter 2 numbers for (2D array): ");
-    scanf("%d %d", &a, &b);
-
-    // Definition array;
-    int x[a][b];
+    // Definition numbers;
+    int num_1, num_2;
 
     // Receive values from the user;
-    printf("Enter %d numbers: \n", a * b);
-    for (i = 0; i < a; i++)
-    {
-        for (j = 0; j < b; j++)
-        {
-            scanf("%d", &x[i][j]);
-            sum = sum + x[i][j];
-        }
-    }
+    printf("Please enter two numbers that represent the size of the array : \n");
+    printf("The first number : ");
+    scanf("%d", &num_1);
 
-    printf("\n");
+    printf("The second number : ");
+    scanf("%d", &num_2);
 
-    // Print and sum numbers;
-    for (i = 0; i < a; i++)
-    {
-        for (j = 0; j < b; j++)
-        {
-            printf("%d  ", x[i][j]);
-        }
-        printf("\n");
-    }
-    printf("\nTotal => %d", sum);
+    // Definition array;
+    int arr[num_1][num_2];
+
+    // Print numbers;
+    printf("\nSize array is : [%d][%d]", num_1, num_2);
+
+    // Sum numbers;
+    printf("\n\nSum numbers is : %d", num_1 + num_2);
 
     printf("\n\n\n");
 }
