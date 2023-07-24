@@ -1,6 +1,6 @@
 
 
-/* >>> 3D Array Program ( Version - 1 ) <<< */
+/* >>> 3D Array Program ( Version 1 ) <<< */
 
 /* >>> A program that asks a person to enter 3 digits expressing the size of the 3D array and records the numbers to be written and printed at the other and printed together. <<< */
 
@@ -8,9 +8,9 @@
 
 int array_3d();
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in 3D Array Program ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in 3D Array Program ( Version 1 ) ..\n\n");
 
     array_3d();
 
@@ -18,6 +18,7 @@ int main(void)
 }
 
 // Functions ..
+// array 3d function;
 int array_3d()
 {
     // Declaration the variables;

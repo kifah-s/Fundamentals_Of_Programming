@@ -1,6 +1,6 @@
 
 
-/* >>> Number 5 Found Program ( Version - 3 ) <<< */
+/* >>> Number 5 Found Program ( Version 3 ) <<< */
 
 /* >>> A program that asks a person to enter 10 digits, if he finds that there is a number of their income = 5 it prints to him "found", if it does not exist "not found" is printed, and after the program will not stop and it will be repeated again. <<< */
 
@@ -8,43 +8,49 @@
 
 int number_5_found();
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Number 5 Found Program ( Version - 3 ) ..\n\n");
+    printf("\n\nYou welcome in Number 5 Found Program ( Version 3 ) ..\n\n");
 
     number_5_found();
 
     return 0;
 }
 
-// Functions;
+// Functions ..
+// number 5 found function;
 int number_5_found()
 {
-
     // Declaration infinite loop ;
     while (1)
     {
         // Declaration the array, counter, variable;
-        int arr[10], i, found = 0;
+        int arr[2][5], i, j, found;
 
         // Receive values from the user;
         printf("Please enter ' 10 ' numbers : \n");
-        for (i = 0; i < 10; i++)
+        for (i = 0; i < 2; i++)
         {
-            scanf("%d", &arr[i]);
+            for (j = 0; j < 5; j++)
+            {
+                scanf("%d", &arr[i][j]);
+            }
         }
 
         // Check for found number 5 in array elements;
-        for (i = 0; i < 10; i++)
+        for (i = 0; i < 2; i++)
         {
-            if (arr[i] == 5)
+            for (j = 0; j < 5; j++)
             {
-                found = 1;
+                if (arr[i][j] == 5)
+                {
+                    found = arr[i][j];
+                }
             }
         }
 
         // Found or not found number 5;
-        if (found == 1)
+        if (found == 5)
         {
             printf("\nYes i'm found number 5\n\n");
         }
@@ -52,6 +58,8 @@ int number_5_found()
         {
             printf("\nOh i'm not found number 5\n\n");
         }
+        // Zero the value of the variable before repeating the operation
+        found = 0;
     }
     printf("\n\n\n");
 }

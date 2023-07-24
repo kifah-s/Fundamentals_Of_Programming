@@ -6,7 +6,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Example ..\n\n");
+    printf("\n\nYou welcome in Example 1 ..\n\n");
 
     // Declaration the array and the counters;
     int x[3][3][3];
@@ -38,5 +38,6 @@ int main()
         }
         printf("\n");
     }
+    
     return 0;
 }

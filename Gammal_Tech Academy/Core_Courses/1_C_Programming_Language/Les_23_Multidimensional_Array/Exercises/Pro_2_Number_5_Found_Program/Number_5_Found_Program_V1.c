@@ -1,4 +1,6 @@
-/* >>> Number 5 Found Program ( Version - 1 ) <<< */
+
+
+/* >>> Number 5 Found Program ( Version 1 ) <<< */
 
 /* >>> A program that asks a person to enter 10 digits, if he finds that there is a number of their income = 5 it prints to him "found", if it does not exist "not found" is printed, and after the program will not stop and it will be repeated again. <<< */
 
@@ -6,19 +8,19 @@
 
 int number_5_found();
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Number 5 Found Program ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Number 5 Found Program ( Version 1 ) ..\n\n");
 
     number_5_found();
 
     return 0;
 }
 
-// Functions;
+// Functions ..
+// number 5 found function;
 int number_5_found()
 {
-
     // Declaration infinite loop ;
     while (1)
     {

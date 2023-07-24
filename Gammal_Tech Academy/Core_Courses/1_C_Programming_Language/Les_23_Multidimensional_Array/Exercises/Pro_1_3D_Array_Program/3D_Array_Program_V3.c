@@ -1,64 +1,76 @@
 
 
-/* >>> 3D Array Program ( Version - 3 ) <<< */
+/* >>> 3D Array Program ( Version 3 ) <<< */
 
 /* >>> A program that asks a person to enter 3 digits expressing the size of the 3D array and records the numbers to be written and printed at the other and printed together. <<< */
 
 #include <stdio.h>
 
-int array_3d();
-
-int main(void)
+// struct MyStruct;
+struct MyStruct
 {
-    printf("\n\nYou welcome in 3D Array Program ( Version - 3 ) ..\n\n");
+    int num_1;
+    int num_2;
+    int num_3;
+};
 
-    array_3d();
+void welcomeMassageFun();
+struct MyStruct array_3d();
+int declarationArray(int num_1, int num_2, int num_3);
+
+int main()
+{
+    welcomeMassageFun();
+
+    struct MyStruct my_struct;
+    my_struct = array_3d();
+    /* // Ensure that the data is received
+    printf("%d - %d - %d", my_struct.num_1, my_struct.num_2, my_struct.num_3); */
+    int num_1 = my_struct.num_1;
+    int num_2 = my_struct.num_2;
+    int num_3 = my_struct.num_3;
+    
+    declarationArray(num_1, num_2, num_3);
 
     return 0;
 }
 
 // Functions ..
-int array_3d()
+// welcome massage function;
+void welcomeMassageFun()
 {
-    // Declaration the variables and counters;
-    int a, b, c, i, j, k, sum = 0;
+    printf("\n\nYou welcome in 3D Array Program ( Version 3 ) ..\n\n");
+}
+
+// array 3d function;
+struct MyStruct array_3d()
+{
+    struct MyStruct num;
 
     // Receive values from the user;
-    printf("Enter 3 numbers for 3D array: ");
-    scanf("%d%d%d", &a, &b, &c);
+    printf("Please enter three numbers that represent the size and dimension of the array : \n");
+    printf("The first number - the first dimension : ");
+    scanf("%d", &num.num_1);
 
-    // Declaration the array;
-    int x[a][b][c];
+    printf("The second number - the second dimension : ");
+    scanf("%d", &num.num_2);
 
-    // Receive values from the user;
-    printf("Enter %d numbers: \n", a * b * c);
-    for (i = 0; i < a; i++)
-    {
-        for (j = 0; j < b; j++)
-        {
-            for (k = 0; k < c; k++)
-            {
-                scanf("%d", &x[i][j][k]);
-                sum += x[i][j][k];
-            }
-        }
-    }
-    printf("\n");
+    printf("Number three - third dimension : ");
+    scanf("%d", &num.num_3);
 
-    // Printing the array;
-    for (i = 0; i < a; i++)
-    {
-        for (j = 0; j < b; j++)
-        {
-            for (k = 0; k < c; k++)
-            {
-                printf("%d\t", x[i][j][k]);
-            }
-            printf("\n");
-        }
-        printf("\n");
-    }
-    printf("\nTotal => %d\n", sum);
+    return num;
+}
 
-    printf("\n\n");
+// Declaration the array;
+int declarationArray(int num_1, int num_2, int num_3)
+{
+    int arr[num_1][num_2][num_3];
+
+    // Printing the variables;
+    printf("\nSize array is : [%d][%d][%d]", num_1, num_2, num_3);
+
+    // Summing the variables;
+    printf("\n\nSum numbers is : %d", num_1 + num_2 + num_3);
+
+    printf("\n\n\n");
 }
