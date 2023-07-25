@@ -1,6 +1,6 @@
 
 
-/* >>> Name And Age Program ( Version - 1 )<<< */
+/* >>> Name And Age Program ( Version 1 )<<< */
 
 /* >>> A program that asks the user for his name, age, name printing and age side such as "Amr 33 years old". <<< */
 
@@ -10,14 +10,15 @@ int name_and_age();
 
 int main()
 {
-    printf("\n\nYou welcome in Name And Age Program ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Name And Age Program ( Version 1 ) ..\n\n");
 
     name_and_age();
 
     return 0;
 }
 
-// Functions;
+// Functions ..
+// name and age function;
 int name_and_age()
 {
     // Declaration array of characters and variable;

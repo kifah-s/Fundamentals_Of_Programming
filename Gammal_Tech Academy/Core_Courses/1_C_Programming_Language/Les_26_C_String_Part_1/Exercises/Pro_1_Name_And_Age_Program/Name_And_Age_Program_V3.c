@@ -1,23 +1,29 @@
 
 
-/* >>> Name And Age Program ( Version 2 ) <<< */
+/* >>> Name And Age Program ( Version 3 ) <<< */
 
 /* >>> A program that asks the user for his name, age, name printing and age side such as "Amr 33 years old". <<< */
 
 #include <stdio.h>
 
+void welcomeMassageFun();
 int name_and_age();
 
 int main()
 {
-    printf("\n\nYou welcome in Name And Age Program ( Version 2 ) ..\n\n");
-
+    welcomeMassageFun();
     name_and_age();
 
     return 0;
 }
 
 // Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Name And Age Program ( Version 3 ) ..\n\n");
+}
+
 // name and age function;
 int name_and_age()
 {

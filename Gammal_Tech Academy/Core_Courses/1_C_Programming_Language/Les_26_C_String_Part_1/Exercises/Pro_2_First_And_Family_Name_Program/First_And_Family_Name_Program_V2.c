@@ -1,6 +1,6 @@
 
 
-/* >>> First And Family Name Program ( Version - 2 ) <<< */
+/* >>> First And Family Name Program ( Version 2 ) <<< */
 
 /* >>> A program that asks the user for his first name and family name and prints the names side by side, including distance. <<< */
 
@@ -10,14 +10,15 @@ int first_and_family_name();
 
 int main()
 {
-    printf("\n\nYou welcome in First And Family Name Program ( Version - 2 ) ..\n\n");
+    printf("\n\nYou welcome in First And Family Name Program ( Version 2 ) ..\n\n");
 
     first_and_family_name();
 
     return 0;
 }
 
-// Functions;
+// Functions ..
+// first and family name function
 int first_and_family_name()
 {
     // Declaration array of characters;
