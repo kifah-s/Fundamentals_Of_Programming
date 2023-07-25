@@ -1,24 +1,30 @@
 
 
-/* >>> Name Backwards Program ( Version 1 ) <<< */
+/* >>> Name Backwards Program ( Version 2 ) <<< */
 
 /* >>> A program that asks the user to enter his name and prints his name vice versa. <<< */
 
 #include <stdio.h>
 #include <string.h>
 
+void welcomeMassageFun();
 int name_backwards();
 
 int main()
 {
-    printf("\n\nYou welcome in Name Backwards Program ( Version 1 ) ..\n\n");
-
+    welcomeMassageFun();
     name_backwards();
 
     return 0;
 }
 
 // Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Name Backwards Program ( Version 2 ) ..\n\n");
+}
+
 // name backwards function;
 int name_backwards()
 {

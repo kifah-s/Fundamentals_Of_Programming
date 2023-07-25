@@ -1,24 +1,30 @@
 
 
-/* >>> First Letter Program ( Version 1 ) <<< */
+/* >>> First Letter Program ( Version 3 ) <<< */
 
 /* >>> A program that asks the user to enter his first name and family name and prints the first letter of his first name with the first letter of his family name. <<< */
 
 #include <stdio.h>
 #include <string.h>
 
+void welcomeMassageFun();
 int first_letter();
 
 int main()
 {
-    printf("\n\nYou welcome in First Letter Program ( Version 1 ) ..\n\n");
-
+    welcomeMassageFun();
     first_letter();
 
     return 0;
 }
 
 // Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in First Letter Program ( Version 3 ) ..\n\n");
+}
+
 // first letter function;
 int first_letter()
 {
@@ -29,13 +35,14 @@ int first_letter()
     printf("Please enter your first name : ");
     scanf("%s", name);
 
-    printf("Please enter your family name : ");
+    printf("Please enter your family name %s: ", name);
     scanf("%s", f_name);
 
     printf("\n");
 
     // Printing first letter;
-    printf("The first letter from your name is : '%c', and the first letter from your family name is : '%c'", name[0], f_name[0]);
+    printf("The first letter from your name is : '%c'\n", name[0]);
+    printf("The first letter from your family name is : '%c'", f_name[0]);
 
     printf("\n\n\n");
 }
