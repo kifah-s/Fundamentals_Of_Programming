@@ -1,6 +1,6 @@
 
 
-/* >>> Problem Solving <<< */
+/* >>> Problem Solving ( Version 2 ) <<< */
 
 /* >>> Problem statement
 
@@ -16,16 +16,23 @@ Print the next letter to C in the alphabet. <<< */
 
 #include <stdio.h>
 
+void welcomeMassageFun();
 int p_s();
 
-int main(void)
+int main()
 {
-    printf("\n\nYou welcome in Problem Solving .. \n\n");
-
+    welcomeMassageFun();
     p_s();
 }
 
 // Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Problem Solving ( Version 2 ) .. \n\n");
+}
+
+// PS function;
 int p_s()
 {
     char character;

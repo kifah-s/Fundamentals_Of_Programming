@@ -1,23 +1,30 @@
 
 
-/* >>> From 'A' To 'Z' Program <<< */
+/* >>> From 'A' To 'Z' Program ( Version 2 ) <<< */
 
 /* >>> A program prints from 'A' to 'Z'. <<< */
 
 #include <stdio.h>
 
+void welcomeMassageFun();
 int from_A_to_Z();
 
 int main()
 {
-    printf("\n\nYou welcome in From 'A' To 'Z' Program ..\n\n");
-
+    welcomeMassageFun();
     from_A_to_Z();
 
     return 0;
 }
 
-// Functions;
+// Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in From 'A' To 'Z' Program ( Version 2 ) ..\n\n");
+}
+
+// from A to Z function;
 int from_A_to_Z()
 {
     printf("The Character   In ASCII\n");

@@ -1,6 +1,6 @@
 
 
-/* >>> Difference Between 'A' And 'a' Program <<< */
+/* >>> Difference Between 'A' And 'a' Program ( Version 2 ) <<< */
 
 /* >>> A program prints the difference between 'A' and 'a'. <<< */
 
@@ -10,14 +10,20 @@ int diff_bet_A_and_a();
 
 int main()
 {
-    printf("\n\nYou welcome in Difference Between 'A' And 'a' Program ..\n\n");
 
     diff_bet_A_and_a();
 
     return 0;
 }
 
-// Functions;
+// Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Difference Between 'A' And 'a' Program ( Version 2 ) ..\n\n");
+}
+
+// diff bet A and a function;
 int diff_bet_A_and_a()
 {
     char A = 'A';
