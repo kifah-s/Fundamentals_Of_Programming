@@ -1,23 +1,29 @@
 
 
-/* >>> First And Family Name Program ( Version 1 ) <<< */
+/* >>> First And Family Name Program ( Version 2 ) <<< */
 
 /* >>> A program that asks the user for his first name and family name and prints the names beside some of them, including a distance once and prints each name in a line once again. <<< */
 
 #include <stdio.h>
 
+void welcomeMassageFun();
 int first_and_family_name();
 
 int main()
 {
-    printf("\n\nYou welcome in First And Family Name Program ( Version 1 ) ..\n\n");
-
+    welcomeMassageFun();
     first_and_family_name();
 
     return 0;
 }
 
-// Functions .. 
+// Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in First And Family Name Program ( Version 2 ) ..\n\n");
+}
+
 // first and family name function;
 int first_and_family_name()
 {

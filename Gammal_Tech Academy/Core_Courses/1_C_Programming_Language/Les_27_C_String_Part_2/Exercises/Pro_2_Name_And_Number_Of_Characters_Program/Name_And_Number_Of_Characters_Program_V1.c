@@ -1,6 +1,6 @@
 
 
-/* >>> Name And Number Of Characters Program ( Version - 1 ) <<< */
+/* >>> Name And Number Of Characters Program ( Version 1 ) <<< */
 
 /* >>> A program that asks the user to enter his name, and prints the name along with the number of letters of the name. <<< */
 
@@ -11,14 +11,15 @@ int name_and_number_of_characters();
 
 int main()
 {
-    printf("\n\nYou welcome in Name And Number Of Characters Program ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Name And Number Of Characters Program ( Version 1 ) ..\n\n");
 
     name_and_number_of_characters();
 
     return 0;
 }
 
-// Functions;
+// Functions ..
+// name and number of characters function;
 int name_and_number_of_characters()
 {
     // Declaration arrays of characters;

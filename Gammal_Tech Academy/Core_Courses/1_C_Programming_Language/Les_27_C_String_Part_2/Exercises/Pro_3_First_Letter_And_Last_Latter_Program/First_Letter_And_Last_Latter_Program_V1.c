@@ -1,6 +1,6 @@
 
 
-/* >>> First Letter And Last Latter Program ( Version - 1 ) <<< */
+/* >>> First Letter And Last Latter Program ( Version 1 ) <<< */
 
 /* >>> A program that asks the user to enter a word, if the first letter of the word is the same as the last letter of the word printed "Same". <<< */
 
@@ -11,17 +11,18 @@ int first_latter_and_last_latter();
 
 int main()
 {
-    printf("\n\nYou welcome in First Letter And Last Latter Program ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in First Letter And Last Latter Program ( Version 1 ) ..\n\n");
 
     first_latter_and_last_latter();
 
     return 0;
 }
 
-// Functions;
+// Functions ..
+// first latter and last latter function;
 int first_latter_and_last_latter()
 {
-    // Declaration arrays of characters;
+    // Declaration arrays of characters and variables;
     char name[25], last_char;
     int i;
 
