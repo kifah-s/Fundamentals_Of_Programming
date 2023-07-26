@@ -1,37 +1,64 @@
 
 
-/* >>> Same Program ( Version 1 ) <<< */
+/* >>> Same Program ( Version 4 ) <<< */
 
 /* >>> A program requesting the user to enter two words if the two words are similar "Same" is printed , and if the two words are different the shorter word is printed. <<< */
 
 #include <stdio.h>
 #include <string.h>
 
-int same();
+void welcomeMassageFun();
+char *word1Fun();
+char *word2Fun();
+int same(char *word_1, char *word_2);
 
 int main()
 {
-    printf("\n\nYou welcome in Same Program ( Version 1 ) ..\n\n");
+    welcomeMassageFun();
 
-    same();
+    char *word_1 = word1Fun();
+    char *word_2 = word2Fun();
+    same(word_1, word_2);
 
     return 0;
 }
 
 // Functions ..
-// same function;
-int same()
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Same Program ( Version 4 ) ..\n\n");
+}
+
+// get word 1 function;
+char *word1Fun()
 {
     // Declaration arrays of characters;
-    char word_1[25], word_2[25];
+    static char word_1[25];
 
     // Receive values from the user;
     printf("Please enter word 1 : ");
     scanf("%s", word_1);
 
+    return word_1;
+}
+
+// get word 2 function;
+char *word2Fun()
+{
+    // Declaration arrays of characters;
+    static char word_2[25];
+
+    // Receive values from the user;
     printf("Please enter word 2 : ");
     scanf("%s", word_2);
 
+    return word_2;
+}
+
+// same function;
+int same(char *word_1, char *word_2)
+{
     // Check same or not;
     if (strcmp(word_1, word_2) == 0)
     {
@@ -49,7 +76,6 @@ int same()
             printf("\n%s", word_1);
         }
     }
-
 
     printf("\n\n\n");
 }
