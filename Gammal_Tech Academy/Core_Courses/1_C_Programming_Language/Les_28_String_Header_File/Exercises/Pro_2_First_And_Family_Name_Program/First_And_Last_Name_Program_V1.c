@@ -1,6 +1,6 @@
 
 
-/* >>> First And last Name Program ( Version - 1 ) <<< */
+/* >>> First And last Name Program ( Version 1 ) <<< */
 
 /* >>> A program that asks the user for his first name and last name, registers each name in an array, merges the two names into one array, and prints them. <<< */
 
@@ -11,14 +11,15 @@ int first_and_last_name();
 
 int main()
 {
-    printf("\n\nYou welcome in First And last Name Program ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in First And last Name Program ( Version 1 ) ..\n\n");
 
     first_and_last_name();
 
     return 0;
 }
 
-// Functions;
+// Functions ..
+// first and last name function;
 int first_and_last_name()
 {
     // Declaration arrays of characters;
