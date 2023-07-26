@@ -1,33 +1,51 @@
 
 
-/* >>> Correct Or Not Program ( Version 2 ) <<< */
+/* >>> Correct Or Not Program ( Version 6 ) <<< */
 
 /* >>> A program that asks the user for his name, and if it appears "Amr", it says correct. <<< */
 
 #include <stdio.h>
 #include <string.h>
 
-int correct();
+void welcomeMassageFun();
+char *nameFromUserFun();
+int correct(char *name);
 
 int main()
 {
-    printf("\n\nYou welcome in Correct Or Not Program ( Version 2 ) ..\n\n");
+    welcomeMassageFun();
 
-    correct();
-
+    char *name = nameFromUserFun();
+    correct(name);
+    
     return 0;
 }
 
 // Functions ..
-// correct function;
-int correct()
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Correct Or Not Program ( Version 6 ) ..\n\n");
+}
+
+// get name from user function;
+char *nameFromUserFun()
 {
     // Declaration arrays of characters;
-    char user_name[] = "Amr", name[25];
+    static char name[25];
 
     // Receive values from the user;
     printf("Please enter your name : ");
     scanf("%s", name);
+
+    return name;
+}
+
+// correct function;
+int correct(char *name)
+{
+    // Declaration arrays of characters;
+    char user_name[] = "Amr";
 
     // Declaration variable;
     int correct = strcmp(name, user_name);

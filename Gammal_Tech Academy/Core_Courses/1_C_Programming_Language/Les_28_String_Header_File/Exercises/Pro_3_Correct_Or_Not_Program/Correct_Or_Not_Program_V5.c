@@ -1,24 +1,30 @@
 
 
-/* >>> Correct Or Not Program ( Version 2 ) <<< */
+/* >>> Correct Or Not Program ( Version 5 ) <<< */
 
 /* >>> A program that asks the user for his name, and if it appears "Amr", it says correct. <<< */
 
 #include <stdio.h>
 #include <string.h>
 
+void welcomeMassageFun();
 int correct();
 
 int main()
 {
-    printf("\n\nYou welcome in Correct Or Not Program ( Version 2 ) ..\n\n");
-
+    welcomeMassageFun();
     correct();
 
     return 0;
 }
 
 // Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Correct Or Not Program ( Version 5 ) ..\n\n");
+}
+
 // correct function;
 int correct()
 {

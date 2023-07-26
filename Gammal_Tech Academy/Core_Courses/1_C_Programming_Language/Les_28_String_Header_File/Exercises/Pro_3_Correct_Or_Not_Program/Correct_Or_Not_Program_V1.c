@@ -1,6 +1,6 @@
 
 
-/* >>> Correct Or Not Program ( Version - 1 ) <<< */
+/* >>> Correct Or Not Program ( Version 1 ) <<< */
 
 /* >>> A program that asks the user for his name, and if it appears "Amr", it says correct. <<< */
 
@@ -11,14 +11,15 @@ int correct();
 
 int main()
 {
-    printf("\n\nYou welcome in Correct Or Not Program ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Correct Or Not Program ( Version 1 ) ..\n\n");
 
     correct();
 
     return 0;
 }
 
-// Functions;
+// Functions ..
+// correct function;
 int correct()
 {
     // Declaration arrays of characters;
@@ -37,7 +38,5 @@ int correct()
     {
         printf("\nNot correct");
     }
-
-
     printf("\n\n\n");
 }
