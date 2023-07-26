@@ -1,24 +1,30 @@
 
 
-/* >>> Longest Word Program ( Version 2 ) <<< */
+/* >>> Longest Word Program ( Version 5 ) <<< */
 
 /* >>> A program that asks the user to enter two words, and the program combines the two words with each other in one word, so that the word is the longest at first and prints the output on the screen. <<< */
 
 #include <stdio.h>
 #include <string.h>
 
+void welcomeMassageFun();
 int longest_word();
 
 int main()
 {
-    printf("\n\nYou welcome in Longest Word Program ( Version 2 ) ..\n\n");
-
+    welcomeMassageFun();
     longest_word();
 
     return 0;
 }
 
 // Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Longest Word Program ( Version 5 ) ..\n\n");
+}
+
 // longest word function;
 int longest_word()
 {
