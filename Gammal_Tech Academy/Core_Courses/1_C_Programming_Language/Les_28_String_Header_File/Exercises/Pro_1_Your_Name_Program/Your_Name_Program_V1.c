@@ -1,6 +1,6 @@
 
 
-/* >>> Your Name Program ( Version - 1 ) <<< */
+/* >>> Your Name Program ( Version 1 ) <<< */
 
 /* >>> A program that asks the user to enter their name into an array, their name is name and array, another empty name, user_name. I want to fill in the next array with the name the user entered (in two different ways). <<< */
 
@@ -11,14 +11,15 @@ int your_name();
 
 int main()
 {
-    printf("\n\nYou welcome in Your Name Program ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Your Name Program ( Version 1 ) ..\n\n");
 
     your_name();
 
     return 0;
 }
 
-// Functions;
+// Functions ..
+// your name function;
 int your_name()
 {
     // Declaration arrays of characters;

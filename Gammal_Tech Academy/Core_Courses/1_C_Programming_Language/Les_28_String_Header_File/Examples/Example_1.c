@@ -7,7 +7,7 @@
 
 int main()
 {
-    char x[25] = "Amr", y[] = " Mohamed";
+    char x[] = "Amr", y[] = " Mohamed";
     
     strcat(x, y);
 
