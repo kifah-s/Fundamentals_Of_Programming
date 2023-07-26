@@ -1,24 +1,30 @@
 
 
-/* >>> First Letter Program ( Version 1 ) <<< */
+/* >>> First Letter Program ( Version 2 ) <<< */
 
 /* >>> A program that asks the user to enter 3 different names then it prints the first letter of each word. <<< */
 
 #include <stdio.h>
 #include <string.h>
 
+void welcomeMassageFun();
 int first_letter();
 
 int main()
 {
-    printf("\n\nYou welcome in First Letter Program ( Version 1 ) ..\n\n");
-
+    welcomeMassageFun();
     first_letter();
 
     return 0;
 }
 
-// Functions   ..
+// Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in First Letter Program ( Version 2 ) ..\n\n");
+}
+
 // first letter function;
 int first_letter()
 {

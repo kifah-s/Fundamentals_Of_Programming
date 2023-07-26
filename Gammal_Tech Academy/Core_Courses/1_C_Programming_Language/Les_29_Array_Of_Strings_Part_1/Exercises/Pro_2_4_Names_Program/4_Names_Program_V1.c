@@ -1,6 +1,6 @@
 
 
-/* >>> 4 Names Program ( Version - 1 ) <<< */
+/* >>> 4 Names Program ( Version 1 ) <<< */
 
 /* >>> A program that asks the user to enter 4 different names and prints them from the fourth name to the first name. <<< */
 
@@ -11,14 +11,15 @@ int names();
 
 int main()
 {
-    printf("\n\nYou welcome in 4 Names Program ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in 4 Names Program ( Version 1 ) ..\n\n");
 
     names();
 
     return 0;
 }
 
-// Functions;
+// Functions ..
+// names function;
 int names()
 {
     // Declaration array of characters;

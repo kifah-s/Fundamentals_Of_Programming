@@ -1,24 +1,30 @@
 
 
-/* >>> 3 Names Program ( Version 1 ) <<< */
+/* >>> 3 Names Program ( Version 2 ) <<< */
 
 /* >>> A program that asks the user to enter 3 different names and print them. <<< */
 
 #include <stdio.h>
 #include <string.h>
 
+void welcomeMassageFun();
 int names();
 
 int main()
 {
-    printf("\n\nYou welcome in 3 Names Program ( Version 1 ) ..\n\n");
-
+    welcomeMassageFun();
     names();
 
     return 0;
 }
 
 // Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in 3 Names Program ( Version 2 ) ..\n\n");
+}
+
 // names function;
 int names()
 {

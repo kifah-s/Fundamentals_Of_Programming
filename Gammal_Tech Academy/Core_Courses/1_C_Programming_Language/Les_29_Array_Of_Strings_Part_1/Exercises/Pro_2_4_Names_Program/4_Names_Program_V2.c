@@ -1,33 +1,39 @@
 
 
-/* >>> 3 Names Program ( Version 1 ) <<< */
+/* >>> 4 Names Program ( Version 2 ) <<< */
 
-/* >>> A program that asks the user to enter 3 different names and print them. <<< */
+/* >>> A program that asks the user to enter 4 different names and prints them from the fourth name to the first name. <<< */
 
 #include <stdio.h>
 #include <string.h>
 
+void welcomeMassageFun();
 int names();
 
 int main()
 {
-    printf("\n\nYou welcome in 3 Names Program ( Version 1 ) ..\n\n");
-
+    welcomeMassageFun();
     names();
 
     return 0;
 }
 
 // Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in 4 Names Program ( Version 2 ) ..\n\n");
+}
+
 // names function;
 int names()
 {
     // Declaration array of characters;
-    char name[3][15];
+    char name[4][15];
 
     // Receive values from the user;
-    printf("Please enter 3 names : \n");
-    for (int i = 0; i < 3; i++)
+    printf("Please enter 4 names : \n");
+    for (int i = 0; i < 4; i++)
     {
         printf("Name %d : ", i + 1);
         scanf("%s", name[i]);
@@ -36,7 +42,7 @@ int names()
 
     // Printing names;
     printf("The names is : \n");
-    for (int i = 0; i < 3; i++)
+    for (int i = 3; i >= 0; i--)
     {
         printf("%d : ", i + 1);
         printf("%s", name[i]);
