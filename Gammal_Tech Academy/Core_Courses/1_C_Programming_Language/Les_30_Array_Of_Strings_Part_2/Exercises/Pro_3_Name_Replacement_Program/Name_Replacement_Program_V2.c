@@ -1,6 +1,6 @@
 
 
-/* >>> Name Replacement Program ( Version - 2 ) <<< */
+/* >>> Name Replacement Program ( Version 2 ) <<< */
 
 /* >>> A program with 3 names, asks the user to enter his name and replaces the first name in the program with the user name and prints the names on the screen. <<< */
 
@@ -11,14 +11,15 @@ int Name_Replacement();
 
 int main()
 {
-    printf("\n\nYou welcome in Name Replacement Program ( Version - 2 ) ..\n\n");
+    printf("\n\nYou welcome in Name Replacement Program ( Version 2 ) ..\n\n");
 
     Name_Replacement();
 
     return 0;
 }
 
-// Functions;
+// Functions ..
+// Name Replacement function;
 int Name_Replacement()
 {
     // Declaration array of characters and counters;
@@ -40,7 +41,6 @@ int Name_Replacement()
     {
         printf("%s\n", name[i]);
     }
-    
 
     printf("\n\n");
 }

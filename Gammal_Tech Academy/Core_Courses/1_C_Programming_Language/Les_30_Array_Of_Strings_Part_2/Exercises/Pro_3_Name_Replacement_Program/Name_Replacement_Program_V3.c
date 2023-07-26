@@ -1,34 +1,43 @@
 
 
-/* >>> Name Replacement Program ( Version 1 ) <<< */
+/* >>> Name Replacement Program ( Version 3 ) <<< */
 
 /* >>> A program with 3 names, asks the user to enter his name and replaces the first name in the program with the user name and prints the names on the screen. <<< */
 
 #include <stdio.h>
 #include <string.h>
 
+void welcomeMassageFun();
 int Name_Replacement();
 
 int main()
 {
-    printf("\n\nYou welcome in Name Replacement Program ( Version 1 ) ..\n\n");
-
+    welcomeMassageFun();
     Name_Replacement();
 
     return 0;
 }
 
 // Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Name Replacement Program ( Version 3 ) ..\n\n");
+}
+
 // Name Replacement function;
 int Name_Replacement()
 {
     // Declaration array of characters and counters;
-    char name[3][20] = {"kifah", "kifah", "saloum"};
+    char name[3][20] = {"kifah", "kifah", "saloum"}, user_name[20];
     int i;
 
     // Receive values from the user;
     printf("Please enter your name : ");
-    scanf("%s", name[0]);
+    scanf("%s", user_name);
+
+    // Name Replacement;
+    strcpy(name[0], user_name);
 
     printf("\n");
 
@@ -38,7 +47,6 @@ int Name_Replacement()
     {
         printf("%s\n", name[i]);
     }
-    
 
     printf("\n\n");
 }

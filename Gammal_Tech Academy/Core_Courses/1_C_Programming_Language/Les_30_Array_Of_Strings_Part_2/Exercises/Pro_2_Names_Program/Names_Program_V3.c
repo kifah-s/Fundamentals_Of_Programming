@@ -1,34 +1,46 @@
 
 
-/* >>> Names Program ( Version 1 ) <<< */
+/* >>> Names Program ( Version 3 ) <<< */
 
 /* >>> A program that asks the user to enter 3 different names and prints the total number of letters of these names. <<< */
 
 #include <stdio.h>
 #include <string.h>
 
+void welcomeMassageFun();
 int names();
 
 int main()
 {
-    printf("\n\nYou welcome in Names Program ( Version 1 ) ..\n\n");
-
+    welcomeMassageFun();
     names();
 
     return 0;
 }
 
 // Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Names Program ( Version 3 ) ..\n\n");
+}
+
 // names function;
 int names()
 {
     // Declaration array of characters, variable and counters;
-    char name[3][20];
-    int sum = 0, i, j;
+    int sum = 0, i, j, number_of_names;
 
     // Receive values from the user;
-    printf("Please enter 3 names : \n");
-    for (i = 0; i < 3; i++)
+    printf("Please enter the number of names : ");
+    scanf("%d", &number_of_names);
+
+    // Declaration array of characters;
+    char name[number_of_names][15];
+
+    // Receive values from the user;
+    printf("Please enter ' %d ' names : \n");
+    for (i = 0; i < number_of_names; i++)
     {
         printf("Name %d : ", i + 1);
         scanf("%s", name[i]);
@@ -37,7 +49,7 @@ int names()
 
     // Printing sum of the letters;
     printf("The sum of the letters is : ");
-    for (i = 0; i < 3; i++)
+    for (i = 0; i < number_of_names; i++)
     {
         for (j = 0; j < name[i][j]; j++)
         {
