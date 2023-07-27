@@ -1,6 +1,6 @@
 
 
-/* >>> Favorite Food Program ( Version 6 ) <<< */
+/* >>> Favorite Food Program ( Version 7 ) <<< */
 
 /* >>> Favorite Food Program : Even if you eat different types of food, you must have favorite foods..
 Required : Write a program that prints 3 of your favorite eaters. <<< */
@@ -15,7 +15,7 @@ char *f_pasta(char pasta[]);
 
 int main()
 {
-    char massage[] = {"\n\nYou welcome in Favorite Food Program ( Version 6 ) ..\n\n"};
+    char massage[] = {"\n\nYou welcome in Favorite Food Program ( Version 7 ) ..\n\n"};
     f_welcome_massage(massage);
     char *mas[] = {massage};
     printf(*mas);

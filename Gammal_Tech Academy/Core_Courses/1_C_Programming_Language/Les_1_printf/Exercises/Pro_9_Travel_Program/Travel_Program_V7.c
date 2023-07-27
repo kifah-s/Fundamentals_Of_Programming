@@ -1,6 +1,6 @@
 
 
-/* >>> Travel Program ( Version 4 ) <<< */
+/* >>> Travel Program ( Version 7 ) <<< */
 
 /* >>> Travel Program : One of the hobbies many people like is to travel to different countries and learn about people's cultures..
 Required : Write a program that prints 5 countries you want to travel to. <<< */
@@ -12,7 +12,7 @@ char *tra_fun(char tra[], char fra[], char spa[], char hol[], char ger[], char m
 
 int main()
 {
-    char mas[] = {"\n\nYou welcome in Travel Program ( Version 4 ) ..\n\n"};
+    char mas[] = {"\n\nYou welcome in Travel Program ( Version 7 ) ..\n\n"};
     wel_mas_fun(mas);
     char *m[] = {mas};
     printf(*m);
