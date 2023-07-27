@@ -1,34 +1,42 @@
 
 
-/* >>> Student Data Program ( Version 4 ) <<< */
+/* >>> Student Data Program ( Version 6 ) <<< */
 
 /* >>> A program that stores student data in struct (name, age, total grades) and prints it. <<< */
 
 #include <stdio.h>
 #include <string.h>
 
-int structs();
+// Struct ..
+// student Struct;
+struct student
+{
+    char name[25];
+    int age, total_degrees;
+};
+
+void welcomeMassageFun();
+int student1Fun();
 
 int main()
 {
-    printf("\n\nYou welcome in Student Data Program ( Version 4 ) ..\n\n");
+    welcomeMassageFun();
 
-    structs();
+    student1Fun();
 
     return 0;
 }
 
 // Functions ..
-// structs function;
-int structs()
+// welcome massage function;
+void welcomeMassageFun()
 {
-    // Structs ..
-    struct student
-    {
-        char name[25];
-        int age, total_degrees;
-    };
+    printf("\n\nYou welcome in Student Data Program ( Version 6 ) ..\n\n");
+}
 
+// student 1 function;
+int student1Fun()
+{
     struct student s_1;
 
     printf("What's your name ? ");

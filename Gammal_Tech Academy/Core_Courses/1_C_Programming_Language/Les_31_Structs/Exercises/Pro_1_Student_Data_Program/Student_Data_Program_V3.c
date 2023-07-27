@@ -1,6 +1,6 @@
 
 
-/* >>> Student Data Program ( Version - 3 ) <<< */
+/* >>> Student Data Program ( Version 3 ) <<< */
 
 /* >>> A program that stores student data in struct (name, age, total grades) and prints it. <<< */
 
@@ -11,7 +11,7 @@ int structs();
 
 int main()
 {
-    printf("\n\nYou welcome in Student Data Program ( Version - 3 ) ..\n\n");
+    printf("\n\nYou welcome in Student Data Program ( Version 3 ) ..\n\n");
 
     structs();
 
@@ -19,6 +19,7 @@ int main()
 }
 
 // Functions ..
+// structs function;
 int structs()
 {
     // Structs ..
