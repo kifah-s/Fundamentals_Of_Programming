@@ -1,6 +1,6 @@
 
 
-/* >>> Letter " S " Drawing Program - ( Version - 3 ) <<< */
+/* >>> Letter " S " Drawing Program ( Version 3 ) <<< */
 
 /* >>> A program that drawing letter " S " using * <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Letter \" S \" Drawing Program - ( Version - 3 )\n\n\n");
+    printf("\n\nYou welcome in Letter \" S \" Drawing Program ( Version 3 )\n\n\n");
     printf("**********\n*\n*\n*\n*\n*********\n         *\n         *\n         *\n         *\n**********\n\n\n");
 
     return 0;

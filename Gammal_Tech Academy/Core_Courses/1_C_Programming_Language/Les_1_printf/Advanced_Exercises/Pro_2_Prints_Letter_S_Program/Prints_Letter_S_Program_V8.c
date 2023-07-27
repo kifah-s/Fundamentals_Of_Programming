@@ -1,6 +1,6 @@
 
 
-/* >>> Letter " S " Drawing Program - ( Version - 8 ) <<< */
+/* >>> Letter " S " Drawing Program ( Version 8 ) <<< */
 
 /* >>> A program that drawing letter " S " using * <<< */
 
@@ -11,7 +11,7 @@ void let_fun(char let_1[]);
 
 int main()
 {
-    char wel[] = {"\n\nYou welcome in Letter \" S \" Drawing Program - ( Version - 8 )\n\n\n"};
+    char wel[] = {"\n\nYou welcome in Letter \" S \" Drawing Program ( Version 8 )\n\n\n"};
     wel_mas_fun(wel);
 
     let_fun("s");

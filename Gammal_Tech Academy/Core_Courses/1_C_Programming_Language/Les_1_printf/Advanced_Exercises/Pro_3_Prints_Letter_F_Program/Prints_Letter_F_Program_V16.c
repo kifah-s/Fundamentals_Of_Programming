@@ -1,6 +1,6 @@
 
 
-/* >>> Letter " F " Drawing Program - ( Version - 16 ) <<< */
+/* >>> Letter " F " Drawing Program ( Version 16 ) <<< */
 
 /* >>> A program that drawing letter " F " using * <<< */
 
@@ -24,9 +24,9 @@ int main()
 // Welcome massage function;
 char *wel_mas_fun()
 {
-    /* printf("\n\nYou welcome in Letter \" F \" Drawing Program - ( Version - 16 )\n\n"); */
+    /* printf("\n\nYou welcome in Letter \" F \" Drawing Program ( Version 16 )\n\n"); */
 
-    char *mas[] = {"\n\nYou welcome in Letter \" F \" Drawing Program - ( Version - 16 )\n\n"};
+    char *mas[] = {"\n\nYou welcome in Letter \" F \" Drawing Program ( Version 16 )\n\n"};
 
     return *mas;
 }

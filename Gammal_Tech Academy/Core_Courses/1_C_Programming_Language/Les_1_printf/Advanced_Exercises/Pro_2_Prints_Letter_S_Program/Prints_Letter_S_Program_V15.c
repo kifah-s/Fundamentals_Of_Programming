@@ -1,6 +1,6 @@
 
 
-/* >>> Letter " S " Drawing Program - ( Version - 15 ) <<< */
+/* >>> Letter " S " Drawing Program ( Version 15 ) <<< */
 
 /* >>> A program that drawing letter " S " using * <<< */
 
@@ -26,9 +26,9 @@ int main()
 // Welcome massage function:
 char *wel_mas_fun()
 {
-    /* printf("\n\nYou welcome in Letter \" S \" Drawing Program - ( Version - 15 )\n\n\n"); */
+    /* printf("\n\nYou welcome in Letter \" S \" Drawing Program ( Version 15 )\n\n\n"); */
 
-    char *mas[] = {"\n\nYou welcome in Letter \" S \" Drawing Program - ( Version - 15 )\n\n\n"};
+    char *mas[] = {"\n\nYou welcome in Letter \" S \" Drawing Program ( Version 15 )\n\n\n"};
 
     return *mas;
 }

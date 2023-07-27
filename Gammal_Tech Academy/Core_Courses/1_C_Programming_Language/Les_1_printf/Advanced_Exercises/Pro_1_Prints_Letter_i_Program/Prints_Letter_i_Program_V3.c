@@ -1,6 +1,6 @@
 
 
-/* >>> letter " i " Drawing Program - ( Version - 3 ) <<< */
+/* >>> letter " i " Drawing Program ( Version 3 ) <<< */
 
 /* >>> A program that drawing letter " i " using * <<< */
 
@@ -21,7 +21,7 @@ int main()
 // Welcome massage function;
 void wel_mas_fun()
 {
-    printf("\nYou welcome in Letter \" i \" Drawing Program - ( Version - 3 )\n\n");
+    printf("\nYou welcome in Letter \" i \" Drawing Program ( Version 3 )\n\n");
 }
 
 // Letter i function;

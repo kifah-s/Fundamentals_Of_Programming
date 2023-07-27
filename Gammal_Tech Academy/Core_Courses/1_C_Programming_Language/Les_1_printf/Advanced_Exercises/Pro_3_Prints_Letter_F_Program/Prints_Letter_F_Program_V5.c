@@ -1,6 +1,6 @@
 
 
-/* >>> Letter " F " Drawing Program - ( Version - 5 ) <<< */
+/* >>> Letter " F " Drawing Program ( Version 5 ) <<< */
 
 /* >>> A program that drawing letter " F " using * <<< */
 
@@ -11,7 +11,7 @@ void let_fun(char let1[], char let2[], char let3[], char let4[]);
 
 int main()
 {
-    char mas[] = {"\n\nYou welcome in Letter \" F \" Drawing Program - ( Version - 5 )\n\n"};
+    char mas[] = {"\n\nYou welcome in Letter \" F \" Drawing Program ( Version 5 )\n\n"};
     wel_mas_fun(mas);
 
     char let1[] = {"\n************\n"};
