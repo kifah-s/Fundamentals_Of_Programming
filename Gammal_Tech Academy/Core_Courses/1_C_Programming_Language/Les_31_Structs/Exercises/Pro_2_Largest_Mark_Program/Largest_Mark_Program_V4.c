@@ -1,6 +1,6 @@
 
 
-/* >>> Largest Mark Program ( Version 2 ) <<< */
+/* >>> Largest Mark Program ( Version 4 ) <<< */
 
 /* >>> A program that asks the user to enter the name and sign of two students and prints the name of the student who receives the largest mark and with his mark. <<< */
 
@@ -18,20 +18,26 @@ struct student
 struct student s_1;
 struct student s_2;
 
+void welcomeMassageFun();
 int student_info();
 int check_grade();
 
 int main()
 {
-    printf("\n\nYou welcome in Largest Mark Program ( Version 2 ) ..\n\n");
+    welcomeMassageFun();
 
-    student_info();
     check_grade();
 
     return 0;
 }
 
 // Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Largest Mark Program ( Version 4 ) ..\n\n");
+}
+
 // student info function;
 int student_info()
 {
@@ -49,6 +55,8 @@ int student_info()
 
 int check_grade()
 {
+    student_info();
+
     // Check grade;
     if (s_1.student_grades > s_2.student_grades)
     {
