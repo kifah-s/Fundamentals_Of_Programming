@@ -1,24 +1,30 @@
 
 
-/* >>> Check String Program ( Version 1 ) <<< */
+/* >>> Check String Program ( Version 2 ) <<< */
 
 /* >>> A program that asks the user to enter a sentence with a maximum of 100 characters, and prints the number of letters, special marks, numbers, and spaces. <<< */
 
 #include <stdio.h>
 #include <string.h>
 
+void welcomeMassageFun();
 int check();
 
 int main()
 {
-    printf("\n\nYou welcome in Check String Program ( Version 1 ) ..\n\n");
-
+    welcomeMassageFun();
     check();
 
     return 0;
 }
 
 // Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Check String Program ( Version 2 ) ..\n\n");
+}
+
 // check function;
 int check()
 {

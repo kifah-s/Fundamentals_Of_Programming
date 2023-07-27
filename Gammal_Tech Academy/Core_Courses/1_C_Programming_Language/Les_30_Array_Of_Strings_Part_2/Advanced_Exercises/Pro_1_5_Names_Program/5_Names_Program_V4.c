@@ -1,33 +1,47 @@
 
 
-/* >>> 5 Names Program ( Version 2 ) <<< */
+/* >>> 5 Names Program ( Version 4 ) <<< */
 
 /* >>> A program that asks the user to enter 5 names and prints each name along with the number of its letters (In two different ways). <<< */
 
 #include <stdio.h>
 #include <string.h>
 
-int names();
+void welcomeMassageFun();
+int namesCountFun();
+int names(int names_count);
 
 int main()
 {
-    printf("\n\nYou welcome in 5 Names Program ( Version 2 ) ..\n\n");
+    welcomeMassageFun();
 
-    names();
-
+    int names_count = namesCountFun();
+    names(names_count);
+    
     return 0;
 }
 
 // Functions ..
-// names function;
-int names()
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in 5 Names Program ( Version 4 ) ..\n\n");
+}
+
+// names count function;
+int namesCountFun()
 {
     // Declaration variable and Receive values from the user;
     int names_count;
     printf("Please enter names count that you want to enter : ");
     scanf("%d", &names_count);
 
+    return names_count;
+}
 
+// names function;
+int names(int names_count)
+{
     // Declaration array, counters and variable;
     char names[names_count][25];
     int i, j, num = 0;

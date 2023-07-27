@@ -18,7 +18,8 @@ int main()
     return 0;
 }
 
-// Functions;
+// Functions ..
+// names function;
 int names()
 {
     // Declaration array, counters and variable;

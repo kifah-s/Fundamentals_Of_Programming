@@ -1,24 +1,30 @@
 
 
-/* >>> Capital Letters Program ( Version 1 ) <<< */
+/* >>> Capital Letters Program ( Version 2 ) <<< */
 
 /* >>> A program that asks the user to enter a sentence with a maximum of 50 characters, and prints the number of capital letters. <<< */
 
 #include <stdio.h>
 #include <string.h>
 
+void welcomeMassageFun();
 int capital_letters();
 
 int main()
 {
-    printf("\n\nYou welcome in Capital Letters Program ( Version 1 ) ..\n\n");
-
+    welcomeMassageFun();
     capital_letters();
 
     return 0;
 }
 
 // Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Capital Letters Program ( Version 2 ) ..\n\n");
+}
+
 // capital letters function;
 int capital_letters()
 {
