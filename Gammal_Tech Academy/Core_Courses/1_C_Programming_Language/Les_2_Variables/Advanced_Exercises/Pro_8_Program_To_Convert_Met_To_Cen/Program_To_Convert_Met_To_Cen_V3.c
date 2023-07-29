@@ -1,6 +1,6 @@
 
 
-/* >>> Program To Convert Meters To Centimeters - ( Version - 3 ) <<< */
+/* >>> Program To Convert Meters To Centimeters ( Version 3 ) <<< */
 
 /* >>> Program To Convert Meters To Centimeters.
 Required : Write a program that assigns a number in a variable, then converts this number to centimeters and prints it. <<< */
@@ -25,7 +25,7 @@ int main()
 // Welcome massage function;
 void wel_mas_fun()
 {
-    printf("\n\nYou welcome in Program To Convert Meters To Centimeters - ( Version - 3 ) ..\n\n");
+    printf("\n\nYou welcome in Program To Convert Meters To Centimeters ( Version 3 ) ..\n\n");
 }
 
 // Centimeters function;
