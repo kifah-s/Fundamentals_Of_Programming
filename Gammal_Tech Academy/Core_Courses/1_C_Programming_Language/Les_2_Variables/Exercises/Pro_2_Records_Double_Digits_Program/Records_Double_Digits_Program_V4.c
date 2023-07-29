@@ -1,6 +1,6 @@
 
 
-/* >>> Records Double Digits Program - ( Version - 4 ) <<< */
+/* >>> Records Double Digits Program ( Version 4 ) <<< */
 
 /* >>> A program that records double digits in two variables and prints them <<< */
 
@@ -21,7 +21,7 @@ int main()
 // Welcome massage function;
 void wel_mas_fun()
 {
-    printf("\n\nYou welcome in Records Double Digits Program - ( Version - 4 ) ..\n\n");
+    printf("\n\nYou welcome in Records Double Digits Program ( Version 4 ) ..\n\n");
 }
 
 // Numbers  function;

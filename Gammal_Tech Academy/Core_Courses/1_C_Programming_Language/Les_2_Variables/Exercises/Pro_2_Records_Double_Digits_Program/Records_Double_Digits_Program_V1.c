@@ -1,6 +1,6 @@
 
 
-/* >>> Records Double Digits Program - ( Version - 1 ) <<< */
+/* >>> Records Double Digits Program ( Version 1 ) <<< */
 
 /* >>> A program that records double digits in two variables and prints them <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Records Double Digits Program - ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Records Double Digits Program ( Version 1 ) ..\n\n");
 
     int num_1 = 1996;
     int num_2 = 2023;
