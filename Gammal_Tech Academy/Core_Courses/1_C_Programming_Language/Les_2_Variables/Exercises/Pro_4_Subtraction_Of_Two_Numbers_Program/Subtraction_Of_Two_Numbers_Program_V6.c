@@ -1,6 +1,6 @@
 
 
-/* >>> Subtraction Of Two Numbers Program - ( Version - 6 ) <<< */
+/* >>> Subtraction Of Two Numbers Program  ( Version  6 ) <<< */
 
 /* >>> A program that records two numbers in two variables and prints the value of their subtraction <<< */
 
@@ -12,7 +12,7 @@ int sub_fun(int num_1, int num_2);
 
 int main()
 {
-    wel_mas_fun("\n\nYou welcome in Subtraction Of Two Numbers Program - ( Version - 6 ) ..\n\n");
+    wel_mas_fun("\n\nYou welcome in Subtraction Of Two Numbers Program  ( Version  6 ) ..\n\n");
 
     res_mas_fun("Result Subtraction the two numbers is : ", sub_fun(1996, 2023));
 
@@ -24,7 +24,7 @@ int main()
 // Welcome massage function;
 void wel_mas_fun(char wel_mas[])
 {
-    // wel_mas = "\n\nYou welcome in Subtraction Of Two Numbers Program - ( Version - 6 ) ..\n\n";
+    // wel_mas = "\n\nYou welcome in Subtraction Of Two Numbers Program  ( Version  6 ) ..\n\n";
     printf("%s", wel_mas);
 }
 

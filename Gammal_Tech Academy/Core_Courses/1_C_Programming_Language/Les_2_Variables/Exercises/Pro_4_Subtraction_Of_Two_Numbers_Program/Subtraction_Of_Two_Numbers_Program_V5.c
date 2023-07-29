@@ -1,6 +1,6 @@
 
 
-/* >>> Subtraction Of Two Numbers Program - ( Version - 5 ) <<< */
+/* >>> Subtraction Of Two Numbers Program ( Version 5 ) <<< */
 
 /* >>> A program that records two numbers in two variables and prints the value of their subtraction <<< */
 
@@ -23,7 +23,7 @@ int main()
 // Welcome massage function;
 void wel_mas_fun()
 {
-    printf("\n\nYou welcome in Subtraction Of Two Numbers Program - ( Version - 5 ) ..\n\n");
+    printf("\n\nYou welcome in Subtraction Of Two Numbers Program ( Version 5 ) ..\n\n");
 }
 
 // Subtraction function;
