@@ -1,6 +1,6 @@
 
 
-/* >>> Increment Five Program - ( Version 1 ) <<< */
+/* >>> Increment Five Program ( Version 1 ) <<< */
 
 /* >>> A program assigns a number in a variable, prints it, and then assigns another variable with the value of the first variable, and it must be incremented by 5. <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Increment Five Program - ( Version 1 ) ..\n\n");
+    printf("\n\nYou welcome in Increment Five Program ( Version 1 ) ..\n\n");
 
     int num_1 = 10;
     printf("Before increment : num_1 = %d\n", num_1);

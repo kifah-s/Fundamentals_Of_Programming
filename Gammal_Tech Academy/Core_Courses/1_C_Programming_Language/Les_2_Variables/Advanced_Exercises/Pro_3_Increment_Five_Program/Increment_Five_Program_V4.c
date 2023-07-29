@@ -1,6 +1,6 @@
 
 
-/* >>> Increment Five Program - ( Version - 4 ) <<< */
+/* >>> Increment Five Program ( Version 4 ) <<< */
 
 /* >>> A program assigns a number in a variable, prints it, and then assigns another variable with the value of the first variable, and it must be incremented by 5. <<< */
 
@@ -23,7 +23,7 @@ int main()
 // Welcome massage function;
 void wel_mas_fun()
 {
-    printf("\n\nYou welcome in Increment Five Program - ( Version - 4 ) ..\n\n");
+    printf("\n\nYou welcome in Increment Five Program ( Version 4 ) ..\n\n");
 }
 
 // number function;
