@@ -1,6 +1,6 @@
 
 
-/* >>> Luxury Car Programme - ( Version - 1 ) <<< */
+/* >>> Luxury Car Programme ( Version 1 ) <<< */
 
 /* >>> Each of us dreams of owning many luxurious cars.
 Required : A program that asks the user how many cars he owns now and how many cars he wants, then prints the rest of the cars for him. <<< */
@@ -9,7 +9,7 @@ Required : A program that asks the user how many cars he owns now and how many c
 
 int main()
 {
-    printf("\n\nYou welcome in Luxury Car Programme - ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Luxury Car Programme ( Version 1 ) ..\n\n");
 
     int car_have,
         car_need;
