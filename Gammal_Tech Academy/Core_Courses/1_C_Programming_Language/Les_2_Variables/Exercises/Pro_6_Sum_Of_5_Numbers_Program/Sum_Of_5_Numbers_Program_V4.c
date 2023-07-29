@@ -1,6 +1,6 @@
 
 
-/* >>> Sum Of 5 Numbers Program - ( Version - 4 ) <<< */
+/* >>> Sum Of 5 Numbers Program ( Version 4 ) <<< */
 
 /* >>> A program that  records 5 digits and prints their total <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Sum Of 5 Numbers Program - ( Version - 4 ) ..\n\n");
+    printf("\n\nYou welcome in Sum Of 5 Numbers Program ( Version 4 ) ..\n\n");
 
     int num_1, num_2, num_3, num_4, num_5, result;
     num_1 = 1;

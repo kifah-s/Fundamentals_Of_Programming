@@ -1,6 +1,6 @@
 
 
-/* >>> Sum Of 5 Numbers Program - ( Version - 7 ) <<< */
+/* >>> Sum Of 5 Numbers Program ( Version 7 ) <<< */
 
 /* >>> A program that  records 5 digits and prints their total <<< */
 
@@ -23,7 +23,7 @@ int main()
 // Welcome massage function;
 void wel_mas_fun()
 {
-    printf("\n\nYou welcome in Sum Of 5 Numbers Program - ( Version - 7 ) ..\n\n");
+    printf("\n\nYou welcome in Sum Of 5 Numbers Program ( Version 7 ) ..\n\n");
 }
 
 // Sum five numbers function;
