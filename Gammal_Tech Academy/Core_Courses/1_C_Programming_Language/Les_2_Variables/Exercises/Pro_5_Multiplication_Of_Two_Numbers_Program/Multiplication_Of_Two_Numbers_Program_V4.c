@@ -1,6 +1,6 @@
 
 
-/* >>> Multiplication Of Two Numbers Program - ( Version - 4 ) <<< */
+/* >>> Multiplication Of Two Numbers Program ( Version 4 ) <<< */
 
 /* >>> A program that  records two numbers in two variables and prints the value of their multiplier <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Multiplication Of Two Numbers Program - ( Version - 4 ) ..\n\n");
+    printf("\n\nYou welcome in Multiplication Of Two Numbers Program ( Version 4 ) ..\n\n");
 
     int num_1 = 1996, num_2 = 2023, result;
     result = num_1 * num_2;

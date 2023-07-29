@@ -1,6 +1,6 @@
 
 
-/* >>> Multiplication Of Two Numbers Program - ( Version - 5 ) <<< */
+/* >>> Multiplication Of Two Numbers Program ( Version 5 ) <<< */
 
 /* >>> A program that  records two numbers in two variables and prints the value of their multiplier <<< */
 
@@ -22,7 +22,7 @@ int main()
 // Welcome massage function;
 void wel_mas_function()
 {
-    printf("\n\nYou welcome in Multiplication Of Two Numbers Program - ( Version - 5 ) ..\n\n");
+    printf("\n\nYou welcome in Multiplication Of Two Numbers Program ( Version 5 ) ..\n\n");
 }
 
 void mul_two_num_fun()
