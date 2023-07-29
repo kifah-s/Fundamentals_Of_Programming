@@ -1,6 +1,6 @@
 
 
-/* >>> Sum Of Two Numbers Program - ( Version - 9 ) <<< */
+/* >>> Sum Of Two Numbers Program ( Version 10 ) <<< */
 
 /* >>> A program that records two numbers in two variables and prints the value of their combined product <<< */
 
@@ -31,9 +31,9 @@ int main()
 // Welcome massage function;
 char *wel_mas_fun()
 {
-    /* printf("\n\nYou welcome in Sum Of Two Numbers Program - ( Version - 9 ) ..\n\n"); */
+    /* printf("\n\nYou welcome in Sum Of Two Numbers Program ( Version 10 ) ..\n\n"); */
 
-    char *wel_mas[] = {"\n\nYou welcome in Sum Of Two Numbers Program - ( Version - 9 ) ..\n\n"};
+    char *wel_mas[] = {"\n\nYou welcome in Sum Of Two Numbers Program ( Version 10 ) ..\n\n"};
 
     return *wel_mas;
 }
