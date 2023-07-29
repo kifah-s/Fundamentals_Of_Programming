@@ -1,6 +1,6 @@
 
 
-/* >>> Sum 3 Numbers Program In Separate Lines - ( Version - 8 ) <<< */
+/* >>> Sum 3 Numbers Program In Separate Lines ( Version 8 ) <<< */
 
 /* >>> A program that records 3 digits and prints the sum of each two digits in a separate line <<< */
 
@@ -22,7 +22,7 @@ int main()
 // Welcome massage function;
 void wel_mas_fun()
 {
-    printf("\n\nYou welcome in Sum 3 Numbers Program In Separate Lines - ( Version - 8 ) ..\n\n");
+    printf("\n\nYou welcome in Sum 3 Numbers Program In Separate Lines ( Version 8 ) ..\n\n");
 }
 
 // Sum numbers fuction;

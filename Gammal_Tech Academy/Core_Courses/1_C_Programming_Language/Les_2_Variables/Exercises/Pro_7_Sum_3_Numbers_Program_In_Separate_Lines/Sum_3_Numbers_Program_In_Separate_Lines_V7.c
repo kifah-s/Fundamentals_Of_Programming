@@ -1,6 +1,6 @@
 
 
-/* >>> Sum 3 Numbers Program In Separate Lines - ( Version - 7 ) <<< */
+/* >>> Sum 3 Numbers Program In Separate Lines ( Version 7 ) <<< */
 
 /* >>> A program that records 3 digits and prints the sum of each two digits in a separate line <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Sum 3 Numbers Program In Separate Lines - ( Version - 7 ) ..\n\n");
+    printf("\n\nYou welcome in Sum 3 Numbers Program In Separate Lines ( Version 7 ) ..\n\n");
 
     int num_1 = 1, num_2 = 2, num_3 = 3, result_1 = num_1 + num_2, result_2 = num_2 + num_3, result_3 = num_1 + num_3;
 
