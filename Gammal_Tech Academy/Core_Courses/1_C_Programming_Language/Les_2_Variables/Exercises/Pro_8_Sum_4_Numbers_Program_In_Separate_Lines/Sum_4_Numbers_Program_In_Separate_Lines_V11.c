@@ -1,6 +1,6 @@
 
 
-/* >>> Sum 4 Numbers Program In Separate Lines - ( Version - 11 ) <<< */
+/* >>> Sum 4 Numbers Program In Separate Lines ( Version 11 ) <<< */
 
 /* >>> A program that records 4 digits and prints the sum of the first two digits in a line and the sum of the second two digits in a separate line <<< */
 
@@ -29,7 +29,7 @@ int main()
 // Welcome massage function;
 void wel_mas_fun()
 {
-    printf("\n\nYou welcome in Sum 4 Numbers Program In Separate Lines - ( Version - 11 ) ..\n\n");
+    printf("\n\nYou welcome in Sum 4 Numbers Program In Separate Lines ( Version 11 ) ..\n\n");
 }
 
 // Sum number one and number two function;
