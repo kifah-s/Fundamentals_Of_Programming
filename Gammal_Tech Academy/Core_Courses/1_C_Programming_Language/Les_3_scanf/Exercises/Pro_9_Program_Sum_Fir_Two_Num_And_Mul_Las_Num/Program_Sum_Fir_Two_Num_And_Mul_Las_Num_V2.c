@@ -1,6 +1,6 @@
 
 
-/* >>> Program Sum First Two Numbers And Multiply Last Numbers ( Version - 2 ) <<< */
+/* >>> Program Sum First Two Numbers And Multiply Last Numbers ( Version 2 ) <<< */
 
 /* >>> A program that requires the user to enter 4 digits and print the sum of the first two digits in a line and multiply the other two digits in another line <<< */
 

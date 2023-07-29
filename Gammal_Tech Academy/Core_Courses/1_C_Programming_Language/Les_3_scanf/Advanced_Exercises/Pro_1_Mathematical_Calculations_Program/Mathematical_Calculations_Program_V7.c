@@ -1,6 +1,6 @@
 
 
-/* >>> Mathematical Calculations Program ( Version 8 ) <<< */
+/* >>> Mathematical Calculations Program ( Version 7 ) <<< */
 
 /* >>> A program that takes 4 numbers from the user and combines the first two numbers, then subtracts the third number, then multiplies it by the fourth number and prints the result. <<< */
 
@@ -31,7 +31,7 @@ int main()
 // Welcome massage function;
 void welMasFun()
 {
-    printf("\n\nYou welcome in Mathematical Calculations Program ( Version 8 ) ..\n\n");
+    printf("\n\nYou welcome in Mathematical Calculations Program ( Version 7 ) ..\n\n");
 }
 
 // Get first number;
