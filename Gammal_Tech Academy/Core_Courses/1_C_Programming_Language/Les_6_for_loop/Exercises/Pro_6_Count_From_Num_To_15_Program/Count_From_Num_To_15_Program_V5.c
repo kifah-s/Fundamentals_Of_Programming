@@ -2,13 +2,7 @@
 
 /* >>> Count From Num To 15 Program ( Version 5 )  <<< */
 
-/* >>> A program that asks the user to enter a
-// Getting number function;
-int gettingNumFun()
-{
-
-}
-number smaller than 15 and then prints all the numbers from this number to the number 15. <<< */
+/* >>> A program that asks the user to enter a number smaller than 15 and then prints all the numbers from this number to the number 15. <<< */
 
 #include <stdio.h>
 
