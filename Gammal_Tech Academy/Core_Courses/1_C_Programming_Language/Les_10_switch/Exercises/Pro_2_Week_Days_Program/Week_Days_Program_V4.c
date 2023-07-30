@@ -1,6 +1,6 @@
 
 
-/* >>> Week Days Program ( Version 3 ) <<< */
+/* >>> Week Days Program ( Version 4 ) <<< */
 
 /* >>> A program that asks a person to enter the number of a day of the week from 1 to 7 and prints the name of the day this week where Saturday is day number 1 (using switch). <<< */
 
@@ -23,7 +23,7 @@ int main()
 // welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Week Days Program ( Version 3 ) ..\n\n");
+    printf("\n\nYou welcome in Week Days Program ( Version 4 ) ..\n\n");
 }
 
 // Get number function;
