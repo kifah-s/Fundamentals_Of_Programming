@@ -1,6 +1,6 @@
 
 
-/* >>> Supermarket Program - ( Version - 7 ) <<< */
+/* >>> Supermarket Program ( Version 7 ) <<< */
 
 /* >>> Supermarket Program : When Rowan shopped, she had a list of products she wanted to buy, and she would buy different quantities of these products, she wanted to calculate the total amount required to buy the products.
 Required : Write a program that records the prices of 5 products, then the user asks how much of each product he wants and prints the total amount at the end.. <<< */
@@ -36,7 +36,7 @@ int main()
 // welcome massage function;
 void welMasFun()
 {
-    printf("\n\nYou welcome in Supermarket Program - ( Version - 7 ) ..\n\n");
+    printf("\n\nYou welcome in Supermarket Program ( Version 7 ) ..\n\n");
 }
 
 // apples function;

@@ -1,6 +1,6 @@
 
 
-/* >>> Supermarket Program - ( Version - 2 ) <<< */
+/* >>> Supermarket Program ( Version 2 ) <<< */
 
 /* >>> Supermarket Program : When Rowan shopped, she had a list of products she wanted to buy, and she would buy different quantities of these products, she wanted to calculate the total amount required to buy the products.
 Required : Write a program that records the prices of 5 products, then the user asks how much of each product he wants and prints the total amount at the end.. <<< */
@@ -9,7 +9,7 @@ Required : Write a program that records the prices of 5 products, then the user 
 
 int main()
 {
-    printf("\n\nYou welcome in Supermarket Program - ( Version - 2 ) ..\n\n");
+    printf("\n\nYou welcome in Supermarket Program ( Version 2 ) ..\n\n");
 
     int apples = 10, banana = 15, carrot = 5, lettuce = 2, tomatoes = 8;
     int r_apples, r_banana, r_carrot, r_lettuce, r_tomatoes;
