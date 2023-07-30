@@ -1,6 +1,6 @@
 
 
-/* >>> Study Subjects Program - ( Version - 4 ) <<< */
+/* >>> Study Subjects Program ( Version 4 ) <<< */
 
 /* >>> Study subjects program : In one school after performing the exams of 5 subjects each from 100 degrees, and the grades of 5 subjects emerged, some students wanted to calculate their total and the total grades they lack to try next year to reduce this difference.
 Required : Write a program that asks the student for his grades in the 5 subjects and the program prints the total and total grades missing <<< */
@@ -30,7 +30,7 @@ int main()
 //  Welcome massage function;
 void welMasFun()
 {
-    printf("\n\nYou welcome in Study Subjects Program - ( Version - 4 ) ..\n\n");
+    printf("\n\nYou welcome in Study Subjects Program ( Version 4 ) ..\n\n");
 }
 
 // First SUB degree function;
