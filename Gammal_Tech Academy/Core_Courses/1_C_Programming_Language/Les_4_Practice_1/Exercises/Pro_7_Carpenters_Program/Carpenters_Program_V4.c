@@ -1,6 +1,6 @@
 
 
-/* >>> Carpenters Program - ( Version - 4 ) <<< */
+/* >>> Carpenters Program ( Version 4 ) <<< */
 
 /* >>> Carpenters Program : The carpenter uses many nails while making furniture, the carpenter wanted to make some chairs and tables, if the one chair needs 25 nails to make it and the table needs 30 nails.
 Required : Write a program that asks a person how many chairs and how many tables he wants to make and prints the total nails he needs. <<< */
@@ -9,7 +9,7 @@ Required : Write a program that asks a person how many chairs and how many table
 
 int main()
 {
-    printf("\n\nYou welcome in Carpenters Program - ( Version - 4 ) ..\n\n");
+    printf("\n\nYou welcome in Carpenters Program ( Version 4 ) ..\n\n");
 
     int chare, table, screws_ch, screws_ta, screws_total;
 

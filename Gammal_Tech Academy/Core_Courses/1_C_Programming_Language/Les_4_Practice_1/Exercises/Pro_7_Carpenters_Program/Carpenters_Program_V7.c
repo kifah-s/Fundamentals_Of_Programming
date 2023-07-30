@@ -1,6 +1,6 @@
 
 
-/* >>> Carpenters Program - ( Version - 7 ) <<< */
+/* >>> Carpenters Program ( Version 7 ) <<< */
 
 /* >>> Carpenters Program : The carpenter uses many nails while making furniture, the carpenter wanted to make some chairs and tables, if the one chair needs 55 nails to make it and the table needs 30 nails.
 Required : Write a program that asks a person how many chairs and how many tables he wants to make and prints the total nails he needs. <<< */
@@ -27,7 +27,7 @@ int main()
 // Welcome massage function;
 void welMasFun()
 {
-    printf("\n\nYou welcome in Carpenters Program - ( Version - 7 ) ..\n\n");
+    printf("\n\nYou welcome in Carpenters Program ( Version 7 ) ..\n\n");
 }
 
 // Char need function;
