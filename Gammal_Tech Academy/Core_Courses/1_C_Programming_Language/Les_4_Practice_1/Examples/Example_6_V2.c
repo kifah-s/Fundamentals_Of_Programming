@@ -1,12 +1,12 @@
 
 
-/* >>> Example 6 - ( version - 2 ) <<<*/
+/* >>> Example 6 ( version 2 ) <<<*/
 
 #include <stdio.h>
 
 int main()
 {
-    printf("\n\nYou welcome in Example 6 - ( version - 2 ) ..\n\n");
+    printf("\n\nYou welcome in Example 6 ( version 2 ) ..\n\n");
 
     int day, month, year;
 
