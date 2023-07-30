@@ -6,7 +6,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Example - 1 ..\n\n");
+    printf("\n\nYou welcome in Example 1 ..\n\n");
 
     int i, x[10];
 

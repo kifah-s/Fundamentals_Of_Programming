@@ -6,7 +6,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Example - 2 ..\n\n");
+    printf("\n\nYou welcome in Example 2 ..\n\n");
 
     while (1)
     {
