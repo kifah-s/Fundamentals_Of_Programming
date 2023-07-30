@@ -1,6 +1,6 @@
 
 
-/* >>> Big Number Select Program - ( Version - 3 ) <<< */
+/* >>> Big Number Select Program ( Version 3 ) <<< */
 
 /* >>> A program that asks a person to enter two different numbers if the first is greater than the second, printed "first is the greatest", and if vice versa printed "second is the greatest" <<< */
 
@@ -21,7 +21,7 @@ int main()
 // Welcome massage function;
 void welMasFun()
 {
-    printf("\n\nYou welcome in Big Number Select Program - ( Version - 3 ) ..\n\n");
+    printf("\n\nYou welcome in Big Number Select Program ( Version 3 ) ..\n\n");
 }
 
 // Big number function;

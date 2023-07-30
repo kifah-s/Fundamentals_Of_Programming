@@ -1,6 +1,6 @@
 
 
-/* >>> Big Number Select Program - ( Version - 1 ) <<< */
+/* >>> Big Number Select Program ( Version 1 ) <<< */
 
 /* >>> A program that asks a person to enter two different numbers if the first is greater than the second, printed "first is the greatest", and if vice versa printed "second is the greatest" <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Big Number Select Program - ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Big Number Select Program ( Version 1 ) ..\n\n");
 
     int first_N, second_N;
 
