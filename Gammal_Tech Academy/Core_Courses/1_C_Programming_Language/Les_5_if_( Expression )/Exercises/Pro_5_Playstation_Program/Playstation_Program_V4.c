@@ -1,6 +1,6 @@
 
 
-/* >>> Playstation Program - ( Version - 4 )<<< */
+/* >>> Playstation Program ( Version 4 )<<< */
 
 /* >>> Playstation Program : when playing Match Football on the playstation is calculated the earner and loser based on the number of goals.                                                                                                                                                                                                                                                \
 Required : Write a program that asks the user to enter two numbers, the first expresses the number of goals of the first player and the second expresses the number of goals of the second player. If the first number is greater than the second number the program prints player 1 is the winner and if the second number is greater than the first number, the player 2 is the winner <<< */
@@ -28,7 +28,7 @@ int main()
 // Welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Playstation Program - ( Version - 4 ) ..\n\n");
+    printf("\n\nYou welcome in Playstation Program ( Version 4 ) ..\n\n");
 }
 
 // player first function;
