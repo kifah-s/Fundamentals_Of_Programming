@@ -1,6 +1,6 @@
 
 
-/* >>> Printing largest Number Program - ( Version - 2 ) <<< */
+/* >>> Printing largest Number Program ( Version 2 ) <<< */
 
 /* >>> A program that asks a person to enter two digits and print the largest between them <<< */
 
@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Printing Largest Number Program - ( Version - 2 ) ..\n\n");
+    printf("\n\nYou welcome in Printing Largest Number Program ( Version 2 ) ..\n\n");
 
     int x, y;
 

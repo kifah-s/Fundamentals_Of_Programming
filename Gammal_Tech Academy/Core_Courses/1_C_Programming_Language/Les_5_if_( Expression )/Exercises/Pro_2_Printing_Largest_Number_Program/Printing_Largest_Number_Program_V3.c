@@ -1,6 +1,6 @@
 
 
-/* >>> Printing largest Number Program - ( Version - 3 ) <<< */
+/* >>> Printing largest Number Program ( Version 3 ) <<< */
 
 /* >>> A program that asks a person to enter two digits and print the largest between them <<< */
 
@@ -21,7 +21,7 @@ int main()
 // Welcome massage function;
 void welMasFun()
 {
-    printf("\n\nYou welcome in Printing Largest Number Program - ( Version - 3 ) ..\n\n");
+    printf("\n\nYou welcome in Printing Largest Number Program ( Version 3 ) ..\n\n");
 }
 
 // Largest number function;
