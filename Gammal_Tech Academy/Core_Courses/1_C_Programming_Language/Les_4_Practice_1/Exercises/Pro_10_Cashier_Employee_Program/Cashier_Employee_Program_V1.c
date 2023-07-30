@@ -1,6 +1,6 @@
 
 
-/* >>> Cashier Employee Program - ( Version - 1 ) <<< */
+/* >>> Cashier Employee Program ( Version 1 ) <<< */
 
 /* >>> Cashier Employee Program : In any store or supermarket there is a cashier who receives payments from customers, before the appointment to this job the person passes a test to measure whether he qualifies or not, in this test the so-called pal is calculated (deficit) is the difference between the amount received from customers and the actual amount of products. If the deficit is significant, the person is not eligible to work.
 Required : Write a program that calculates the deficit if it is, where it records the prices of 5 products and asks the cashier about the quantity of products purchased by customers of these products and the total amount paid.. <<< */
@@ -9,7 +9,7 @@ Required : Write a program that calculates the deficit if it is, where it record
 
 int main()
 {
-    printf("\n\nYou welcome in Cashier Employee Program - ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Cashier Employee Program ( Version 1 ) ..\n\n");
 
     int tentered_today, fiscal_deficit;
     int phone = 600, tv = 700, microwave = 800, laptop = 900, fridge = 1000;
