@@ -1,6 +1,6 @@
 
 
-/* >>> Elevator Program - ( Version - 3 ) <<< */
+/* >>> Elevator Program ( Version 3 ) <<< */
 
 /* >>> Elevator Program : Some elevators should not be entered by more than 5 people and their total weight should be less than 500 kilos so that the elevator does not collapse.
 Required : Write a program that asks a person to enter 5 numbers and collect them, if the total is greater than 500 prints "Error, more than 500 kg", and if the total is less than or equal to 500 prints "Okay" <<< */
@@ -22,7 +22,7 @@ int main()
 // Welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Elevator Program - ( Version - 3 )\n\n");
+    printf("\n\nYou welcome in Elevator Program ( Version 3 )\n\n");
 }
 
 // Elevator function;
