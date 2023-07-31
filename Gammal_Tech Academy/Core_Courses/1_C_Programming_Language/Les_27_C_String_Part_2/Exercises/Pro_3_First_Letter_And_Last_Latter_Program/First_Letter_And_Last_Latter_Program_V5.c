@@ -1,6 +1,6 @@
 
 
-/* >>> First Letter And Last Latter Program ( Version 4 ) <<< */
+/* >>> First Letter And Last Latter Program ( Version 5 ) <<< */
 
 /* >>> A program that asks the user to enter a word, if the first letter of the word is the same as the last letter of the word printed "Same". <<< */
 
@@ -25,7 +25,7 @@ int main()
 // welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in First Letter And Last Latter Program ( Version 4 ) ..\n\n");
+    printf("\n\nYou welcome in First Letter And Last Latter Program ( Version 5 ) ..\n\n");
 }
 
 // get name function;
