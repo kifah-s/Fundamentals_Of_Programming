@@ -1,6 +1,6 @@
 
 
-/* >>> Num 1564C From Hex To Dec Program ( Version 3 ) <<< */
+/* >>> Num 1564C From Hex To Dec Program ( Version 4 ) <<< */
 
 /* >>> Convert number (1564C) from hexadecimal to decimal. <<< */
 
@@ -12,7 +12,7 @@ int hexadecimal_to_decimal(char *hex);
 
 int main()
 {
-    printf("\n\nYou welcome in Num 1564C From Hex To Dec Program ( Version 3 ) ..\n\n");
+    printf("\n\nYou welcome in Num 1564C From Hex To Dec Program ( Version 4 ) ..\n\n");
 
     // Print the hexadecimal and decimal numbers
     printf("1564C in hexadecimal = %d in decimal\n\n\n", hexadecimal_to_decimal("1564C"));
