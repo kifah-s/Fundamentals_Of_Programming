@@ -1,6 +1,6 @@
 
 
-/* >>> Found Number 5 Program ( Version 1 ) <<< */
+/* >>> Found Number 5 Program ( Version 2 ) <<< */
 
 /* >>> A program that asks the user to enter a set of numbers and if he finds that there is a number of numbers entered = 5 is applied by "found". <<< */
 
@@ -21,7 +21,7 @@ int main()
 // welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Found Number 5 Program ( Version 1 ) ..\n\n");
+    printf("\n\nYou welcome in Found Number 5 Program ( Version 2 ) ..\n\n");
 }
 
 // found number 5 function;
