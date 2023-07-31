@@ -8,7 +8,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Any Num From Dec To Bin Program ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in Any Num From Dec To Bin Program ( Version 1 ) ..\n\n");
 
     int binary[32], i = 0, n;
 
