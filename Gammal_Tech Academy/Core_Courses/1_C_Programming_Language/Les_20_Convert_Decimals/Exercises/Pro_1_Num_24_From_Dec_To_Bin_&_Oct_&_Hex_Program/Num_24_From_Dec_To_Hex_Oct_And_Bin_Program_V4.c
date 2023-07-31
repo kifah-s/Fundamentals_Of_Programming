@@ -1,6 +1,6 @@
 
 
-/* >>> Num 24 From Dec To Hex, Oct And Bin Program ( Version 5 ) <<< */
+/* >>> Num 24 From Dec To Hex, Oct And Bin Program ( Version 4 ) <<< */
 
 /* >>> Convert Number (24) from decimal to hexadecimal, octal and binary. <<< */
 
@@ -15,7 +15,7 @@ int decimal_to_binary(int decimal);
 
 int main()
 {
-    printf("\n\nYou welcome in Num 24 From Dec To Hex, Oct And Bin Program ( Version 5 ) ..\n\n");
+    printf("\n\nYou welcome in Num 24 From Dec To Hex, Oct And Bin Program ( Version 4 ) ..\n\n");
 
     int decimal = 24;
     printf("The decimal number is : %d\n\n", decimal);
