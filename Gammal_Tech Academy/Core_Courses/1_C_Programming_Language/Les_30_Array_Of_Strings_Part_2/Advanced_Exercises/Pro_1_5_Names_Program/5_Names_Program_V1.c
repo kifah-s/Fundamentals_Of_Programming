@@ -1,6 +1,6 @@
 
 
-/* >>> 5 Names Program ( Version - 1 ) <<< */
+/* >>> 5 Names Program ( Version 1 ) <<< */
 
 /* >>> A program that asks the user to enter 5 names and prints each name along with the number of its letters (In two different ways). <<< */
 
@@ -11,7 +11,7 @@ int names();
 
 int main()
 {
-    printf("\n\nYou welcome in 5 Names Program ( Version - 1 ) ..\n\n");
+    printf("\n\nYou welcome in 5 Names Program ( Version 1 ) ..\n\n");
 
     names();
 
