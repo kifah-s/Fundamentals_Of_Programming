@@ -1,6 +1,6 @@
 
 
-/* >>> Num 7 From Dec To Bin Program ( Version 2 ) <<< */
+/* >>> Num 7 From Dec To Bin Program ( Version 3 ) <<< */
 
 /* >>> Convert the number (7) from decimal to Binary. <<< */
 
@@ -21,7 +21,7 @@ int main()
 // Welcome Massage Function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Num 7 From Dec To Bin Program ( Version 2 ) ..\n\n");
+    printf("\n\nYou welcome in Num 7 From Dec To Bin Program ( Version 3 ) ..\n\n");
 }
 
 // decimal to binary function;
