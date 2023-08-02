@@ -1,12 +1,13 @@
 
 
-/* >>> Students Group Program ( Version 1 ) <<< */
+/* >>> Students Group Program ( Version 4 ) <<< */
 
 /* >>> A program that stores data for a group of students and prints it side by side for each student in a line. <<< */
 
 #include <stdio.h>
 #include <string.h>
 
+// structs ;
 // Declaration struct;
 struct students
 {
@@ -16,21 +17,29 @@ struct students
 // Declaration variable from struct;
 struct students stu[5];
 
-// Functions;
-int students_group();
+// functions;
+void welcomeMassageFun();
+int students_info();
+int printing_structs();
 
 int main()
 {
-    printf("\n\nYou welcome in Students Group Program ( Version 1 ) ..\n\n");
-
-    students_group();
+    welcomeMassageFun();
+    students_info();
+    printing_structs();
 
     return 0;
 }
 
-// Functions;
-// students group function;
-int students_group()
+// Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Students Group Program ( Version 4 ) ..\n\n");
+}
+
+// Students info function;
+int students_info()
 {
     // Creat structs;
     strcpy(stu[0].name, "kifah");
@@ -52,12 +61,14 @@ int students_group()
     strcpy(stu[4].name, "dd");
     strcpy(stu[4].phone, "3333333333333333");
     stu[4].grade = 75;
+}
 
-    // Printing structs function;
+// Printing struct students function;
+int printing_structs()
+{
     for (int i = 0; i < 5; i++)
     {
         printf("Stu %d - Name : %s,  Phone : %s,   Grades = %d\n", i + 1, stu[i].name, stu[i].phone, stu[i].grade);
     }
-
     printf("\n\n");
 }

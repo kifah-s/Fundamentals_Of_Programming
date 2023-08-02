@@ -1,12 +1,13 @@
 
 
-/* >>> Students Group Program ( Version 2 ) <<< */
+/* >>> Students Group Program ( Version 5 ) <<< */
 
 /* >>> A program that stores data for a group of students and prints it side by side for each student in a line. <<< */
 
 #include <stdio.h>
 #include <string.h>
 
+// structs ;
 // Declaration struct;
 struct students
 {
@@ -16,14 +17,14 @@ struct students
 // Declaration variable from struct;
 struct students stu[5];
 
-// Functions;
+// functions;
+void welcomeMassageFun();
 int students_info();
 int printing_structs();
 
 int main()
 {
-    printf("\n\nYou welcome in Students Group Program ( Version 2 ) ..\n\n");
-
+    welcomeMassageFun();
     students_info();
     printing_structs();
 
@@ -31,29 +32,30 @@ int main()
 }
 
 // Functions ..
+// welcome massage function;
+void welcomeMassageFun()
+{
+    printf("\n\nYou welcome in Students Group Program ( Version 5 ) ..\n\n");
+}
+
 // Students info function;
 int students_info()
 {
-    // Creat structs;
-    strcpy(stu[0].name, "kifah");
-    strcpy(stu[0].phone, "00963998621421");
-    stu[0].grade = 98;
+    for (int i = 0; i < 5; i++)
+    {
+        printf("Student (%d) :\n", i + 1);
 
-    strcpy(stu[1].name, "aa");
-    strcpy(stu[1].phone, "000000000000000");
-    stu[1].grade = 60;
+        printf("Name : ");
+        scanf("%s", stu[i].name);
 
-    strcpy(stu[2].name, "bb");
-    strcpy(stu[2].phone, "111111111111111");
-    stu[2].grade = 80;
+        printf("Phone : ");
+        scanf("%s", stu[i].phone);
 
-    strcpy(stu[3].name, "cc");
-    strcpy(stu[3].phone, "2222222222222222");
-    stu[3].grade = 100;
+        printf("Grade : ");
+        scanf("%d", &stu[i].grade);
 
-    strcpy(stu[4].name, "dd");
-    strcpy(stu[4].phone, "3333333333333333");
-    stu[4].grade = 75;
+        printf("\n");
+    }
 }
 
 // Printing struct students function;

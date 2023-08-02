@@ -18,7 +18,7 @@ int main()
 
     for (i = 0; i < 2; i++)
     {
-        printf("%d)", i + 1);
+        printf("\nstudent %d \n", i + 1);
         printf("Name: ");
         scanf("%s", x[i].name);
 
@@ -29,12 +29,14 @@ int main()
         scanf("%d", &x[i].videos);
     }
 
+    printf("\n------------------------------\n");
+
     for (i = 0; i < 2; i++)
     {
-        printf("%d)", i + 1);
+        printf("\nstudent %d \n", i + 1);
         printf("Name: %s\n", x[i].name);
         printf("Cell: %s\n", x[i].cell);
-        printf("Videos: %d\n", x[i].videos);
+        printf("Videos: %d\n\n", x[i].videos);
     }
     return 0;
 }

@@ -1,6 +1,6 @@
 
 
-/* >>> Students Group Program ( Version - 3 ) <<< */
+/* >>> Students Group Program ( Version 3 ) <<< */
 
 /* >>> A program that stores data for a group of students and prints it side by side for each student in a line. <<< */
 
@@ -22,11 +22,12 @@ struct students stu[5] = {
     {"cc", "22222222222222", 100},
     {"dd", "33333333333333", 95}};
 
+// Functions;
 int printing_structs();
 
 int main()
 {
-    printf("\n\nYou welcome in Students Group Program ( Version - 3 ) ..\n\n");
+    printf("\n\nYou welcome in Students Group Program ( Version 3 ) ..\n\n");
 
     printing_structs();
 
@@ -34,7 +35,6 @@ int main()
 }
 
 // Functions ..
-
 // Printing struct students;
 int printing_structs()
 {
