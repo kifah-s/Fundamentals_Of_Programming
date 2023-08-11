@@ -10,13 +10,13 @@ int main()
     int x = 5;
     int y = 7;
 
-    printf("\nAfter swap : x = %d , y = %d\n", x, y);
+    printf("\nBefore swap : x = %d , y = %d\n", x, y);
 
     x = x ^ y;
     y = x ^ y;
     x = x ^ y;
 
-    printf("\nBefore swap : x = %d , y = %d\n\n", x, y);
+    printf("\nAfter swap : x = %d , y = %d\n\n", x, y);
 
     return 0;
 }
