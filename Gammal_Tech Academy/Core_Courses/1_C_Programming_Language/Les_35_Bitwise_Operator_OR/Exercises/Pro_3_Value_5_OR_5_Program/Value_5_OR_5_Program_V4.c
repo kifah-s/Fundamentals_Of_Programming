@@ -1,8 +1,8 @@
 
 
-/* >>> Value (5 OR 20) Program ( Version 3 ) <<< */
+/* >>> Value (5 OR 5) Program ( Version 4 ) <<< */
 
-/* >>> Find the value (5 | 20). <<< */
+/* >>> Find the value (5 | 5). <<< */
 
 #include <stdio.h>
 #include <string.h>
@@ -14,9 +14,7 @@ int main()
 {
     welcomeMassageFun();
 
-    int result = orFun();
-
-    printf("5 | 20 = %d\n\n", result);
+    orFun();
 
     return 0;
 }
@@ -25,14 +23,16 @@ int main()
 // welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Value (5 OR 20) Program ( Version 3 ) ..\n\n");
+    printf("\n\nYou welcome in Value (5 OR 5) Program ( Version 4 ) ..\n\n");
 }
 
 // or Function;
 int orFun()
 {
     int num1 = 5;
-    int num2 = 20;
+    int num2 = 5;
 
     int result = num1 | num2;
+
+    printf("5 | 5 = %d\n\n", result);
 }
