@@ -6,7 +6,7 @@
 
 3. Find the value (5 ^ 5).
 
-4. Program prints an output (5 ^ 10).
+4. Find the value (5 ^ 10).
 
 5. A program that asks the user to enter two values ​​and prints the result of the ^ between them.
 
