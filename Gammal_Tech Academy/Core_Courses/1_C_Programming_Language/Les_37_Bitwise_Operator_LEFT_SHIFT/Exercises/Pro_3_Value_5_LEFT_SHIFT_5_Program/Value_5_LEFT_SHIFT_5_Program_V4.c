@@ -1,8 +1,8 @@
 
 
-/* >>> Value (10 LEFT SHIFT 10) Program ( Version 4 ) <<< */
+/* >>> Value (5 LEFT SHIFT 5) Program ( Version 4 ) <<< */
 
-/* >>> Find the value (10 << 10). <<< */
+/* >>> Find the value (5 << 5). <<< */
 
 #include <stdio.h>
 #include <string.h>
@@ -23,16 +23,16 @@ int main()
 // welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Value (10 LEFT SHIFT 10) Program ( Version 4 ) ..\n\n");
+    printf("\n\nYou welcome in Value (5 LEFT SHIFT 5) Program ( Version 4 ) ..\n\n");
 }
 
 // left Shift Function;
 int leftShiftFun()
 {
-    int num1 = 10;
-    int num2 = 10;
+    int num1 = 5;
+    int num2 = 5;
 
     int result = num1 << num2;
 
-    printf("10 << 10 = %d\n\n", result);
+    printf("5 << 5 = %d\n\n", result);
 }
