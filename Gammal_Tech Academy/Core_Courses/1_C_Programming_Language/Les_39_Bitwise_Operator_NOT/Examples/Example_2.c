@@ -1,12 +1,12 @@
 
 
-/* >>> Example 1 <<< */
+/* >>> Example 2 <<< */
 
 #include <stdio.h>
 
 int main()
 {
-    int x = ~ 1;
+    int x = ~(1 << 31);
 
     printf("%d\n\n", x);
 
