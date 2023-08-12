@@ -8,6 +8,6 @@
 
 4. Program prints (5 << 10).
 
-5. A program that asks the user to enter two values ​​and prints the result of the >> between them.
+5. A program that asks the user to enter two values ​​and prints the result of the << between them.
 
 6. Program multiplies the value of a variable using (using the Left Shift).
