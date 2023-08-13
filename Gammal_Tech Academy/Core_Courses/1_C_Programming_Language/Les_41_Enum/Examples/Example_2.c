@@ -22,7 +22,7 @@ int main()
         Dec
     };
 
-    for (size_t i = 0; i <= Dec; i++)
+    for (int i = 0; i <= Dec; i++)
     {
         printf("\n%d", i);
     }
