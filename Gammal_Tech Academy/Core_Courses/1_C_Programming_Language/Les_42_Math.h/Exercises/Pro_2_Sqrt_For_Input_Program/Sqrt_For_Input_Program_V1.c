@@ -1,6 +1,6 @@
 
 
-/* >>> Sqrt For Numbers Program ( Version 1 ) <<< */
+/* >>> Sqrt For Input Program ( Version 1 ) <<< */
 
 /* >>> A program that asks the user to enter a number and print the square root of the number. <<< */
 
