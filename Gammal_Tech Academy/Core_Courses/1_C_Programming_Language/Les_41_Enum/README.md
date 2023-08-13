@@ -1,0 +1,5 @@
+# Quote ..
+
+#### - " What is enum in C programming? An enum in C programming is a data type that consists of a limited list of predefined values. Enums can be used to represent values that cannot change, such as days of the week, months, or colors. Enums are defined using the keyword enum. " ( Google Bard )
+
+#### - " The concept of enum in C programming can be similar to many things in the real world. For example, it can be similar to : Days of the week, Months , Colors, Directions, States of an object, All of these things are limited and cannot be changed. The concept of enum in programming can be used to represent these things and make the code more readable and consistent. For example, if you have a program that deals with days of the week, you can use an enum to represent days of the week. This will help the program to perform better because it will not have to calculate the value of the day each time. Additionally, it will make the code more readable because it will clearly indicate that days of the week are limited and cannot be changed. " ( Google Bard )
