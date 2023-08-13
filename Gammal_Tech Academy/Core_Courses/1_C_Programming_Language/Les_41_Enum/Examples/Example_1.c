@@ -6,7 +6,7 @@
 
 int main()
 {
-    enum
+    enum week
     {
         sat,
         sun,
@@ -19,6 +19,8 @@ int main()
     printf("\n%d\n", mon);
     printf("%d\n", tue);
     printf("%d\n\n", wed);
+
+    // Using DataType " Enum "  I can create serial numbers for any names.
 
     return 0;
 }
