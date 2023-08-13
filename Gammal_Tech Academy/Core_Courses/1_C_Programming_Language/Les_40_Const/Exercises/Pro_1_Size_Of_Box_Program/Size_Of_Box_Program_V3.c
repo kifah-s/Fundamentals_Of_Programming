@@ -9,17 +9,17 @@
 
 void welcomeMassageFun();
 int getHightFun();
-void calculatingSizeBoxFun(int length, int width, int height);
+void calculatingSizeBoxFun(int LENGTH, int WIDTH, int height);
 
 int main()
 {
     welcomeMassageFun();
 
-    const int length = 5, width = 10;
+    const int LENGTH = 5, WIDTH = 10;
 
     int height = getHightFun();
 
-    calculatingSizeBoxFun(length, width, height);
+    calculatingSizeBoxFun(LENGTH, WIDTH, height);
 
     return 0;
 }
@@ -43,9 +43,9 @@ int getHightFun()
 }
 
 // Calculating size of box Function;
-void calculatingSizeBoxFun(int length, int width, int height)
+void calculatingSizeBoxFun(int LENGTH, int WIDTH, int height)
 {
-    int size = length * width * height;
+    int size = LENGTH * WIDTH * height;
 
     printf("\nSize of bix = %d\n\n", size);
 }

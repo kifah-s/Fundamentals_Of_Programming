@@ -11,13 +11,13 @@ int main()
 {
     printf("\n\nYou welcome in Size Of Box Program ( Version 1 ) ..\n\n");
 
-    const int length = 5, width = 10;
+    const int LENGTH = 5, WIDTH = 10;
     int height = 0;
 
     printf("Please enter height of bix : ");
     scanf("%d", &height);
 
-    int size = length * width * height;
+    int size = LENGTH * WIDTH * height;
 
     printf("\nSize of bix = %d\n\n", size);
 

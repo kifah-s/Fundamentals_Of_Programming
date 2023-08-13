@@ -41,11 +41,11 @@ int getHightFun()
 // Calculating size of box Function;
 void calculatingSizeBoxFun()
 {
-    const int length = 5, width = 10;
+    const int LENGTH = 5, WIDTH = 10;
 
     int height = getHightFun();
 
-    int size = length * width * height;
+    int size = LENGTH * WIDTH * height;
 
     printf("\nSize of bix = %d\n\n", size);
 }
