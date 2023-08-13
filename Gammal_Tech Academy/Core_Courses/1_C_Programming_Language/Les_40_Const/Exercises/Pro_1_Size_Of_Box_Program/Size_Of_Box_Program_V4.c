@@ -1,6 +1,6 @@
 
 
-/* >>> Size Of Box ( Version 4 ) <<< */
+/* >>> Size Of Box Program ( Version 4 ) <<< */
 
 /* >>> A program that calculates the size of a box whose length and width are fixed with a value of 5 and 10 and the height is variable for the user by entering its value (size = length x width x height). <<< */
 
@@ -9,13 +9,13 @@
 
 void welcomeMassageFun();
 int getHightFun();
-void calculatingSizeBoxFunction();
+void calculatingSizeBoxFun();
 
 int main()
 {
     welcomeMassageFun();
 
-    calculatingSizeBoxFunction();
+    calculatingSizeBoxFun();
 
     return 0;
 }
@@ -24,7 +24,7 @@ int main()
 // Welcome Massage Function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Size Of Box ( Version 4 ) ..\n\n");
+    printf("\n\nYou welcome in Size Of Box Program ( Version 4 ) ..\n\n");
 }
 
 // get height function;
@@ -39,7 +39,7 @@ int getHightFun()
 }
 
 // Calculating size of box Function;
-void calculatingSizeBoxFunction()
+void calculatingSizeBoxFun()
 {
     const int length = 5, width = 10;
 

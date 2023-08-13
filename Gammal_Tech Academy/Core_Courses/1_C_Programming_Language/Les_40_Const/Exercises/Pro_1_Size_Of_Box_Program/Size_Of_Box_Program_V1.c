@@ -1,6 +1,6 @@
 
 
-/* >>> Size Of Box ( Version 1 ) <<< */
+/* >>> Size Of Box Program ( Version 1 ) <<< */
 
 /* >>> A program that calculates the size of a box whose length and width are fixed with a value of 5 and 10 and the height is variable for the user by entering its value (size = length x width x height). <<< */
 
@@ -9,7 +9,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Size Of Box ( Version 1 ) ..\n\n");
+    printf("\n\nYou welcome in Size Of Box Program ( Version 1 ) ..\n\n");
 
     const int length = 5, width = 10;
     int height = 0;
