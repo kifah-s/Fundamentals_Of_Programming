@@ -22,7 +22,7 @@ int main()
         fri
     };
 
-    for (size_t i = 0; i <= fri; i++)
+    for (int i = sat; i <= fri; i++)
     {
         printf("\n%d", i + 1);
     }
