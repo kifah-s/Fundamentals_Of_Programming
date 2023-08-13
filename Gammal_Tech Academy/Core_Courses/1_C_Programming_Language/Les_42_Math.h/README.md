@@ -1,0 +1,3 @@
+# Quote ..
+
+#### - " He math.h library is one of the most important libraries in C programming. It contains a variety of mathematical functions that can be used to perform different mathematical operations, such as square root, logarithm, exponential function, integral, differential, sine, cosine, and trigonometry, etc. To use it, you need to include the math.h library in your program using the following instruction : #include <math.h>, After that, you can use the mathematical functions in the library by calling their names. For example, to calculate the square root of 16, you can use the sqrt(), There are many other mathematical functions in the math.h library. You can refer to the library documentation to learn more about them. " ( Google Bard )
