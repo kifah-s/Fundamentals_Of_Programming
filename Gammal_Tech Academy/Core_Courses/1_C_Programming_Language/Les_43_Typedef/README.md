@@ -1,0 +1,3 @@
+# Quote ..
+
+#### - " typedef is a keyword in the C programming language used to create an alias for an existing data type. This means that you can create a shorter or more descriptive name for the type that you want to use. For example, if you use the int data type a lot, you can create a typedef named "my_int" to refer to it. Then you can use the name "my_int" instead of the name "int" throughout your code. typedef can also be used to create aliases for complex data types, such as structures or unions. This can make your code more readable and understandable. " ( Google Bard )
