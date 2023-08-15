@@ -8,13 +8,16 @@
 #include <string.h>
 #include <math.h>
 
-#define gammal_home main
+#define gammal_num int
 
-int gammal_home()
+int main()
 {
     printf("\n\nYou welcome in Rename Int Program ( Version 1 ) ..\n\n");
 
-    printf("changes the word “ int “ to “ gammal_num “ (by using define).\n\n");
+    gammal_num num = 10;
+    printf("%d\n\n", num);
+
+    printf("changes the word \" int \" to \" gammal_num \" (by using define).\n\n");
 
     return 0;
 }
