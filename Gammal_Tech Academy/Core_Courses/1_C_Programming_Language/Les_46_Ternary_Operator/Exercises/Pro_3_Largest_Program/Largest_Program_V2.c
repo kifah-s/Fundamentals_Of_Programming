@@ -1,6 +1,6 @@
 
 
-/* >>> Largest Program ( Version 3 ) <<< */
+/* >>> Largest Program ( Version 2 ) <<< */
 
 /* >>> A program that asks a person to enter two numbers and print the largest in them (using Ternary Operator). <<< */
 
@@ -12,13 +12,16 @@
 void welcomeMassageFun();
 int getFirstNumberFun();
 int getSecondNumberFun();
-void largestFun();
+void largestFun(int firstNum, int secondNum);
 
 int main()
 {
     welcomeMassageFun();
 
-    largestFun();
+    int firstNum = getFirstNumberFun();
+    int secondNum = getSecondNumberFun();
+
+    largestFun(firstNum, secondNum);
 
     return 0;
 }
@@ -27,7 +30,7 @@ int main()
 // Welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Largest Program ( Version 3 ) ..\n\n");
+    printf("\n\nYou welcome in Largest Program ( Version 2 ) ..\n\n");
 }
 
 // Get first number function;
@@ -53,10 +56,7 @@ int getSecondNumberFun()
 }
 
 // largest function;
-void largestFun()
+void largestFun(int firstNum, int secondNum)
 {
-    int firstNum = getFirstNumberFun();
-    int secondNum = getSecondNumberFun();
-
     firstNum > secondNum ? printf("\nLargest : %d\n\n", firstNum) : printf("\nLargest : %d\n\n", secondNum);
 }

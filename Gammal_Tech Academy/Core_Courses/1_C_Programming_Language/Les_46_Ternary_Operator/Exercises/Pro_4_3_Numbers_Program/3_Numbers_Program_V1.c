@@ -20,13 +20,13 @@ int main()
 
     printf("Please enter second number : ");
     scanf("%d", &secondNum);
-    
+
     printf("Please enter third number : ");
     scanf("%d", &thirdNum);
 
-    firstNum > secondNum && firstNum > thirdNum ? printf("\nLargest : %d\n\n", firstNum) : 0;
-    secondNum > firstNum && secondNum > thirdNum ? printf("\nLargest : %d\n\n", secondNum) : 0;
-    thirdNum > firstNum && thirdNum > secondNum ? printf("\nLargest : %d\n\n", thirdNum) : 0;
+    firstNum > secondNum &&firstNum > thirdNum ? printf("\nLargest : %d\n\n", firstNum) : 0;
+    secondNum > firstNum &&secondNum > thirdNum ? printf("\nLargest : %d\n\n", secondNum) : 0;
+    thirdNum > firstNum &&thirdNum > secondNum ? printf("\nLargest : %d\n\n", thirdNum) : 0;
 
     return 0;
 }
