@@ -60,5 +60,5 @@ void greatestNumberFun()
 
     firstNum > secondNum ? printf("\nfirst is the greatest\n\n") : printf("\nsecond is the greatest\n\n");
 
-    /* printf(firstNum > secondNum ? "\nfirst is the greatest" : "\nsecond is the greatest\n\n"); */
+    /* printf(firstNum > secondNum ? "\nfirst is the greatest\n\n" : "\nsecond is the greatest\n\n"); */
 }
