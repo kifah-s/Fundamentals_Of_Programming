@@ -12,6 +12,7 @@ int main()
     scanf("%d", &x);
     
     x % 2 == 0 ? printf("even") : NULL;
+    /* x % 2 ? printf("odd") : NULL; */
 
     return 0;
 }
