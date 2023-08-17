@@ -1,6 +1,6 @@
 
 
-/* >>> Select Size Program ( Version 1 ) <<< */
+/* >>> Select Size Program ( Version 2 ) <<< */
 
 /* >>> A program that asks a person to enter two numbers that express the size of the 2D array and record the numbers that he will write and print on the other and print their sum. <<< */
 
@@ -10,13 +10,21 @@
 #include <stdbool.h>
 
 void welcomeMassageFun();
-int arrayFun();
+int getRowsFun();
+int getColumnsFun();
+int getNumberFun(int array[10][10], int rows, int columns);
+int printNumbersFun(int array[10][10], int rows, int columns);
 
 int main()
 {
     welcomeMassageFun();
 
-    arrayFun();
+    int rows = getRowsFun();
+    int columns = getColumnsFun();
+
+    int array[10][10];
+    getNumberFun(array, rows, columns);
+    printNumbersFun(array, rows, columns);
 
     return 0;
 }
@@ -25,24 +33,35 @@ int main()
 // Welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome Select Size Program ( Version 1 ) ..\n\n");
+    printf("\n\nYou welcome Select Size Program ( Version 2 ) ..\n\n");
 }
 
-// Array function;
-int arrayFun()
+// Get rows function;
+int getRowsFun()
 {
-    // Get dimensions array;
-    int rows = 0, columns = 0;
+    int rows = 0;
     printf("Please enter number of rows : \n");
     scanf("%d", &rows);
 
+    return rows;
+}
+
+// Get columns function;
+int getColumnsFun()
+{
+    int columns = 0;
     printf("Please enter number of columns : \n");
     scanf("%d", &columns);
 
-    // Get number;
+    return columns;
+}
+
+// Get number function;
+int getNumberFun(int array[10][10], int rows, int columns)
+{
     printf("\nPlease enter %d numbers : \n", rows * columns);
 
-    int array[rows][columns], counter = 0;
+    int counter = 0;
 
     for (int i = 0; i < rows; i++)
     {
@@ -54,8 +73,11 @@ int arrayFun()
         }
     }
     printf("\n");
+}
 
-    // Print number;
+// Print number function;
+int printNumbersFun(int array[10][10], int rows, int columns)
+{
     int sum = 0;
     for (int i = 0; i < rows; i++)
     {
