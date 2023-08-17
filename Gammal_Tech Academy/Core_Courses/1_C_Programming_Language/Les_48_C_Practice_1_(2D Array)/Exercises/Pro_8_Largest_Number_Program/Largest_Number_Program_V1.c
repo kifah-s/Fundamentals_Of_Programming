@@ -72,7 +72,8 @@ int getElementsOfArrayFun(int array[10][10], int rows, int columns)
 // Print largest number of array function;
 int printLargestNumberOfArrayFun(int array[10][10], int rows, int columns)
 {
-    int largesNumber = 0;
+    // int largesNumber = 0;
+    int largesNumber = array[0][0];
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < columns; j++)
