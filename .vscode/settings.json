@@ -1,7 +1,7 @@
 {
-  "files.associations": {
-    "stdio.h": "c",
-    "math.h": "c",
-    "string.h": "c"
-  }
+    "files.associations": {
+        "string.h": "c",
+        "math.h": "c",
+        "stdbool.h": "c"
+    }
 }
