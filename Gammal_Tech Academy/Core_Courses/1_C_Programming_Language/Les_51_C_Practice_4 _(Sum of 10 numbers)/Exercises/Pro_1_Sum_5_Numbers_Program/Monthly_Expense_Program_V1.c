@@ -39,6 +39,6 @@ int getAndSum5NumbersFun()
         scanf("%d", &num);
         sum = sum + num;
     }
-    printf("\nSum all numbers = %d : ", sum);
+    printf("\nSum all numbers = %d", sum);
     printf("\n\n\n");
 }

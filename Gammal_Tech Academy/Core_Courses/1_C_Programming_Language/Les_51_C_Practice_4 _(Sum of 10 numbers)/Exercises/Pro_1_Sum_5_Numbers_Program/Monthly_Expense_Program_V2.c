@@ -42,6 +42,6 @@ int getAndSum5NumbersFun()
     {
         sum = sum + num[i];
     }
-    printf("\nSum all numbers = %d : ", sum);
+    printf("\nSum all numbers = %d", sum);
     printf("\n\n\n");
 }

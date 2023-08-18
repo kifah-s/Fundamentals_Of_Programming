@@ -49,6 +49,6 @@ int sum100NumbersFun(int num[100])
     {
         sum = sum + num[i];
     }
-    printf("\nSum all numbers = %d : ", sum);
+    printf("\nSum all numbers = %d", sum);
     printf("\n\n\n");
 }

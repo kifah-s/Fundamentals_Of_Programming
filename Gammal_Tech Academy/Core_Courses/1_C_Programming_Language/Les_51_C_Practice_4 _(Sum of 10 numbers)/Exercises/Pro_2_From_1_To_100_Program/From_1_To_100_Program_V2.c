@@ -37,6 +37,6 @@ int sum100NumbersFun()
         printf("%d\n", i);
         sum = sum + i;
     }
-    printf("\nSum all numbers = %d : ", sum);
+    printf("\nSum all numbers = %d", sum);
     printf("\n\n\n");
 }
