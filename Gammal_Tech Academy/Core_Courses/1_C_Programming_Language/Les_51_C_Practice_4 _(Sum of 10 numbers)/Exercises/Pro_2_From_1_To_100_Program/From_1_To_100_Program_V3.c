@@ -2,7 +2,7 @@
 
 /* >>> From 1 To 100 Program ( Version 3 ) <<< */
 
-/* >>>  <<< */
+/* >>> A program that prints the numbers from 1 : 100 and add them all and prints the total. <<< */
 
 #include <stdio.h>
 #include <string.h>
@@ -25,7 +25,7 @@ int main()
 // Welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Sum 5 Numbers Program ( Version 3 ) ..\n\n");
+    printf("\n\nYou welcome in From 1 To 100 Program ( Version 3 ) ..\n\n");
 }
 
 // sum 100 numbers function;
