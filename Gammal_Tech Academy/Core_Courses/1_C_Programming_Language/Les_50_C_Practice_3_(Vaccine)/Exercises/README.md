@@ -1,0 +1,3 @@
+# Exercises ..
+
+1. A program that reads 4 numbers from the user. The first number represents the total expense, the second number represents the number of children in the primary, the third number represents the number of children in highschool, the fourth number represents the number of children in a secondary. Assuming that the student in the primary  takes 200 and in the highchool 400 and in the secondary 600 if the first number is enough for all the children to print "enough" and if it is insufficient to print "not enough".
