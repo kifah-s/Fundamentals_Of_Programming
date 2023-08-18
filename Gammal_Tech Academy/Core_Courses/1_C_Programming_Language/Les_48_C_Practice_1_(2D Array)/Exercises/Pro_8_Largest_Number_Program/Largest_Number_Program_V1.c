@@ -33,7 +33,7 @@ int main()
 // Welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome Largest Number Program ( Version 1 ) ..\n\n");
+    printf("\n\nYou welcome in Largest Number Program ( Version 1 ) ..\n\n");
 }
 
 // Get rows of array function;

@@ -33,7 +33,7 @@ int main()
 // Welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome Select Size Program ( Version 2 ) ..\n\n");
+    printf("\n\nYou welcome in Select Size Program ( Version 2 ) ..\n\n");
 }
 
 // Get rows function;

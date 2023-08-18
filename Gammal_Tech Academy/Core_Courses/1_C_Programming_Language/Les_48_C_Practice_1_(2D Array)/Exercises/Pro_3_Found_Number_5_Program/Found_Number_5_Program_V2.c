@@ -29,7 +29,7 @@ int main()
 // Welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome Found Number 5 Program ( Version 2 ) ..\n\n");
+    printf("\n\nYou welcome in Found Number 5 Program ( Version 2 ) ..\n\n");
 }
 
 // Get numbers function;

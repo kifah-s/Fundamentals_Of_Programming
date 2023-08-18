@@ -25,7 +25,7 @@ int main()
 // Welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome Negative And Positive Program ( Version 1 ) ..\n\n");
+    printf("\n\nYou welcome in Negative And Positive Program ( Version 1 ) ..\n\n");
 }
 
 // Negative And Positive function;

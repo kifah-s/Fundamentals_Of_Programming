@@ -25,7 +25,7 @@ int main()
 // Welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome Array Fill 2 Program ( Version 1 ) ..\n\n");
+    printf("\n\nYou welcome in Array Fill 2 Program ( Version 1 ) ..\n\n");
 }
 
 // Array function;

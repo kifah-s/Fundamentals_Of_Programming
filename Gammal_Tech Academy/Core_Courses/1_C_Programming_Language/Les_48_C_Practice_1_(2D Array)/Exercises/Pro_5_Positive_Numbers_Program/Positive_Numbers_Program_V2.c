@@ -33,7 +33,7 @@ int main()
 // Welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome Positive Numbers Program ( Version 2 ) ..\n\n");
+    printf("\n\nYou welcome in Positive Numbers Program ( Version 2 ) ..\n\n");
 }
 
 // Get rows function;

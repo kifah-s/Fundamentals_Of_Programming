@@ -33,7 +33,7 @@ int main()
 // Welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome Array Fill Program ( Version 2 ) ..\n\n");
+    printf("\n\nYou welcome in Array Fill Program ( Version 2 ) ..\n\n");
 }
 
 // Print arrays befor fill function;
