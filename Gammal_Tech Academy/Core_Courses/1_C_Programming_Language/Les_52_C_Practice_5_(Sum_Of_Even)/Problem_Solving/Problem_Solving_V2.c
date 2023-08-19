@@ -46,6 +46,23 @@ int main()
 
     luckyOrUnLuckyArrayFun(smallerNumberCounter);
 
+    /* <<<
+    test cases ..
+    case 1
+    5
+    1   1   1   4   5
+    1
+    3
+    LUCKY
+    ------------------
+    case 2
+    5
+    1   1      4   5
+    1
+    2
+    UNLUCKY
+     >>> */
+
     return 0;
 }
 
