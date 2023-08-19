@@ -1,6 +1,6 @@
 
 
-/* >>> Problem Solving ( Version 1 ) <<< */
+/* >>> Problem Solving ( Version 2 ) <<< */
 
 /* >>> Problem statement
 
@@ -32,32 +32,18 @@ int lukeOrNotLukeArrayFun(int smallerNumberCounter);
 
 int main()
 {
-    // Welcome massage function;
     welcomeMassageFun();
 
-    // Get the number of elements of the array function;
     int numberOfElements = numberOfElementsFun();
-    /* printf("the number of elements of the array = %d\n\n", numberOfElements); */
 
-    // Declare Array;
     int arr[numberOfElements];
 
-    // Get elements of array function;
     getElementsOfArrayFun(numberOfElements, arr);
-    /* for (int i = 0; i < numberOfElements; i++)
-    {
-        printf("elements of array : %d\n", arr[i]);
-    } */
 
-    // Check smaller number in array function;
     int smallerNumber = smallerNumberInArrayFun(numberOfElements, arr);
-    /* printf("\nSmaller number is : %d\n\n", smallerNumber); */
 
-    // Check The number of iterations of the smaller number function;
     int smallerNumberCounter = checkIterationsFun(smallerNumber, numberOfElements, arr);
-/*     printf("\nnumber of iterations the Smaller number is : %d\n\n", smallerNumberCounter);
- */
-    // Luke or not luke array function;
+
     lukeOrNotLukeArrayFun(smallerNumberCounter);
 
     return 0;
@@ -67,7 +53,7 @@ int main()
 // Welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Problem Solving ( Version 1 ) ..\n\n");
+    printf("\n\nYou welcome in Problem Solving ( Version 2 ) ..\n\n");
 }
 
 // Get the number of elements of the array function;
