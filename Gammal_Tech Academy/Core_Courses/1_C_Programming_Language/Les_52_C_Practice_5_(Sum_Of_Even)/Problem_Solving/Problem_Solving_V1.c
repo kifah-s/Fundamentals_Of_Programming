@@ -28,7 +28,7 @@ int numberOfElementsFun();
 int getElementsOfArrayFun(int numberOfElements, int arr[numberOfElements]);
 int smallerNumberInArrayFun(int numberOfElements, int arr[numberOfElements]);
 int checkIterationsFun(int smallerNumber, int numberOfElements, int arr[numberOfElements]);
-int lukeOrNotLukeArrayFun(int smallerNumberCounter);
+int luckyOrUnLuckyArrayFun(int smallerNumberCounter);
 
 int main()
 {
@@ -57,8 +57,8 @@ int main()
     int smallerNumberCounter = checkIterationsFun(smallerNumber, numberOfElements, arr);
 /*     printf("\nnumber of iterations the Smaller number is : %d\n\n", smallerNumberCounter);
  */
-    // Luke or not luke array function;
-    lukeOrNotLukeArrayFun(smallerNumberCounter);
+    // lucky or not lucky array function;
+    luckyOrUnLuckyArrayFun(smallerNumberCounter);
 
     return 0;
 }
@@ -128,15 +128,15 @@ int checkIterationsFun(int smallerNumber, int numberOfElements, int arr[numberOf
     return smallerNumberCounter;
 }
 
-// Luke or not luke array function;
-int lukeOrNotLukeArrayFun(int smallerNumberCounter)
+// lucky or Un lucky array function;
+int luckyOrUnLuckyArrayFun(int smallerNumberCounter)
 {
     if (smallerNumberCounter % 2 == 1)
     {
-        printf("\nARRAY IS \" LUKE \" \n\n\n");
+        printf("\nARRAY IS \" UNLUCKY \" \n\n\n");
     }
     else
     {
-        printf("\nARRAY IS \" NOT LUKE \" \n\n\n");
+        printf("\nARRAY IS \" UNLUCKY \" \n\n\n");
     }
 }
