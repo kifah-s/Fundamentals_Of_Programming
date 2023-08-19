@@ -34,7 +34,7 @@ void welcomeMassageFun()
 // Positive number function;
 int positiveNumberFun(int number)
 {
-    int posNumCounter = 0, posNumSum = 0;
+    int posNumCounter = 0, posNumSums = 0;
     printf("Please enter 10 numbers .. \n");
     for (int i = 0; i < 10; i++)
     {
@@ -45,9 +45,9 @@ int positiveNumberFun(int number)
         {
             printf("Positive number : %d\n", number);
             posNumCounter++;
-            posNumSum = posNumSum + number;
+            posNumSums = posNumSums + number;
         }
     }
-    printf("\n\nNumber of positive number is : %d\n", posNumCounter);
-    printf("Sum of positive number is : %d\n\n", posNumSum);
+    printf("\n\nThe numbers of positive number of array = %d\n", posNumCounter);
+    printf("The sums positive number of array = %d\n\n\n", posNumSums);
 }

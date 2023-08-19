@@ -78,6 +78,6 @@ int positiveNumberFun(int number, int arr[number])
             posNumCounter++;
         }
     }
-    printf("\n\nThe numbers of number of array = %d\n", posNumCounter);
-    printf("The sums number of array = %d\n\n\n", posNumSums);
+    printf("\n\nThe numbers of positive number of array = %d\n", posNumCounter);
+    printf("The sums positive number of array = %d\n\n\n", posNumSums);
 }
