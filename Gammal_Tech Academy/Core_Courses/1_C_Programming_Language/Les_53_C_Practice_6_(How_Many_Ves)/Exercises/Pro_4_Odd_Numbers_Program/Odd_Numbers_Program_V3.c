@@ -1,8 +1,8 @@
 
 
-/* >>> Even Numbers Program ( Version 3 ) <<< */
+/* >>> Odd Numbers Program ( Version 3 ) <<< */
 
-/* >>> A program that reads 10 numbers and prints the Even numbers that you have typed and prints their total. <<< */
+/* >>> A program that reads 10 numbers and prints the Odd numbers that you have typed and prints their total. <<< */
 
 #include <stdio.h>
 #include <string.h>
@@ -12,7 +12,7 @@
 void welcomeMassageFun();
 int numberOfNumbersOfArrayFun(int number);
 int elementOfArrayFun(int number, int arr[number]);
-int evenNumberFun(int number, int arr[number]);
+int oddNumberFun(int number, int arr[number]);
 
 int main()
 {
@@ -31,7 +31,7 @@ int main()
     printf("\n\n");
    */
 
-    evenNumberFun(number, arr);
+    oddNumberFun(number, arr);
 
     return 0;
 }
@@ -40,7 +40,7 @@ int main()
 // Welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Even Numbers Program ( Version 3 ) ..\n\n");
+    printf("\n\nYou welcome in Odd Numbers Program ( Version 3 ) ..\n\n");
 }
 
 // Get the number of numbers of array function;
@@ -64,20 +64,20 @@ int elementOfArrayFun(int number, int arr[number])
     printf("\n");
 }
 
-// Even number function;
-int evenNumberFun(int number, int arr[number])
+// Odd number function;
+int oddNumberFun(int number, int arr[number])
 {
-    int eveNumCounter = 0, eveNumSums = 0;
-    printf("Even numbers : \n");
+    int oddNumCounter = 0, oddNumSums = 0;
+    printf("Odd numbers : \n");
     for (int i = 0; i < number; i++)
     {
-        if (arr[i] % 2 == 0)
+        if (arr[i] % 2 == 1)
         {
             printf("%d  ", arr[i]);
-            eveNumSums = eveNumSums + arr[i];
-            eveNumCounter++;
+            oddNumSums = oddNumSums + arr[i];
+            oddNumCounter++;
         }
     }
-    printf("\n\nThe numbers of Even number of array = %d\n", eveNumCounter);
-    printf("The sums Even numbers of array = %d\n\n\n", eveNumSums);
+    printf("\n\nThe numbers of Odd number of array = %d\n", oddNumCounter);
+    printf("The sums Odd numbers of array = %d\n\n\n", oddNumSums);
 }

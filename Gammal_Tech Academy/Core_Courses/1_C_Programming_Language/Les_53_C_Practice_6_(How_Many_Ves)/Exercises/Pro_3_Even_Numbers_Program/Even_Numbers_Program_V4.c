@@ -41,7 +41,7 @@ int evenNumberFun(int number)
         printf("\nPlease enter number %d: ", i + 1);
         scanf("%d", &number);
 
-        if (number > 0)
+        if (number % 2 == 0)
         {
             printf("Even number : %d\n", number);
             eveNumCounter++;
