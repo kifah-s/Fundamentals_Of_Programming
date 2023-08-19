@@ -42,6 +42,7 @@ void welcomeMassageFun()
 // Get element of array function;
 int elementOfArrayFun(int arr[10])
 {
+    printf("Please enter 10 numbers .. \n\n");
     for (int i = 0; i < 10; i++)
     {
         printf("Please enter number %d: ", i + 1);

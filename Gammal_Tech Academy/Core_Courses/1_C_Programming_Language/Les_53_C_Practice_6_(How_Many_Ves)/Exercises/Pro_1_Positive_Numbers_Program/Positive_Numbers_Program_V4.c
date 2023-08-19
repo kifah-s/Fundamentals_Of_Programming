@@ -35,9 +35,10 @@ void welcomeMassageFun()
 int positiveNumberFun(int number)
 {
     int posNumCounter = 0, posNumSum = 0;
-    for (int i = 10; i > 0; i--)
+    printf("Please enter 10 numbers .. \n");
+    for (int i = 0; i < 10; i++)
     {
-        printf("\nPlease enter %d number : ", i);
+        printf("\nPlease enter number %d: ", i + 1);
         scanf("%d", &number);
 
         if (number > 0)

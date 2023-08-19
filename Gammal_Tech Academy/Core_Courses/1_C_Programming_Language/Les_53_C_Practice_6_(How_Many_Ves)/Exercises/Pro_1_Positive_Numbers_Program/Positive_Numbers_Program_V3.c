@@ -55,6 +55,7 @@ int numberOfNumbersOfArrayFun(int number)
 // Get element of array function;
 int elementOfArrayFun(int number, int arr[number])
 {
+    printf("Please enter %d numbers .. \n\n", number);
     for (int i = 0; i < number; i++)
     {
         printf("Please enter number %d: ", i + 1);
