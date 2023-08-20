@@ -7,13 +7,20 @@
 
 int main()
 {
-    char x[20][100] = {"Marcedec", "BMW", "Mazda", "Marcedec", "BMW", "Marcedec"};
-    char y[20];
-    int b, num = 0;
+    char x[20][20] = {"Mercedes", "BMW", "Mazda", "Mercedes", "BMW", "Mercedes"}, y[20];
+    int num = 0;
+
     printf("\nEnter the brand: ");
     scanf("%s", y);
-    for (b = 0; b < 6; b++)
-        num += strcmp(y, x[b]) == 0;
+
+    for (int i = 0; i < 6; i++)
+    {
+        if (strcmp(y, x[i]) == 0)
+        {
+            num++;
+        }
+    }
     printf("\n%d\n\n", num);
+
     return 0;
 }
