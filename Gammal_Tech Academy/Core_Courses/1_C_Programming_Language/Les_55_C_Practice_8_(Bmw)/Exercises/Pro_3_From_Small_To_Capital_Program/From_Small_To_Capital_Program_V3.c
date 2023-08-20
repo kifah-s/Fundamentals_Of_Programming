@@ -47,11 +47,5 @@ char fromSmallToCapitalFun(char smallLettersWord[25])
     {
         smallLettersWord[i] -= 32;
     }
-
-    printf("\n");
-    for (int i = 0; i <= smallLettersWord[i]; i++)
-    {
-        printf("%c", smallLettersWord[i]);
-    }
-    printf("\n\n");
+    printf("\n%s\n\n", smallLettersWord);
 }

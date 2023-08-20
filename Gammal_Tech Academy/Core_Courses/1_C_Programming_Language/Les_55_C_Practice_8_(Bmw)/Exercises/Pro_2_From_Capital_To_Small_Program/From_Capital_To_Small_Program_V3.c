@@ -46,15 +46,10 @@ char getCapitalLettersWordFun(char capitalLetters[25])
 // From Capital To Small Function;
 char fromCapitalToSmallFun(char capitalLetters[25])
 {
-    for (int i = 0; i <= capitalLetters[25]; i++)
+    for (int i = 0; i <= capitalLetters[i]; i++)
     {
         capitalLetters[i] = capitalLetters[i] + 32;
     }
-
-    for (int i = 0; i < capitalLetters[25]; i++)
-    {
-        printf("\n%s", capitalLetters);
-    }
-
+    printf("\n%s\n\n", capitalLetters);
     
 }
