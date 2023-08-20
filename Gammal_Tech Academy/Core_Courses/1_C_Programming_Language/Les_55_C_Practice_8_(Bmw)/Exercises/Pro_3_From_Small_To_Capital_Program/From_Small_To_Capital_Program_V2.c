@@ -1,6 +1,6 @@
 
 
-/* >>> From Small To Capital Program ( Version 1 ) <<< */
+/* >>> From Small To Capital Program ( Version 2 ) <<< */
 
 /* >>> Program converts any capital character to small character. <<< */
 
@@ -21,9 +21,7 @@ int main()
     smallLetter = getSmallLetterFun(smallLetter);
     // printf("\n%c\n\n", smallLetter);
 
-    char capitalLetter;
-    capitalLetter = fromSmallToCapitalFun(smallLetter);
-    printf("\n%c\n\n", capitalLetter);
+    fromSmallToCapitalFun(smallLetter);
 
     return 0;
 }
@@ -32,7 +30,7 @@ int main()
 // Welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in From Small To Capital Program ( Version 1 ) ..\n\n");
+    printf("\n\nYou welcome in From Small To Capital Program ( Version 2 ) ..\n\n");
 }
 
 // Get small letter function;
@@ -49,5 +47,5 @@ char fromSmallToCapitalFun(char smallLetter)
 {
     smallLetter -= 32;
 
-    /* return smallLetter; */
+    printf("\n%c\n\n", smallLetter);
 }
