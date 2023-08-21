@@ -88,7 +88,7 @@ int numberOfProductsAndBudget(int sum, int numberOfProducts, int budget, int pro
     printf("\nThe largest number of products that the budget allows to purchase: \n");
     for (int i = 0; i < numberOfProducts; i++)
     {
-        if ((budget - productPrice[i]) > sum)
+        if (budget >= productPrice[i])
         {
             sum += productPrice[i];
             budget -= productPrice[i];
