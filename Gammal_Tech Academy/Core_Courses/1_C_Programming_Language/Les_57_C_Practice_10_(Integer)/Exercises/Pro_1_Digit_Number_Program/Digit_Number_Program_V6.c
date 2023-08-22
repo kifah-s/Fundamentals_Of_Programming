@@ -1,6 +1,6 @@
 
 
-/* >>> Digit Number Program ( Version 4 ) <<< */
+/* >>> Digit Number Program ( Version 6 ) <<< */
 
 /* >>> A program that asks the user to enter a number and the program counts the number of prime numbers in each number and is repeated from the first time each time (in two different ways). <<< */
 
@@ -25,24 +25,23 @@ int main()
 // Welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Digit Number Program ( Version 4 ) ..\n\n");
+    printf("\n\nYou welcome in Digit Number Program ( Version 6 ) ..\n\n");
 }
 
 // Digit Number / function;
 int digitNumberFun()
 {
-    do
+    for (; true;)
     {
         int number = 0, counter = 0;
         printf("Please enter a number: ");
         scanf("%d", &number);
 
-        while (number)
+        for (; number;)
         {
             number /= 10;
             counter++;
         }
         printf("\nDigit Number is: %d\n\n", counter);
-
-    } while (true);
+    }
 }

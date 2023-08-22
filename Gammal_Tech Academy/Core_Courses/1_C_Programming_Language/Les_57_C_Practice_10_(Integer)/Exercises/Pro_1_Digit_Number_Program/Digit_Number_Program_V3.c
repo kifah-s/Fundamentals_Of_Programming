@@ -10,7 +10,6 @@
 #include <math.h>
 
 void welcomeMassageFun();
-int getNumberFun();
 int digitNumberFun();
 
 int main()
