@@ -22,6 +22,8 @@ int main()
     /* printf("\n%d\n\n", number); */
 
     getSetOfNumbersFun(number);
+
+    return 0;
 }
 
 // Functions ..

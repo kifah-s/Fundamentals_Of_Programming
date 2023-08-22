@@ -23,6 +23,8 @@ int main()
 
     // other way ....
     getSetOfNumbersFun(number);
+
+    return 0;
 }
 
 // Functions ..
