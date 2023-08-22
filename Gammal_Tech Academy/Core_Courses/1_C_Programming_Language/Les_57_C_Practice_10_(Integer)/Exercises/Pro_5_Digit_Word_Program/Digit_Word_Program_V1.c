@@ -44,7 +44,7 @@ char getWordFun(char word[25])
 char numbersOfLettersFun(char word[25])
 {
     int counter = 0;
-    for (int i = 0; i < word[i]; i++)
+    for (int i = 0; word[i] /* i < word[i] */; i++)
     {
         counter++;
     }

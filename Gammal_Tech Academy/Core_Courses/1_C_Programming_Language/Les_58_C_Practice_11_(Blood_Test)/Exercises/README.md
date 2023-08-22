@@ -2,7 +2,7 @@
 
 1. A program that asks the user to enter a number, and analyzes the type of the number (positive or negative).
 
-2. A program that asks the user to enter a number, and analyzes the type of this number (even or single).
+2. A program that asks the user to enter a number, and analyzes the type of this number (even or odd).
 
 3. A program that asks the user to enter a number, and analyzes the type of this number (how many digits).
 

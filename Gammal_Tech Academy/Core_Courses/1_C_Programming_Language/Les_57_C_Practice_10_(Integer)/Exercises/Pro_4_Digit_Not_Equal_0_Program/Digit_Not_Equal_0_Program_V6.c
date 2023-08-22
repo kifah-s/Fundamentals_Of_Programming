@@ -37,7 +37,7 @@ int DigitsNotEqual0Fun()
         printf("Please enter a number: ");
         scanf("%d", &number);
 
-        for (; number;)
+        for (; number /* number > 0 */ ;)
         {
             if (number % 10 != 0)
             {

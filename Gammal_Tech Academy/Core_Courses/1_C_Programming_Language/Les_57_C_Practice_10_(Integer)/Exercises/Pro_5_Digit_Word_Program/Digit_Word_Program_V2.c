@@ -32,13 +32,13 @@ void welcomeMassageFun()
 // Check numbers of letters / function;
 char numbersOfLettersFun(char word[25])
 {
-    start:
+start:
 
     printf("Please enter a word: ");
     scanf("%s", word);
 
     int counter = 0;
-    for (int i = 0; i < word[i]; i++)
+    for (int i = 0; word[i] /* i < word[i] */; i++)
     {
         counter++;
     }

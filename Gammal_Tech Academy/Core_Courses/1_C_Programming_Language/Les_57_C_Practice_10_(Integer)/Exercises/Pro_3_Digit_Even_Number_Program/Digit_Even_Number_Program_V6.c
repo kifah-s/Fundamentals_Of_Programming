@@ -37,7 +37,7 @@ int digitEvenNumberFun()
         printf("Please enter a number: ");
         scanf("%d", &number);
 
-        for (; number;)
+        for (; number /* number > 0 */ ;)
         {
             if (number % 2 == 0)
             {

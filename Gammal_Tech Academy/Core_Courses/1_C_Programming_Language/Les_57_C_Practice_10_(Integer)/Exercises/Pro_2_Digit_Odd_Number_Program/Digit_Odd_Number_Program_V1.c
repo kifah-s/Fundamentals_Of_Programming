@@ -46,7 +46,7 @@ int getNumberFun()
 int digitOddNumberFun(int number)
 {
     int counter = 0;
-    while (number)
+    while (number /* number > 0 */ )
     {
         if (number % 2 == 1)
         {

@@ -37,7 +37,7 @@ int digitNumberFun()
         printf("Please enter a number: ");
         scanf("%d", &number);
 
-        for (; number;)
+        for (; number /* number > 0 */ ;)
         {
             number /= 10;
             counter++;
