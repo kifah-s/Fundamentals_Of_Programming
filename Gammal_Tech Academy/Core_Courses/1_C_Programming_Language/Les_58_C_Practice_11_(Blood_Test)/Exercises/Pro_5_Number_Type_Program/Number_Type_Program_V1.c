@@ -11,7 +11,7 @@
 
 void welcomeMassageFun();
 int getNumberFun();
-int numberTypeFun(int number);
+int palindromeFun(int number);
 
 int main()
 {
@@ -20,7 +20,7 @@ int main()
     int number = getNumberFun();
     // printf("\n%d\n\n", number);
 
-    numberTypeFun(number);
+    palindromeFun(number);
 
     return 0;
 }
@@ -42,8 +42,23 @@ int getNumberFun()
     return number;
 }
 
-// Number Type / function;
-int numberTypeFun(int number)
+// Palindrome / function;
+int palindromeFun(int number)
 {
-    
+    int y = 0, z = number;
+    while (number != 0)
+    {
+        y = y * 10 + number % 10; // Access to the last digit in the number.
+        number /= 10;             //  Access to the first digit in the number.
+    }
+
+    if (y == z)
+    {
+        printf("\nThe number \" %d \" is Palindrome\n\n", z);
+    }
+    else
+    {
+        printf("\nThe number \" %d \" is Not palindrome\n\n", z);
+    }
+
 }
