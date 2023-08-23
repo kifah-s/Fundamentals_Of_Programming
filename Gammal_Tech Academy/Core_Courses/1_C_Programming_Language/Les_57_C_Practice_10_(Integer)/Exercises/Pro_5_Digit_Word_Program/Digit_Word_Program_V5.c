@@ -38,7 +38,7 @@ char numbersOfLettersFun(char word[25])
         scanf("%s", word);
 
         int counter = 0;
-        for (int i = 0; word[i] /* i < word[i] */; i++)
+        for (int i = 0; word[i]; i++)
         {
             counter++;
         }
