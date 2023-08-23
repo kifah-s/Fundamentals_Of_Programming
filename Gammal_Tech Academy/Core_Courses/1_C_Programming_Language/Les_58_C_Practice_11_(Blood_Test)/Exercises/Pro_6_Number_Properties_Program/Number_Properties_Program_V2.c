@@ -11,7 +11,7 @@
 
 void welcomeMassageFun();
 int getNumberFun(int number);
-int foundOrNotFoundFun(int number, int arr[10]);
+int foundOrNotFoundFun(int number, int arr[]);
 int positiveOrNegativeNumFun(int number);
 int evenOrOddNumFun(int number);
 int DigitNumberNumFun(int number);
@@ -22,16 +22,7 @@ int main()
 {
     welcomeMassageFun();
 
-    int arr[10] = {123,
-                   -222,
-                   2332,
-                   55555,
-                   7878,
-                   1,
-                   11,
-                   9889,
-                   -17,
-                   5};
+    int arr[] = {123, -222, 2332, 55555, 7878, 1, 11, 9889, -17, 5};
 
     int number = getNumberFun(number);
 
@@ -57,7 +48,7 @@ int getNumberFun(int number)
 }
 
 // Found Or not Found number / function;
-int foundOrNotFoundFun(int number, int arr[10])
+int foundOrNotFoundFun(int number, int arr[])
 {
     bool found = false;
     for (int i = 0; arr[i] /* Error : i < arr[i]*/; i++)

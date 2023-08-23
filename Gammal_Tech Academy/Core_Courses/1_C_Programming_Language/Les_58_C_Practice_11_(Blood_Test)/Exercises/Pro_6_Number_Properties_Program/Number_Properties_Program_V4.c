@@ -1,6 +1,6 @@
 
 
-/* >>> Number Properties Program ( Version 1 ) <<< */
+/* >>> Number Properties Program ( Version 2 ) <<< */
 
 /* >>> A program containing array of different numbers and requesting the user to enter a number.. If the number is not in the array prints not found and if it exists prints found and prints this number characteristics like the previous examples. <<< */
 
@@ -21,13 +21,16 @@ int palindromeFun(int number);
 int main()
 {
     welcomeMassageFun();
+    
+    kifah:
 
-    int arr[] = {123, -222, 2332, 55555, 7878, 1, 11, 9889, -17, 5};
+    int arr[] = {123, -222, 2332, 55555, 7878, 1, 11, 9889, -17, 5, 0/* Number 0 indicates the end of the array */};
 
     int number = getNumberFun(number);
-    // printf("\n%d\n\n", number);
 
     foundOrNotFoundFun(number, arr);
+
+    goto kifah;
 
     return 0;
 }
@@ -36,13 +39,12 @@ int main()
 // Welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Number Properties Program ( Version 1 ) ..\n\n");
+    printf("\n\nYou welcome in Number Properties Program ( Version 2 ) ..\n\n");
 }
 
 // Get number / function;
 int getNumberFun(int number)
 {
-    number = 0;
     printf("Please enter a number: ");
     scanf("%d", &number);
 
@@ -53,7 +55,7 @@ int getNumberFun(int number)
 int foundOrNotFoundFun(int number, int arr[])
 {
     bool found = false;
-    for (int i = 0; arr[i] /* Error : i < arr[i]*/; i++)
+    for (int i = 0; arr[i] != 0 /* arr[i] */ /* Error : i < arr[i]*/; i++)
     {
         if (number == arr[i])
         {
