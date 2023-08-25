@@ -45,23 +45,23 @@ void examScoreFun(int number)
 {
     switch (number)
     {
-    case 0 ... 50:
+    case 0 ... 49:
         printf("\nF\n\n");
         break;
 
-    case 51 ... 60:
+    case 50 ... 59:
         printf("\nD\n\n");
         break;
 
-    case 61 ... 70:
+    case 60 ... 69:
         printf("\nC\n\n");
         break;
 
-    case 71 ... 80:
+    case 70 ... 79:
         printf("\nB\n\n");
         break;
 
-    case 81 ... 100:
+    case 80 ... 100:
         printf("\nA\n\n");
         break;
 

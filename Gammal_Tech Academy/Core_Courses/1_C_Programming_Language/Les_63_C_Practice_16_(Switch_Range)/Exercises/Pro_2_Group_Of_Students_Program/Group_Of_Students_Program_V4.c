@@ -26,7 +26,8 @@ void successAndFailureFun(float number);
 int main()
 {
     welcomeMassageFun();
-
+    
+    printf("\nMaterial Percentage: \n\n");
     printf("Student 1:\n");
     struct groupOfStudents student_1 = {"A", 90, 95, 91};
     percentageFun(student_1);

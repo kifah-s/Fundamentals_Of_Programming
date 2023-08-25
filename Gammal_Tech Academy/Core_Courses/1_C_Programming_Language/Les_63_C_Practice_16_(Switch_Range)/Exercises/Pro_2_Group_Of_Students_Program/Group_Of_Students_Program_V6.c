@@ -1,6 +1,6 @@
 
 
-/* >>> Group Of Students Program ( Version 2 ) <<< */
+/* >>> Group Of Students Program ( Version 6 ) <<< */
 
 /* >>> A program that stores a group of students and their grades in a group of materials(math, science, English) And assuming that each subject has a score of 100, the percentage of each subject is calculated and the total is complete, and if any degree less than 50% is written by (F), and if it is between 50 and 60, it is written by (D) and if between The 60th and the 70th write it (C), and if between the 70th and the 75th it is written by (85), and if between the 85th and the 100th it is written (A). <<< */
 
@@ -22,7 +22,7 @@ struct groupOfStudents
 void welcomeMassageFun();
 struct groupOfStudents getInformationsStudentsFun(struct groupOfStudents student[3]);
 struct groupOfStudents percentageFun(struct groupOfStudents student[3]);
-void successAndFailureFun(float number);
+void successAndFailureFun(int number);
 
 int main()
 {
@@ -39,7 +39,7 @@ int main()
 // Welcome massage / function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Group Of Students Program ( Version 2 ) ..\n\n");
+    printf("\n\nYou welcome in Group Of Students Program ( Version 6 ) ..\n\n");
 }
 
 // Get informations students  / function;
@@ -94,26 +94,32 @@ struct groupOfStudents percentageFun(struct groupOfStudents student[3])
 }
 
 // success and failure / function;
-void successAndFailureFun(float number)
+void successAndFailureFun(int number)
 {
-    if (number >= 0 && number <= 50)
+    switch (number)
     {
+    case 0 ... 49:
         printf("F\n");
-    }
-    else if (number > 50 && number <= 60)
-    {
+        break;
+
+    case 50 ... 59:
         printf("D\n");
-    }
-    else if (number > 60 && number <= 70)
-    {
+        break;
+
+    case 60 ... 69:
         printf("C\n");
-    }
-    else if (number > 70 && number <= 85)
-    {
+        break;
+
+    case 70 ... 79:
         printf("B\n");
-    }
-    else if (number > 85 && number <= 100)
-    {
+        break;
+
+    case 80 ... 100:
         printf("A\n");
+        break;
+
+    default:
+        printf("\nError Grade\n\n");
+        break;
     }
 }

@@ -43,19 +43,19 @@ int getNumberFun(int number)
 // Exam Score / function;
 void examScoreFun(int number)
 {
-    if (number >= 0 && number <= 50)
+    if (number >= 0 && number <= 49)
     {
         printf("\nF\n\n");
     }
-    else if (number > 50 && number <= 60)
+    else if (number > 50 && number <= 59)
     {
         printf("\nD\n\n");
     }
-    else if (number > 60 && number <= 70)
+    else if (number > 60 && number <= 69)
     {
         printf("\nC\n\n");
     }
-    else if (number > 70 && number <= 80)
+    else if (number > 70 && number <= 79)
     {
         printf("\nB\n\n");
     }

@@ -27,6 +27,7 @@ int main()
 {
     welcomeMassageFun();
 
+    printf("\nMaterial Percentage: \n\n");
     printf("Student 1:\n");
     struct groupOfStudents student_1;
     strcpy(student_1.name, "A");

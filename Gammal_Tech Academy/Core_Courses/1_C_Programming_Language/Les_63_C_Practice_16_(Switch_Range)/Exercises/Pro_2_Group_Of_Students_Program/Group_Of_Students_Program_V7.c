@@ -1,6 +1,6 @@
 
 
-/* >>> Group Of Students Program ( Version 2 ) <<< */
+/* >>> Group Of Students Program ( Version 7 ) <<< */
 
 /* >>> A program that stores a group of students and their grades in a group of materials(math, science, English) And assuming that each subject has a score of 100, the percentage of each subject is calculated and the total is complete, and if any degree less than 50% is written by (F), and if it is between 50 and 60, it is written by (D) and if between The 60th and the 70th write it (C), and if between the 70th and the 75th it is written by (85), and if between the 85th and the 100th it is written (A). <<< */
 
@@ -20,18 +20,21 @@ struct groupOfStudents
 
 // Functions ..
 void welcomeMassageFun();
-struct groupOfStudents getInformationsStudentsFun(struct groupOfStudents student[3]);
-struct groupOfStudents percentageFun(struct groupOfStudents student[3]);
-void successAndFailureFun(float number);
+int numberOfStudentFun(int number);
+struct groupOfStudents getInformationsStudentsFun(int number, struct groupOfStudents student[number]);
+struct groupOfStudents percentageFun(int number, struct groupOfStudents student[number]);
+void successAndFailureFun(int number);
 
 int main()
 {
     welcomeMassageFun();
 
-    struct groupOfStudents student[3];
-    getInformationsStudentsFun(student);
-    percentageFun(student);
-    
+    int number = numberOfStudentFun(number);
+
+    struct groupOfStudents student[number];
+    getInformationsStudentsFun(number, student);
+    percentageFun(number, student);
+
     return 0;
 }
 
@@ -39,14 +42,23 @@ int main()
 // Welcome massage / function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Group Of Students Program ( Version 2 ) ..\n\n");
+    printf("\n\nYou welcome in Group Of Students Program ( Version 7 ) ..\n\n");
+}
+
+// Get number of student / function;
+int numberOfStudentFun(int number)
+{
+    printf("Please enter number of students: ");
+    scanf("%d", &number);
+
+    return number;
 }
 
 // Get informations students  / function;
-struct groupOfStudents getInformationsStudentsFun(struct groupOfStudents student[3])
+struct groupOfStudents getInformationsStudentsFun(int number, struct groupOfStudents student[number])
 {
-    printf("Please enter informations the students: \n");
-    for (int i = 0; i < 3; i++)
+    printf("\nPlease enter informations the students: \n");
+    for (int i = 0; i < number; i++)
     {
         printf("\nStudent %d: \n", i + 1);
         printf("Name: ");
@@ -64,11 +76,11 @@ struct groupOfStudents getInformationsStudentsFun(struct groupOfStudents student
 }
 
 // Percentage / function;
-struct groupOfStudents percentageFun(struct groupOfStudents student[3])
+struct groupOfStudents percentageFun(int number, struct groupOfStudents student[number])
 {
     float total = 0;
     printf("\nMaterial Percentage: ");
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < number; i++)
     {
         printf("\n\nStudent %d\n", i + 1);
         printf("Name: %s\n", student[i].name);
@@ -94,26 +106,32 @@ struct groupOfStudents percentageFun(struct groupOfStudents student[3])
 }
 
 // success and failure / function;
-void successAndFailureFun(float number)
+void successAndFailureFun(int number)
 {
-    if (number >= 0 && number <= 50)
+    switch (number)
     {
+    case 0 ... 49:
         printf("F\n");
-    }
-    else if (number > 50 && number <= 60)
-    {
+        break;
+
+    case 50 ... 59:
         printf("D\n");
-    }
-    else if (number > 60 && number <= 70)
-    {
+        break;
+
+    case 60 ... 69:
         printf("C\n");
-    }
-    else if (number > 70 && number <= 85)
-    {
+        break;
+
+    case 70 ... 79:
         printf("B\n");
-    }
-    else if (number > 85 && number <= 100)
-    {
+        break;
+
+    case 80 ... 100:
         printf("A\n");
+        break;
+
+    default:
+        printf("\nError Grade\n\n");
+        break;
     }
 }

@@ -76,7 +76,7 @@ struct groupOfStudents getInformationsStudentsFun(struct groupOfStudents student
 struct groupOfStudents percentageFun(struct groupOfStudents student[3])
 {
     float total = 0;
-    // printf("\nMaterial Percentage: ");
+    printf("\nMaterial Percentage: ");
     for (int i = 0; i < 3; i++)
     {
         printf("\n\nStudent %d\n", i + 1);
