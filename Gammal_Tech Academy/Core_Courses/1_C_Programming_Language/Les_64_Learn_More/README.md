@@ -1,0 +1,3 @@
+# Quotes ..
+
+#### - " Programming is the process of writing code, which is a set of instructions that tells the computer how to perform a task. Programming languages are tools designed to enable programmers to write code. Therefore, learning programming means learning the concept of programming and how to write code. Learning programming languages means learning the rules and features of a particular programming language. To be a successful programmer, you need to learn both programming and programming languages. Learning programming will give you a basic understanding of how computers work, while learning programming languages will give you the tools you need to write code that meets your goals. " ( Google Bard )
