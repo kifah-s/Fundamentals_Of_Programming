@@ -1,3 +1,3 @@
 # Notes ..
 
-1.
+1. Learn from your mistakes.
