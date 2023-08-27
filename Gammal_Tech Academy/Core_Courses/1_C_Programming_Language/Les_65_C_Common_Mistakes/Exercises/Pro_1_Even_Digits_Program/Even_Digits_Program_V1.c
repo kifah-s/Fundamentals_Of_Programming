@@ -17,9 +17,13 @@ int main()
 {
     welcomeMassageFun();
 
+start:
+
     int number = getNumberFun(number);
 
     evenDigitsFun(number);
+
+    goto start;
 
     return 0;
 }
