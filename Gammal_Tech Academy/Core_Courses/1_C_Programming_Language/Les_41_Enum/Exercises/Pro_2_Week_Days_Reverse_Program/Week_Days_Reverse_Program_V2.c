@@ -1,6 +1,6 @@
 
 
-/* >>> Week Days Reverse Program ( Version 1 ) <<< */
+/* >>> Week Days Reverse Program ( Version 2 ) <<< */
 
 /* >>> The program arranges weekdays vice versa (means Friday Day remains 1 and Saturday Day remains 7) and prints them as numbers. <<< */
 
@@ -9,7 +9,7 @@
 
 int main()
 {
-    printf("\n\nYou welcome in Week Days Reverse Program ( Version 1 ) ..\n\n");
+    printf("\n\nYou welcome in Week Days Reverse Program ( Version 2 ) ..\n\n");
 
     enum week
     {
