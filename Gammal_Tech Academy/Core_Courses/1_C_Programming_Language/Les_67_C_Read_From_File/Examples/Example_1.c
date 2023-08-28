@@ -2,17 +2,20 @@
 
 /* >>> Example 1 <<< */
 
+
 #include <stdio.h>
 
 int main()
 {
-    FILE *f = fopen("gammal.txt", "r");
+    char firstWord[25];
 
-    char x;
+    FILE *filePointer = fopen("First_Word_V1.txt", "r"); // Open the file for read.
 
-    while (fscanf(f, "%c", &x) != EOF)
-    {
-        printf("%c", x);
-    }
+    fscanf(filePointer, "%s", firstWord); // Read first word.
+
+    fclose(filePointer);
+
+    printf("\n%s\n\n", firstWord);
+
     return 0;
 }
