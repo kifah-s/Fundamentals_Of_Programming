@@ -40,6 +40,6 @@ void writeInFileFun(FILE *filePointer)
 void readFromFileFun(FILE *filePointer, char firstWord[25])
 {
     filePointer = fopen("First_Word_V2.txt", "r"); // Open the file for read.
-    fscanf(filePointer, "%s", firstWord);          // Read from file.
+    fscanf(filePointer, "%s", firstWord);          // Read first word from file.
     fclose(filePointer);                           // Close the file after reading is finished
 }
