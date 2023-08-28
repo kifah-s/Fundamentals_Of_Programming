@@ -37,13 +37,11 @@ void printSquareShapeFun(FILE *filePointer)
     {
         fprintf(filePointer, "*                  *\n");
     }
-    printf("\n");
 
     for (int i = 0; i < 20; i++) // Write in file.
     {
         fprintf(filePointer, "*");
     }
-    printf("\n");
 
     fclose(filePointer); // Close the file after writing is finished
 }
