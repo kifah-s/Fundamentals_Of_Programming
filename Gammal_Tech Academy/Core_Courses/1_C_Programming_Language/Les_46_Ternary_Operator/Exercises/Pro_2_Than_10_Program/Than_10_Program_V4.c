@@ -18,7 +18,7 @@ int main()
 {
     welcomeMassageFun();
 
-        moreOrLessFun();
+    moreOrLessFun();
 
     return 0;
 }
@@ -57,7 +57,7 @@ void moreOrLessFun()
 {
     int firstNum = getFirstNumberFun();
     int secondNum = getSecondNumberFun();
-    
+
     int sum = firstNum + secondNum;
 
     sum > 10 ? printf("\nmore than 10\n\n") : printf("\nless than 10\n\n");
