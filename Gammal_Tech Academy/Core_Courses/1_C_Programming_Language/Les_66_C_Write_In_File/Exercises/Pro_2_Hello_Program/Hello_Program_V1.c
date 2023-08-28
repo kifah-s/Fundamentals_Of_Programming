@@ -2,7 +2,7 @@
 
 /* >>> Hello Program ( Version 1 ) <<< */
 
-/* >>> A program opens a new file, print the name of the student on the screen inside the file. <<< */
+/* >>> A program that opens a new file print the word "Hello" into the file using 5 printf commands. <<< */
 
 #include <stdio.h>
 #include <string.h>
