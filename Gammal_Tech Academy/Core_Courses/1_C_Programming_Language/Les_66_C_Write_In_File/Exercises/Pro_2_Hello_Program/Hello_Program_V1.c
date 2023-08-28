@@ -1,0 +1,37 @@
+
+
+/* >>> Hello Program ( Version 1 ) <<< */
+
+/* >>> A program opens a new file, print the name of the student on the screen inside the file. <<< */
+
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+#include <math.h>
+
+void printHelloFun(FILE *filePointer);
+
+int main()
+{
+    FILE *filePointer; // pointer to a file
+    printHelloFun(filePointer);
+
+    return 0;
+}
+
+// Functions ..
+
+// Print Hello / Function.
+void printHelloFun(FILE *filePointer)
+{
+    filePointer = fopen("Hello_V1.txt", "w"); // Open the file for writing, if the file is not found it will be created.
+
+    fprintf(filePointer, "\n\nYou welcome in Hello Program ( Version 1 ) ..\n\n"); // Write in file.
+    fprintf(filePointer, "H");                                                     // Write in file.
+    fprintf(filePointer, "e");                                                     // Write in file.
+    fprintf(filePointer, "l");                                                     // Write in file.
+    fprintf(filePointer, "l");                                                     // Write in file.
+    fprintf(filePointer, "o");                                                     // Write in file.
+
+    fclose(filePointer); // Close the file after writing is finished
+}
