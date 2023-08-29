@@ -1,0 +1,10 @@
+
+
+You welcome in Triangle Shape Program ( Version 2 ) ..
+
+      * 
+     * * 
+    * * * 
+   * * * * 
+  * * * * * 
+ * * * * * * 
