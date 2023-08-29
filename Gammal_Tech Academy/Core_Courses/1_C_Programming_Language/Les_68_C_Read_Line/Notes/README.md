@@ -4,7 +4,7 @@
 
 ```c
 
-// Get string from user / Function.
+// Get and print string  / Function.
 void getStringFun(char string[400])
 {
     printf("Please enter a sentence: ");
@@ -19,11 +19,12 @@ void getStringFun(char string[400])
 
 ```c
 
-// Get string from user / Function.
+// Get and print string / Function.
 void getStringFun(char string[400], char letter)
 {
     printf("Please enter a sentence: ");
     scanf("%[^\n]", string);
+    
     printf("\n");
     for (int i = 0; string[i]; i++)
     {
