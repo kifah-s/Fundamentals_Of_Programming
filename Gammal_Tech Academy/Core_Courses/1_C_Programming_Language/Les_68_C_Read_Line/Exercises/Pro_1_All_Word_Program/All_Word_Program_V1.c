@@ -11,15 +11,17 @@
 
 void welcomeMassageFun();
 void getStringFun(char string[400]);
+void printStringFun(char string[400]);
 
 int main()
 {
     welcomeMassageFun();
 
     char string[400];
+
     getStringFun(string);
 
-    printf("%s\n\n", string); // printing a string as a string.
+    printStringFun(string);
 
     return 0;
 }
@@ -36,4 +38,10 @@ void getStringFun(char string[400])
 {
     printf("Please enter a sentence: ");
     scanf("%[^\n]", string);
+}
+
+// Print string / Function.
+void printStringFun(char string[400])
+{
+    printf("\n%s\n\n", string); // printing a string as a string.
 }

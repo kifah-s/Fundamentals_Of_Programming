@@ -10,14 +10,18 @@
 #include <math.h>
 
 void welcomeMassageFun();
-void getStringFun(char string[400], char letter);
+void getStringFun(char string[400]);
+void printStringFun(char string[400], char letter);
 
 int main()
 {
     welcomeMassageFun();
 
     char string[400], letter;
-    getStringFun(string, letter);
+
+    getStringFun(string);
+
+    printStringFun(string, letter);
 
     return 0;
 }
@@ -30,10 +34,15 @@ void welcomeMassageFun()
 }
 
 // Get string from user / Function.
-void getStringFun(char string[400], char letter)
+void getStringFun(char string[400])
 {
     printf("Please enter a sentence: ");
     scanf("%[^\n]", string);
+}
+
+// Print string / Function.
+void printStringFun(char string[400], char letter)
+{
     printf("\n");
     for (int i = 0; string[i]; i++)
     {
