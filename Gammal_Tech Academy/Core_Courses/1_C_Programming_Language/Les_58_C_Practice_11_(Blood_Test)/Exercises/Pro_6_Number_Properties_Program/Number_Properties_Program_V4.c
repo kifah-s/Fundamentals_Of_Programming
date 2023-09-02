@@ -1,6 +1,6 @@
 
 
-/* >>> Number Properties Program ( Version 2 ) <<< */
+/* >>> Number Properties Program ( Version 4 ) <<< */
 
 /* >>> A program containing array of different numbers and requesting the user to enter a number.. If the number is not in the array prints not found and if it exists prints found and prints this number characteristics like the previous examples. <<< */
 
@@ -39,7 +39,7 @@ int main()
 // Welcome massage function;
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Number Properties Program ( Version 2 ) ..\n\n");
+    printf("\n\nYou welcome in Number Properties Program ( Version 4 ) ..\n\n");
 }
 
 // Get number / function;
