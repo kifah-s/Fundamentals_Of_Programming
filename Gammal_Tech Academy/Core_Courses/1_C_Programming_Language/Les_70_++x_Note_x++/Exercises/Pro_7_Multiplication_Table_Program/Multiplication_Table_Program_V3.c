@@ -11,7 +11,7 @@
 
 void welcomeMassageFun();
 int getNumberFun(int number);
-int multiplicationTableFun(int number);
+void multiplicationTableFun(int number, int multiplication);
 
 int main()
 {
@@ -19,7 +19,9 @@ int main()
 
     int number = 0;
     number = getNumberFun(number);
-    
+
+    int multiplication = 0;
+    multiplicationTableFun(number, multiplication);
 
     return 0;
 }
@@ -41,7 +43,12 @@ int getNumberFun(int number)
 }
 
 // Multiplication Table / Function.
-int multiplicationTableFun(int number)
+void multiplicationTableFun(int number, int multiplication)
 {
-    
+    for (int i = 1; i <= 10; i++)
+    {
+        multiplication = number * i;
+        printf("%d * %d = %d\n", i, number, multiplication);
+    }
+    printf("\n\n");
 }
