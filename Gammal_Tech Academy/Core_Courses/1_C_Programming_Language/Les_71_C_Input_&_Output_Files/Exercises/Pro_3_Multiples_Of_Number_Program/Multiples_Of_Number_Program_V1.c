@@ -59,7 +59,7 @@ int creatFile1ForWriteFun(int number, FILE *file1ForWrite)
     fclose(file1ForWrite);
 }
 
-// Read from file for write / function.
+// Read from file 1 for write / function.
 int readFromFile1ForWriteFun(int numberInFile1, FILE *file1ForWrite)
 {
     file1ForWrite = fopen("file_1_for_write_V1.txt", "r");
