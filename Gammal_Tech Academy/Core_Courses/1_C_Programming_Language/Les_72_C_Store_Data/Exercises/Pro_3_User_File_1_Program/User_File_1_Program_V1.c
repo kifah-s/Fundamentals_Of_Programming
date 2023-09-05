@@ -1,6 +1,6 @@
 
 
-/* >>> User File Program ( Version 1 ) <<< */
+/* >>> User File 1 Program ( Version 1 ) <<< */
 
 /* >>> A program that creates a new file and asks the user to enter the name and number of the phone and record it inside the file and everything that works run displays the existing in the file on the screen and is available to the user to enter new names and telephone numbers and be recorded inside the file. <<< */
 
@@ -27,14 +27,14 @@ int main()
 // Welcome massage / Function.
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in User File Program ( Version 1 ) ..\n\n");
+    printf("\n\nYou welcome in User File 1 Program ( Version 1 ) ..\n\n");
 }
 
 // user file / Function.
 int userFileFun(FILE *userFile, char name[50], char number[25], char x)
 {
     printf("Data in file ...\n");
-    userFile = fopen("user_file.txt", "a+");
+    userFile = fopen("user_file_1.txt", "a+");
 
     while (fscanf(userFile, "%c", &x) != EOF)
     {
