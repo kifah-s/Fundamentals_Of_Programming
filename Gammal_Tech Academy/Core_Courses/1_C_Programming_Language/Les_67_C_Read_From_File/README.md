@@ -7,10 +7,10 @@ To read from a file, you need to open the file using the fopen() function with t
 Here's a simple example that illustrates how to read from a file in the C programming language:
 
 ```c
-
 #include <stdio.h>
 
-int main() {
+int main()
+{
     FILE *filePointer; // File pointer
     char content[100]; // Array to store read data
 
@@ -32,7 +32,6 @@ int main() {
 
     return 0;
 }
-
 ```
 
 In this example, a file named "example.txt" is opened for reading using the "r" (Read) mode. Then, the fgets() function is used to read a line from the file and store it in the content array. Finally, the file is closed using fclose().

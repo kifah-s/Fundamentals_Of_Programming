@@ -7,10 +7,10 @@ This pattern is particularly useful for reading text strings that contain spaces
 Here's a simple example that demonstrates how to use this format specifier with the scanf() function:
 
 ```c
-
 #include <stdio.h>
 
-int main() {
+int main()
+{
     char myString[100]; // Array to store the read string
 
     printf("Please enter a string: ");
@@ -20,8 +20,6 @@ int main() {
 
     return 0;
 }
-
-
 ```
 
 In this example, the "%[^\n]" pattern reads the sequence of characters from the input until the "\n" character is encountered, effectively reading the entire line including spaces. The space before the "%[^\n]" pattern is used to discard any leading whitespace characters or extra white spaces that might be present.

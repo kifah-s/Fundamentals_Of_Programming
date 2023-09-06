@@ -7,10 +7,10 @@ To write to a file, you need to open the file using the fopen() function with th
 Here's a simple example that illustrates how to write to a file in the C programming language:
 
 ```c
-
 #include <stdio.h>
 
-int main() {
+int main()
+{
     FILE *filePointer; // File pointer
 
     // Open the file for writing, if not found, it will be created
@@ -32,7 +32,6 @@ int main() {
 
     return 0;
 }
-
 ```
 
 In this example, a file named "example.txt" is opened for writing using the "w" (Write) mode. Then, the fprintf() function is used to write data to the file. Finally, the file is closed using fclose().
