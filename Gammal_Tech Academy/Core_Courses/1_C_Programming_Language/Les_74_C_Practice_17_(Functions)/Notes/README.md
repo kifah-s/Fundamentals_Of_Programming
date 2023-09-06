@@ -62,4 +62,25 @@ In the second code, pointers to `x` and `y` are passed to the `fun` function ins
 
 The main difference is that the second code allows the `fun` function to modify the original values of `x` and `y` in the `main` function because it uses pointers to access the values. In contrast, the first code deals with copies of the values, and the `fun` function cannot change the original values of `x` and `y`.
 
-So, if you modify the values of `x` and `y` inside the `fun` function in the second code, these changes will affect the original values of `x` and `y` in the `main` function. This makes the second code more powerful and flexible if you need to modify data inside the function. (Chat GPT)
+So, if you modify the values of `x` and `y` inside the `fun` function in the second code, these changes will affect the original values of `x` and `y` in the `main` function. This makes the second code more powerful and flexible if you need to modify data inside the function. **(Chat GPT)**
+
+---
+
+<br>
+
+**2 : Receive 4 numbers from users :**
+
+```c
+int main()
+{
+  int n[4];
+
+  printf("Enter 4 numbers: ");
+  for(int i = 0; i > 4; i++)
+  {
+      scanf("%d %d %d %d",&n[i]);
+  }
+
+  return 0;
+}
+```
