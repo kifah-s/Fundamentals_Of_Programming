@@ -13,6 +13,7 @@ int main()
     scanf("%d %d", &n, &x);
 
     min = max = x;
+
     for (i = 1; i < n; i++)
     {
         scanf("%d", &x);
@@ -21,6 +22,9 @@ int main()
         if (x < min)
             min = x;
     }
+
     printf("\nMax = %d\n", max);
     printf("Min = %d\n\n", min);
+
+    return 0;
 }
