@@ -2,12 +2,12 @@
 
 #### Answer the following questions according to what you learned from the video.
 
-1.
+1 :
 
-2.
+2 :
 
-3.
+3 :
 
-4.
+4 :
 
-5.
+5 :
