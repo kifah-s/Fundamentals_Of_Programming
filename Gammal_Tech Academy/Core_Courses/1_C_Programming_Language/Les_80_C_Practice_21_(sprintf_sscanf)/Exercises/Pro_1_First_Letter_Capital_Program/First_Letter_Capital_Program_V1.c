@@ -40,7 +40,7 @@ char firstLetterCapitalFun(char arr[])
 
     x1[0] -= 32, x2[0] -= 32, x3[0] -= 32;
 
-    printf("Mr. %s\n", x1);
-    printf("Mr. %s\n", x2);
-    printf("Mr. %s\n\n", x3);
+    printf("Mr. %s", x1);
+    printf(" Mr. %s", x2);
+    printf(" Mr. %s\n\n", x3);
 }
