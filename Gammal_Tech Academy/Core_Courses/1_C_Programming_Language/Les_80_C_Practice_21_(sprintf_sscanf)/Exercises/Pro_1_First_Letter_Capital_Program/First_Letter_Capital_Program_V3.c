@@ -11,19 +11,15 @@
 
 // Functions ..
 void welcomeMassageFun();
-char *firstLetterCapitalFun(char arr[], char newArr[]);
-void printNewArrayFun(char newArr[], char word[3][25]);
+char firstLetterCapitalFun(char arr[], char newArr[]);
 
 int main()
 {
     welcomeMassageFun();
 
-    char arr[] = {"kifah, madaal, saloum."}, newArr[100], word[3][25];
+    char arr[] = {"kifah, madaal, saloum."}, newArr[100];
 
     firstLetterCapitalFun(arr, newArr);
-    // printf("\n%s\n\n", newArr); // Check.
-
-    printNewArrayFun(newArr, word);
 
     return 0;
 }
@@ -36,38 +32,15 @@ void welcomeMassageFun()
 }
 
 // First Letter Capital / Function.
-char *firstLetterCapitalFun(char arr[], char newArr[])
+char firstLetterCapitalFun(char arr[], char newArr[])
 {
-    sscanf(arr, "%[^\n]", newArr);
+    char x1[20], x2[20], x3[20];
 
-    if (newArr[0] <= 'z' && newArr[0] >= 'a')
-    {
-        newArr[0] -= 32;
-    }
+    sscanf(arr, "%s %s %s", x1, x2, x3);
 
-    for (int i = 1; newArr[i]; i++)
-    {
-        if (newArr[i] == ' ')
-        {
-            if (newArr[i + 1] <= 'z' && newArr[i + 1] >= 'a')
-            {
-                newArr[i + 1] -= 32;
-            }
-        }
-    }
+    x1[0] -= 32, x2[0] -= 32, x3[0] -= 32;
 
-    return newArr;
-}
+    sprintf(newArr, "Mr. %s Mr. %s Mr. %s", x1, x2, x3);
 
-// Print new array / Function.
-void printNewArrayFun(char newArr[], char word[3][25])
-{
-    sscanf(newArr, "%s %s %s", word[0], word[1], word[2]);
-
-    for (int i = 0; i < 3; i++)
-    {
-        printf("Mr. %s\n", word[i]);
-    }
-
-    printf("\n\n");
+    printf("\n%s\n\n", newArr);
 }
