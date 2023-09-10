@@ -9,6 +9,7 @@ int main()
     int i, n, x, gx = 0, sx = 0, ex = 0, dx = 0;
     printf("\nEnter # of numbers: ");
     scanf("%d", &n);
+
     int z[n];
     for (i = 0; i < n; i++)
     {
@@ -25,6 +26,7 @@ int main()
         dx += z[i] % x == 0 ? 1 : 0;
         ex += z[i] == x ? 1 : 0;
     }
+    
     printf("\n------------\n"
            "%d Greater than %d\n"
            "%d Smaller than %d\n"
