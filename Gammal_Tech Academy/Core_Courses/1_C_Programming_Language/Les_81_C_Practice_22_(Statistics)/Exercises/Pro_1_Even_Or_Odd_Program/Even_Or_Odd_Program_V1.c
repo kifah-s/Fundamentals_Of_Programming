@@ -1,6 +1,6 @@
 
 
-/* >>> Positive Or Negative Program ( Version 1 ) <<< */
+/* >>> Even Or Odd Program ( Version 1 ) <<< */
 
 /* >>> A program that verifies if the entered number is odd or even. <<< */
 
@@ -12,7 +12,7 @@
 // Functions ..
 void welcomeMassageFun();
 int getNumberFun(int x);
-void PosOrNegFun(int x);
+void evenOrOddFun(int x);
 
 int main()
 {
@@ -21,7 +21,7 @@ int main()
     int number = getNumberFun(number);
     // printf("\n%d\n\n", number); // Check.
 
-    PosOrNegFun(number);
+    evenOrOddFun(number);
 
     return 0;
 }
@@ -30,7 +30,7 @@ int main()
 // Welcome massage / Function.
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Positive Or Negative Program ( Version 1 ) ..\n\n");
+    printf("\n\nYou welcome in Even Or Odd Program ( Version 1 ) ..\n\n");
 }
 
 // Get number / Function.
@@ -42,15 +42,15 @@ int getNumberFun(int x)
     return x;
 }
 
-// Positive Or Negative / Function.
-void PosOrNegFun(int x)
+// Even Or Odd / Function.
+void evenOrOddFun(int x)
 {
     if (x % 2 == 0)
     {
-        printf("\n%d is Positive.\n\n", x);
+        printf("\n%d is Even.\n\n", x);
     }
     else if (x % 2 == 1)
     {
-        printf("\n%d is Negative.\n\n", x);
+        printf("\n%d is Odd.\n\n", x);
     }
 }

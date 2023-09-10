@@ -1,8 +1,8 @@
 
 
-/* >>> Positive Or Negative Program ( Version 2 ) <<< */
+/* >>> Positive Or NegativeProgram ( Version 2 ) <<< */
 
-/* >>> A program that verifies if the entered number is odd or even. <<< */
+/* >>> A program that verifies if the entered number is positive or negative. <<< */
 
 #include <stdio.h>
 #include <string.h>
@@ -12,7 +12,7 @@
 // Functions ..
 void welcomeMassageFun();
 int getNumberFun(int x);
-int PosOrNegFun(int x);
+int PositiveOrNegativeFun(int x);
 
 int main()
 {
@@ -21,7 +21,7 @@ int main()
     int number = getNumberFun(number);
     // printf("\n%d\n\n", number); // Check.
 
-    int posOrNeg = PosOrNegFun(number);
+    int posOrNeg = PositiveOrNegativeFun(number);
     if (posOrNeg == 1)
     {
         printf("\n%d is Positive.\n\n", number);
@@ -38,7 +38,7 @@ int main()
 // Welcome massage / Function.
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Positive Or Negative Program ( Version 2 ) ..\n\n");
+    printf("\n\nYou welcome in Positive Or NegativeProgram ( Version 2 ) ..\n\n");
 }
 
 // Get number / Function.
@@ -51,13 +51,13 @@ int getNumberFun(int x)
 }
 
 // Positive Or Negative / Function.
-int PosOrNegFun(int x)
+int PositiveOrNegativeFun(int x)
 {
-    if (x % 2 == 0)
+    if (x > 0)
     {
         return 1;
     }
-    else if (x % 2 == 1)
+    else if (x < 0)
     {
         return 0;
     }
