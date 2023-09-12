@@ -1,1 +1,28 @@
-body{background-color:red;}table.center{margin-left:auto;margin-right:auto;text-align:center;}table -td#w{background-color:white;color:black;}footer{text-align:center;}img{width:100%;height:auto;}iframe{width:100%;}footer{color:white;}a{color:white;}
+body {
+  background-color: red;
+}
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+table -td#w {
+  background-color: white;
+  color: black;
+}
+footer {
+  text-align: center;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+iframe {
+  width: 100%;
+}
+footer {
+  color: white;
+}
+a {
+  color: white;
+}
