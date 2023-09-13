@@ -1,1 +1,1 @@
-# 2_C++\_Programing_language
+### Learn C++ and accelerate your career as a software engineer. Learn through practice and get prepared for in-demand skills and concepts like Data Structures and Algorithms.
