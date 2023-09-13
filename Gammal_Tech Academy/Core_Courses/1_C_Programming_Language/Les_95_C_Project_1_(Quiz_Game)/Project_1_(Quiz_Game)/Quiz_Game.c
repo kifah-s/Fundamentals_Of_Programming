@@ -1,6 +1,6 @@
 
 
-/* >>> Project ( Quiz Game ) <<< */
+/* >>> Project 1 ( Quiz Game ) <<< */
 
 #include <stdio.h>
 #include <string.h>
@@ -39,7 +39,7 @@ int main()
 // Welcome massage / Function.
 void welcomeMassageFun()
 {
-    printf("\n\nYou welcome in Project ( Quiz Game ) ..\n\n");
+    printf("\n\nYou welcome in Project 1 ( Quiz Game ) ..\n\n");
 }
 
 // Start or end play / Function.
