@@ -16,6 +16,7 @@ void containerAddSearchUpdateDeleteFun(FILE *contacts, FILE *temporaryFile, char
 void addContactFun(FILE *contacts);
 void searchContactsFun(FILE *contacts, char nameForSearch[50]);
 void updateContactsFun(FILE *contacts, FILE *temporaryFile, char nameForSearch[50]);
+void deleteContactsFun(FILE *contacts, FILE *temporaryFile, char nameForSearch[50]);
 
 int main()
 {
@@ -108,6 +109,8 @@ void containerAddSearchUpdateDeleteFun(FILE *contacts, FILE *temporaryFile, char
     }
     else if (select == 4) // Delete contacts.
     {
+        deleteContactsFun(contacts, temporaryFile, nameForSearch);
+        readAllContactsFun(contacts);
     }
     else // Just View
     {
@@ -163,7 +166,6 @@ void updateContactsFun(FILE *contacts, FILE *temporaryFile, char nameForSearch[5
     searchContactsFun(contacts, nameForSearch);
 
     char name[50], number[50], updateName[50], updateNumber[50];
-    int foundCounter = 0;
 
     printf("\nPlease enter the modifications you want to make on name and number: ");
     scanf("%s %s", updateName, updateNumber);
@@ -186,9 +188,35 @@ void updateContactsFun(FILE *contacts, FILE *temporaryFile, char nameForSearch[5
     fclose(temporaryFile);
 
     remove("contacts.txt");
-
     rename("temporaryFile.txt", "contacts.txt");
+}
 
+// Delete contacts / Function.
+void deleteContactsFun(FILE *contacts, FILE *temporaryFile, char nameForSearch[50])
+{
+    char name[50], number[50];
+
+    printf("\nPlease enter the name you want to delete: ");
+    scanf("%s", nameForSearch);
+
+    contacts = fopen("contacts.txt", "r");
+    temporaryFile = fopen("temporaryFile.txt", "w");
+    for (; fscanf(contacts, "%s %*c %s", name, number) != EOF;)
+    {
+        if (strcmp(nameForSearch, name) == 0)
+        {
+            continue;
+        }
+        else
+        {
+            fprintf(temporaryFile, "%s : %s\n", name, number);
+        }
+    }
+    fclose(contacts);
+    fclose(temporaryFile);
+
+    remove("contacts.txt");
+    rename("temporaryFile.txt", "contacts.txt");
 
     printf("\n");
 }
