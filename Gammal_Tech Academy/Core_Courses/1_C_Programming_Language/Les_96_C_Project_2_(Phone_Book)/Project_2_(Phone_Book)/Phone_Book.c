@@ -10,24 +10,24 @@
 // Functions ..
 void welcomeMassageFun();
 void titleFun();
-void contactsCounterFun(FILE *contacts, char name[50], char number[50], int contactsCounter);
-void readAllContactsFun(FILE *contacts, char c);
-void containerAddSearchDeleteFun(FILE *contacts, char name[50], char c, char number[50]);
-void addContactFun(FILE *contacts, char name[50], char number[50]);
-void searchContactsFun(FILE *contacts, char name[50], char number[50]);
+void contactsCounterFun(FILE *contacts);
+void readAllContactsFun(FILE *contacts);
+void containerAddSearchUpdateDeleteFun(FILE *contacts, FILE *temporaryFile, char nameForSearch[50]);
+void addContactFun(FILE *contacts);
+void searchContactsFun(FILE *contacts, char nameForSearch[50]);
+void updateContactsFun(FILE *contacts, FILE *temporaryFile, char nameForSearch[50]);
 
 int main()
 {
     welcomeMassageFun();
 
-    FILE *contacts;
-    char name[50], number[50], c;
-    int contactsCounter = 0;
+    FILE *contacts, *temporaryFile;
+    char nameForSearch[50];
 
     titleFun();
-    contactsCounterFun(contacts, name, number, contactsCounter);
-    readAllContactsFun(contacts, c);
-    containerAddSearchDeleteFun(contacts, name, c, number);
+    contactsCounterFun(contacts);
+    readAllContactsFun(contacts);
+    containerAddSearchUpdateDeleteFun(contacts, temporaryFile, nameForSearch);
 
     return 0;
 }
@@ -46,8 +46,10 @@ void titleFun()
 }
 
 // Contacts counter / Function.
-void contactsCounterFun(FILE *contacts, char name[50], char number[50], int contactsCounter)
+void contactsCounterFun(FILE *contacts)
 {
+    char name[50], number[50];
+    int contactsCounter = 0;
     contacts = fopen("contacts.txt", "r");
     for (; fscanf(contacts, "%s %*c %s", name, number) != EOF;)
     {
@@ -60,14 +62,15 @@ void contactsCounterFun(FILE *contacts, char name[50], char number[50], int cont
 }
 
 // Read all contacts from file / Function.
-void readAllContactsFun(FILE *contacts, char c)
+void readAllContactsFun(FILE *contacts)
 {
+    char c;
     contacts = fopen("contacts.txt", "r");
     for (; fscanf(contacts, "%c", &c) != EOF;)
     {
         printf("%c", c);
     }
-    printf("\n\n");
+    printf("\n");
     fclose(contacts);
 
     /* contacts = fopen("contacts.txt", "r");
@@ -79,36 +82,42 @@ void readAllContactsFun(FILE *contacts, char c)
     fclose(contacts); */
 }
 
-// Counter for Add, search, and Delete / Function.
-void containerAddSearchDeleteFun(FILE *contacts, char name[50], char c, char number[50])
+// Counter for Add, search, Update , and Delete / Function.
+void containerAddSearchUpdateDeleteFun(FILE *contacts, FILE *temporaryFile, char nameForSearch[50])
 {
     int select = 0;
     printf("---------------------------------------------------------------------\n");
-    printf("( 1 / Add ) , ( 2 / Search ) , ( 3 / Delete ) , ( Any Num / just View)\n");
+    printf("( 1 / Add ) , ( 2 / Search ) , ( 3 / Update ) , ( 4 / Delete ) , ( Any Num / Just View)\n");
     printf("---------------------------------------------------------------------\n\n");
     printf("Please select process number you need Implemented: ");
     scanf("%d", &select);
 
-    if (select == 1)
+    if (select == 1) // Add contacts.
     {
-        addContactFun(contacts, name, number);
-        readAllContactsFun(contacts, c);
+        addContactFun(contacts);
+        readAllContactsFun(contacts);
     }
-    else if (select == 2)
+    else if (select == 2) // Search contacts.
     {
-        searchContactsFun(contacts, name, number);
+        searchContactsFun(contacts, nameForSearch);
     }
-    else if (select == 3)
+    else if (select == 3) // Update contacts.
+    {
+        updateContactsFun(contacts, temporaryFile, nameForSearch);
+        readAllContactsFun(contacts);
+    }
+    else if (select == 4) // Delete contacts.
     {
     }
-    else
+    else // Just View
     {
     }
 }
 
 // Add contact / Function.
-void addContactFun(FILE *contacts, char name[50], char number[50])
+void addContactFun(FILE *contacts)
 {
+    char name[50], number[50];
     printf("\nPlease enter name and number ( name - number ) : ");
     scanf("%s %s", name, number);
 
@@ -120,32 +129,66 @@ void addContactFun(FILE *contacts, char name[50], char number[50])
 }
 
 // Search contacts / Function.
-void searchContactsFun(FILE *contacts, char name[50], char number[50])
+void searchContactsFun(FILE *contacts, char nameForSearch[50])
 {
-    char foundName[50], foundNumber[50];
-    int foundCounter = 0;
+    char name[50], number[50];
+    int counter = 0;
     printf("\nPlease enter name: ");
-    scanf("%s", name);
+    scanf("%s", nameForSearch);
 
     contacts = fopen("contacts.txt", "r");
 
-    for (; fscanf(contacts, "%s %*c %s", foundName, foundNumber) != EOF;)
+    for (; fscanf(contacts, "%s %*c %s", name, number) != EOF;)
     {
-        if (strcmp(name, foundName) == 0)
+        if (strcmp(nameForSearch, name) == 0)
         {
             printf("\nFound: %s\n", name);
             printf("----------------------\n");
-            printf("%s : %s\n", foundName, foundNumber);
+            printf("%s : %s\n", name, number);
             printf("----------------------\n");
+            counter++;
             break;
         }
     }
-    if (foundCounter == 0)
+    if (counter == 0)
     {
         printf("\nNot Found: %s\n\n", name);
     }
-
     fclose(contacts);
+}
+
+// Update contacts / Function.
+void updateContactsFun(FILE *contacts, FILE *temporaryFile, char nameForSearch[50])
+{
+    searchContactsFun(contacts, nameForSearch);
+
+    char name[50], number[50], updateName[50], updateNumber[50];
+    int foundCounter = 0;
+
+    printf("\nPlease enter the modifications you want to make on name and number: ");
+    scanf("%s %s", updateName, updateNumber);
+
+    contacts = fopen("contacts.txt", "r");
+    temporaryFile = fopen("temporaryFile.txt", "w");
+    for (; fscanf(contacts, "%s %*c %s", name, number) != EOF;)
+    {
+        if (strcmp(nameForSearch, name) == 0)
+        {
+            continue;
+        }
+        else
+        {
+            fprintf(temporaryFile, "%s : %s\n", name, number);
+        }
+    }
+    fprintf(temporaryFile, "%s : %s\n", updateName, updateNumber);
+    fclose(contacts);
+    fclose(temporaryFile);
+
+    remove("contacts.txt");
+
+    rename("temporaryFile.txt", "contacts.txt");
+
 
     printf("\n");
 }
