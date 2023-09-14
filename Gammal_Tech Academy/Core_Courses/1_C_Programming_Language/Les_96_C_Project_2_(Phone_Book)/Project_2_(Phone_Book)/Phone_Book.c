@@ -65,6 +65,7 @@ void contactsCounterFun(FILE *contacts)
 // Read all contacts from file / Function.
 void readAllContactsFun(FILE *contacts)
 {
+    printf("\n");
     char c;
     contacts = fopen("contacts.txt", "r");
     for (; fscanf(contacts, "%c", &c) != EOF;)
@@ -114,6 +115,7 @@ void containerAddSearchUpdateDeleteFun(FILE *contacts, FILE *temporaryFile, char
     }
     else // Just View
     {
+        readAllContactsFun(contacts);
     }
 }
 
