@@ -7,37 +7,51 @@
 #include <stdbool.h>
 #include <math.h>
 
-// Global Variables ..
-// User Info :
-char name[25];
-char number[25];
-// End Global Variables ..
+// Global Struct.
+// 1 - Products
+struct products
+{
+    char productName[50];
+    int productNumber;
+    int productPrice;
+};
+struct products sugar = {"sugar       ", 1, 15};
+struct products rice = {"rice        ", 2, 25};
+struct products oil = {"oil         ", 3, 40};
+struct products spaghetti = {"spaghetti   ", 4, 20};
+struct products juice = {"juice       ", 5, 10};
+struct products apples = {"apples      ", 6, 15};
+struct products bananas = {"bananas     ", 7, 20};
+struct products strawberries = {"strawberries", 8, 25};
+struct products pineapples = {"pineapples  ", 9, 35};
+struct products mangos = {"mangos      ", 10, 50};
 
-// Global Variables ..
-// Products:
-int sugar = 15;
-int rice = 25;
-int oil = 40;
-int spaghetti = 20;
-int juice = 10;
-// ----------------------
-int apples = 15;
-int bananas = 20;
-int strawberries = 25;
-int pineapples = 35;
-int mangos = 50;
-// End Global Variables ..
+// ------------------------------------------------------------
+// 2 - Billing
+struct billing
+{
+    char userName[50];
+    char userNumber[50];
 
-// Global Variables ..
-int billingNumber = 0;
-double total = 0;
-double discount = 0.95;
-// End Global Variables ..
+    char productName[50][100];
+    int productNumber[100];
+    int productPrice[100];
+
+    double total;
+    double discount;
+} bill;
+// End Global Struct.
+
+// Global Variable.
+int productsCounter;
+// End Global Variable.
 
 // Functions ..
 void welcomeMassageFun();
 void productsViewScreenFun();
 int buyingFun();
+void userInfoFun();
+void billingFun();
 
 // End Functions ..
 
@@ -47,6 +61,8 @@ int main()
 
     productsViewScreenFun();
     buyingFun();
+    userInfoFun();
+    billingFun();
 
     return 0;
 }
@@ -79,7 +95,9 @@ void productsViewScreenFun()
 // Buying / Function.
 int buyingFun()
 {
-    while (true)
+    int i = 0;
+    productsCounter = 0;
+    while (i <= 100)
     {
         int x = 0;
         printf("Please enter product number you need buying OR enter \"0\" for Exit: ");
@@ -88,51 +106,108 @@ int buyingFun()
         switch (x)
         {
         case 0:
-            printf("Total = %lf", total);
             return 0;
             break;
 
         case 1:
-            total += sugar;
+            bill.productNumber[i] = sugar.productNumber;
+            strcpy(bill.productName[i], sugar.productName);
+            bill.productPrice[i] = sugar.productPrice;
             break;
 
         case 2:
-            total += rice;
+            bill.productNumber[i] = rice.productNumber;
+            strcpy(bill.productName[i], rice.productName);
+            bill.productPrice[i] = rice.productPrice;
             break;
 
         case 3:
-            total += oil;
+            bill.productNumber[i] = oil.productNumber;
+            strcpy(bill.productName[i], oil.productName);
+            bill.productPrice[i] = oil.productPrice;
             break;
 
         case 4:
-            total += spaghetti;
+            bill.productNumber[i] = spaghetti.productNumber;
+            strcpy(bill.productName[i], spaghetti.productName);
+            bill.productPrice[i] = spaghetti.productPrice;
             break;
 
         case 5:
-            total += juice;
+            bill.productNumber[i] = juice.productNumber;
+            strcpy(bill.productName[i], juice.productName);
+            bill.productPrice[i] = juice.productPrice;
             break;
 
         case 6:
-            total += apples;
+            bill.productNumber[i] = apples.productNumber;
+            strcpy(bill.productName[i], apples.productName);
+            bill.productPrice[i] = apples.productPrice;
             break;
 
         case 7:
-            total += bananas;
+            bill.productNumber[i] = bananas.productNumber;
+            strcpy(bill.productName[i], bananas.productName);
+            bill.productPrice[i] = bananas.productPrice;
             break;
 
         case 8:
-            total += strawberries;
+            bill.productNumber[i] = strawberries.productNumber;
+            strcpy(bill.productName[i], strawberries.productName);
+            bill.productPrice[i] = strawberries.productPrice;
             break;
 
         case 9:
-            total += pineapples;
+            bill.productNumber[i] = pineapples.productNumber;
+            strcpy(bill.productName[i], pineapples.productName);
+            bill.productPrice[i] = pineapples.productPrice;
             break;
 
         case 10:
-            total += mangos;
+            bill.productNumber[i] = mangos.productNumber;
+            strcpy(bill.productName[i], mangos.productName);
+            bill.productPrice[i] = mangos.productPrice;
             break;
         }
+        productsCounter++;
+        i++;
     }
+}
+
+// User info / Function.
+void userInfoFun()
+{
+    printf("-----------------------\n");
+    printf("Please enter your name: ");
+    scanf("%s", bill.userName);
+    printf("-----------------------\n");
+    printf("Please enter your number: ");
+    scanf("%s", bill.userNumber);
+    printf("-----------------------\n\n");
+}
+
+// Billing / Function.
+void billingFun()
+{
+    int total = 0;
+    printf("********************* Billing *********************\n");
+    printf("User-name                            User-number\n");
+    printf("%s                                   %s\n", bill.userName, bill.userNumber);
+    printf("---------------------------------------------------\n");
+    printf("Pro-name         Pro-number               Pro-price\n");
+
+
+    for (int i = 0; i < productsCounter; i++)
+    {
+        printf("%s          %d                          %d\n", bill.productName[i], bill.productNumber[i], bill.productPrice[i]);
+        total += bill.productPrice[i];
+    }
+
+    
+    printf("---------------------------------------------------\n");
+    printf("Total                 =                         %d$\n", total);
+    printf("---------------------------------------------------\n");
+    printf("\n\n");
 }
 
 // End Functions ..
