@@ -10,4 +10,6 @@ using namespace std;
 int main()
 {
     cout << "Hello Gammal Tech" << endl;
+
+    return 0;
 }

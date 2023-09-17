@@ -11,4 +11,6 @@ int main()
 {
     cout << "Hello ";
     printf("Gammal Tech \n");
+
+    return 0;
 }
