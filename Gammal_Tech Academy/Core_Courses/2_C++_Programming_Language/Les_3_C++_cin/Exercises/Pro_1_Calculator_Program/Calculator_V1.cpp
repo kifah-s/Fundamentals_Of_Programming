@@ -16,6 +16,9 @@ void welcomeMassageFun();
 int getFirstNumFun(int x);
 char getMathematicalProcessFun(char x);
 int getSecondNumFun(int x);
+int expectedSolutionFromUserFun(int x);
+int solutionFun(int firstNumber, char k, int secondNumber, int theSolution);
+void answerCorrectOrNotCorrectFun(int expectedSolutionFromUser, int theSolution);
 
 // End Function.
 
@@ -23,17 +26,11 @@ int main()
 {
     welcomeMassageFun();
 
-    int firstNumber = 0, secondNumber = 0;
+    int firstNumber = 0, secondNumber = 0, theSolution = 0, expectedSolutionFromUser = 0;
     char k = 'a';
 
-    firstNumber = getFirstNumFun(firstNumber);
-    k = getMathematicalProcessFun(k);
-    secondNumber = getSecondNumFun(secondNumber);
-    /* cout << endl
-         << "first num: " << firstNumber << endl
-         << "Mathematical Process: " << k << endl
-         << "Second num: " << secondNumber << endl
-         << endl; // Check. */
+    theSolution = solutionFun(firstNumber, k, secondNumber, theSolution);
+    answerCorrectOrNotCorrectFun(expectedSolutionFromUser, theSolution);
 
     return 0;
 }
@@ -71,11 +68,64 @@ int getSecondNumFun(int x)
 {
     cout << "Please enter second number: ";
     cin >> x;
+    cout << endl;
 
     return x;
 }
 
+// Get expected solution from user // Function.
+int expectedSolutionFromUserFun(int x)
+{
+    cout << "Please enter the answer you expect: ";
+    cin >> x;
+    cout << endl;
 
+    return x;
+}
 
+// Solution / Function.
+int solutionFun(int firstNumber, char k, int secondNumber, int theSolution)
+{
+    theSolution = 0;
 
+    firstNumber = getFirstNumFun(firstNumber);
+    k = getMathematicalProcessFun(k);
+    secondNumber = getSecondNumFun(secondNumber);
+
+    if (k == '*')
+    {
+        theSolution = firstNumber * secondNumber;
+    }
+    if (k == '/')
+    {
+        theSolution = firstNumber / secondNumber;
+    }
+    if (k == '+')
+    {
+        theSolution = firstNumber + secondNumber;
+    }
+    if (k == '-')
+    {
+        theSolution = firstNumber - secondNumber;
+    }
+
+    return theSolution;
+}
+
+// Answer correct Or not correct / Function.
+void answerCorrectOrNotCorrectFun(int expectedSolutionFromUser, int theSolution)
+{
+    expectedSolutionFromUser = expectedSolutionFromUserFun(expectedSolutionFromUser);
+
+    if (expectedSolutionFromUser == theSolution)
+    {
+        cout << "Your answer correct, you are a genius" << endl
+             << endl;
+    }
+    else
+    {
+        cout << "Your answer not correct, good Luck Next Time" << endl
+             << endl;
+    }
+}
 // End Function.
