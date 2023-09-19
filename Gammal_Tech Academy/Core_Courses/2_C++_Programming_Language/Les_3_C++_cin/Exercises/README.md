@@ -8,4 +8,4 @@
 
 4 : Write a program that inputs a sentence and outputs the number of words in the sentence using 'cin'.
 
-5 : Write a program that inputs three numbers from the user and outputs the largest of the three numbers.
+5 : Write a program that inputs teen numbers from the user and outputs the largest of the three numbers.
