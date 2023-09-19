@@ -4,7 +4,7 @@
 
 2 : Write a program that inputs an integer n and outputs the sum of the first n positive integers.
 
-3 : Write a program that inputs a positive integer n and outputs the multiplication table for the numbers from 1 to n.
+3 : Write a program that inputs a positive integer n and outputs the multiplication table for the number from 1 to n.
 
 4 : You are given a program that outputs all the numbers from 0 to 20. Change the code to make it output only numbers that are multiples of 3.
 

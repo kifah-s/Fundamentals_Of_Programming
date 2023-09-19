@@ -1,8 +1,8 @@
 
 
-//* >>> Sum Numbers From 1 To N Program ( Version 1 ) <<< */
+//* >>> Multiplication Table Program ( Version 1 ) <<< */
 
-//* >>> Write a program that inputs an integer n and outputs the sum of the first n positive integers. <<< */
+//* >>> Write a program that inputs a positive integer n and outputs the multiplication table for the number from 1 to n. <<< */
 
 #include <iostream>
 #include <string>
@@ -15,7 +15,7 @@ using namespace std;
 // ... Functions ...
 void welcomeMassageFun();
 int numFromUserFun(int x);
-void sumNumFun(int x, int sum);
+void MulTabFun(int x, int mult);
 // ... End Functions ...
 
 int main()
@@ -23,12 +23,12 @@ int main()
     welcomeMassageFun();
 
     // ... Variables ...
-    int number = 0, sumNumbers = 0;
+    int number = 0, multiplication = 0;
     // ... End Variables ...
 
     // ... Functions ...
     number = numFromUserFun(number);
-    sumNumFun(number, sumNumbers);
+    MulTabFun(number, multiplication);
     // ... End Functions ...
 
     return 0;
@@ -40,7 +40,7 @@ void welcomeMassageFun()
 {
     cout << endl
          << endl
-         << "You welcome in Sum Numbers From 1 To N Program ( Version 1 ) .." << endl
+         << "You welcome in Multiplication Table Program ( Version 1 ) .." << endl
          << endl;
 }
 
@@ -53,16 +53,16 @@ int numFromUserFun(int x)
     return x;
 }
 
-// Sum numbers from 1 to user input / Function.
-void sumNumFun(int x, int sum)
+// Multiplication Table / Function.
+void MulTabFun(int x, int mult)
 {
-    sum = 0;
-    for (int i = 0; i <= x; i++)
+    mult = 0;
+    for (int i = 1; i <= x; i++)
     {
-        sum += i;
+        mult = i * 5;
+        cout << i << " * " << x << " = " << mult << endl;
     }
     cout << endl
-         << "Sum numbers from 1 to " << x << " = " << sum << endl
          << endl
          << endl;
 }
