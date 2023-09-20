@@ -1,6 +1,7 @@
 # Notes ..
 
-**N_1 :** The "vector" and "array" are two data structures for storing data in the C++ programming language, but they have some key differences:
+**N_1 :**  
+The "vector" and "array" are two data structures for storing data in the C++ programming language, but they have some key differences:
 
 1. **Dynamic Size vs. Fixed Size**:
 
@@ -32,7 +33,8 @@ Choose between a vector and an array based on your project's needs and requireme
 
 <br>
 
-**N_2 :** The `accumulate()` function in C++ is a function that is used to calculate the sum of values in a given range.
+**N_2 :**  
+The `accumulate()` function in C++ is a function that is used to calculate the sum of values in a given range.
 
 This function takes three variables as arguments:
 

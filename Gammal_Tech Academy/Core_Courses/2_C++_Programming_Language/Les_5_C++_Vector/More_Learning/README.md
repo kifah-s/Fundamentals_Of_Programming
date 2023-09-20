@@ -1,6 +1,7 @@
 # More Learning ..
 
-**1 :** "In C++, a "vector" is a data type used to store a collection of elements dynamically. The "vector" is part of the Standard Template Library (STL) in C++, which provides a set of powerful data structures and tools to simplify programming.
+**1 :**  
+"In C++, a "vector" is a data type used to store a collection of elements dynamically. The "vector" is part of the Standard Template Library (STL) in C++, which provides a set of powerful data structures and tools to simplify programming.
 
 Key features of a "vector" in C++ include:
 
@@ -37,15 +38,15 @@ int main()
     return 0;
 }
 ```
+
 This example uses a "vector" to store and manage a collection of integers and then prints them." **(ChatGPT)**
 
 ---
 
 <br>
 
-**2 :** "Certainly! Here's the translation of the previous answer into English:
-
-There are several useful functions and methods that can be used with the concept of a `vector` in C++. Here are some important ones:
+**2 :**  
+"There are several useful functions and methods that can be used with the concept of a `vector` in C++. Here are some important ones:
 
 1. `push_back()`: Used to add a new element to the end of the `vector`.
 
@@ -74,3 +75,40 @@ There are several useful functions and methods that can be used with the concept
 13. `begin()` and `end()`: Used for controlling loops and iterating through `vector` elements.
 
 These are just some examples of the functions that can be used with a `vector` in C++. The functions you need depend on your project's requirements and the operations you want to perform with the data." **(ChatGPT)**
+
+---
+
+<br>
+
+**3 :**  
+"The expression `for (int number : numbers)` is a shorthand way to create a `for` loop that is used to iterate over each element in a vector.
+
+This expression creates a variable called `number` that refers to each element in the vector. `number` changes to the next element each time the loop iterates.
+
+Here is an example of how to use the `range-for` expression to print the elements of a vector:
+
+```c++
+#include <iostream>
+#include <vector>
+
+int main()
+{
+  // Create a vector of integers
+  std::vector<int> numbers = {1, 2, 3, 4, 5};
+
+  // Print the vector using a range-for loop
+  for (int number : numbers) {
+    std::cout << number << " ";
+  }
+
+  return 0;
+}
+```
+
+This code will print the following output:
+
+```
+1 2 3 4 5
+```
+
+The `range-for` expression is a more concise way to write this code. It is also more efficient, as it does not require the creation of an extra variable." **(ChatGPT)**
