@@ -12,7 +12,7 @@ Dina
 
 There must be two or more people participating in the challenge. The score for each person is recorded according to the answers. Every time a person is chosen to answer a question that has a good quality, his score increases by 1. And if the person was chosen to answer a question he was It has a bad characteristic, the score is reduced by 1.
 
-What is required is to write a program that asks users to enter how many participants are in the challenge... and then starts the game, records the score, and displays the winner at the end. <<< */
+required is to write a program that asks users to enter how many participants are in the challenge... and then starts the game, records the score, and displays the winner at the end. <<< */
 
 #include <iostream>
 #include <string>
