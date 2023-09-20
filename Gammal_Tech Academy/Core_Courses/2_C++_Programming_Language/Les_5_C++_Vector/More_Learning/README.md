@@ -1,6 +1,6 @@
 # More Learning ..
 
-1 : "In C++, a "vector" is a data type used to store a collection of elements dynamically. The "vector" is part of the Standard Template Library (STL) in C++, which provides a set of powerful data structures and tools to simplify programming.
+**1 :** "In C++, a "vector" is a data type used to store a collection of elements dynamically. The "vector" is part of the Standard Template Library (STL) in C++, which provides a set of powerful data structures and tools to simplify programming.
 
 Key features of a "vector" in C++ include:
 
@@ -43,7 +43,7 @@ This example uses a "vector" to store and manage a collection of integers and th
 
 <br>
 
-2 : "Certainly! Here's the translation of the previous answer into English:
+**2 :** "Certainly! Here's the translation of the previous answer into English:
 
 There are several useful functions and methods that can be used with the concept of a `vector` in C++. Here are some important ones:
 
