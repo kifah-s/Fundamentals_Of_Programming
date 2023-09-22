@@ -21,7 +21,8 @@ int main()
     mySet.insert(2); // Note that duplicate values cannot be added
 
     // Print the set
-    for (const int& num : mySet) {
+    for (const int& num : mySet)
+    {
         std::cout << num << " ";
     }
 
@@ -47,7 +48,8 @@ Here's an example of how to use an iterator with the `set` data structure:
 #include <iostream>
 #include <set>
 
-int main() {
+int main()
+{
     std::set<int> mySet;
     
     mySet.insert(5);
@@ -56,7 +58,8 @@ int main() {
 
     // Using an iterator to access and print elements
     std::set<int>::iterator it;
-    for (it = mySet.begin(); it != mySet.end(); ++it) {
+    for (it = mySet.begin(); it != mySet.end(); it++)
+    {
         std::cout << *it << " ";
     }
 
