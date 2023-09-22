@@ -75,4 +75,58 @@ The main benefit of using an iterator with the `set` data structure is the abili
 
 <br>
 
-**INFO_3 : ".."**
+**INFO_3 : "`for (int element : x) .. VS .. for (it = x.begin(); it != x.end(); ++it)`.."**
+
+"The main difference between printing the elements of a set using the two methods is how you access and iterate through the elements:
+
+1. The first method:
+
+   ```cpp
+   for (int element : x)
+   {
+       cout << element << " ";
+   }
+   ```
+
+   In this method, a range-based `for` loop is used to iterate through the elements of the set. The iteration is controlled automatically, and each element's value is accessed directly without the need for an iterator. This makes the code simpler and easier to read.
+
+2. The second method:
+   ```cpp
+   set<int>::iterator it;
+   for (it = x.begin(); it != x.end(); ++it)
+   {
+       std::cout << *it << " ";
+   }
+   ```
+   This method uses an iterator to control the iteration through the set's elements. Each element is accessed through `*it`, where the iterator `it` is initialized with `x.begin()` and moved to the next element using `++it`. This provides more control if you need to perform complex operations during iteration.
+
+In summary, the main difference is in the level of control and complexity. The first method is simpler and easier to read, while the second method provides more flexibility for performing complex operations on the elements." **(ChatGPT)**
+
+---
+
+<br>
+
+**INFO_3 : "`count` function.."**
+
+"The `count` function in the C++ programming language is used to determine the number of occurrences of a specific element within a given collection (such as `std::set`, `std::vector`, or other data structures). Here's a simplified explanation of how to use it:
+
+```cpp
+#include <iostream>
+#include <set>
+
+int main()
+{
+    std::set<int> mySet = {1, 2, 3, 4, 5, 3, 6, 7, 8, 9};
+
+    int countOfThrees = mySet.count(3); // Check how many times the number 3 appears
+
+    std::cout << "Count of the number 3: " << countOfThrees << std::endl;
+
+    return 0;
+}
+```
+
+In this example, we have a set called `mySet` that contains several numbers, and we want to know how many times the number 3 appears within the set. We use the `count(3)` function for this purpose, which returns the count of occurrences of the specified element (3 in this case).
+
+We rely on the value of the `countOfThrees` variable to determine the number of times the number 3 appears and print it." **(ChatGPT)**
+
