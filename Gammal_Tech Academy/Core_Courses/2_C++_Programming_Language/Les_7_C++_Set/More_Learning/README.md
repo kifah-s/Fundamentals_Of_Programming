@@ -51,7 +51,7 @@ Here's an example of how to use an iterator with the `set` data structure:
 int main()
 {
     std::set<int> mySet;
-    
+
     mySet.insert(5);
     mySet.insert(2);
     mySet.insert(9);
