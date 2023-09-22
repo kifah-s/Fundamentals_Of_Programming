@@ -76,7 +76,11 @@ set<int> number6Fun(set<int> x)
 void printSetFun(set<int> x)
 {
     cout << "Items in set is: ";
-    for (int element : x)
+    /* for (int element : x)
+    {
+        cout << element << " ";
+    } */
+    for (auto element : x)
     {
         cout << element << " ";
     }
