@@ -22,7 +22,7 @@ int main()
 {
     welcomeMassageFun();
 
-    // Creat Empty Set.
+    // Creat Sets.
     set<int> mySet_1 = {1, 3, 5}, mySet_2 = {2, 4, 6}, newSet;
 
     // Merge mySet_1 and mySet_2 in a new set.

@@ -106,7 +106,7 @@ In summary, the main difference is in the level of control and complexity. The f
 
 <br>
 
-**INFO_3 : "`count` function.."**
+**INFO_4 : "`count` function.."**
 
 "The `count` function in the C++ programming language is used to determine the number of occurrences of a specific element within a given collection (such as `std::set`, `std::vector`, or other data structures). Here's a simplified explanation of how to use it:
 
@@ -130,3 +130,41 @@ In this example, we have a set called `mySet` that contains several numbers, and
 
 We rely on the value of the `countOfThrees` variable to determine the number of times the number 3 appears and print it." **(ChatGPT)**
 
+
+---
+
+<br>
+
+**INFO_5 : "`upper_bound()` function.."**
+
+"The `std::set::upper_bound()` function in C++ is used to search for the first element in a `std::set` that is greater than a specific value. Its purpose is to provide a means of accessing the element that comes after the specified value in the set's order.
+
+Here's how you can use it:
+
+```cpp
+#include <iostream>
+#include <set>
+
+int main()
+{
+    std::set<int> mySet = {1, 2, 3, 4, 5, 6, 7};
+
+    // Search for the first element greater than 3
+    std::set<int>::iterator it = mySet.upper_bound(3);
+
+    if (it != mySet.end())
+    {
+        std::cout << "The element that comes after 3 is: " << *it << std::endl;
+    }
+    else
+    {
+        std::cout << "No element found that comes after 3." << std::endl;
+    }
+
+    return 0;
+}
+```
+
+`std::set::upper_bound()` returns an iterator to the first element in the set that is greater than the specified value (in this case, 3). If no suitable element is found, it returns the `end()` iterator, which indicates the end of the set.
+
+This function is useful in various scenarios where you need to search for elements based on a specific value and access the element that comes after that value."
