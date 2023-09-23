@@ -45,6 +45,19 @@ With `std::string`, you can easily create, modify, and process text strings, inc
 
 <br>
 
-**INFO_2 : ".."**
+**INFO_2 : "`toupper` function.."**
 
-"" **()**
+"The `toupper` function in the C++ programming language is used to convert a character to its uppercase form if the character is in lowercase. This type of function is often used when working with strings to make all characters in the string uppercase.
+
+Here is the general syntax for using the `toupper` function:
+
+```cpp
+#include <cctype>
+
+char myChar = 'a'; // a character in lowercase
+
+// Use the toupper function to convert the character to uppercase
+char upperChar = toupper(myChar);
+```
+
+In this example, if the value of `myChar` represents the lowercase letter "a," the value of `upperChar` will change to the uppercase letter "A." You can use the `toupper` function to easily convert characters in a string." **(ChatGPT)**
