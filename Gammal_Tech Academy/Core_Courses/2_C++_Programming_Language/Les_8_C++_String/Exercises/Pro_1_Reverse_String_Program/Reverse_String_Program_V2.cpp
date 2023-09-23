@@ -46,6 +46,7 @@ void reversStringFun(string x)
     string reversedText = "";
     for (int i = x.length() - 1; i >= 0; i--)
     {
+        // reversedText = reversedText + x[i];
         reversedText += x[i];
     }
 
