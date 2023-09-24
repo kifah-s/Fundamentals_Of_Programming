@@ -15,7 +15,7 @@ using namespace std;
 
 // ... Functions ...
 void welcomeMassageFun();
-void sortCharactersFun(string x);
+void sortCharactersFun(string str);
 // ... End Functions ...
 
 int main()

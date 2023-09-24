@@ -15,7 +15,7 @@ using namespace std;
 
 // ... Functions ...
 void welcomeMassageFun();
-void largestWordFun(string x);
+void largestWordFun(string str);
 // ... End Functions ...
 
 int main()
