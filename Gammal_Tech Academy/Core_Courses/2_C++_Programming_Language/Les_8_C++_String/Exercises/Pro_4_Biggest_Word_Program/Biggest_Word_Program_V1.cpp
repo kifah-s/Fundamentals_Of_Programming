@@ -44,15 +44,17 @@ void welcomeMassageFun()
 // find the largest word  / Function.
 void largestWordFun(string str)
 {
-    string word, largestWord;
+    istringstream stream(str);
+    string word = "", largestWord = "";
 
-    for (int i = 0; i < str.length(); i++)
+    while (stream >> word)
     {
-        istringstream stream(str);
-        stream >> largestWord;
+        if (word.length() > largestWord.length())
+        {
+            largestWord = word;
+        }
     }
-
-    cout << largestWord;
+    cout <<"The largest word is: "<< largestWord;
 
     cout << endl
          << endl
