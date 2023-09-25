@@ -24,9 +24,12 @@ int main()
      welcomeMassageFun();
 
      // ... Variables ...
-     int height = 5;
+     int height = 0;
      string star = "";
      // ... End Variables ...
+
+     cout << "Please enter the height of the triangle: ";
+     cin >> height;
 
      // ... Functions ...
      rightAngledTriangleFun(height, star);
