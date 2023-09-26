@@ -28,15 +28,9 @@ int main()
      int numLines = 0;
      // ... End Variables ...
 
-     cout << "Please enter number of lines you need: ";
-     cin >> numLines;
-
      // ... Functions ...
      numberOfLinesFun(numLines);
      // ... End Functions ...
-
-     cout << endl
-          << endl;
 
      return 0;
 }
@@ -61,14 +55,21 @@ void numberOfLinesFun(int l)
           star = star + "*" ;
           cout << star;
      } */
-     
-     string star = "*";
-     for (int i = 1; i <= l; i++)
+
+     while (true)
      {
+          string star = "*";
+
+          cout << "Please enter number of lines you need: ";
+          cin >> l;
+
+          for (int i = 1; i <= l; i++)
+          {
+               cout << endl;
+               cout << star;
+               star += "*";
+          }
           cout << endl;
-          cout << star;
-          star += "*" ;
      }
-     
 }
 // ... End Functions ...
