@@ -16,7 +16,7 @@ using namespace std;
 
 // ... Functions ...
 void welcomeMassageFun();
-void isoscelesTriangleFun(int n);
+void isoscelesTriangleFun(int h, int numSpa, int numSta);
 // ... End Functions ...
 
 int main()
@@ -24,11 +24,16 @@ int main()
      welcomeMassageFun();
 
      // ... Variables ...
-     int height = 7;
+     int height = 0,
+         numSpaces = height / 2,
+         numStars = 1;
      // ... End Variables ...
 
+     cout << "Enter the height of the triangle: ";
+     cin >> height;
+
      // ... Functions ...
-     isoscelesTriangleFun(height);
+     isoscelesTriangleFun(height, numSpaces, numStars);
      // ... End Functions ...
 
      cout << endl
@@ -48,8 +53,37 @@ void welcomeMassageFun()
 }
 
 // Isosceles triangle triangle / Function.
-void isoscelesTriangleFun(int n)
+void isoscelesTriangleFun(int h, int numSpa, int numSta)
 {
-          
+     if (h % 2 == 0)
+     {
+          h++; // Make the height odd
+     }
+
+     for (int i = 1; i <= h; i++)
+     {
+          for (int j = 1; j <= numSpa; j++)
+          {
+               cout << " ";
+          }
+
+          for (int j = 1; j <= numSta; j++)
+          {
+               cout << "*";
+          }
+
+          cout << endl;
+
+          if (i <= h / 2)
+          {
+               numSpa--;
+               numSta += 2;
+          }
+          else
+          {
+               numSpa++;
+               numSta -= 2;
+          }
+     }
 }
 // ... End Functions ...
