@@ -1,8 +1,8 @@
 
 
-// >>> Isosceles Triangle Program ( Version 2 ) <<< */
+// >>> Inverted Triangle Program ( Version 1 ) <<< */
 
-/* >>> How do you print an isosceles triangle of stars in C++ with an odd number of rows? <<< */
+/* >>> How can you modify your C++ program to print an inverted triangle of stars with a given height? <<< */
 
 #include <iostream>
 #include <string>
@@ -16,7 +16,7 @@ using namespace std;
 
 // ... Functions ...
 void welcomeMassageFun();
-void isoscelesTriangleFun(int h);
+void invertedTriangleFun(int h);
 // ... End Functions ...
 
 int main()
@@ -31,7 +31,7 @@ int main()
      cin >> height;
 
      // ... Functions ...
-     isoscelesTriangleFun(height);
+     invertedTriangleFun(height);
      // ... End Functions ...
 
      cout << endl
@@ -46,21 +46,20 @@ void welcomeMassageFun()
 {
      cout << endl
           << endl
-          << "You welcome in Isosceles Triangle Program ( Version 2 ) .." << endl
+          << "You welcome in Inverted Triangle Program ( Version 1 ) .." << endl
           << endl;
 }
 
-// Isosceles triangle / Function.
-void isoscelesTriangleFun(int h)
+// Inverted triangle / Function.
+void invertedTriangleFun(int h)
 {
-     for (int i = 1; i <= h; i++)
+     for (int i = h; i >= 1; i--)
      {
           for (int j = 1; j <= h - i; j++)
           {
                cout << " ";
           }
-
-          for (int k = 1; k <= 2 * i - 1; k++)
+          for (int j = 1; j <= 2 * i - 1; j++)
           {
                cout << "*";
           }

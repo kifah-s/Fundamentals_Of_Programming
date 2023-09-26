@@ -52,7 +52,7 @@ void welcomeMassageFun()
           << endl;
 }
 
-// Isosceles triangle triangle / Function.
+// Isosceles triangle / Function.
 void isoscelesTriangleFun(int h, int numSpa, int numSta)
 {
      if (h % 2 == 0)

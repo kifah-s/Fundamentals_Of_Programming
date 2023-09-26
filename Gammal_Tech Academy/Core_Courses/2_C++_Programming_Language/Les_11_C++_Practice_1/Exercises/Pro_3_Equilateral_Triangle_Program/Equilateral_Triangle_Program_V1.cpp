@@ -1,8 +1,8 @@
 
 
-// >>> Isosceles Triangle Program ( Version 2 ) <<< */
+// >>> Equilateral Triangle Program ( Version 1 ) <<< */
 
-/* >>> How do you print an isosceles triangle of stars in C++ with an odd number of rows? <<< */
+/* >>> Write a C++ program to print an equilateral triangle of stars with a given side length. <<< */
 
 #include <iostream>
 #include <string>
@@ -16,7 +16,7 @@ using namespace std;
 
 // ... Functions ...
 void welcomeMassageFun();
-void isoscelesTriangleFun(int h);
+void equilateralTriangleFun(int h);
 // ... End Functions ...
 
 int main()
@@ -31,7 +31,7 @@ int main()
      cin >> height;
 
      // ... Functions ...
-     isoscelesTriangleFun(height);
+     equilateralTriangleFun(height);
      // ... End Functions ...
 
      cout << endl
@@ -46,12 +46,12 @@ void welcomeMassageFun()
 {
      cout << endl
           << endl
-          << "You welcome in Isosceles Triangle Program ( Version 2 ) .." << endl
+          << "You welcome in Equilateral Triangle Program ( Version 1 ) .." << endl
           << endl;
 }
 
-// Isosceles triangle / Function.
-void isoscelesTriangleFun(int h)
+// Equilateral triangle / Function.
+void equilateralTriangleFun(int h)
 {
      for (int i = 1; i <= h; i++)
      {
@@ -59,8 +59,7 @@ void isoscelesTriangleFun(int h)
           {
                cout << " ";
           }
-
-          for (int k = 1; k <= 2 * i - 1; k++)
+          for (int j = 1; j <= 2 * i - 1; j++)
           {
                cout << "*";
           }
