@@ -26,18 +26,21 @@ int main()
 {
      welcomeMassageFun();
 
-     // ... Variables ...
-     int numberOfLines = 0;
-     string star = "";
-     // ... End Variables ...
+     while (true)
+     {
+          // ... Variables ...
+          int numberOfLines = 0;
+          string star = "";
+          // ... End Variables ...
+          
+          cout << "Please enter a number of lines: ";
+          cin >> numberOfLines;
 
-     cout << "Please enter a number of lines: ";
-     cin >> numberOfLines;
-
-     // ... Functions ...
-     star = numberOfLinesFun(numberOfLines, star);
-     invertedTriangleFun(star);
-     // ... End Functions ...
+          // ... Functions ...
+          star = numberOfLinesFun(numberOfLines, star);
+          invertedTriangleFun(star);
+          // ... End Functions ...
+     }
 
      cout << endl
           << endl
