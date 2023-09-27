@@ -24,8 +24,7 @@ int main()
      welcomeMassageFun();
 
      // ... Variables ...
-     int maxEle = 0,
-         myArray[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+     int myArray[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, maxEle = myArray[0],
          myArrayLength = sizeof(myArray) / sizeof(myArray[0]);
      // ... End Variables ...
 
