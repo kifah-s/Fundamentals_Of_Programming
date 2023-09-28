@@ -2,7 +2,9 @@
 
 // >>> Number Of Lines 2 Program ( Version 1 ) <<< */
 
-/* >>>  <<< */
+/* >>> A program that asks the person to enter a number and prints a number of lines equal to that number.
+In each line, it prints numbers (starting from the last number that is supposed to be printed) with a frequency equal to the row number (that is, if the user enters the number 3, the program prints in the first line (4 5 6) The second line (2, 3), the third line (1)...
+and so on) and it is repeated on its own without stopping (for those who excelled). <<< */
 
 #include <iostream>
 #include <string>
@@ -75,6 +77,6 @@ string numberOfLinesFun(int n, string num, int c)
 // Print Inverted triangle / Function.
 void invertedTriangleFun(int n, string num, int c)
 {
-     
+     //
 }
 // ... End Functions ...
