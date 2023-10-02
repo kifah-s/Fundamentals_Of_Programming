@@ -1,8 +1,8 @@
 
 
-// >>> Sum First And Second Program ( Version 1 ) <<< */
+// >>> First And Second Elements Program ( Version 2 ) <<< */
 
-/* >>> Create a pair of two integers, and print out Sum the first and second elements. <<< */
+/* >>> Create a pair of two integers, and print out the first and second elements. <<< */
 
 #include <iostream>
 #include <string>
@@ -17,7 +17,6 @@ using namespace std;
 
 // ... Functions ...
 void welcomeMassageFun();
-int sumFirstAndSecondFun(pair<int, int> x, int s);
 // ... End Functions ...
 
 int main()
@@ -25,15 +24,18 @@ int main()
      welcomeMassageFun();
 
      // ... Variables ...
-     pair<int, int> myFirstPair = {5, 5};
-     int sum = 0;
+     pair<int, int> myFirstPair;
      // ... End Variables ...
 
+     myFirstPair.first = 2;
+     myFirstPair.second = 5;
+
      // ... Functions ...
-     sum = sumFirstAndSecondFun(myFirstPair, sum);
      // ... End Functions ...
 
-     cout << "Sum First And Second is: " << sum << endl
+     cout
+         << "First Element is: " << myFirstPair.first << endl;
+     cout << "Second Element is: " << myFirstPair.second << endl
           << endl
           << endl;
 
@@ -46,15 +48,7 @@ void welcomeMassageFun()
 {
      cout << endl
           << endl
-          << "You welcome in Sum First And Second Program ( Version 1 ) .." << endl
+          << "You welcome in First And Second Elements Program ( Version 2 ) .." << endl
           << endl;
-}
-
-// Sum First And Second / Function.
-int sumFirstAndSecondFun(pair<int, int> x, int s)
-{
-     s = x.first + x.second;
-
-     return s;
 }
 // ... End Functions ...

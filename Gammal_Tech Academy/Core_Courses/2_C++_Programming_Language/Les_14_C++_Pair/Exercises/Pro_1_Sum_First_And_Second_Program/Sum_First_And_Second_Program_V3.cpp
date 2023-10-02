@@ -2,7 +2,7 @@
 
 // >>> Sum First And Second Program ( Version 3 ) <<< */
 
-/* >>> Create a pair of two integers, and print out the first and second elements. <<< */
+/* >>> Create a pair of two integers, and print out Sum the first and second elements. <<< */
 
 #include <iostream>
 #include <string>
