@@ -17,6 +17,7 @@ using namespace std;
 
 // ... Functions ...
 void welcomeMassageFun();
+set<pair<int, int>> newSetFirstElementFun(set<pair<int, int>> s, set<pair<int, int>> N_s);
 // ... End Functions ...
 
 int main()
@@ -24,11 +25,18 @@ int main()
      welcomeMassageFun();
 
      // ... Variables ...
-
+     set<pair<int, int>> mySet, myNewSet;
      // ... End Variables ...
 
      // ... Functions ...
+     myNewSet = newSetFirstElementFun(mySet, myNewSet);
      // ... End Functions ...
+
+     for (auto it = myNewSet.begin(); it != myNewSet.end(); it++)
+     {
+
+          cout << "(" << it->first << ", " << it->second << ")" << endl;
+     }
 
      cout << endl
           << endl;
@@ -47,14 +55,27 @@ void welcomeMassageFun()
 }
 
 // returns a new set whose first element is even. / Function.
-void newSetFirstElementFun(set<pair<int, int>> a)
+set<pair<int, int>> newSetFirstElementFun(set<pair<int, int>> s, set<pair<int, int>> N_s)
 {
-     a.insert({1, 2});
-     a.insert({4, 3});
-     a.insert({5, 6});
-     a.insert({8, 7});
-     a.insert({9, 10});
+     s.insert({1, 2});
+     s.insert({4, 3});
+     s.insert({5, 6});
+     s.insert({8, 7});
+     s.insert({9, 10});
 
-     
+     pair<int, int> N_p; // New Pair;
+     for (auto it = s.begin(); it != s.end(); it++)
+     {
+          if (it->first % 2 == 0)
+          {
+               // N_s.insert(it->first, it->second);
+               N_p.first = it->first;
+               N_p.second = it->second;
+
+               N_s.insert(N_p);
+          }
+     }
+
+     return N_s;
 }
 // ... End Functions ...
