@@ -1,6 +1,6 @@
 
 
-/* >>> First Element Program ( Version 1 ) <<< */
+/* >>> First Element Program ( Version 3 ) <<< */
 
 /* >>> Write a function that takes a set of pairs of integers as input, and returns a new set with only the elements whose first element is even. <<< */
 
@@ -17,7 +17,7 @@ using namespace std;
 
 // ... Functions ...
 void welcomeMassageFun();
-set<pair<int, int>> newSetFirstElementFun(set<pair<int, int>> s, set<pair<int, int>> N_s);
+set<pair<int, int>> filter_set(const set<pair<int, int>> &input_set);
 // ... End Functions ...
 
 int main()
@@ -25,16 +25,15 @@ int main()
      welcomeMassageFun();
 
      // ... Variables ...
-     set<pair<int, int>> mySet, myNewSet;
+     set<pair<int, int>> my_set = {{1, 2}, {2, 4}, {3, 6}, {4, 8}};
+     set<pair<int, int>> even_first_set = filter_set(my_set);
      // ... End Variables ...
 
      // ... Functions ...
-     myNewSet = newSetFirstElementFun(mySet, myNewSet);
      // ... End Functions ...
 
-     for (auto it = myNewSet.begin(); it != myNewSet.end(); it++)
+     for (auto it = even_first_set.begin(); it != even_first_set.end(); ++it)
      {
-
           cout << "(" << it->first << ", " << it->second << ")" << endl;
      }
 
@@ -50,33 +49,21 @@ void welcomeMassageFun()
 {
      cout << endl
           << endl
-          << "You welcome in First Element Program ( Version 1 ) .." << endl
+          << "You welcome in First Element Program ( Version 3 ) .." << endl
           << endl;
 }
 
 // returns a new set whose first element is even. / Function.
-set<pair<int, int>> newSetFirstElementFun(set<pair<int, int>> s, set<pair<int, int>> N_s)
+set<pair<int, int>> filter_set(const set<pair<int, int>> &input_set)
 {
-     s.insert({1, 2});
-     s.insert({4, 3});
-     s.insert({5, 6});
-     s.insert({8, 7});
-     s.insert({9, 10});
-
-     // pair<int, int> N_p; // New Pair;
-     for (auto it = s.begin(); it != s.end(); it++)
+     set<pair<int, int>> output_set;
+     for (auto it = input_set.begin(); it != input_set.end(); ++it)
      {
           if (it->first % 2 == 0)
           {
-               // N_p.first = it->first;
-               // N_p.second = it->second;
-
-               // N_s.insert(N_p);
-
-               N_s.insert(*it);
+               output_set.insert(*it);
           }
      }
-
-     return N_s;
+     return output_set;
 }
 // ... End Functions ...

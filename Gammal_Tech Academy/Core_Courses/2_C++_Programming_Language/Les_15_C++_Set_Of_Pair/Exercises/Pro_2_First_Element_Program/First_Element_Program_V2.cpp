@@ -75,16 +75,17 @@ void welcomeMassageFun()
 // returns a new set whose first element is even. / Function.
 set<pair<int, int>> newSetFirstElementFun(set<pair<int, int>> s, set<pair<int, int>> N_s)
 {
-     pair<int, int> N_p; // New Pair;
+     // pair<int, int> N_p; // New Pair;
      for (auto it = s.begin(); it != s.end(); it++)
      {
           if (it->first % 2 == 0)
           {
-               // N_s.insert(it->first, it->second);
-               N_p.first = it->first;
-               N_p.second = it->second;
+               // N_p.first = it->first;
+               // N_p.second = it->second;
 
-               N_s.insert(N_p);
+               // N_s.insert(N_p);
+               
+               N_s.insert(*it);
           }
      }
 
