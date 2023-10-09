@@ -22,18 +22,18 @@ int main()
      // Print welcome massage.
      welcomeMassageFun();
 
-     // Declare set.
+     // Create a set to store integers.
      set<int> mySet;
 
-     // Add elements to set.
+     // Add some integers to the set.
      mySet.insert(1);
      mySet.insert(2);
      mySet.insert(3);
 
-     // Declare variable for storage vector size.
+     // Creat variable for store vector size.
      int lenSet = mySet.size();
 
-     // Print set length.
+     // Print the size of the set.
      cout << "Set length: " << lenSet << endl;
 
      cout << endl
