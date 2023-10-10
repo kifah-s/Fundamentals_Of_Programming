@@ -6,4 +6,4 @@ To encourage reading, create a program that allows a person to write the names o
 
 2 : National ID Program for Citizens..  
 In most countries, each person has a different national number from the other person  
-Required: Write a program that records the name and national number of a number of citizens and prints them arranged according to the national number of each person
+Required: Write a program that records the name and national number of a number of citizens and prints them arranged according to the national number of each person.
