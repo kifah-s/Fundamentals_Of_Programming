@@ -1,6 +1,6 @@
 
 
-/* >>> Reading Program ( Version 2 ) <<< */
+/* >>> Reading Program ( Version 3 ) <<< */
 
 /* >>> A program for reading lovers..
 Many of us know the importance of reading and the extent of the benefits that will accrue to us from reading, but we are busy most of the time due to the large number of distractions.
@@ -29,11 +29,26 @@ int main()
      set<pair<int, string>> book;
 
      // insert some elements to set.
-     book.insert(pair<int, string>(500, "Book 5"));
-     book.insert(pair<int, string>(200, "Book 2"));
-     book.insert(pair<int, string>(400, "Book 4"));
-     book.insert(pair<int, string>(300, "Book 3"));
-     book.insert(pair<int, string>(100, "Book 1"));
+     for (int i = 0; true; i++)
+     {
+          pair<int, string> p;
+
+          cout << "Please enter book name OR (enter exit for exit): ";
+          cin >> p.second;
+          if (p.second == "exit")
+          {
+               break;
+          }
+
+          cout << "Please enter number of pages of the book: ";
+          cin >> p.first;
+
+          book.insert(p);
+
+          cout << endl;
+     }
+
+     cout << endl;
 
      // Print set.
      for (auto k : book)
@@ -53,7 +68,7 @@ void welcomeMassageFun()
 {
      cout << endl
           << endl
-          << "You welcome in Reading Program ( Version 2 ) .." << endl
+          << "You welcome in Reading Program ( Version 3 ) .." << endl
           << endl;
 }
 // ... End Functions ...
