@@ -1,6 +1,6 @@
 
 
-/* >>> Example 1 <<< */
+/* >>> Example 2 <<< */
 
 #include <iostream>
 #include <vector>
@@ -19,9 +19,9 @@ loop:
     cout << "Enter a number: ";
     cin >> z;
 
-    for (int i = 0; i < x.size() && found == 0; i++)
+    for (int i = 0; i < x.size(); i++)
     {
-        for (int j = 0; j < y.size() && found == 0; j++)
+        for (int j = 0; j < y.size(); j++)
         {
             if (x[i] + y[j] == z)
             {
