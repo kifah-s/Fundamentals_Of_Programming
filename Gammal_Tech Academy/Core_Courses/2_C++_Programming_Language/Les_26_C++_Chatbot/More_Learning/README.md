@@ -170,6 +170,63 @@ I hope this is helpful. Let me know if you have any other questions." **(Google 
 
 <br>
 
-**INFO_2 : ""**
+**INFO_2 : "`getline()` command"**
 
-"" **()**
+
+In the C++ programming language, the `getline()` command is a command used to read an entire line of data from a file or from the user through the standard input (stdin).
+
+The `getline()` command takes two parameters:
+
+* A handle to the file or stdin
+* A pointer to a string where the data that was read will be stored
+
+The `getline()` command will read data from the file or from stdin until it reaches the newline character (`\n`). The data that was read will be stored in the specified string.
+
+Here is an example of how to use the `getline()` command to read a line from a file:
+
+```c++
+#include <iostream>
+#include <fstream>
+
+int main()
+{
+  // Open a file for reading only
+  std::fstream file("myfile.txt", std::ios::in);
+
+  // Read a line from the file
+  std::string line;
+  getline(file, line);
+
+  // Print the line that was read
+  std::cout << line << std::endl;
+
+  // Close the file
+  file.close();
+
+  return 0;
+}
+```
+
+This code will open the file `myfile.txt` for reading only. If the file exists, it will be opened and the first line of the file will be read. The line that was read will be stored in the string `line`. The line that was read will be printed to the standard output.
+
+Here is an example of how to use the `getline()` command to read a line from the user:
+
+```c++
+#include <iostream>
+
+int main()
+{
+  // Read a line from the user
+  std::string line;
+  getline(std::cin, line);
+
+  // Print the line that was read
+  std::cout << line << std::endl;
+
+  return 0;
+}
+```
+
+This code will read a line from the user from stdin. The line that was read will be stored in the string `line`. The line that was read will be printed to the standard output.
+
+In simple terms, we can say that the `getline()` command is a command that allows us to read an entire line of data from a source." **(Google Bard)**
