@@ -172,13 +172,12 @@ I hope this is helpful. Let me know if you have any other questions." **(Google 
 
 **INFO_2 : "`getline()` command"**
 
-
 In the C++ programming language, the `getline()` command is a command used to read an entire line of data from a file or from the user through the standard input (stdin).
 
 The `getline()` command takes two parameters:
 
-* A handle to the file or stdin
-* A pointer to a string where the data that was read will be stored
+- A handle to the file or stdin
+- A pointer to a string where the data that was read will be stored
 
 The `getline()` command will read data from the file or from stdin until it reaches the newline character (`\n`). The data that was read will be stored in the specified string.
 
@@ -230,3 +229,55 @@ int main()
 This code will read a line from the user from stdin. The line that was read will be stored in the string `line`. The line that was read will be printed to the standard output.
 
 In simple terms, we can say that the `getline()` command is a command that allows us to read an entire line of data from a source." **(Google Bard)**
+
+---
+
+<br>
+
+**INFO_2 : "`ignore()` function"**
+
+In the C++ programming language, the `ignore()` function is a function used to ignore a certain number of characters from the standard input (stdin).
+
+The `ignore()` function takes two parameters:
+
+- The number of characters to be ignored
+- The delimiter character, which is the character that will be used to stop ignoring characters.
+
+If no delimiter character is specified, the newline character (`\n`) will be used as the delimiter character.
+
+Here is an example of how to use the `ignore()` function to ignore whitespace from stdin:
+
+```c++
+#include <iostream>
+
+int main()
+{
+  // Ignore whitespace
+  std::cin.ignore(std::numeric_limits<std::streamsize>::max(), ' ');
+
+  // Read a line from the user
+  std::string line;
+  std::cin >> line;
+
+  // Print the line that was read
+  std::cout << line << std::endl;
+
+  return 0;
+}
+```
+
+This code will ignore all whitespace from stdin. A line will then be read from the user. The line that was read will be printed to the standard output.
+
+In simple terms, we can say that the `ignore()` function is a function that allows us to ignore a certain number of characters from stdin.
+
+Here are some common uses of the `ignore()` function:
+
+- To ignore whitespace from stdin before reading a line from the user.
+- To ignore the rest of the user's line after reading a certain value.
+- To ignore the error code from stdin.
+
+**Warning:** The `ignore()` function should be used with caution, as it can lead to data loss.
+
+I hope this is helpful. Let me know if you have any other questions.". **(Google Bard)**
+
+---
