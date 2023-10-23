@@ -54,6 +54,47 @@ I hope this explanation is helpful." **(Google Bard)**
 
 <br>
 
-**INFO_2 : ""**
+**INFO_2 : "class"**
 
-"" **()**
+"Hello! I'm doing well, thank you. I hope you're doing well too. Of course, I can explain the concept of a "class" in the C++ programming language in a simplified manner.
+
+A "class" is a fundamental structure in C++ used to create organized and reusable code. You can think of a "class" as a custom data type that holds data and functions (methods) associated with it.
+
+Here's a simple example to illustrate the concept of a "class":
+
+```cpp
+class Car
+{
+public:
+    // Data members (attributes)
+    string make;
+    string model;
+    int year;
+
+    // Member functions (methods)
+    void startEngine()
+    {
+        cout << "The car has started!" << endl;
+    }
+
+    void stopEngine()
+    {
+        cout << "The car has stopped!" << endl;
+    }
+};
+```
+
+In this example, a "class" named "Car" is created, which has properties (data) such as "make," "model," and "year," along with functions (methods) like "startEngine" and "stopEngine" that can be called to perform specific actions.
+
+When you create an instance of this "class," you can easily access its data and use the associated functions. For example:
+
+```cpp
+Car myCar; // Create a new instance of the "Car" class
+myCar.make = "Toyota";
+myCar.model = "Camry";
+myCar.year = 2022;
+
+myCar.startEngine(); // Start the engine
+```
+
+This is a simple concept of a "class" in C++, and it can be used to organize and encapsulate data and functions in your code in a structured manner." **(ChatGPT)**
