@@ -22,16 +22,27 @@ using namespace std;
 // ... Classes ...
 class Shape
 {
-public:
-     Shape(int w, int h) : width(w), height(h)
-     {
-          // المنشئ يعطي قيم العرض والارتفاع عند إنشاء كائن "شكل"
-     }
+protected:
+     float width, height;
 
-     // باقي الكود للفئة "شكل"
-private:
-     int width;
-     int height;
+public:
+     void set_data(float a, float b)
+     {
+          width = a;
+          height = b;
+     }
+};
+
+class Rectangle : public Shape
+{
+public:
+     float area() { return (width * height); }
+};
+
+class Triangle : public Shape
+{
+public:
+     float area() { return (width * height / 2); }
 };
 // ... End Classes ...
 
@@ -50,6 +61,13 @@ int main()
 {
      // Print welcome massage.
      welcomeMassageFun();
+
+     Rectangle rect;
+     Triangle tri;
+     rect.set_data(5, 3);
+     tri.set_data(2, 5);
+     cout << rect.area() << endl;
+     cout << tri.area() << endl;
 
      cout << endl
           << endl;
