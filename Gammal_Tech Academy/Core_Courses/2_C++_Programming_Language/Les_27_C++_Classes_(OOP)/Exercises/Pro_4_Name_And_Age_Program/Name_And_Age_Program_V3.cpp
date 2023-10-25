@@ -1,6 +1,6 @@
 
 
-/* >>> Name And Age Program ( Version 1 ) <<< */
+/* >>> Name And Age Program ( Version 3 ) <<< */
 
 /* >>> Create a class named Person with private attributes name and age,
 and public methods setName(), setAge(), getName(), and getAge().
@@ -29,11 +29,11 @@ private:
 public:
      void setName(string na)
      {
-          this->name = na;
+          name = na;
      }
      void setAge(int ag)
      {
-          this->age = ag;
+          age = ag;
      }
 
      string getName()
@@ -53,7 +53,7 @@ void welcomeMassageFun()
 {
      cout << endl
           << endl
-          << "You welcome in Name And Age Program ( Version 1 ) .." << endl
+          << "You welcome in Name And Age Program ( Version 3 ) .." << endl
           << endl;
 }
 // ... End Functions ...
@@ -67,15 +67,22 @@ int main()
      person p1;
 
      // Create variables.
-     string name = "kifah";
-     int age = 26;
+     string name;
+     int age;
+
+     // Receive value from user.
+     cout << "Please enter your name: ";
+     cin >> name;
+     
+     cout << "Please enter your age: ";
+     cin >> age;
 
      // Pass values to class.
      p1.setName(name);
      p1.setAge(age);
 
      // Print values.
-     cout << "My name is: " << p1.getName() << endl;
+     cout << "\nMy name is: " << p1.getName() << endl;
      cout << "My age is: " << p1.getAge() << endl;
 
      cout << endl
