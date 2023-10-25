@@ -73,4 +73,51 @@ Object-Oriented Programming focuses on organizing programs around objects, enhan
 
 <br>
 
-**INFO_3 : ""**
+**INFO_3 : "Sub Classes - Concept Inheritance"**
+
+**What is the concept of inheritance in object-oriented programming?**
+
+In object-oriented programming, inheritance is a feature that allows you to create a new class (subclass) that inherits all the properties and behaviors of another class (superclass). This means that you don't have to recreate everything from scratch when you want to create a new class.
+
+For example, we can create a class "Car" that inherits all the properties and behaviors of a class "Vehicle". This means that cars have the same properties and behaviors as vehicles, such as the ability to drive, brake, and stop.
+
+```
+class Vehicle
+{
+ public:
+  // Data
+  string color;
+  int speed;
+  string brand;
+
+  // Functions
+  void drive();
+  void brake();
+  void stop();
+};
+
+// Sub Classes - Inheritance
+class Car : public Vehicle
+{
+};
+```
+
+In the above example, the class "Car" inherits all the properties and behaviors of the class "Vehicle". We can then create an object from the class "Car" and use it in the same way that we would use an object from the class "Vehicle".
+
+The concept of inheritance provides several advantages, including:
+
+- **Reusability:** We can reuse the properties and behaviors of an existing class to create a new class.
+- **Abstraction:** We can unify the properties and behaviors of related objects into a single class.
+- **Extension:** We can extend the properties and behaviors of an existing class to create a new class.
+
+Here are some examples of inheritance in object-oriented programming:
+
+- **Animals:** We can create a class "Animal" that is inherited by the classes "Dog", "Cat", and "Horse".
+- **Products:** We can create a class "Product" that is inherited by the classes "Book", "Electronic device", and "Furniture".
+- **Accounts:** We can create a class "Account" that is inherited by the classes "Savings account", "Checking account", and "Investment account".
+
+Inheritance can be a powerful tool that can be used to improve the efficiency and effectiveness of your programs.
+
+I hope this translation is helpful!" **(Goggle Bard)**
+
+---
