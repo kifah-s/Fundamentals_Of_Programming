@@ -98,3 +98,127 @@ myCar.startEngine(); // Start the engine
 ```
 
 This is a simple concept of a "class" in C++, and it can be used to organize and encapsulate data and functions in your code in a structured manner." **(ChatGPT)**
+
+---
+
+<br>
+
+**INFO_3 : "`this` keyword"**
+
+**What is the `this` keyword in C++?**
+
+The `this` keyword is a default function that is automatically called from within a member function of a class. The `this` keyword is used to refer to the current object that the member function is called from.
+
+**Why do we need the `this` keyword?**
+
+We need the `this` keyword to distinguish between the properties and public/private functions within a class. For example, if we have a class called `Person` with a property `name` of type `std::string`, we can access this property through the current object using the `this` keyword:
+
+```c++
+class Person
+{
+ public:
+  std::string name;
+
+  void printName()
+  {
+    // Print the name of the current object
+    std::cout << this->name << std::endl;
+  }
+};
+
+int main()
+{
+  // Create a Person object
+  Person person;
+
+  // Set the name of the person
+  person.name = "Bard";
+
+  // Print the name of the person
+  person.printName();
+
+  return 0;
+}
+```
+
+This code will print the following output:
+
+```
+Bard
+```
+
+**How to use the `this` keyword?**
+
+The `this` keyword can be used in the following ways:
+
+* **To refer to the current object:**
+
+```c++
+class Person
+{
+ public:
+  std::string name;
+
+  void printName()
+  {
+    // Print the name of the current object
+    std::cout << this->name << std::endl;
+  }
+};
+```
+
+* **To refer to another member function:**
+
+```c++
+class Person
+{
+ public:
+  std::string name;
+
+  void printName()
+  {
+    // Print the name of the current object
+    std::cout << this->name << std::endl;
+
+    // Call the printAge() function
+    this->printAge();
+  }
+
+  void printAge()
+  {
+    std::cout << "The age of the person is: " << this->age << std::endl;
+  }
+
+ private:
+  int age;
+};
+
+int main()
+{
+  // Create a Person object
+  Person person;
+
+  // Set the name of the person
+  person.name = "Bard";
+
+  // Print the name of the person
+  person.printName();
+
+  // Set the age of the person
+  person.age = 25;
+
+  // Print the age of the person
+  person.printAge();
+
+  return 0;
+}
+```
+
+This code will print the following output:
+
+```
+Bard
+The age of the person is: 25
+```
+
+I hope this translation is helpful!"
