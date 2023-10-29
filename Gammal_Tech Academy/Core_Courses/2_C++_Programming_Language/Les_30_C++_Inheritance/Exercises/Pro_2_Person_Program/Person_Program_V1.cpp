@@ -43,6 +43,7 @@ public:
      }
 };
 
+// Student / class.
 class Student : public Person
 {
 private:
@@ -62,11 +63,6 @@ public:
           cout << "- Student Grade: " <<set_grade(g) << "%";
      }
 };
-
-// Rectangle / class.
-
-// Circle / class.
-
 // ... End Classes ...
 
 // ... Functions ...
