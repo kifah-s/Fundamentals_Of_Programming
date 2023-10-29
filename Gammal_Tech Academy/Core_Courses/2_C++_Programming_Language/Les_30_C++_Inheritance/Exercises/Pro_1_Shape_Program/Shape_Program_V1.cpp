@@ -21,6 +21,7 @@ and return the area of the respective shape. <<< */
 using namespace std;
 
 // ... Classes ...
+// Shape / class.
 class Shape
 {
 private:
@@ -31,6 +32,7 @@ public:
      }
 };
 
+// Rectangle / class.
 class Rectangle : public Shape
 {
 private:
@@ -42,6 +44,7 @@ public:
      }
 };
 
+// Circle / class.
 class Circle : public Shape
 {
 private:
