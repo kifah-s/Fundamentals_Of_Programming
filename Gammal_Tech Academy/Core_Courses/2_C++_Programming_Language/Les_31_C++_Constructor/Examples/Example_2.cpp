@@ -1,6 +1,6 @@
 
 
-/* >>> Example 3 <<< */
+/* >>> Example 2 <<< */
 
 #include <iostream>
 #include <string>
@@ -14,10 +14,10 @@ private:
     int days;
 
 public:
-    Gammal_Tech_Member()
+    Gammal_Tech_Member(string c)
     {
         name = "Gammal Tech New User";
-        cell = "No Cell";
+        cell = c;
         days = 0;
     }
 
@@ -30,9 +30,10 @@ public:
              << endl;
     }
 };
+
 int main()
 {
-    Gammal_Tech_Member x;
+    Gammal_Tech_Member x("+201033998844");
     x.print();
 
     return 0;
