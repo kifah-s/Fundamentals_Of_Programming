@@ -57,7 +57,7 @@ public:
 
      ~smartPointer()
      {
-          cout << "the object deleted .." << endl
+          cout << "This object deleted .." << endl
                << endl;
      }
 };
