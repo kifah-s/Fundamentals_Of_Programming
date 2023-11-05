@@ -1,8 +1,8 @@
 
 
-/* >>> Integer Array Program ( Version 1 ) <<< */
+/* >>> Reverse Order Program ( Version 1 ) <<< */
 
-/* >>> Write a program that uses a range-based for loop to print out the elements of an integer array. <<< */
+/* >>> Write a program that uses a range-based for loop to print out the characters of a string in reverse order. <<< */
 
 #include <iostream>
 #include <string>
@@ -27,7 +27,7 @@ void welcomeMassageFun()
 {
      cout << endl
           << endl
-          << "You welcome in Integer Array Program ( Version 1 ) .." << endl
+          << "You welcome in Reverse Order Program ( Version 1 ) .." << endl
           << endl;
 }
 
@@ -39,12 +39,15 @@ int main()
      welcomeMassageFun();
 
      // Create array.
-     int array[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+     string myName = "kifah saloum";
 
-     // Print Array using range-based for loop.
-     for (int ele : array)
+     // Reverse the array using reverse().
+     reverse(myName.begin(), myName.end());
+
+     // Print array using range-based for loop.
+     for (char c : myName)
      {
-          cout << ele << " ";
+          cout << c << " ";
      }
 
      cout << endl
