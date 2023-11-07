@@ -2,7 +2,7 @@
 
 /* >>> Average Three Numbers Program ( Version 1 ) <<< */
 
-/* >>> Modify the program from problem 3 to calculate the surface area of the rectangular prism in addition to the volume. <<< */
+/* >>> Write a C++ program that calculates the average of three numbers entered by the user. <<< */
 
 #include <iostream>
 #include <string>
