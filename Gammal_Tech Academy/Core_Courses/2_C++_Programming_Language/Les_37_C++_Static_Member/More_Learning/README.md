@@ -18,6 +18,20 @@ In general, `static` is used to control the scope and lifetime of variables, fun
 
 <br>
 
-**INFO_2 : ""**
+**INFO_2 : ""static" and "const""**
 
-"" **()**
+"The terms "static" and "const" are two different concepts in programming languages, and they serve different purposes and have distinct use cases:
+
+1. **Static:**
+   - `static` is used to modify the behavior of variables and functions in a program.
+   - When used with a variable, it means that the value stored in the variable is shared among all instances, whether within the scope of a function or outside of it.
+   - When used with a function inside a class, it means that the function belongs to the class itself and can be called without the need to create an instance of the class.
+   - `static` can be used with class members (variables and functions) to share them among all objects created from the class.
+
+2. **Const (Constant):**
+   - `const` is used to create constants, which are values that cannot be changed after they are defined.
+   - When used with a variable, it means that the value cannot be modified after it is assigned. It is a constant value.
+   - When used with a function, it means that the function will not modify any variables within it, and the program does not expect them to change.
+   - It is often used with pointers to indicate that the pointed-to variable is not allowed to be modified.
+
+So, the main difference is that "static" relates to sharing and unit of operation, while "const" relates to immutability and stability. They can be used together in some cases, where you can define a `const static` variable to create a constant that is shared among all objects." **(ChatGPT)**
