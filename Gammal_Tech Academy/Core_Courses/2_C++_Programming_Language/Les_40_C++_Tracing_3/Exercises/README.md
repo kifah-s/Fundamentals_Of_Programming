@@ -1,21 +1,3 @@
 # Exercises ..
 
-1 :
-
-2 :
-
-3 :
-
-4 :
-
-5 :
-
-6 :
-
-7 :
-
-8 :
-
-9 :
-
-10 :
+1 : Trace the execution of the following C++ code and write the final value of the variable count.
