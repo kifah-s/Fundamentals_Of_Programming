@@ -2,7 +2,10 @@
 
 /* >>> Person Class Program ( Version 1 ) <<< */
 
-/* >>>  <<< */
+/* >>> Create a class called "Person" that has a static member variable "numberOfPeople" and two member variables "name" and "age".
+The class should have a constructor that sets the name and age, and a destructor that decrements the "numberOfPeople" variable.
+The "numberOfPeople" variable should be incremented in the constructor and decremented in the destructor.
+Write a simple main function to test the "Person" class by creating several objects and printing the current "numberOfPeople" value. <<< */
 
 #include <iostream>
 #include <string>
@@ -72,7 +75,7 @@ int main()
 {
      // Print welcome massage.
      welcomeMassageFun();
-     
+
      Person p1("Alice", 25), p2("Bob", 30);
 
      cout << "Current number of people: " << Person::getNumberOfPeople()

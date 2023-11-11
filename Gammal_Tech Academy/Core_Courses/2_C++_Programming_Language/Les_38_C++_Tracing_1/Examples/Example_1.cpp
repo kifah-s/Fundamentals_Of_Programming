@@ -9,7 +9,6 @@ int main()
 {
     int x = 5;
     cout << x / 2 << endl;
-
     int z = x * 100 / 2;
     cout << z / 100 << "." << z % 100 << endl;
     cout << (float)x / 2 << endl;
