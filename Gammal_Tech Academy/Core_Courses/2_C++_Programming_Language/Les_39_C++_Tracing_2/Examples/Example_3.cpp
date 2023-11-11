@@ -1,20 +1,16 @@
 
 
-/* >>> Example 1 <<< */
+/* >>> Example 3 <<< */
 
 #include <iostream>
 #include <stdio.h>
 
 using namespace std;
 
-void recurse()
-{
-    recurse();
-}
-
 int main()
 {
-    recurse();
+    printf("Hello kifah saloum\n");
+    main();
 
     return 0;
 }
