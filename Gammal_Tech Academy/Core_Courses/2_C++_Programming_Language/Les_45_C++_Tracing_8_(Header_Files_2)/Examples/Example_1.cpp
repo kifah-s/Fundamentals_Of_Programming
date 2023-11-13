@@ -2,10 +2,10 @@
 
 /* >>> Example 1 <<< */
 
-#include <iostream>
+// #include <iostream>
 #include "gammal.h"
 
-using namespace std;
+// using namespace std;
 
 int main()
 {
