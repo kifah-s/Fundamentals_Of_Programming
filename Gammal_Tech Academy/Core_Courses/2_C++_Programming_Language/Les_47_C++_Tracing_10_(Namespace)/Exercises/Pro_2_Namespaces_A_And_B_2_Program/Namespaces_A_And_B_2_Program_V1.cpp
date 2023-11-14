@@ -1,6 +1,6 @@
 
 
-/* >>> Namespaces A And B 2 Program ( Version 2 ) <<< */
+/* >>> Namespaces A And B 2 Program ( Version 1 ) <<< */
 
 /* >>> Modify the previous program so that instead of calling the "foo" functions directly,
 you use the "using" directive to bring the "foo" functions into the main namespace.

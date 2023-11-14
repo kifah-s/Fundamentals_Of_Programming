@@ -1,6 +1,6 @@
 
 
-/* >>> Namespaces Math Program ( Version 1 ) <<< */
+/* >>> Namespaces Math Program ( Version 2 ) <<< */
 
 /* >>> Write a C++ program that defines a namespace "math" with two functions, "square" and "cube",
 that return the square and cube of an integer, respectively.
@@ -42,7 +42,8 @@ namespace math
           return cube;
      }
 } //* namespace math
-using namespace math;
+
+//! using namespace math;
 
 // ... End Namespaces ...
 
@@ -56,7 +57,7 @@ void welcomeMassageFun()
 {
      cout << endl
           << endl
-          << "You welcome in Namespaces Math Program ( Version 1 ) .." << endl
+          << "You welcome in Namespaces Math Program ( Version 2 ) .." << endl
           << endl;
 }
 
@@ -75,8 +76,8 @@ int main()
      cout << endl;
 
      // Use functions from "math" namespace.
-     float square = squareFun(num);
-     float cube = cubeFun(num);
+     float square = math::squareFun(num);
+     float cube = math::cubeFun(num);
 
      // Print result.
      cout << "Square the number: " << square << endl;
