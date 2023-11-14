@@ -9,8 +9,8 @@ In the main function, call both "foo" functions and observe the output.
 you use the "using" directive to bring the "foo" functions into the main namespace.  
 Then, call the "foo" functions as if they were defined in the main namespace.
 
-3 : Write a C++ program that defines a namespace "math" with two functions,  
-"square" and "cube", that return the square and cube of an integer, respectively.  
+3 : Write a C++ program that defines a namespace "math" with two functions, "square" and "cube",  
+that return the square and cube of an integer, respectively.  
 In the main function, read an integer from the user,  
 and print its square and cube using the "math" namespace functions.
 

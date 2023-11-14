@@ -40,6 +40,9 @@ namespace B
 
 using namespace A;
 using namespace B;
+//* OR:
+//* using A::fooA;
+//* using B::fooB;
 // ... End Namespaces ...
 
 // ... Classes ...
@@ -63,9 +66,9 @@ int main()
      // Print welcome massage.
      welcomeMassageFun();
 
-     foo_A();
+     foo_A(); // calls the "foo_A" function from namespace A.
      cout << endl;
-     foo_B();
+     foo_B(); // calls the "foo_B" function from namespace B.
 
      cout << endl
           << endl;

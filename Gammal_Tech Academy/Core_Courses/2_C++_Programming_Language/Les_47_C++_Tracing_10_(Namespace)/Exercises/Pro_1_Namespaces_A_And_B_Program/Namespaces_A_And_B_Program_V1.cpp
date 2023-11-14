@@ -64,9 +64,9 @@ int main()
      // Print welcome massage.
      welcomeMassageFun();
 
-     A::foo();
+     A::foo(); // calls the "foo_A" function from namespace A.
      cout << endl;
-     B::foo();
+     B::foo(); // calls the "foo_B" function from namespace B.
 
      cout << endl
           << endl;
