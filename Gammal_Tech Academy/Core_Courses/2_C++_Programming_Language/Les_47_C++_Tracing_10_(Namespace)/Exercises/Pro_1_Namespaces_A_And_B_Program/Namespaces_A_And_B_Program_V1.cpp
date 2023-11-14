@@ -39,8 +39,8 @@ namespace B
      }
 }
 
-using namespace A;
-using namespace B;
+// using namespace A;
+// using namespace B;
 // ... End Namespaces ...
 
 // ... Classes ...

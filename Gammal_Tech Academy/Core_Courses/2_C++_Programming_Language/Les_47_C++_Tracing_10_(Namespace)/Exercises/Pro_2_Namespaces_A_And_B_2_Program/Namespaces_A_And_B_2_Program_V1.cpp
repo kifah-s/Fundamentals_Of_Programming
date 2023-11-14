@@ -1,38 +1,45 @@
 
 
-/* >>> Namespaces A And B 2 Program ( Version 1 ) <<< */
+/* >>> Namespaces A And B 2 Program ( Version 2 ) <<< */
 
-/* >>> Write a C++ program that defines two namespaces, "A" and "B".
-In the "A" namespace, define a function "foo" that prints the string "Hello from namespace A".
-In the "B" namespace, define a function "foo" that prints the string "Hello from namespace B".
-In the main function, call both "foo" functions and observe the output. <<< */
+/* >>> Modify the previous program so that instead of calling the "foo" functions directly,
+you use the "using" directive to bring the "foo" functions into the main namespace.
+Then, call the "foo" functions as if they were defined in the main namespace. <<< */
 
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <vector>
+#include <set>
+#include <sstream>
+#include <cctype>
+#include <utility>
+#include <map>
+#include <cstring>
 
-
-#include "namespaces_A_And_B.h"
-
+using namespace std;
 
 // ... Namespaces ...
 // Create namespace A.
-// namespace A
-// {
-//      void foo()
-//      {
-//           cout << "Hello from namespace A" << endl;
-//      }
-// }
+namespace A
+{
+     void foo_A()
+     {
+          cout << "Hello from namespace A" << endl;
+     }
+}
 
 // Create namespace B.
-// namespace B
-// {
-//      void foo()
-//      {
-//           cout << "Hello from namespace B" << endl;
-//      }
-// }
+namespace B
+{
+     void foo_B()
+     {
+          cout << "Hello from namespace B" << endl;
+     }
+}
 
-// using namespace A;
-// using namespace B;
+using namespace A;
+using namespace B;
 // ... End Namespaces ...
 
 // ... Classes ...
@@ -56,9 +63,9 @@ int main()
      // Print welcome massage.
      welcomeMassageFun();
 
-     A::foo();
+     foo_A();
      cout << endl;
-     B::foo();
+     foo_B();
 
      cout << endl
           << endl;
