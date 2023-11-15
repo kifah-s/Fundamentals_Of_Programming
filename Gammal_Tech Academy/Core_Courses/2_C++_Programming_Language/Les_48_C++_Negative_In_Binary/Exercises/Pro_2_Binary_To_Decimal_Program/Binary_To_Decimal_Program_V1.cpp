@@ -1,8 +1,8 @@
 
 
-/* >>> Decimal To Binary Program ( Version 1 ) <<< */
+/* >>> Binary To Decimal Program ( Version 1 ) <<< */
 
-/* >>> Write a C++ program to convert a decimal number to a 8-bit two's complement binary number. <<< */
+/* >>> Write a C++ program to convert an 8-bit two's complement binary number to a decimal number. <<< */
 
 #include <iostream>
 #include <string>
@@ -32,7 +32,7 @@ void welcomeMassageFun()
 {
      cout << endl
           << endl
-          << "You welcome in Decimal To Binary Program ( Version 1 ) .." << endl
+          << "You welcome in Binary To Decimal Program ( Version 1 ) .." << endl
           << endl;
 }
 
@@ -43,21 +43,25 @@ int main()
      // Print welcome massage.
      welcomeMassageFun();
 
-     int decNum;
-     cout << "Enter a decimal number: ";
-     cin >> decNum;
+     string binStr;
+     cout << "Enter an 8-bit binary number: ";
+     cin >> binStr;
 
      cout << endl;
 
-     if (decNum >= 0)
+     int decNum;
+     
+     if (binStr[0] == '0')
      {
-          cout << "The binary representation of " << decNum << " is " << bitset<8>(decNum) << endl;
+          decNum = stoi(binStr, nullptr, 2);
      }
      else
      {
-          int twosComp = (1 << 8) + decNum;
-          cout << "The two's complement binary representation of " << decNum << " is " << bitset<8>(twosComp) << endl;
+          int twosComp = stoi(binStr, nullptr, 2) - (1 << 8);
+          decNum = twosComp;
      }
+
+     cout << "The decimal representation of " << binStr << " is " << decNum << endl;
 
      cout << endl
           << endl;
