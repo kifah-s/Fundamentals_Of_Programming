@@ -14,8 +14,8 @@ that return the square and cube of an integer, respectively.
 In the main function, read an integer from the user,  
 and print its square and cube using the "math" namespace functions.
 
-4 : Define a namespace "utilities" that contains a function "printArray" that takes an array of integers and its size as arguments,  
-and prints the contents of the array. In the main function, define an array of integers and pass it to the "printArray" function using the namespace prefix.
+4 : Define a namespace "utilities" that contains a function "printArray" that takes an array of integers and its size as arguments, and prints the contents of the array.  
+In the main function, define an array of integers and pass it to the "printArray" function using the namespace prefix.
 
 5 : Write a C++ program that defines two namespaces, "base" and "derived".  
 In the "base" namespace, define a class "Person" with a private member variable "name" and a public member function "setName" that sets the name.  
