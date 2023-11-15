@@ -17,7 +17,7 @@ and print its square and cube using the "math" namespace functions.
 4 : Define a namespace "utilities" that contains a function "printArray" that takes an array of integers and its size as arguments, and prints the contents of the array.  
 In the main function, define an array of integers and pass it to the "printArray" function using the namespace prefix.
 
-5 : Write a C++ program that defines two namespaces, "base" and "derived".  
-In the "base" namespace, define a class "Person" with a private member variable "name" and a public member function "setName" that sets the name.  
-In the "derived" namespace, define a class "Employee" that inherits from the "Person" class and adds a private member variable "salary" and a public member function "setSalary" that sets the salary.  
+5 : Write a C++ program that defines two namespaces, "base" and "derived".
+In the "base" namespace, define a class "Person" with a private member variable "name" and a public member function "setName" that sets the name.
+In the "derived" namespace, define a class "Employee" that inherits from the "Person" class and adds a private member variable "salary" and a public member function "setSalary" that sets the salary.
 In the main function, create an "Employee" object, set its name and salary, and print the values of its name and salary.
