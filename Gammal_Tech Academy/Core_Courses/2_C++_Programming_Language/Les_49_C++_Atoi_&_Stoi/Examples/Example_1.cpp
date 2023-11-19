@@ -22,7 +22,9 @@ int main()
         cout << "Error" << endl;
         y = -1;
     }
-    
+
     if (y != -1)
         cout << y + 1 << endl;
+
+    return 0;
 }
