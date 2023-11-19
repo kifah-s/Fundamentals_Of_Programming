@@ -1,18 +1,18 @@
 
 
-/* >>> Example 4 <<< */
+/* >>> Example 5 <<< */
 
 #include <iostream>
 
 using namespace std;
 
-void swap(int *x, int *y)
+void swap(int &x, int &y)
 {
     int t;
 
-    t = *x;
-    *x =* y;
-    *y = t;
+    t = x;
+    x = y;
+    y = t;
 }
 
 int main()
@@ -22,7 +22,7 @@ int main()
 
     cout << x << "\t" << y << endl;
 
-    swap(&x, &y);
+    swap(x, y);
 
     cout << x << "\t" << y << endl;
 
