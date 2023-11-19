@@ -1,6 +1,6 @@
 
 
-/* >>> Example 2 <<< */
+/* >>> Example 3 <<< */
 
 #include <iostream>
 #include <string>
@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-    int x = 5;
+    int x = ~5;
     for (int i = 31; i >= 0; i--)
     {
         if (x & (1 << i))
