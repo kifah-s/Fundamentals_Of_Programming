@@ -14,13 +14,3 @@ Use the std::cout function to print the area and perimeter of a rectangle with l
 
 5 : Write a C++ program that declares a std::map of strings and integers, adds the key-value pairs "apple" and 5, "banana" and 10, and "cherry" and 15 to it,  
 and then uses the std::cout function to print the value associated with the key "banana" to the console.
-
-6 :
-
-7 :
-
-8 :
-
-9 :
-
-10 :
