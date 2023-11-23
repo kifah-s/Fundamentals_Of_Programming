@@ -61,7 +61,7 @@ public:
     {
         cssCode = "table.headerTable { width: 80%; margin-left: auto; margin-right : auto;}";
 
-        cssCode += "td.headerTd { border: 1bx solid white; color: white; text-align: center; font-size: 20px; }";
+        cssCode += "td.headerTd { border: 1px solid white; color: white; text-align: center; font-size: 20px; } a.headerA{ text-decoration: none; color: white; }";
 
         htmlCode = "<table class = \"headerTable\">";
 
@@ -80,9 +80,11 @@ public:
         }
 
         htmlCode += "<tr>";
-        for (int i = 0; i < pageName.size(); i++)
+        htmlCode += "<td class = \"headerTd\"> <a class = \" headerA \" href = \"index.html\">" + pageName[0] + "</a></td>";
+
+        for (int i = 1; i < pageName.size(); i++)
         {
-            htmlCode += "<td class = \"headerTd\">" + pageName[i] + "</td>";
+            htmlCode += "<td class = \"headerTd\"> <a class = \" headerA \" href = \"" + pageName[i] + ".html\">" + pageName[i] + "</a></td>";
         }
 
         htmlCode += "</tr> </table>";
@@ -102,6 +104,10 @@ public:
 
 //* >>>>>>>>>>>>>>> Header Testing <<<<<<<<<<<<<<< *//
 
+//! Note: Create main function just for testing header code ..
+
+/*
+
 int main()
 {
     ofstream htmlFile("index.html");
@@ -119,3 +125,5 @@ int main()
 
     return 0;
 }
+
+*/
