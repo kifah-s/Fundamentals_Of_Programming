@@ -227,13 +227,13 @@ public:
             string videoLing;
             cout << "Please enter a video link: ";
             cin >> videoLing;
-            htmlCode += "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/" + videoLing + "\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>\"";
+            htmlCode += "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/" + videoLing + "\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>";
             htmlCode += "<td><td class = \" pageTd \">";
             if (pageNumber == 1)
             {
                 cout << "Please enter a video link: ";
                 cin >> videoLing;
-                htmlCode += "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/" + videoLing + "\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>\"";
+                htmlCode += "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/" + videoLing + "\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>";
             }
             else if (pageNumber == 2)
             {
@@ -260,6 +260,11 @@ public:
 
 int main()
 {
+    Page p;
+    p.choosePage("<br>Header<br>", "<br>Footer<br>", "kifah", "teal");
+
+    FILE *out = fopen("index.html", "w");
+    fprintf(out, "%s", p.getHtml().c_str());
 
     return 0;
 }
