@@ -258,6 +258,8 @@ public:
 
 //! Note: Create main function just for testing page code ..
 
+/*
+
 int main()
 {
     Page p;
@@ -268,3 +270,5 @@ int main()
 
     return 0;
 }
+
+*/
