@@ -181,7 +181,7 @@ private:
     string htmlCode, cssCode;
 
 public:
-    void choosePage(string headerHtml, string footerHtml, string pageName)
+    void choosePage(string headerHtml, string footerHtml, string pageName, string backgroundColor)
     {
         int pageNumber;
 
@@ -196,10 +196,10 @@ public:
                 "choose Number: ";
         cin >> pageNumber;
 
-        generateCode(headerHtml, footerHtml, pageName, pageNumber);
+        generateCode(headerHtml, footerHtml, pageName, pageNumber, backgroundColor);
     }
 
-    void generateCode(string headerHtml, string footerHtml, string pageName, int pageNumber)
+    void generateCode(string headerHtml, string footerHtml, string pageName, int pageNumber, string backgroundColor)
     {
         htmlCode = "<html><head><title>" + pageName + "</title>";
 
@@ -207,7 +207,13 @@ public:
 
         htmlCode += "<link rel = \" stylesheet \" href = \" \\ footer.css \">";
 
-        
+        // cssCode = "body { background-color: " + backgroundColor + "; } table.pageTable { margin-right: auto; margin-left: auto; width: 80%; } td.pageTd { color: white; text-align: center; } iframe { width: 100%; } ";
+        cssCode = "body { background-color: " + backgroundColor + "; }";
+        cssCode += "table.pageTable { margin-right: auto; margin-left: auto; width: 80%; }";
+        cssCode += "td.pageTd { color: white; text-align: center; }";
+        cssCode += "iframe { width: 100%; }";
+
+        htmlCode += "<style>" + cssCode + "</style></head>";
 
         htmlCode += "</html>";
     }
@@ -215,11 +221,6 @@ public:
     string getHtml()
     {
         return htmlCode;
-    }
-
-    string getCss()
-    {
-        return cssCode;
     }
 };
 //* >>>>>>>>>>>>>>> End Page Code <<<<<<<<<<<<<<< *//
