@@ -281,6 +281,9 @@ public:
             pageName.push_back(temp);
         }
 
+        cout << "Please enter background color: ";
+        cin >> backgroundColor;
+
         Header h;
         h.chooseHeader(pageName);
 
@@ -307,7 +310,7 @@ public:
         for (int i = 0; i < numberOfPages; i++)
         {
             Page p;
-            cout << pageName[i] << "Details: " << endl;
+            cout << pageName[i] << " Details: " << endl;
             p.choosePage(h.getHtml(), f.getHtml(), pageName[i], backgroundColor);
 
             string file = websiteName;
@@ -328,4 +331,12 @@ public:
 };
 //* >>>>>>>>>>>>>>> End Website Code <<<<<<<<<<<<<<< *//
 
+//! Note: Create main function just for testing Website code ..
 
+int main()
+{
+    Website w;
+    w.createWebsite();
+
+    return 0;
+}
