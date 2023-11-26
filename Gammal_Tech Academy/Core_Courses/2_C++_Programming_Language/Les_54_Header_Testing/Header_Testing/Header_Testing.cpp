@@ -1,7 +1,5 @@
 
 
-//* >>>>>>>>>>>>>>> Header Code <<<<<<<<<<<<<<< *//
-
 #include <iostream>
 #include <string>
 #include <vector>
@@ -9,6 +7,7 @@
 
 using namespace std;
 
+//* >>>>>>>>>>>>>>> Header Code <<<<<<<<<<<<<<< *//
 // Header Class.
 class Header
 {
@@ -101,6 +100,7 @@ public:
     }
 };
 // End Header Class.
+//* >>>>>>>>>>>>>>> End Header Code <<<<<<<<<<<<<<< *//
 
 //* >>>>>>>>>>>>>>> Header Testing <<<<<<<<<<<<<<< *//
 

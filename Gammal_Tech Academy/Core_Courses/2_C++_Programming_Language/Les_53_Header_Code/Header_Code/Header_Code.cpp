@@ -1,6 +1,5 @@
 
 
-//* >>>>>>>>>>>>>>> Header Code <<<<<<<<<<<<<<< *//
 
 #include <iostream>
 #include <string>
@@ -8,6 +7,8 @@
 
 using namespace std;
 
+//* >>>>>>>>>>>>>>> Header Code <<<<<<<<<<<<<<< *//
+// Header class.
 class Header
 {
 private:
@@ -96,3 +97,5 @@ public:
         return cssCode;
     }
 };
+// End header class.
+//* >>>>>>>>>>>>>>> End Header Code <<<<<<<<<<<<<<< *//
