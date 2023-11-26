@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <sys/stat.h>
 
 using namespace std;
 
@@ -281,12 +282,50 @@ public:
             cin >> temp;
             pageName.push_back(temp);
         }
-        
+
         Header h;
         h.chooseHeader(pageName);
 
         Footer f;
         f.chooseFooter(websiteName);
+
+        mkdir(websiteName.c_str());
+        string cssFolder = websiteName;
+        cssFolder += "//css";
+        mkdir(cssFolder.c_str());
+
+        string cssFile = cssFolder;
+        cssFile += "//header.css";
+        ofstream headerCssFile(cssFile);
+        headerCssFile << h.getCss();
+        headerCssFile.close();
+
+        cssFile = cssFolder;
+        cssFile += "//footer.css";
+        ofstream footerCssFile(cssFile);
+        footerCssFile << f.getCss();
+        footerCssFile.close();
+
+        for (int i = 0; i < numberOfPages; i++)
+        {
+            Page p;
+            cout << pageName[i] << "Details: " << endl;
+            p.choosePage(h.getHtml(), f.getHtml(), pageName[i], backgroundColor);
+
+            string file = websiteName;
+            if (i == 0)
+            {
+                file += "//index.html";
+            }
+            else
+            {
+                file += "//" + pageName[i] + ".html";
+            }
+
+            ofstream pageHtml(file);
+            pageHtml << p.getHtml();
+            pageHtml.close();
+        }
     }
 };
 //* >>>>>>>>>>>>>>> End Website Code <<<<<<<<<<<<<<< *//
