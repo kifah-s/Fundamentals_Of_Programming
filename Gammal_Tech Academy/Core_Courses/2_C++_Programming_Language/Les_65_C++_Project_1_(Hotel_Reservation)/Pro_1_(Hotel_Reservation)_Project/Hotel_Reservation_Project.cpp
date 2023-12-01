@@ -1,6 +1,6 @@
 
 
-//* >>>>>>>>>>>>>>> Hotel Management Project <<<<<<<<<<<<<<< *//
+//* >>>>>>>>>>>>>>> Hotel Reservation Project <<<<<<<<<<<<<<< *//
 
 #include <iostream>
 
@@ -69,6 +69,77 @@ int main()
             cout << "\nOh sorry, Only " << quantityPasta - soldPasta << " Pasta remaining in hotel !!";
             break;
         }
+
+    case 3:
+        cout << "\nPlease enter Burger Quantity: ";
+        cin >> quant;
+        if (quantityBurger - soldBurger >= quant)
+        {
+            soldBurger = soldBurger + quant;
+            totalBurger = totalBurger + quant * 100;
+
+            cout << "\n"
+                 << quant << " Burger is the order !!";
+        }
+        else
+        {
+            cout << "\nOh sorry, Only " << quantityBurger - soldBurger << " Burger remaining in hotel !!";
+            break;
+        }
+
+    case 4:
+        cout << "\nPlease enter Noodles Quantity: ";
+        cin >> quant;
+        if (quantityNoodles - soldNoodles >= quant)
+        {
+            soldNoodles = soldNoodles + quant;
+            totalNoodles = totalNoodles + quant * 100;
+
+            cout << "\n"
+                 << quant << " Noodles is the order !!";
+        }
+        else
+        {
+            cout << "\nOh sorry, Only " << quantityNoodles - soldNoodles << " Noodles remaining in hotel !!";
+            break;
+        }
+
+    case 5:
+        cout << "\nPlease enter Shake Quantity: ";
+        cin >> quant;
+        if (quantityShake - soldShake >= quant)
+        {
+            soldShake = soldShake + quant;
+            totalShake = totalShake + quant * 100;
+
+            cout << "\n"
+                 << quant << " Shake is the order !!";
+        }
+        else
+        {
+            cout << "\nOh sorry, Only " << quantityShake - soldShake << " Shake remaining in hotel !!";
+            break;
+        }
+
+    case 6:
+        cout << "\nPlease enter Chicken Quantity: ";
+        cin >> quant;
+        if (quantityChicken - soldChicken >= quant)
+        {
+            soldChicken = soldChicken + quant;
+            totalChicken = totalChicken + quant * 100;
+
+            cout << "\n"
+                 << quant << " Chicken is the order !!";
+        }
+        else
+        {
+            cout << "\nOh sorry, Only " << quantityChicken - soldChicken << " Chicken remaining in hotel !!";
+            break;
+        }
+
+    case 7:
+        cout << "";
 
     default:
         break;
