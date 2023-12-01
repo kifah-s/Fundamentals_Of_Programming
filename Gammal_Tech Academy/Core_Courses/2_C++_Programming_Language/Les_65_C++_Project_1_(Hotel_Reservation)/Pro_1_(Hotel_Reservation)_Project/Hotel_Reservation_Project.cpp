@@ -16,11 +16,12 @@ int main()
     // The items sold ..
     int soldRooms = 0, soldPasta = 0, soldBurger = 0, soldNoodles = 0, soldShake = 0, soldChicken = 0;
     // Total price of item ..
-    int totalRooms = 0, totalPasta = 0, totalBurger = 0, totalNoodles = 0, totalShake = 0, totalChicken = 0;
+    int total = 0, totalRooms = 0, totalPasta = 0, totalBurger = 0, totalNoodles = 0, totalShake = 0, totalChicken = 0;
     //* .......... End Variables .......... *//
 
     cout << "\n\n >>>>> Your welcome in kifah hotel <<<<<";
 
+start:
     cout << "\n\nPlease select from the menu options..\n";
     cout << "\n1) Rooms";
     cout << "\n2) Pasta";
@@ -28,7 +29,7 @@ int main()
     cout << "\n4) Noodles";
     cout << "\n5) Shake";
     cout << "\n6) Chicken";
-    cout << "\n\n7) Information regarding sales and collection";
+    cout << "\n\n7) Billing information";
     cout << "\n8) Exit";
 
     cout << "\n\nPlease enter your choice: ";
@@ -45,11 +46,12 @@ int main()
             totalRooms = totalRooms + quant * 1200;
 
             cout << "\n"
-                 << quant << " Room/Rooms have been allotted to you !!";
+                 << quant << " Room/Rooms have been allotted to you !!\n";
+                 break;
         }
         else
         {
-            cout << "\nOh sorry, Only " << quantityRooms - soldRooms << " rooms remaining in hotel !!";
+            cout << "\nOh sorry, Only " << quantityRooms - soldRooms << " rooms remaining in hotel !!\n";
             break;
         }
 
@@ -62,11 +64,11 @@ int main()
             totalPasta = totalPasta + quant * 100;
 
             cout << "\n"
-                 << quant << " Pasta is the order !!";
+                 << quant << " Pasta is the order !!\n";
         }
         else
         {
-            cout << "\nOh sorry, Only " << quantityPasta - soldPasta << " Pasta remaining in hotel !!";
+            cout << "\nOh sorry, Only " << quantityPasta - soldPasta << " Pasta remaining in hotel !!\n";
             break;
         }
 
@@ -79,11 +81,11 @@ int main()
             totalBurger = totalBurger + quant * 100;
 
             cout << "\n"
-                 << quant << " Burger is the order !!";
+                 << quant << " Burger is the order !!\n";
         }
         else
         {
-            cout << "\nOh sorry, Only " << quantityBurger - soldBurger << " Burger remaining in hotel !!";
+            cout << "\nOh sorry, Only " << quantityBurger - soldBurger << " Burger remaining in hotel !!\n";
             break;
         }
 
@@ -96,11 +98,11 @@ int main()
             totalNoodles = totalNoodles + quant * 100;
 
             cout << "\n"
-                 << quant << " Noodles is the order !!";
+                 << quant << " Noodles is the order !!\n";
         }
         else
         {
-            cout << "\nOh sorry, Only " << quantityNoodles - soldNoodles << " Noodles remaining in hotel !!";
+            cout << "\nOh sorry, Only " << quantityNoodles - soldNoodles << " Noodles remaining in hotel !!\n";
             break;
         }
 
@@ -113,11 +115,11 @@ int main()
             totalShake = totalShake + quant * 100;
 
             cout << "\n"
-                 << quant << " Shake is the order !!";
+                 << quant << " Shake is the order !!\n";
         }
         else
         {
-            cout << "\nOh sorry, Only " << quantityShake - soldShake << " Shake remaining in hotel !!";
+            cout << "\nOh sorry, Only " << quantityShake - soldShake << " Shake remaining in hotel !!\n";
             break;
         }
 
@@ -130,20 +132,34 @@ int main()
             totalChicken = totalChicken + quant * 100;
 
             cout << "\n"
-                 << quant << " Chicken is the order !!";
+                 << quant << " Chicken is the order !!\n";
         }
         else
         {
-            cout << "\nOh sorry, Only " << quantityChicken - soldChicken << " Chicken remaining in hotel !!";
+            cout << "\nOh sorry, Only " << quantityChicken - soldChicken << " Chicken remaining in hotel !!\n";
             break;
         }
 
-    case 7:
-        cout << "";
+        case 7:
+            cout << "\n\nYour Billing:";
+            cout << "\nTotal Rooms: " << totalRooms;
+            cout << "\nTotal Pasta: " << totalPasta;
+            cout << "\nTotal Burger: " << totalBurger;
+            cout << "\nTotal Noodles: " << totalNoodles;
+            cout << "\nTotal Shake: " << totalShake;
+            cout << "\nTotal Chicken: " << totalChicken;
+
+            total = totalRooms + totalPasta + totalBurger + totalNoodles + totalShake + totalChicken;
+            cout << "\n\nTotal: " << total;
+
+        case 8:
+            exit(0);
 
     default:
         break;
     }
+
+    goto start;
 
     return 0;
 }
