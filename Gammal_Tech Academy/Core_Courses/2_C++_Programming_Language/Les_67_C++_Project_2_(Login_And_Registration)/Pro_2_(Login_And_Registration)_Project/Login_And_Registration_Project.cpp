@@ -84,9 +84,9 @@ void loginFun()
 
     // Receive user name and password from user.
     cout << "\nPlease enter user name and password: \n";
-    cout << "\nUser Name: \n";
+    cout << "\nUser Name: ";
     cin >> userId;
-    cout << "\nPassword: \n";
+    cout << "\nPassword: ";
     cin >> password;
 
     // Open file.
@@ -107,8 +107,9 @@ void loginFun()
     // Login successful OR Login Error.
     if (count == 1)
     {
-        cout << userId;
-        cout << "\n, Your login is successful..\n";
+        cout << "\n"
+             << userId << ",";
+        cout << "\nYour login is successful..\n";
         cout << "Thank you for login..\n";
 
         // Recursion function.
