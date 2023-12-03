@@ -58,6 +58,7 @@ int main()
 }
 
 //* ..... Functions ..... *//
+
 // Menu function.
 void menuFun()
 {
@@ -69,6 +70,7 @@ void menuFun()
     cout << "Please enter 3 if you forgot your (PASSWORD)\n";
     cout << "Please enter 4 to (EXIT)\n\n";
 }
+// End Menu function.
 
 // Login function.
 void loginFun()
@@ -90,22 +92,56 @@ void loginFun()
     // Create file.
     ifstream input("records.txt");
 
-    //
+    // Check id and pass.
+    while (input >> id >> pass)
+    {
+        if (id == userId && pass == password)
+        {
+            count = 1;
+            system("cls");
+        }
+    }
+    // Closed file.
+    input.close();
+
+    // Login successful OR Login Error.
+    if (count == 1)
+    {
+        cout << userId;
+        cout << "\n, Your login is successful..\n";
+        cout << "Thank you for login..\n";
+
+        // Recursion function.
+        main();
+    }
+    else
+    {
+        cout << "\nLogin Error..\n";
+        cout << "Please check your User Name OR Password.\n";
+        
+        // Recursion function.
+        main();
+    }
 }
+// End Login function.
 
 // Registration function.
 void registrationFun()
 {
 }
+// End Registration function.
 
 // Forgot password function.
 void forgotPasswordFun()
 {
 }
+// End Forgot password function.
 
 // Exit function.
 void exitFun()
 {
-    cout << "\n\nThank You\n\n";
+    cout << "\nThank You\n\n";
 }
+// End Exit function.
+
 //* ..... End Functions ..... *//
