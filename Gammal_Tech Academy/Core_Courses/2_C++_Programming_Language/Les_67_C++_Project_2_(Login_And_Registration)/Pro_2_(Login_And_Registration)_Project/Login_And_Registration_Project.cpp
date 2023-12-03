@@ -137,9 +137,9 @@ void registrationFun()
 
     // Receive user name and password from user.
     cout << "\nPlease enter User Name and Password:\n";
-    cout << "User Name: ";
+    cout << "\nUser Name: ";
     cin >> regUserId;
-    cout << "Password: ";
+    cout << "\nPassword: ";
     cin >> regPassword;
 
     // Create file.
@@ -169,7 +169,7 @@ void forgotPasswordFun()
     system("cls");
 
     // massage for user.
-    cout << "\nYou forget the password ?, No worries..\n";
+    cout << "\nYou forget the password ?, No Worries..\n";
 
     // Receive value from user.
     cout << "\nEnter 1 to search your id by User Name.\n";
@@ -215,6 +215,7 @@ void forgotPasswordFun()
         else
         {
             cout << "\nSorry!! your account is not found.\n";
+
             // Recursion function.
             main();
         }
@@ -222,7 +223,9 @@ void forgotPasswordFun()
     break;
 
     case 2:
+        // Recursion function.
         main();
+
         // break;
 
     default:
@@ -230,6 +233,7 @@ void forgotPasswordFun()
 
         // Recursion function.
         forgotPasswordFun();
+        
         // break;
     }
 }
