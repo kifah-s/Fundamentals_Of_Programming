@@ -76,7 +76,7 @@ void menuFun()
 void loginFun()
 {
     // Declare variables.
-    int count;
+    int count = 0;
     string userId, password, id, pass;
 
     // clear screen.
@@ -206,7 +206,7 @@ void forgotPasswordFun()
         // Found account or not.
         if (count == 1)
         {
-            cout << "\nYour account is found.\n";
+            cout << "\nYour account is found..\n";
             cout << "Your password is: " << sPass;
 
             // Recursion function.
