@@ -172,9 +172,8 @@ m:
     cout << "\n..........\n";
     cout << "BUYER MENU";
     cout << "\n..........\n\n";
-    cout << "1) List Product..\n\n";
-    cout << "2) Buy Product..\n\n";
-    cout << "3) Go to main menu..\n\n";
+    cout << "1) Buy Product..\n\n";
+    cout << "2) Go to main menu..\n\n";
     cout << "_________________________________\n\n";
 
     // Receive user select.
@@ -184,19 +183,13 @@ m:
     // Create switch.
     switch (choice)
     {
-    case 1: // List products.
+    case 1: // Buy Product case.
     {
-        list();
+        receipt();
     }
     break;
 
-    case 2: // Buy Product case.
-    {
-        // receipt();
-    }
-    break;
-
-    case 3: // Go to main menu
+    case 2: // Go to main menu
     {
         menu();
     }
@@ -430,9 +423,9 @@ void shopping ::list()
     data.open("database.txt", ios ::in);
 
     // List products.
-    cout << "\n..............\n";
+    cout << "\n.............\n";
     cout << "List PRODUCT";
-    cout << "\n..............\n\n";
+    cout << "\n.............\n\n";
     cout << "Number..........Name..........Price\n";
 
     data >> pCode >> pName >> price >> discount;
@@ -445,6 +438,94 @@ void shopping ::list()
     data.close();
 }
 // End List function.
+
+// Receipt function.
+void shopping ::receipt()
+{
+    // File.
+    fstream data;
+
+    // Declare variable.
+    int arrC[100], arrQ[100], c = 0;
+    float amount = 0, dis = 0, total = 0;
+    char choice;
+
+    //* Receipt products.
+    // cout << "\n........\n";
+    // cout << "RECEIPT";
+    // cout << "\n........\n\n";
+
+    // Open file,
+    data.open("database.txt", ios ::in);
+
+    if (!data)
+    {
+        cout << "\nEmpty List..\n\n";
+    }
+    else
+    {
+        // Close file.
+        data.close();
+
+        // List function.
+        list();
+
+        // Select order.
+        cout << "\nPlease place the order..\n";
+
+        do
+        {
+        m:
+
+            cout << "\nEnter product number: ";
+            cin >> arrC[c];
+            cout << "Enter product quantity: ";
+            cin >> arrQ[c];
+
+            for (int i = 0; i < c; i++)
+            {
+                if (arrC[c] == arrC[i])
+                {
+                    cout << "\nDuplicate product code.. Please try agin !!\n";
+
+                    goto m;
+                }
+            }
+            c++;
+
+            cout << "\nDo you want to bay another product ?? .. if yes please enter 'y', if no please enter 'n': ";
+            cin >> choice;
+
+        } while (choice == 'y');
+
+        cout << "\n________ RECEIPT ________\n";
+        cout << "\nProNumber    ProName    ProQuantity    ProPrice    Amount    Amount with discount\n";
+
+        for (int i = 0; i < c; i++)
+        {
+            data.open("database.txt", ios ::in);
+
+            data >> pCode >> pName >> price >> dis;
+
+            while (!data.eof())
+            {
+                if (pCode == arrC[i])
+                {
+                    amount = price * arrQ[i];
+                    dis = amount - (amount * dis / 100);
+                    total = total + dis;
+
+                    cout << "\n"
+                         << pCode << "             " << pName << "          " << arrQ[i] << "           " << price << "          " << amount << "              " << dis;
+                }
+                data >> pCode >> pName >> price >> dis;
+            }
+        }
+        data.close();
+    }
+    cout << "\n\nTotal Amount: " << total << endl;
+}
+// End receipt function.
 
 //* ............ End Function ............
 
