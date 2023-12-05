@@ -172,8 +172,9 @@ m:
     cout << "\n..........\n";
     cout << "BUYER MENU";
     cout << "\n..........\n\n";
-    cout << "1) Buy Product..\n\n";
-    cout << "2) Go to main menu..\n\n";
+    cout << "1) List Product..\n\n";
+    cout << "2) Buy Product..\n\n";
+    cout << "3) Go to main menu..\n\n";
     cout << "_________________________________\n\n";
 
     // Receive user select.
@@ -183,15 +184,21 @@ m:
     // Create switch.
     switch (choice)
     {
-    case 1: // Buy Product case.
+    case 1: // List products.
+    {
+        list();
+    }
+    break;
+
+    case 2: // Buy Product case.
     {
         // receipt();
     }
     break;
 
-    case 2: // Go to main menu
+    case 3: // Go to main menu
     {
-        // menu();
+        menu();
     }
     break;
 
@@ -411,8 +418,33 @@ void shopping ::rem()
         }
     }
 }
-
 // End remove function.
+
+// List function.
+void shopping ::list()
+{
+    // File.
+    fstream data;
+
+    // Open file.
+    data.open("database.txt", ios ::in);
+
+    // List products.
+    cout << "\n..............\n";
+    cout << "List PRODUCT";
+    cout << "\n..............\n\n";
+    cout << "Number..........Name..........Price\n";
+
+    data >> pCode >> pName >> price >> discount;
+
+    while (!data.eof())
+    {
+        cout << pCode << "              " << pName << "           " << price << "\n";
+        data >> pCode >> pName >> price >> discount;
+    }
+    data.close();
+}
+// End List function.
 
 //* ............ End Function ............
 
