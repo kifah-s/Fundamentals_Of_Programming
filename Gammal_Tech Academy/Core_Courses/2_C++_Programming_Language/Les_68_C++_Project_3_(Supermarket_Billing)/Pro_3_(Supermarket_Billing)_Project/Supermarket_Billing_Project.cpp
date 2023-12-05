@@ -35,6 +35,7 @@ public:
 void shopping ::menu()
 {
 m:
+
     // Declare variable.
     int choice;
     string email, password;
@@ -102,6 +103,7 @@ m:
 void shopping ::administrator()
 {
 m:
+
     // Declare variable.
     int choice;
 
@@ -155,6 +157,51 @@ m:
     goto m;
 }
 // End administrator function.
+
+// buyer function.
+void shopping ::buyer()
+{
+m:
+
+    // Declare variable.
+    int choice;
+
+    // Print administrator menu.
+    cout << "\n.............\n";
+    cout << "BUYER MENU";
+    cout << "\n.............\n\n";
+    cout << "1) Buy Product..\n\n";
+    cout << "2) Go to main menu..\n\n";
+    cout << "_________________________________\n\n";
+
+    // Receive user select.
+    cout << "Please enter your choice: ";
+    cin >> choice;
+
+    // Create switch.
+    switch (choice)
+    {
+    case 1: // Buy Product case.
+    {
+        // receipt();
+    }
+    break;
+
+    case 2: // Go to main menu
+    {
+        // menu();
+    }
+    break;
+
+    default:
+    {
+        cout << "\nInvalid choice..\n";
+    }
+    break;
+    }
+    goto m;
+}
+// End buyer function.
 
 //* ............ End Function ............
 
