@@ -139,7 +139,7 @@ m:
 
     case 3: // Remove Product case.
     {
-        // remove();
+        rem();
     }
     break;
 
@@ -355,12 +355,64 @@ void shopping ::edit()
 // Remove function.
 void shopping ::rem()
 {
-    
+    // file.
+    fstream data, data1;
+
+    // Declare variables.
+    int pKey, token = 0;
+
+    // Remove product.
+    cout << "\n..............\n";
+    cout << "REMOVE PRODUCT";
+    cout << "\n..............\n\n";
+    cout << "Product Code: ";
+    cin >> pKey;
+
+    // open file.
+    data.open("database.txt", ios ::in);
+
+    if (!data)
+    {
+        cout << "\nFile doesn't exist..\n";
+    }
+    else
+    {
+        // Open file.
+        data1.open("database1.txt", ios ::app | ios ::out);
+
+        data >> pCode >> pName >> price >> discount;
+
+        while (!data.eof())
+        {
+            if (pKey == pCode)
+            {
+                // New product.
+                cout << "\nProduct deleted successfully..\n";
+
+                token++;
+            }
+            else
+            {
+                data1 << " " << pCode << " " << pName << " " << price << " " << discount << "\n";
+            }
+            data >> pCode >> pName >> price >> discount;
+        }
+        // Closed files.
+        data.close();
+        data1.close();
+
+        // Rename file.
+        remove("database.txt");
+        rename("database1.txt", "database.txt");
+
+        if (token == 0)
+        {
+            cout << "\nSorry, Record not found..\n";
+        }
+    }
 }
+
 // End remove function.
-
-
-
 
 //* ............ End Function ............
 
