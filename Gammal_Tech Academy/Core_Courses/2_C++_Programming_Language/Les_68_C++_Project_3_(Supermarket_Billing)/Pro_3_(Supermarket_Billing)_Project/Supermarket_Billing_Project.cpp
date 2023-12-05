@@ -24,7 +24,7 @@ public:
     void buyer();
     void add();
     void edit();
-    void remove();
+    void rem();
     void list();
     void receipt();
 };
@@ -133,7 +133,7 @@ m:
 
     case 2: // Edit Product case.
     {
-        // edit();
+        edit();
     }
     break;
 
@@ -277,6 +277,90 @@ m:
     cout << "\nRecord inserted..\n";
 }
 // End add function.
+
+// Edit function.
+void shopping ::edit()
+{
+    // file.
+    fstream data, data1;
+
+    // Declare variables.
+    int pKey, token = 0, c;
+    float p, d;
+    string n;
+
+    // Edit product.
+    cout << "\n............\n";
+    cout << "EDIT PRODUCT";
+    cout << "\n............\n\n";
+    cout << "Product Code: ";
+    cin >> pKey;
+
+    // open file.
+    data.open("database.txt", ios ::in);
+
+    if (!data)
+    {
+        cout << "\nFile doesn't exist..\n";
+    }
+    else
+    {
+        // Open file.
+        data1.open("database1.txt", ios ::app | ios ::out);
+
+        data >> pCode >> pName >> price >> discount;
+
+        while (!data.eof())
+        {
+            if (pKey == pCode)
+            {
+                // New product.
+                cout << "\nNew Product Code: ";
+                cin >> c;
+                cout << "Product Name: ";
+                cin >> n;
+                cout << "Product Price: ";
+                cin >> p;
+                cout << "Product Discount: ";
+                cin >> d;
+
+                data1 << " " << c << " " << n << " " << p << " " << d << "\n";
+
+                cout << "\nRecord edited..\n";
+
+                token++;
+            }
+            else
+            {
+                data1 << " " << pCode << " " << pName << " " << price << " " << discount << "\n";
+            }
+            data >> pCode >> pName >> price >> discount;
+        }
+        // Closed files.
+        data.close();
+        data1.close();
+
+        // Rename file.
+        remove("database.txt");
+        rename("database1.txt", "database.txt");
+
+        if (token == 0)
+        {
+            cout << "\nSorry, Record not found..\n";
+        }
+    }
+}
+// End edit function.
+
+// Remove function.
+void shopping ::rem()
+{
+    
+}
+// End remove function.
+
+
+
 
 //* ............ End Function ............
 
