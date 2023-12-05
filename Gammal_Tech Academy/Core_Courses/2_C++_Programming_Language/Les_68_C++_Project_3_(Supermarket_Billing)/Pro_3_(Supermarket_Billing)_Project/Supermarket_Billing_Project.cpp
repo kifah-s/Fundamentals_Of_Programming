@@ -79,7 +79,7 @@ m:
 
     case 2: // Buyer case.
     {
-        // buyer();
+        buyer();
     }
     break;
 
@@ -95,6 +95,7 @@ m:
     }
     break;
     }
+
     goto m;
 }
 // End Menu function.
@@ -126,7 +127,7 @@ m:
     {
     case 1: // Add Product case.
     {
-        // add();
+        add();
     }
     break;
 
@@ -154,6 +155,7 @@ m:
     }
     break;
     }
+
     goto m;
 }
 // End administrator function.
@@ -167,9 +169,9 @@ m:
     int choice;
 
     // Print administrator menu.
-    cout << "\n.............\n";
+    cout << "\n..........\n";
     cout << "BUYER MENU";
-    cout << "\n.............\n\n";
+    cout << "\n..........\n\n";
     cout << "1) Buy Product..\n\n";
     cout << "2) Go to main menu..\n\n";
     cout << "_________________________________\n\n";
@@ -199,9 +201,82 @@ m:
     }
     break;
     }
+
     goto m;
 }
 // End buyer function.
+
+// Add function.
+void shopping ::add()
+{
+m:
+
+    // file.
+    fstream data;
+
+    // Declare variable.
+    int c, token = 0;
+    float p, d;
+    string n;
+
+    // Add new product.
+    cout << "\n...............\n";
+    cout << "ADD NEW PRODUCT";
+    cout << "\n...............\n\n";
+    cout << "Product Code: ";
+    cin >> pCode;
+    cout << "Product Name: ";
+    cin >> pName;
+    cout << "Product Price: ";
+    cin >> price;
+    cout << "Product Discount: ";
+    cin >> discount;
+
+    // Open file.
+    data.open("database.txt", ios::in);
+
+    if (!data) // Write in file.
+    {
+        // Open or create file.
+        data.open("database.txt", ios::app | ios::out);
+        // Write in file.
+        data << " " << pCode << " " << pName << " " << price << " " << discount << "\n";
+        // Close file.
+        data.close();
+    }
+    else // check product code in file.
+    {
+        data >> c >> n >> p >> d;
+
+        while (!data.eof())
+        {
+            if (c == pCode)
+            {
+                token++;
+            }
+
+            data >> c >> n >> p >> d;
+        }
+        data.close();
+
+        if (token == 1)
+        {
+            cout << "\nSorry, Product Code Already Exists..\n";
+            goto m;
+        }
+        else
+        {
+            // Open or create file.
+            data.open("database.txt", ios::app | ios::out);
+            // Write in file.
+            data << " " << pCode << " " << pName << " " << price << " " << discount << "\n";
+            // Close file.
+            data.close();
+        }
+    }
+    cout << "\nRecord inserted..\n";
+}
+// End add function.
 
 //* ............ End Function ............
 
