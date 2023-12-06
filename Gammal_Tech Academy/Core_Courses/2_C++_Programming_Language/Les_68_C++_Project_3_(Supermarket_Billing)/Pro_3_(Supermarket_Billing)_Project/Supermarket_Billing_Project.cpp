@@ -450,11 +450,6 @@ void shopping ::receipt()
     float amount = 0, dis = 0, total = 0;
     char choice;
 
-    //* Receipt products.
-    // cout << "\n........\n";
-    // cout << "RECEIPT";
-    // cout << "\n........\n\n";
-
     // Open file,
     data.open("database.txt", ios ::in);
 
@@ -520,8 +515,8 @@ void shopping ::receipt()
                 }
                 data >> pCode >> pName >> price >> dis;
             }
+            data.close();
         }
-        data.close();
     }
     cout << "\n\nTotal Amount: " << total << endl;
 }
