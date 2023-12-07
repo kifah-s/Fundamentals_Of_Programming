@@ -60,6 +60,353 @@ string Details ::name;
 string Details ::gender;
 // End details class.
 
+// Creat Registration class.
+class Registration
+{
+public:
+    // Declare variable.
+    static int choice;
+    static float charges;
+    int back, choice1;
+
+    void flights()
+    {
+        // Declare array.
+        string flightN[] = {"Dubai", "Canada", "UK", "USA", "Australia", "Europe"};
+
+        for (int a = 0; a < 6; a++)
+        {
+            cout << (a + 1) << ". Flight to " << flightN[a] << ".\n";
+        }
+
+        // Select country.
+        cout << "\nWelcome to the Airlines ..\n";
+        cout << "\nPlease enter the number of the country you want to book the flight: ";
+        cin >> choice;
+
+        switch (choice)
+        {
+        // Dubai.
+        case 1:
+        {
+            // Select flight.
+            cout << "\nWelcome to dubai, Enjoy ..\n";
+            cout << "\nFollowing are the flights: \n";
+            cout << "1. DUB - 123 : (01 - 01 - 2024), (8:00 AM), (1400$)\n";
+            cout << "2. DUB - 456 : (02 - 01 - 2024), (8:00 AM), (1400$)\n";
+            cout << "3. DUB - 789 : (03 - 01 - 2024), (8:00 AM), (1400$)\n";
+
+            cout << "\nPlease select the flight you want to book: ";
+            cin >> choice1;
+
+            if (choice1 == 1)
+            {
+                charges = 1400;
+                cout << "\nYou have successfully booked the flight DUB - 123 ..\n";
+                cout << "\nYou can go back to menu and take the ticket.\n";
+            }
+            else if (choice1 == 2)
+            {
+                charges = 1400;
+                cout << "\nYou have successfully booked the flight DUB - 456 ..\n";
+                cout << "\nYou can go back to menu and take the ticket.\n";
+            }
+            else if (choice1 == 3)
+            {
+                charges = 1400;
+                cout << "\nYou have successfully booked the flight DUB - 789 ..\n";
+                cout << "\nYou can go back to menu and take the ticket.\n";
+            }
+            else
+            {
+                cout << "\nInvalid input, shifting to the previous menu..\n";
+
+                flights();
+            }
+
+            cout << "\nPlease enter any kay to go back to main menu: ";
+            cin >> back;
+            if (back == 1)
+            {
+                mainMenu();
+            }
+            else
+            {
+                mainMenu();
+            }
+        }
+        break;
+
+        // Canada.
+        case 2:
+        {
+            // Select flight.
+            cout << "\nWelcome to Canada, Enjoy ..\n";
+            cout << "\nFollowing are the flights: \n";
+            cout << "1. CAN - 123 : (01 - 01 - 2024), (10:00 AM), (1600$)\n";
+            cout << "2. CAN - 456 : (02 - 01 - 2024), (10:00 AM), (1600$)\n";
+            cout << "3. CAN - 789 : (03 - 01 - 2024), (10:00 AM), (1600$)\n";
+
+            cout << "\nPlease select the flight you want to book: ";
+            cin >> choice1;
+
+            if (choice1 == 1)
+            {
+                charges = 1600;
+                cout << "\nYou have successfully booked the flight CAN - 123 ..\n";
+                cout << "\nYou can go back to menu and take the ticket.\n";
+            }
+            else if (choice1 == 2)
+            {
+                charges = 1600;
+                cout << "\nYou have successfully booked the flight CAN - 456 ..\n";
+                cout << "\nYou can go back to menu and take the ticket.\n";
+            }
+            else if (choice1 == 3)
+            {
+                charges = 1600;
+                cout << "\nYou have successfully booked the flight CAN - 789 ..\n";
+                cout << "\nYou can go back to menu and take the ticket.\n";
+            }
+            else
+            {
+                cout << "\nInvalid input, shifting to the previous menu..\n";
+
+                flights();
+            }
+
+            cout << "\nPlease enter any kay to go back to main menu: ";
+            cin >> back;
+            if (back == 1)
+            {
+                mainMenu();
+            }
+            else
+            {
+                mainMenu();
+            }
+        }
+        break;
+
+        // UK.
+        case 3:
+        {
+            // Select flight.
+            cout << "\nWelcome to UK, Enjoy ..\n";
+            cout << "\nFollowing are the flights: \n";
+            cout << "1. UK - 123 : (01 - 01 - 2024), (12:00 PM), (1800$)\n";
+            cout << "2. UK - 456 : (02 - 01 - 2024), (12:00 PM), (1800$)\n";
+            cout << "3. UK - 789 : (03 - 01 - 2024), (12:00 PM), (1800$)\n";
+
+            cout << "\nPlease select the flight you want to book: ";
+            cin >> choice1;
+
+            if (choice1 == 1)
+            {
+                charges = 1800;
+                cout << "\nYou have successfully booked the flight UK - 123 ..\n";
+                cout << "\nYou can go back to menu and take the ticket.\n";
+            }
+            else if (choice1 == 2)
+            {
+                charges = 1800;
+                cout << "\nYou have successfully booked the flight UK - 456 ..\n";
+                cout << "\nYou can go back to menu and take the ticket.\n";
+            }
+            else if (choice1 == 3)
+            {
+                charges = 1800;
+                cout << "\nYou have successfully booked the flight UK - 789 ..\n";
+                cout << "\nYou can go back to menu and take the ticket.\n";
+            }
+            else
+            {
+                cout << "\nInvalid input, shifting to the previous menu..\n";
+
+                flights();
+            }
+
+            cout << "\nPlease enter any kay to go back to main menu: ";
+            cin >> back;
+            if (back == 1)
+            {
+                mainMenu();
+            }
+            else
+            {
+                mainMenu();
+            }
+        }
+        break;
+
+        // USA.
+        case 4:
+        {
+            // Select flight.
+            cout << "\nWelcome to USA, Enjoy ..\n";
+            cout << "\nFollowing are the flights: \n";
+            cout << "1. USA - 123 : (01 - 01 - 2024), (2:00 PM), (2000$)\n";
+            cout << "2. USA - 456 : (02 - 01 - 2024), (2:00 PM), (2000$)\n";
+            cout << "3. USA - 789 : (03 - 01 - 2024), (2:00 PM), (2000$)\n";
+
+            cout << "\nPlease select the flight you want to book: ";
+            cin >> choice1;
+
+            if (choice1 == 1)
+            {
+                charges = 2000;
+                cout << "\nYou have successfully booked the flight USA - 123 ..\n";
+                cout << "\nYou can go back to menu and take the ticket.\n";
+            }
+            else if (choice1 == 2)
+            {
+                charges = 2000;
+                cout << "\nYou have successfully booked the flight USA - 456 ..\n";
+                cout << "\nYou can go back to menu and take the ticket.\n";
+            }
+            else if (choice1 == 3)
+            {
+                charges = 2000;
+                cout << "\nYou have successfully booked the flight USA - 789 ..\n";
+                cout << "\nYou can go back to menu and take the ticket.\n";
+            }
+            else
+            {
+                cout << "\nInvalid input, shifting to the previous menu..\n";
+
+                flights();
+            }
+
+            cout << "\nPlease enter any kay to go back to main menu: ";
+            cin >> back;
+            if (back == 1)
+            {
+                mainMenu();
+            }
+            else
+            {
+                mainMenu();
+            }
+        }
+        break;
+
+        // Australia.
+        case 5:
+        {
+            // Select flight.
+            cout << "\nWelcome to Australia, Enjoy ..\n";
+            cout << "\nFollowing are the flights: \n";
+            cout << "1. AUS - 123 : (01 - 01 - 2024), (4:00 PM), (2200$)\n";
+            cout << "2. AUS - 456 : (02 - 01 - 2024), (4:00 PM), (2200$)\n";
+            cout << "3. AUS - 789 : (03 - 01 - 2024), (4:00 PM), (2200$)\n";
+
+            cout << "\nPlease select the flight you want to book: ";
+            cin >> choice1;
+
+            if (choice1 == 1)
+            {
+                charges = 2200;
+                cout << "\nYou have successfully booked the flight AUS - 123 ..\n";
+                cout << "\nYou can go back to menu and take the ticket.\n";
+            }
+            else if (choice1 == 2)
+            {
+                charges = 2200;
+                cout << "\nYou have successfully booked the flight AUS - 456 ..\n";
+                cout << "\nYou can go back to menu and take the ticket.\n";
+            }
+            else if (choice1 == 3)
+            {
+                charges = 2200;
+                cout << "\nYou have successfully booked the flight AUS - 789 ..\n";
+                cout << "\nYou can go back to menu and take the ticket.\n";
+            }
+            else
+            {
+                cout << "\nInvalid input, shifting to the previous menu..\n";
+
+                flights();
+            }
+
+            cout << "\nPlease enter any kay to go back to main menu: ";
+            cin >> back;
+            if (back == 1)
+            {
+                mainMenu();
+            }
+            else
+            {
+                mainMenu();
+            }
+        }
+        break;
+
+        // Europe.
+        case 6:
+        {
+            // Select flight.
+            cout << "\nWelcome to Europe, Enjoy ..\n";
+            cout << "\nFollowing are the flights: \n";
+            cout << "1. EUR - 123 : (01 - 01 - 2024), (6:00 PM), (2400$)\n";
+            cout << "2. EUR - 456 : (02 - 01 - 2024), (6:00 PM), (2400$)\n";
+            cout << "3. EUR - 789 : (03 - 01 - 2024), (6:00 PM), (2400$)\n";
+
+            cout << "\nPlease select the flight you want to book: ";
+            cin >> choice1;
+
+            if (choice1 == 1)
+            {
+                charges = 2400;
+                cout << "\nYou have successfully booked the flight EUR - 123 ..\n";
+                cout << "\nYou can go back to menu and take the ticket.\n";
+            }
+            else if (choice1 == 2)
+            {
+                charges = 2400;
+                cout << "\nYou have successfully booked the flight EUR - 456 ..\n";
+                cout << "\nYou can go back to menu and take the ticket.\n";
+            }
+            else if (choice1 == 3)
+            {
+                charges = 2400;
+                cout << "\nYou have successfully booked the flight EUR - 789 ..\n";
+                cout << "\nYou can go back to menu and take the ticket.\n";
+            }
+            else
+            {
+                cout << "\nInvalid input, shifting to the previous menu..\n";
+
+                flights();
+            }
+
+            cout << "\nPlease enter any kay to go back to main menu: ";
+            cin >> back;
+            if (back == 1)
+            {
+                mainMenu();
+            }
+            else
+            {
+                mainMenu();
+            }
+        }
+        break;
+
+        default:
+        {
+            cout << "\nInvalid input, Shifting you to the main menu..\n";
+
+            mainMenu();
+        }
+        break;
+        }
+    }
+};
+int Registration ::choice;
+float Registration ::charges;
+
+// End Registration class.
+
 //* ............. End Classes .............
 
 //* ............. Function .............
@@ -83,14 +430,14 @@ void mainMenu()
     cin >> lChoice;
 
     Details d;
-    //* Registration r;
+    Registration r;
     //* Ticket t;
 
     switch (lChoice)
     {
     case 1:
     {
-        cout << "\n\n............ Customers .............\n\n";
+        cout << "\n............ Customers .............\n\n";
 
         // Call information function from Details class.
         d.information();
@@ -111,9 +458,9 @@ void mainMenu()
 
     case 2:
     {
-        cout << "\n\n............ Book a flight using this system .............\n\n";
+        cout << "\n............ Book a flight using this system .............\n\n";
 
-        //* r.flights();
+        r.flights();
 
         break;
     }
