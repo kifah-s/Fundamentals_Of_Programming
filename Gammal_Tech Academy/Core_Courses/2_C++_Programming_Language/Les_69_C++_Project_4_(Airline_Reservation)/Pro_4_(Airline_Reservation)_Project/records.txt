@@ -10,7 +10,7 @@ Customer Gender:
 
 Description:
 
-Destination: 
-Flight cost: 0
+Destination: Europe
+Flight cost: 2400
 _______________________________
 
