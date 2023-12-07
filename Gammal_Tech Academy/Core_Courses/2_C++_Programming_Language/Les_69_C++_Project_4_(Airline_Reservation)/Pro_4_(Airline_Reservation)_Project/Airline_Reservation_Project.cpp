@@ -21,10 +21,49 @@ public:
         mainMenu();
     }
 };
+// End Management class.
+
+// Create details class.
+class Details
+{
+public:
+    // Declare variable.
+    static string name, gender;
+    static int cId;
+    int phoneNum, age;
+    string add;
+    char arr[100];
+
+    void information()
+    {
+        // Receive client details.
+        cout << "Please enter costumer ID: ";
+        cin >> cId;
+
+        cout << "\nPlease enter Name: ";
+        cin >> name;
+
+        cout << "\nPlease enter Age: ";
+        cin >> age;
+
+        cout << "\nPlease enter Address: ";
+        cin >> add;
+
+        cout << "\nPlease enter Gender: ";
+        cin >> gender;
+
+        cout << "\nYour details are saved with us.";
+    }
+};
+int Details ::cId;
+string Details ::name;
+string Details ::gender;
+// End details class.
+
 //* ............. End Classes .............
 
 //* ............. Function .............
-// Create mainMenu function, "Global" function.
+// Create mainMenu function.
 void mainMenu()
 {
     // Declare variable.
@@ -43,9 +82,9 @@ void mainMenu()
     cout << "Please enter your choice: ";
     cin >> lChoice;
 
-    //* Details d;
-    //* registration r;
-    //* ticket r;
+    Details d;
+    //* Registration r;
+    //* Ticket t;
 
     switch (lChoice)
     {
@@ -53,7 +92,8 @@ void mainMenu()
     {
         cout << "\n\n............ Customers .............\n\n";
 
-        //* d.information();
+        // Call information function from Details class.
+        d.information();
 
         cout << "Please enter any kay to go back to \"Main Menu\": ";
         cin >> back;
@@ -128,6 +168,7 @@ void mainMenu()
     }
     }
 }
+// End mainMenu function.
 //* ............. End Function .............
 
 int main()
