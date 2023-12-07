@@ -40,16 +40,16 @@ public:
         cout << "Please enter costumer ID: ";
         cin >> cId;
 
-        cout << "\nPlease enter Name: ";
+        cout << "Please enter Name: ";
         cin >> name;
 
-        cout << "\nPlease enter Age: ";
+        cout << "Please enter Age: ";
         cin >> age;
 
-        cout << "\nPlease enter Address: ";
+        cout << "Please enter Address: ";
         cin >> add;
 
-        cout << "\nPlease enter Gender: ";
+        cout << "Please enter Gender: ";
         cin >> gender;
 
         cout << "\nYour details are saved with us.";
@@ -418,43 +418,45 @@ public:
         // Create and write in File.
         ofstream outf("records.txt");
         {
-            outf << ".......... Kifah Airlines ..........\n";
+            outf << "\n\n.......... Kifah Airlines ..........\n";
             outf << "\n............. Ticket ...............\n\n";
 
             outf << "Customer ID: " << Details::cId << endl;
             outf << "Customer Name: " << Details::name << endl;
             outf << "Customer Gender: " << Details::gender << endl;
 
-            outf << "Description.." << endl
+            outf << "\nDescription:" << endl
                  << endl;
 
-            if (Registration ::choice1 == 1)
+            if (Registration ::choice == 1)
             {
                 destination = "Dubai";
             }
-            else if (Registration ::choice1 == 2)
+            else if (Registration ::choice == 2)
             {
                 destination = "Canada";
             }
-            else if (Registration ::choice1 == 3)
+            else if (Registration ::choice == 3)
             {
                 destination = "US";
             }
-            else if (Registration ::choice1 == 4)
+            else if (Registration ::choice == 4)
             {
                 destination = "UKA";
             }
-            else if (Registration ::choice1 == 5)
+            else if (Registration ::choice == 5)
             {
                 destination = "Australia";
             }
-            else if (Registration ::choice1 == 6)
+            else if (Registration ::choice == 6)
             {
                 destination = "Europe";
             }
 
             outf << "Destination: " << destination << endl;
             outf << "Flight cost: " << Registration ::charges << endl;
+
+            outf << "_______________________________\n\n";
         }
         outf.close();
     }
@@ -478,7 +480,6 @@ public:
     }
 };
 // End Ticket class.
-
 //* ............. End Classes .............
 
 //* ............. Function .............
@@ -514,7 +515,7 @@ void mainMenu()
         // Call information function from Details class.
         d.information();
 
-        cout << "Please enter any kay to go back to \"Main Menu\": ";
+        cout << "\n\nPlease enter any kay to go back to \"Main Menu\": ";
         cin >> back;
 
         if (back == 1)
@@ -552,7 +553,7 @@ void mainMenu()
         {
             t.disBill();
 
-            cout << "\nPlease enter any kay to go back to \"Main Menu\": ";
+            cout << "Please enter any kay to go back to \"Main Menu\": ";
             cin >> back;
 
             if (back == 1)
@@ -573,7 +574,7 @@ void mainMenu()
 
     case 4:
     {
-        cout << "\n\n............ Thank you .............\n\n";
+        cout << "\n............ Thank you .............\n\n\n";
         break;
     }
 
