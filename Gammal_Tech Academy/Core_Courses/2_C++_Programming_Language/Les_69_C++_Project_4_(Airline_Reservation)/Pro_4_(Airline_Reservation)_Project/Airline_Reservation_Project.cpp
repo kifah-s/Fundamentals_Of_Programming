@@ -404,8 +404,80 @@ public:
 };
 int Registration ::choice;
 float Registration ::charges;
-
 // End Registration class.
+
+//  Create Ticket class.
+class Ticket : public Details, Registration
+{
+public:
+    void bill()
+    {
+        // Declare destination variable.
+        string destination = "";
+
+        // Create and write in File.
+        ofstream outf("records.txt");
+        {
+            outf << ".......... Kifah Airlines ..........\n";
+            outf << "\n............. Ticket ...............\n\n";
+
+            outf << "Customer ID: " << Details::cId << endl;
+            outf << "Customer Name: " << Details::name << endl;
+            outf << "Customer Gender: " << Details::gender << endl;
+
+            outf << "Description.." << endl
+                 << endl;
+
+            if (Registration ::choice1 == 1)
+            {
+                destination = "Dubai";
+            }
+            else if (Registration ::choice1 == 2)
+            {
+                destination = "Canada";
+            }
+            else if (Registration ::choice1 == 3)
+            {
+                destination = "US";
+            }
+            else if (Registration ::choice1 == 4)
+            {
+                destination = "UKA";
+            }
+            else if (Registration ::choice1 == 5)
+            {
+                destination = "Australia";
+            }
+            else if (Registration ::choice1 == 6)
+            {
+                destination = "Europe";
+            }
+
+            outf << "Destination: " << destination << endl;
+            outf << "Flight cost: " << Registration ::charges << endl;
+        }
+        outf.close();
+    }
+
+    void disBill()
+    {
+        ifstream ifs("records.txt");
+        {
+            if (!ifs)
+            {
+                cout << "\nFile Error..\n";
+            }
+
+            while (!ifs.eof())
+            {
+                ifs.getline(arr, 100);
+                cout << arr << endl;
+            }
+        }
+        ifs.close();
+    }
+};
+// End Ticket class.
 
 //* ............. End Classes .............
 
@@ -431,7 +503,7 @@ void mainMenu()
 
     Details d;
     Registration r;
-    //* Ticket t;
+    Ticket t;
 
     switch (lChoice)
     {
@@ -469,7 +541,7 @@ void mainMenu()
     {
         cout << "\n\n............ Get your ticket .............\n\n";
 
-        //* t.bill();
+        t.bill();
 
         cout << "Your ticket is printed, you can collect it.\n\n";
 
@@ -478,7 +550,7 @@ void mainMenu()
 
         if (back == 1)
         {
-            //* t.display();
+            t.disBill();
 
             cout << "\nPlease enter any kay to go back to \"Main Menu\": ";
             cin >> back;
