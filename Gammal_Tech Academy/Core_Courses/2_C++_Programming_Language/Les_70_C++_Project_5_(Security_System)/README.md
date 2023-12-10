@@ -1,7 +1,0 @@
-# Security System Project ..
-
-####
-####
-####
-####
-####
