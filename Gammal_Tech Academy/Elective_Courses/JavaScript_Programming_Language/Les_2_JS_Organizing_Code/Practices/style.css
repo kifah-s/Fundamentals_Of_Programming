@@ -1,0 +1,26 @@
+table {
+  background-color: black;
+  color: white;
+  font-size: 32px;
+}
+td {
+  border: 2px solid white;
+  padding: 20px;
+}
+
+.custom-table {
+  background-color: black;
+  color: white;
+  font-size: 32px;
+  width: 500px;
+  height: 300px;
+}
+.custom-row {
+  width: 100%;
+  float: left;
+}
+.custom-colum {
+  float: left;
+  border: 2px solid white;
+  padding: 20px;
+}
