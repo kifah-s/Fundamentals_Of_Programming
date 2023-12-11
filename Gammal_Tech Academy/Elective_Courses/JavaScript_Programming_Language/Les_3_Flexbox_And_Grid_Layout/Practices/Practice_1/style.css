@@ -1,0 +1,33 @@
+/* FlexBox Practices */
+/* Container */
+.custom-flex {
+  display: flex;
+  flex-direction: column;
+  background-color: aquamarine;
+  color: white;
+  font-size: 32px;
+  flex-wrap: wrap;
+  width: 116px;
+}
+.custom-flex-row {
+  display: flex;
+}
+.custom-flex-item {
+  padding: 10px;
+  border: 1px solid white;
+  background-color: aquamarine;
+}
+
+/* Grid Practices */
+.custom-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    font-size: 32px;
+    color: white;
+    width: 117px;
+}
+.custom-grid-item {
+    background-color: aquamarine;
+    border: 1px solid white;
+    padding: 10px;
+}
