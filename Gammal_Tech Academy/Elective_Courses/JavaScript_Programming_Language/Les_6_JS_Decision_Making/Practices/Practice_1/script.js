@@ -108,4 +108,44 @@ if (age === 40) {
 //* Note: in JS language, " === " operator check variable value and variable type.
 */
 //* _______________________________________________________________________
+/*
+let num1 = Number(prompt("Please enter first number:")); //* Enter string.. for example: kifah.
+let proc = prompt("Please enter Mathematical process:");
+let num2 = Number(prompt("Please enter second number:"));
+let result = 0;
+
+if (proc == "+") {
+    result = num1 + num2;
+}
+else if (proc == "-") {
+    result = num1 - num2;
+}
+else if (proc == "*") {
+    result = num1 * num2;
+}
+else if (proc == "/") {
+    result = num1 / num2;
+}
+console.log(`Result is: ${result}`);
+//* NaN: Note a number (Failed to convert to a number).
+*/
+//* _______________________________________________________________________
+/*
+let num1 = Number(prompt("Please enter first number:"));
+let proc = prompt("Please enter Mathematical process:");
+let num2 = Number(prompt("Please enter second number:"));
+let result = 0;
+
+if (proc == "+" || proc == "plus") {
+    result = num1 + num2;
+} else if (proc == "-" || proc == "minus") {
+  result = num1 - num2;
+} else if (proc == "*" || proc == "multiply") {
+    result = num1 * num2;
+} else if (proc == "/" || proc == "division") {
+    result = num1 / num2;
+}
+console.log(`Result is: ${result}`);
+*/
+//* _______________________________________________________________________
 
