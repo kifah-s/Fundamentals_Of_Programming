@@ -128,3 +128,74 @@ if (result < 500 && result >= 400) {
 }
 */
 //* ___________________________________________________________
+/*
+let math = 0,
+sciences = 0,
+arabic = 0,
+religion = 0,
+english;
+
+math = Number(prompt("please enter Math grade: "));
+sciences = Number(prompt("please enter Sciences grade: "));
+arabic = Number(prompt("please enter Arabic grade: "));
+religion = Number(prompt("please enter Religion grade: "));
+english = Number(prompt("please enter English grade: "));
+
+let result = math + sciences + arabic + religion + english;
+
+if (result < 500 && result >= 400) {
+    console.log("Excellent");
+} else if (result >= 200) {
+    console.log("Good");
+} else if (result < 200) {
+    console.log("Fail");
+}
+*/
+//* ___________________________________________________________
+/*
+let math = 0,
+sciences = 0,
+arabic = 0,
+religion = 0,
+english;
+
+math = Number(prompt("please enter Math grade: "));
+sciences = Number(prompt("please enter Sciences grade: "));
+arabic = Number(prompt("please enter Arabic grade: "));
+religion = Number(prompt("please enter Religion grade: "));
+english = Number(prompt("please enter English grade: "));
+
+let result = math + sciences + arabic + religion + english;
+
+if (result < 200) {
+  console.log("Fail");
+} else if (result <= 400) {
+  console.log("Good");
+} else {
+    console.log("Excellent");
+}
+*/
+//* ___________________________________________________________
+/*
+let grade = prompt("Please enter your grade: ");
+
+switch (grade) {
+  case "excellent":
+    console.log("Grade is greater than 400");
+    break;
+
+  case "good":
+    console.log("Grade is greater than 200");
+    break;
+
+  case "fail":
+    console.log("Grade is smaller than 200");
+    break;
+
+  default:
+    console.log("Please try again");
+    break;
+}
+*/
+//* ___________________________________________________________
+
