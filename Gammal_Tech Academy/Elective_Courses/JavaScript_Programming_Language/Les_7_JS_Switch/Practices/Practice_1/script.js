@@ -79,4 +79,52 @@ default:
 }
 */
 //* ___________________________________________________________
+/*
+let math = 0,
+  sciences = 0,
+  arabic = 0,
+  religion = 0,
+  english;
 
+  math = Number(prompt("please enter Math grade: "));
+  sciences = Number(prompt("please enter Sciences grade: "));
+  arabic = Number(prompt("please enter Arabic grade: "));
+  religion = Number(prompt("please enter Religion grade: "));
+  english = Number(prompt("please enter English grade: "));
+  
+  let result = math + sciences + arabic + religion + english;
+  
+  if (result < 500 && result >= 400) {
+  console.log("Excellent");
+} else if (result < 400 && result >= 200) {
+    console.log("Good");
+} else if (result < 200) {
+  console.log("Fail");
+}
+*/
+//* ___________________________________________________________
+/*
+let subjectMarks = [];
+
+subjectMarks[0] = Number(prompt("please enter Math grade: "));
+subjectMarks[1] = Number(prompt("please enter Sciences grade: "));
+subjectMarks[2] = Number(prompt("please enter Arabic grade: "));
+subjectMarks[3] = Number(prompt("please enter Religion grade: "));
+subjectMarks[4] = Number(prompt("please enter English grade: "));
+
+let result =
+subjectMarks[0] +
+subjectMarks[1] +
+subjectMarks[2] +
+subjectMarks[3] +
+subjectMarks[4];
+
+if (result < 500 && result >= 400) {
+    console.log("Excellent");
+} else if (result < 400 && result >= 200) {
+    console.log("Good");
+} else if (result < 200) {
+    console.log("Fail");
+}
+*/
+//* ___________________________________________________________
