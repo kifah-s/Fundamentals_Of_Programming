@@ -198,4 +198,15 @@ switch (grade) {
 }
 */
 //* ___________________________________________________________
+/*
+let grade = prompt("Please enter your grade: ");
 
+if (grade === "excellent") {
+    console.log("Grade is greater than 400");
+} else if (grade === "good") {
+    console.log("Grade is greater than 200");
+} else if (grade === "fail") {
+    console.log("Grade is smaller than 200");
+}
+*/
+//* ___________________________________________________________
