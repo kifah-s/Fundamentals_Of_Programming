@@ -58,3 +58,41 @@ console.log(friend);
 console.log(years);
 */
 //* ____________________________________________________
+/*
+const friend = [];
+
+console.log(friend);
+console.log(friend[0]);
+*/
+//* ____________________________________________________
+/*
+const friend = ["kifah", "douha"];
+console.log(friend);
+
+//* Add Elements.
+friend.push("rami");
+friend.push("mona");
+console.log(friend);
+
+//* Remove Elements.
+friend.pop();
+friend.pop();
+console.log(friend);
+*/
+//* ____________________________________________________
+/*
+const friend = ["kifah", "douha"];
+console.log(friend);
+
+//* Add Elements.
+let pu = friend.push("rami");
+console.log(friend);
+console.log(pu);
+
+//* Remove Elements.
+let po = friend.pop();
+console.log(friend);
+console.log(po);
+*/
+//* ____________________________________________________
+
