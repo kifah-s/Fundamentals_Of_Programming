@@ -127,3 +127,97 @@ hasFriend("kifah", friend); //* True
 hasFriend("saloum", friend); //* False
 */
 //* ____________________________________________________
+/*
+function hasFriend(friendName, friend) {
+  return friend.includes(friendName);
+}
+
+const friend = ["kifah", "douha"];
+
+console.log(hasFriend("kifah", friend)); //* True
+console.log(hasFriend("saloum", friend)); //* False
+*/
+//* ____________________________________________________
+/*
+const fri_1 = ["kifah", "douha"];
+const fri_2 = ["saloum", "alshebel"];
+
+const fri_3 = fri_1.concat(fri_2);
+
+console.log(fri_3); //* (4) ['kifah', 'douha', 'saloum', 'alshebel']
+*/
+//* ____________________________________________________
+/*
+let fri_1 = ["kifah", "douha"];
+let fri_2 = ["saloum", "alshebel"];
+
+let fri_3 = fri_1.concat(fri_2);
+
+console.log(fri_3); //* (4) ['kifah', 'douha', 'saloum', 'alshebel']
+*/
+//* ____________________________________________________
+/*
+let fri_1 = ["kifah", "douha"];
+
+fri_1.concat(["saloum", "alshbel"]);
+
+console.log(fri_1); //* (2) ['kifah', 'douha']
+*/
+//* ____________________________________________________
+/*
+let fri_1 = ["kifah", "douha"];
+
+let fri_2 = fri_1.concat(["saloum", "alshbel"]);
+
+console.log(fri_2); //* (4) ['kifah', 'douha', 'saloum', 'alshbel']
+*/
+//* ____________________________________________________
+/*
+let fri_1 = ["kifah", "douha"];
+
+fri_1 = fri_1.concat(["saloum", "alshbel"]);
+
+console.log(fri_1); //* (4) ['kifah', 'douha', 'saloum', 'alshbel']
+*/
+//* ____________________________________________________
+/*
+const fri_1 = ["kifah", "douha"];
+
+fri_1 = fri_1.concat(["saloum", "alshbel"]);
+
+console.log(fri_1); //* Uncaught TypeError: Assignment to constant variable.
+*/
+//* ____________________________________________________
+/*
+const fri_1 = ["kifah", "douha", "amar", "maram", "reham", "hanen"];
+
+fri_1.splice();
+
+console.log(fri_1); //* (6) ['kifah', 'douha', 'amar', 'maram', 'reham', 'hanen']
+*/
+//* ____________________________________________________
+/*
+const fri_1 = ["kifah", "douha", "amar", "maram", "reham", "hanen"];
+
+const fri_2 = fri_1.splice();
+
+console.log(fri_2); //* []
+*/
+//* ____________________________________________________
+/*
+const fri_1 = ["kifah", "douha", "amar", "maram", "reham", "hanen"];
+
+const fri_2 = fri_1.splice(2);
+
+console.log(fri_2); //* (4) ['amar', 'maram', 'reham', 'hanen']
+*/
+//* ____________________________________________________
+/*
+const fri_1 = ["kifah", "douha", "amar", "maram", "reham", "hanen"];
+
+fri_1.splice(2);
+
+console.log(fri_1); //* (2) ['kifah', 'douha']
+*/
+//* ____________________________________________________
+
