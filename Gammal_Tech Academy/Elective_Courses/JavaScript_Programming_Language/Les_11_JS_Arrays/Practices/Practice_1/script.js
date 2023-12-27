@@ -95,4 +95,35 @@ console.log(friend);
 console.log(po);
 */
 //* ____________________________________________________
+/*
+const friend = ["kifah", "douha"];
 
+friend.push("rami");
+
+let eleIndex = friend.indexOf("rami"); 
+let ele2Index = friend.indexOf("saloum"); 
+
+console.log(eleIndex); //* 2
+console.log(ele2Index); //* -1
+*/
+//* ____________________________________________________
+/*
+const friend = ["kifah", "douha"];
+
+friend.push("rami");
+
+console.log(friend.includes("rami")); //* True
+console.log(friend.includes("saloum")); //* False
+*/
+//* ____________________________________________________
+/*
+function hasFriend(friendName, friend) {
+  console.log(friend.includes(friendName));
+}
+
+const friend = ["kifah", "douha"];
+
+hasFriend("kifah", friend); //* True
+hasFriend("saloum", friend); //* False
+*/
+//* ____________________________________________________
