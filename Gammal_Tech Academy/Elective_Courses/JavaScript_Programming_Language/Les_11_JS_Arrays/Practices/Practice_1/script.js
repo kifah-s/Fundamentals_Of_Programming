@@ -30,3 +30,31 @@ console.log(friend[3]);
 console.log(friend[4]);
 */
 //* ____________________________________________________
+/*
+const years = [50, 40, 30, 20, 10];
+
+console.log(years);
+*/
+//* ____________________________________________________
+/*
+const friend = ["kifah", "douha", "melad", "amer", "amar"];
+const years = [50, 40, 30, 20, 10];
+
+friend.push("ale");
+years.push(5);
+
+console.log(friend);
+console.log(years);
+*/
+//* ____________________________________________________
+/*
+const friend = ["kifah", "douha", "melad", "amer", "amar"];
+const years = [50, 40, 30, 20, 10];
+
+friend.unshift("saloum");
+years.unshift(60);
+
+console.log(friend);
+console.log(years);
+*/
+//* ____________________________________________________
