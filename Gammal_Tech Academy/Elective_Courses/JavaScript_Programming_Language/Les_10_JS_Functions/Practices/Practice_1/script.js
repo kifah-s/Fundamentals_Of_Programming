@@ -77,4 +77,226 @@ function allowViewSite(year) {
 allowViewSite(1996);
 */
 //* _______________________________________________________
+/*
+function calcAge(year) {
+  let age = 2023 - year;
+  console.log(age);
 
+  return age;
+}
+
+function allowViewSite(year) {
+  let age = calcAge(year);
+  
+  if (age >= 18) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function authorize(year) {
+  let auth = allowViewSite(year);
+  
+  if (auth == true) {
+    console.log("Can enter site.");
+  } else {
+    console.log("Can Note entre site.");
+  }
+}
+
+authorize(1996);
+*/
+//* _______________________________________________________
+/*
+function calcAge(year) {
+  let age = 2023 - year;
+  console.log(age);
+  
+  return age;
+}
+
+function allowViewSite(year) {
+  let age = calcAge(year);
+  
+  if (age >= 18) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function authorize(year) {
+  if (allowViewSite(year) == true) {
+    console.log("Can enter site.");
+  } else {
+    console.log("Can Note entre site.");
+  }
+}
+
+authorize(1996);
+*/
+//* _______________________________________________________
+/*
+function calcAge(year) {
+  let age = 2023 - year;
+  console.log(age);
+
+  return age;
+}
+
+function allowViewSite(year) {
+  let age = calcAge(year);
+
+  if (age >= 18) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function authorize(year) {
+  if (allowViewSite(year)) {
+    console.log("Can enter site.");
+  } else {
+    console.log("Can Note entre site.");
+  }
+}
+
+authorize(1996);
+*/
+//* _______________________________________________________
+/*
+function calcAge(year) {
+  let age = 2023 - year;
+  console.log(age);
+  
+  return age;
+}
+
+function allowViewSite(year) {
+  let age = calcAge(year);
+  
+  if (age >= 18) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function authorize(year) {
+  if (allowViewSite(year)) {
+    console.log("Can enter site.");
+  } else {
+    console.log("Can Note entre site.");
+  }
+}
+
+authorize(1996);
+authorize(1990);
+authorize(2000);
+authorize(2010);
+authorize(2020);
+*/
+//* _______________________________________________________
+/*
+function calcAge(year) {
+  const age = 2023 - year;
+  console.log(age);
+
+  return age;
+}
+
+function allowViewSite(year) {
+  let age = calcAge(year);
+  
+  if (age >= 18) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function authorize(year) {
+  if (allowViewSite(year)) {
+    console.log("Can enter site.");
+  } else {
+    console.log("Can Note entre site.");
+  }
+}
+
+authorize(1996);
+authorize(1990);
+authorize(2000);
+authorize(2010);
+authorize(2020);
+*/
+//* _______________________________________________________
+/*
+let calcAge = (year) => {
+  const age = 2023 - year;
+  console.log(age);
+
+  return age;
+};
+
+function allowViewSite(year) {
+  let age = calcAge(year);
+  
+  if (age >= 18) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function authorize(year) {
+  if (allowViewSite(year)) {
+    console.log("Can enter site.");
+  } else {
+    console.log("Can Note entre site.");
+  }
+}
+
+authorize(1996);
+authorize(1990);
+authorize(2000);
+authorize(2010);
+authorize(2020);
+*/
+//* _______________________________________________________
+/*
+const currentYear = 2023;
+
+let calcAge = (year) => {
+  const age = currentYear - year;
+  console.log(age);
+  
+  return age;
+};
+
+function allowViewSite(year) {
+  let age = calcAge(year);
+  
+  if (age >= 18) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function authorize(year) {
+  if (allowViewSite(year)) {
+    console.log("Can enter site.");
+  } else {
+    console.log("Can Note entre site.");
+  }
+}
+
+authorize(1996);
+authorize(1990);
+authorize(2000);
+authorize(2010);
+authorize(2020);
+*/
+//* _______________________________________________________
