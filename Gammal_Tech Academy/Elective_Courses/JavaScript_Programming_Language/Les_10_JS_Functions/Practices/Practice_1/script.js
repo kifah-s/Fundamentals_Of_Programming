@@ -266,7 +266,8 @@ authorize(2020);
 */
 //* _______________________________________________________
 /*
-const currentYear = 2023;
+* Global Variable.
+const currentYear = 2023; 
 
 let calcAge = (year) => {
   const age = currentYear - year;
