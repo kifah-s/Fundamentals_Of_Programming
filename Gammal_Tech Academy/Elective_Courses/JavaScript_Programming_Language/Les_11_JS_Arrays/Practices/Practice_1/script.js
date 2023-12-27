@@ -220,4 +220,36 @@ fri_1.splice(2);
 console.log(fri_1); //* (2) ['kifah', 'douha']
 */
 //* ____________________________________________________
+/*
+const fri_1 = ["kifah", "douha", "amar", "maram", "reham", "hanen"];
 
+fri_1.splice(0, 2);
+
+console.log(fri_1); //* (4) ['amar', 'maram', 'reham', 'hanen']
+*/
+//* ____________________________________________________
+/*
+const fri_1 = ["kifah", "douha", "amar", "maram", "reham", "hanen"];
+
+const fri_2 = fri_1.splice(0, 2);
+
+console.log(fri_2); //* (2) ['kifah', 'douha']
+*/
+//* ____________________________________________________
+/*
+const fri_1 = ["kifah", "douha", "amar", "maram", "reham", "hanen"];
+
+const fri_2 = fri_1.splice(0, 2);
+
+console.log(fri_1); //* (4) ['amar', 'maram', 'reham', 'hanen']
+console.log(fri_2); //* (2) ['kifah', 'douha']
+*/
+//* ____________________________________________________
+/*
+const fri_1 = ["kifah", "douha", "amar", "maram", "reham", "hanen"];
+
+const fri_2 = fri_1.splice(0, 2);
+
+console.log(fri_1, fri_2); //* (4) ['amar', 'maram', 'reham', 'hanen'] (2) ['kifah', 'douha']
+*/
+//* ____________________________________________________
