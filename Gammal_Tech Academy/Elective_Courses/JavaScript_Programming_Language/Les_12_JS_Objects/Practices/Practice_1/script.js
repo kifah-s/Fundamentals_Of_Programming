@@ -187,4 +187,169 @@ console.log(users[1].firstName); //* undefined
 console.log(users[1].friends); //* undefined
 */
 //* _____________________________________________________
+/*
+let users = [
+    {
+        firstName: "kifah",
+        friends: ["ammar", "wesam"],
+    },
+    {
+        lastName: "alshbeel",
+        age: 25,
+    },
+];
 
+console.log(users[0]["firstName"]); //* kifah
+console.log(users[0]["friends"]); //* (2) ['ammar', 'wesam']
+
+console.log(users[1]["lastName"]); //* alshbeel
+console.log(users[1]["age"]); //* 25
+
+console.log(users[0]["lastName"]); //* undefined
+console.log(users[0]["age"]); //* undefined
+
+console.log(users[1]["firstName"]); //* undefined
+console.log(users[1]["friends"]); //* undefined
+*/
+//* _____________________________________________________
+/*
+let users = [
+    {
+        firstName: "kifah",
+        friends: ["ammar", "wesam"],
+    },
+    {
+        lastName: "alshbeel",
+        age: 25,
+    },
+];
+
+console.log(users[0]["firstName"]); //* kifah
+console.log(users[0].firstName); //* kifah
+*/
+//* _____________________________________________________
+/*
+let users = [
+    {
+        firstName: "kifah",
+        friends: ["ammar", "wesam"],
+    },
+    {
+        lastName: "alshbeel",
+        age: 25,
+    },
+];
+
+console.log(users[0]["firstName"]); //* kifah
+console.log(users[0].firstName); //* kifah
+*/
+//* _____________________________________________________
+/*
+let users = [
+    {
+        firstName: "kifah",
+        friends: ["ammar", "wesam"],
+    },
+    {
+        lastName: "alshbeel",
+        age: 25,
+    },
+];
+
+console.log(users[0]["firstName"], users[0].firstName); //* kifah kifah
+*/
+//* _____________________________________________________
+/*
+let users = [
+  {
+    firstName: "kifah",
+    lastName: "saloum",
+    age: 26,
+  },
+  {
+      firstName: "douha",
+    lastName: "alshbeel",
+    age: 25,
+  },
+];
+
+let usersName = prompt("Please enter your name: ");
+
+users[0].firstName = usersName;
+
+console.log(users); //* (2) [{…}, {…}]
+*/
+//* _____________________________________________________
+/*
+let users = [
+  {
+    firstName: "kifah",
+    lastName: "saloum",
+    age: 26,
+},
+{
+    firstName: "douha",
+    lastName: "alshbeel",
+    age: 25,
+},
+];
+
+let usersName = prompt("Please enter your name: ");
+
+users[0]["firstName"] = usersName;
+
+console.log(users); //* (2) [{…}, {…}]
+*/
+//* _____________________________________________________
+/*
+let users = {
+  firstName: "kifah",
+  lastName: "saloum",
+  age: 26,
+  fun: function printNameAndAge(userName, userAge) {
+      console.log(`name: ${this.firstName}, Age: ${this.age}`);
+    },
+};
+
+users.fun(); //* name: kifah, Age: 26
+*/
+//* _____________________________________________________
+/*
+let users = {
+  firstName: "kifah",
+  lastName: "saloum",
+  age: 26,
+  printNameAndAge: function (userName, userAge) {
+      console.log(`name: ${this.firstName}, Age: ${this.age}`);
+    },
+};
+
+users.printNameAndAge(); //* name: kifah, Age: 26
+*/
+//* _____________________________________________________
+/*
+let users = {
+  firstName: "kifah",
+  lastName: "saloum",
+  age: 26,
+  printNameAndAge: function () {
+      console.log(`name: ${this.firstName}, Age: ${this.age}`);
+    },
+};
+
+users.printNameAndAge(); //* name: kifah, Age: 26
+*/
+//* _____________________________________________________
+/*
+let users = {
+    firstName: "kifah",
+    lastName: "saloum",
+    age: 26,
+    printNameAndAge: function () {
+        console.log(`name: ${this.firstName} ${this.lastName}, Age: ${this.age}`);
+    },
+};
+
+users.printNameAndAge(); //* name: kifah saloum, Age: 26
+*/
+//* _____________________________________________________
