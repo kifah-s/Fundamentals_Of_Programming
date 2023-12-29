@@ -120,17 +120,17 @@ if (exi == false) {
 */
 //* ________________________________________________________
 /*
-function checkBook(value, books) {
+function checkBook(value, array) {
   let exi = false;
 
-  for (let i = 0; i < books.length; i++) {
-    if (valueFromUser == books[i]) {
-        console.log(`${valueFromUser} Existing.`);
+  for (let i = 0; i < array.length; i++) {
+    if (value == array[i]) {
+        console.log(`${value} Existing.`);
         exi = true;
     }
 }
 if (exi == false) {
-    console.log(`${valueFromUser} NOT Existing.`);
+    console.log(`${value} NOT Existing.`);
 }
 }
 
@@ -149,13 +149,13 @@ function checkBook(value, array) {
   let exi = false;
 
   for (let i = 0; i < array.length; i++) {
-      if (valueFromUser == array[i]) {
-      console.log(`${valueFromUser} Existing.`);
+      if (value == array[i]) {
+      console.log(`${value} Existing.`);
       exi = true;
     }
   }
   if (exi == false) {
-    console.log(`${valueFromUser} NOT Existing.`);
+    console.log(`${value} NOT Existing.`);
 }
 }
 
@@ -171,13 +171,13 @@ function checkBook(value, array) {
     let exi = false;
 
     for (let i = 0; i < array.length; i++) {
-        if (valueFromUser == array[i]) {
-            console.log(`${valueFromUser} Existing.`);
+        if (value == array[i]) {
+            console.log(`${value} Existing.`);
             exi = true;
         }
     }
     if (exi == false) {
-        console.log(`${valueFromUser} NOT Existing.`);
+        console.log(`${value} NOT Existing.`);
     }
     console.log("Array is empty");
 }
@@ -189,3 +189,123 @@ let valueFromUser = prompt("Please enter Book name your search: ");
 checkBook(valueFromUser, books);
 */
 //* ________________________________________________________
+/*
+function checkBook(value, array) {
+  let exi = false;
+
+  for (let i = 0; i < array.length; i++) {
+      if (value == array[i]) {
+          console.log(`${value} Existing.`);
+      exi = true;
+      break;
+    }
+  }
+  if (exi == false) {
+    console.log(`${value} NOT Existing.`);
+}
+}
+
+let books = ["Book 1", "Book 2", "Book 3"];
+let valueFromUser = prompt("Please enter Book name your search: ");
+
+checkBook(valueFromUser, books);
+*/
+//* ________________________________________________________
+/*
+function checkBook(value, array) {
+    let exi = false;
+    
+    for (let i = 0; i < array.length; i++) {
+        if (value == array[i]) {
+            console.log(`${value} Existing.`);
+            exi = true;
+            return 0;
+        }
+    }
+    if (exi == false) {
+        console.log(`${value} NOT Existing.`);
+    }
+}
+
+let books = ["Book 1", "Book 2", "Book 3"];
+let valueFromUser = prompt("Please enter Book name your search: ");
+
+checkBook(valueFromUser, books);
+*/
+//* ________________________________________________________
+/*
+function checkBook(value, array) {
+  let exi = false;
+  
+  for (let i = 0; i < array.length; i++) {
+      if (value == array[0]) {
+          continue;
+    }
+    if (value == array[i]) {
+        console.log(`${value} Existing.`);
+        exi = true;
+        return 0;
+    }
+}
+if (exi == false) {
+    console.log(`${value} NOT Existing.`);
+}
+}
+
+let books = ["Book 1", "Book 2", "Book 3"];
+let valueFromUser = prompt("Please enter Book name your search: ");
+
+checkBook(valueFromUser, books);
+*/
+//* ________________________________________________________
+/*
+function checkBook(value, array) {
+  let exi = false;
+
+  for (let i = 0; i < array.length; i++) {
+    if (value == "Book 2") {
+      continue;
+    }
+    if (value == array[i]) {
+      console.log(`${value} Existing.`);
+      exi = true;
+      return 0;
+    }
+  }
+  if (exi == false) {
+    console.log(`${value} NOT Existing.`);
+  }
+}
+
+let books = ["Book 1", "Book 2", "Book 3"];
+let valueFromUser = prompt("Please enter Book name your search: ");
+
+checkBook(valueFromUser, books);
+*/
+//* ________________________________________________________
+/*
+function checkBook(value, array) {
+  let exi = false;
+  let i = 0;
+  
+  while (i < array.length) {
+      if (value == array[i]) {
+          console.log(`${value} Existing.`);
+          exi = true;
+          return 0;
+        }
+        
+        i++;
+    }
+    if (exi == false) {
+        console.log(`${value} NOT Existing.`);
+    }
+}
+
+let books = ["Book 1", "Book 2", "Book 3"];
+let valueFromUser = prompt("Please enter Book name your search: ");
+
+checkBook(valueFromUser, books);
+*/
+//* ________________________________________________________
+
