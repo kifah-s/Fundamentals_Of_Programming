@@ -308,4 +308,29 @@ let valueFromUser = prompt("Please enter Book name your search: ");
 checkBook(valueFromUser, books);
 */
 //* ________________________________________________________
+/*
+function checkBook(value, array) {
+  let exi = false;
 
+  for (let i = array.length; i >= 0; i--) {
+      if (value == array[i]) {
+          console.log(`${value} Existing.`);
+          exi = true;
+          return 0;
+        }
+    }
+    if (exi == false) {
+        console.log(`${value} NOT Existing.`);
+    }
+}
+
+let books = ["Book 1", "Book 2", "Book 3"];
+let valueFromUser = prompt("Please enter Book name your search: ");
+
+checkBook(valueFromUser, books);
+*/
+//* ________________________________________________________
+/*
+debugger;
+*/
+//* ________________________________________________________
