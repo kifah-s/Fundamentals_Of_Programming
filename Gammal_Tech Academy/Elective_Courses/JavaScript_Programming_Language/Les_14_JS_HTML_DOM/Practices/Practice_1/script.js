@@ -98,4 +98,105 @@ ele3.addEventListener("click", function () {
 });
 */
 //* ______________________________________________________
+/*
+let elements = document.querySelectorAll('.content div');
 
+console.log(elements[0]);
+console.log(elements[1]);
+console.log(elements[2]);
+*/
+//* ______________________________________________________
+/*
+let elements = document.querySelectorAll(".content div");
+
+console.log(elements);
+console.log(elements[0]);
+console.log(elements[1]);
+console.log(elements[2]);
+
+elements[0].addEventListener("click", function () {
+  if (elements[0].innerHTML == 1) {
+      elements[0].innerHTML = "Good";
+    } else {
+        elements[0].innerHTML = 1;
+    }
+});
+
+elements[1].addEventListener("click", function () {
+  if (elements[1].innerHTML == 2) {
+      elements[1].innerHTML = "Good";
+    } else {
+        elements[1].innerHTML = 2;
+    }
+});
+
+elements[2].addEventListener("click", function () {
+    if (elements[2].innerHTML == 3) {
+        elements[2].innerHTML = "Good";
+    } else {
+        elements[2].innerHTML = 3;
+    }
+});
+*/
+//* ______________________________________________________
+/*
+let elements = document.getElementsByTagName("div");
+console.log(elements);
+*/
+//* ______________________________________________________
+/*
+let elements = document.getElementById("content");
+console.log(elements);
+
+let ele = elements.getElementsByTagName("div");
+console.log(ele);
+*/
+//* ______________________________________________________
+/*
+let elements = document.getElementById("content");
+console.log(elements);
+
+let ele = elements.getElementsByTagName("div");
+console.log(ele);
+
+console.log(ele[0]);
+console.log(ele[1]);
+console.log(ele[2]);
+*/
+//* ______________________________________________________
+/*
+let elements = document.getElementById("content");
+console.log(elements);
+
+let ele = elements.getElementsByTagName("div");
+console.log(ele);
+
+console.log(ele[0]);
+console.log(ele[1]);
+console.log(ele[2]);
+
+function ele_0() {
+    ele[0].style.backgroundColor = "red";
+}
+
+function ele_1() {
+    ele[1].style.backgroundColor = "red";
+}
+
+function ele_2() {
+    ele[2].style.backgroundColor = "red";
+}
+
+ele_0();
+ele_1();
+ele_2();
+*/
+//* ______________________________________________________
+/*
+let newElement = document.createElement("div");
+newElement.innerHTML = "New Element"
+console.log(newElement);
+
+document.body.append(newElement);
+*/
+//* ______________________________________________________

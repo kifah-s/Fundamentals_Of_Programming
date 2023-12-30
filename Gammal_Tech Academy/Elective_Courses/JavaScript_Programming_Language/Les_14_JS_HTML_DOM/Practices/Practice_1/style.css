@@ -22,14 +22,14 @@ body {
   color: white;
 }
 
-.content {
+#content {
   font-size: 50px;
   margin-top: 25px;
   display: flex;
   flex-direction: row;
 }
 
-.content > div {
+#content > div {
   background-color: aquamarine;
   margin: auto;
   width: 20vw;
