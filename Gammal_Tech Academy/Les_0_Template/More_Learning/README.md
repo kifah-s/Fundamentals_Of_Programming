@@ -1,6 +1,6 @@
 # More Learning ..
 
-**INFO_1 : ""**
+**INFO_1: ""**
 
 "." **()**
 
