@@ -122,13 +122,47 @@ nav a {
 }
 
 .about_section > .about_info > .about_img > img {
-  height: 430px;
+  height: 480px;
 }
 /** End About Section */
 
+/** Start Skills Section */
+.skills_section > .skills_title {
+  text-align: center;
+  padding: 15px 0px;
+  font-size: 20px;
+}
 
+.skills_section > .skills_info {
+  display: flex;
+  justify-content: space-between;
+}
 
+.skills_section > .skills_info > .skills_1 > .skill_a {
+  background-color: var(--gray);
+  margin: 10px 0px;
+  color: var(--white);
+  height: 35px;
+  width: 250px;
+  border-radius: 10px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.skills_section > .skills_info > .skills_2 > .skill_b {
+  background-color: var(--gray);
+  margin: 10px 0px;
+  color: var(--white);
+  height: 57px;
+  width: 250px;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/** End Skills Section */
 
 /** End Sections */
