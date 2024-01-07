@@ -232,9 +232,35 @@ nav a {
 /** End Projects Section */
 
 /** Start Experience Section */
+.experience_section > .experience_title {
+  text-align: center;
+  padding: 15px 0px;
+  font-size: 20px;
+}
 
+.experience_section > .experience_info {
+  display: flex;
+  justify-content: space-between;
+}
 
+.experience_section > .experience_info > .info {
+  display: flex;
+  flex-direction: column;
+}
 
+.experience_section > .experience_info > .info > .line {
+  background-color: var(--black);
+  height: 100px;
+  width: 3px;
+}
+
+.experience_section > .experience_info > .info > div > p > span {
+  font-weight: bold;
+}
+
+.experience_section > .experience_info > .img {
+  width: auto;
+}
 /** End Experience Section */
 
 /** End Sections */
