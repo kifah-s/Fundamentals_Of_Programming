@@ -195,7 +195,7 @@ nav a {
 .projects_section > .projects_info > .projects > img {
   width: 350px;
   height: 300px;
-  border-radius: 20px;
+  border-radius: 20px 20px 0px 0px;
 }
 
 .projects_section > .projects_info > .projects > h3 {
