@@ -433,7 +433,7 @@ footer > .footer_info > .footer_title > h3 > span {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) and (max-width: 768px) {
+@media only screen and (min-width: 601px) and (max-width: 768px) {
   /** Header */
   header {
     flex-direction: column;
@@ -512,7 +512,7 @@ footer > .footer_info > .footer_title > h3 > span {
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 992px) {
+@media only screen and (min-width: 769px) and (max-width: 992px) {
   /** Header */
   header {
     flex-direction: column;
