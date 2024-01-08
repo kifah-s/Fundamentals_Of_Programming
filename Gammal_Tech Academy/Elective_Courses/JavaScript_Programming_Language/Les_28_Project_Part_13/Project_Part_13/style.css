@@ -547,9 +547,7 @@ footer > .footer_info > .footer_title > h3 > span {
     align-items: center;
     text-align: center;
   }
-  .about_section > .about_info > .about_img > img {
-    /* display: none; */
-  }
+  
 
   /** Skills Section */
   .skills_section > .skills_info > .skills_img {
@@ -569,13 +567,6 @@ footer > .footer_info > .footer_title > h3 > span {
   }
 
   /** Experience Section */
-  .experience_section > .experience_info {
-    /* flex-direction: column; */
-  }
-  .experience_section > .experience_info > .info {
-    /* text-align: center; */
-    /* align-items: center; */
-  }
   .experience_section > .experience_info > .img {
     margin-top: 250px;
     width: 300px;
