@@ -208,16 +208,17 @@ nav a {
   margin: 20px 50px;
 }
 
-.projects_section > .projects_info > .projects > .buttons > div {
+.projects_section > .projects_info > .projects > .buttons > button {
   background-color: var(--red);
+  border: 0;
   border-radius: 5px;
-  padding: 2px;
+  padding: 6px;
   width: 100px;
   color: var(--white);
   transition: 0.7s;
 }
 
-.projects_section > .projects_info > .projects > .buttons > div:hover {
+.projects_section > .projects_info > .projects > .buttons > button:hover {
   background-color: var(--gray);
   cursor: pointer;
 }
@@ -262,5 +263,19 @@ nav a {
   width: auto;
 }
 /** End Experience Section */
+
+/** Start Contact us Section */
+.contact_section {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.contact_section > .contact_title {
+  text-align: center;
+  padding-bottom: 25px;
+  font-size: 20px;
+}
+
+/** End Contact us Section */
 
 /** End Sections */
