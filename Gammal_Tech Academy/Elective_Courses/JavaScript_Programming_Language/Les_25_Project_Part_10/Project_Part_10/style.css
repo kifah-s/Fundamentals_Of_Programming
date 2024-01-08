@@ -273,9 +273,52 @@ nav a {
 .contact_section > .contact_title {
   text-align: center;
   padding-bottom: 25px;
+  padding-top: 15px;
   font-size: 20px;
 }
 
+.contact_section > .contact_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact_section > .contact_info > form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.contact_section > .contact_info > form > input {
+  margin-bottom: 35px;
+  border: none;
+  height: 25px;
+  border-radius: 5px;
+  background-color: var(--gray);
+  color: var(--white);
+  height: 40px;
+  padding: 10px;
+}
+
+.contact_section > .contact_info > form > input[name="massage"] {
+  height: 250px;
+  text-align: start;
+}
+
+.contact_section > .contact_info > form > input[name="btn"] {
+  width: 100px;
+  margin-left: 40%;
+  height: 35px;
+  font-size: medium;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.contact_section > .contact_info > form > input[name="btn"]:hover {
+  cursor: pointer;
+  background-color: var(--white);
+  color: var(--black);
+}
 /** End Contact us Section */
 
 /** End Sections */
