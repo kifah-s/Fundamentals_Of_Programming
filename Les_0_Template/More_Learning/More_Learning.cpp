@@ -1,5 +1,5 @@
 
-//* >>>>> Lesson Summary <<<<< *//
+//* >>>>> More Learning <<<<< *//
 
 #include <iostream>
 #include <ctime>
@@ -8,17 +8,17 @@ using namespace std;
 
 //* Functions ..
 
-// Print Lesson Summary / Function.
-void lessonSummaryFun()
+// Print More Learning / Function.
+void moreLearningFun()
 {
-    cout << "\nLesson Summary ..\n\n";
+    cout << "\nMore Learning ..\n\n";
 }
 
 //* End Functions ..
 
 int main()
 {
-    lessonSummaryFun();
+    moreLearningFun();
 
     //* ________________________________________________________________
 

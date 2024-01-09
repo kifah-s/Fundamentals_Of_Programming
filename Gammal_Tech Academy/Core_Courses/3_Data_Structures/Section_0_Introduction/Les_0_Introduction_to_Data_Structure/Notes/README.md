@@ -1,3 +1,3 @@
 # Notes ..
 
-**N_1:** "Hello, Data Structures."
+**N 1:** "Hello, Data Structures."

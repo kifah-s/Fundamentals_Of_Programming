@@ -1,6 +1,6 @@
 # More Learning ..
 
-**INFO_1: "Data Structures"**
+**INFO 1: "Data Structures"**
 
 "Importance of Using Data Structures:
 
@@ -39,5 +39,3 @@
 In general, data structures play a vital role in computer science and software development, contributing to the improvement of program performance and effective data management." **(ChatGpt)**
 
 ---
-
-<br>
