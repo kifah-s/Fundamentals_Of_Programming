@@ -1,9 +1,7 @@
 # More Learning ..
 
-**INFO_1: ""**
+**INFO 1: ""**
 
 "." **()**
 
 ---
-
-<br>
