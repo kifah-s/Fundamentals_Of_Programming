@@ -1,5 +1,5 @@
 
-//* >>>>> Practices <<<<< *//
+//* >>>>> Examples <<<<< */
 
 #include <iostream>
 #include <ctime>
@@ -8,17 +8,17 @@ using namespace std;
 
 //* Functions ..
 
-// Print Practices / Function.
-void practicesFun()
+// Print Examples / Function.
+void examplesFun()
 {
-    cout << "\nPractices ..\n\n";
+    cout << "\nExamples ..\n\n";
 }
 
 //* End Functions ..
 
 int main()
 {
-    practicesFun();
+    examplesFun();
 
     //* ________________________________________________________________
 
