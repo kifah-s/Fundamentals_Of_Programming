@@ -1,5 +1,7 @@
 
-//* >>>>> Exercise 1 <<<<< */
+//* >>>>> Exercise 1: From 1 To Num <<<<< */
+
+/* >>>  <<< */
 
 #include <iostream>
 #include <ctime>
@@ -11,7 +13,7 @@ using namespace std;
 // Print Exercises / Function.
 void exercisesFun()
 {
-    cout << "\nExercise 1 ..\n\n";
+    cout << "\nExercise 1: From 1 To Num ..\n\n";
 }
 
 //* End Functions ..
