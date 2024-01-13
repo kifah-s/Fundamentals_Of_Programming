@@ -1,5 +1,5 @@
 
-//* >>>>> Exercises <<<<< */
+//* >>>>> Example 1 <<<<< */
 
 #include <iostream>
 #include <ctime>
@@ -8,19 +8,26 @@ using namespace std;
 
 //* Functions ..
 
-// Print Exercises / Function.
-void exercisesFun()
+// Print Examples / Function.
+void examplesFun()
 {
-    cout << "\nExercises ..\n\n";
+    cout << "\nExample 1 ..\n\n";
 }
 
 //* End Functions ..
 
 int main()
 {
-    exercisesFun();
+    examplesFun();
 
     //* ________________________________________________________________
+
+    int x = 5, i;
+    
+    for (i = x; i > 0; i--)
+    {
+        cout << i << " ";
+    }
 
     //* ________________________________________________________________
 
