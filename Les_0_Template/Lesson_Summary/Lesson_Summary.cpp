@@ -11,7 +11,9 @@ using namespace std;
 // Print Lesson Summary / Function.
 void lessonSummaryFun()
 {
-    cout << "\nLesson Summary ..\n\n";
+    cout << endl
+         << "Lesson Summary .." << endl
+         << endl;
 }
 
 //* End Functions ..
@@ -20,11 +22,8 @@ int main()
 {
     lessonSummaryFun();
 
-    //* ________________________________________________________________
-
-    //* ________________________________________________________________
-
-    cout << "\n\n";
+    cout << endl
+         << endl;
 
     return 0;
 }

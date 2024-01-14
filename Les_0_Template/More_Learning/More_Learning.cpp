@@ -11,7 +11,9 @@ using namespace std;
 // Print More Learning / Function.
 void moreLearningFun()
 {
-    cout << "\nMore Learning ..\n\n";
+    cout << endl
+         << "More Learning .." << endl
+         << endl;
 }
 
 //* End Functions ..
@@ -20,11 +22,8 @@ int main()
 {
     moreLearningFun();
 
-    //* ________________________________________________________________
-
-    //* ________________________________________________________________
-
-    cout << "\n\n";
+    cout << endl
+         << endl;
 
     return 0;
 }

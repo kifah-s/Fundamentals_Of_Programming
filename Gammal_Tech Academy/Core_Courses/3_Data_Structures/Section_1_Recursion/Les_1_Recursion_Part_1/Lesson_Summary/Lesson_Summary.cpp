@@ -11,7 +11,9 @@ using namespace std;
 // Print Lesson Summary / Function.
 void lessonSummaryFun()
 {
-    cout << "\nLesson Summary..\n\n";
+    cout << endl
+         << "Lesson Summary.." << endl
+         << endl;
 }
 
 // Recursion / Function.
@@ -57,8 +59,6 @@ void recursionFun_3(int x)
 int main()
 {
     lessonSummaryFun();
-
-    //* ________________________________________________________________
 
     /*
 
@@ -169,7 +169,8 @@ int main()
 
     //* ________________________________________________________________
 
-    cout << "\n\n";
+    cout << endl
+         << endl;
 
     return 0;
 }

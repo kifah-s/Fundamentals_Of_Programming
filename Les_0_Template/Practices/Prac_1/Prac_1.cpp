@@ -11,7 +11,9 @@ using namespace std;
 // Print Practices / Function.
 void practicesFun()
 {
-    cout << "\nPractice 1 ..\n\n";
+    cout << endl
+         << "Practice 1 .." << endl
+         << endl;
 }
 
 //* End Functions ..
@@ -20,11 +22,8 @@ int main()
 {
     practicesFun();
 
-    //* ________________________________________________________________
-
-    //* ________________________________________________________________
-
-    cout << "\n\n";
+    cout << endl
+         << endl;
 
     return 0;
 }

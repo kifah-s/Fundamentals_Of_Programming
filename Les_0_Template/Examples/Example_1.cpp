@@ -11,7 +11,9 @@ using namespace std;
 // Print Examples / Function.
 void examplesFun()
 {
-    cout << "\nExample 1 ..\n\n";
+    cout << endl
+         << "Example 1 .." << endl
+         << endl;
 }
 
 //* End Functions ..
@@ -20,11 +22,8 @@ int main()
 {
     examplesFun();
 
-    //* ________________________________________________________________
-
-    //* ________________________________________________________________
-
-    cout << "\n\n";
+    cout << endl
+         << endl;
 
     return 0;
 }

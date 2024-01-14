@@ -11,7 +11,9 @@ using namespace std;
 // Print Examples / Function.
 void examplesFun()
 {
-    cout << "\nExample 3 ..\n\n";
+    cout << endl
+         << "Example 3 .." << endl
+         << endl;
 }
 
 void recFun(int x)
@@ -32,15 +34,12 @@ int main()
 {
     examplesFun();
 
-    //* ________________________________________________________________
-
     int x = 5;
 
     recFun(x);
 
-    //* ________________________________________________________________
-
-    cout << "\n\n";
+    cout << endl
+         << endl;
 
     return 0;
 }

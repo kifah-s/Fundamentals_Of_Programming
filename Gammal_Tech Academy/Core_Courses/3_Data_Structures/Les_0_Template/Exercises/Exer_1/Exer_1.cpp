@@ -13,7 +13,9 @@ using namespace std;
 // Print Exercises / Function.
 void exercisesFun()
 {
-    cout << "\nExercise 1:  ..\n\n";
+    cout << endl
+         << "Exercise 1:  .." << endl
+         << endl;
 }
 
 //* End Functions ..
@@ -22,11 +24,8 @@ int main()
 {
     exercisesFun();
 
-    //* ________________________________________________________________
-
-    //* ________________________________________________________________
-
-    cout << "\n\n";
+    cout << endl
+         << endl;
 
     return 0;
 }

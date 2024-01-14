@@ -11,7 +11,9 @@ using namespace std;
 // Print Notes / Function.
 void notesFun()
 {
-    cout << "\nNotes ..\n\n";
+    cout << endl
+         << "Notes .." << endl
+         << endl;
 }
 
 //* End Functions ..
@@ -20,11 +22,8 @@ int main()
 {
     notesFun();
 
-    //* ________________________________________________________________
-
-    //* ________________________________________________________________
-
-    cout << "\n\n";
+    cout << endl
+         << endl;
 
     return 0;
 }

@@ -12,7 +12,9 @@ using namespace std;
 // Print Problem Solving / Function.
 void problemSolvingFun()
 {
-    cout << "\nProblem Solving ..\n\n";
+    cout << endl
+         << "Problem Solving .." << endl
+         << endl;
 }
 
 int findNthNumber(int x, int y, int n)
@@ -35,8 +37,6 @@ int main()
 {
     problemSolvingFun();
 
-    //* ________________________________________________________________
-
     int t, x, y, n;
 
     cout << "Please enter a number: ";
@@ -49,9 +49,8 @@ int main()
         cout << findNthNumber(x, y, n) << endl;
     }
 
-    //* ________________________________________________________________
-
-    cout << "\n";
+    cout << endl
+         << endl;
 
     return 0;
 }

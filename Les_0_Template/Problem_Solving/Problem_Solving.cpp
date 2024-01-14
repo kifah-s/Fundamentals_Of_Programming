@@ -11,7 +11,9 @@ using namespace std;
 // Print Problem Solving / Function.
 void problemSolvingFun()
 {
-    cout << "\nProblem Solving ..\n\n";
+    cout << endl
+         << "Problem Solving .." << endl
+         << endl;
 }
 
 //* End Functions ..
@@ -20,11 +22,8 @@ int main()
 {
     problemSolvingFun();
 
-    //* ________________________________________________________________
-
-    //* ________________________________________________________________
-
-    cout << "\n\n";
+    cout << endl
+         << endl;
 
     return 0;
 }
