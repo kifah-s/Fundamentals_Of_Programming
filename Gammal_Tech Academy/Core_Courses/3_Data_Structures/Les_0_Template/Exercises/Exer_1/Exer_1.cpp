@@ -24,8 +24,7 @@ int main()
 {
     exercisesFun();
 
-    cout << endl
-         << endl;
+    cout << endl;
 
     return 0;
 }

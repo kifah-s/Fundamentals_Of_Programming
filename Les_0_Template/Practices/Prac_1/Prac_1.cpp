@@ -22,8 +22,7 @@ int main()
 {
     practicesFun();
 
-    cout << endl
-         << endl;
+    cout << endl;
 
     return 0;
 }

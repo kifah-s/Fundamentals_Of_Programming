@@ -22,8 +22,7 @@ int main()
 {
     examplesFun();
 
-    cout << endl
-         << endl;
+    cout << endl;
 
     return 0;
 }

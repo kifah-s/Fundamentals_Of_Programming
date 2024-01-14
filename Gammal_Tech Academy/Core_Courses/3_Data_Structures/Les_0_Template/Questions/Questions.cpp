@@ -22,8 +22,7 @@ int main()
 {
     questionsFun();
 
-    cout << endl
-         << endl;
+    cout << endl;
 
     return 0;
 }

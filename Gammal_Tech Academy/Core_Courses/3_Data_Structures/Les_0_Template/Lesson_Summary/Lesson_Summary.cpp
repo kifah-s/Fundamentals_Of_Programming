@@ -22,8 +22,7 @@ int main()
 {
     lessonSummaryFun();
 
-    cout << endl
-         << endl;
+    cout << endl;
 
     return 0;
 }

@@ -22,8 +22,7 @@ int main()
 {
     notesFun();
 
-    cout << endl
-         << endl;
+    cout << endl;
 
     return 0;
 }

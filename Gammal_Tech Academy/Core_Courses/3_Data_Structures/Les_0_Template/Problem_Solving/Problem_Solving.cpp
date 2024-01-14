@@ -22,8 +22,7 @@ int main()
 {
     problemSolvingFun();
 
-    cout << endl
-         << endl;
+    cout << endl;
 
     return 0;
 }
