@@ -1,24 +1,18 @@
 
-//* >>>>> Exercise 2: Sum Numbers (Version 2) <<<<< */
+//* >>>>> From 1 To Num Program <<<<< */
 
-/* >>> A program that asks the user to enter a number and prints the sum of the numbers from 1 to that number.
+/* >>> A program that asks the user to enter a number and prints the numbers from 1 to that number.
 
 - Example:
    input:
    8
    output:
-   36 <<< */
+   1 2 3 4 5 6 7 8 <<< */
 
 #include <iostream>
 #include <ctime>
 
 using namespace std;
-
-//* Global Variable ..
-
-int sum = 0;
-
-//* End Global Variable .
 
 //* Functions ..
 
@@ -26,22 +20,21 @@ int sum = 0;
 void exercisesFun()
 {
     cout << endl
-         << "Exercise 2: Sum Numbers (Version 2) .." << endl
+         << "From 1 To Num Program .." << endl
          << endl;
 }
 
 // Recursion Function.
-int recursionFun(int x)
+void recursionFun(int x)
 {
-    if (x == 1)
+    if (x == 0)
     {
-        return 1;
+        return;
     }
     else
     {
-        x = x + recursionFun(x - 1);
-
-        return x;
+        recursionFun(x - 1);
+        cout << x << endl;
     }
 }
 
@@ -58,12 +51,11 @@ int main()
     cout << "Please enter a number: ";
     cin >> num;
 
-    // Print Sum.
-    cout << endl
-         << "Sum: " << recursionFun(num)
-         << endl;
+    // Call recursion function.
+    recursionFun(num);
 
-    cout << endl;
+    cout << endl
+         << endl;
 
     return 0;
 }

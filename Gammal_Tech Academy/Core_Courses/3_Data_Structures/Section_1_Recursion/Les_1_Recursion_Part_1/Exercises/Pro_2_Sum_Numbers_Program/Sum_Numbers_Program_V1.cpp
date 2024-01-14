@@ -1,5 +1,5 @@
 
-//* >>>>> Exercise 2: Sum Numbers (Version 1) <<<<< */
+//* >>>>> Sum Numbers Program (Version 1) <<<<< */
 
 /* >>> A program that asks the user to enter a number and prints the sum of the numbers from 1 to that number.
 
@@ -26,7 +26,7 @@ int sum = 0;
 void exercisesFun()
 {
     cout << endl
-         << "Exercise 2: Sum Numbers (Version 1) .." << endl
+         << "Sum Numbers Program (Version 1) .." << endl
          << endl;
 }
 

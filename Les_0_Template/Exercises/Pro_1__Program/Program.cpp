@@ -1,5 +1,5 @@
 
-//* >>>>> Exercise 1:  <<<<< */
+//* >>>>> Program <<<<< */
 
 /* >>>  <<< */
 
@@ -14,7 +14,7 @@ using namespace std;
 void exercisesFun()
 {
     cout << endl
-         << "Exercise 1:  .." << endl
+         << "Program .." << endl
          << endl;
 }
 
