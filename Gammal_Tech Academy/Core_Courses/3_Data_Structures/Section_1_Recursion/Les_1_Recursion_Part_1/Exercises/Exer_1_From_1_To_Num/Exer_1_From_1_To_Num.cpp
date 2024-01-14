@@ -44,7 +44,15 @@ int main()
 {
     exercisesFun();
 
-    recursionFun(5);
+    // Declare variable.
+    int num = 0;
+
+    // Receive value from user.
+    cout << "Please enter a number: ";
+    cin >> num;
+
+    // Call recursion function.
+    recursionFun(num);
 
     cout << endl
          << endl;
