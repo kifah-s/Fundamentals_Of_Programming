@@ -61,7 +61,6 @@ int main()
     lessonSummaryFun();
 
     /*
-
     int number = 0;
     cout << "Please enter a number: ";
     cin >> number;
@@ -78,7 +77,6 @@ int main()
     double time = (double)(end - start) / CLOCKS_PER_SEC;
 
     cout << "\n\nTime: " << time << " seconds\n\n" << endl;
-
     */
 
     //* ________________________________________________________________
