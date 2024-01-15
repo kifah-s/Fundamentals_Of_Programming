@@ -8,7 +8,7 @@
 
 * Les_0_Introduction
 
-#### Section 1: Getting Started with C Programming.
+#### Section 1: Getting Started With C Programming.
 
 * Les_1_printf  
 * Les_2_Variables  
