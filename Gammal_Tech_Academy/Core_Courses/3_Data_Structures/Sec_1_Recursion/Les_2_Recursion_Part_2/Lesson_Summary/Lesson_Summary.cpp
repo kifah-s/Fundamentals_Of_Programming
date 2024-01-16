@@ -14,15 +14,30 @@ void lessonSummaryFun()
     cout << "\nLesson Summary ..\n\n";
 }
 
+//
+int fibonacciRecFun(int x)
+{
+    if (x < 2)
+    {
+        return x;
+    }
+    else
+    {
+        return fibonacciRecFun(x - 1) + fibonacciRecFun(x - 2);
+    }
+}
+
 //* End Functions ..
 
 int main()
 {
     lessonSummaryFun();
 
-    //* ________________________________________________________________
+    // Declare Variable.
+    int x = 6;
 
-    //* ________________________________________________________________
+    // Call recursive function and print value.
+    cout << "Fibo " << x << ": " <<  fibonacciRecFun(x);
 
     cout << "\n\n";
 
