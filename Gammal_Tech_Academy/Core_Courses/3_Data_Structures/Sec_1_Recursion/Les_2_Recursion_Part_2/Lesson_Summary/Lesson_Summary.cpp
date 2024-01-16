@@ -14,7 +14,7 @@ void lessonSummaryFun()
     cout << "\nLesson Summary ..\n\n";
 }
 
-//
+// Fibonacci / Recursive Function.
 int fibonacciRecFun(int x)
 {
     if (x < 2)
