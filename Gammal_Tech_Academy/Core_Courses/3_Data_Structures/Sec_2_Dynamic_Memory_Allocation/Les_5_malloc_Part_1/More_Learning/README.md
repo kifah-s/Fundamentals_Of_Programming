@@ -7,7 +7,7 @@
 The basic syntax for using `malloc` is as follows:
 
 ```cpp
-#include <cstdlib>
+#include <stdlib.h>
 
 int main() {
     // Allocate memory for storing an array of 5 integers
@@ -54,8 +54,8 @@ void* malloc(size_t size);
 
 where:
 
-* `void*` is a pointer to a void, which means that it can point to any type of data.
-* `size_t` is a data type that represents the size of an object in bytes.
+- `void*` is a pointer to a void, which means that it can point to any type of data.
+- `size_t` is a data type that represents the size of an object in bytes.
 
 For example, the following code allocates 100 bytes of memory on the heap and stores a pointer to the allocated memory in the variable `ptr`:
 
@@ -81,9 +81,9 @@ free(numbers);
 
 **Notes:**
 
-* The programmer must ensure that the allocated memory is sufficient to meet the needs of the program. If the memory is not sufficient, it may cause a runtime error.
-* The programmer must deallocate the memory that was allocated with malloc using the free function. If the memory is not deallocated, it may cause a memory leak, which can cause performance problems for the program.
-* The programmer must initialize the allocated memory before using it. If the memory is not initialized, it may contain random values, which can lead to unexpected results.
+- The programmer must ensure that the allocated memory is sufficient to meet the needs of the program. If the memory is not sufficient, it may cause a runtime error.
+- The programmer must deallocate the memory that was allocated with malloc using the free function. If the memory is not deallocated, it may cause a memory leak, which can cause performance problems for the program.
+- The programmer must initialize the allocated memory before using it. If the memory is not initialized, it may contain random values, which can lead to unexpected results.
 
 I hope this is helpful! Let me know if you have any other questions." **(Google Bard)**
 
