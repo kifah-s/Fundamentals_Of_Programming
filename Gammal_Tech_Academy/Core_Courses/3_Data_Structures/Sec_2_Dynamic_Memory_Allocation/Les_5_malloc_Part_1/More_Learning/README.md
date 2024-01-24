@@ -1,6 +1,6 @@
 # More Learning ..
 
-**INFO 1: "malloc function"**
+**INFO 1: "malloc() function"**
 
 "The `malloc` function is one of the memory management functions in the C++ programming language. It is used to dynamically allocate memory during program execution manually. The abbreviation "malloc" stands for "memory allocation."
 
@@ -38,7 +38,7 @@ As C++ has evolved, it is recommended to use advanced language features such as 
 
 ---
 
-**INFO 2: "malloc function"**
+**INFO 2: "malloc() function"**
 
 "**The malloc function in the C++ programming language ..**
 
@@ -83,8 +83,70 @@ free(numbers);
 
 - The programmer must ensure that the allocated memory is sufficient to meet the needs of the program. If the memory is not sufficient, it may cause a runtime error.
 - The programmer must deallocate the memory that was allocated with malloc using the free function. If the memory is not deallocated, it may cause a memory leak, which can cause performance problems for the program.
-- The programmer must initialize the allocated memory before using it. If the memory is not initialized, it may contain random values, which can lead to unexpected results.
+- The programmer must initialize the allocated memory before using it. If the memory is not initialized, it may contain random values, which can lead to unexpected results." **(Google Bard)**
 
-I hope this is helpful! Let me know if you have any other questions." **(Google Bard)**
+---
+
+**INFO 3: "sizeof() function"**
+
+"**The sizeof() function in programming languages is one of the most basic and used functions. It is used to determine the size of a given data type, structure, or expression.**
+
+**Using the sizeof() function**
+
+The sizeof() function is used by placing it before the data type, structure, or expression whose size is to be determined. For example, if we want to determine the size of an integer variable, we can use the sizeof() function as follows:
+
+```c++
+int number = 10;
+size_t size = sizeof(number); // size will be 4, since an integer is 4 bytes in C++
+```
+
+Or if we want to determine the size of a compound structure such as struct Student, we can use the sizeof() function as follows:
+
+```c++
+struct Student {
+  char name[20];
+  int age;
+};
+
+Student student = {"Bard", 23};
+size_t size = sizeof(student); // size will be 44, since the structure has two members
+```
+
+Or if we want to determine the size of an expression such as the expression `number * 2 + 3`, we can use the sizeof() function as follows:
+
+```c++
+size_t size = sizeof(number * 2 + 3); // size will be 4, since the expression results in an integer
+```
+
+**Data types supported in the sizeof() function**
+
+The sizeof() function supports many data types, including:
+
+- Basic data types such as integers, floats, doubles, characters, booleans
+- User-defined data types such as structs, classes, unions
+- Pointers to different data types
+- Complex expressions that include arithmetic and comparison operations
+
+**Value returned by the sizeof() function**
+
+The sizeof() function returns a value of type `size_t`, which is a special data type that represents the size in bytes. For example, if we want to determine the size of an integer variable, a value of 4 bytes will be returned, since an integer occupies 4 bytes in memory.
+
+**Uses of the sizeof() function**
+
+The sizeof() function is used in many different applications in computer programming, including:
+
+- Improving program performance
+- Allocating memory correctly
+- Dealing with user-defined data types
+- Memory analysis and error tracking
+- Understanding different data structures
+
+**In conclusion, the sizeof() function is a basic tool in computer programming. It is used to determine the size of data types, structures, and expressions, which helps to improve program performance and ensure memory safety. (Google Bard)**
+
+---
+
+**INFO 4: ""**
+
+"." **()**
 
 ---

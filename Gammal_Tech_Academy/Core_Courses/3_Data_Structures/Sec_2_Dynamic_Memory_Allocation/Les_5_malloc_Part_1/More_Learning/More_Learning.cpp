@@ -22,6 +22,7 @@ int main()
 {
     moreLearningFun();
 
+    /*
     //* Allocate memory for storing an array of 5 integers
     int *arr = (int *)malloc(5 * sizeof(int));
 
@@ -47,6 +48,7 @@ int main()
         //* Failed to allocate memory.
         cout << "Failed to allocate memory." << endl;
     }
+    */
 
     cout << endl;
 
