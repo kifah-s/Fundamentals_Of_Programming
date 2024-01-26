@@ -1,9 +1,9 @@
 
-//* >>>>> Problem Solving <<<<< */
+//* >>>>> Problem Solving (Version 1) <<<<< */
 
 #include <iostream>
 #include <ctime>
-// #include <cstdlib>
+#include <cstdlib>
 
 using namespace std;
 
@@ -13,7 +13,7 @@ using namespace std;
 void problemSolvingFun()
 {
     cout << endl
-         << "Problem Solving .." << endl
+         << "Problem Solving (Version 1) .." << endl
          << endl;
 }
 
