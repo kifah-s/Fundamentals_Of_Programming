@@ -24,6 +24,10 @@ int main()
     lessonSummaryFun();
 
     /*
+    //* Note: malloc(): Memory Allocation.
+    */
+
+    /*
     //* Reserve an array for 5 numbers in the normal way.
     int x[5]; //* 20 Byte.
     */

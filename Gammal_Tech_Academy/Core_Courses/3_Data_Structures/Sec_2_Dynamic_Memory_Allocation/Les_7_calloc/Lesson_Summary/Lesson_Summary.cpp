@@ -24,10 +24,12 @@ int main()
 
     //* _____________________________________________________
 
+    /*
     //* Note: calloc() function: is an array of malloc() function.
 
-    //*Note: calloc(): contiguous allocation.
-    
+    //* Note: calloc(): Contiguous Allocation.
+    */
+
     //* _____________________________________________________
 
 
