@@ -26,10 +26,11 @@ int main()
 
     //* Note: calloc() function: is an array of malloc() function.
 
+    //*Note: calloc(): contiguous allocation.
+    
     //* _____________________________________________________
 
 
-        
 
 
     cout << endl;
