@@ -16,17 +16,25 @@ void lessonSummaryFun()
          << endl;
 }
 
-void fun()
-{
-    char *name = (char *)malloc(20);
-    char tab[] = "\t\t\t\t\t\t\t\t\t\t";
-    
-}
 //* End Functions ..
 
 int main()
 {
     lessonSummaryFun();
+
+    /*
+    *   Here are some key differences between using malloc() inside and outside of main():
+
+    *   Inside main():
+    *   - Memory is allocated on the program stack.
+    *   - Memory is automatically deallocated when the variable's scope ends.
+    *   - Using malloc is safer than using it outside of main().
+
+    *   Outside main():
+    *   - Memory is allocated on the static memory area.
+    *   - Memory must be manually deallocated using the free function.
+    *   - Using malloc is more error-prone than using it inside main().
+    */
 
     cout << endl;
 
