@@ -16,6 +16,12 @@ void lessonSummaryFun()
          << endl;
 }
 
+void fun()
+{
+    char *name = (char *)malloc(20);
+    char tab[] = "\t\t\t\t\t\t\t\t\t\t";
+    
+}
 //* End Functions ..
 
 int main()
