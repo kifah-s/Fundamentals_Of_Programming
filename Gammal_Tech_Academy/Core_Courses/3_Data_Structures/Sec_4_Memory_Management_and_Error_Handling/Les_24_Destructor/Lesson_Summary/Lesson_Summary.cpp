@@ -2,6 +2,8 @@
 //* >>>>> Lesson Summary <<<<< *//
 
 #include <iostream>
+#include <string>
+#include <stdlib.h>
 #include <ctime>
 
 using namespace std;
@@ -18,9 +20,54 @@ void lessonSummaryFun()
 
 //* End Functions ..
 
+//* Classes ..
+
+// Create new class.
+class student
+{
+private:
+    string stuName;
+    int stuAge;
+
+public:
+    // Create constructor.
+    student()
+    {
+        cout << "Create new classes." << endl;
+    };
+
+    // Create destructor.
+    ~student()
+    {
+        cout << "Delete classes." << endl;
+    };
+};
+
+//* End Classes ..
+
 int main()
 {
     lessonSummaryFun();
+
+    //* -------------------------------------
+
+    // student s1;
+
+    //* -------------------------------------
+
+    // student *s1 = (student *)malloc(sizeof(student));
+    // free(s1);
+
+    // cout << "Hello World" << endl;
+
+    //* -------------------------------------
+
+    // student *s1 = new student;
+    // delete (s1);
+
+    // cout << "\nHello World" << endl;
+
+    //* -------------------------------------
 
     cout << endl;
 
