@@ -51,6 +51,10 @@ int main()
 
     //* -------------------------------------
 
+    //* malloc vs new On the one hand constructor and destructor in class.
+
+    //* -------------------------------------
+
     // student s1;
 
     //* -------------------------------------
