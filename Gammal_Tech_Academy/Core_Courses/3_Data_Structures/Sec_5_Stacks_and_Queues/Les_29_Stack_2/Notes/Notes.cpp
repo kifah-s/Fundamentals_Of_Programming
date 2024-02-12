@@ -1,19 +1,18 @@
 
-//* >>>>> Lesson Summary <<<<< *//
+//* >>>>> Notes <<<<< *//
 
 #include <iostream>
-#include <stack>
 #include <ctime>
 
 using namespace std;
 
 //* Functions ..
 
-// Print Lesson Summary / Function.
-void lessonSummaryFun()
+// Print Notes / Function.
+void notesFun()
 {
     cout << endl
-         << "Lesson Summary .." << endl
+         << "Notes .." << endl
          << endl;
 }
 
@@ -21,7 +20,7 @@ void lessonSummaryFun()
 
 int main()
 {
-    lessonSummaryFun();
+    notesFun();
 
     cout << endl;
 
