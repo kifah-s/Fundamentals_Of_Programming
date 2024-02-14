@@ -88,6 +88,83 @@ int main()
 
     //* ------------------------------
 
+    /*
+    //* Creating a stack of integers.
+    stack<int> myStack;
+
+    //* Pushing elements onto the stack.
+    myStack.push(5);
+    myStack.push(6);
+    myStack.push(7);
+
+    for (int i = myStack.size(); i >= 0; i--)
+    {
+        //* Print elements.
+        cout << myStack.top() << endl;
+
+        //* Popping elements from the stack.
+        myStack.pop();
+    }
+    */
+
+    //* ------------------------------
+
+    /*
+    //* Creating a stack of integers.
+    stack<int> myStack;
+
+    //* Pushing elements onto the stack.
+    myStack.push(5);
+    myStack.push(6);
+    myStack.push(7);
+
+    while (!myStack.empty())
+    {
+        //* Print elements.
+        cout << myStack.top() << endl;
+
+        //* Popping elements from the stack.
+        myStack.pop();
+    }
+    */
+
+    //* ------------------------------
+
+    /*
+    //* Creating a stack of integers.
+    stack<int> myStack;
+
+    //* Pushing elements onto the stack.
+    myStack.push(5);
+    myStack.push(6);
+    myStack.push(7);
+
+    cout << "Stack Size: " << myStack.size() << endl;
+    */
+
+    //* ------------------------------
+
+    /*
+    //* Creating a stack of integers.
+    stack<int> myStack;
+
+    //* Pushing elements onto the stack.
+    myStack.push(5);
+    myStack.push(6);
+    myStack.push(7);
+
+    while (myStack.size() > 0)
+    {
+        //* Print elements.
+        cout << myStack.top() << endl;
+
+        //* Popping elements from the stack.
+        myStack.pop();
+    }
+    */
+
+    //* ------------------------------
+
     cout << endl;
 
     return 0;
