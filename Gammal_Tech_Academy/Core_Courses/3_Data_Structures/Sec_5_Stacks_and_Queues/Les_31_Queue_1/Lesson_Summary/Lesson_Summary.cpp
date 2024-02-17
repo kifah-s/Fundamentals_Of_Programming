@@ -22,6 +22,12 @@ int main()
 {
     lessonSummaryFun();
 
+    /*
+    * Notes:
+    * - Stack: FILO - OR - LIFO.
+    * - Queue: FIFO - OR - LILO.
+    */
+
     cout << endl;
 
     return 0;
