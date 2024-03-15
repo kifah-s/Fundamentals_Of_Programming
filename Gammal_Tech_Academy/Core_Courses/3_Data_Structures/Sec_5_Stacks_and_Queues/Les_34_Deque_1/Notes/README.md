@@ -2,4 +2,4 @@
 
 ---
 
-**N 1:** "."
+**N 1:** "Deque: Double Ended Queue."
