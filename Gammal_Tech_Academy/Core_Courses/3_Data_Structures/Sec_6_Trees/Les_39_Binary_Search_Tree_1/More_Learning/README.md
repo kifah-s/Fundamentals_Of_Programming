@@ -1,6 +1,6 @@
 # More Learning ..
 
-**INFO 1: "Binary Tree and Recursion Function"**
+**INFO 1: "Binary Search Tree and Recursion Function"**
 
 "The relationship between Recursion function (a function that calls itself repeatedly) and Binary Tree lies in the way Recursion can be utilized to perform operations on the binary structure efficiently.
 

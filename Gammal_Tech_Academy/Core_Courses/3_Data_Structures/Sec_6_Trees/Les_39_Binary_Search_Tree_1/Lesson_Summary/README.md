@@ -1,3 +1,3 @@
 # Lesson Summary ..
 
-#### Binary Tree and Recursion Function.
+#### Binary Search Tree and Recursion Function.
