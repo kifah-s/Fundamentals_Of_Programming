@@ -1,3 +1,3 @@
 # Notes ..
 
-**N 1:** "."
+**N 1:** "Left -> the smallest / Right -> the biggest."
