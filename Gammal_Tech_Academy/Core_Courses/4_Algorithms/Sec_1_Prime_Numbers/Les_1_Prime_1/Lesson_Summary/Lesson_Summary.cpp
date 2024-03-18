@@ -41,7 +41,7 @@ int main()
     }
 
     //* Print prime or not.
-    if (prime == false || number == 1)
+    if (prime == false || number < 2)
     {
         cout << "\nThis number " << number << " is Not prime" << endl;
     }
@@ -75,7 +75,7 @@ int main()
     }
 
     //* Print prime or not.
-    if (prime == 0 || number == 1)
+    if (prime == 0 || number < 2)
     {
         cout << "\nThis number " << number << " is Not prime" << endl;
     }
@@ -90,7 +90,7 @@ int main()
 
     //* -----------------------------------------------------------------------
 
-    /*
+    
     //* Declare variables.
     int number = 0;
     bool prime = true;
@@ -111,7 +111,7 @@ int main()
         }
 
         //* Print prime or not.
-        if (prime == 0 || number == 1)
+        if (prime == 0 || number < 2)
         {
             cout << "\nThis number " << number << " is Not prime" << endl;
         }
@@ -122,7 +122,7 @@ int main()
     }
 
     //* Complexity: O(m * n).
-    */
+    
 
     //* -----------------------------------------------------------------------
 
