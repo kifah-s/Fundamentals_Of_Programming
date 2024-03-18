@@ -53,7 +53,6 @@ int main()
     //* Complexity: O(n).
     */
 
-
     //* -----------------------------------------------------------------------
 
     /*
@@ -87,17 +86,14 @@ int main()
     //* Complexity: O(n).
     */
 
-
     //* -----------------------------------------------------------------------
 
-    
-    //* Declare variables.
-    int number = 0;
-    bool prime = true;
-
-    //* Check number.
     while (1)
     {
+        //* Declare variables.
+        int number = 0;
+        bool prime = true;
+        
         //* Receive value from user.
         cout << "\nPlease enter a number: ";
         cin >> number;
@@ -111,7 +107,7 @@ int main()
         }
 
         //* Print prime or not.
-        if (prime == 0 || number < 2)
+        if (prime == false || number < 2)
         {
             cout << "\nThis number " << number << " is Not prime" << endl;
         }
@@ -122,7 +118,6 @@ int main()
     }
 
     //* Complexity: O(m * n).
-    
 
     //* -----------------------------------------------------------------------
 
