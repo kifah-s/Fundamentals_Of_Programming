@@ -22,6 +22,8 @@ int main()
 {
     lessonSummaryFun();
 
+    cout << "Hello Algorithms .." << endl;
+
     cout << endl;
 
     return 0;
