@@ -6,129 +6,129 @@
 
 #### Section 0: Introduction.
 
-* Les_0_Introduction
+- Les 0: Introduction.
 
 #### Section 1: Getting Started With C Programming.
 
-* Les_1_printf  
-* Les_2_Variables  
-* Les_3_scanf  
-* Les_4_Practice_1
+- Les 1: printf.
+- Les 2: Variables.
+- Les 3: scanf.
+- Les 4: Practice 1.
 
 #### Section 2: Control Structures.
 
-* Les_5_if_(Expression)  
-* Les_6_for_loop  
-* Les_7_Practice_2  
-* Les_8_while  
-* Les_9_do_while  
-* Les_10_switch  
-* Les_11_Practice_3  
+- Les 5: if (Expression).
+- Les 6: for loop.
+- Les 7: Practice 2.
+- Les 8: while.
+- Les 9: do while.
+- Les 10: switch.
+- Les 11: Practice 3.
 
 #### Section 3: Arrays and Data Structures.
 
-* Les_12_Arrays_Part_1  
-* Les_13_Arrays_Part_2  
-* Les_14_Functions  
-* Les_15_Binary_Part_1  
-* Les_16_Binary_Part_2  
-* Les_17_Binary_Program  
-* Les_18_Octal  
-* Les_19_Hexadecimal  
-* Les_20_Convert_Decimals  
-* Les_21_2D_Array_Part_1  
-* Les_22_2D_Array_Part_2  
-* Les_23_Multidimensional_Array  
+- Les 12: Arrays Part 1.
+- Les 13: Arrays Part 2.
+- Les 14: Functions.
+- Les 15: Binary Part 1.
+- Les 16: Binary Part 2.
+- Les 17: Binary Program.
+- Les 18: Octal.
+- Les 19: Hexadecimal.
+- Les 20: Convert Decimals.
+- Les 21: 2D Array Part 1.
+- Les 22: 2D Array Part 2.
+- Les 23: Multidimensional Array.
 
 #### Section 4: Advanced Topics.
 
-* Les_24_Global_Variable  
-* Les_25_ASCII  
-* Les_26_C_String_Part_1  
-* Les_27_C_String_Part_2  
-* Les_28_String_Header_File  
-* Les_29_Array_Of_Strings_Part_1  
-* Les_30_Array_Of_Strings_Part_2  
-* Les_31_Structs  
-* Les_32_Array_Of_Structs  
-* Les_33_Pointers  
-* Les_34_Bitwise_Operator_AND  
-* Les_35_Bitwise_Operator_OR  
-* Les_36_Bitwise_Operator_XOR  
-* Les_37_Bitwise_Operator_LEFT_SHIFT  
-* Les_38_Bitwise_Operator_RIGHT_SHIFT  
-* Les_39_Bitwise_Operator_NOT  
-* Les_40_Const  
-* Les_41_Enum  
-* Les_42_Math.h  
-* Les_43_Typedef  
-* Les_44_Define_(Macro)  
-* Les_45_Boolean  
-* Les_46_Ternary_Operator  
+- Les 24: Global Variable.
+- Les 25: ASCII.
+- Les 26: C String Part 1.
+- Les 27: C String Part 2.
+- Les 28: String Header File.
+- Les 29: Array Of Strings Part 1.
+- Les 30: Array Of Strings Part 2.
+- Les 31: Structs.
+- Les 32: Array Of Structs.
+- Les 33: Pointers.
+- Les 34: Bitwise Operator AND.
+- Les 35: Bitwise Operator OR.
+- Les 36: Bitwise Operator XOR.
+- Les 37: Bitwise Operator LEFT SHIFT.
+- Les 38: Bitwise Operator RIGHT SHIFT.
+- Les 39: Bitwise Operator NOT.
+- Les 40: Const.
+- Les 41: Enum.
+- Les 42: Math.h.
+- Les 43: Typedef.
+- Les 44: Define (Macro).
+- Les 45: Boolean.
+- Les 46: Ternary Operator.
 
 #### Section 5: Programming Practice.
 
-* Les_47_C_Practice_Introduction  
-* Les_48_C_Practice_1_(2D_Array)  
-* Les_49_C_Practice_2_(Tracing)  
-* Les_50_C_Practice_3_(Vaccine)  
-* Les_51_C_Practice_4_(Sum_Of_10_Numbers)  
-* Les_52_C_Practice_5_(Sum_Of_Even)  
-* Les_53_C_Practice_6_(How_Many_Ves)  
-* Les_54_C_Practice_7_(Mercedes)  
-* Les_55_C_Practice_8_(Bmw)  
-* Les_56_C_Practice_9_(Search)  
-* Les_57_C_Practice_10_(Integer)  
-* Les_58_C_Practice_11_(Blood_Test)  
-* Les_59_C_Practice_12_(Digits)  
-* Les_60_C_Practice_13_(Reverse)  
-* Les_61_C_Practice_14_(Palindrome)  
-* Les_62_C_Practice_15_(Find_A_Number)  
-* Les_63_C_Practice_16_(Switch_Range)  
-* Les_64_Learn_More  
-* Les_65_C_Common_Mistakes  
+- Les 47: C Practice Introduction.
+- Les 48: C Practice 1 (2D Array).
+- Les 49: C Practice 2 (Tracing).
+- Les 50: C Practice 3 (Vaccine).
+- Les 51: C Practice 4 (Sum Of 10 Numbers).
+- Les 52: C Practice 5 (Sum Of Even).
+- Les 53: C Practice 6 (How Many Ves).
+- Les 54: C Practice 7 (Mercedes).
+- Les 55: C Practice 8 (Bmw).
+- Les 56: C Practice 9 (Search).
+- Les 57: C Practice 10 (Integer).
+- Les 58: C Practice 11 (Blood Test).
+- Les 59: C Practice 12 (Digits).
+- Les 60: C Practice 13 (Reverse).
+- Les 61: C Practice 14 (Palindrome).
+- Les 62: C Practice 15 (Find A Number).
+- Les 63: C Practice 16 (Switch Range).
+- Les 64: Learn More.
+- Les 65: C Common Mistakes.
 
 #### Section 6: File Handling.
 
-* Les_66_C_Write_In_File  
-* Les_67_C_Read_From_File  
-* Les_68_C_Read_Line  
-* Les_69_C_Read_Line_2  
-* Les_70_++x_Note_x++  
-* Les_71_C_Input_&_Output_Files  
-* Les_72_C_Store_Data  
-* Les_73_C_Copy_File  
+- Les 66: C Write In File.
+- Les 67: C Read From File.
+- Les 68: C Read Line.
+- Les 69: C Read Line 2.
+- Les 70: ++x Note x++.
+- Les 71: C Input &\ Output Files.
+- Les 72: C Store Data.
+- Les 73: C Copy File.
 
 #### Section 7: More Programming Practice.
 
-* Les_74_C_Practice_17_(Functions)  
-* Les_75_C_Practice_18_(Functions_2)  
-* Les_76_C_Practice_19_(About_Practice)  
-* Les_77_C_Practice_20_(Max_Min)  
-* Les_78_sprintf  
-* Les_79_sscanf  
-* Les_80_C_Practice_21_(sprintf_sscanf)  
-* Les_81_C_Practice_22_(Statistics)  
-* Les_82_C_Practice_23_(Find_&_Replace)  
+- Les 74: C Practice 17 (Functions).
+- Les 75: C Practice 18 (Functions 2).
+- Les 76: C Practice 19 (About Practice).
+- Les 77: C Practice 20 (Max Min).
+- Les 78: sprintf.
+- Les 79: sscanf.
+- Les 80: C Practice 21 (sprintf sscanf).
+- Les 81: C Practice 22 (Statistics).
+- Les 82: C Practice 23 (Find & Replace).
 
 #### Section 8: Beyond C Programming.
 
-* Les_83_C_Thread  
-* Les_84_DNS  
-* Les_85_Web_Hosting_Server  
-* Les_86_HTML  
-* Les_87_Generate_index.htmlLes_88_CSS  
-* Les_88_CSS  
-* Les_89_Generate_Website  
-* Les_90_Publish_The_Website  
-* Les_91_Responsive_Web_Design  
-* Les_92_IP_AddressLes_93_Business_Model  
-* Les_94_Client_Server_System_Architecture  
-* Les_95_C_Programming_Language_Summary  
+- Les 83: C Thread.
+- Les 84: DNS.
+- Les 85: Web Hosting Server.
+- Les 86: HTML.
+- Les 87: Generate index.htmlLes 88 CSS.
+- Les 88: CSS.
+- Les 89: Generate Website.
+- Les 90: Publish The Website.
+- Les 91: Responsive Web Design.
+- Les 92: IP AddressLes 93 Business Model.
+- Les 94: Client Server System Architecture.
+- Les 95: C Programming Language Summary.
 
 #### Section 9: C Projects.
 
-* Les_96_C_Project_1_(Quiz_Game)  
-* Les_97_C_Project_2_(Phone_Book)  
-* Les_98_C_Project_3_(ATM)  
-* Les_99_C_Project_4_(Billing_System)  
+- Les 96: C Project 1 (Quiz Game).
+- Les 97: C Project 2 (Phone Book).
+- Les 98: C Project 3 (ATM).
+- Les 99: C Project 4 (Billing System).

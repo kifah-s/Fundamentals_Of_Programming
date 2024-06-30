@@ -6,109 +6,109 @@
 
 #### Section 1: Before Starting.
 
-* Les_1_C++_Introduction  
+- Les 1: C++ Introduction.
 
 #### Section 2: Basic Input and Output.
 
-* Les_2_C++_cout  
-* Les_3_C++_cin  
+- Les 2: C++ cout.
+- Les 3: C++ cin.
 
 #### Section 3: Control Structures and Loops.
 
-* Les_4_C++_Loops  
+- Les 4: C++ Loops.
 
 #### Section 4: Containers and Data Structures.
 
-* Les_5_C++_Vector  
-* Les_6_C++_Sort  
-* Les_7_C++_Set  
-* Les_8_C++_String  
+- Les 5: C++ Vector.
+- Les 6: C++ Sort.
+- Les 7: C++ Set.
+- Les 8: C++ String.
 
 #### Section 5: Notes and Practices.
 
-* Les_9_C++_Note_1  
-* Les_10_C++_Note_2  
-* Les_11_C++_Practice_1  
-* Les_12_C++_Practice_2  
-* Les_13_C++_Practice_3  
+- Les 9: C++ Note 1.
+- Les 10: C++ Note 2.
+- Les 11: C++ Practice 1.
+- Les 12: C++ Practice 2.
+- Les 13: C++ Practice 3.
 
 #### Section 6: Advanced Data Structures.
 
-* Les_14_C++_Pair  
-* Les_15_C++_Set_Of_Pair  
-* Les_16_C++_Set_Pair_Vector  
-* Les_17_C++_Set_Pair_ID  
-* Les_18_C++_Map  
+- Les 14: C++ Pair.
+- Les 15: C++ Set Of Pair.
+- Les 16: C++ Set Pair Vector.
+- Les 17: C++ Set Pair ID.
+- Les 18: C++ Map.
 
 #### Section 7: Auto-correct and More Practices.
 
-* Les_19_C++_Auto_Correct_1  
-* Les_20_C++_Auto_Correct_2  
-* Les_21_C++_Auto_Correct_3  
-* Les_22_C++_Practice_4  
-* Les_23_C++_Practice_5  
+- Les 19: C++ Auto Correct 1.
+- Les 20: C++ Auto Correct 2.
+- Les 21: C++ Auto Correct 3.
+- Les 22: C++ Practice 4.
+- Les 23: C++ Practice 5.
 
 #### Section 8: Drawing and Advanced Concepts.
 
-* Les_24_C++_Draw  
-* Les_25_C++_Smart_User  
-* Les_26_C++_Chatbot  
+- Les 24: C++ Draw.
+- Les 25: C++ Smart User.
+- Les 26: C++ Chatbot.
 
 #### Section 9: Object-Oriented Programming (OOP).
 
-* Les_27_C++_Classes_(OOP)  
-* Les_28_C++_Note_3  
-* Les_29_C++_Operator_Overloading_(OOP)  
-* Les_30_C++_Inheritance  
-* Les_31_C++_Constructor  
+- Les 27: C++ Classes (OOP).
+- Les 28: C++ Note 3.
+- Les 29: C++ Operator Overloading (OOP).
+- Les 30: C++ Inheritance.
+- Les 31: C++ Constructor.
 
 #### Section 10: Advanced C++ Programming.
 
-* Les_32_C++_Generic_Programming  
-* Les_33_C++_Range_Based_for_loop  
-* Les_34_C++_for_each_loop  
-* Les_35_C++_Practice_6  
-* Les_36_C++_Calculator  
-* Les_37_C++_Static_Member  
+- Les 32: C++ Generic Programming.
+- Les 33: C++ Range Based for loop.
+- Les 34: C++ for each loop.
+- Les 35: C++ Practice 6.
+- Les 36: C++ Calculator.
+- Les 37: C++ Static Member.
 
 #### Section 11: Debugging and Tracing.
 
-* Les_38_C++_Tracing_1  
-* Les_39_C++_Tracing_2  
-* Les_40_C++_Tracing_3  
-* Les_41_C++_Tracing_4  
-* Les_42_C++_Tracing_5  
-* Les_43_C++_Tracing_6_(sstream)  
-* Les_44_C++_Tracing_7_(Header_Files_1)  
-* Les_45_C++_Tracing_8_(Header_Files_2)  
-* Les_46_C++_Tracing_9_(Header_Files_3)  
-* Les_47_C++_Tracing_10_(Namespace)  
+- Les 38: C++ Tracing 1.
+- Les 39: C++ Tracing 2.
+- Les 40: C++ Tracing 3.
+- Les 41: C++ Tracing 4.
+- Les 42: C++ Tracing 5.
+- Les 43: C++ Tracing 6 (sstream).
+- Les 44: C++ Tracing 7 (Header Files 1).
+- Les 45: C++ Tracing 8 (Header Files 2).
+- Les 46: C++ Tracing 9 (Header Files 3).
+- Les 47: C++ Tracing 10 (Namespace).
 
 #### Section 12: Binary, References, and Projects.
 
-* Les_48_C++_Negative_In_Binary  
-* Les_49_C++_Atoi_&_Stoi  
-* Les_50_C++_Reference  
-* Les_51_Project_Design  
-* Les_52_Header_Design  
-* Les_53_Header_Code  
-* Les_54_Header_Testing  
-* Les_55_GitHub  
-* Les_56_Footer_Design  
-* Les_57_Footer_Code  
-* Les_58_Footer_Testing  
-* Les_59_Page_Design  
-* Les_60_Page_Code  
-* Les_61_Page_Testing  
-* Les_62_Website_Design  
-* Les_63_Website_Code  
-* Les_64_Website_Testing  
-* Les_65_C++_Programming_Language_Summary
+- Les 48: C++ Negative In Binary.
+- Les 49: C++ Atoi & Stoi.
+- Les 50: C++ Reference.
+- Les 51: Project Design.
+- Les 52: Header Design.
+- Les 53: Header Code.
+- Les 54: Header Testing.
+- Les 55: GitHub.
+- Les 56: Footer Design.
+- Les 57: Footer Code.
+- Les 58: Footer Testing.
+- Les 59: Page Design.
+- Les 60: Page Code.
+- Les 61: Page Testing.
+- Les 62: Website Design.
+- Les 63: Website Code.
+- Les 64: Website Testing.
+- Les 65: C++ Programming Language Summary.
 
 #### Section 13: C++ Projects.
 
-* Les_66_C++_Project_1_(Hotel_Reservation)  
-* Les_67_C++_Project_2_(Login_And_Registration)  
-* Les_68_C++_Project_3_(Supermarket_Billing)  
-* Les_69_C++_Project_4_(Airline_Reservation)  
-* Les_70_C++_Project_5_(Digital_Clock)
+- Les 66: C++ Project 1 (Hotel Reservation).
+- Les 67: C++ Project 2 (Login And Registration).
+- Les 68: C++ Project 3 (Supermarket Billing).
+- Les 69: C++ Project 4 (Airline Reservation).
+- Les 70: C++ Project 5 (Digital Clock).
