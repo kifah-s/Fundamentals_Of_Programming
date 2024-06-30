@@ -19,3 +19,8 @@ Benefits of algorithms in programming include:
 8. **Innovation and Creativity**: Algorithms encourage innovation and creativity in software development. They inspire programmers to devise novel solutions to challenging problems, leading to the advancement of technology and the creation of innovative software products.
 
 In essence, algorithms are fundamental tools in programming that enable efficient problem-solving, performance optimization, resource management, and maintainable code development. They form the backbone of computational logic and are essential for building robust and scalable software systems.
+
+
+
+
+## sec 1 -> les 3.
