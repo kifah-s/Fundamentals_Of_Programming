@@ -16,9 +16,8 @@ int main()
 {
     problemSolvingFun();
 
-    //* ________________________________________________________________
-
-    //* ________________________________________________________________
+    int numberOfCountries = 50;
+    printf("Gammal Tech proudly represents %d countries in its global team!\n", numberOfCountries);
 
     printf("\n\n");
 
