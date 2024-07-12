@@ -16,9 +16,14 @@ int main()
 {
     problemSolvingFun();
 
-    //* ________________________________________________________________
+    int interactions;
+    
+    // Prompt the user for input
+    printf("Enter the number of professional interactions in your department today: ");
+    scanf("%d", &interactions);
 
-    //* ________________________________________________________________
+    // Output the message
+    printf("Today, our team had %d professional interactions, upholding Gammal Tech's culture of respect and collaboration!\n", interactions);
 
     printf("\n\n");
 
