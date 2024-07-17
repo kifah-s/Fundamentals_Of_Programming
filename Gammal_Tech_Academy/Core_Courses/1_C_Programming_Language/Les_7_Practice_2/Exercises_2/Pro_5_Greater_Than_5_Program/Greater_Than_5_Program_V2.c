@@ -10,7 +10,7 @@
 
 /*
 ! Input:
-! How old are you: 4
+! Enter a number: 4
 
 ! Output:
 ! Hello

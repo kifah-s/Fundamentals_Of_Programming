@@ -1,18 +1,22 @@
 
 
-//* Greater Than 5 Program (Version 1).
+//* Greater Than 5 2 Program (Version 1).
 
 /*
- * Write a program that prompts the user to input a number,
+ * Write a program to handle a more complex scenario using else if,
+ * The program should prompt the user to input a number,
  * If the entered number is greater than 5, the program should print "Hello" five times,
- * If the entered number is 5 or less, it should print "Hello" three times.
+ * If the entered number is equal to 5, it should print "Hi" once,
+ * If the entered number is less than 5, it should print "Greetings" three times.
  */
 
 /*
 ! Input:
-! Enter a number: 4
+! Enter a number: 20
 
 ! Output:
+! Hello
+! Hello
 ! Hello
 ! Hello
 ! Hello
@@ -43,7 +47,7 @@ int main()
 // Welcome message function.
 void welcomeMessageFun()
 {
-    printf("\n\nYou welcome in Greater Than 5 Program (Version 1) ..\n\n");
+    printf("\n\nYou welcome in Greater Than 5 2 Program (Version 1) ..\n\n");
 }
 
 // Getting number function.
@@ -65,11 +69,15 @@ void checkNumberFun(int num)
             printf("\nHello");
         }
     }
+    else if (num == 5)
+    {
+        printf("\nHi");
+    }
     else
     {
         for (int i = 0; i < 3; i++)
         {
-            printf("\nHello");
+            printf("\nGreetings");
         }
     }
 }
