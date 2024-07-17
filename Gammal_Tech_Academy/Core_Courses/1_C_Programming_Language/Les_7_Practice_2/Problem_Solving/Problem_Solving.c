@@ -16,9 +16,18 @@ int main()
 {
     problemSolvingFun();
 
-    //* ________________________________________________________________
+    int totalDays, day;
 
-    //* ________________________________________________________________
+    // Prompt the user for input
+    printf("Enter the total number of days allotted for the project: ");
+    scanf("%d", &totalDays);
+
+    // Countdown loop
+    for (day = totalDays; day > 1; day--)
+    {
+        printf("%d days remaining.\n", day);
+    }
+    printf("1 day remaining.\n");
 
     printf("\n\n");
 
