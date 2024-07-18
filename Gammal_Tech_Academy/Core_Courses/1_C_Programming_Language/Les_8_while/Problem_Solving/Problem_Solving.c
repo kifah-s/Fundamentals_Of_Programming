@@ -16,11 +16,20 @@ int main()
 {
     problemSolvingFun();
 
-    //* ________________________________________________________________
+    int employees, currentEmployee = 1;
+    
+    // Prompt the user for input.
+    printf("Enter the number of employees for compliance check: ");
+    scanf("%d", &employees);
 
-    //* ________________________________________________________________
+    // Compliance check loop.
+    while (currentEmployee <= employees)
+    {
+        printf("Checking employee %d: Compliance with rules ensures success for everyone.\n", currentEmployee);
+        currentEmployee++;
 
-    printf("\n\n");
+        printf("\n\n");
 
-    return 0;
+        return 0;
+    }
 }
