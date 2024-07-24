@@ -16,9 +16,22 @@ int main()
 {
     problemSolvingFun();
 
-    //* ________________________________________________________________
+    int employees, tasks[10], totalTasks = 0;
 
-    //* ________________________________________________________________
+    // Prompt the user for the number of employees
+    printf("Enter the number of employees: ");
+    scanf("%d", &employees);
+
+    // Input the number of tasks completed by each employee
+    for (int i = 0; i < employees; i++)
+    {
+        printf("Enter tasks completed by employee %d: ", i + 1);
+        scanf("%d", &tasks[i]);
+        totalTasks += tasks[i];
+    }
+
+    // Display the total number of tasks completed
+    printf("Total tasks completed by all employees: %d\n", totalTasks);
 
     printf("\n\n");
 
