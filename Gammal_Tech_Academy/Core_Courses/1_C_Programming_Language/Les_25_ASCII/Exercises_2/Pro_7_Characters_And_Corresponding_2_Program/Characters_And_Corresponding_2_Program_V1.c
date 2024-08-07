@@ -1,20 +1,20 @@
 
 
-//* Characters From 'F' To 'A' Program (Version 1).
+//* Characters And Corresponding 2 Program (Version 1).
 
 /*
- * Write a program that uses a loop to print the ASCII values of characters,
+ * Write a program that uses a loop to print characters and their corresponding ASCII values,
  * from 'F' to 'A' in descending order.
  */
 
 /*
 ! Output:
-! 70
-! 69
-! 68
-! 67
-! 66
-! 65
+! F 70
+! E 69
+! D 68
+! C 67
+! B 66
+! A 65
 */
 
 #include <stdio.h>
@@ -39,7 +39,7 @@ int main()
 // Welcome message - Function.
 void welcomeMessageFun()
 {
-    printf("\n\nYou welcome in Characters From 'F' To 'A' Program (Version 1) ..\n\n");
+    printf("\n\nYou welcome in Characters And Corresponding 2 Program (Version 1) ..\n\n");
 }
 
 // ASCII values of characters 'F' To 'A' - Function.
@@ -48,7 +48,7 @@ void ASCIIValuesOfCharactersFun()
     printf("ASCII values of characters 'F' To 'A':\n\n");
     for (int i = 'F'; i >= 'A'; i--)
     {
-        printf("%d\n", i);
+        printf("%c\t%d\n", i, i);
     }
 }
 //* End Function ..

@@ -15,7 +15,7 @@
 #include <stdio.h>
 
 void welcomeMessageFun();
-void ASCIIValuesOfCharacters();
+void ASCIIValuesOfCharactersFun();
 
 int main()
 {
@@ -23,7 +23,7 @@ int main()
     welcomeMessageFun();
 
     // Calling Functions.
-    ASCIIValuesOfCharacters();
+    ASCIIValuesOfCharactersFun();
 
     printf("\n\n");
 
@@ -38,7 +38,7 @@ void welcomeMessageFun()
 }
 
 // ASCII values of characters 'A' To 'E' - Function.
-void ASCIIValuesOfCharacters()
+void ASCIIValuesOfCharactersFun()
 {
     printf("ASCII value of character 'A' To 'E':\n\n");
     for (int i = 'A'; i <= 'E'; i++)
