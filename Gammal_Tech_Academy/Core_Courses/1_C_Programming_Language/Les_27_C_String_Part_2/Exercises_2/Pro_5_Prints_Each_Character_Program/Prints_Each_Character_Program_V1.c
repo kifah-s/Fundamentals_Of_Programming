@@ -41,7 +41,7 @@ void welcomeMessageFun()
 }
 
 // Prints Each Character - Function.
-void printsEachCharacterFun(char arr1[10])
+void printsEachCharacterFun(char arr1[])
 {
     for (int i = 0; arr1[i] != '\0'; i++)
     {
