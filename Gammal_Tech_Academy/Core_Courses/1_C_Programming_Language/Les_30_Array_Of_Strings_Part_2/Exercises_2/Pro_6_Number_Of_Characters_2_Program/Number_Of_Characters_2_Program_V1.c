@@ -1,23 +1,26 @@
 
 
-//* Number Of Characters Program (Version 1).
+//* Number Of Characters 2 Program (Version 1).
 
 /*
  * Write a program that declares a 2D character array to store names,
  * and initializes it with four names ("Amr", "Omar", "Ali", "Nada"),
- * Using nested loops, calculate and print the total number of characters in all the names.
+ * Using nested loops, calculate and print the number of characters in each name along with the respective names.
  */
 
 /*
 ! Output:
-! Total number of characters in all name: 14
+! Amr has 3 characters.
+! Omar has 4 characters.
+! Ali has 3 characters.
+! Nada has 4 characters.
 */
 
 #include <stdio.h>
 #include <string.h>
 
 void welcomeMessageFun();
-void numberOfCharactersFun(char arr1[4][25]);
+void numberOfCharacters2Fun(char arr1[4][25]);
 
 int main()
 {
@@ -28,7 +31,7 @@ int main()
     char name[4][25] = {"Amr", "Omar", "Ali", "Nada"};
 
     // Calling Functions.
-    numberOfCharactersFun(name);
+    numberOfCharacters2Fun(name);
 
     printf("\n\n");
 
@@ -39,11 +42,11 @@ int main()
 // Welcome message - Function.
 void welcomeMessageFun()
 {
-    printf("\n\nYou welcome in Number Of Characters Program (Version 1) ..\n\n");
+    printf("\n\nYou welcome in Number Of Characters 2 Program (Version 1) ..\n\n");
 }
 
-// Number Of Characters - Function.
-void numberOfCharactersFun(char arr1[4][25])
+// Number Of Characters 2 - Function.
+void numberOfCharacters2Fun(char arr1[4][25])
 {
     int counter = 0;
 
@@ -53,7 +56,8 @@ void numberOfCharactersFun(char arr1[4][25])
         {
             counter++;
         }
+        printf("\n%s has %d characters.", arr1[i], counter);
+        counter = 0;
     }
-    printf("\nTotal number of characters in all name: %d", counter);
 }
 //* End Function ..
