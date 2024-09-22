@@ -69,7 +69,7 @@ int gettingSecondNumberFun(int y)
     return y;
 }
 
-// Swap Two Numbers - Function.
+// Sum Two Numbers - Function.
 void sumTwoNumbersUsingPointersFun(int *x, int *y, int *s)
 {
     *s = *x + *y;
