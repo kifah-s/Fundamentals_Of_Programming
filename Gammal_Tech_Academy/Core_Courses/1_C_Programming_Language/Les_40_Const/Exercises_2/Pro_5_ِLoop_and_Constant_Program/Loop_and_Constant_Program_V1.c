@@ -28,7 +28,7 @@ int main()
     welcomeMessageFun();
 
     // Declare Constant.
-    int loopCount = 5;
+    const int loopCount = 5;
 
     // Call Function.
     printValueFun(loopCount);
