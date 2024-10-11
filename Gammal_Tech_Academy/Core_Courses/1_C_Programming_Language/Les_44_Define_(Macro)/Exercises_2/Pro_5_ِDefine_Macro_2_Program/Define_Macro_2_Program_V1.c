@@ -1,6 +1,6 @@
 
 
-//* Define Macro 2 Program (Version 2).
+//* Define Macro 2 Program (Version 1).
 
 /*
  * Define a macro using #define named MULTIPLY that takes two parameters and calculates their product.
@@ -9,7 +9,7 @@
 
 /*
 ! Output:
-! Sum: 12
+! Product: 12
 */
 
 #include <stdio.h>
@@ -41,6 +41,6 @@ int main()
 // Welcome message - Function.
 void welcomeMessageFun()
 {
-    printf("\n\nYou welcome in Define Macro 2 Program (Version 2) ..\n\n");
+    printf("\n\nYou welcome in Define Macro 2 Program (Version 1) ..\n\n");
 }
 //* End Function ..
