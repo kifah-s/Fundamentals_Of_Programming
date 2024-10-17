@@ -22,6 +22,7 @@
 
 void welcomeMessageFun();
 int gettingFirstNumberFun(int num);
+int gettingSecondNumberFun(int secNum);
 void checkNumbersFun();
 
 int main()
