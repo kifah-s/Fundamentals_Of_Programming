@@ -1,21 +1,25 @@
 
 
-//* Count Negative Numbers Program (Version 2).
+//* Count and Display Odd Numbers Program (Version 1).
 
 /*
- * Write a program to count the number of negative numbers in an array.
+ * Write a program to calculate the product of even numbers in an array.
  */
 
 /*
 ! Input:
 ! Please enter the number of elements: 4
-! 1) Please enter number: -5
-! 2) Please enter number: -6
-! 3) Please enter number: 1
-! 4) Please enter number: 2
+! 1) Please enter number: 1
+! 2) Please enter number: 2
+! 3) Please enter number: 3
+! 4) Please enter number: 5
 
 ! Output:
-! Number of negative numbers: 2
+! Odd Numbers:
+! 1
+! 3
+! 5
+! Numbers Of Odd Numbers: 3
 */
 
 #include <stdio.h>
@@ -25,7 +29,7 @@
 
 void welcomeMessageFun();
 int receiveNumberOfElementsFun(int numOfEle);
-void printCounterFun(int numOfEle, int arr[], int cou);
+void countAndDisplayOddNumbersFun(int numOfEle, int arr[], int cou);
 
 int main()
 {
@@ -42,7 +46,7 @@ int main()
     int myNumbers[numberOfElements];
 
     // Call Functions.
-    printCounterFun(numberOfElements, myNumbers, counter);
+    countAndDisplayOddNumbersFun(numberOfElements, myNumbers, counter);
 
     printf("\n\n");
 
@@ -53,13 +57,12 @@ int main()
 // Welcome message - Function.
 void welcomeMessageFun()
 {
-    printf("\n\nYou welcome in Count Negative Numbers Program (Version 2) ..\n\n");
+    printf("\n\nYou welcome in Count and Display Odd Numbers Program (Version 1) ..\n\n");
 }
 
 // Receive number of elements - Function.
 int receiveNumberOfElementsFun(int numOfEle)
 {
-
     printf("Please enter the number of elements: ");
     scanf("%d", &numOfEle);
 
@@ -67,7 +70,7 @@ int receiveNumberOfElementsFun(int numOfEle)
 }
 
 // Receive numbers - Function.
-void receiveNumbersFun(int numOfEle, int arr[])
+int receiveNumbersFun(int numOfEle, int arr[])
 {
     for (int i = 0; i < numOfEle; i++)
     {
@@ -76,26 +79,20 @@ void receiveNumbersFun(int numOfEle, int arr[])
     }
 }
 
-// Count negative numbers - Function.
-int countNegativeNumbersFun(int numOfEle, int arr[], int cou)
+// Count and display odd numbers - Function.
+void countAndDisplayOddNumbersFun(int numOfEle, int arr[], int cou)
 {
+    receiveNumbersFun(numOfEle, arr);
+
+    printf("\nOdd Numbers:\n");
     for (int i = 0; i < numOfEle; i++)
     {
-        if (arr[i] < 0)
+        if (arr[i] % 2 != 0)
         {
+            printf("%d\n", arr[i]);
             cou++;
         }
     }
-
-    return cou;
-}
-
-// Print counter - Function.
-void printCounterFun(int numOfEle, int arr[], int cou)
-{
-    receiveNumbersFun(numOfEle, arr);
-    cou = countNegativeNumbersFun(numOfEle, arr, cou);
-
-    printf("\nNumber of negative numbers: %d", cou);
+    printf("\nNumbers Of Odd Numbers: %d", cou);
 }
 //* End Function ..
