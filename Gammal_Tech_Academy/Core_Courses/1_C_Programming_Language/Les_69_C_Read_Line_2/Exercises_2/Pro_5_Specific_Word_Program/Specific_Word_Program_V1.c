@@ -17,7 +17,7 @@
 #include <string.h>
 #include <math.h>
 
-void printParagraphFun(char para[50]);
+void printParagraphFun(char para[100]);
 
 int main()
 {
@@ -38,14 +38,14 @@ void welcomeMessageFun()
 }
 
 // Read Paragraph - Function.
-void readParagraphFun(char para[50])
+void readParagraphFun(char para[100])
 {
     printf("Please Enter a paragraph (stop at Specific Word): ");
     scanf("%[^0]", para);
 }
 
 // Print Paragraph - Function.
-void printParagraphFun(char para[50])
+void printParagraphFun(char para[100])
 {
     welcomeMessageFun();
     readParagraphFun(para);
