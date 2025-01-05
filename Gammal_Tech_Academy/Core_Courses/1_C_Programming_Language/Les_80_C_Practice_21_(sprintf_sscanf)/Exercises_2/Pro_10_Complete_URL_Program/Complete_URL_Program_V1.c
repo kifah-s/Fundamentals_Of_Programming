@@ -3,7 +3,7 @@
 //* Complete URL Program (Version 1).
 
 /*
-*
+* Ask the user for a protocol, domain, and path, then create and print a complete URL.
 
 ! Input:
 ! Please enter the Protocol (http/https): https
