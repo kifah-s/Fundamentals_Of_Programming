@@ -1,6 +1,6 @@
 
 
-//* Reverse Order (Version 1).
+//* Reverse Order Program (Version 1).
 
 /*
 * Create a program to take 'n' numbers as input and print the numbers in reverse order.
@@ -38,7 +38,7 @@ int main()
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    printf("\n\nYou welcome in Reverse Order (Version 1) ..\n\n");
+    printf("\n\nYou welcome in Reverse Order Program (Version 1) ..\n\n");
 }
 
 // Git Number Of Numbers - Function.
