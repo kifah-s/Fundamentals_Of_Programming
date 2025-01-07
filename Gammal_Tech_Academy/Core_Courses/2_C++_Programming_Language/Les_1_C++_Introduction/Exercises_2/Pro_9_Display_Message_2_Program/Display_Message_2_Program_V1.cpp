@@ -1,12 +1,12 @@
 
 
-//* Quotient Of Dividing Program (Version 1).
+//* Display Message 2 Program (Version 1).
 
 /*
-* Print the quotient of dividing 10 by 2
+* Display the message "Programming is exciting!"
 
 ! Output:
-! 5
+! Programming is exciting!
 */
 
 #include <iostream>
@@ -29,14 +29,14 @@ int main()
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in quotient Of Dividing Program (Version 1) ..\n"
+    cout << "\n\nYou welcome in Display Message 2 Program (Version 1) ..\n"
          << endl;
 }
 
-// Quotient Of Dividing - Function.
-void quotientOfDividingFun()
+// Display Message - Function.
+void displayMessageFun()
 {
-    cout << "result of quotient dividing 10 by 2: " << 10 / 2 << "\n\n"
+    cout << "Programming is exciting!!\n\n"
          << endl;
 }
 
@@ -44,6 +44,6 @@ void quotientOfDividingFun()
 void resultFun()
 {
     printWelcomeMessageFun();
-    quotientOfDividingFun();
+    displayMessageFun();
 }
 //* End Function ..

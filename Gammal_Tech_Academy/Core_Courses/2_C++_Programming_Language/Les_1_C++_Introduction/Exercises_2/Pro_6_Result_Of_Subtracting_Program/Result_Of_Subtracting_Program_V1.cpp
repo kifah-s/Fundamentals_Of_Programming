@@ -1,9 +1,9 @@
 
 
-//* Quotient Of Dividing Program (Version 1).
+//* Result Of Subtracting Program (Version 1).
 
 /*
-* Print the quotient of dividing 10 by 2
+* Display the result of subtracting 7 from 12
 
 ! Output:
 ! 5
@@ -29,14 +29,14 @@ int main()
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in quotient Of Dividing Program (Version 1) ..\n"
+    cout << "\n\nYou welcome in Result Of Subtracting Program (Version 1) ..\n"
          << endl;
 }
 
-// Quotient Of Dividing - Function.
-void quotientOfDividingFun()
+// Result Of Subtracting - Function.
+void resultOfSubtractingFun()
 {
-    cout << "result of quotient dividing 10 by 2: " << 10 / 2 << "\n\n"
+    cout << "result of subtracting 7 from 12: " << 12 - 7 << "\n\n"
          << endl;
 }
 
@@ -44,6 +44,6 @@ void quotientOfDividingFun()
 void resultFun()
 {
     printWelcomeMessageFun();
-    quotientOfDividingFun();
+    resultOfSubtractingFun();
 }
 //* End Function ..

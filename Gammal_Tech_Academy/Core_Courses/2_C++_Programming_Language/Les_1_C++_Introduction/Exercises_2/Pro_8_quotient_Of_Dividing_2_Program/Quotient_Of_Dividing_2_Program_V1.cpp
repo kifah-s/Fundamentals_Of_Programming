@@ -1,12 +1,12 @@
 
 
-//* Quotient Of Dividing Program (Version 1).
+//* Quotient Of Dividing 2 Program (Version 1).
 
 /*
-* Print the quotient of dividing 10 by 2
+* Print the quotient of dividing 15 by 5
 
 ! Output:
-! 5
+! 3
 */
 
 #include <iostream>
@@ -29,14 +29,14 @@ int main()
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in quotient Of Dividing Program (Version 1) ..\n"
+    cout << "\n\nYou welcome in quotient Of Dividing 2 Program (Version 1) ..\n"
          << endl;
 }
 
 // Quotient Of Dividing - Function.
 void quotientOfDividingFun()
 {
-    cout << "result of quotient dividing 10 by 2: " << 10 / 2 << "\n\n"
+    cout << "result of quotient dividing 15 by 5: " << 15 / 5 << "\n\n"
          << endl;
 }
 

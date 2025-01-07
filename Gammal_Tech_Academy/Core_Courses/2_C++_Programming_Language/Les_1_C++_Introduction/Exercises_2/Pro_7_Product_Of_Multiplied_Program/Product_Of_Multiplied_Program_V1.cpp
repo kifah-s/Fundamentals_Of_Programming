@@ -1,12 +1,12 @@
 
 
-//* Quotient Of Dividing Program (Version 1).
+//* Product Of Multiplied Program (Version 1).
 
 /*
-* Print the quotient of dividing 10 by 2
+* Print the product of 9 multiplied by 3
 
 ! Output:
-! 5
+! 27
 */
 
 #include <iostream>
@@ -29,14 +29,14 @@ int main()
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in quotient Of Dividing Program (Version 1) ..\n"
+    cout << "\n\nYou welcome in Product Of Multiplied Program (Version 1) ..\n"
          << endl;
 }
 
-// Quotient Of Dividing - Function.
-void quotientOfDividingFun()
+// Product Of Multiplied - Function.
+void productOfMultipliedFun()
 {
-    cout << "result of quotient dividing 10 by 2: " << 10 / 2 << "\n\n"
+    cout << "result of product 9 multiplied 3: " << 9 * 3 << "\n\n"
          << endl;
 }
 
@@ -44,6 +44,6 @@ void quotientOfDividingFun()
 void resultFun()
 {
     printWelcomeMessageFun();
-    quotientOfDividingFun();
+    productOfMultipliedFun();
 }
 //* End Function ..
