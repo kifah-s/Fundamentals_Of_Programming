@@ -37,7 +37,7 @@ int main()
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Print Shape 9 Program (Version 1) ..\n"
+    cout << "\n\nYou welcome in Print Shape 10 Program (Version 1) ..\n"
          << endl;
 }
 
