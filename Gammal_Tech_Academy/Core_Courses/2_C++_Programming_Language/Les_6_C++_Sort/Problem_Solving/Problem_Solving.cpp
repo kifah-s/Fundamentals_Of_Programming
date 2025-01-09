@@ -2,12 +2,11 @@
 //* >>>>> Problem Solving <<<<< */
 
 #include <iostream>
-#include <ctime>
+#include <vector>
 
 using namespace std;
 
 //* Functions ..
-
 // Print Problem Solving / Function.
 void problemSolvingFun()
 {
@@ -20,9 +19,26 @@ int main()
 {
     problemSolvingFun();
 
-    //* ________________________________________________________________
+    int N, M;
+    cin >> N >> M;
 
-    //* ________________________________________________________________
+    vector<string> workPlace(N, "Office");
+    
+    for (int i = 0; i < M; ++i)
+    {
+        int A, B;
+        char C;
+        cin >> A >> B >> C;
+        if (C == 'P')
+        {
+            workPlace[A - 1] = "Remote";
+            workPlace[B - 1] = "Remote";
+        }
+    }
+    for (const auto &status : workPlace)
+    {
+        cout << status << endl;
+    }
 
     cout << "\n\n";
 
