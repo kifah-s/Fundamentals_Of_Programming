@@ -2,7 +2,7 @@
 //* >>>>> Problem Solving <<<<< */
 
 #include <iostream>
-#include <ctime>
+#include <set>
 
 using namespace std;
 
@@ -20,11 +20,24 @@ int main()
 {
     problemSolvingFun();
 
-    //* ________________________________________________________________
+    int T;
+    cin >> T;
+    while (T--)
+    {
+        set<int> tasks;
+        for (int i = 1; i <= 10; ++i)
+        {
+            tasks.insert(i);
+        }
+        for (int i = 0; i < 9; ++i)
+        {
+            int assignedTask;
+            cin >> assignedTask;
+            tasks.erase(assignedTask);
+        }
+        cout << *tasks.begin() << endl;
 
-    //* ________________________________________________________________
+        cout << "\n\n";
 
-    cout << "\n\n";
-
-    return 0;
-}
+        return 0;
+    }
