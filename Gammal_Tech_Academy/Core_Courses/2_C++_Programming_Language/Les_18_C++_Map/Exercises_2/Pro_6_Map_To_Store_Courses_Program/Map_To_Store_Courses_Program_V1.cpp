@@ -1,15 +1,15 @@
 
-//* Map To Store Students Program (Version 1).
+//* Map To Store Courses Program (Version 1).
 
 /*
-* Create a program that uses a map to store student names along with their corresponding exam scores,
-* Print the names and scores in ascending order of names.
+* Create a program that initializes a map with predefined data representing courses and their corresponding credit hours,
+* The program should print the courses and credit hours in ascending order of courses.
 
 ! Output:
 ! Sorted by name:
-! Student: A, score: 85
-! Student: B, score: 75
-! Student: C, score: 95
+! Course: B, hours: 45
+! Course: A, hours: 25
+! Course: C, hours: 10
 */
 
 #include <iostream>
@@ -37,16 +37,21 @@ int main()
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Map To Store Students Program (Version 1) ..\n"
+    cout << "\n\nYou welcome in Map To Store Courses Program (Version 1) ..\n"
          << endl;
 }
 
 // Add Elements To Map - Function.
 map<string, float> addElementsToMapFun(map<string, float> myMap)
 {
-    myMap["B"] = 75;
-    myMap["C"] = 95;
-    myMap["A"] = 85;
+    // myMap["B"] = 45;
+    // myMap["C"] = 10;
+    // myMap["A"] = 25;
+
+    myMap = {
+        {"B", 45},
+        {"C", 10},
+        {"A", 25}};
 
     return myMap;
 }
@@ -57,7 +62,7 @@ void printMapElementsFun(map<string, float> myMap)
     cout << "Sorted by name:" << endl;
     for (auto &x : myMap)
     {
-        cout << "Student: " << x.first << ", score: " << x.second << endl;
+        cout << "Course: " << x.first << ", hours: " << x.second << endl;
     }
 }
 

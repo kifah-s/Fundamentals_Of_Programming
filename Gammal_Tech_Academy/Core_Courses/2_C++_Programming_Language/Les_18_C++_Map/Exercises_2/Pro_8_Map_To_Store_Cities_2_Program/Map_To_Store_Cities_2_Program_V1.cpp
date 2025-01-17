@@ -1,15 +1,16 @@
 
-//* Map To Store Students Program (Version 1).
+//* Map To Store Cities 2 Program (Version 1).
 
 /*
-* Create a program that uses a map to store student names along with their corresponding exam scores,
-* Print the names and scores in ascending order of names.
+* Create a program that utilizes a map to store the names of cities and their respective average temperatures,
+* The program should initialize the map with predefined data,
+* and then print the cities and average temperatures in ascending order of city names.
 
 ! Output:
-! Sorted by name:
-! Student: A, score: 85
-! Student: B, score: 75
-! Student: C, score: 95
+! Sorted by city name:
+! city: A, temperatures: 18.5
+! city: B, temperatures: 12.2
+! city: C, temperatures: 22.8
 */
 
 #include <iostream>
@@ -37,16 +38,21 @@ int main()
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Map To Store Students Program (Version 1) ..\n"
+    cout << "\n\nYou welcome in Map To Store Cities 2 Program (Version 1) ..\n"
          << endl;
 }
 
 // Add Elements To Map - Function.
 map<string, float> addElementsToMapFun(map<string, float> myMap)
 {
-    myMap["B"] = 75;
-    myMap["C"] = 95;
-    myMap["A"] = 85;
+    myMap = {
+        {"B", 12.2},
+        {"C", 22.8},
+        {"A", 18.5}};
+
+    // myMap["B"] = 12.2;
+    // myMap["C"] = 22.8;
+    // myMap["A"] = 18.5;
 
     return myMap;
 }
@@ -54,10 +60,10 @@ map<string, float> addElementsToMapFun(map<string, float> myMap)
 // Print Map Elements - Function.
 void printMapElementsFun(map<string, float> myMap)
 {
-    cout << "Sorted by name:" << endl;
+    cout << "Sorted by city name:" << endl;
     for (auto &x : myMap)
     {
-        cout << "Student: " << x.first << ", score: " << x.second << endl;
+        cout << "city: " << x.first << ", temperatures: " << x.second << endl;
     }
 }
 

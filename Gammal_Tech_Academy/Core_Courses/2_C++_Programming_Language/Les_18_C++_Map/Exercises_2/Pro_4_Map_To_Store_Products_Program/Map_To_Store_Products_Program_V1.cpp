@@ -67,7 +67,7 @@ void resultFun()
     // Call Functions.
     printWelcomeMessageFun();
 
-    // Declare Set.
+    // Declare Variables.
     map<int, string, greater<int>> myMap;
 
     // Call Functions.
