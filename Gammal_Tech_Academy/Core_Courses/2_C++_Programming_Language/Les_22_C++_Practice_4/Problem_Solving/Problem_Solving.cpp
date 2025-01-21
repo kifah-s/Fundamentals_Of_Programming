@@ -2,7 +2,7 @@
 //* >>>>> Problem Solving <<<<< */
 
 #include <iostream>
-#include <ctime>
+#include <string>
 
 using namespace std;
 
@@ -20,9 +20,20 @@ int main()
 {
     problemSolvingFun();
 
-    //* ________________________________________________________________
+    string pattern;
+    cin >> pattern;
 
-    //* ________________________________________________________________
+    // Design Pattern Type
+    cout << "Design Pattern Type: " << pattern[0] << endl;
+    
+    // Project Code
+    cout << "Project Code: " << pattern.substr(1, 2) << endl;
+    
+    // Attributes
+    for (size_t i = 3; i < pattern.length(); i += 2)
+    {
+        cout << "Attribute " << pattern[i] << ": " << pattern[i + 1] << endl;
+    }
 
     cout << "\n\n";
 
