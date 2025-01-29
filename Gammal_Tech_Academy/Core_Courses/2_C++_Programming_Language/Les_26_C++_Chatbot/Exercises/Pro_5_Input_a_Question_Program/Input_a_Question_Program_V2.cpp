@@ -4,7 +4,7 @@
 /*
 * Create a program that lets the user input a question and get the corresponding answer from the file.
 
-! Output:
+! Input & Output:
 ! File is open for reading.
 ! Ask me a question: what is your name?
 ! Answer: my name is: kifah
@@ -68,7 +68,7 @@ void openAndWriteInFile2Fun(fstream &myFi)
 
     if (myFi.is_open())
     {
-        myFi << "how old are you" << endl;
+        myFi << "how old are you?" << endl;
         myFi << "my age is: 23" << endl
              << endl;
     }
@@ -114,12 +114,17 @@ map<string, string> storageFileContentInMapFun(fstream &myFi)
 // Check Answer - Function.
 void checkAnswerFun(map<string, string> myMap, string userQue)
 {
-    for (const auto &pair : myMap)
+    // for (const auto &pair : myMap)
+    // {
+    //     if (pair.first == userQue)
+    //     {
+    //         cout << pair.second << endl;
+    //     }
+    // }
+
+    if (myMap.find(userQue) != myMap.end())
     {
-        if (pair.first == userQue)
-        {
-            cout << pair.second << endl;
-        }
+        cout << myMap[userQue] << endl;
     }
 }
 
@@ -130,7 +135,7 @@ void resultFun()
     printWelcomeMessageFun();
 
     // Declare Variables.
-    fstream myFile("my_file.txt", ios::out | ios::in);
+    fstream myFile("my_file.txt");
     string userQuestion;
     map<string, string> myMap;
 

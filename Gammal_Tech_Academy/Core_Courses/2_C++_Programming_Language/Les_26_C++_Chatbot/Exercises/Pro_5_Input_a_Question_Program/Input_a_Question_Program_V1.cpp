@@ -4,7 +4,7 @@
 /*
 * Create a program that lets the user input a question and get the corresponding answer from the file.
 
-! Output:
+! Input & Output:
 ! File is open for reading.
 ! Ask me a question: what is your name?
 ! Answer: my name is: kifah
@@ -140,7 +140,7 @@ void resultFun()
     printWelcomeMessageFun();
 
     // Declare Variables.
-    fstream myFile("my_file.txt", ios::out | ios::in);
+    fstream myFile("my_file.txt");
     string userQuestion;
 
     // Call Functions.

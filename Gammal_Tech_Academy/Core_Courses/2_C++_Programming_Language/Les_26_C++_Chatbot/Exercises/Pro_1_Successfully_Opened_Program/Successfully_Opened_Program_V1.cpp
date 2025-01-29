@@ -40,8 +40,10 @@ void printWelcomeMessageFun()
 }
 
 // Check Open File - Function.
-void checkOpenFileFun(ofstream &myFi)
+void checkOpenFileFun(fstream &myFi)
 {
+    myFi.open("my_file.txt", ios::out);
+    
     if (myFi.is_open())
     {
         cout << "File is open for writing.";
@@ -62,7 +64,7 @@ void resultFun()
     printWelcomeMessageFun();
 
     // Declare Variables.
-    ofstream myFile("my_file.txt");
+    fstream myFile("my_file.txt");
 
     // Call Functions.
     checkOpenFileFun(myFile);

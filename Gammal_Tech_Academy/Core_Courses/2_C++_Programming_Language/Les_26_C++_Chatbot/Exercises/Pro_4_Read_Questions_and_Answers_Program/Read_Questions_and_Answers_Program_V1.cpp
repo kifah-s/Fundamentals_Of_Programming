@@ -109,7 +109,7 @@ void resultFun()
     printWelcomeMessageFun();
 
     // Declare Variables.
-    fstream myFile("my_file.txt", ios::out | ios::in);
+    fstream myFile("my_file.txt");
 
     // Call Functions.
     openAndWriteInFile1Fun(myFile);

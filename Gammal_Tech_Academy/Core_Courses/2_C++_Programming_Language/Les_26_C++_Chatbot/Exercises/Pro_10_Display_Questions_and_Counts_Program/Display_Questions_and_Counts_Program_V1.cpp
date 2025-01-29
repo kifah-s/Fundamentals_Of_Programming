@@ -1,11 +1,16 @@
 
-//* Question and Answer Program (Version 1).
+//* Display Questions and Counts Program (Version 1).
 
 /*
-* Create a program that adds a question and answer to a file.
+* Modify the previous program to display the questions and answers along with their counts.
 
 ! Output:
-! File is open for writing.
+! File is open for reading.
+! what is your name?
+! my name is: kifah
+! how old are you
+! my age is: 23
+! Number of Questions and answers is: 4
 */
 
 #include <iostream>
@@ -35,7 +40,7 @@ int main()
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Question and Answer Program (Version 1) ..\n"
+    cout << "\n\nYou welcome in Display Questions and Counts Program (Version 1) ..\n"
          << endl;
 }
 
@@ -47,8 +52,8 @@ void openAndWriteInFile1Fun(fstream &myFi)
     if (myFi.is_open())
     {
         cout << "File is open for writing." << endl;
-        myFi << "Question 1: What's your name?" << endl;
-        myFi << "Answer 1: my name is: kifah" << endl;
+        myFi << "what is your name?" << endl;
+        myFi << "my name is: kifah" << endl;
     }
     else
     {
@@ -65,8 +70,8 @@ void openAndWriteInFile2Fun(fstream &myFi)
 
     if (myFi.is_open())
     {
-        myFi << "Question 2: What's your name?" << endl;
-        myFi << "Answer 2: my name is: kifah" << endl;
+        myFi << "how old are you" << endl;
+        myFi << "my age is: 23" << endl;
     }
     else
     {
@@ -76,25 +81,25 @@ void openAndWriteInFile2Fun(fstream &myFi)
     myFi.close();
 }
 
-// Open And Read From File - Function.
-// void openAndReadFromFileFun(fstream &myFi)
-// {
-//     myFi.open("my_file.txt", ios::in);
-//     string line;
-//     if (myFi.is_open())
-//     {
-//         while (getline(myFi, line))
-//         {
-//             cout << line << endl;
-//         }
-//     }
-//     else
-//     {
-//         cout << "Error: Could not open file!" << endl;
-//     }
-//     // Close the file
-//     myFi.close();
-// }
+// Number of Questions - Function.
+int numberofQuestionsFun(fstream &myFi)
+{
+    int cou = 0;
+    string qus, ans;
+
+    myFi.open("my_file.txt", ios::in);
+
+    while (getline(myFi, qus) && getline(myFi, ans))
+    {
+        cout << "Q: " << qus << endl;
+        cout << "A: " << ans << endl;
+        cou++;
+    }
+
+    myFi.close();
+
+    return cou;
+}
 
 // Result - Function.
 void resultFun()
@@ -104,10 +109,14 @@ void resultFun()
 
     // Declare Variables.
     fstream myFile("my_file.txt");
+    int counter = 0;
 
     // Call Functions.
     openAndWriteInFile1Fun(myFile);
     openAndWriteInFile2Fun(myFile);
+    counter = numberofQuestionsFun(myFile);
+
+    cout << "Number of Questions and answers is: " << counter;
 
     cout << "\n"
          << endl;

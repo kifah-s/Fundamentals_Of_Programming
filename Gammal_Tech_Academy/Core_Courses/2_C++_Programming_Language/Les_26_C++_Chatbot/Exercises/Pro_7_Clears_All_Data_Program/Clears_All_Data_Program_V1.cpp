@@ -1,11 +1,12 @@
 
-//* Question and Answer Program (Version 1).
+//* Clears All Data Program (Version 1).
 
 /*
-* Create a program that adds a question and answer to a file.
+* Create a program that clears all the existing questions and answers from the file.
 
-! Output:
+! Input & Output:
 ! File is open for writing.
+! All data cleared from the file.
 */
 
 #include <iostream>
@@ -35,7 +36,7 @@ int main()
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Question and Answer Program (Version 1) ..\n"
+    cout << "\n\nYou welcome in Clears All Data Program (Version 1) ..\n"
          << endl;
 }
 
@@ -47,8 +48,9 @@ void openAndWriteInFile1Fun(fstream &myFi)
     if (myFi.is_open())
     {
         cout << "File is open for writing." << endl;
-        myFi << "Question 1: What's your name?" << endl;
-        myFi << "Answer 1: my name is: kifah" << endl;
+        myFi << "what is your name?" << endl;
+        myFi << "my name is: kifah" << endl
+             << endl;
     }
     else
     {
@@ -65,8 +67,9 @@ void openAndWriteInFile2Fun(fstream &myFi)
 
     if (myFi.is_open())
     {
-        myFi << "Question 2: What's your name?" << endl;
-        myFi << "Answer 2: my name is: kifah" << endl;
+        myFi << "how old are you" << endl;
+        myFi << "my age is: 23" << endl
+             << endl;
     }
     else
     {
@@ -76,25 +79,14 @@ void openAndWriteInFile2Fun(fstream &myFi)
     myFi.close();
 }
 
-// Open And Read From File - Function.
-// void openAndReadFromFileFun(fstream &myFi)
-// {
-//     myFi.open("my_file.txt", ios::in);
-//     string line;
-//     if (myFi.is_open())
-//     {
-//         while (getline(myFi, line))
-//         {
-//             cout << line << endl;
-//         }
-//     }
-//     else
-//     {
-//         cout << "Error: Could not open file!" << endl;
-//     }
-//     // Close the file
-//     myFi.close();
-// }
+// Clears All Data - Function.
+void clearsAllDataFun(fstream &myFi)
+{
+    // myFi.open("my_file.txt", ios::out | ios::trunc);
+    myFi.open("my_file.txt", ios::out);
+    myFi.close();
+    cout << "All data cleared from the file.";
+}
 
 // Result - Function.
 void resultFun()
@@ -108,6 +100,7 @@ void resultFun()
     // Call Functions.
     openAndWriteInFile1Fun(myFile);
     openAndWriteInFile2Fun(myFile);
+    clearsAllDataFun(myFile);
 
     cout << "\n"
          << endl;

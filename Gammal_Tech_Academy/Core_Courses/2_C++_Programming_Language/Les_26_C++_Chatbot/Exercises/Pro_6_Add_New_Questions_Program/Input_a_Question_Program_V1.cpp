@@ -1,11 +1,24 @@
 
-//* Question and Answer Program (Version 1).
+//* Add New Questions Program (Version 1).
 
 /*
-* Create a program that adds a question and answer to a file.
+* Modify the previous program to allow the user to add new questions and answers to the file.
+
+! Input & Output:
+! File is open for writing.
+! Add a new question: how do you do?
+! Add the Answer: i am doing well
+! New question and answer added to the file.
 
 ! Output:
-! File is open for writing.
+! what is your name?
+! my name is: kifah
+
+! how old are you
+! my age is: 23
+
+! how do you do?
+! i am doing well
 */
 
 #include <iostream>
@@ -35,7 +48,7 @@ int main()
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Question and Answer Program (Version 1) ..\n"
+    cout << "\n\nYou welcome in Add New Questions Program (Version 1) ..\n"
          << endl;
 }
 
@@ -47,8 +60,9 @@ void openAndWriteInFile1Fun(fstream &myFi)
     if (myFi.is_open())
     {
         cout << "File is open for writing." << endl;
-        myFi << "Question 1: What's your name?" << endl;
-        myFi << "Answer 1: my name is: kifah" << endl;
+        myFi << "what is your name?" << endl;
+        myFi << "my name is: kifah" << endl
+             << endl;
     }
     else
     {
@@ -65,8 +79,9 @@ void openAndWriteInFile2Fun(fstream &myFi)
 
     if (myFi.is_open())
     {
-        myFi << "Question 2: What's your name?" << endl;
-        myFi << "Answer 2: my name is: kifah" << endl;
+        myFi << "how old are you" << endl;
+        myFi << "my age is: 23" << endl
+             << endl;
     }
     else
     {
@@ -76,25 +91,27 @@ void openAndWriteInFile2Fun(fstream &myFi)
     myFi.close();
 }
 
-// Open And Read From File - Function.
-// void openAndReadFromFileFun(fstream &myFi)
-// {
-//     myFi.open("my_file.txt", ios::in);
-//     string line;
-//     if (myFi.is_open())
-//     {
-//         while (getline(myFi, line))
-//         {
-//             cout << line << endl;
-//         }
-//     }
-//     else
-//     {
-//         cout << "Error: Could not open file!" << endl;
-//     }
-//     // Close the file
-//     myFi.close();
-// }
+// Add New Question - Function.
+void addNewQuestionFun(fstream &myFi)
+{
+    string userQue, userAns;
+
+    cout << "Add a new question: ";
+    getline(cin, userQue);
+
+    cout << "Add the answer: ";
+    getline(cin, userAns);
+
+    myFi.open("my_file.txt", ios::app);
+
+    myFi << userQue << endl;
+    myFi << userAns << endl
+         << endl;
+
+    myFi.close();
+
+    cout << "New question and answer added to the file.";
+}
 
 // Result - Function.
 void resultFun()
@@ -108,6 +125,7 @@ void resultFun()
     // Call Functions.
     openAndWriteInFile1Fun(myFile);
     openAndWriteInFile2Fun(myFile);
+    addNewQuestionFun(myFile);
 
     cout << "\n"
          << endl;
