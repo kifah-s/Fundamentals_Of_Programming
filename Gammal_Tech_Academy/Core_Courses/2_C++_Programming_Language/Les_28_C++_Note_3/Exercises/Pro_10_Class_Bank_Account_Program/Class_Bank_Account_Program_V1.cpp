@@ -84,8 +84,8 @@ void printWelcomeMessageFun()
          << endl;
 }
 
-// Area Of Triangle - Function.
-void areaOfTriangleFun()
+// Account Details - Function.
+void accountDetailsFun()
 {
     BankAccount account_1;
     account_1.setAccountNumber();
@@ -101,7 +101,7 @@ void resultFun()
     printWelcomeMessageFun();
 
     // Call Functions.
-    areaOfTriangleFun();
+    accountDetailsFun();
 
     cout << "\n"
          << endl;
