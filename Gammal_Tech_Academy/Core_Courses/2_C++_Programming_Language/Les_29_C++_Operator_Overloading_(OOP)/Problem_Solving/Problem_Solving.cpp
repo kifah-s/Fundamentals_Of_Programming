@@ -6,6 +6,23 @@
 
 using namespace std;
 
+//* Classes ..
+class GammalTechCalculator
+{
+public:
+    // Overloading '+' operator to perform subtraction
+    int operator+(int b)
+    {
+        return -b;
+    }
+    // Overloading '-' operator to perform addition
+    int operator-(int b)
+    {
+        return b;
+    }
+};
+//* End Classes ..
+
 //* Functions ..
 
 // Print Problem Solving / Function.
@@ -20,9 +37,24 @@ int main()
 {
     problemSolvingFun();
 
-    //* ________________________________________________________________
-
-    //* ________________________________________________________________
+    int T;
+    cin >> T;
+    while (T--)
+    {
+        char op;
+        int A, B;
+        cin >> op >> A >> B;
+        GammalTechCalculator calc;
+        switch (op)
+        {
+        case '+':
+            cout << A + calc + B << endl;
+            break;
+        case '-':
+            cout << A + calc - B << endl;
+            break;
+        }
+    }
 
     cout << "\n\n";
 
