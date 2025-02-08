@@ -50,7 +50,7 @@ T maximumValueFun(int s, T arr[])
 {
     T max = arr[0];
 
-    for (int i = 1; i < 9; i++)
+    for (int i = 1; i < s; i++)
     {
         if (arr[i] > max)
         {
