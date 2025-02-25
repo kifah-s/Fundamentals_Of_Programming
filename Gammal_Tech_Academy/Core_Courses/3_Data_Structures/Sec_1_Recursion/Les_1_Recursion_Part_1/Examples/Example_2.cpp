@@ -46,11 +46,11 @@ int getNumberFun()
 // Recursion - Function.
 void recursionFun(int n)
 {
-    if (n == 0)
+    if (n == 0) // Base case.
     {
         return;
     }
-    else
+    else // Recursive call.
     {
         recursionFun(n - 1);
         cout << n << endl;

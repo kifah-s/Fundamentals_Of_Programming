@@ -1,5 +1,15 @@
 
-//*  Example 1 ..
+//* From N To 1 Using Recursion Program (Version 2).
+
+/*
+* Write a program to print numbers from 1 to N using recursion.
+
+! Input:
+! Please, enter a number: 5
+
+! Output:
+! Numbers from 5 to 1: 5 4 3 2 1
+*/
 
 #include <iostream>
 #include <array>
@@ -28,7 +38,7 @@ int main()
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Example 1 ..\n"
+    cout << "\n\nYou welcome in From N To 1 Using Recursion Program (Version 2) ..\n"
          << endl;
 }
 
@@ -46,13 +56,9 @@ int getNumberFun()
 // Recursion - Function.
 void recursionFun(int n)
 {
-    if (n == 0) // Base case.
+    if (n > 0) // Base case.
     {
-        return;
-    }
-    else // Recursive call.
-    {
-        cout << n << endl;
+        cout << n << " ";
         recursionFun(n - 1);
     }
 }
@@ -67,9 +73,10 @@ void resultFun()
     printWelcomeMessageFun();
 
     myNumber = getNumberFun();
+    cout << "Numbers from " << myNumber << " To 1: ";
     recursionFun(myNumber);
 
-    cout << endl
+    cout << "\n"
          << endl;
 }
 //* End Function ..
