@@ -1,1 +1,1 @@
-# Lesson 0: Introduction To DS.
+# Lesson 0: Introduction To Data Structures.
