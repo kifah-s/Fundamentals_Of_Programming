@@ -1,15 +1,15 @@
 
-//* From N To -2 Using Recursion Program (Version 1).
+//* From N To 1 Using Recursion Program (Version 1).
 
 /*
-* Write a program that takes an integer input 'num' from the user and prints the numbers from 'num' to -2,
-* in decreasing order. using recursion
+* Create a program that prompts the user to enter an integer 'num',
+* and then prints the even numbers from 'num' to 1 in decreasing order. using recursion
 
 ! Input:
-! Please, enter a number: 5
+! Please, enter a number: 7
 
 ! Output:
-! Numbers from 5 to -2: 5 4 3 2 1 0 -1 -2
+! Numbers from 7 to 1 (excluding zero): 6 4 2
 */
 
 #include <iostream>
@@ -39,7 +39,7 @@ int main()
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in From N To -2 Using Recursion Program (Version 1) ..\n"
+    cout << "\n\nYou welcome in From N To 1 Using Recursion Program (Version 1) ..\n"
          << endl;
 }
 
@@ -54,17 +54,37 @@ int getNumberFun()
     return n;
 }
 
+// Check Numbers - Function.
+bool checkNumbersFun(int n)
+{
+    if (n % 2 == 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
 // Recursion - Function.
 void recursionFun(int n)
 {
-    if (n == -3) // Base case.
+    if (n == 0) // Base Case.
     {
         return;
     }
-    else // Recursive call.
+    else
     {
-        cout << n << " ";
-        recursionFun(n - 1);
+        if (checkNumbersFun(n))
+        {
+            cout << n << " ";
+            recursionFun(n - 1); // Recursive Call.
+        }
+        else
+        {
+            recursionFun(n - 1); // Recursive Call.
+        }
     }
 }
 
@@ -78,7 +98,7 @@ void resultFun()
     printWelcomeMessageFun();
 
     myNumber = getNumberFun();
-    cout << "Numbers from " << myNumber << " To -2: ";
+    cout << "Even Numbers from " << myNumber << " To 1: ";
     recursionFun(myNumber);
 
     cout << "\n"

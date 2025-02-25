@@ -1,15 +1,15 @@
 
-//* From N To -2 Using Recursion Program (Version 1).
+//* From N To -2 Excluding 0 Using Recursion Program (Version 1).
 
 /*
 * Write a program that takes an integer input 'num' from the user and prints the numbers from 'num' to -2,
-* in decreasing order. using recursion
+* in decreasing order, excluding zero. using recursion.
 
 ! Input:
 ! Please, enter a number: 5
 
 ! Output:
-! Numbers from 5 to -2: 5 4 3 2 1 0 -1 -2
+! Numbers from 5 to -2 (excluding zero): 5 4 3 2 1 -1 -2
 */
 
 #include <iostream>
@@ -39,7 +39,7 @@ int main()
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in From N To -2 Using Recursion Program (Version 1) ..\n"
+    cout << "\n\nYou welcome in From N To -2 Excluding 0 Using Recursion Program (Version 1) ..\n"
          << endl;
 }
 
@@ -60,6 +60,10 @@ void recursionFun(int n)
     if (n == -3) // Base case.
     {
         return;
+    }
+    else if (n == 0)
+    {
+        recursionFun(n - 1);
     }
     else // Recursive call.
     {

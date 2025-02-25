@@ -2,7 +2,9 @@
 //* From N To 1 Using Recursion Program (Version 1).
 
 /*
-* Write a program to print numbers from 1 to N using recursion.
+* Write a program that takes an integer input 'num' from the user and prints the numbers from 'num' to 1,
+* in decreasing order. using recursion.
+
 
 ! Input:
 ! Please, enter a number: 5
