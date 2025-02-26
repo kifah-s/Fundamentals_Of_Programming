@@ -22,13 +22,32 @@ void printWelcomeMessageFun()
          << endl;
 }
 
+// Fibonacci - Function.
+int fib(int x)
+{
+    if (x < 2)
+    {
+        return x;
+    }
+    else
+    {
+        return fib(x - 1) + fib(x - 2);
+    }
+}
+
 // Result - Function.
 void resultFun()
 {
     // Declare Variables.
+    int num = 0;
 
     // Call Functions.
     printWelcomeMessageFun();
+
+    cout << "Please, enter a number: ";
+    cin >> num;
+
+    cout << fib(num) << endl;
 
     cout << endl
          << endl;
