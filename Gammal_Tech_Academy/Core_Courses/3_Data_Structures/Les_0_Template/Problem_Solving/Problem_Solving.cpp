@@ -1,5 +1,5 @@
 
-//*  Problem Solving (Version 1).
+//*  Problem Solving ..
 
 #include <iostream>
 #include <array>
@@ -28,7 +28,7 @@ int main()
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Problem Solving (Version 1) ..\n"
+    cout << "\n\nYou welcome in Problem Solving ..\n"
          << endl;
 }
 
