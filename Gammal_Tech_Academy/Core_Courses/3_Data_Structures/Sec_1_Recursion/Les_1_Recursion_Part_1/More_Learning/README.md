@@ -228,3 +228,85 @@ Use recursion when the problem naturally fits it (e.g., mathematical problems or
 #### (Grok)
 
 ---
+
+### 🔹 What is a Recursive Function?
+
+A **recursive function** is a function that calls itself to solve a smaller part of the original problem until it reaches the **base case**, which stops further recursive calls.
+
+---
+
+### 📌 Example: Calculating Factorial using Recursion
+
+A function that calculates the factorial of a number \( n! \) using recursion:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int factorial(int n) {
+    if (n == 0) // Base case
+        return 1;
+    return n * factorial(n - 1); // Recursive call
+}
+
+int main() {
+    cout << factorial(5); // 5! = 5 × 4 × 3 × 2 × 1
+    return 0;
+}
+```
+
+---
+
+## 📌 Step-by-Step Execution of the Recursive Function:
+
+### 1️⃣ Function Calls (`factorial(5)`)
+
+📌 `factorial(5)` calls `factorial(4)`  
+📌 `factorial(4)` calls `factorial(3)`  
+📌 `factorial(3)` calls `factorial(2)`  
+📌 `factorial(2)` calls `factorial(1)`  
+📌 `factorial(1)` calls `factorial(0)`  
+📌 **Base case reached: `factorial(0) = 1`**, and now the function starts returning!
+
+---
+
+### 2️⃣ Executing Operations After Reaching the Base Case:
+
+After reaching the base case, the function starts returning values step by step:
+
+```
+factorial(0) = 1
+factorial(1) = 1 × 1 = 1
+factorial(2) = 2 × 1 = 2
+factorial(3) = 3 × 2 = 6
+factorial(4) = 4 × 6 = 24
+factorial(5) = 5 × 24 = 120
+```
+
+---
+
+### 🔹 Visual Representation (Call Stack)
+
+```
+factorial(5)
+ ├──> factorial(4)
+ │      ├──> factorial(3)
+ │      │      ├──> factorial(2)
+ │      │      │      ├──> factorial(1)
+ │      │      │      │      ├──> factorial(0) = 1  (Base case)
+ │      │      │      │      └──> 1 × 1 = 1
+ │      │      │      └──> 2 × 1 = 2
+ │      │      └──> 3 × 2 = 6
+ │      └──> 4 × 6 = 24
+ └──> 5 × 24 = 120
+```
+
+### ⚡ Important Notes:
+
+1️⃣ Each recursive call is stored in the **call stack** until it reaches the **base case**.  
+2️⃣ Once the base case is reached, the function starts returning and solving the operations.  
+3️⃣ If there is **no base case**, the function will enter an **infinite loop**, leading to a **stack overflow** error.
+
+#### (ChatGPT)
+
+---
