@@ -1,15 +1,16 @@
 
-//* Count Odd Digits Using Recursion Program (Version 2).
+//* Count and Sum Odd Digits Using Recursion Program (Version 2).
 
 /*
 * Write a program that prompts the user to enter a positive integer 'num'.
-* The program should count and display the number of odd digits in 'num'.
+* The program should count and display the number of odd digits in 'num' using a recursive function named countOddDigits.
+* Additionally, the program should calculate and display the sum of odd digits in 'num' using a recursive function named sumOddDigits.
 
 ! Input:
 ! Please, enter a positive integer: 12345
 
 ! Output:
-! Number of odd digits: 3
+! Number of odd digits: 9
 */
 
 #include <iostream>
@@ -29,7 +30,7 @@ using namespace std;
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Count Odd Digits Using Recursion Program (Version 2) ..\n"
+    cout << "\n\nYou welcome in Count and Sum Odd Digits Using Recursion Program (Version 2) ..\n"
          << endl;
 }
 
@@ -68,17 +69,45 @@ int countOddDigitsRecFun(int num, int numOfOddDig)
     }
 }
 
+// Sum Odd Digits - Recursion Function.
+int sumOddDigitsRecFun(int num, int sumOfOddDig)
+{
+    int lastDigit = 0;
+
+    if (num == 0) // Base Case.
+    {
+        return sumOfOddDig;
+    }
+    else
+    {
+        lastDigit = num % 10;
+
+        if (lastDigit % 2 != 0)
+        {
+            sumOfOddDig = sumOfOddDig + lastDigit;
+        }
+
+        num = num / 10;
+
+        return sumOddDigitsRecFun(num, sumOfOddDig); // Recursive call.
+    }
+}
+
 // Result - Function.
 void resultFun()
 {
     // Declare Variables.
-    int myNumber = 0, numberOfOddDigits = 0;
+    int myNumber = 0, numberOfOddDigits = 0, sumOfOddDigits = 0;
 
     // Call Functions.
     printWelcomeMessageFun();
     myNumber = getNumberFun();
+    
     numberOfOddDigits = countOddDigitsRecFun(myNumber, numberOfOddDigits);
     cout << "Number of Odd digits: " << numberOfOddDigits << endl;
+    
+    sumOfOddDigits = sumOddDigitsRecFun(myNumber, sumOfOddDigits);
+    cout << "Sum of Odd digits: " << sumOfOddDigits << endl;
 
     cout << "\n"
          << endl;
