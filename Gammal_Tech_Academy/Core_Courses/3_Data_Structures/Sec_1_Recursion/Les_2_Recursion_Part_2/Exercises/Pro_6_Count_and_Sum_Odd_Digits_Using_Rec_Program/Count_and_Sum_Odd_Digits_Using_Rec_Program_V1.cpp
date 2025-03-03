@@ -10,7 +10,8 @@
 ! Please, enter a positive integer: 12345
 
 ! Output:
-! Number of odd digits: 9
+! Number of odd digits: 3
+! Sum of odd digits: 9
 */
 
 #include <iostream>

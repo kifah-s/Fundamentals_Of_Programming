@@ -1,10 +1,11 @@
 
-//* Count and Sum Odd Digits Using Recursion Program (Version 2).
+//* Count and Sum and Product Odd Digits Using Recursion Program (Version 1).
 
 /*
 * Write a program that prompts the user to enter a positive integer 'num'.
 * The program should count and display the number of odd digits in 'num' using a recursive function named countOddDigits.
-* Additionally, the program should calculate and display the sum of odd digits in 'num' using a recursive function named sumOddDigits.
+* Additionally, the program should calculate and display the sum of odd digits in 'num' using a recursive function named sumOddDigits,
+* and find the product of odd digits using a recursive function named productOddDigits.
 
 ! Input:
 ! Please, enter a positive integer: 12345
@@ -12,6 +13,7 @@
 ! Output:
 ! Number of odd digits: 3
 ! Sum of odd digits: 9
+! Product of odd digits: 15
 */
 
 #include <iostream>
@@ -31,7 +33,7 @@ using namespace std;
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Count and Sum Odd Digits Using Recursion Program (Version 2) ..\n"
+    cout << "\n\nYou welcome in Count and Sum and Product Odd Digits Using Recursion Program (Version 1) ..\n"
          << endl;
 }
 
@@ -47,13 +49,14 @@ int getNumberFun()
 }
 
 // Count Odd Digits - Recursion Function.
-int countOddDigitsRecFun(int num, int numOfOddDig)
+void countOddDigitsRecFun(int num, int numOfOddDig)
 {
     int lastDigit = 0;
 
     if (num == 0) // Base Case.
     {
-        return numOfOddDig;
+        cout << "Number of Odd digits: " << numOfOddDig << endl;
+        return;
     }
     else
     {
@@ -66,18 +69,19 @@ int countOddDigitsRecFun(int num, int numOfOddDig)
 
         num = num / 10;
 
-        return countOddDigitsRecFun(num, numOfOddDig); // Recursive call.
+        countOddDigitsRecFun(num, numOfOddDig); // Recursive call.
     }
 }
 
 // Sum Odd Digits - Recursion Function.
-int sumOddDigitsRecFun(int num, int sumOfOddDig)
+void sumOddDigitsRecFun(int num, int sumOfOddDig)
 {
     int lastDigit = 0;
 
     if (num == 0) // Base Case.
     {
-        return sumOfOddDig;
+        cout << "Sum of Odd digits: " << sumOfOddDig << endl;
+        return;
     }
     else
     {
@@ -90,7 +94,32 @@ int sumOddDigitsRecFun(int num, int sumOfOddDig)
 
         num = num / 10;
 
-        return sumOddDigitsRecFun(num, sumOfOddDig); // Recursive call.
+        sumOddDigitsRecFun(num, sumOfOddDig); // Recursive call.
+    }
+}
+
+// Product Odd Digits - Recursion Function.
+void productOddDigitsRecFun(int num, int proOfOddDig)
+{
+    int lastDigit = 0;
+
+    if (num == 0) // Base Case.
+    {
+        cout << "Product of Odd digits: " << proOfOddDig << endl;
+        return;
+    }
+    else
+    {
+        lastDigit = num % 10;
+
+        if (lastDigit % 2 != 0)
+        {
+            proOfOddDig = proOfOddDig * lastDigit;
+        }
+
+        num = num / 10;
+
+        productOddDigitsRecFun(num, proOfOddDig); // Recursive call.
     }
 }
 
@@ -98,17 +127,14 @@ int sumOddDigitsRecFun(int num, int sumOfOddDig)
 void resultFun()
 {
     // Declare Variables.
-    int myNumber = 0, numberOfOddDigits = 0, sumOfOddDigits = 0;
+    int myNumber = 0, numberOfOddDigits = 0, sumOfOddDigits = 0, productOfOddDigits = 1;
 
     // Call Functions.
     printWelcomeMessageFun();
     myNumber = getNumberFun();
-    
-    numberOfOddDigits = countOddDigitsRecFun(myNumber, numberOfOddDigits);
-    cout << "Number of Odd digits: " << numberOfOddDigits << endl;
-    
-    sumOfOddDigits = sumOddDigitsRecFun(myNumber, sumOfOddDigits);
-    cout << "Sum of Odd digits: " << sumOfOddDigits << endl;
+    countOddDigitsRecFun(myNumber, numberOfOddDigits);
+    sumOddDigitsRecFun(myNumber, sumOfOddDigits);
+    productOddDigitsRecFun(myNumber, productOfOddDigits);
 
     cout << "\n"
          << endl;
