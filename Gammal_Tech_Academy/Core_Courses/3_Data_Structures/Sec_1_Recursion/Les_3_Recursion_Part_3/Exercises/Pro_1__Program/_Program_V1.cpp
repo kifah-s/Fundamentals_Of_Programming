@@ -1,5 +1,15 @@
 
-//*  Example 1 ..
+//*  Program (Version 1).
+
+/*
+*
+
+! Input:
+!
+
+! Output:
+!
+*/
 
 #include <iostream>
 #include <array>
@@ -18,13 +28,12 @@ using namespace std;
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Example 1 ..\n"
+    cout << "\n\nYou welcome in  Program (Version 1) ..\n"
          << endl;
 }
 
-//* End Functions ..
-
-int main()
+// Result - Function.
+void resultFun()
 {
     // Declare Variables.
 
@@ -33,6 +42,13 @@ int main()
 
     cout << endl
          << endl;
+}
+//* End Function ..
+
+int main()
+{
+    // Call Functions.
+    resultFun();
 
     return 0;
 }

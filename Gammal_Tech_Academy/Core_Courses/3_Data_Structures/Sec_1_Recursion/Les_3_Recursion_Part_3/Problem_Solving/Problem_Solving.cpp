@@ -1,5 +1,5 @@
 
-//*  Example 1 ..
+//*  Problem Solving ..
 
 #include <iostream>
 #include <array>
@@ -18,16 +18,14 @@ using namespace std;
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Example 1 ..\n"
+    cout << "\n\nYou welcome in Problem Solving ..\n"
          << endl;
 }
 
-//* End Functions ..
+//* End Function ..
 
 int main()
 {
-    // Declare Variables.
-
     // Call Functions.
     printWelcomeMessageFun();
 
