@@ -14,16 +14,6 @@
 
 using namespace std;
 
-void resultFun();
-
-int main()
-{
-    // Call Functions.
-    resultFun();
-
-    return 0;
-}
-
 //* Functions ..
 // Welcome Message - Function.
 void printWelcomeMessageFun()
@@ -32,15 +22,15 @@ void printWelcomeMessageFun()
          << endl;
 }
 
-// Result - Function.
-void resultFun()
-{
-    // Declare Variables.
+//* End Function ..
 
+int main()
+{
     // Call Functions.
     printWelcomeMessageFun();
 
     cout << endl
          << endl;
+
+    return 0;
 }
-//* End Function ..
