@@ -51,7 +51,7 @@ int sumNaturalNumbersRecFun(int num, int sumNatNum, int i = 0)
     // }
     // return sumNatNum;
 
-    if (i > num)
+    if (i > num) // Base Case.
     {
         return sumNatNum;
     }
@@ -61,7 +61,7 @@ int sumNaturalNumbersRecFun(int num, int sumNatNum, int i = 0)
         sumNatNum += i;
         // i = i + 1;
         i += 1;
-        return sumNaturalNumbersRecFun(num, sumNatNum, i);
+        return sumNaturalNumbersRecFun(num, sumNatNum, i); // Recursive Call.
     }
 }
 

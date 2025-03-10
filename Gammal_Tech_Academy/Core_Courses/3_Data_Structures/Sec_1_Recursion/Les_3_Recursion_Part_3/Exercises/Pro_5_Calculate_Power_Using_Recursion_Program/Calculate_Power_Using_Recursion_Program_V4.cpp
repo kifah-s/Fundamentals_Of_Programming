@@ -1,5 +1,5 @@
 
-//* Calculate Power Using Recursion Program (Version 1).
+//* Calculate Power Using Recursion Program (Version 4).
 
 /*
 * Write a program to calculate the power of a number using recursion.
@@ -29,7 +29,7 @@ using namespace std;
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Calculate Power Using Recursion Program (Version 1) ..\n"
+    cout << "\n\nYou welcome in Calculate Power Using Recursion Program (Version 4) ..\n"
          << endl;
 }
 
@@ -54,23 +54,15 @@ int getPowerFun()
 }
 
 // Calculate Power - Recursion Function.
-int calculatePowerRecFun(int num, int pow, int res, int i = 1)
+int calculatePowerRecFun(int num, int pow)
 {
-    // for (int i = 0; i < pow; i++)
-    // {
-    //     res = res * num;
-    // }
-    // return res;
-
-    if (i > pow) // Base Case.
+    if (pow == 0) // Base Case.
     {
-        return res;
+        return 1;
     }
     else
     {
-        i++;
-        res = res * num;
-        return calculatePowerRecFun(num, pow, res, i); // Recursive Call.
+        return num * calculatePowerRecFun(num, pow - 1); // Recursive Call.
     }
 }
 
@@ -78,15 +70,14 @@ int calculatePowerRecFun(int num, int pow, int res, int i = 1)
 void resultFun()
 {
     // Declare Variables.
-    int number = 0, power = 0, result = 1;
+    int number = 0, power = 0;
 
     // Call Functions.
     printWelcomeMessageFun();
     number = getNumberFun();
     power = getPowerFun();
-    result = calculatePowerRecFun(number, power, result);
 
-    cout << number << " Power " << power << " is: " << result << endl;
+    cout << number << " Power " << power << " is: " << calculatePowerRecFun(number, power) << endl;
 
     cout << endl
          << endl;
