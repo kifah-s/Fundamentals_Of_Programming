@@ -5,8 +5,8 @@
 * Write a program to find the Greatest Common Divisor of two numbers using recursion.
 
 ! Input:
-! Please, enter a first number: 
-! Please, enter a second number: 
+! Please, enter a first number: 24
+! Please, enter a second number: 36
 
 ! Output:
 ! GCD of 24 and 36 is: 12
@@ -44,18 +44,16 @@ int getNumberFun(string s)
 }
 
 // Calculate Greatest Common Divisor - Recursion Function.
-int calculateGreatestCommonDivisorRecFun()
+int calculateGreatestCommonDivisorRecFun(int num1, int num2)
 {
-    if () // Base Case.
+    if (num2 == 0) // Base Case.
     {
-        
+        return num1;
     }
     else
     {
-        // Recursive Call.
+        return calculateGreatestCommonDivisorRecFun(num2, num1 % num2); // Recursive Call.
     }
-    
-    
 }
 
 // Result - Function.
@@ -68,7 +66,9 @@ void resultFun()
     printWelcomeMessageFun();
     firstNumber = getNumberFun("first");
     secondNumber = getNumberFun("second");
-    
+
+    cout << "GCD of " << firstNumber << " and " << secondNumber << " is " << calculateGreatestCommonDivisorRecFun(firstNumber, secondNumber) << endl;
+
     cout << endl
          << endl;
 }
