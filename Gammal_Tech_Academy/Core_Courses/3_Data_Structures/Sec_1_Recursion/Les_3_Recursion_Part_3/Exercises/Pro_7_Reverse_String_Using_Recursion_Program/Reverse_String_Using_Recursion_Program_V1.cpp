@@ -15,6 +15,7 @@
 #include <array>
 #include <vector>
 #include <string>
+#include <cstring>
 #include <algorithm>
 #include <set>
 #include <utility>
@@ -33,68 +34,34 @@ void printWelcomeMessageFun()
 }
 
 // Get String - Function.
-string getStringFun()
+void getStringFun(char word[100])
 {
-    string word;
     cout << "Please enter a string: ";
-    cin >> word;
-
-    return word;
+    cin.getline(word, 100);
 }
 
-// Print Reverse String - Function.
-// void printReverseStringFun(string myStr)
-// {
-//     cout << "Reversed string: ";
-//     for (int i = myStr.length(); i >= 0; i--)
-//     {
-//         cout << myStr[i];
-//     }
-// }
-
-// Reverse String 1 - Function.
-// string reverseString1Fun(string myStr)
-// {
-//     string revStr = "";
-//     for (int i = myStr.length() - 1; i >= 0; i--)
-//     {
-//         // revStr = revStr + myStr[i];
-//         revStr += myStr[i];
-//     }
-//     return revStr;
-// }
-
-// Reverse String 2 - Function.
-// string reverseString2Fun(string myStr)
-// {
-//     reverse(myStr.begin(), myStr.end());
-//     return myStr;
-// }
-
-// Print String - Function.
-// void printStringFun(string revStr)
-// {
-//     cout << "Reversed string: " << revStr << endl;
-// }
+// Reverse String - Recursion Function.
+void reverseStringRecFun(char myStr[], int start, int end)
+{
+    if (start < end) // Base Case.
+    {
+        swap(myStr[start], myStr[end]);
+        reverseStringRecFun(myStr, start + 1, end - 1); // Recursive Call.
+    }
+}
 
 // Result - Function.
 void resultFun()
 {
     // Declare Variables.
-    string myString = "";
-    string reverseString = "";
+    char myString[100];
 
     // Call Functions.
     printWelcomeMessageFun();
-    myString = getStringFun();
+    getStringFun(myString);
+    reverseStringRecFun(myString, 0, strlen(myString) - 1);
 
-    // printReverseStringFun(myString);
-    // reverseString = reverseString1Fun(myString);
-    // printStringFun(reverseString);
-    // reverseString = reverseString2Fun(myString);
-    // printStringFun(reverseString);
-
-    
+    cout << "Reversed string: " << myString << endl;
 
     cout << endl
          << endl;
