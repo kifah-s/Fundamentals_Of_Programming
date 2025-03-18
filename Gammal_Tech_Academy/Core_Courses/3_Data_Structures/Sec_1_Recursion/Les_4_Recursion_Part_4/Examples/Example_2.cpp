@@ -1,5 +1,5 @@
 
-//*  Example 1 ..
+//*  Example 2 ..
 
 #include <iostream>
 #include <array>
@@ -20,7 +20,7 @@ int numberOfPhones, numberOfBox, boxes[100];
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Example 1 ..\n"
+    cout << "\n\nYou welcome in Example 2 ..\n"
          << endl;
 }
 
@@ -31,11 +31,10 @@ int checkRecFun(int i, int t)
     {
         return numberOfPhones == t;
     }
-    
-    return checkRecFun(i + 1, t + boxes[i]) || checkRecFun(i + 1, t);
+
+    return checkRecFun(i + 1, t + boxes[i]) + checkRecFun(i + 1, t);
 }
 //* End Functions ..
-
 
 int main()
 {
@@ -54,14 +53,8 @@ int main()
         cin >> boxes[i];
     }
 
-    if (checkRecFun(0, 0) == 1)
-    {
-        cout << "\nYes" << endl;
-    }
-    else
-    {
-        cout << "\nNo" << endl;
-    }
+    cout << "\n"
+         << checkRecFun(0, 0) << endl;
 
     cout << endl
          << endl;
