@@ -11,6 +11,7 @@
 #include <map>
 #include <cctype>
 #include <fstream>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -30,6 +31,13 @@ int main()
 
     // Call Functions.
     printWelcomeMessageFun();
+
+    cout << "Size of int: " << sizeof(int) << endl;
+    cout << "Size of long: " << sizeof(long) << endl;
+    cout << "Size of long long: " << sizeof(long long) << endl;
+    cout << "Size of double: " << sizeof(double) << endl;
+    cout << "Size of char: " << sizeof(char) << endl;
+    cout << "Size of string: " << sizeof(string) << endl;
 
     cout << endl
          << endl;
