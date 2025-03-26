@@ -26,10 +26,31 @@ void printWelcomeMessageFun()
 
 int main()
 {
-    // Declare Variables.
-
     // Call Functions.
     printWelcomeMessageFun();
+
+    // Declare Pointer and Variables.
+    int *arrPtr, size = 5;
+    arrPtr = (int *)malloc(size * sizeof(int));
+
+    if (arrPtr == NULL)
+    {
+        cout << "Memory Not Allocated." << endl;
+    }
+
+    cout << "Please, enter " << size << " number: " << endl;
+    for (int i = 0; i < size; i++)
+    {
+        cout << "Num " << i + 1 << ": ";
+        cin >> arrPtr[i];
+    }
+
+    for (int i = 0; i < size; i++)
+    {
+        cout << arrPtr[i] << " ";
+    }
+
+    free(arrPtr);
 
     cout << endl
          << endl;
