@@ -11,6 +11,7 @@
 #include <map>
 #include <cctype>
 #include <fstream>
+#include <cstdlib>
 
 using namespace std;
 
@@ -28,6 +29,34 @@ int main()
 {
     // Call Functions.
     printWelcomeMessageFun();
+
+    int N;
+    cin >> N;
+
+    // Dynamic memory allocation
+    int *arr = (int *)malloc(N * sizeof(int));
+
+    // Check if memory allocation failed
+    if (arr == NULL)
+    {
+        cerr << "Memory allocation failed";
+        return 1;
+    }
+
+    // Reading and storing integers
+    for (int i = 0; i < N; i++)
+    {
+        cin >> arr[i];
+    }
+
+    // Output the integers
+    for (int i = 0; i < N; i++)
+    {
+        cout << arr[i] << " ";
+    }
+
+    // Free the allocated memory
+    free(arr);
 
     cout << endl
          << endl;
