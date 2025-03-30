@@ -36,9 +36,11 @@ int main()
 
     if (ptr != NULL)
     {
+        cout << "Please, enter 5 elements:" << endl;
         for (int i = 0; i < 5; i++)
         {
-            ptr[i] = i + 1;
+            cout << "element " << i + 1 << ": ";
+            cin >> ptr[i];
         }
 
         cout << "\nElements: ";
