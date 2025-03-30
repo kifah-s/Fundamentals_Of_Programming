@@ -1,1 +1,1 @@
-# Lesson 5: malloc Part 1.
+# Lesson 5: malloc Function Part 1.

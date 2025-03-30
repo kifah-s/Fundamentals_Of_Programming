@@ -1,1 +1,1 @@
-# Lesson 7: calloc.
+# Lesson 7: calloc Function.
