@@ -1,11 +1,11 @@
 
-//* Dynamically Allocates Memory For Floats Array Program (Version 1).
+//* Dynamically Allocates Memory For Characters Array 2 Program (Version 1).
 
 /*
-* write a program to allocate memory for an array of 3 floats and initialize them with values 2.5, 3.7, and 1.8.
+* Write a program to dynamically allocate memory for an array of 8 characters and initialize them with uppercase English alphabet (A to H).
 
 ! Output:
-! Numbers: 2.5 3.7 1.8
+! Characters: A B C D E F G H
 */
 
 #include <iostream>
@@ -26,14 +26,14 @@ using namespace std;
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Dynamically Allocates Memory For Floats Array Program (Version 1) ..\n"
+    cout << "\n\nYou welcome in Dynamically Allocates Memory For Characters Array 2 Program (Version 1) ..\n"
          << endl;
 }
 
 // Dynamic Memory Allocation - Function.
-float *dynamicMemoryAllocationFun(int numOfEle)
+char *dynamicMemoryAllocationFun(int numOfEle)
 {
-    float *arrPtr = (float *)calloc(numOfEle, sizeof(float));
+    char *arrPtr = (char *)calloc(numOfEle, sizeof(char));
 
     if (arrPtr != nullptr)
     {
@@ -47,25 +47,26 @@ float *dynamicMemoryAllocationFun(int numOfEle)
 }
 
 // Initialize Array - Function.
-void initializeArrayFun(float *arrPtr)
+void initializeArrayFun(char *arrPtr)
 {
-    arrPtr[0] = 2.5;
-    arrPtr[1] = 3.7;
-    arrPtr[2] = 1.8;
+    for (int i = 65; i <= 72; i++)
+    {
+        arrPtr[i] = i;
+    }
 }
 
 // Print Array - Function.
-void printArrayFun(float *arrPtr, int numOfEle)
+void printArrayFun(char *arrPtr)
 {
-    cout << "Numbers: ";
-    for (int i = 0; i < numOfEle; i++)
+    cout << "Characters: ";
+    for (int i = 65; i <= 72; i++)
     {
         cout << arrPtr[i] << " ";
     }
 }
 
 // Freeing Memory - Function.
-void freeingMemoryFun(float *arrPtr)
+void freeingMemoryFun(char *arrPtr)
 {
     free(arrPtr);
 }
@@ -74,14 +75,14 @@ void freeingMemoryFun(float *arrPtr)
 void resultFun()
 {
     // Declare Pointer and Variables.
-    float *arrayPointer;
-    int numberOfElements = 3;
+    char *arrayPointer;
+    int numberOfElements = 8;
 
     // Call Functions.
     printWelcomeMessageFun();
     arrayPointer = dynamicMemoryAllocationFun(numberOfElements);
     initializeArrayFun(arrayPointer);
-    printArrayFun(arrayPointer, numberOfElements);
+    printArrayFun(arrayPointer);
 
     freeingMemoryFun(arrayPointer);
 
