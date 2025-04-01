@@ -1,12 +1,12 @@
 
-//* Dynamically Allocates Memory For Three Floats Program (Version 1).
+//* Dynamically Allocates Memory For 4 Integers Program (Version 1).
 
 /*
-* Write a program to dynamically allocate memory for three floats and initialize them with values 3.14, 2.71, and 1.618.
+* Write a program to dynamically allocate memory for an array of 4 integers and initialize them with values 1, 3, 5, and 7.
 * And using free.
 
 ! Output:
-! Floats Numbers: 3.14 2.71 1.62
+! Numbers: 1 3 5 7
 */
 
 #include <iostream>
@@ -27,14 +27,14 @@ using namespace std;
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Dynamically Allocates Memory For Three Floats Program (Version 1) ..\n"
+    cout << "\n\nYou welcome in Dynamically Allocates Memory For 4 Integers Program (Version 1) ..\n"
          << endl;
 }
 
 // Dynamic Memory Allocation - Function.
-float *dynamicMemoryAllocationFun(int numOfEle)
+int *dynamicMemoryAllocationFun(int numOfEle)
 {
-    float *arrPtr = (float *)calloc(numOfEle, sizeof(float));
+    int *arrPtr = (int *)calloc(numOfEle, sizeof(int));
 
     if (arrPtr != nullptr)
     {
@@ -48,15 +48,21 @@ float *dynamicMemoryAllocationFun(int numOfEle)
 }
 
 // Initialize Array - Function.
-void initializeArrayFun(float *arrPtr, int numOfEle)
+void initializeArrayFun(int *arrPtr, int numOfEle)
 {
-    arrPtr[0] = 3.14;
-    arrPtr[1] = 2.71;
-    arrPtr[2] = 1.62;
+    // arrPtr[0] = 1;
+    // arrPtr[1] = 3;
+    // arrPtr[2] = 5;
+    // arrPtr[3] = 7;
+
+    for (int i = 0; i < numOfEle; i++)
+    {
+        arrPtr[i] = (i * 2) + 1;
+    }
 }
 
 // Print Array - Function.
-void printArrayFun(float *arrPtr, int numOfEle)
+void printArrayFun(int *arrPtr, int numOfEle)
 {
     cout << "Numbers: ";
     for (int i = 0; i < numOfEle; i++)
@@ -66,7 +72,7 @@ void printArrayFun(float *arrPtr, int numOfEle)
 }
 
 // Freeing Memory - Function.
-void freeingMemoryFun(float *arrPtr)
+void freeingMemoryFun(int *arrPtr)
 {
     free(arrPtr);
 }
@@ -75,8 +81,8 @@ void freeingMemoryFun(float *arrPtr)
 void resultFun()
 {
     // Declare Pointer and Variables.
-    float *arrayPointer;
-    int numberOfElements = 3;
+    int *arrayPointer;
+    int numberOfElements = 4;
 
     // Call Functions.
     printWelcomeMessageFun();

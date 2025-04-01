@@ -34,11 +34,11 @@ void printWelcomeMessageFun()
 // Dynamic Memory Allocation - Function.
 int *dynamicMemoryAllocationFun(int numOfEle)
 {
-    int *arrPtr = (int *)calloc(numOfEle, sizeof(int));
+    int *intPtr = (int *)calloc(numOfEle, sizeof(int));
 
-    if (arrPtr != nullptr)
+    if (intPtr != nullptr)
     {
-        return arrPtr;
+        return intPtr;
     }
     else
     {
