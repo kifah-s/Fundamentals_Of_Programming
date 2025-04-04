@@ -88,6 +88,7 @@ int *dynamicMemoryAllocationFun_2(int *ptrToVec, int &numOfEle)
 // Initialize Vector 2 - Function.
 void initializeVectorFun_2(int *ptrToVec, int numOfEle, int newNum)
 {
+    // ptrToVec[3] = newNum;
     ptrToVec[numOfEle - 1] = newNum;
 }
 

@@ -1,16 +1,12 @@
 
-//* Dynamically Allocates Memory Vector Of Integer 2 Program (Version 1).
+//* Dynamically Allocates Memory Vector Of Integer 3 Program (Version 1).
 
 /*
-* Write a program that initializes a vector with three integers,
-* adds a new integer at the end, and prints the updated vector.
-
-! Input:
-! Please, enter a new integer: 10
+* Write a program that initializes a vector with five integers,
+* removes the last element, and prints the updated vector.
 
 ! Output:
-! Vector Elements: 1 2 3
-! Vector Elements After Update: 1 2 3 10
+! Vector Elements After Update: 1 2 3 4
 */
 
 #include <iostream>
@@ -31,7 +27,7 @@ using namespace std;
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Dynamically Allocates Memory Vector Of Integer 2 Program (Version 1) ..\n"
+    cout << "\n\nYou welcome in Dynamically Allocates Memory Vector Of Integer 3 Program (Version 1) ..\n"
          << endl;
 }
 
@@ -60,20 +56,10 @@ void initializeVectorFun_1(int *ptrToVec, int numOfEle)
     }
 }
 
-// Get New Number - Function.
-int getNewNumberFun()
-{
-    int num = 0;
-    cout << "Please, enter a new number: ";
-    cin >> num;
-
-    return num;
-}
-
 // Dynamic Memory Allocation 2 - Function.
 int *dynamicMemoryAllocationFun_2(int *ptrToVec, int &numOfEle)
 {
-    numOfEle = numOfEle + 1;
+    numOfEle = numOfEle - 1;
 
     ptrToVec = (int *)realloc(ptrToVec, numOfEle * sizeof(int));
 
@@ -89,11 +75,13 @@ int *dynamicMemoryAllocationFun_2(int *ptrToVec, int &numOfEle)
 }
 
 // Initialize Vector 2 - Function.
-void initializeVectorFun_2(int *ptrToVec, int numOfEle, int newNum)
-{
-    // ptrToVec[3] = newNum;
-    ptrToVec[numOfEle - 1] = newNum;
-}
+// void initializeVectorFun_2(int *ptrToVec, int numOfEle)
+// {
+//     for (int i = 0; i < numOfEle; i++)
+//     {
+//         ptrToVec[i] = i + 1;
+//     }
+// }
 
 // Print Vector - Function.
 void printVectorFun(int *ptrToVec, int numOfEle)
@@ -118,8 +106,7 @@ void resultFun()
 
     // Declare Pointer and Variables.
     int *pointerToVector;
-    int numberOfElements = 3;
-    int newNumber = 0;
+    int numberOfElements = 5;
 
     // Call Functions.
     pointerToVector = dynamicMemoryAllocationFun_1(numberOfElements);
@@ -129,10 +116,8 @@ void resultFun()
     cout << "\nPointer Address: " << pointerToVector << endl
          << endl;
 
-    newNumber = getNewNumberFun();
-
     pointerToVector = dynamicMemoryAllocationFun_2(pointerToVector, numberOfElements);
-    initializeVectorFun_2(pointerToVector, numberOfElements, newNumber);
+    // initializeVectorFun_2(pointerToVector, numberOfElements);
     cout << "\nVector Elements After Update: ";
     printVectorFun(pointerToVector, numberOfElements);
     cout << "\nPointer Address: " << pointerToVector;

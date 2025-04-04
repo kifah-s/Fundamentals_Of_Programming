@@ -1,5 +1,5 @@
 
-//* Dynamically Allocates Memory Vector Of Integer 2 Program (Version 1).
+//* Dynamically Allocates Memory Vector Of Integer 5 Program (Version 1).
 
 /*
 * Write a program that initializes a vector with three integers,
@@ -10,7 +10,7 @@
 
 ! Output:
 ! Vector Elements: 1 2 3
-! Vector Elements After Update: 1 2 3 10
+! Vector Elements After Update: 10 1 2 3
 */
 
 #include <iostream>
@@ -31,7 +31,7 @@ using namespace std;
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Dynamically Allocates Memory Vector Of Integer 2 Program (Version 1) ..\n"
+    cout << "\n\nYou welcome in Dynamically Allocates Memory Vector Of Integer 5 Program (Version 1) ..\n"
          << endl;
 }
 
@@ -91,8 +91,17 @@ int *dynamicMemoryAllocationFun_2(int *ptrToVec, int &numOfEle)
 // Initialize Vector 2 - Function.
 void initializeVectorFun_2(int *ptrToVec, int numOfEle, int newNum)
 {
-    // ptrToVec[3] = newNum;
-    ptrToVec[numOfEle - 1] = newNum;
+    // ptrToVec[0] = newNum;
+    // for (int i = 1; i < numOfEle; i++)
+    // {
+    //     ptrToVec[i] = i;
+    // }
+
+    for (int i = numOfEle; i > 0; i--)
+    {
+        ptrToVec[i] = i;
+    }
+    ptrToVec[0] = newNum;
 }
 
 // Print Vector - Function.
