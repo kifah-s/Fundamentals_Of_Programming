@@ -1,14 +1,14 @@
 
-//* Palindrome Using Recursion Program (Version 1).
+//* Sequence Using Recursion Program (Version 1).
 
 /*
-* Write a program to check if a given positive integer is a palindrome using recursion.
+* Write a program to print the first N terms of a sequence using recursion.
 
 ! Output:
-! Please, enter a positive number: 1221
+! Please, enter a number: 5
 
 ! Output:
-! 1221 is a positive number.
+! First 5 terms of the sequence: 1 3 5 7 9.
 */
 
 #include <iostream>
@@ -29,7 +29,7 @@ using namespace std;
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Palindrome Using Recursion Program (Version 1) ..\n"
+    cout << "\n\nYou welcome in Sequence Using Recursion Program (Version 1) ..\n"
          << endl;
 }
 
@@ -44,21 +44,14 @@ int getNumberFun()
     return myNum;
 }
 
-// Is Palindrome - Function.
-bool isPalindromeFun(int myNum, int &temp)
+// Sequence - Function.
+void sequenceFun(int myNum, int term = 1)
 {
-    if (myNum == 0)
+    if (myNum > 0)
     {
-        return true;
+        cout << term << " ";
+        sequenceFun(myNum - 1, term + 2);
     }
-
-    if (isPalindromeFun(myNum / 10, temp) && (myNum % 10 == temp % 10))
-    {
-        temp /= 10;
-        return true;
-    }
-
-    return false;
 }
 
 // Result - Function.
@@ -71,15 +64,8 @@ void resultFun()
     printWelcomeMessageFun();
 
     myNumber = getNumberFun();
-    int temp = myNumber;
-    if (isPalindromeFun(myNumber, temp))
-    {
-        cout << myNumber << " is a palindrome number." << endl;
-    }
-    else
-    {
-        cout << myNumber << " is not a palindrome number." << endl;
-    }
+    cout << "First " << myNumber << "terms of the sequence: ";
+    sequenceFun(myNumber);
 
     cout << endl
          << endl;
