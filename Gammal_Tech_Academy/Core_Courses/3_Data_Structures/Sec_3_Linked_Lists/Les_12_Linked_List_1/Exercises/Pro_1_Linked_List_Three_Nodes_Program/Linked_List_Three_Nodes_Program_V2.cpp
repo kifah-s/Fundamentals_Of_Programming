@@ -1,5 +1,13 @@
 
-//*  Example 1 ..
+//* Linked List Three Nodes Program (Version 2).
+
+/*
+* Write a program to create an empty linked list and add three nodes with data values 2, 4, and 6.
+* Print the elements of the linked list.
+
+! Output:
+! 2 4 6
+*/
 
 #include <iostream>
 #include <array>
@@ -14,14 +22,6 @@
 
 using namespace std;
 
-//* Functions ..
-// Welcome Message Function
-void printWelcomeMessageFun()
-{
-    cout << "\n\nYou welcome in Example 1 ..\n"
-         << endl;
-}
-
 //* Struct ..
 struct Node
 {
@@ -29,13 +29,25 @@ struct Node
     struct Node *next;
 };
 
-int main()
+//* End Struct ..
+
+//* Functions ..
+// Welcome Message - Function.
+void printWelcomeMessageFun()
 {
-    // Call Functions
+    cout << "\n\nYou welcome in Linked List Three Nodes Program (Version 2) ..\n"
+         << endl;
+}
+
+// Result - Function.
+int resultFun()
+{
+    // Call Functions.
     printWelcomeMessageFun();
 
+    // Declare Pointer.
     Node *head, *temp;
- 
+
     head = (Node *)malloc(sizeof(Node));
     if (head == NULL)
     { // Check if memory allocation succeeded.
@@ -43,7 +55,6 @@ int main()
         return 1;
     }
 
-    head->data = 5;
     head->next = (Node *)malloc(sizeof(Node));
     if (head->next == NULL)
     { // Check if memory allocation succeeded.
@@ -52,18 +63,20 @@ int main()
         return 1;
     }
 
-    head->next->data = 6;
     head->next->next = (Node *)malloc(sizeof(Node));
     if (head->next->next == NULL)
-    { // Check if memory allocation succeeded.
+    {
         cout << "Memory allocation failed!" << endl;
         free(head->next); // Free the second node.
         free(head);       // Free the first node.
         return 1;
     }
 
-    head->next->next->data = 7;
     head->next->next->next = NULL;
+
+    head->data = 2;
+    head->next->data = 4;
+    head->next->next->data = 6;
 
     // Print the linked list.
     temp = head;
@@ -83,7 +96,19 @@ int main()
         free(temp);                  // Free the current node.
         temp = nextNode;             // Move to the next node.
     }
-    cout << "\nMemory freed successfully!\n\n" << endl;
+    cout << "\nMemory freed successfully!" << endl;
+
+    cout << endl
+         << endl;
+
+    return 0;
+}
+//* End Function ..
+
+int main()
+{
+    // Call Functions.
+    resultFun();
 
     return 0;
 }
