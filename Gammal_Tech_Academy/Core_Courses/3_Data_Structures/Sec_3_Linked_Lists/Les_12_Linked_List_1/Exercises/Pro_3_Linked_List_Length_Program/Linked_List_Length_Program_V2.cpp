@@ -1,12 +1,11 @@
 
-//* Linked List Fore Nodes Program (Version 2).
+//* Linked List Length Program (Version 2).
 
 /*
-* Write a program to add a node with data value 8 at the end of the linked list created in the previous program.
-* Print the updated linked list.
+* Write a program to find and print the length (number of nodes) of the linked list.
 
 ! Output:
-! 2 4 6 8
+! Length of linked list is: 4
 */
 
 #include <iostream>
@@ -35,20 +34,20 @@ struct Node
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Linked List Fore Nodes Program (Version 2) ..\n"
+    cout << "\n\nYou welcome in Linked List Length Program (Version 2) ..\n"
          << endl;
 }
 
 // Dynamic Memory Allocation - Function.
-Node *dynamicMemoryAllocationFun()
+void dynamicMemoryAllocationFun(Node *&head)
 {
     // HEAD.
-    Node *head = (Node *)malloc(sizeof(Node));
+    head = (Node *)malloc(sizeof(Node));
     // Check if memory allocation succeeded.
     if (head == nullptr)
     {
         cout << "Memory allocation failed for NODE 1 (HEAD)." << endl;
-        return nullptr; // Exit if allocation was unsuccessful.
+        return; // Exit if allocation was unsuccessful.
     }
     else
     {
@@ -62,7 +61,7 @@ Node *dynamicMemoryAllocationFun()
     {
         cout << "Memory allocation failed for NODE 2." << endl;
         free(head); // Free First Node.
-        return nullptr;     // Exit If Allocation Was Unsuccessful.
+        return;     // Exit If Allocation Was Unsuccessful.
     }
     else
     {
@@ -77,7 +76,7 @@ Node *dynamicMemoryAllocationFun()
         cout << "Memory allocation failed for NODE 3." << endl;
         free(head->next); // Free Second Node.
         free(head);       // Free First Node.
-        return nullptr;           // Exit If Allocation Was Unsuccessful.
+        return;           // Exit If Allocation Was Unsuccessful.
     }
     else
     {
@@ -93,7 +92,7 @@ Node *dynamicMemoryAllocationFun()
         free(head->next->next); // Free Third Node.
         free(head->next);       // Free Second Node.
         free(head);             // Free First Node.
-        return nullptr;                 // Exit If Allocation Was Unsuccessful.
+        return;                 // Exit If Allocation Was Unsuccessful.
     }
     else
     {
@@ -102,8 +101,6 @@ Node *dynamicMemoryAllocationFun()
 
     // NODE 5.
     head->next->next->next->next = NULL;
-
-    return head;
 }
 
 // Initialize Linked List - Function.
@@ -129,6 +126,20 @@ void printLinkedListFun(Node *head, Node *temp)
     cout << endl;
 }
 
+// Print Linked List Length - Function.
+void printLinkedListLengthFun(Node *head, Node *temp)
+{
+    int length = 0;
+    temp = head;
+    while (temp != NULL)
+    {
+        temp = temp->next;
+        length++;
+    }
+
+    cout << "\nLength of linked list is: " << length << endl;
+}
+
 // Free Allocated Memory - Function.
 void freeAllocatedMemoryFun(Node *head, Node *temp)
 {
@@ -151,9 +162,10 @@ int resultFun()
     // Declare Pointers And Variables.
     Node *head, *temporary;
 
-    head = dynamicMemoryAllocationFun();
+    dynamicMemoryAllocationFun(head);
     initializeLinkedListFun(head);
     printLinkedListFun(head, temporary);
+    printLinkedListLengthFun(head, temporary);
     freeAllocatedMemoryFun(head, temporary);
 
     cout << endl

@@ -1,12 +1,12 @@
 
-//* Linked List Fore Nodes Program (Version 2).
+//* Linked List Found 5 Program (Version 1).
 
 /*
-* Write a program to add a node with data value 8 at the end of the linked list created in the previous program.
-* Print the updated linked list.
+* Write a program to check if the linked list contains a node with data value 5.
+* Print "Found" if it exists, otherwise print "Not Found".
 
 ! Output:
-! 2 4 6 8
+! Not Found Number 5.
 */
 
 #include <iostream>
@@ -35,20 +35,20 @@ struct Node
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Linked List Fore Nodes Program (Version 2) ..\n"
+    cout << "\n\nYou welcome in Linked List Found 5 Program (Version 1) ..\n"
          << endl;
 }
 
 // Dynamic Memory Allocation - Function.
-Node *dynamicMemoryAllocationFun()
+void dynamicMemoryAllocationFun(Node *&head)
 {
     // HEAD.
-    Node *head = (Node *)malloc(sizeof(Node));
+    head = (Node *)malloc(sizeof(Node));
     // Check if memory allocation succeeded.
     if (head == nullptr)
     {
         cout << "Memory allocation failed for NODE 1 (HEAD)." << endl;
-        return nullptr; // Exit if allocation was unsuccessful.
+        return; // Exit if allocation was unsuccessful.
     }
     else
     {
@@ -62,7 +62,7 @@ Node *dynamicMemoryAllocationFun()
     {
         cout << "Memory allocation failed for NODE 2." << endl;
         free(head); // Free First Node.
-        return nullptr;     // Exit If Allocation Was Unsuccessful.
+        return;     // Exit If Allocation Was Unsuccessful.
     }
     else
     {
@@ -77,7 +77,7 @@ Node *dynamicMemoryAllocationFun()
         cout << "Memory allocation failed for NODE 3." << endl;
         free(head->next); // Free Second Node.
         free(head);       // Free First Node.
-        return nullptr;           // Exit If Allocation Was Unsuccessful.
+        return;           // Exit If Allocation Was Unsuccessful.
     }
     else
     {
@@ -93,7 +93,7 @@ Node *dynamicMemoryAllocationFun()
         free(head->next->next); // Free Third Node.
         free(head->next);       // Free Second Node.
         free(head);             // Free First Node.
-        return nullptr;                 // Exit If Allocation Was Unsuccessful.
+        return;                 // Exit If Allocation Was Unsuccessful.
     }
     else
     {
@@ -102,12 +102,10 @@ Node *dynamicMemoryAllocationFun()
 
     // NODE 5.
     head->next->next->next->next = NULL;
-
-    return head;
 }
 
-// Initialize Linked List - Function.
-void initializeLinkedListFun(Node *head)
+// Initialize Liked List - Function.
+void initializeLikedListFun(Node *head)
 {
     head->data = 2;
     head->next->data = 4;
@@ -116,10 +114,11 @@ void initializeLinkedListFun(Node *head)
 }
 
 // Print Linked List - Function.
-void printLinkedListFun(Node *head, Node *temp)
+void printLinkedListFun(Node *head)
 {
     int count = 1;
-    temp = head;
+
+    Node *temp = head;
     while (temp != NULL)
     {
         cout << "\nValue in Node " << count << ": " << temp->data;
@@ -129,10 +128,53 @@ void printLinkedListFun(Node *head, Node *temp)
     cout << endl;
 }
 
-// Free Allocated Memory - Function.
-void freeAllocatedMemoryFun(Node *head, Node *temp)
+// Print Linked List Length - Function.
+void printLinkedListLengthFun(Node *head)
 {
-    temp = head;
+    int length = 0;
+
+    Node *temp = head;
+    while (temp != NULL)
+    {
+        temp = temp->next;
+        length++;
+    }
+
+    cout << "\nLength of linked list is: " << length << endl;
+}
+
+// Found Number 5 - Function.
+void foundNumber5Fun(Node *head)
+{
+    int number = 5;
+    bool found = false;
+    
+    Node* temp = head;
+    while (temp != NULL)
+    {
+        if (temp->data == number)
+        {
+            found = true;
+            break;
+        }
+
+        temp = temp->next;
+    }
+
+    if (found)
+    {
+        cout << "\nFound Number " << number << endl;
+    }
+    else
+    {
+        cout << "\nNot Found Number " << number << endl;
+    }
+}
+
+// Free Allocated Memory - Function.
+void freeAllocatedMemoryFun(Node *head)
+{
+    Node *temp = head;
     while (temp != NULL)
     {
         Node *nextNode = temp->next; // Save Next Node Before Freeing.
@@ -149,12 +191,14 @@ int resultFun()
     printWelcomeMessageFun();
 
     // Declare Pointers And Variables.
-    Node *head, *temporary;
+    Node *head;
 
-    head = dynamicMemoryAllocationFun();
-    initializeLinkedListFun(head);
-    printLinkedListFun(head, temporary);
-    freeAllocatedMemoryFun(head, temporary);
+    dynamicMemoryAllocationFun(head);
+    initializeLikedListFun(head);
+    printLinkedListFun(head);
+    printLinkedListLengthFun(head);
+    foundNumber5Fun(head);
+    freeAllocatedMemoryFun(head);
 
     cout << endl
          << endl;

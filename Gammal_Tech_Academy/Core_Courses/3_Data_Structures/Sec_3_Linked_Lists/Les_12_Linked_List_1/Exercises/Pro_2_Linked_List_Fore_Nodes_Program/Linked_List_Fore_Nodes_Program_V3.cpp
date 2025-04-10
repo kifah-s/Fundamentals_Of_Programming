@@ -104,8 +104,8 @@ void dynamicMemoryAllocationFun(Node *&head)
     head->next->next->next->next = NULL;
 }
 
-// Initialize Liked List - Function.
-void initializeLikedListFun(Node *head)
+// Initialize Linked List - Function.
+void initializeLinkedListFun(Node *head)
 {
     head->data = 2;
     head->next->data = 4;
@@ -113,8 +113,8 @@ void initializeLikedListFun(Node *head)
     head->next->next->next->data = 8;
 }
 
-// Print Liked List - Function.
-void printLikedListFun(Node *head, Node *temp)
+// Print Linked List - Function.
+void printLinkedListFun(Node *head, Node *temp)
 {
     int count = 1;
     temp = head;
@@ -150,8 +150,8 @@ int resultFun()
     Node *head, *temporary;
 
     dynamicMemoryAllocationFun(head);
-    initializeLikedListFun(head);
-    printLikedListFun(head, temporary);
+    initializeLinkedListFun(head);
+    printLinkedListFun(head, temporary);
     freeAllocatedMemoryFun(head, temporary);
 
     cout << endl
