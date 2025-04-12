@@ -17,6 +17,7 @@
 using namespace std;
 
 //* Struct ..
+
 struct Node
 {
     char name[25];
@@ -27,6 +28,7 @@ struct Node
 //* End Struct ..
 
 //* Functions ..
+
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
