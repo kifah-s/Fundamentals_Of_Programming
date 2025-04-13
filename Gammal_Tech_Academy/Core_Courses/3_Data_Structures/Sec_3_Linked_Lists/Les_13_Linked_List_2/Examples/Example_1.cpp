@@ -47,37 +47,39 @@ void addFun(Node *head)
     cout << "Please, enter the payment: ";
     cin >> payment;
 
-    if (head->payment == -1)
+    Node *temp = head;
+    if (temp->payment == -1)
     {
-        head->payment = payment;
-        strcpy(head->name, name);
-        head->next = NULL;
+        temp->payment = payment;
+        strcpy(temp->name, name);
+        temp->next = NULL;
     }
     else
     {
-        while (head->next != NULL)
+        while (temp->next != NULL)
         {
-            head = head->next;
+            temp = temp->next;
         }
 
-        head->next = (Node *)malloc(sizeof(Node));
-        head = head->next;
-        head->next = NULL;
-        head->payment = payment;
-        strcpy(head->name, name);
+        temp->next = (Node *)malloc(sizeof(Node));
+        temp = temp->next;
+        temp->next = NULL;
+        temp->payment = payment;
+        strcpy(temp->name, name);
     }
 }
 
 // Show - Function.
 void showFun(Node *head)
 {
-    while (head != NULL)
+    Node *temp = head;
+    while (temp != NULL)
     {
         cout << "--------------------" << endl;
-        cout << "Name: " << head->name << endl;
-        cout << "Payment: " << head->payment << endl;
+        cout << "Name: " << temp->name << endl;
+        cout << "Payment: " << temp->payment << endl;
         cout << "--------------------" << endl;
-        head = head->next;
+        temp = temp->next;
     }
 }
 
