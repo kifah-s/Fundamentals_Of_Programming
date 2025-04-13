@@ -1,8 +1,8 @@
 
-//* Linked List Sum Odd Numbers Program (Version 1).
+//* Linked List Specific Number Program (Version 1).
 
 /*
-* Write a program that calculates the sum of all nodes in a linked list.
+* Write a program that counts the occurrences of a specific number (e.g., 5) in a linked list.
 
 ! InPut & Output:
 ! ----------------------------
@@ -13,21 +13,9 @@
 ! 5) Count Even Numbers
 ! 6) Sum Odd Numbers
 ! 7) Sum All Numbers
-! 8) Exit
-! Please, enter your choice: 1
-! ----------------------------
-
-! Please, enter a number: 3
-
-! ----------------------------
-! 1) Add
-! 2) Show
-! 3) Count nodes
-! 4) Count Odd Numbers
-! 5) Count Even Numbers
-! 6) Sum Odd Numbers
-! 7) Sum All Numbers
-! 8) Exit
+! 8) Count Nodes Which Contains Negative Numbers
+! 9) Count Specific Numbers
+! 10) Exit
 ! Please, enter your choice: 1
 ! ----------------------------
 
@@ -41,11 +29,13 @@
 ! 5) Count Even Numbers
 ! 6) Sum Odd Numbers
 ! 7) Sum All Numbers
-! 8) Exit
+! 8) Count Nodes Which Contains Negative Numbers
+! 9) Count Specific Numbers
+! 10) Exit
 ! Please, enter your choice: 1
 ! ----------------------------
 
-! Please, enter a number: 6
+! Please, enter a number: 5
 
 ! ----------------------------
 ! 1) Add
@@ -55,12 +45,32 @@
 ! 5) Count Even Numbers
 ! 6) Sum Odd Numbers
 ! 7) Sum All Numbers
-! 8) Exit
-! Please, enter your choice: 7
+! 8) Count Nodes Which Contains Negative Numbers
+! 9) Count Specific Numbers
+! 10) Exit
+! Please, enter your choice: 1
 ! ----------------------------
 
+! Please, enter a number: 8
+
 ! ----------------------------
-! Sum All Numbers: 14
+! 1) Add
+! 2) Show
+! 3) Count nodes
+! 4) Count Odd Numbers
+! 5) Count Even Numbers
+! 6) Sum Odd Numbers
+! 7) Sum All Numbers
+! 8) Count Nodes Which Contains Negative Numbers
+! 9) Count Specific Numbers
+! 10) Exit
+! Please, enter your choice: 9
+! ----------------------------
+
+! Please, enter a target number: 5
+
+! ----------------------------
+! Number of occurrences of 5: 2
 ! ----------------------------
 */
 
@@ -92,7 +102,7 @@ struct Node
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Linked List Sum Odd Numbers Program (Version 1) ..\n"
+    cout << "\n\nYou welcome in Linked List Specific Number Program (Version 1) ..\n"
          << endl;
 }
 
@@ -171,7 +181,9 @@ int displayMenuFun()
          << "5) Count Even Numbers" << endl
          << "6) Sum Odd Numbers" << endl
          << "7) Sum All Numbers" << endl
-         << "8) Exit" << endl
+         << "8) Count Nodes Which Contains Negative Numbers" << endl
+         << "9) Count Specific Numbers" << endl
+         << "10) Exit" << endl
          << "Please, enter your choice: ";
     cin >> answer;
     cout << "----------------------------\n"
@@ -324,6 +336,59 @@ void sumAllNumbersFun(Node *head)
     cout << "----------------------------" << endl;
 }
 
+// Nodes Which Contains Negative Numbers - Function
+void nodesWhichContainsNegativeNumbersFun(Node *head)
+{
+    int counter = 0;
+
+    Node *temp = head;
+    while (temp != NULL)
+    {
+        if (temp->number < 0)
+        {
+            counter++;
+        }
+
+        temp = temp->next;
+    }
+
+    cout << "----------------------------" << endl;
+    cout << "Nodes which contains negative numbers: " << counter << endl;
+    cout << "----------------------------" << endl;
+}
+
+// Get Target Number - Function.
+int getTargetNumberFun()
+{
+    int num = 0;
+    cout << "Please, enter a target number: ";
+    cin >> num;
+
+    return num;
+}
+
+// Count Specific Numbers - Function.
+void countSpecificNumbersFun(Node *head)
+{
+    int num = getTargetNumberFun();
+    int counter = 0;
+
+    Node *temp = head;
+    while (temp != NULL)
+    {
+        if (temp->number == num)
+        {
+            counter++;
+        }
+
+        temp = temp->next;
+    }
+
+    cout << "\n----------------------------" << endl;
+    cout << "Number of occurrences of " << num << " is: " << counter << endl;
+    cout << "----------------------------" << endl;
+}
+
 // Free Allocated Memory - Function.
 void freeAllocatedMemoryFun(Node *head)
 {
@@ -378,11 +443,19 @@ void handlingUserChoiceFun(Node *head)
             sumAllNumbersFun(head);
             break;
 
+        case 8:
+            nodesWhichContainsNegativeNumbersFun(head);
+            break;
+
+        case 9:
+            countSpecificNumbersFun(head);
+            break;
+
         default:
             break;
         }
 
-    } while (answer != 8);
+    } while (answer != 10);
 
     freeAllocatedMemoryFun(head);
 }
