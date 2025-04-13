@@ -164,22 +164,23 @@ void addNodesFun(Node *head)
     cout << "Please, enter a number: ";
     cin >> number;
 
-    if (head->number == -1)
+    Node *temp = head;
+    if (temp->number == -1)
     {
-        head->number = number;
-        head->next = NULL;
+        temp->number = number;
+        temp->next = NULL;
     }
     else
     {
-        while (head->next != NULL)
+        while (temp->next != NULL)
         {
-            head = head->next;
+            temp = temp->next;
         }
 
-        head->next = (Node *)malloc(sizeof(Node));
-        head = head->next;
-        head->number = number;
-        head->next = NULL;
+        temp->next = (Node *)malloc(sizeof(Node));
+        temp = temp->next;
+        temp->number = number;
+        temp->next = NULL;
     }
 }
 
@@ -189,11 +190,13 @@ void showNodesFun(Node *head)
     int counter = 1;
     cout << "Nodes: " << endl;
     cout << "----------------------------" << endl;
-    while (head != NULL)
+
+    Node *temp = head;
+    while (temp != NULL)
     {
-        cout << "Node " << counter << " -> " << " Number: " << head->number << endl;
+        cout << "Node " << counter << " -> " << " Number: " << temp->number << endl;
         counter++;
-        head = head->next;
+        temp = temp->next;
     }
 }
 
@@ -202,10 +205,11 @@ void countNodesFun(Node *head)
 {
     int counter = 0;
 
-    while (head != NULL)
+    Node *temp = head;
+    while (temp != NULL)
     {
         counter++;
-        head = head->next;
+        temp = temp->next;
     }
     cout << "----------------------------" << endl;
     cout << "Number of nodes: " << counter << endl;

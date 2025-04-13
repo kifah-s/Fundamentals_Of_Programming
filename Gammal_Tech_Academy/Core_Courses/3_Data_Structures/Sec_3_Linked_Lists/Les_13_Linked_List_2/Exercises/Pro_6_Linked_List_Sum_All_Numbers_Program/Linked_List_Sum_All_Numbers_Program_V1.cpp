@@ -1,25 +1,19 @@
 
-//* Linked List Number Of Nodes Program (Version 2).
+//* Linked List Sum Odd Numbers Program (Version 1).
 
 /*
-* Write a program that counts the number of nodes in a linked list.
+* Write a program that counts the number of nodes containing Even numbers in a linked list.
 
 ! InPut & Output:
 ! ----------------------------
 ! 1) Add
 ! 2) Show
 ! 3) Count nodes
-! 4) Exit
-! Please, enter your choice: 1
-! ----------------------------
-
-! Please, enter a number: 2
-
-! ----------------------------
-! 1) Add
-! 2) Show
-! 3) Count nodes
-! 4) Exit
+! 4) Count Odd Numbers
+! 5) Count Even Numbers
+! 6) Sum Odd Numbers
+! 7) Sum All Numbers
+! 8) Exit
 ! Please, enter your choice: 1
 ! ----------------------------
 
@@ -29,18 +23,44 @@
 ! 1) Add
 ! 2) Show
 ! 3) Count nodes
-! 4) Exit
+! 4) Count Odd Numbers
+! 5) Count Even Numbers
+! 6) Sum Odd Numbers
+! 7) Sum All Numbers
+! 8) Exit
 ! Please, enter your choice: 1
 ! ----------------------------
 
-! Please, enter a number: 4
+! Please, enter a number: 5
 
 ! ----------------------------
 ! 1) Add
 ! 2) Show
 ! 3) Count nodes
-! 4) Exit
-! Please, enter your choice: 4
+! 4) Count Odd Numbers
+! 5) Count Even Numbers
+! 6) Sum Odd Numbers
+! 7) Sum All Numbers
+! 8) Exit
+! Please, enter your choice: 1
+! ----------------------------
+
+! Please, enter a number: 6
+
+! ----------------------------
+! 1) Add
+! 2) Show
+! 3) Count nodes
+! 4) Count Odd Numbers
+! 5) Count Even Numbers
+! 6) Sum Odd Numbers
+! 7) Sum All Numbers
+! 8) Exit
+! Please, enter your choice: 7
+! ----------------------------
+
+! ----------------------------
+! Sum All Numbers: 14
 ! ----------------------------
 */
 
@@ -72,7 +92,7 @@ struct Node
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Linked List Number Of Nodes Program (Version 2) ..\n"
+    cout << "\n\nYou welcome in Linked List Sum Odd Numbers Program (Version 1) ..\n"
          << endl;
 }
 
@@ -147,7 +167,11 @@ int displayMenuFun()
     cout << "1) Add" << endl
          << "2) Show" << endl
          << "3) Count Nodes" << endl
-         << "4) Exit" << endl
+         << "4) Count Odd Numbers" << endl
+         << "5) Count Even Numbers" << endl
+         << "6) Sum Odd Numbers" << endl
+         << "7) Sum All Numbers" << endl
+         << "8) Exit" << endl
          << "Please, enter your choice: ";
     cin >> answer;
     cout << "----------------------------\n"
@@ -156,13 +180,20 @@ int displayMenuFun()
     return answer;
 }
 
+// Get Number - Function.
+int getNumberFun()
+{
+    int num = 0;
+    cout << "Please, enter a number: ";
+    cin >> num;
+
+    return num;
+}
+
 // Add Nodes - Function.
 void addNodesFun(Node *head)
 {
-    int number = 0;
-
-    cout << "Please, enter a number: ";
-    cin >> number;
+    int number = getNumberFun();
 
     Node *temp = head;
     if (temp->number == -1)
@@ -188,8 +219,8 @@ void addNodesFun(Node *head)
 void showNodesFun(Node *head)
 {
     int counter = 1;
-    cout << "Nodes: " << endl;
     cout << "----------------------------" << endl;
+    cout << "Nodes: " << endl;
 
     Node *temp = head;
     while (temp != NULL)
@@ -198,6 +229,7 @@ void showNodesFun(Node *head)
         counter++;
         temp = temp->next;
     }
+    cout << "----------------------------" << endl;
 }
 
 // Count Nodes - Function.
@@ -213,6 +245,82 @@ void countNodesFun(Node *head)
     }
     cout << "----------------------------" << endl;
     cout << "Number of nodes: " << counter << endl;
+    cout << "----------------------------" << endl;
+}
+
+// Count Odd Numbers - Function.
+void countOddNumbersFun(Node *head)
+{
+    int counter = 0;
+
+    Node *temp = head;
+    while (temp != NULL)
+    {
+        if (temp->number % 2 != 0)
+        {
+            counter++;
+        }
+
+        temp = temp->next;
+    }
+    cout << "----------------------------" << endl;
+    cout << "Odd numbers in all nodes is: " << counter << endl;
+    cout << "----------------------------" << endl;
+}
+
+// Count Even Numbers - Function.
+void countEvenNumbersFun(Node *head)
+{
+    int counter = 0;
+
+    Node *temp = head;
+    while (temp != NULL)
+    {
+        if (temp->number % 2 == 0)
+        {
+            counter++;
+        }
+
+        temp = temp->next;
+    }
+    cout << "----------------------------" << endl;
+    cout << "Even numbers in all nodes is: " << counter << endl;
+    cout << "----------------------------" << endl;
+}
+
+// Sum Odd Numbers - Function.
+void sumOddNumbersFun(Node *head)
+{
+    int sum = 0;
+
+    Node *temp = head;
+    while (temp != NULL)
+    {
+        if (temp->number % 2 != 0)
+        {
+            sum += temp->number;
+        }
+
+        temp = temp->next;
+    }
+    cout << "----------------------------" << endl;
+    cout << "Sum odd numbers: " << sum << endl;
+    cout << "----------------------------" << endl;
+}
+
+// Sum All Numbers - Function.
+void sumAllNumbersFun(Node *head)
+{
+    int sum = 0;
+
+    Node *temp = head;
+    while (temp != NULL)
+    {
+        sum += temp->number;
+        temp = temp->next;
+    }
+    cout << "----------------------------" << endl;
+    cout << "Sum all numbers: " << sum << endl;
     cout << "----------------------------" << endl;
 }
 
@@ -240,19 +348,6 @@ void handlingUserChoiceFun(Node *head)
     {
         answer = displayMenuFun();
 
-        // if (answer == 1)
-        // {
-        //     addNodesFun(head);
-        // }
-        // else if (answer == 2)
-        // {
-        //     showNodesFun(head);
-        // }
-        // else if (answer == 3)
-        // {
-        //     countNodesFun(head);
-        // }
-
         switch (answer)
         {
         case 1:
@@ -267,11 +362,27 @@ void handlingUserChoiceFun(Node *head)
             countNodesFun(head);
             break;
 
+        case 4:
+            countOddNumbersFun(head);
+            break;
+
+        case 5:
+            countEvenNumbersFun(head);
+            break;
+
+        case 6:
+            sumOddNumbersFun(head);
+            break;
+
+        case 7:
+            sumAllNumbersFun(head);
+            break;
+
         default:
             break;
         }
 
-    } while (answer != 4);
+    } while (answer != 8);
 
     freeAllocatedMemoryFun(head);
 }
