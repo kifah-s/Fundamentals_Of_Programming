@@ -55,23 +55,24 @@ int displayMenuFun()
 // Add Nodes - Function.
 Node *addNodesFun(Node *head)
 {
-    if (head == NULL)
+    Node *temp = head;
+    if (temp == NULL)
     {
-        head = (Node *)malloc(sizeof(Node));
+        temp = (Node *)malloc(sizeof(Node));
 
         cout << "Please, enter the name: ";
-        cin >> head->name;
+        cin >> temp->name;
         cout << "Please, enter the payment: ";
-        cin >> head->payment;
+        cin >> temp->payment;
 
-        head->next = NULL;
+        temp->next = NULL;
 
-        return head;
+        return temp;
     }
 
-    head->next = addNodesFun(head->next);
+    temp->next = addNodesFun(temp->next);
 
-    return head;
+    return temp;
 }
 
 // Show Nodes - Function.
