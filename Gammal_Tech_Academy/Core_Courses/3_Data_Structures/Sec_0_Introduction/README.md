@@ -1,4 +1,4 @@
-## Section 1: Introduction To Data Structures ..
+## Section 0: Introduction To Data Structures ..
 
 ---
 
