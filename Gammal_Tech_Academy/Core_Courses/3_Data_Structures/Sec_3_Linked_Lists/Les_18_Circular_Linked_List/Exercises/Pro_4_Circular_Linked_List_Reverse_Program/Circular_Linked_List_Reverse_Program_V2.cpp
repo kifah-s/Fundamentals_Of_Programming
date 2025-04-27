@@ -1,16 +1,17 @@
 
-//* Circular Linked List Found Number Program (Version 1).
+//* Circular Linked List Reverse Program (Version 2).
 
 /*
 * Create a circular linked list with user-specified nodes
-* and display the elements and Search for a specific element in a circular linked list.
+* and display the elements and Reverse a circular linked list.
 
 ! Input & Output:
 ! 1) Add
 ! 2) Show
 ! 3) Count Nodes
 ! 4) Search Element
-! 5) Exit
+! 5) Reverse Double Linked List
+! 6) Exit
 ! Please, enter your choice: 1
 
 ! Please, enter a number: 1
@@ -19,7 +20,8 @@
 ! 2) Show
 ! 3) Count Nodes
 ! 4) Search Element
-! 5) Exit
+! 5) Reverse Double Linked List
+! 6) Exit
 ! Please, enter your choice: 1
 
 ! Please, enter a number: 2
@@ -28,7 +30,8 @@
 ! 2) Show
 ! 3) Count Nodes
 ! 4) Search Element
-! 5) Exit
+! 5) Reverse Double Linked List
+! 6) Exit
 ! Please, enter your choice: 1
 
 ! Please, enter a number: 3
@@ -37,12 +40,21 @@
 ! 2) Show
 ! 3) Count Nodes
 ! 4) Search Element
-! 5) Exit
+! 5) Reverse Double Linked List
+! 6) Exit
 ! Please, enter your choice: 4
 
-! Please, enter the number to search: 3
+! Reversed Double Linked List.
 
-! Number 3 found in the circular linked list.
+! 1) Add
+! 2) Show
+! 3) Count Nodes
+! 4) Search Element
+! 5) Reverse Double Linked List
+! 6) Exit
+! Please, enter your choice: 2
+
+! Double Linked List: 3 2 1
 */
 
 #include <iostream>
@@ -73,7 +85,7 @@ struct Node
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Circular Linked List Found Number Program (Version 1) ..\n"
+    cout << "\n\nYou welcome in Circular Linked List Reverse Program (Version 2) ..\n"
          << endl;
 }
 
@@ -87,7 +99,8 @@ int displayMenuFun()
          << "2) Show" << endl
          << "3) Count Nodes" << endl
          << "4) Search Number" << endl
-         << "5) Exit" << endl
+         << "5) Reverse Double Linked List" << endl
+         << "6) Exit" << endl
          << "Please, enter your choice: ";
     cin >> answer;
     cout << "----------------------------\n"
@@ -122,8 +135,10 @@ Node *addNodesFun(Node *head, Node *headTemporary)
 }
 
 // Show Nodes - Function.
-void showNodesFun(Node *head, Node *headTemporary)
+void showNodesFun(Node *head)
 {
+    Node *headTemporary = head;
+
     cout << "Circular Linked List: ";
     do
     {
@@ -134,8 +149,10 @@ void showNodesFun(Node *head, Node *headTemporary)
 }
 
 // Count Nodes - Function.
-void countNodesFun(Node *head, Node *headTemporary)
+void countNodesFun(Node *head)
 {
+    Node *headTemporary = head;
+
     int counter = 0;
 
     do
@@ -148,27 +165,56 @@ void countNodesFun(Node *head, Node *headTemporary)
 }
 
 // Search Number - Function.
-void searchNumberFun(Node *head, Node *headTemporary)
+void searchNumberFun(Node *head)
 {
     int number = 0;
     cout << "Please, enter a number to search: ";
     cin >> number;
 
+    Node *temp = head;
     do
     {
-        if (head->number == number)
+        if (temp->number == number)
         {
-            cout << "\nNumber " << number << " found in the circular linked list." << endl;
+            cout << "\nNumber " << number << " found in the circular linked list.\n"
+                 << endl;
             break;
         }
 
-        head = head->next;
-    } while (head != headTemporary);
+        temp = temp->next;
+    } while (temp != head);
+}
+
+// Reverse Double Linked List - Function.
+Node *reverseDoubleLinkedListFun(Node *head)
+{
+    if (head == NULL)
+    {
+        cout << "List is Empty" << endl;
+        return NULL;
+    }
+
+    Node *current = head, *prev = NULL, *nextNode = NULL;
+    do
+    {
+        nextNode = current->next;
+        current->next = prev;
+        prev = current;
+        current = nextNode;
+    } while (current != head);
+
+    head->next = prev;
+    head = prev;
+
+    cout << "Reverse Double Linked List." << endl;
+
+    return head;
 }
 
 // Free Allocated Memory - Function.
-void freeAllocatedMemoryFun(Node *head, Node *headTemporary)
+void freeAllocatedMemoryFun(Node *head)
 {
+    Node *headTemporary = head;
     while (head != headTemporary)
     {
         Node *nextNode = head->next; // Save Next Node Before Freeing.
@@ -196,24 +242,28 @@ void handlingUserChoiceFun(Node *head)
             break;
 
         case 2:
-            showNodesFun(head, head);
+            showNodesFun(head);
             break;
 
         case 3:
-            countNodesFun(head, head);
+            countNodesFun(head);
             break;
 
         case 4:
-            searchNumberFun(head, head);
+            searchNumberFun(head);
+            break;
+
+        case 5:
+            head = reverseDoubleLinkedListFun(head);
             break;
 
         default:
             break;
         }
 
-    } while (answer != 5);
+    } while (answer != 6);
 
-    freeAllocatedMemoryFun(head, head);
+    freeAllocatedMemoryFun(head);
 }
 
 //* End Function ..

@@ -213,7 +213,7 @@ void handlingUserChoiceFun(Node *head)
             break;
         }
 
-    } while (answer != 4);
+    } while (answer != 5);
 
     freeAllocatedMemoryFun(head, head);
 }
