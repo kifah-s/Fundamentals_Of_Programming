@@ -10,7 +10,7 @@
 ! 2) Show
 ! 3) Count Nodes
 ! 4) Search Element
-! 5) Reverse Double Linked List
+! 5) Reverse Circular Linked List
 ! 6) Exit
 ! Please, enter your choice: 1
 
@@ -20,7 +20,7 @@
 ! 2) Show
 ! 3) Count Nodes
 ! 4) Search Element
-! 5) Reverse Double Linked List
+! 5) Reverse Circular Linked List
 ! 6) Exit
 ! Please, enter your choice: 1
 
@@ -30,7 +30,7 @@
 ! 2) Show
 ! 3) Count Nodes
 ! 4) Search Element
-! 5) Reverse Double Linked List
+! 5) Reverse Circular Linked List
 ! 6) Exit
 ! Please, enter your choice: 1
 
@@ -40,21 +40,21 @@
 ! 2) Show
 ! 3) Count Nodes
 ! 4) Search Element
-! 5) Reverse Double Linked List
+! 5) Reverse Circular Linked List
 ! 6) Exit
 ! Please, enter your choice: 4
 
-! Reversed Double Linked List.
+! Reversed Circular Linked List.
 
 ! 1) Add
 ! 2) Show
 ! 3) Count Nodes
 ! 4) Search Element
-! 5) Reverse Double Linked List
+! 5) Reverse Circular Linked List
 ! 6) Exit
 ! Please, enter your choice: 2
 
-! Double Linked List: 3 2 1
+! Circular Linked List: 3 2 1
 */
 
 #include <iostream>
@@ -99,7 +99,7 @@ int displayMenuFun()
          << "2) Show" << endl
          << "3) Count Nodes" << endl
          << "4) Search Number" << endl
-         << "5) Reverse Double Linked List" << endl
+         << "5) Reverse Circular Linked List" << endl
          << "6) Exit" << endl
          << "Please, enter your choice: ";
     cin >> answer;
@@ -185,8 +185,8 @@ void searchNumberFun(Node *head)
     } while (temp != head);
 }
 
-// Reverse Double Linked List - Function.
-Node *reverseDoubleLinkedListFun(Node *head)
+// Reverse Circular Linked List - Function.
+Node *reverseCircularLinkedListFun(Node *head)
 {
     if (head == NULL)
     {
@@ -206,7 +206,7 @@ Node *reverseDoubleLinkedListFun(Node *head)
     head->next = prev;
     head = prev;
 
-    cout << "Reverse Double Linked List." << endl;
+    cout << "Reverse Circular Linked List." << endl;
 
     return head;
 }
@@ -254,7 +254,7 @@ void handlingUserChoiceFun(Node *head)
             break;
 
         case 5:
-            head = reverseDoubleLinkedListFun(head);
+            head = reverseCircularLinkedListFun(head);
             break;
 
         default:

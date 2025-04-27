@@ -1,9 +1,8 @@
 
-//* Circular Linked List Reverse Program (Version 1).
+//* Circular Linked List Empty Program (Version 1).
 
 /*
-* Create a circular linked list with user-specified nodes
-* and display the elements and Reverse a circular linked list.
+* Create a circular linked list Check if a circular linked list is empty.
 
 ! Input & Output:
 ! 1) Add
@@ -11,50 +10,13 @@
 ! 3) Count Nodes
 ! 4) Search Element
 ! 5) Reverse Circular Linked List
-! 6) Exit
-! Please, enter your choice: 1
+! 6) Insert at end
+! 7) Sum Nodes
+! 8) Check if empty
+! 9) Exit
+! Please, enter your choice: 8
 
-! Please, enter a number: 1
-
-! 1) Add
-! 2) Show
-! 3) Count Nodes
-! 4) Search Element
-! 5) Reverse Circular Linked List
-! 6) Exit
-! Please, enter your choice: 1
-
-! Please, enter a number: 2
-
-! 1) Add
-! 2) Show
-! 3) Count Nodes
-! 4) Search Element
-! 5) Reverse Circular Linked List
-! 6) Exit
-! Please, enter your choice: 1
-
-! Please, enter a number: 3
-
-! 1) Add
-! 2) Show
-! 3) Count Nodes
-! 4) Search Element
-! 5) Reverse Circular Linked List
-! 6) Exit
-! Please, enter your choice: 4
-
-! Reversed Circular Linked List.
-
-! 1) Add
-! 2) Show
-! 3) Count Nodes
-! 4) Search Element
-! 5) Reverse Circular Linked List
-! 6) Exit
-! Please, enter your choice: 2
-
-! Circular Linked List: 3 2 1
+! Circular liked list is empty.
 */
 
 #include <iostream>
@@ -85,7 +47,7 @@ struct Node
 // Welcome Message - Function.
 void printWelcomeMessageFun()
 {
-    cout << "\n\nYou welcome in Circular Linked List Reverse Program (Version 1) ..\n"
+    cout << "\n\nYou welcome in Circular Linked List Empty Program (Version 1) ..\n"
          << endl;
 }
 
@@ -100,7 +62,10 @@ int displayMenuFun()
          << "3) Count Nodes" << endl
          << "4) Search Number" << endl
          << "5) Reverse Circular Linked List" << endl
-         << "6) Exit" << endl
+         << "6) Insert At End" << endl
+         << "7) Sum Nodes" << endl
+         << "8) Check if empty" << endl
+         << "9) Exit" << endl
          << "Please, enter your choice: ";
     cin >> answer;
     cout << "----------------------------\n"
@@ -135,8 +100,10 @@ Node *addNodesFun(Node *head, Node *headTemporary)
 }
 
 // Show Nodes - Function.
-void showNodesFun(Node *head, Node *headTemporary)
+void showNodesFun(Node *head)
 {
+    Node *headTemporary = head;
+
     cout << "Circular Linked List: ";
     do
     {
@@ -147,8 +114,10 @@ void showNodesFun(Node *head, Node *headTemporary)
 }
 
 // Count Nodes - Function.
-void countNodesFun(Node *head, Node *headTemporary)
+void countNodesFun(Node *head)
 {
+    Node *headTemporary = head;
+
     int counter = 0;
 
     do
@@ -202,14 +171,64 @@ Node *reverseCircularLinkedListFun(Node *head)
     head->next = prev;
     head = prev;
 
-    cout << "Reverse Circular Linked List" << endl;
+    cout << "Reverse Circular Linked List." << endl;
 
     return head;
 }
 
-// Free Allocated Memory - Function.
-void freeAllocatedMemoryFun(Node *head, Node *headTemporary)
+// Insert At End - Function.
+Node *insertAtEndFun(Node *head)
 {
+    int num = 0;
+    cout << "Please, enter a number: ";
+    cin >> num;
+
+    Node *newNode = (Node *)malloc(sizeof(Node));
+    newNode->number = num;
+    newNode->next = head;
+
+    Node *last = head;
+    while (last->next != head)
+    {
+        last = last->next;
+    }
+
+    last->next = newNode;
+
+    return head;
+}
+
+// Sum Nodes - Function.
+void sumNodesFun(Node *head)
+{
+    int sum = 0;
+    Node *headTemporary = head;
+    do
+    {
+        sum += head->number;
+        head = head->next;
+    } while (head != headTemporary);
+
+    cout << "Sum All Nodes: " << sum << endl;
+}
+
+// Check If Empty - Function.
+void checkIfEmptyFun(Node *head)
+{
+    if (head == NULL)
+    {
+        cout << "Circular linked list is empty." << endl;
+    }
+    else
+    {
+        cout << "Circular linked list is not empty." << endl;
+    }
+}
+
+// Free Allocated Memory - Function.
+void freeAllocatedMemoryFun(Node *head)
+{
+    Node *headTemporary = head;
     while (head != headTemporary)
     {
         Node *nextNode = head->next; // Save Next Node Before Freeing.
@@ -237,11 +256,11 @@ void handlingUserChoiceFun(Node *head)
             break;
 
         case 2:
-            showNodesFun(head, head);
+            showNodesFun(head);
             break;
 
         case 3:
-            countNodesFun(head, head);
+            countNodesFun(head);
             break;
 
         case 4:
@@ -252,13 +271,25 @@ void handlingUserChoiceFun(Node *head)
             head = reverseCircularLinkedListFun(head);
             break;
 
+        case 6:
+            head = insertAtEndFun(head);
+            break;
+
+        case 7:
+            sumNodesFun(head);
+            break;
+
+        case 8:
+            checkIfEmptyFun(head);
+            break;
+
         default:
             break;
         }
 
-    } while (answer != 6);
+    } while (answer != 9);
 
-    freeAllocatedMemoryFun(head, head);
+    freeAllocatedMemoryFun(head);
 }
 
 //* End Function ..
