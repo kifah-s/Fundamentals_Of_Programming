@@ -1,3 +1,3 @@
-#### Lesson Summary ..
+## Lesson Summary ..
 
 ---
