@@ -16,8 +16,6 @@ int main()
 {
     welcomeMessageFun();
 
-    cout << "Notes" << endl;
-
     cout << endl
          << endl;
 

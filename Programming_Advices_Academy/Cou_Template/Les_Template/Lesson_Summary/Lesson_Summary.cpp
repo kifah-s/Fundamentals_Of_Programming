@@ -16,8 +16,6 @@ int main()
 {
     welcomeMessageFun();
 
-    cout << "Lesson Summary" << endl;
-
     cout << endl
          << endl;
 
