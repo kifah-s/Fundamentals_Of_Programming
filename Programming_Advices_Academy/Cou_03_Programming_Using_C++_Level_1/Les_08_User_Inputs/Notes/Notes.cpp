@@ -6,7 +6,7 @@ using namespace std;
 
 void welcomeMessage()
 {
-    cout << "\n\nWelcome to the Problem Solving ..\n"
+    cout << "\n\nWelcome to the Notes ..\n"
          << endl;
 }
 
@@ -15,11 +15,6 @@ void welcomeMessage()
 int main()
 {
     welcomeMessage();
-
-    int years = 5;
-    int ageAfterYears = 5 + 24;
-
-    cout << "After " << years << " years you will be " << ageAfterYears << " years old." << endl;
 
     cout << endl
          << endl;

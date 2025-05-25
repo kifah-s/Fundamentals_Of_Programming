@@ -16,8 +16,17 @@ int main()
 {
     welcomeMessage();
 
-    int years = 5;
-    int ageAfterYears = 5 + 24;
+    int years = 0;
+    int age = 0;
+    
+    cout << "Please, enter years: ";
+    cin >> years;
+    
+    cout << "Please, enter age: ";
+    cin >> age;
+    
+    
+    int ageAfterYears = years + age;
 
     cout << "After " << years << " years you will be " << ageAfterYears << " years old." << endl;
 
