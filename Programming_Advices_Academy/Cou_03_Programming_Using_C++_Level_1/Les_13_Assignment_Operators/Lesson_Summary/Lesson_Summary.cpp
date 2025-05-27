@@ -1,0 +1,40 @@
+#include <iostream>
+
+using namespace std;
+
+//* Function
+
+void welcomeMessage()
+{
+    cout << "\n\nWelcome to the Lesson Summary ..\n"
+         << endl;
+}
+
+//* End Function
+
+int main()
+{
+    welcomeMessage();
+
+    int a = 10, b = 20;
+
+    a += b; // a = a + b;
+    cout << "A: " << a << endl;
+    
+    a -= b; // a = a - b;
+    cout << "A: " << a << endl;
+    
+    a *= b; // a = a * b;
+    cout << "A: " << a << endl;
+    
+    b /= a; // b = b / a;
+    cout << "B: " << b << endl;
+    
+    b %= a; // b = b % a;
+    cout << "B: " << b << endl;
+
+    cout << endl
+         << endl;
+
+    return 0;
+}
