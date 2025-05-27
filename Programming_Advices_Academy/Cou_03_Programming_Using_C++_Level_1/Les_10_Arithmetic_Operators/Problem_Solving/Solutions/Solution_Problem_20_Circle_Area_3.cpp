@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -17,12 +18,13 @@ int main()
     welcomeMessage();
 
     const float r = 3.14;
-    float d = 0, area = 0;
+    float a = 0, area = 0;
 
-    cout << "Please, enter D: ";
-    cin >> d;
+    cout << "Please, enter A: ";
+    cin >> a;
 
-    area = (r * (d * d)) / 4;
+    // area = r * ((a / 2) * (a / 2));
+    area = r * pow((a / 2), 2);
 
     cout << "\nArea: " << area << endl;
 
