@@ -2,7 +2,7 @@
 
 using namespace std;
 
-//* Functions
+//* Function
 
 void welcomeMessage()
 {
@@ -10,7 +10,7 @@ void welcomeMessage()
          << endl;
 }
 
-//* End Functions
+//* End Function
 
 int main()
 {
