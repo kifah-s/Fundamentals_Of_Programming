@@ -13,7 +13,8 @@ void welcomeMessage()
 
 float calculateCircleArea(float d)
 {
-    float area = (3.14 * pow(d, 2)) / 4;
+    const float R = 3.14;
+    float area = (R * pow(d, 2)) / 4;
 
     return area;
 }

@@ -11,10 +11,11 @@ void welcomeMessage()
          << endl;
 }
 
-float calculateCircleArea(float r)
+float calculateCircleArea(float a, float b)
 {
     const float R = 3.14;
-    float area = R * pow(r, 2);
+
+    float area = R * pow(b, 2) / 4 * ((2 * a - b) / (2 * a + b));
 
     return area;
 }
@@ -25,12 +26,15 @@ int main()
 {
     welcomeMessage();
 
-    float r = 0;
+    float a = 0, b = 0;
 
-    cout << "Please, enter a r: ";
-    cin >> r;
+    cout << "Please, enter a: ";
+    cin >> a;
 
-    float area = calculateCircleArea(r);
+    cout << "Please, enter b: ";
+    cin >> b;
+
+    float area = calculateCircleArea(a, b);
 
     cout << "\nCircle Area: " << area << endl;
 
