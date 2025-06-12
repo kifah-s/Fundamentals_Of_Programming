@@ -31,7 +31,8 @@ void loveProgramming()
     cout << "I know it will take same time to practice, but i\nwill achieve my goal.\n"
          << endl;
 
-    cout << "Best Records\nkifah saloum.\n" << endl;
+    cout << "Best Records\nkifah saloum.\n"
+         << endl;
 }
 
 void printSquare()
@@ -48,18 +49,6 @@ void printSquare()
     cout << "***********************************" << endl;
 }
 
-void printLetterH()
-{
-    cout << "\n*              *" << endl;
-    cout << "*              *" << endl;
-    cout << "*              *" << endl;
-    cout << "*              *" << endl;
-    cout << "****************" << endl;
-    cout << "*              *" << endl;
-    cout << "*              *" << endl;
-    cout << "*              *" << endl;
-    cout << "*              *" << endl;
-}
 //* End Functions
 
 int main()
@@ -69,7 +58,6 @@ int main()
     personDetails();
     loveProgramming();
     printSquare();
-    printLetterH();
 
     cout << endl
          << endl;
