@@ -4,7 +4,7 @@ using namespace std;
 
 //* Functions
 
-void welcomeMessage()
+void welcomeMessageFun()
 {
     cout << "\n\nWelcome to the Problem Solving ..\n"
          << endl;
@@ -14,7 +14,7 @@ void welcomeMessage()
 
 int main()
 {
-    welcomeMessage();
+    welcomeMessageFun();
 
     cout << endl
          << endl;
