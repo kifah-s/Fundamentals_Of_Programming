@@ -13,31 +13,38 @@ void welcomeMessage()
 int getNumber()
 {
     int num = 0;
-
     cout << "Please, enter a number: ";
     cin >> num;
 
     return num;
 }
 
-void fromOneToNumber(int num)
+int sumOddNumbersFun(int num)
 {
-    for (int i = 1; i <= num; i++)
+    int sumOdd = 0;
+
+    for (int i = 0; i <= num; i++)
     {
-        cout << i << endl;
+        if (i % 2 != 0)
+        {
+            sumOdd += i;
+        }
     }
-    
+
+    return sumOdd;
 }
 
 //* End Functions
 
 int main()
 {
-    int number = 0;
+    int number = 0, sumOddNumbers = 0;
 
     welcomeMessage();
     number = getNumber();
-    fromOneToNumber(number);
+    sumOddNumbers = sumOddNumbersFun(number);
+
+    cout << "Sum Odd Numbers Form 1 To " << number << ": " << sumOddNumbers << endl;
 
     cout << endl
          << endl;

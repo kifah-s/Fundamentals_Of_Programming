@@ -20,13 +20,12 @@ int getNumber()
     return num;
 }
 
-void fromOneToNumber(int num)
+void fromNumberToOne(int num)
 {
-    for (int i = 1; i <= num; i++)
+    for (int i = num; i >= 1; i--)
     {
         cout << i << endl;
     }
-    
 }
 
 //* End Functions
@@ -37,7 +36,7 @@ int main()
 
     welcomeMessage();
     number = getNumber();
-    fromOneToNumber(number);
+    fromNumberToOne(number);
 
     cout << endl
          << endl;
