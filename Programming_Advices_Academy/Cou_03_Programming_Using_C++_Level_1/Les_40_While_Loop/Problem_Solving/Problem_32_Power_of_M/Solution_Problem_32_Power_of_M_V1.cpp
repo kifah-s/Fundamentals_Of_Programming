@@ -28,15 +28,20 @@ int getPowerFun()
     return pow;
 }
 
-int calculateResultFun()
+int calculateResultFun(int num, int pow)
 {
-    int num = getNumberFun();
-    int pow = getPowerFun();
-
     int res = 1;
-    for (int i = 0; i < pow; i++)
+
+    // for (int i = 0; i < pow; i++)
+    // {
+    //     res = res * num;
+    // }
+
+    int i = 0;
+    while (i < pow)
     {
         res = res * num;
+        i++;
     }
 
     return res;
@@ -46,13 +51,14 @@ int calculateResultFun()
 
 int main()
 {
-    int result = 0;
+    int number = 0, power = 0, result = 0;
 
     welcomeMessageFun();
+    number = getNumberFun();
+    power = getPowerFun();
+    result = calculateResultFun(number, power);
 
-    result = calculateResultFun();
-
-    cout << "Result: " << result << endl;
+    cout << number << "^" << power << ": " << result;
 
     cout << endl
          << endl;

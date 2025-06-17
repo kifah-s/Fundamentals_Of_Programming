@@ -13,46 +13,42 @@ void welcomeMessageFun()
 int getNumberFun()
 {
     int num = 0;
+
     cout << "Please, enter a number: ";
     cin >> num;
 
     return num;
 }
 
-int getPowerFun()
+int calculateFactorialFun(int num)
 {
-    int pow = 0;
-    cout << "Please, enter a power: ";
-    cin >> pow;
+    int fac = 1;
 
-    return pow;
-}
+    // for (int i = num; i >= 1; i--)
+    // {
+    //     fac *= i;
+    // }
 
-int calculateResultFun()
-{
-    int num = getNumberFun();
-    int pow = getPowerFun();
-
-    int res = 1;
-    for (int i = 0; i < pow; i++)
+    int i = num;
+    while (i >= 1)
     {
-        res = res * num;
+        fac *= i;
+        i--;
     }
 
-    return res;
+    return fac;
 }
-
 //* End Functions
 
 int main()
 {
-    int result = 0;
+    int number = 0, factorial = 0;
 
     welcomeMessageFun();
 
-    result = calculateResultFun();
-
-    cout << "Result: " << result << endl;
+    number = getNumberFun();
+    factorial = calculateFactorialFun(number);
+    cout << "Factorial: " << factorial << endl;
 
     cout << endl
          << endl;

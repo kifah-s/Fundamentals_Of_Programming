@@ -13,46 +13,39 @@ void welcomeMessageFun()
 int getNumberFun()
 {
     int num = 0;
+
     cout << "Please, enter a number: ";
     cin >> num;
 
     return num;
 }
 
-int getPowerFun()
+int sumNumbersFun()
 {
-    int pow = 0;
-    cout << "Please, enter a power: ";
-    cin >> pow;
+    int sumNum = 0;
 
-    return pow;
-}
-
-int calculateResultFun()
-{
     int num = getNumberFun();
-    int pow = getPowerFun();
 
-    int res = 1;
-    for (int i = 0; i < pow; i++)
+    while (num != -99)
     {
-        res = res * num;
+        sumNum += num;
+        num = getNumberFun();
     }
 
-    return res;
+    return sumNum;
 }
 
 //* End Functions
 
 int main()
 {
-    int result = 0;
+    int sumNumbers = 0;
 
     welcomeMessageFun();
+    
+    sumNumbers = sumNumbersFun();
 
-    result = calculateResultFun();
-
-    cout << "Result: " << result << endl;
+    cout << "Sum Numbers: " << sumNumbers << endl;
 
     cout << endl
          << endl;

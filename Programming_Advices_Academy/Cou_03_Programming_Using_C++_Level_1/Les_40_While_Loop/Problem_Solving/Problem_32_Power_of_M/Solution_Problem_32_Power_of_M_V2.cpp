@@ -34,9 +34,17 @@ int calculateResultFun()
     int pow = getPowerFun();
 
     int res = 1;
-    for (int i = 0; i < pow; i++)
+
+    // for (int i = 0; i < pow; i++)
+    // {
+    //     res = res * num;
+    // }
+
+    int i = 0;
+    while (i < pow)
     {
         res = res * num;
+        i++;
     }
 
     return res;
