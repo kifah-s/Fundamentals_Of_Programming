@@ -6,13 +6,8 @@ using namespace std;
 
 void welcomeMessageFun()
 {
-    cout << "\n\nWelcome to the Problem Solving ..\n"
+    cout << "\n\nWelcome to the Notes ..\n"
          << endl;
-}
-
-void printNameFun(string name)
-{
-    cout << "Your Name is: " << name << endl;
 }
 
 //* End Functions
@@ -20,7 +15,6 @@ void printNameFun(string name)
 int main()
 {
     welcomeMessageFun();
-    printNameFun("kifah");
 
     cout << endl
          << endl;

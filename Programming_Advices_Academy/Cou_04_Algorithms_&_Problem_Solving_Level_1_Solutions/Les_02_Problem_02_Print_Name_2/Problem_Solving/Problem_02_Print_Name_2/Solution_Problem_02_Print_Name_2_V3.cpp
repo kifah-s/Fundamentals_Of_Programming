@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -10,9 +11,19 @@ void welcomeMessageFun()
          << endl;
 }
 
+string getNameFun()
+{
+    string name;
+
+    cout << "Please, enter your name: ";
+    getline(cin, name);
+
+    return name;
+}
+
 void printNameFun(string name)
 {
-    cout << "Your Name is: " << name << endl;
+    cout << "Hello, " << name << endl;
 }
 
 //* End Functions
@@ -20,7 +31,7 @@ void printNameFun(string name)
 int main()
 {
     welcomeMessageFun();
-    printNameFun("kifah");
+    printNameFun(getNameFun());
 
     cout << endl
          << endl;
