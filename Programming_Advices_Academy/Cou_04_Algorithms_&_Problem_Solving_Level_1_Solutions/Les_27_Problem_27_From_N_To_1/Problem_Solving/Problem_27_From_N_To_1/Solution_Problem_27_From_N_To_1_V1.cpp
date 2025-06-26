@@ -20,7 +20,7 @@ int ReadNumberFun()
     return num;
 }
 
-void PrintNumberFrom1ToNFun(int num)
+void PrintNumbersFrom1ToNFun(int num)
 {
     for (int i = num; i >= 1; i--)
     {
@@ -33,7 +33,7 @@ void PrintNumberFrom1ToNFun(int num)
 int main()
 {
     WelcomeMessageFun();
-    PrintNumberFrom1ToNFun(ReadNumberFun());
+    PrintNumbersFrom1ToNFun(ReadNumberFun());
 
     cout << endl
          << endl;

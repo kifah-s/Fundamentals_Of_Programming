@@ -20,12 +20,25 @@ int ReadNumberFun()
     return num;
 }
 
-void PrintNumbersFrom1ToNFun(int num)
+int CalculateSumOddNumbersFrom1ToNFun(int num)
 {
-    for (int i = 1; i <= num; i++)
+    int sumOddNumbers = 0;
+
+    for (int i = 0; i <= num; i++)
     {
-        cout << i << endl;
+        if (i % 2 != 0)
+        {
+            sumOddNumbers += i;
+        }
+        
     }
+
+    return sumOddNumbers;
+}
+
+void PrintSumOddNumbersFun(int num)
+{
+    cout << "Sum Odd Numbers: " << num << endl;;
 }
 
 //* End Functions
@@ -33,7 +46,8 @@ void PrintNumbersFrom1ToNFun(int num)
 int main()
 {
     WelcomeMessageFun();
-    PrintNumbersFrom1ToNFun(ReadNumberFun());
+    
+    PrintSumOddNumbersFun(CalculateSumOddNumbersFrom1ToNFun(ReadNumberFun()));
 
     cout << endl
          << endl;
