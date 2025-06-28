@@ -38,7 +38,7 @@ stBillInformation CalculateRemainderFun()
 {
     stBillInformation billInfo = ReadBillInformationFun();
 
-    billInfo.remainder = billInfo.totalBill - billInfo.cashPaid;
+    billInfo.remainder =  billInfo.cashPaid - billInfo.totalBill;
 
     return billInfo;
 }
@@ -55,7 +55,7 @@ void PrintResultFun(stBillInformation billInfo)
 int main()
 {
     WelcomeMessageFun();
-    PrintResultFun(ReadBillInformationFun());
+    PrintResultFun(CalculateRemainderFun());
 
     cout << endl
          << endl;

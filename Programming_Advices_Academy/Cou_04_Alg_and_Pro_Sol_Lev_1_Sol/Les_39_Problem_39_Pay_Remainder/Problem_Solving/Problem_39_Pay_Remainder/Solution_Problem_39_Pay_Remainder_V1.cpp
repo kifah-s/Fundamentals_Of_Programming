@@ -36,7 +36,7 @@ stBillInformation ReadBillInformationFun()
 
 stBillInformation CalculateRemainderFun(stBillInformation billInfo)
 {
-    billInfo.remainder = billInfo.totalBill - billInfo.cashPaid;
+    billInfo.remainder =  billInfo.cashPaid - billInfo.totalBill;
 
     return billInfo;
 }
