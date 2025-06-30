@@ -2,19 +2,15 @@
 
 using namespace std;
 
-//* Functions
-
-void WelcomeMessageFun()
+void WelcomeMessage()
 {
     cout << "\n\nWelcome to the Lesson Summary ..\n"
          << endl;
 }
 
-//* End Functions
-
 int main()
 {
-    WelcomeMessageFun();
+    WelcomeMessage();
 
     cout << endl
          << endl;
