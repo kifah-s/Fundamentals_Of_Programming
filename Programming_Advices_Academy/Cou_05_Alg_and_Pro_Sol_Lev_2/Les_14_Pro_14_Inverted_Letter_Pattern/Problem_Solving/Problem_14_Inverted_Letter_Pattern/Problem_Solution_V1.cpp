@@ -21,7 +21,7 @@ int ReadPositiveNumber(string message)
     return number;
 }
 
-void PrintInvertedNumberPattern(int num)
+void PrintInvertedLetterPattern(int num)
 {
     for (int i = (num + 64); i >= 65; i--)
     {
@@ -38,7 +38,7 @@ int main()
 {
     WelcomeMessage();
 
-    PrintInvertedNumberPattern(ReadPositiveNumber("Please, enter a positive number: "));
+    PrintInvertedLetterPattern(ReadPositiveNumber("Please, enter a positive number: "));
 
     cout << endl
          << endl;
