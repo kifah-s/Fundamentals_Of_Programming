@@ -90,7 +90,7 @@ int main()
     cout << "\nArray 1: ";
     PrintArray(array1, array1Length);
 
-    CopyArray(array1, array2, array1Length, array2 Length);
+    CopyArray(array1, array2, array1Length, array2Length);
 
     cout << "\nArray 2 - Prime Numbers: ";
     PrintArray(array2, array2Length);
