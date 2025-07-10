@@ -35,17 +35,32 @@ void PrintArray(int arr[100], int arrLength)
     }
 }
 
-void AddArrayElements(int number, int array[100], int &arrayLength)
+void AddArrayElements(int array[100], int &arrayLength, int number)
 {
     array[arrayLength] = number;
     arrayLength++;
+}
+
+bool IsOddNumber(int number)
+{
+    if (number % 2 != 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 void CopyArray(int arr1[100], int arr2[100], int arr1Length, int &arr2Length)
 {
     for (int i = 0; i < arr1Length; i++)
     {
-        AddArrayElements(arr1[i], arr2, arr2Length);
+        if (IsOddNumber(arr1[i]))
+        {
+            AddArrayElements(arr2, arr2Length, arr1[i]);
+        }
     }
 }
 
@@ -64,7 +79,7 @@ int main()
 
     CopyArray(array1, array2, array1Length, array2Length);
 
-    cout << "\nArray 2: ";
+    cout << "\nArray 2 - Odd Numbers: ";
     PrintArray(array2, array2Length);
 
     cout << endl

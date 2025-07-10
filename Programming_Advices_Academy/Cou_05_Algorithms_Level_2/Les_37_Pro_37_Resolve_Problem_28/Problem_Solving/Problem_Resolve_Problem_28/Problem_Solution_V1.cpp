@@ -65,7 +65,7 @@ int main()
     CopyArray(array1, array2, array1Length, array2Length);
 
     cout << "\nArray 2: ";
-    PrintArray(array2, array1Length);
+    PrintArray(array2, array2Length);
 
     cout << endl
          << endl;
