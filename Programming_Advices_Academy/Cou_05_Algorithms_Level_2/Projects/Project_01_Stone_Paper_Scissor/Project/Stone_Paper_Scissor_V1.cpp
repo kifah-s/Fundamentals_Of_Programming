@@ -37,7 +37,7 @@ int ReadNumberOfRounds()
 
     do
     {
-        cout << "How Many Rounds You Want Play (From 1 To 10): ";
+        cout << "\nHow Many Rounds You Want Play (From 1 To 10): ";
         cin >> numberOfRound;
     } while (numberOfRound <= 0 || numberOfRound > 10);
 
@@ -205,13 +205,25 @@ void RepeatRounds(int numberOfRounds)
     GameResults(numberOfRounds, plyers);
 }
 
+void StartGame()
+{
+    char answer;
+
+    do
+    {
+        RepeatRounds(ReadNumberOfRounds());
+        cout << "\nDo you play again? (Y | N): ";
+        cin >> answer;
+    } while (answer == 'y' || answer == 'Y');
+}
+
 int main()
 {
     WelcomeMessage();
 
     srand(time(0));
 
-    RepeatRounds(ReadNumberOfRounds());
+    StartGame();
 
     cout << endl
          << endl;
