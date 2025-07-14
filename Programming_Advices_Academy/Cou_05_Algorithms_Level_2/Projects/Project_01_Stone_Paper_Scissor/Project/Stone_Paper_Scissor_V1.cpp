@@ -17,6 +17,20 @@ enum enChoices
     scissors = 3
 };
 
+struct stPlayer
+{
+    enChoices choice;
+    int wins = 0;
+    int losses = 0;
+    int draws = 0;
+};
+
+struct stPlayersInfo
+{
+    stPlayer player1;
+    stPlayer computer;
+};
+
 int ReadNumberOfRounds()
 {
     int numberOfRound = 0;
@@ -30,7 +44,7 @@ int ReadNumberOfRounds()
     return numberOfRound;
 }
 
-int ChoicesInterface()
+enChoices PlyerChoicesInterface()
 {
     int choice = 0;
 
@@ -41,38 +55,154 @@ int ChoicesInterface()
     cout << "Please, enter Your Choice: ";
     cin >> choice;
 
-    return choice;
+    return (enChoices)choice;
 }
 
-int GenerateRandomNumber1to3()
+enChoices ComputerChoiceRandomNumber1To3()
 {
-    return (rand() % 3) + 1;
+    return (enChoices)((rand() % 3) + 1);
 }
 
-void WinnerOfRound(int roundNumber)
+stPlayersInfo WinnerOfRound(int roundNumber, stPlayersInfo plyers)
 {
     cout << "\n-------------------------- ROUND - " << roundNumber << " ------------------------------" << endl;
-    
-    cout << "\n-------------------------------------------------------------------" << endl;
+
+    if (plyers.player1.choice == enChoices::stone)
+    {
+        if (plyers.computer.choice == enChoices::stone)
+        {
+            cout << "Plyer Choice: Stone" << endl;
+            cout << "Computer Choice: Stone" << endl;
+            cout << "Round Winner: [No Winner]" << endl;
+
+            plyers.player1.draws++;
+            plyers.computer.draws++;
+        }
+        else if (plyers.computer.choice == enChoices::paper)
+        {
+            cout << "Plyer Choice: Stone" << endl;
+            cout << "Computer Choice: Paper" << endl;
+            cout << "Round Winner: [Computer]" << endl;
+
+            plyers.computer.wins++;
+        }
+        else if (plyers.computer.choice == enChoices::scissors)
+        {
+            cout << "Plyer Choice: Stone" << endl;
+            cout << "Computer Choice: Scissors" << endl;
+            cout << "Round Winner: [Plyer]" << endl;
+
+            plyers.player1.wins++;
+        }
+    }
+    else if (plyers.player1.choice == enChoices::paper)
+    {
+        if (plyers.computer.choice == enChoices::stone)
+        {
+            cout << "Plyer Choice: Paper" << endl;
+            cout << "Computer Choice: Stone" << endl;
+            cout << "Round Winner: [Plyer]" << endl;
+
+            plyers.player1.wins++;
+        }
+        else if (plyers.computer.choice == enChoices::paper)
+        {
+            cout << "Plyer Choice: Paper" << endl;
+            cout << "Computer Choice: Paper" << endl;
+            cout << "Round Winner: [No Winner]" << endl;
+
+            plyers.player1.draws++;
+            plyers.computer.draws++;
+        }
+        else if (plyers.computer.choice == enChoices::scissors)
+        {
+            cout << "Plyer Choice: Paper" << endl;
+            cout << "Computer Choice: Scissors" << endl;
+            cout << "Round Winner: [Computer]" << endl;
+
+            plyers.computer.wins++;
+        }
+    }
+    else if (plyers.player1.choice == enChoices::scissors)
+    {
+        if (plyers.computer.choice == enChoices::stone)
+        {
+            cout << "Plyer Choice: Scissors" << endl;
+            cout << "Computer Choice: Stone" << endl;
+            cout << "Round Winner: [Computer]" << endl;
+
+            plyers.computer.wins++;
+        }
+        else if (plyers.player1.choice == enChoices::paper)
+        {
+            cout << "Plyer Choice: Scissors" << endl;
+            cout << "Computer Choice: Paper" << endl;
+            cout << "Round Winner: [Plyer]" << endl;
+
+            plyers.player1.wins++;
+        }
+        else if (plyers.player1.choice == enChoices::scissors)
+        {
+            cout << "Plyer Choice: Scissors" << endl;
+            cout << "Computer Choice: Scissors" << endl;
+            cout << "Round Winner: [No Winner]" << endl;
+
+            plyers.player1.draws++;
+            plyers.computer.draws++;
+        }
+    }
+
+    cout << "-------------------------------------------------------------------" << endl;
+
+    return plyers;
+}
+
+string GameWinner(stPlayersInfo plyers)
+{
+    if (plyers.player1.wins > plyers.computer.wins)
+    {
+        return "Plyer Winner.";
+    }
+    else if (plyers.computer.wins > plyers.player1.wins)
+    {
+        return "Computer Winner.";
+    }
+    else
+    {
+        return "No Winner";
+    }
+}
+
+void GameResults(int numberOfRounds, stPlayersInfo plyers)
+{
+    cout << "__________________________________________________________" << endl;
+    cout << "\n                   Game Over                            " << endl;
+    cout << "__________________________________________________________" << endl;
+    cout << "\n________________[Game Results]____________________________" << endl;
+    cout << "Game Rounds: " << numberOfRounds << endl;
+    cout << "Plyer Winner Items: " << plyers.player1.wins << endl;
+    cout << "Computer Winner Items: " << plyers.computer.wins << endl;
+    cout << "Drow Items: " << plyers.player1.draws << endl;
+    cout << "Final Winner: " << GameWinner(plyers) << endl;
+    cout << "__________________________________________________________" << endl;
 }
 
 void RepeatRounds(int numberOfRounds)
 {
-    int choice = 0;
-    int randomNumber = 0;
+    stPlayersInfo plyers;
 
-    for (int i = 0; i < numberOfRounds; i++)
+    for (int i = 1; i <= numberOfRounds; i++)
     {
-        cout << "\nRound " << i + 1 << " Begins: \n"
+        cout << "\nRound " << i << " Begins: \n"
              << endl;
-        choice = ChoicesInterface();
-        cout << "\nPlyer Choice: " << choice << endl;
 
-        randomNumber = GenerateRandomNumber1to3();
-        cout << "Computer Choice: " << randomNumber << endl;
+        plyers.player1.choice = PlyerChoicesInterface();
+        plyers.computer.choice = ComputerChoiceRandomNumber1To3();
 
-        WinnerOfRound(i + 1);
+        plyers = WinnerOfRound(i, plyers);
     }
+
+    GameResults(numberOfRounds, plyers);
 }
 
 int main()
