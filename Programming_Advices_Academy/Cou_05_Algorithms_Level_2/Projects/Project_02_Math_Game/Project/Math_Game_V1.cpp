@@ -58,7 +58,7 @@ enOperationType SelectOperationType()
 {
     short answer = 0;
 
-    cout << "Operation Type: " << endl;
+    cout << "\nOperation Type: " << endl;
     cout << "1) Add.\n2) Sub.\n3) Mul.\n4) Div.\n5) Mix." << endl;
 
     do
@@ -73,6 +73,38 @@ enOperationType SelectOperationType()
 int RandomNumber(int from, int to)
 {
     return rand() % (to - from + 1) + from;
+}
+
+char GenerateRandomOperationType()
+{
+    short arr[4] = {42, 43, 45, 47};
+
+    short index = rand() % 4;
+
+    return (char)arr[index];
+}
+
+char GenerateOperationType(enOperationType operationType)
+{
+    switch (operationType)
+    {
+    case collection:
+        return '+';
+
+    case subtraction:
+        return '-';
+
+    case multiply:
+        return '*';
+
+    case division:
+        return '/';
+
+    case mix:
+        return GenerateRandomOperationType();
+    }
+
+    return 0;
 }
 
 short EasyLevelOfQuestions()
@@ -95,7 +127,7 @@ short MixLevelOfQuestions()
     return RandomNumber(1, 100);
 }
 
-short CollectionNumbers(short firstNumber, short secondNumber)
+short CheckCollectionNumbers(short firstNumber, short secondNumber)
 {
     short result = 0;
 
@@ -104,7 +136,7 @@ short CollectionNumbers(short firstNumber, short secondNumber)
     return result;
 }
 
-short SubtractionNumbers(short firstNumber, short secondNumber)
+short CheckSubtractionNumbers(short firstNumber, short secondNumber)
 {
     short result = 0;
 
@@ -113,7 +145,7 @@ short SubtractionNumbers(short firstNumber, short secondNumber)
     return result;
 }
 
-short MultiplyNumbers(short firstNumber, short secondNumber)
+short CheckMultiplyNumbers(short firstNumber, short secondNumber)
 {
     short result = 0;
 
@@ -122,7 +154,7 @@ short MultiplyNumbers(short firstNumber, short secondNumber)
     return result;
 }
 
-short DivisionNumbers(short firstNumber, short secondNumber)
+short CheckDivisionNumbers(short firstNumber, short secondNumber)
 {
     short result = 0;
 
@@ -131,11 +163,30 @@ short DivisionNumbers(short firstNumber, short secondNumber)
     return result;
 }
 
+void IsRightAnswer(short userAnswer, short correctAnswer)
+{
+    if (userAnswer == correctAnswer)
+    {
+        cout << "Right Answer :)" << endl;
+    }
+    else
+    {
+        cout << "Wrong Answer :)" << endl;
+    }
+}
+
+void CheckAnswer(enOperationType operationType)
+{
+    
+    
+}
+
 void PlayGame()
 {
     short numberOfQuestions = HowManyQuestions();
     enQuestionsLevel questionLevel = SelectQuestionsLevel();
     enOperationType operationType = SelectOperationType();
+    short firstNumber = 0, secondNumber = 0, correctAnswer = 0, userAnswer = 0;
 
     for (short question = 1; question <= numberOfQuestions; question++)
     {
@@ -144,19 +195,139 @@ void PlayGame()
         switch (questionLevel)
         {
         case easyLevel:
-            cout << EasyLevelOfQuestions();
+            switch (operationType)
+            {
+            case collection:
+                firstNumber = EasyLevelOfQuestions();
+                secondNumber = EasyLevelOfQuestions();
+
+                cout << firstNumber << " " << GenerateOperationType(operationType) << " " << secondNumber << ": ";
+                cin >> userAnswer;
+
+                correctAnswer = CheckCollectionNumbers(firstNumber, secondNumber);
+
+                IsRightAnswer(userAnswer, correctAnswer);
+
+                break;
+
+            case subtraction:
+                firstNumber = EasyLevelOfQuestions();
+                secondNumber = EasyLevelOfQuestions();
+
+                cout << firstNumber << " " << GenerateOperationType(operationType) << " " << secondNumber << ": ";
+                cin >> userAnswer;
+
+                correctAnswer = CheckSubtractionNumbers(firstNumber, secondNumber);
+
+                IsRightAnswer(userAnswer, correctAnswer);
+
+                break;
+
+            case multiply:
+                firstNumber = EasyLevelOfQuestions();
+                secondNumber = EasyLevelOfQuestions();
+
+                cout << firstNumber << " " << GenerateOperationType(operationType) << " " << secondNumber << ": ";
+                cin >> userAnswer;
+
+                correctAnswer = CheckMultiplyNumbers(firstNumber, secondNumber);
+
+                IsRightAnswer(userAnswer, correctAnswer);
+
+                break;
+
+            case division:
+                firstNumber = EasyLevelOfQuestions();
+                secondNumber = EasyLevelOfQuestions();
+
+                cout << firstNumber << " " << GenerateOperationType(operationType) << " " << secondNumber << ": ";
+                cin >> userAnswer;
+
+                correctAnswer = CheckDivisionNumbers(firstNumber, secondNumber);
+
+                IsRightAnswer(userAnswer, correctAnswer);
+
+                break;
+
+            case mix:
+                //***********************************************
+                break;
+            }
             break;
 
         case medLevel:
-            cout << MedLevelOfQuestions();
+            switch (operationType)
+            {
+            case collection:
+
+                break;
+
+            case subtraction:
+
+                break;
+
+            case multiply:
+
+                break;
+
+            case division:
+
+                break;
+
+            case mix:
+
+                break;
+            }
             break;
 
         case hardLevel:
-            cout << HardLevelOfQuestions();
+            switch (operationType)
+            {
+            case collection:
+
+                break;
+
+            case subtraction:
+
+                break;
+
+            case multiply:
+
+                break;
+
+            case division:
+
+                break;
+
+            case mix:
+
+                break;
+            }
             break;
 
         case mixLevel:
-            cout << MixLevelOfQuestions();
+            switch (operationType)
+            {
+            case collection:
+
+                break;
+
+            case subtraction:
+
+                break;
+
+            case multiply:
+
+                break;
+
+            case division:
+
+                break;
+
+            case mix:
+
+                break;
+            }
             break;
         }
     }
@@ -168,7 +339,7 @@ int main()
 
     srand((unsigned)time(NULL));
 
-    // PlayGame();
+    PlayGame();
 
     cout << endl
          << endl;
