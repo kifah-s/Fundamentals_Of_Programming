@@ -163,20 +163,20 @@ short CheckDivisionNumbers(short firstNumber, short secondNumber)
     return result;
 }
 
-short CheckMixOperationNumbers(char operationType, short firstNumber, short secondNumber)
+short CheckMixOperationNumbers(enOperationType operationType, short firstNumber, short secondNumber)
 {
     switch (operationType)
     {
-    case '+':
+    case collection:
         return CheckCollectionNumbers(firstNumber, secondNumber);
 
-    case '-':
+    case subtraction:
         return CheckSubtractionNumbers(firstNumber, secondNumber);
 
-    case '*':
+    case multiply:
         return CheckMultiplyNumbers(firstNumber, secondNumber);
 
-    case '/':
+    case division:
         return CheckDivisionNumbers(firstNumber, secondNumber);
     }
 }
@@ -263,7 +263,7 @@ void PlayGame()
             CheckAnswer(operationType, firstNumber, secondNumber, userAnswer, correctAnswer);
             break;
 
-        case mixLevel: //* I'm Here
+        case mixLevel: //***************** I'm Here *****************
             firstNumber = MixLevelOfQuestions();
             secondNumber = MixLevelOfQuestions();
             cout << firstNumber << " " << GenerateOperationType(operationType) << " " << secondNumber << ": ";
