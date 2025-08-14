@@ -127,6 +127,20 @@ short MixLevelOfQuestions()
     return RandomNumber(1, 100);
 }
 
+void IsRightAnswer(short userAnswer, short correctAnswer)
+{
+    cout << "Correct Answer is: " << correctAnswer << endl;
+
+    if (userAnswer == correctAnswer)
+    {
+        cout << "Your Answer is Right :)" << endl;
+    }
+    else
+    {
+        cout << "Your Answer is Wrong :(" << endl;
+    }
+}
+
 short CheckCollectionNumbers(short firstNumber, short secondNumber)
 {
     short result = 0;
@@ -163,38 +177,6 @@ short CheckDivisionNumbers(short firstNumber, short secondNumber)
     return result;
 }
 
-short CheckMixOperationNumbers(enOperationType operationType, short firstNumber, short secondNumber)
-{
-    switch (operationType)
-    {
-    case collection:
-        return CheckCollectionNumbers(firstNumber, secondNumber);
-
-    case subtraction:
-        return CheckSubtractionNumbers(firstNumber, secondNumber);
-
-    case multiply:
-        return CheckMultiplyNumbers(firstNumber, secondNumber);
-
-    case division:
-        return CheckDivisionNumbers(firstNumber, secondNumber);
-    }
-}
-
-void IsRightAnswer(short userAnswer, short correctAnswer)
-{
-    cout << "Correct Answer is: " << correctAnswer << endl;
-
-    if (userAnswer == correctAnswer)
-    {
-        cout << "Your Answer is Right :)" << endl;
-    }
-    else
-    {
-        cout << "Your Answer is Wrong :(" << endl;
-    }
-}
-
 void CheckAnswer(enOperationType operationType, short firstNumber, short secondNumber, short userAnswer, short correctAnswer)
 {
     switch (operationType)
@@ -218,9 +200,30 @@ void CheckAnswer(enOperationType operationType, short firstNumber, short secondN
         correctAnswer = CheckDivisionNumbers(firstNumber, secondNumber);
         IsRightAnswer(userAnswer, correctAnswer);
         break;
+    }
+}
 
-    case mix:
-        correctAnswer = CheckMixOperationNumbers(operationType, firstNumber, secondNumber);
+void CheckAnswerForMixOperation(char operationType, short firstNumber, short secondNumber, short userAnswer, short correctAnswer)
+{
+    switch (operationType)
+    {
+    case '+':
+        correctAnswer = CheckCollectionNumbers(firstNumber, secondNumber);
+        IsRightAnswer(userAnswer, correctAnswer);
+        break;
+
+    case '-':
+        correctAnswer = CheckSubtractionNumbers(firstNumber, secondNumber);
+        IsRightAnswer(userAnswer, correctAnswer);
+        break;
+
+    case '*':
+        correctAnswer = CheckMultiplyNumbers(firstNumber, secondNumber);
+        IsRightAnswer(userAnswer, correctAnswer);
+        break;
+
+    case '/':
+        correctAnswer = CheckDivisionNumbers(firstNumber, secondNumber);
         IsRightAnswer(userAnswer, correctAnswer);
         break;
     }
@@ -263,12 +266,13 @@ void PlayGame()
             CheckAnswer(operationType, firstNumber, secondNumber, userAnswer, correctAnswer);
             break;
 
-        case mixLevel: //***************** I'm Here *****************
+        case mixLevel:
             firstNumber = MixLevelOfQuestions();
             secondNumber = MixLevelOfQuestions();
-            cout << firstNumber << " " << GenerateOperationType(operationType) << " " << secondNumber << ": ";
+            char mixOperationType = GenerateOperationType(operationType);
+            cout << firstNumber << " " << mixOperationType << " " << secondNumber << ": ";
             cin >> userAnswer;
-            CheckAnswer(operationType, firstNumber, secondNumber, userAnswer, correctAnswer);
+            CheckAnswerForMixOperation(mixOperationType, firstNumber, secondNumber, userAnswer, correctAnswer);
             break;
         }
     }
