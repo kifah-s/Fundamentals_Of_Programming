@@ -19,6 +19,15 @@ enum enOperationType
     mix = 5
 };
 
+struct stFinalResult
+{
+    short numberOfQuestions = 0;
+    enQuestionsLevel questionsLevel;
+    enOperationType operationType;
+    short numberOfRightAnswers = 0;
+    short numberOfWrongAnswers = 0;
+};
+
 void WelcomeMessage()
 {
     cout << "\n\nWelcome to the Project ..\n"
@@ -127,17 +136,19 @@ short MixLevelOfQuestions()
     return RandomNumber(1, 100);
 }
 
-void IsRightAnswer(short userAnswer, short correctAnswer)
+void IsRightAnswer(short userAnswer, short correctAnswer, stFinalResult &finalResult)
 {
     cout << "Correct Answer is: " << correctAnswer << endl;
 
     if (userAnswer == correctAnswer)
     {
         cout << "Your Answer is Right :)" << endl;
+        finalResult.numberOfRightAnswers++;
     }
     else
     {
         cout << "Your Answer is Wrong :(" << endl;
+        finalResult.numberOfWrongAnswers++;
     }
 }
 
@@ -177,64 +188,123 @@ short CheckDivisionNumbers(short firstNumber, short secondNumber)
     return result;
 }
 
-void CheckAnswer(enOperationType operationType, short firstNumber, short secondNumber, short userAnswer, short correctAnswer)
+void CheckAnswer(enOperationType operationType, short firstNumber, short secondNumber, short userAnswer, short correctAnswer, stFinalResult &finalResult)
 {
     switch (operationType)
     {
     case collection:
         correctAnswer = CheckCollectionNumbers(firstNumber, secondNumber);
-        IsRightAnswer(userAnswer, correctAnswer);
+        IsRightAnswer(userAnswer, correctAnswer, finalResult);
         break;
 
     case subtraction:
         correctAnswer = CheckSubtractionNumbers(firstNumber, secondNumber);
-        IsRightAnswer(userAnswer, correctAnswer);
+        IsRightAnswer(userAnswer, correctAnswer, finalResult);
         break;
 
     case multiply:
         correctAnswer = CheckMultiplyNumbers(firstNumber, secondNumber);
-        IsRightAnswer(userAnswer, correctAnswer);
+        IsRightAnswer(userAnswer, correctAnswer, finalResult);
         break;
 
     case division:
         correctAnswer = CheckDivisionNumbers(firstNumber, secondNumber);
-        IsRightAnswer(userAnswer, correctAnswer);
+        IsRightAnswer(userAnswer, correctAnswer, finalResult);
         break;
     }
 }
 
-void CheckAnswerForMixOperation(char operationType, short firstNumber, short secondNumber, short userAnswer, short correctAnswer)
+void CheckAnswerForMixOperation(char operationType, short firstNumber, short secondNumber, short userAnswer, short correctAnswer, stFinalResult &finalResult)
 {
     switch (operationType)
     {
     case '+':
         correctAnswer = CheckCollectionNumbers(firstNumber, secondNumber);
-        IsRightAnswer(userAnswer, correctAnswer);
+        IsRightAnswer(userAnswer, correctAnswer, finalResult);
         break;
 
     case '-':
         correctAnswer = CheckSubtractionNumbers(firstNumber, secondNumber);
-        IsRightAnswer(userAnswer, correctAnswer);
+        IsRightAnswer(userAnswer, correctAnswer, finalResult);
         break;
 
     case '*':
         correctAnswer = CheckMultiplyNumbers(firstNumber, secondNumber);
-        IsRightAnswer(userAnswer, correctAnswer);
+        IsRightAnswer(userAnswer, correctAnswer, finalResult);
         break;
 
     case '/':
         correctAnswer = CheckDivisionNumbers(firstNumber, secondNumber);
-        IsRightAnswer(userAnswer, correctAnswer);
+        IsRightAnswer(userAnswer, correctAnswer, finalResult);
         break;
     }
 }
 
+void ScreenOfEndGame(stFinalResult finalResult)
+{
+    cout << "\n-----------------------------------------" << endl;
+    cout << "Number of questions: " << finalResult.numberOfQuestions << endl;
+
+    switch (finalResult.questionsLevel)
+    {
+    case easyLevel:
+        cout << "Questions level: Easy" << endl;
+        break;
+
+    case medLevel:
+        cout << "Questions level: Med" << endl;
+        break;
+
+    case hardLevel:
+        cout << "Questions level: Hard" << endl;
+        break;
+
+    case mixLevel:
+        cout << "Questions level: Mix" << endl;
+        break;
+    }
+
+    switch (finalResult.operationType)
+    {
+    case collection:
+        cout << "Operation type: Collection" << endl;
+        break;
+
+    case subtraction:
+        cout << "Operation type: Subtraction" << endl;
+        break;
+
+    case multiply:
+        cout << "Operation type: Multiply" << endl;
+        break;
+
+    case division:
+        cout << "Operation type: Division" << endl;
+        break;
+
+    case mix:
+        cout << "Operation type: Mix" << endl;
+        break;
+    }
+
+    cout << "Number of right answers: " << finalResult.numberOfRightAnswers << endl;
+    cout << "Number of wrong answers: " << finalResult.numberOfWrongAnswers << endl;
+}
+
 void PlayGame()
 {
+    WelcomeMessage();
+
+    stFinalResult finalResult;
+
     short numberOfQuestions = HowManyQuestions();
     enQuestionsLevel questionLevel = SelectQuestionsLevel();
     enOperationType operationType = SelectOperationType();
     short firstNumber = 0, secondNumber = 0, correctAnswer = 0, userAnswer = 0;
+
+    finalResult.numberOfQuestions = numberOfQuestions;
+    finalResult.questionsLevel = questionLevel;
+    finalResult.operationType = operationType;
 
     for (short question = 1; question <= numberOfQuestions; question++)
     {
@@ -247,7 +317,7 @@ void PlayGame()
             secondNumber = EasyLevelOfQuestions();
             cout << firstNumber << " " << GenerateOperationType(operationType) << " " << secondNumber << ": ";
             cin >> userAnswer;
-            CheckAnswer(operationType, firstNumber, secondNumber, userAnswer, correctAnswer);
+            CheckAnswer(operationType, firstNumber, secondNumber, userAnswer, correctAnswer, finalResult);
             break;
 
         case medLevel:
@@ -255,7 +325,7 @@ void PlayGame()
             secondNumber = MedLevelOfQuestions();
             cout << firstNumber << " " << GenerateOperationType(operationType) << " " << secondNumber << ": ";
             cin >> userAnswer;
-            CheckAnswer(operationType, firstNumber, secondNumber, userAnswer, correctAnswer);
+            CheckAnswer(operationType, firstNumber, secondNumber, userAnswer, correctAnswer, finalResult);
             break;
 
         case hardLevel:
@@ -263,7 +333,7 @@ void PlayGame()
             secondNumber = HardLevelOfQuestions();
             cout << firstNumber << " " << GenerateOperationType(operationType) << " " << secondNumber << ": ";
             cin >> userAnswer;
-            CheckAnswer(operationType, firstNumber, secondNumber, userAnswer, correctAnswer);
+            CheckAnswer(operationType, firstNumber, secondNumber, userAnswer, correctAnswer, finalResult);
             break;
 
         case mixLevel:
@@ -272,16 +342,16 @@ void PlayGame()
             char mixOperationType = GenerateOperationType(operationType);
             cout << firstNumber << " " << mixOperationType << " " << secondNumber << ": ";
             cin >> userAnswer;
-            CheckAnswerForMixOperation(mixOperationType, firstNumber, secondNumber, userAnswer, correctAnswer);
+            CheckAnswerForMixOperation(mixOperationType, firstNumber, secondNumber, userAnswer, correctAnswer, finalResult);
             break;
         }
     }
+
+    ScreenOfEndGame(finalResult);
 }
 
 int main()
 {
-    WelcomeMessage();
-
     srand((unsigned)time(NULL));
 
     PlayGame();
