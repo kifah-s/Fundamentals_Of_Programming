@@ -233,4 +233,4 @@ int main()
     srand((unsigned)time(NULL)); // Seed the random number generator.
     PlayMathGame();              // Start the quiz game.
     return 0;                    // Exit the program successfully.
-}
+} 
