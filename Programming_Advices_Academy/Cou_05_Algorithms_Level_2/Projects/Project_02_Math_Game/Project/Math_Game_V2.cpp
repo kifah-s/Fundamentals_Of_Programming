@@ -1,383 +1,236 @@
-#include <iostream>
+#include <iostream>  // Include iostream for input/output operations.
+#include <cstdlib>   // Include cstdlib for system functions like clearing the screen.
+#include <ctime>     // Include ctime for random number seeding.
+using namespace std; // Use the standard namespace to avoid prefixing std:: before standard functions.
 
-using namespace std;
-
+// Enumeration: enQuestionsLevel
+// Purpose: Defines the difficulty levels available for quiz questions.
 enum enQuestionsLevel
 {
-    easyLevel = 1,
-    medLevel = 2,
-    hardLevel = 3,
-    mixLevel = 4
+    EasyLevel = 1,
+    MedLevel = 2,
+    HardLevel = 3,
+    Mix = 4
 };
 
+// Enumeration: enOperationType
+// Purpose: Defines the types of arithmetic operations used in the quiz.
 enum enOperationType
 {
-    collection = 1,
-    subtraction = 2,
-    multiply = 3,
-    division = 4,
-    mix = 5
+    Add = 1,
+    Sub = 2,
+    Mult = 3,
+    Div = 4,
+    MixOp = 5
 };
 
-struct stFinalResult
+// Function: RandomNumber
+// Purpose: Generates a random number within the given range [From, To].
+// Parameters:
+//   - From: Lower bound of the random range.
+//   - To: Upper bound of the random range.
+// Returns: A random integer between From and To.
+int RandomNumber(int From, int To)
 {
-    short numberOfQuestions = 0;
-    enQuestionsLevel questionsLevel;
-    enOperationType operationType;
-    short numberOfRightAnswers = 0;
-    short numberOfWrongAnswers = 0;
+    return rand() % (To - From + 1) + From;
+}
+
+// Function: GetOpTypeSymbol
+// Purpose: Converts an operation type to its corresponding symbol.
+// Parameters:
+//   - OpType: The arithmetic operation type.
+// Returns: A string representation of the operator.
+string GetOpTypeSymbol(enOperationType OpType)
+{
+    switch (OpType)
+    {
+    case enOperationType::Add:
+        return "+";
+    case enOperationType::Sub:
+        return "-";
+    case enOperationType::Mult:
+        return "x";
+    case enOperationType::Div:
+        return "/";
+    default:
+        return "Mix";
+    }
+}
+
+// Function: GetRandomOperationType
+// Purpose: Generates a random arithmetic operation type.
+// Returns: A random enOperationType value.
+enOperationType GetRandomOperationType()
+{
+    return (enOperationType)RandomNumber(1, 4);
+}
+
+// Function: GetQuestionLevelText
+// Purpose: Converts an enQuestionsLevel enum to a string representation.
+// Parameters:
+//   - QuestionLevel: The selected difficulty level.
+// Returns: A string representation of the difficulty level.
+string GetQuestionLevelText(enQuestionsLevel QuestionLevel)
+{
+    string arrQuestionLevelText[4] = {"Easy", "Medium", "Hard", "Mixed"};
+    return arrQuestionLevelText[QuestionLevel - 1];
+}
+
+// Function: SetScreenColor
+// Purpose: Changes the console screen color based on answer correctness.
+// Parameters:
+//   - Right: Boolean value indicating if the answer is correct.
+void SetScreenColor(bool Right)
+{
+    if (Right)
+        system("color 2F"); // Green for correct answers.
+    else
+    {
+        system("color 4F"); // Red for incorrect answers.
+        cout << "\a";       // Plays an alert sound.
+    }
+}
+
+// Function: SimpleCalculator
+// Purpose: Performs the selected arithmetic operation on two numbers.
+// Parameters:
+//   - Number1: First operand.
+//   - Number2: Second operand.
+//   - OpType: The operation type (Add, Sub, Mult, or Div).
+// Returns: The result of the operation.
+int SimpleCalculator(int Number1, int Number2, enOperationType OpType)
+{
+    switch (OpType)
+    {
+    case enOperationType::Add:
+        return Number1 + Number2;
+    case enOperationType::Sub:
+        return Number1 - Number2;
+    case enOperationType::Mult:
+        return Number1 * Number2;
+    case enOperationType::Div:
+        return (Number2 != 0) ? (Number1 / Number2) : 0; // Avoid division by zero.
+    default:
+        return Number1 + Number2;
+    }
+}
+
+// Structure: stQuestion
+// Purpose: Stores information for a single quiz question.
+struct stQuestion
+{
+    int Number1 = 0;
+    int Number2 = 0;
+    enOperationType OperationType;
+    enQuestionsLevel QuestionLevel;
+    int CorrectAnswer = 0;
+    int PlayerAnswer = 0;
+    bool AnswerResult = false;
 };
 
-void WelcomeMessage()
+// Structure: stQuiz
+// Purpose: Stores details of the entire quiz session.
+struct stQuiz
 {
-    cout << "\n\nWelcome to the Project ..\n"
-         << endl;
-}
+    stQuestion QuestionList[100];
+    short NumberOfQuestions;
+    enQuestionsLevel QuestionsLevel;
+    enOperationType OpType;
+    short NumberOfWrongAnswers = 0;
+    short NumberOfRightAnswers = 0;
+    bool isPass = false;
+};
 
-short HowManyQuestions()
+// Function: GenerateQuestion
+// Purpose: Creates a random math question based on difficulty and operation type.
+stQuestion GenerateQuestion(enQuestionsLevel QuestionLevel, enOperationType OpType)
 {
-    short answer = 0;
+    stQuestion Question;
 
-    do
+    if (QuestionLevel == enQuestionsLevel::Mix)
+        QuestionLevel = (enQuestionsLevel)RandomNumber(1, 3);
+
+    if (OpType == enOperationType::MixOp)
+        OpType = GetRandomOperationType();
+
+    Question.OperationType = OpType;
+
+    switch (QuestionLevel)
     {
-        cout << "How many questions do you want answer: ";
-        cin >> answer;
-    } while (answer <= 0);
-
-    return answer;
-}
-
-enQuestionsLevel SelectQuestionsLevel()
-{
-    short answer = 0;
-
-    cout << "\nQuestions Level: " << endl;
-    cout << "1) Easy.\n2) Mid.\n3) Hard.\n4) Mix." << endl;
-
-    do
-    {
-        cout << "Please, enter questions level [1 - 4]: ";
-        cin >> answer;
-    } while (answer < 1 || answer > 4);
-
-    return (enQuestionsLevel)answer;
-}
-
-enOperationType SelectOperationType()
-{
-    short answer = 0;
-
-    cout << "\nOperation Type: " << endl;
-    cout << "1) Add.\n2) Sub.\n3) Mul.\n4) Div.\n5) Mix." << endl;
-
-    do
-    {
-        cout << "Please, enter operation type [1 - 5]: ";
-        cin >> answer;
-    } while (answer < 1 || answer > 5);
-
-    return (enOperationType)answer;
-}
-
-int RandomNumber(int from, int to)
-{
-    return rand() % (to - from + 1) + from;
-}
-
-char GenerateRandomOperationType()
-{
-    short arr[4] = {42, 43, 45, 47};
-
-    short index = rand() % 4;
-
-    return (char)arr[index];
-}
-
-char GenerateOperationType(enOperationType operationType)
-{
-    switch (operationType)
-    {
-    case collection:
-        return '+';
-
-    case subtraction:
-        return '-';
-
-    case multiply:
-        return '*';
-
-    case division:
-        return '/';
-
-    case mix:
-        return GenerateRandomOperationType();
-    }
-
-    return 0;
-}
-
-short EasyLevelOfQuestions()
-{
-    return RandomNumber(1, 10);
-}
-
-short MedLevelOfQuestions()
-{
-    return RandomNumber(10, 30);
-}
-
-short HardLevelOfQuestions()
-{
-    return RandomNumber(30, 100);
-}
-
-short MixLevelOfQuestions()
-{
-    return RandomNumber(1, 100);
-}
-
-void IsRightAnswer(short userAnswer, short correctAnswer, stFinalResult &finalResult)
-{
-    cout << "Correct Answer is: " << correctAnswer << endl;
-
-    if (userAnswer == correctAnswer)
-    {
-        cout << "Your Answer is Right :)" << endl;
-        finalResult.numberOfRightAnswers++;
-    }
-    else
-    {
-        cout << "Your Answer is Wrong :(" << endl;
-        finalResult.numberOfWrongAnswers++;
-    }
-}
-
-short CheckCollectionNumbers(short firstNumber, short secondNumber)
-{
-    short result = 0;
-
-    result = firstNumber + secondNumber;
-
-    return result;
-}
-
-short CheckSubtractionNumbers(short firstNumber, short secondNumber)
-{
-    short result = 0;
-
-    result = firstNumber - secondNumber;
-
-    return result;
-}
-
-short CheckMultiplyNumbers(short firstNumber, short secondNumber)
-{
-    short result = 0;
-
-    result = firstNumber * secondNumber;
-
-    return result;
-}
-
-short CheckDivisionNumbers(short firstNumber, short secondNumber)
-{
-    short result = 0;
-
-    result = firstNumber / secondNumber;
-
-    return result;
-}
-
-void CheckAnswer(enOperationType operationType, short firstNumber, short secondNumber, short userAnswer, short correctAnswer, stFinalResult &finalResult)
-{
-    switch (operationType)
-    {
-    case collection:
-        correctAnswer = CheckCollectionNumbers(firstNumber, secondNumber);
-        IsRightAnswer(userAnswer, correctAnswer, finalResult);
+    case enQuestionsLevel::EasyLevel:
+        Question.Number1 = RandomNumber(1, 10);
+        Question.Number2 = RandomNumber(1, 10);
         break;
-
-    case subtraction:
-        correctAnswer = CheckSubtractionNumbers(firstNumber, secondNumber);
-        IsRightAnswer(userAnswer, correctAnswer, finalResult);
+    case enQuestionsLevel::MedLevel:
+        Question.Number1 = RandomNumber(10, 50);
+        Question.Number2 = RandomNumber(10, 50);
         break;
-
-    case multiply:
-        correctAnswer = CheckMultiplyNumbers(firstNumber, secondNumber);
-        IsRightAnswer(userAnswer, correctAnswer, finalResult);
-        break;
-
-    case division:
-        correctAnswer = CheckDivisionNumbers(firstNumber, secondNumber);
-        IsRightAnswer(userAnswer, correctAnswer, finalResult);
-        break;
-    }
-}
-
-void CheckAnswerForMixOperation(char operationType, short firstNumber, short secondNumber, short userAnswer, short correctAnswer, stFinalResult &finalResult)
-{
-    switch (operationType)
-    {
-    case '+':
-        correctAnswer = CheckCollectionNumbers(firstNumber, secondNumber);
-        IsRightAnswer(userAnswer, correctAnswer, finalResult);
-        break;
-
-    case '-':
-        correctAnswer = CheckSubtractionNumbers(firstNumber, secondNumber);
-        IsRightAnswer(userAnswer, correctAnswer, finalResult);
-        break;
-
-    case '*':
-        correctAnswer = CheckMultiplyNumbers(firstNumber, secondNumber);
-        IsRightAnswer(userAnswer, correctAnswer, finalResult);
-        break;
-
-    case '/':
-        correctAnswer = CheckDivisionNumbers(firstNumber, secondNumber);
-        IsRightAnswer(userAnswer, correctAnswer, finalResult);
-        break;
-    }
-}
-
-void ScreenOfEndGame(stFinalResult finalResult)
-{
-    cout << "\n-----------------------------------------" << endl;
-    if (finalResult.numberOfRightAnswers > finalResult.numberOfWrongAnswers)
-    {
-        cout << "Final results is pass." << endl;
-    }
-    else
-    {
-        cout << "Final results is fail." << endl;
-    }
-    cout << "-----------------------------------------" << endl;
-
-    cout << "Number of questions: " << finalResult.numberOfQuestions << endl;
-
-    switch (finalResult.questionsLevel)
-    {
-    case easyLevel:
-        cout << "Questions level: Easy" << endl;
-        break;
-
-    case medLevel:
-        cout << "Questions level: Med" << endl;
-        break;
-
-    case hardLevel:
-        cout << "Questions level: Hard" << endl;
-        break;
-
-    case mixLevel:
-        cout << "Questions level: Mix" << endl;
+    case enQuestionsLevel::HardLevel:
+        Question.Number1 = RandomNumber(50, 100);
+        Question.Number2 = RandomNumber(50, 100);
         break;
     }
 
-    switch (finalResult.operationType)
-    {
-    case collection:
-        cout << "Operation type: Collection" << endl;
-        break;
+    Question.CorrectAnswer = SimpleCalculator(Question.Number1, Question.Number2, Question.OperationType);
+    Question.QuestionLevel = QuestionLevel;
 
-    case subtraction:
-        cout << "Operation type: Subtraction" << endl;
-        break;
-
-    case multiply:
-        cout << "Operation type: Multiply" << endl;
-        break;
-
-    case division:
-        cout << "Operation type: Division" << endl;
-        break;
-
-    case mix:
-        cout << "Operation type: Mix" << endl;
-        break;
-    }
-
-    cout << "Number of right answers: " << finalResult.numberOfRightAnswers << endl;
-    cout << "Number of wrong answers: " << finalResult.numberOfWrongAnswers << endl;
-
-    cout << "-----------------------------------------" << endl;
+    return Question;
 }
 
-void PlayGame()
+// Function: AskAndCorrectQuestionListAnswers
+// Purpose: Iterates through quiz questions, evaluates answers, and provides feedback.
+void AskAndCorrectQuestionListAnswers(stQuiz &Quiz)
 {
-    WelcomeMessage();
-
-    char playAgain = 'y';
-    do
+    for (short QuestionNumber = 0; QuestionNumber < Quiz.NumberOfQuestions; QuestionNumber++)
     {
+        cout << "\nQuestion [" << QuestionNumber + 1 << "/" << Quiz.NumberOfQuestions << "]\n";
+        cout << Quiz.QuestionList[QuestionNumber].Number1 << " "
+             << GetOpTypeSymbol(Quiz.QuestionList[QuestionNumber].OperationType) << " "
+             << Quiz.QuestionList[QuestionNumber].Number2 << " = ";
 
-        stFinalResult finalResult;
+        cin >> Quiz.QuestionList[QuestionNumber].PlayerAnswer;
 
-        short numberOfQuestions = HowManyQuestions();
-        enQuestionsLevel questionLevel = SelectQuestionsLevel();
-        enOperationType operationType = SelectOperationType();
-        short firstNumber = 0, secondNumber = 0, correctAnswer = 0, userAnswer = 0;
-
-        finalResult.numberOfQuestions = numberOfQuestions;
-        finalResult.questionsLevel = questionLevel;
-        finalResult.operationType = operationType;
-
-        for (short question = 1; question <= numberOfQuestions; question++)
+        if (Quiz.QuestionList[QuestionNumber].PlayerAnswer == Quiz.QuestionList[QuestionNumber].CorrectAnswer)
         {
-            cout << "\nQuestion [" << question << " / " << numberOfQuestions << " ]:" << endl;
-
-            switch (questionLevel)
-            {
-            case easyLevel:
-                firstNumber = EasyLevelOfQuestions();
-                secondNumber = EasyLevelOfQuestions();
-                cout << firstNumber << " " << GenerateOperationType(operationType) << " " << secondNumber << ": ";
-                cin >> userAnswer;
-                CheckAnswer(operationType, firstNumber, secondNumber, userAnswer, correctAnswer, finalResult);
-                break;
-
-            case medLevel:
-                firstNumber = MedLevelOfQuestions();
-                secondNumber = MedLevelOfQuestions();
-                cout << firstNumber << " " << GenerateOperationType(operationType) << " " << secondNumber << ": ";
-                cin >> userAnswer;
-                CheckAnswer(operationType, firstNumber, secondNumber, userAnswer, correctAnswer, finalResult);
-                break;
-
-            case hardLevel:
-                firstNumber = HardLevelOfQuestions();
-                secondNumber = HardLevelOfQuestions();
-                cout << firstNumber << " " << GenerateOperationType(operationType) << " " << secondNumber << ": ";
-                cin >> userAnswer;
-                CheckAnswer(operationType, firstNumber, secondNumber, userAnswer, correctAnswer, finalResult);
-                break;
-
-            case mixLevel:
-                firstNumber = MixLevelOfQuestions();
-                secondNumber = MixLevelOfQuestions();
-                char mixOperationType = GenerateOperationType(operationType);
-                cout << firstNumber << " " << mixOperationType << " " << secondNumber << ": ";
-                cin >> userAnswer;
-                CheckAnswerForMixOperation(mixOperationType, firstNumber, secondNumber, userAnswer, correctAnswer, finalResult);
-                break;
-            }
+            cout << "Correct!\n";
+            Quiz.NumberOfRightAnswers++;
         }
+        else
+        {
+            cout << "Wrong! Correct Answer: " << Quiz.QuestionList[QuestionNumber].CorrectAnswer << endl;
+            Quiz.NumberOfWrongAnswers++;
+        }
+    }
 
-        ScreenOfEndGame(finalResult);
-
-        cout << "Do you play again ( Y / N ): ";
-        cin >> playAgain;
-    } while (playAgain == 'y' || playAgain == 'Y');
+    Quiz.isPass = (Quiz.NumberOfRightAnswers >= Quiz.NumberOfWrongAnswers);
 }
 
+// Function: PlayMathGame
+// Purpose: Initializes the quiz, generates questions, and manages the quiz flow.
+void PlayMathGame()
+{
+    stQuiz Quiz;
+    Quiz.NumberOfQuestions = 5; // Set a fixed number of questions.
+    Quiz.QuestionsLevel = enQuestionsLevel::EasyLevel;
+    Quiz.OpType = enOperationType::MixOp;
+
+    for (short QuestionNumber = 0; QuestionNumber < Quiz.NumberOfQuestions; QuestionNumber++)
+    {
+        Quiz.QuestionList[QuestionNumber] = GenerateQuestion(Quiz.QuestionsLevel, Quiz.OpType);
+    }
+
+    AskAndCorrectQuestionListAnswers(Quiz);
+
+    cout << "\nQuiz Completed! Right Answers: " << Quiz.NumberOfRightAnswers
+         << ", Wrong Answers: " << Quiz.NumberOfWrongAnswers << "\n";
+
+    cout << (Quiz.isPass ? "You Passed the Quiz!\n" : "You Failed the Quiz!\n");
+}
+
+// Main Function
 int main()
 {
-    srand((unsigned)time(NULL));
-
-    PlayGame();
-
-    cout << endl
-         << endl;
-
-    return 0;
+    srand((unsigned)time(NULL)); // Seed the random number generator.
+    PlayMathGame();              // Start the quiz game.
+    return 0;                    // Exit the program successfully.
 }
