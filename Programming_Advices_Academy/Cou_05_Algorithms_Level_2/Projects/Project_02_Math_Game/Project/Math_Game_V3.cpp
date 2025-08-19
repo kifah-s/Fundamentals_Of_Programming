@@ -54,6 +54,11 @@ void WelcomeMessage()
          << endl;
 }
 
+int RandomNumber(int From, int To)
+{
+    return rand() % (To - From + 1) + From;
+}
+
 short ReadHowManyQuestions()
 {
     short numberOfQuestions = 0;
@@ -61,7 +66,7 @@ short ReadHowManyQuestions()
     {
         cout << "How many questions do you want to answer: ";
         cin >> numberOfQuestions;
-    } while (numberOfQuestions < 1 || numberOfQuestions > 10);
+    } while (numberOfQuestions < 1 || numberOfQuestions > 100);
 
     return numberOfQuestions;
 }
@@ -90,13 +95,85 @@ enOperationType ReadOperationType()
     return (enOperationType)operationType;
 }
 
+enOperationType GetRandomOperationType()
+{
+    short operationType = RandomNumber(1, 4);
+    return (enOperationType)operationType;
+}
+
+int SimpleCalculator(int number1, int number2, enOperationType operationType)
+{
+    switch (operationType)
+    {
+    case enOperationType::addition:
+        return number1 + number2;
+
+    case enOperationType::subtraction:
+        return number1 - number2;
+
+    case enOperationType::multiplication:
+        return number1 * number2;
+
+    case enOperationType::division:
+        return number1 / number2;
+
+    default:
+        return number1 + number2;
+    }
+}
+
+stQuestion GenerateQuestion(enQuestionsLevel questionsLevel, enOperationType operationType)
+{
+    stQuestion question;
+
+    if (questionsLevel == enQuestionsLevel::mixLevel)
+    {
+        questionsLevel = (enQuestionsLevel)RandomNumber(1, 3);
+    }
+
+    if (operationType == enOperationType::mixOperation)
+    {
+        operationType = GetRandomOperationType();
+    }
+
+    question.operationType = operationType;
+
+    switch (questionsLevel)
+    {
+    case easyLevel:
+        question.number1 = RandomNumber(1, 10);
+        question.number2 = RandomNumber(1, 10);
+
+        question.correctAnswer = SimpleCalculator(question.number1, question.number2, question.operationType);
+        question.questionLevel = questionsLevel;
+        return question;
+
+    case midLevel:
+        question.number1 = RandomNumber(1, 50);
+        question.number2 = RandomNumber(1, 50);
+
+        question.correctAnswer = SimpleCalculator(question.number1, question.number2, question.operationType);
+        question.questionLevel = questionsLevel;
+        return question;
+
+    case hardLevel:
+        question.number1 = RandomNumber(1, 50);
+        question.number2 = RandomNumber(1, 50);
+
+        question.correctAnswer = SimpleCalculator(question.number1, question.number2, question.operationType);
+        question.questionLevel = questionsLevel;
+        return question;
+    }
+
+    return question;
+}
+
 void GenerateQuizQuestions(stQuiz &quiz)
 {
     for (short question = 0; question < quiz.numberOfQuestions; question++)
     {
-        
+        quiz.questionList[question] = GenerateQuestion(quiz.questionsLevel, quiz.operationType);
     }
-    
 }
 
 void PlayMathGame()
