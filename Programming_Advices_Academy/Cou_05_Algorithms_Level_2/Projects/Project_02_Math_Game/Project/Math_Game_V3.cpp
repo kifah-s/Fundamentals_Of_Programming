@@ -176,6 +176,120 @@ void GenerateQuizQuestions(stQuiz &quiz)
     }
 }
 
+string GetOperationTypeSymbol(enOperationType operationType)
+{
+    switch (operationType)
+    {
+    case enOperationType::addition:
+        return "+";
+    case enOperationType::subtraction:
+        return "-";
+    case enOperationType::multiplication:
+        return "x";
+    case enOperationType::division:
+        return "/";
+    default:
+        return "Mix";
+    }
+}
+
+void PrintTheQuestion(stQuiz &quiz, short questionNumber)
+{
+    cout << "\nQuestion [ " << questionNumber + 1 << " / " << quiz.numberOfQuestions << " ]:"
+         << endl;
+    cout << quiz.questionList[questionNumber].number1 << endl;
+    cout << quiz.questionList[questionNumber].number2 << " ";
+    cout << GetOperationTypeSymbol(quiz.questionList[questionNumber].operationType);
+    cout << "\n----------" << endl;
+}
+
+int ReadQuestionAnswer()
+{
+    int answer = 0;
+
+    cin >> answer;
+
+    return answer;
+}
+
+void CorrectTheQuestionAnswer(stQuiz &quiz, short questionNumber)
+{
+    if (quiz.questionList[questionNumber].plyerAnswer != quiz.questionList[questionNumber].correctAnswer)
+    {
+        quiz.questionList[questionNumber].answerResult = false;
+        quiz.numberOfWrongAnswers++;
+
+        cout << "Wrong Answer" << endl;
+        cout << "The Right answer is: ";
+        cout << quiz.questionList[questionNumber].correctAnswer << endl;
+    }
+    else
+    {
+        quiz.questionList[questionNumber].answerResult = true;
+        quiz.numberOfRightAnswers++;
+        cout << "Right Answer" << endl;
+    }
+    cout << endl;
+}
+
+void AskAndCorrectQuestionListAnswers(stQuiz &quiz)
+{
+    for (short questionNumber = 0; questionNumber < quiz.numberOfQuestions; questionNumber++)
+    {
+        PrintTheQuestion(quiz, questionNumber);
+
+        quiz.questionList[questionNumber].plyerAnswer = ReadQuestionAnswer();
+
+        CorrectTheQuestionAnswer(quiz, questionNumber);
+    }
+
+    quiz.isPass = (quiz.numberOfRightAnswers >= quiz.numberOfWrongAnswers);
+
+    /*
+    if (quiz.numberOfRightAnswers >= quiz.numberOfWrongAnswers)
+    {
+        quiz.isPass = true;
+    }
+    else
+    {
+        quiz.isPass = false;
+    }
+    */
+}
+
+string GetFinalResultsText(bool pass)
+{
+    if (pass)
+    {
+        return "Pass";
+    }
+    else
+    {
+        return "Fail";
+    }
+}
+
+string GetQuestionLevelText(enQuestionsLevel questionsLevel)
+{
+    string arrQuestionLevelText[4] = {"Easy", "Mid", "Hard", "Mix"};
+    return arrQuestionLevelText[questionsLevel - 1];
+}
+
+void PrintQuizResults(stQuiz &quiz)
+{
+    cout << "\n------------------------------------";
+    cout << "\nFinal Results is: " << GetFinalResultsText(quiz.isPass);
+    cout << "\n------------------------------------\n";
+
+    cout << "Number of questions: " << quiz.numberOfQuestions << endl;
+    cout << "Questions level: " << GetQuestionLevelText(quiz.questionsLevel) << endl;
+    cout << "Operation type: " << GetOperationTypeSymbol(quiz.operationType) << endl;
+    cout << "Number of right answer: " << quiz.numberOfRightAnswers << endl;
+    cout << "Number of wrong answer: " << quiz.numberOfWrongAnswers << endl;
+
+    cout << "------------------------------------\n";
+}
+
 void PlayMathGame()
 {
     stQuiz quiz;
@@ -185,6 +299,9 @@ void PlayMathGame()
     quiz.operationType = ReadOperationType();
 
     GenerateQuizQuestions(quiz);
+    AskAndCorrectQuestionListAnswers(quiz);
+
+    PrintQuizResults(quiz);
 }
 
 void StartGame()
@@ -205,7 +322,7 @@ int main()
 {
     srand((unsigned)time(NULL));
 
-    // StartGame();
+    StartGame();
 
     return 0;
 }
