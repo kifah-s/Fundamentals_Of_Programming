@@ -1,3 +1,3 @@
-## Certificate 2: certificate of Completion for Algorithms and Problem Solving Level 1.
+## Certificate 02: certificate of Completion for Algorithms and Problem Solving Level 1.
 
 ---
