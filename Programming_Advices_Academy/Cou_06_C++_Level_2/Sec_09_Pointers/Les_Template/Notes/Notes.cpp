@@ -4,6 +4,7 @@ using namespace std;
 
 void WelcomeMessage()
 {
+    system("cls");
     cout << "\n\nWelcome to the Notes ..\n"
          << endl;
 }
