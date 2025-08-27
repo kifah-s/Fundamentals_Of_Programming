@@ -1,3 +1,3 @@
-## Section 00: .
+## Section 12: Exception Handling.
 
 ---
