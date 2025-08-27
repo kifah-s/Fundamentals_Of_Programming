@@ -16,7 +16,7 @@ int main()
 
     fstream myFile;
 
-    // myFile.open("myFille.txt", ios::out); //* Write Mode.
+    // myFile.open("myFile.txt", ios::out); //* Write Mode.
 
     // if (myFile.is_open())
     // {
@@ -28,7 +28,7 @@ int main()
 
     //* -------------------------------------------------
 
-    // myFile.open("myFille.txt", ios::app); //* Append Mode.
+    // myFile.open("myFile.txt", ios::app); //* Append Mode.
 
     // if (myFile.is_open())
     // {
@@ -39,7 +39,7 @@ int main()
 
     //* -------------------------------------------------
 
-    myFile.open("myFille.txt", ios::out | ios::app); //* Append Mode.
+    myFile.open("myFile.txt", ios::out | ios::app); //* Append Mode.
 
     if (myFile.is_open())
     {
