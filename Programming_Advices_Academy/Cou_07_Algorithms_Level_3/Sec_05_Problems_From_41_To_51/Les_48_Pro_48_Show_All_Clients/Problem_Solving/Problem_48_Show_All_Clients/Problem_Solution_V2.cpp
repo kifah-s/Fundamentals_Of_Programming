@@ -110,7 +110,7 @@ void PrintAllClientsData(vector<sClient> vClients)
         PrintClientRecord(Client);
         cout << endl;
     }
-    
+
     cout << "\n_______________________________________________________";
     cout << "_________________________________________\n"
          << endl;
@@ -119,6 +119,9 @@ void PrintAllClientsData(vector<sClient> vClients)
 int main()
 {
     WelcomeMessage();
+
+    vector<sClient> vClients = LoadClientsDataFromFile(ClientsFileName);
+    PrintAllClientsData(vClients);
 
     cout << endl
          << endl;
