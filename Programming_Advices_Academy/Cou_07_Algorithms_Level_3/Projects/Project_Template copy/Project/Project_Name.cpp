@@ -4,7 +4,8 @@ using namespace std;
 
 void WelcomeMessage()
 {
-    cout << "\n\nWelcome to the Lesson Summary ..\n"
+    system("cls");
+    cout << "\n\nWelcome to the Project ..\n"
          << endl;
 }
 
