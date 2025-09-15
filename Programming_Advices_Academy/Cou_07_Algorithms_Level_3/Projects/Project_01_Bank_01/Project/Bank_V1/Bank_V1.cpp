@@ -71,6 +71,8 @@ short MainMenuScreen()
     return userChoice;
 }
 
+//* Show Clint List Functions.
+
 vector<string> SplitString(string s1, string delim)
 {
     vector<string> vecString;
@@ -174,39 +176,143 @@ void PrintAllClientsData(vector<stClient> vecClients)
          << endl;
 }
 
+//* End Show Clint List Functions.
+
+//* Add Clint List Functions.
+
+void AddNewClientScreen()
+{
+    cout << "--------------------------------------------" << endl;
+    cout << "\tAdd New Clint Screen" << endl;
+    cout << "--------------------------------------------" << endl;
+}
+
+bool IsClientExists(string accountNumber)
+{
+    vector<stClient> vecClients = LoadClientsDataFromFile(fileName);
+
+    for (stClient &client : vecClients)
+    {
+        if (client.accountNumber == accountNumber)
+        {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+stClient ReadNewClient()
+{
+    stClient client;
+
+    cout << "Enter Account Number: ";
+    // Usage of std::ws will extract all the whitespace character.
+    getline(cin >> ws, client.accountNumber);
+
+    while (IsClientExists(client.accountNumber))
+    {
+        cout << "Client with Account Number [" << client.accountNumber << "] Already Exists .. Please, Enter Another Account Number: ";
+        // Usage of std::ws will extract all the whitespace character.
+        getline(cin >> ws, client.accountNumber);
+    }
+
+    cout << "Enter PinCode: ";
+    getline(cin, client.pinCode);
+
+    cout << "Enter Name: ";
+    getline(cin, client.name);
+
+    cout << "Enter Phone: ";
+    getline(cin, client.phone);
+
+    cout << "Enter Account Balance: ";
+    cin >> client.accountBalance;
+
+    return client;
+}
+
+string ConvertRecordToLine(stClient client, string separator = "#//#")
+{
+    string stClientRecord = "";
+
+    stClientRecord += client.accountNumber + separator;
+    stClientRecord += client.pinCode + separator;
+    stClientRecord += client.name + separator;
+    stClientRecord += client.phone + separator;
+    stClientRecord += to_string(client.accountBalance);
+
+    return stClientRecord;
+}
+
+void AddDataLineToFile(string fileName, string strDataLine)
+{
+    fstream myFile;
+
+    myFile.open(fileName, ios::out | ios::app);
+
+    if (myFile.is_open())
+    {
+        myFile << strDataLine << endl;
+
+        myFile.close();
+    }
+}
+
+void AddNewClient()
+{
+    stClient client;
+
+    client = ReadNewClient();
+
+    AddDataLineToFile(fileName, ConvertRecordToLine(client));
+}
+
+void AddClients()
+{
+    char addMore = 'Y';
+
+    do
+    {
+        // system("cls");
+        AddNewClientScreen();
+        AddNewClient();
+        cout << "\nClient Added Successfully, do you want to add more clients? (Y / N): ";
+        cin >> addMore;
+    } while (toupper(addMore) == 'Y');
+}
+
+//* End Add Clint List Functions.
+
 void UserChoiceFromMainMenuScreen(short userChoice, vector<stClient> vecClients)
 {
     switch (userChoice)
     {
-    case enMainMenuScreenOptions::opShowClintList:
-        vecClients = LoadClientsDataFromFile(fileName);
-        PrintAllClientsData(vecClients);
-        cout << "\nPress any key to go back to Main Menu... ";
-        system("pause > nul");
-        break;
+        // case enMainMenuScreenOptions::opShowClintList:
+        //     vecClients = LoadClientsDataFromFile(fileName);
+        //     PrintAllClientsData(vecClients);
+        //     cout << "\nPress any key to go back to Main Menu... ";
+        //     system("pause > nul");
+        //     break;
 
-    case enMainMenuScreenOptions::opAddNewClint:
-        /* code */
-        break;
+    // case enMainMenuScreenOptions::opAddNewClint:
+    //     AddClients();
+    //     break;
 
-    case enMainMenuScreenOptions::opDeleteClint:
-        /* code */
-        break;
-
-    case enMainMenuScreenOptions::opUpdateClintInfo:
-        /* code */
-        break;
-
-    case enMainMenuScreenOptions::opFindClint:
-        /* code */
-        break;
-
-    case enMainMenuScreenOptions::opExit:
-        /* code */
-        break;
-
-    default:
-        break;
+        // case enMainMenuScreenOptions::opDeleteClint:
+        //     /* code */
+        //     break;
+        // case enMainMenuScreenOptions::opUpdateClintInfo:
+        //     /* code */
+        //     break;
+        // case enMainMenuScreenOptions::opFindClint:
+        //     /* code */
+        //     break;
+        // case enMainMenuScreenOptions::opExit:
+        //     /* code */
+        //     break;
+        // default:
+        //     break;
     }
 }
 
@@ -220,8 +326,6 @@ void Bank()
         userChoice = MainMenuScreen();
         UserChoiceFromMainMenuScreen(userChoice, vecClients);
     } while (userChoice != 6);
-
-
 }
 
 //* End Functions ..
