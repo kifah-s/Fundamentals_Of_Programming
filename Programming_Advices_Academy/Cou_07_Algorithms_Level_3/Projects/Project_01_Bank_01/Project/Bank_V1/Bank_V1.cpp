@@ -17,6 +17,7 @@ struct stClient
     string name;
     string phone;
     double accountBalance;
+    bool markForDelete = false;
 };
 
 //* End Structs ..
@@ -284,24 +285,133 @@ void AddClients()
 
 //* End Add Clint List Functions.
 
+//* Delete Clint List Functions.
+
+void PrintClientCard(stClient client)
+{
+    cout << "\nThe following are the client details:\n";
+    cout << "\nAccount Number: " << client.accountNumber;
+    cout << "\nPin Code     : " << client.pinCode;
+    cout << "\nName         : " << client.name;
+    cout << "\nPhone        : " << client.phone;
+    cout << "\nAccount Balance: " << client.accountBalance;
+}
+
+bool FindClientByAccountNumber(string accountNumber, vector<stClient> vecClients, stClient &client)
+{
+    for (stClient &c : vecClients)
+    {
+        if (c.accountNumber == accountNumber)
+        {
+            client = c;
+            return true;
+        }
+    }
+
+    return false;
+}
+
+bool MarkClientForDeleteByAccountNumber(string accountNumber, vector<stClient> &vecClients)
+{
+    for (stClient &c : vecClients)
+    {
+        if (c.accountNumber == accountNumber)
+        {
+            c.markForDelete = true;
+            return true;
+        }
+    }
+
+    return false;
+}
+
+vector<stClient> SaveClientsDataToFile(string fileName, vector<stClient> vecClients)
+{
+    fstream myFile;
+    myFile.open(fileName, ios::out);
+
+    string DataLine = "";
+
+    if (myFile.is_open())
+    {
+        for (stClient &c : vecClients)
+        {
+            if (c.markForDelete == false)
+            {
+                DataLine = ConvertRecordToLine(c);
+                myFile << DataLine << endl;
+            }
+        }
+
+        myFile.close();
+    }
+
+    return vecClients;
+}
+
+bool DeleteClientByAccountNumber(string accountNumber, vector<stClient> &vecClients)
+{
+    stClient client;
+
+    char answer = 'n';
+
+    if (FindClientByAccountNumber(accountNumber, vecClients, client))
+    {
+        PrintClientCard(client);
+        cout << "\n\nAre you sure you want delete this client? (y / n): ";
+        cin >> answer;
+
+        if (answer == 'y' || answer == 'Y')
+        {
+            MarkClientForDeleteByAccountNumber(accountNumber, vecClients);
+            SaveClientsDataToFile(fileName, vecClients);
+            vecClients = LoadClientsDataFromFile(fileName);
+            cout << "\n\nClient Deleted Successfully.";
+
+            return true;
+        }
+    }
+    else
+    {
+        cout << "\nClient with Account Number (" << accountNumber << ") is Not Found!";
+
+        return false;
+    }
+}
+
+string ReadClientAccountNumber()
+{
+    string accountNumber = "";
+
+    cout << "\nPlease enter Account Number: ";
+    cin >> accountNumber;
+
+    return accountNumber;
+}
+
+//* End Delete Clint List Functions.
+
 void UserChoiceFromMainMenuScreen(short userChoice, vector<stClient> vecClients)
 {
     switch (userChoice)
     {
-        // case enMainMenuScreenOptions::opShowClintList:
-        //     vecClients = LoadClientsDataFromFile(fileName);
-        //     PrintAllClientsData(vecClients);
-        //     cout << "\nPress any key to go back to Main Menu... ";
-        //     system("pause > nul");
-        //     break;
+    // case enMainMenuScreenOptions::opShowClintList:
+    //     vecClients = LoadClientsDataFromFile(fileName);
+    //     PrintAllClientsData(vecClients);
+    //     cout << "\nPress any key to go back to Main Menu... ";
+    //     system("pause > nul");
+    //     break;
 
     // case enMainMenuScreenOptions::opAddNewClint:
     //     AddClients();
     //     break;
 
-        // case enMainMenuScreenOptions::opDeleteClint:
-        //     /* code */
-        //     break;
+    case enMainMenuScreenOptions::opDeleteClint:
+        vecClients = LoadClientsDataFromFile(fileName);
+        string accountNumber = ReadClientAccountNumber();
+        DeleteClientByAccountNumber(accountNumber, vecClients);
+        break;
+
         // case enMainMenuScreenOptions::opUpdateClintInfo:
         //     /* code */
         //     break;
