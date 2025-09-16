@@ -8,8 +8,6 @@ using namespace std;
 
 const string fileName = "clients.txt";
 
-//* Structs ..
-
 struct stClient
 {
     string accountNumber;
@@ -19,10 +17,6 @@ struct stClient
     double accountBalance;
     bool markForDelete = false;
 };
-
-//* End Structs ..
-
-//* Enums ..
 
 enum enMainMenuScreenOptions
 {
@@ -43,9 +37,6 @@ enum enClientInformation
     accountBalance = 4
 };
 
-//* End Enums ..
-
-//* Functions ..
 void WelcomeMessage()
 {
     cout << "\n\nWelcome to the Project ..\n"
@@ -71,8 +62,6 @@ short MainMenuScreen()
 
     return userChoice;
 }
-
-//* Show Clint List Functions.
 
 vector<string> SplitString(string s1, string delim)
 {
@@ -177,10 +166,6 @@ void PrintAllClientsData(vector<stClient> vecClients)
          << endl;
 }
 
-//* End Show Clint List Functions.
-
-//* Add Clint List Functions.
-
 void AddNewClientScreen()
 {
     cout << "--------------------------------------------" << endl;
@@ -276,16 +261,18 @@ void AddClients()
     do
     {
         // system("cls");
-        AddNewClientScreen();
         AddNewClient();
         cout << "\nClient Added Successfully, do you want to add more clients? (Y / N): ";
         cin >> addMore;
     } while (toupper(addMore) == 'Y');
 }
 
-//* End Add Clint List Functions.
-
-//* Delete Clint List Functions.
+void DeleteClientScreen()
+{
+    cout << "--------------------------------------------" << endl;
+    cout << "\tDelete Clint Screen" << endl;
+    cout << "--------------------------------------------" << endl;
+}
 
 void PrintClientCard(stClient client)
 {
@@ -349,10 +336,9 @@ vector<stClient> SaveClientsDataToFile(string fileName, vector<stClient> vecClie
     return vecClients;
 }
 
-bool DeleteClientByAccountNumber(string accountNumber, vector<stClient> &vecClients)
+void DeleteClientByAccountNumber(string accountNumber, vector<stClient> &vecClients)
 {
     stClient client;
-
     char answer = 'n';
 
     if (FindClientByAccountNumber(accountNumber, vecClients, client))
@@ -368,14 +354,14 @@ bool DeleteClientByAccountNumber(string accountNumber, vector<stClient> &vecClie
             vecClients = LoadClientsDataFromFile(fileName);
             cout << "\n\nClient Deleted Successfully.";
 
-            return true;
+            // return true;
         }
     }
     else
     {
         cout << "\nClient with Account Number (" << accountNumber << ") is Not Found!";
 
-        return false;
+        // return false;
     }
 }
 
@@ -383,46 +369,143 @@ string ReadClientAccountNumber()
 {
     string accountNumber = "";
 
-    cout << "\nPlease enter Account Number: ";
+    cout << "Please enter Account Number: ";
     cin >> accountNumber;
 
     return accountNumber;
 }
 
-//* End Delete Clint List Functions.
-
-void UserChoiceFromMainMenuScreen(short userChoice, vector<stClient> vecClients)
+void UpdateClientScreen()
 {
+    cout << "--------------------------------------------" << endl;
+    cout << "\tUpdate Clint Screen" << endl;
+    cout << "--------------------------------------------" << endl;
+}
+
+stClient ChangeClientRecord(string accountNumber)
+{
+    stClient client;
+
+    client.accountNumber = accountNumber;
+
+    cout << "\nEnter Pin Code: ";
+    getline(cin >> ws, client.pinCode);
+
+    cout << "Enter Name: ";
+    getline(cin, client.name);
+
+    cout << "Enter Phone: ";
+    getline(cin, client.phone);
+
+    cout << "Enter Account Balance: ";
+    cin >> client.accountBalance;
+
+    return client;
+}
+
+void UpdateClientByAccountNumber(string accountNumber, vector<stClient> &vecClients)
+{
+    stClient client;
+    char answer = 'n';
+
+    if (FindClientByAccountNumber(accountNumber, vecClients, client))
+    {
+        PrintClientCard(client);
+
+        cout << "\n\nAre you sure you want update this client? (y / n): ";
+        cin >> answer;
+
+        if (answer == 'y' || answer == 'Y')
+        {
+            for (stClient &c : vecClients)
+            {
+                if (c.accountNumber == accountNumber)
+                {
+                    c = ChangeClientRecord(accountNumber);
+                    break;
+                }
+            }
+
+            SaveClientsDataToFile(fileName, vecClients);
+            cout << "\n\nClient Updated Successfully.";
+
+            // return true;
+        }
+    }
+    else
+    {
+        cout << "\nClient with Account Number (" << accountNumber << ") is Not Found!";
+
+        // return false;
+    }
+}
+
+void FindClientScreen()
+{
+    cout << "--------------------------------------------" << endl;
+    cout << "\tFind Clint Screen" << endl;
+    cout << "--------------------------------------------" << endl;
+}
+
+void ExitScreen()
+{
+    cout << "\n\n==================================================" << endl;
+    cout << "\t\tProgram Ends." << endl;
+    cout << "==================================================" << endl;
+}
+
+
+void UserChoiceFromMainMenuScreen(short userChoice, vector<stClient> &vecClients)
+{
+    string accountNumber = "";
+    stClient client;
+
     switch (userChoice)
     {
-    // case enMainMenuScreenOptions::opShowClintList:
-    //     vecClients = LoadClientsDataFromFile(fileName);
-    //     PrintAllClientsData(vecClients);
-    //     cout << "\nPress any key to go back to Main Menu... ";
-    //     system("pause > nul");
-    //     break;
+    case enMainMenuScreenOptions::opShowClintList:
+        vecClients = LoadClientsDataFromFile(fileName);
+        PrintAllClientsData(vecClients);
+        cout << "\nPress any key to go back to Main Menu... ";
+        system("pause > nul");
+        break;
 
-    // case enMainMenuScreenOptions::opAddNewClint:
-    //     AddClients();
-    //     break;
+    case enMainMenuScreenOptions::opAddNewClint:
+        AddNewClientScreen();
+        AddClients();
+        break;
 
     case enMainMenuScreenOptions::opDeleteClint:
+        DeleteClientScreen();
         vecClients = LoadClientsDataFromFile(fileName);
-        string accountNumber = ReadClientAccountNumber();
+        accountNumber = ReadClientAccountNumber();
         DeleteClientByAccountNumber(accountNumber, vecClients);
         break;
 
-        // case enMainMenuScreenOptions::opUpdateClintInfo:
-        //     /* code */
-        //     break;
-        // case enMainMenuScreenOptions::opFindClint:
-        //     /* code */
-        //     break;
-        // case enMainMenuScreenOptions::opExit:
-        //     /* code */
-        //     break;
-        // default:
-        //     break;
+    case enMainMenuScreenOptions::opUpdateClintInfo:
+        UpdateClientScreen();
+        accountNumber = ReadClientAccountNumber();
+        UpdateClientByAccountNumber(accountNumber, vecClients);
+        break;
+
+    case enMainMenuScreenOptions::opFindClint:
+        FindClientScreen();
+        accountNumber = ReadClientAccountNumber();
+        if (FindClientByAccountNumber(accountNumber, vecClients, client))
+        {
+            PrintClientCard(client);
+        }
+        else
+        {
+            cout << "\nClient with Account Number (" << accountNumber << ") is Not Found!" << endl;
+        }
+
+        cout << "\n\nPress any key to go back to Main Menu... ";
+        system("pause > nul");
+        break;
+
+    case enMainMenuScreenOptions::opExit:
+        ExitScreen();
+        break;
     }
 }
 
@@ -437,8 +520,6 @@ void Bank()
         UserChoiceFromMainMenuScreen(userChoice, vecClients);
     } while (userChoice != 6);
 }
-
-//* End Functions ..
 
 int main()
 {
