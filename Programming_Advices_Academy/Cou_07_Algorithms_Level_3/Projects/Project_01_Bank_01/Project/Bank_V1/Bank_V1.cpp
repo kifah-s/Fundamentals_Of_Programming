@@ -454,7 +454,6 @@ void ExitScreen()
     cout << "==================================================" << endl;
 }
 
-
 void UserChoiceFromMainMenuScreen(short userChoice, vector<stClient> &vecClients)
 {
     string accountNumber = "";
