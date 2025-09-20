@@ -37,7 +37,7 @@ vector<string> SplitString(string S1, string Delim)
             vString.push_back(sWord);
         }
 
-        S1.erase(0, pos + Delim.length()); /* erase() until positon and move to next word. */
+        S1.erase(0, pos + Delim.length());
     }
 
     if (S1 != "")
@@ -118,7 +118,7 @@ sClient ReadNewClient()
 
     cout << "Enter Account Number? ";
 
-    // Usage of std::ws will extract allthe whitespace character
+    
     getline(cin >> ws, Client.AccountNumber);
 
     while (ClientExistsByAccountNumber(Client.AccountNumber, ClientsFileName))
@@ -198,7 +198,7 @@ void ShowAllClientsScreen()
     cout << "_________________________________________\n"
          << endl;
 
-    cout << "| " << left << setw(15) << "Accout Number";
+    cout << "| " << left << setw(15) << "Account Number";
     cout << "| " << left << setw(10) << "Pin Code";
     cout << "| " << left << setw(40) << "Client Name";
     cout << "| " << left << setw(12) << "Phone";
@@ -233,7 +233,7 @@ void ShowTotalBalances()
     cout << "_________________________________________\n"
          << endl;
 
-    cout << "| " << left << setw(15) << "Accout Number";
+    cout << "| " << left << setw(15) << "Account Number";
     cout << "| " << left << setw(40) << "Client Name";
     cout << "| " << left << setw(12) << "Balance";
     cout << "\n_______________________________________________________";
@@ -265,7 +265,7 @@ void PrintClientCard(sClient Client)
 {
     cout << "\nThe following are the client details:\n";
     cout << "-----------------------------------";
-    cout << "\nAccout Number: " << Client.AccountNumber;
+    cout << "\nAccount Number: " << Client.AccountNumber;
     cout << "\nPin Code     : " << Client.PinCode;
     cout << "\nName         : " << Client.Name;
     cout << "\nPhone        : " << Client.Phone;
@@ -608,7 +608,6 @@ void ShowWithDrawScreen()
 
 void ShowTotalBalancesScreen()
 {
-
     ShowTotalBalances();
 }
 
