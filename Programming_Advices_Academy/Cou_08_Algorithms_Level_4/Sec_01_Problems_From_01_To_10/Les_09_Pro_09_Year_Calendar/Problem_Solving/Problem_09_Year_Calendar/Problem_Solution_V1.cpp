@@ -33,7 +33,7 @@ short ReadMonth()
 
 void PrintMonthName(short month)
 {
-    string monthOfYear[12] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Sept", "Oct", "Nov", "Dec"};
+    string monthOfYear[12] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
 
     cout << "\n_________________" << monthOfYear[month - 1] << "___________________\n"
          << endl;
@@ -52,16 +52,11 @@ void PrintDaysOfWeek()
 
 bool IsLeapYear(short year)
 {
-    return (year % 400 == 0);
+    return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 }
 
 short NumberOfDaysInAMonth(short year, short month)
 {
-    if (month < 1 || month > 12)
-    {
-        return 0;
-    }
-
     int numberOfDays[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
     return (month == 2) ? (IsLeapYear(year) ? 29 : 28) : numberOfDays[month - 1];
@@ -105,14 +100,25 @@ void PrintMonthCalender(short year, short month)
     cout << "\n_______________________________________" << endl;
 }
 
+void PrintYearCalender(short year)
+{
+    cout << "\n_______________________________________" << endl;
+    cout << "\t  Calender - " << year << endl;
+    cout << "_______________________________________" << endl;
+
+    for (short i = 1; i <= 12; i++)
+    {
+        PrintMonthCalender(year, i);
+        cout << endl;
+    }
+}
+
 int main()
 {
     WelcomeMessage();
 
     short year = ReadYear();
-    short month = ReadMonth();
-
-    PrintMonthCalender(year, month);
+    PrintYearCalender(year);
 
     cout << endl
          << endl;
