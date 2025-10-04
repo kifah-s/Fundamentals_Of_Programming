@@ -11,6 +11,7 @@ const string usersFileName = "users.txt";
 
 void ShowMainMenu();
 void ShowTransactionsScreen();
+void Logout();
 
 struct stClient
 {
@@ -36,7 +37,10 @@ enum enMainMenuOptions
     opUpdateClintInfo = 4,
     opFindClint = 5,
     opTransactions = 6,
-    opExit = 7
+    // opExit = 7
+    opManageUsers = 7,
+    opLogout = 8
+
 };
 
 enum enTransactionsMenuOptions
@@ -72,7 +76,7 @@ short ReadMainMenuOption()
 {
     short userChoice = 0;
 
-    cout << "Chose what do you want to do [1 / 7]: ";
+    cout << "Chose what do you want to do [1 / 8]: ";
     cin >> userChoice;
 
     return userChoice;
@@ -776,8 +780,16 @@ void PerformMainMenuOption(enMainMenuOptions mainMenuOptions)
         ShowTransactionsScreen();
         break;
 
-    case enMainMenuOptions::opExit:
-        ShowExitScreen();
+        // case enMainMenuOptions::opExit:
+        //     ShowExitScreen();
+        //     break;
+
+    case enMainMenuOptions::opManageUsers:
+
+        break;
+
+    case enMainMenuOptions::opLogout:
+        Logout();
         break;
     }
 }
@@ -793,7 +805,8 @@ void ShowMainMenu()
     cout << "[4]: Update Clint Info." << endl;
     cout << "[5]: Find Clint." << endl;
     cout << "[6]: Transactions." << endl;
-    cout << "[7]: Exit." << endl;
+    cout << "[7]: Manage Users." << endl;
+    cout << "[8]: Logout." << endl;
     cout << "==================================================" << endl;
 
     PerformMainMenuOption((enMainMenuOptions)ReadMainMenuOption());
@@ -801,7 +814,7 @@ void ShowMainMenu()
 
 //* __________________________________ Login __________________________________ *//
 
-void ShowLoginScreen()
+void LoginScreen()
 {
     cout << "\n----------------------------------------" << endl;
     cout << "\tLogin Screen" << endl;
@@ -871,10 +884,9 @@ bool FindUserByUserName(string userName, string password, vector<stUserAccount> 
     return false;
 }
 
-void LoginScreen()
+void ShowLoginScreen()
 {
-    WelcomeMessage();
-    ShowLoginScreen();
+    LoginScreen();
 
     stUserAccount user = ReadUserNameAndPassword();
     vector<stUserAccount> vecUsers = LoadUsersDataFromFile("users");
@@ -888,9 +900,16 @@ void LoginScreen()
     ShowMainMenu();
 }
 
+void Logout()
+{
+    ShowLoginScreen();
+}
+
 int main()
 {
-    LoginScreen();
+    WelcomeMessage();
+
+    ShowLoginScreen();
 
     cout << endl
          << endl;
