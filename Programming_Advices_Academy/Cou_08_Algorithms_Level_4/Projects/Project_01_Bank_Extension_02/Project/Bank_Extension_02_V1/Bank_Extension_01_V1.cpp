@@ -29,6 +29,7 @@ struct stUserAccount
     string userName;
     string password;
     string permissions;
+    bool markForDelete = false;
 };
 
 enum enMainMenuOptions
@@ -885,7 +886,7 @@ vector<stUserAccount> LoadUsersDataFromFile(string UsersFileName)
     return vecUsers;
 }
 
-bool FindUserByUserName(string userName, string password, vector<stUserAccount> vecUsers)
+bool FindUserByUserNameAndPassword(string userName, string password, vector<stUserAccount> vecUsers)
 {
     for (stUserAccount &user : vecUsers)
     {
@@ -905,7 +906,7 @@ void ShowLoginScreen()
     stUserAccount user = ReadUserNameAndPassword();
     vector<stUserAccount> vecUsers = LoadUsersDataFromFile("users");
 
-    while (!FindUserByUserName(user.userName, user.password, vecUsers))
+    while (!FindUserByUserNameAndPassword(user.userName, user.password, vecUsers))
     {
         cout << "\nInvalid UserName / Password.\n\n";
         user = ReadUserNameAndPassword();
@@ -972,6 +973,134 @@ void ShowAllUsersScreen()
          << endl;
 }
 
+bool FindUserByUserName(string userName, vector<stUserAccount> vecUsers, stUserAccount &user)
+{
+    for (stUserAccount &u : vecUsers)
+    {
+        if (u.userName == userName)
+        {
+            user = u;
+            return true;
+        }
+    }
+
+    return false;
+}
+
+void PrintUserCard(stUserAccount user)
+{
+    cout << "\nThe following are the user details:\n";
+    cout << "\nUsername   : " << user.userName;
+    cout << "\nPassword   : " << user.password;
+    cout << "\nPermissions: " << user.permissions;
+}
+
+bool MarkUserForDeleteByUserName(string userName, vector<stUserAccount> &vecUsers)
+{
+    for (stUserAccount &u : vecUsers)
+    {
+        if (u.userName == userName)
+        {
+            u.markForDelete = true;
+            return true;
+        }
+    }
+
+    return false;
+}
+
+string ConvertRecordToLine(stUserAccount user, string separator = "#//#")
+{
+    string stUserRecord = "";
+
+    stUserRecord += user.userName + separator;
+    stUserRecord += user.password + separator;
+    stUserRecord += user.permissions + separator;
+
+    return stUserRecord;
+}
+
+vector<stUserAccount> SaveUsersDataToFile(string usersFileName, vector<stUserAccount> vecUsers)
+{
+    fstream myFile;
+    myFile.open(usersFileName, ios::out);
+
+    string DataLine = "";
+
+    if (myFile.is_open())
+    {
+        for (stUserAccount &u : vecUsers)
+        {
+            if (u.markForDelete == false)
+            {
+                DataLine = ConvertRecordToLine(u);
+                myFile << DataLine << endl;
+            }
+        }
+
+        myFile.close();
+    }
+
+    return vecUsers;
+}
+
+void DeleteUserByUserName(string userName, vector<stUserAccount> &vecUsers)
+{
+    stUserAccount user;
+    char answer = 'n';
+
+    if (userName == "Admin")
+    {
+        cout << "\nYou cannot delete this user." << endl;
+        GoBackToManageUsersMenu();
+    }
+
+    if (FindUserByUserName(userName, vecUsers, user))
+    {
+        PrintUserCard(user);
+        cout << "\n\nAre you sure you want delete this user? (y / n): ";
+        cin >> answer;
+
+        if (answer == 'y' || answer == 'Y')
+        {
+            MarkUserForDeleteByUserName(userName, vecUsers);
+            SaveUsersDataToFile(usersFileName, vecUsers);
+            vecUsers = LoadUsersDataFromFile(usersFileName);
+            cout << "\nUser Deleted Successfully." << endl;
+
+            // return true;
+        }
+    }
+    else
+    {
+        cout << "\nUser with user name (" << userName << ") is not found!" << endl;
+        ;
+
+        // return false;
+    }
+}
+
+string ReadUserName()
+{
+    string userName = "";
+
+    cout << "Please enter user name: ";
+    cin >> userName;
+
+    return userName;
+}
+
+void ShowDeleteUsersScreen()
+{
+    cout << "\n--------------------------------------------" << endl;
+    cout << "\tDelete Users Screen" << endl;
+    cout << "--------------------------------------------" << endl;
+
+    vector<stUserAccount> vecUsers = LoadUsersDataFromFile(usersFileName);
+    string userName = ReadUserName();
+    DeleteUserByUserName(userName, vecUsers);
+}
+
 void PerformManageUsersMenuOption(enManageUsersMenuOptions manageUsersMenuOptions)
 {
     switch (manageUsersMenuOptions)
@@ -981,29 +1110,29 @@ void PerformManageUsersMenuOption(enManageUsersMenuOptions manageUsersMenuOption
         GoBackToManageUsersMenu();
         break;
 
-    case enManageUsersMenuOptions::opAddNewUser:
-        // ShowAddNewClientsScreen();
-        GoBackToManageUsersMenu();
-        break;
+        // case enManageUsersMenuOptions::opAddNewUser:
+        //     // ShowAddNewClientsScreen();
+        //     GoBackToManageUsersMenu();
+        //     break;
 
     case enManageUsersMenuOptions::opDeleteUser:
-        // ShowDeleteClientScreen();
+        ShowDeleteUsersScreen();
         GoBackToManageUsersMenu();
         break;
 
-    case enManageUsersMenuOptions::opUpdateUser:
-        // ShowUpdateClientScreen();
-        GoBackToManageUsersMenu();
-        break;
+        // case enManageUsersMenuOptions::opUpdateUser:
+        //     // ShowUpdateClientScreen();
+        //     GoBackToManageUsersMenu();
+        //     break;
 
-    case enManageUsersMenuOptions::opFindUser:
-        // ShowFindClientScreen();
-        GoBackToManageUsersMenu();
-        break;
+        // case enManageUsersMenuOptions::opFindUser:
+        //     // ShowFindClientScreen();
+        //     GoBackToManageUsersMenu();
+        //     break;
 
-    case enManageUsersMenuOptions::opUsersMainMenu:
-        ShowMainMenu();
-        break;
+        // case enManageUsersMenuOptions::opUsersMainMenu:
+        //     ShowMainMenu();
+        //     break;
     }
 }
 
