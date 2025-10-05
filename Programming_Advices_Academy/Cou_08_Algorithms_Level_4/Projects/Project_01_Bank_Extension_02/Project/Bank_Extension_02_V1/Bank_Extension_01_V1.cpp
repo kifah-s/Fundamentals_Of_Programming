@@ -992,7 +992,7 @@ void PrintUserCard(stUserAccount user)
     cout << "\nThe following are the user details:\n";
     cout << "\nUsername   : " << user.userName;
     cout << "\nPassword   : " << user.password;
-    cout << "\nPermissions: " << user.permissions;
+    cout << "\nPermissions: " << user.permissions << endl;
 }
 
 bool MarkUserForDeleteByUserName(string userName, vector<stUserAccount> &vecUsers)
@@ -1101,6 +1101,26 @@ void ShowDeleteUsersScreen()
     DeleteUserByUserName(userName, vecUsers);
 }
 
+void ShowFindUserScreen()
+{
+    cout << "\n--------------------------------------------" << endl;
+    cout << "\tFind User Screen" << endl;
+    cout << "--------------------------------------------" << endl;
+
+    vector<stUserAccount> vecUsers = LoadUsersDataFromFile(usersFileName);
+    string userName = ReadUserName();
+    stUserAccount user;
+
+    if (FindUserByUserName(userName, vecUsers, user))
+    {
+        PrintUserCard(user);
+    }
+    else
+    {
+        cout << "\nUser with user name (" << userName << ") is not found!" << endl;
+    }
+}
+
 void PerformManageUsersMenuOption(enManageUsersMenuOptions manageUsersMenuOptions)
 {
     switch (manageUsersMenuOptions)
@@ -1125,14 +1145,14 @@ void PerformManageUsersMenuOption(enManageUsersMenuOptions manageUsersMenuOption
         //     GoBackToManageUsersMenu();
         //     break;
 
-        // case enManageUsersMenuOptions::opFindUser:
-        //     // ShowFindClientScreen();
-        //     GoBackToManageUsersMenu();
-        //     break;
+    case enManageUsersMenuOptions::opFindUser:
+        ShowFindUserScreen();
+        GoBackToManageUsersMenu();
+        break;
 
-        // case enManageUsersMenuOptions::opUsersMainMenu:
-        //     ShowMainMenu();
-        //     break;
+    case enManageUsersMenuOptions::opUsersMainMenu:
+        ShowMainMenu();
+        break;
     }
 }
 
