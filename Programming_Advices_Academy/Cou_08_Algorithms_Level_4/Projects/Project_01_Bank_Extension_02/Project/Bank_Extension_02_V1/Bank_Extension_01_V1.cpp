@@ -28,6 +28,7 @@ struct stUserAccount
 {
     string userName;
     string password;
+    string permissions;
 };
 
 enum enMainMenuOptions
@@ -74,7 +75,8 @@ enum enClientInformation
 enum enUserInformation
 {
     userName = 0,
-    password = 1
+    password = 1,
+    permissions = 2
 };
 
 void WelcomeMessage()
@@ -854,6 +856,7 @@ stUserAccount ConvertLineToRecordForUsersFile(string line, string separator = "#
 
     user.userName = vecUserData[enUserInformation::userName];
     user.password = vecUserData[enUserInformation::password];
+    user.permissions = vecUserData[enUserInformation::permissions];
 
     return user;
 }
@@ -926,36 +929,79 @@ short ReadManageUsersMenuOption()
     return userChoice;
 }
 
+void GoBackToManageUsersMenu()
+{
+    cout << "\nPress Any Key To Go Back Manage Users Menu ...";
+    system("pause > nul");
+
+    ShowManageUsersMenuScreen();
+}
+
+void PrintUsersRecord(stUserAccount user)
+{
+    cout << "| " << setw(15) << left << user.userName;
+    cout << "| " << setw(10) << left << user.password;
+    cout << "| " << setw(40) << left << user.permissions;
+}
+
+void ShowAllUsersScreen()
+{
+    vector<stUserAccount> vecUsers = LoadUsersDataFromFile(usersFileName);
+
+    cout << "\n\n_______________________________________________________";
+    cout << "_________________________________________" << endl;
+    cout << "\n\t\t\t\tUser List (" << vecUsers.size() << ") User(s).";
+    cout << "\n_______________________________________________________";
+    cout << "_________________________________________\n"
+         << endl;
+    cout << "| " << left << setw(15) << "User Name";
+    cout << "| " << left << setw(10) << "Password";
+    cout << "| " << left << setw(40) << "Permissions";
+    cout << "\n_______________________________________________________";
+    cout << "_________________________________________\n"
+         << endl;
+
+    for (stUserAccount user : vecUsers)
+    {
+        PrintUsersRecord(user);
+        cout << endl;
+    }
+
+    cout << "\n_______________________________________________________";
+    cout << "_________________________________________\n"
+         << endl;
+}
+
 void PerformManageUsersMenuOption(enManageUsersMenuOptions manageUsersMenuOptions)
 {
     switch (manageUsersMenuOptions)
     {
     case enManageUsersMenuOptions::opShowUsersList:
-        // ShowAllClientScreen();
-        GoBackToMainMenu();
+        ShowAllUsersScreen();
+        GoBackToManageUsersMenu();
         break;
 
     case enManageUsersMenuOptions::opAddNewUser:
         // ShowAddNewClientsScreen();
-        GoBackToMainMenu();
+        GoBackToManageUsersMenu();
         break;
 
     case enManageUsersMenuOptions::opDeleteUser:
         // ShowDeleteClientScreen();
-        GoBackToMainMenu();
+        GoBackToManageUsersMenu();
         break;
 
     case enManageUsersMenuOptions::opUpdateUser:
         // ShowUpdateClientScreen();
-        GoBackToMainMenu();
+        GoBackToManageUsersMenu();
         break;
 
     case enManageUsersMenuOptions::opFindUser:
         // ShowFindClientScreen();
-        GoBackToMainMenu();
+        GoBackToManageUsersMenu();
         break;
-        
-        case enManageUsersMenuOptions::opUsersMainMenu:
+
+    case enManageUsersMenuOptions::opUsersMainMenu:
         ShowMainMenu();
         break;
     }
