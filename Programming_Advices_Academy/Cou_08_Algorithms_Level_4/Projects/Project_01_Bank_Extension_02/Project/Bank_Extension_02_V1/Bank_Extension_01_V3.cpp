@@ -12,6 +12,7 @@ const string usersFileName = "users.txt";
 void ShowMainMenu();
 void ShowTransactionsScreen();
 void Logout();
+void ShowManageUsersMenuScreen();
 
 struct stClient
 {
@@ -31,11 +32,11 @@ struct stUserAccount
 
 enum enMainMenuOptions
 {
-    opShowClintList = 1,
-    opAddNewClint = 2,
-    opDeleteClint = 3,
-    opUpdateClintInfo = 4,
-    opFindClint = 5,
+    opShowClientsList = 1,
+    opAddNewClient = 2,
+    opDeleteClient = 3,
+    opUpdateClientInfo = 4,
+    opFindClient = 5,
     opTransactions = 6,
     // opExit = 7
     opManageUsers = 7,
@@ -43,12 +44,22 @@ enum enMainMenuOptions
 
 };
 
+enum enManageUsersMenuOptions
+{
+    opShowUsersList = 1,
+    opAddNewUser = 2,
+    opDeleteUser = 3,
+    opUpdateUser = 4,
+    opFindUser = 5,
+    opUsersMainMenu = 6
+};
+
 enum enTransactionsMenuOptions
 {
     opDeposit = 1,
     opWithdraw = 2,
     opTotalBalance = 3,
-    opMainMenu = 4
+    opTransMainMenu = 4
 };
 
 enum enClientInformation
@@ -315,7 +326,7 @@ void AddNewClients()
 void ShowAddNewClientsScreen()
 {
     cout << "--------------------------------------------" << endl;
-    cout << "\tAdd New Clint Screen" << endl;
+    cout << "\tAdd New Client Screen" << endl;
     cout << "--------------------------------------------" << endl;
 
     AddNewClients();
@@ -425,7 +436,7 @@ string ReadClientAccountNumber()
 void ShowDeleteClientScreen()
 {
     cout << "--------------------------------------------" << endl;
-    cout << "\tDelete Clint Screen" << endl;
+    cout << "\tDelete Client Screen" << endl;
     cout << "--------------------------------------------" << endl;
 
     vector<stClient> vecClients = LoadClientsDataFromFile(clientsFileName);
@@ -494,7 +505,7 @@ void UpdateClientByAccountNumber(string accountNumber, vector<stClient> &vecClie
 void ShowUpdateClientScreen()
 {
     cout << "--------------------------------------------" << endl;
-    cout << "\tUpdate Clint Screen" << endl;
+    cout << "\tUpdate Client Screen" << endl;
     cout << "--------------------------------------------" << endl;
 
     vector<stClient> vecClients = LoadClientsDataFromFile(clientsFileName);
@@ -505,7 +516,7 @@ void ShowUpdateClientScreen()
 void ShowFindClientScreen()
 {
     cout << "--------------------------------------------" << endl;
-    cout << "\tFind Clint Screen" << endl;
+    cout << "\tFind Client Screen" << endl;
     cout << "--------------------------------------------" << endl;
 
     vector<stClient> vecClients = LoadClientsDataFromFile(clientsFileName);
@@ -735,7 +746,7 @@ void PerformTransactionsMenuOption(enTransactionsMenuOptions transactionsMenuOpt
         GoBackToTransactionsMenu();
         break;
 
-    case enTransactionsMenuOptions::opMainMenu:
+    case enTransactionsMenuOptions::opTransMainMenu:
         ShowMainMenu();
         break;
     }
@@ -751,27 +762,27 @@ void PerformMainMenuOption(enMainMenuOptions mainMenuOptions)
 {
     switch (mainMenuOptions)
     {
-    case enMainMenuOptions::opShowClintList:
+    case enMainMenuOptions::opShowClientsList:
         ShowAllClientScreen();
         GoBackToMainMenu();
         break;
 
-    case enMainMenuOptions::opAddNewClint:
+    case enMainMenuOptions::opAddNewClient:
         ShowAddNewClientsScreen();
         GoBackToMainMenu();
         break;
 
-    case enMainMenuOptions::opDeleteClint:
+    case enMainMenuOptions::opDeleteClient:
         ShowDeleteClientScreen();
         GoBackToMainMenu();
         break;
 
-    case enMainMenuOptions::opUpdateClintInfo:
+    case enMainMenuOptions::opUpdateClientInfo:
         ShowUpdateClientScreen();
         GoBackToMainMenu();
         break;
 
-    case enMainMenuOptions::opFindClint:
+    case enMainMenuOptions::opFindClient:
         ShowFindClientScreen();
         GoBackToMainMenu();
         break;
@@ -785,7 +796,7 @@ void PerformMainMenuOption(enMainMenuOptions mainMenuOptions)
         //     break;
 
     case enMainMenuOptions::opManageUsers:
-
+        ShowManageUsersMenuScreen();
         break;
 
     case enMainMenuOptions::opLogout:
@@ -799,11 +810,11 @@ void ShowMainMenu()
     cout << "\n\n==================================================" << endl;
     cout << "\t\tMain Menu Screen" << endl;
     cout << "==================================================" << endl;
-    cout << "[1]: Show Clint List." << endl;
-    cout << "[2]: Add New Clint." << endl;
-    cout << "[3]: Delete Clint." << endl;
-    cout << "[4]: Update Clint Info." << endl;
-    cout << "[5]: Find Clint." << endl;
+    cout << "[1]: Show Client List." << endl;
+    cout << "[2]: Add New Client." << endl;
+    cout << "[3]: Delete Client." << endl;
+    cout << "[4]: Update Client Info." << endl;
+    cout << "[5]: Find Client." << endl;
     cout << "[6]: Transactions." << endl;
     cout << "[7]: Manage Users." << endl;
     cout << "[8]: Logout." << endl;
@@ -903,6 +914,67 @@ void ShowLoginScreen()
 void Logout()
 {
     ShowLoginScreen();
+}
+
+short ReadManageUsersMenuOption()
+{
+    short userChoice = 0;
+
+    cout << "Chose what do you want to do [1 / 6]: ";
+    cin >> userChoice;
+
+    return userChoice;
+}
+
+void PerformManageUsersMenuOption(enManageUsersMenuOptions manageUsersMenuOptions)
+{
+    switch (manageUsersMenuOptions)
+    {
+    case enManageUsersMenuOptions::opShowUsersList:
+        // ShowAllClientScreen();
+        GoBackToMainMenu();
+        break;
+
+    case enManageUsersMenuOptions::opAddNewUser:
+        // ShowAddNewClientsScreen();
+        GoBackToMainMenu();
+        break;
+
+    case enManageUsersMenuOptions::opDeleteUser:
+        // ShowDeleteClientScreen();
+        GoBackToMainMenu();
+        break;
+
+    case enManageUsersMenuOptions::opUpdateUser:
+        // ShowUpdateClientScreen();
+        GoBackToMainMenu();
+        break;
+
+    case enManageUsersMenuOptions::opFindUser:
+        // ShowFindClientScreen();
+        GoBackToMainMenu();
+        break;
+        
+        case enManageUsersMenuOptions::opUsersMainMenu:
+        ShowMainMenu();
+        break;
+    }
+}
+
+void ShowManageUsersMenuScreen()
+{
+    cout << "\n\n==================================================" << endl;
+    cout << "\t  Manage Users Menu Screen" << endl;
+    cout << "==================================================" << endl;
+    cout << "[1]: Show Users List." << endl;
+    cout << "[2]: Add New User." << endl;
+    cout << "[3]: Delete User." << endl;
+    cout << "[4]: Update User." << endl;
+    cout << "[5]: Find User." << endl;
+    cout << "[6]: Main Menu." << endl;
+    cout << "==================================================" << endl;
+
+    PerformManageUsersMenuOption((enManageUsersMenuOptions)ReadManageUsersMenuOption());
 }
 
 int main()
