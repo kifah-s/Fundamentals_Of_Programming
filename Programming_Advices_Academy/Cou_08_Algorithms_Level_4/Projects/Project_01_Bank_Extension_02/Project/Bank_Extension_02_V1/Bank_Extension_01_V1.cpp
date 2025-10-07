@@ -1357,6 +1357,65 @@ void ShowAddNewUsersScreen()
     AddNewUsers();
 }
 
+stUserAccount ChangeUserRecord(string userName)
+{
+    stUserAccount user;
+
+    user.userName = userName;
+
+    cout << "\nPlease, enter Password: ";
+    getline(cin >> ws, user.password);
+
+    user.permissions = 0;
+    user = GivePermissionsToUser(user);
+
+    return user;
+}
+
+void UpdateUserByUserName(string userName, vector<stUserAccount> &vecUsers)
+{
+    stUserAccount user;
+    char answer = 'n';
+
+    if (FindUserByUserName(userName, vecUsers, user))
+    {
+        PrintUserCard(user);
+
+        cout << "\n\nAre you sure you want update this user? (y / n): ";
+        cin >> answer;
+
+        if (answer == 'y' || answer == 'Y')
+        {
+            for (stUserAccount &u : vecUsers)
+            {
+                if (u.userName == userName)
+                {
+                    u = ChangeUserRecord(userName);
+                    break;
+                }
+            }
+
+            SaveUsersDataToFile(usersFileName, vecUsers);
+            cout << "\n\nUsers Updated Successfully.";
+        }
+    }
+    else
+    {
+        cout << "\nUsers with user name (" << userName << ") is not found!";
+    }
+}
+
+void ShowUpdateUsersScreen()
+{
+    cout << "--------------------------------------------" << endl;
+    cout << "\tUpdate User Screen" << endl;
+    cout << "--------------------------------------------" << endl;
+
+    vector<stUserAccount> vecUsers = LoadUsersDataFromFile(usersFileName);
+    string userName = ReadUserName();
+    UpdateUserByUserName(userName, vecUsers);
+}
+
 void PerformManageUsersMenuOption(enManageUsersMenuOptions manageUsersMenuOptions)
 {
     switch (manageUsersMenuOptions)
@@ -1377,7 +1436,7 @@ void PerformManageUsersMenuOption(enManageUsersMenuOptions manageUsersMenuOption
         break;
 
     case enManageUsersMenuOptions::opUpdateUser:
-        // ShowUpdateUsersScreen();
+        ShowUpdateUsersScreen();
         GoBackToManageUsersMenu();
         break;
 
