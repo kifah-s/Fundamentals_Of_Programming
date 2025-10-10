@@ -29,6 +29,15 @@ enum enClientInformation
     clientInfo_accountBalance = 4
 };
 
+enum enATMMainMenuOptions
+{
+    mainMenuOpt_quickWithdraw = 1,
+    mainMenuOpt_normalWithdraw = 2,
+    mainMenuOpt_deposit = 3,
+    mainMenuOpt_checkBalance = 4,
+    mainMenuOpt_logout = 5
+};
+
 void WelcomeMessage()
 {
     cout << "\n\nWelcome to the Project ..\n"
@@ -160,6 +169,72 @@ string ReadPinCode()
     return pinCode;
 }
 
+short ReadATMMainMenuOption()
+{
+    short choice = 0;
+    cout << "Choose what do you want to do? [1 to 5]: ";
+    cin >> choice;
+
+    return choice;
+}
+
+void PerfromATMMainMenuOption(enATMMainMenuOptions mainMenuOption)
+{
+    switch (mainMenuOption)
+    {
+    case enATMMainMenuOptions::mainMenuOpt_quickWithdraw:
+    {
+        // system("cls");
+        // ShowAllClientsScreen();
+        // GoBackToMainMenu();
+        break;
+    }
+    case enATMMainMenuOptions::mainMenuOpt_normalWithdraw:
+        // system("cls");
+        // ShowAddNewClientsScreen();
+        // GoBackToMainMenu();
+        break;
+
+    case enATMMainMenuOptions::mainMenuOpt_deposit:
+        // system("cls");
+        // ShowDeleteClientScreen();
+        // GoBackToMainMenu();
+        break;
+
+    case enATMMainMenuOptions::mainMenuOpt_checkBalance:
+        // system("cls");
+        // ShowUpdateClientScreen();
+        // GoBackToMainMenu();
+        break;
+
+    case enATMMainMenuOptions::mainMenuOpt_logout:
+        // system("cls");
+        // Login();
+
+        break;
+    }
+}
+
+void ATMMainMenuScreen()
+{
+    system("cls");
+    cout << "===========================================\n";
+    cout << "\t    ATM Main Menu Screen\n";
+    cout << "===========================================\n";
+    cout << "[1] Quick Withdraw.\n";
+    cout << "[2] Normal Withdraw.\n";
+    cout << "[3] Deposit.\n";
+    cout << "[4] Check Balance.\n";
+    cout << "[5] Logout.\n";
+    cout << "===========================================\n";
+}
+
+void ShowATMMainMenu()
+{
+    ATMMainMenuScreen();
+    PerfromATMMainMenuOption((enATMMainMenuOptions)ReadATMMainMenuOption());
+}
+
 void Login()
 {
     bool loginFailed = false;
@@ -181,7 +256,7 @@ void Login()
 
     } while (loginFailed);
 
-    // ShowMainMenu();
+    ShowATMMainMenu();
 }
 
 int main()
