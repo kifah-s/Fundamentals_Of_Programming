@@ -6,6 +6,9 @@
 
 using namespace std;
 
+void ShowATMMainMenu();
+void Login();
+
 const string clientsFileName = "clients.txt";
 
 struct stClient
@@ -31,11 +34,11 @@ enum enClientInformation
 
 enum enATMMainMenuOptions
 {
-    mainMenuOpt_quickWithdraw = 1,
-    mainMenuOpt_normalWithdraw = 2,
-    mainMenuOpt_deposit = 3,
-    mainMenuOpt_checkBalance = 4,
-    mainMenuOpt_logout = 5
+    ATMMainMenuOpt_quickWithdraw = 1,
+    ATMMainMenuOpt_normalWithdraw = 2,
+    ATMMainMenuOpt_deposit = 3,
+    ATMMainMenuOpt_checkBalance = 4,
+    ATMMainMenuOpt_logout = 5
 };
 
 void WelcomeMessage()
@@ -178,38 +181,46 @@ short ReadATMMainMenuOption()
     return choice;
 }
 
-void PerfromATMMainMenuOption(enATMMainMenuOptions mainMenuOption)
+void GoBackToATMMainMenu()
 {
-    switch (mainMenuOption)
+    cout << "\n\nPress any key to go back to ATM main menu...";
+    system("pause > nul");
+
+    ShowATMMainMenu();
+}
+
+void PerfromATMMainMenuOption(enATMMainMenuOptions ATMMainMenuOption)
+{
+    switch (ATMMainMenuOption)
     {
-    case enATMMainMenuOptions::mainMenuOpt_quickWithdraw:
+    case enATMMainMenuOptions::ATMMainMenuOpt_quickWithdraw:
     {
         // system("cls");
-        // ShowAllClientsScreen();
-        // GoBackToMainMenu();
+        // ShowQuickWithdrawScreen();
+        // GoBackToATMMainMenu();
         break;
     }
-    case enATMMainMenuOptions::mainMenuOpt_normalWithdraw:
+    case enATMMainMenuOptions::ATMMainMenuOpt_normalWithdraw:
         // system("cls");
         // ShowAddNewClientsScreen();
-        // GoBackToMainMenu();
+        // GoBackToATMMainMenu();
         break;
 
-    case enATMMainMenuOptions::mainMenuOpt_deposit:
+    case enATMMainMenuOptions::ATMMainMenuOpt_deposit:
         // system("cls");
         // ShowDeleteClientScreen();
-        // GoBackToMainMenu();
+        // GoBackToATMMainMenu();
         break;
 
-    case enATMMainMenuOptions::mainMenuOpt_checkBalance:
+    case enATMMainMenuOptions::ATMMainMenuOpt_checkBalance:
         // system("cls");
         // ShowUpdateClientScreen();
-        // GoBackToMainMenu();
+        // GoBackToATMMainMenu();
         break;
 
-    case enATMMainMenuOptions::mainMenuOpt_logout:
-        // system("cls");
-        // Login();
+    case enATMMainMenuOptions::ATMMainMenuOpt_logout:
+        system("cls");
+        Login();
 
         break;
     }
