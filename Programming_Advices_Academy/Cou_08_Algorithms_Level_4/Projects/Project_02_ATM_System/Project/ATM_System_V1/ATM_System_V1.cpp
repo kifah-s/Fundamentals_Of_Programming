@@ -189,6 +189,26 @@ void GoBackToATMMainMenu()
     ShowATMMainMenu();
 }
 
+void CheckBalanceScreen()
+{
+    system("cls");
+    cout << "===========================================\n";
+    cout << "\t  Check Balance Screen\n";
+    cout << "===========================================\n";
+}
+
+short GetClientBalance()
+{
+    return currentClient.accountBalance;
+}
+
+void ShowCheckBalanceScreen()
+{
+    CheckBalanceScreen();
+
+    cout << "\nYour Balance is: " << GetClientBalance();
+}
+
 void PerfromATMMainMenuOption(enATMMainMenuOptions ATMMainMenuOption)
 {
     switch (ATMMainMenuOption)
@@ -213,9 +233,9 @@ void PerfromATMMainMenuOption(enATMMainMenuOptions ATMMainMenuOption)
         break;
 
     case enATMMainMenuOptions::ATMMainMenuOpt_checkBalance:
-        // system("cls");
-        // ShowUpdateClientScreen();
-        // GoBackToATMMainMenu();
+        system("cls");
+        ShowCheckBalanceScreen();
+        GoBackToATMMainMenu();
         break;
 
     case enATMMainMenuOptions::ATMMainMenuOpt_logout:
