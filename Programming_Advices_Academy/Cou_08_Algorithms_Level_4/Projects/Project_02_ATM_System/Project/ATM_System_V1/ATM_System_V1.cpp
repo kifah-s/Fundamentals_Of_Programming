@@ -161,6 +161,8 @@ bool LoadClientInfo(string accountNumber, string pinCode)
 
 void LoginScreen()
 {
+    system("cls");
+    WelcomeMessage();
     cout << "\n---------------------------------\n";
     cout << "\tLogin Screen";
     cout << "\n---------------------------------\n";
@@ -205,7 +207,7 @@ void GoBackToATMMainMenu()
 
 void ShowCheckBalanceScreen()
 {
-    // system("cls");
+    system("cls");
     cout << "===========================================\n";
     cout << "\t  Check Balance Screen\n";
     cout << "===========================================\n";
@@ -337,7 +339,7 @@ void PerformQuickWithdrawOption(enQuickWithdrawOptions quickWithdrawOption)
 
 void ShowQuickWithdrawScreen()
 {
-    // system("cls");
+    system("cls");
     cout << "===========================================\n";
     cout << "\t  Quick Withdraw\n";
     cout << "===========================================\n";
@@ -367,12 +369,51 @@ short ReadWithdrawAmount()
 
 void ShowNormalWithdrawScreen()
 {
-    // system("cls");
+    system("cls");
     cout << "===========================================\n";
     cout << "\t  Normal Withdraw\n";
     cout << "===========================================\n";
     cout << "\nYour Balance is: " << currentClient.accountBalance << "$" << endl;
     BalanceWithdrawalCalculation(currentClient, ReadWithdrawAmount());
+}
+
+short ReadDepositAmount()
+{
+    short depositAmount = 0;
+
+    cout << "\nPlease, enter a positive deposit amount: ";
+    cin >> depositAmount;
+
+    return depositAmount;
+}
+
+void BalanceDepositCalculation(stClient &currentClient, short depositAmount)
+{
+    char answer = 'n';
+
+    cout << "\n\nAre you sure you want perfrom this transaction? (y/n): ";
+    cin >> answer;
+
+    if (answer == 'y' || answer == 'Y')
+    {
+
+        currentClient.accountBalance += depositAmount;
+        cout << "\nDone successfully. new balance is: " << currentClient.accountBalance << "$" << endl;
+    }
+
+    vector<stClient> vecClients = LoadClientsDataFromFile(clientsFileName);
+    vecClients = UpdateClientBalance(vecClients);
+    SaveClientsDataToFile(clientsFileName, vecClients);
+}
+
+void ShowDepositScreen()
+{
+    system("cls");
+    cout << "===========================================\n";
+    cout << "\t  Deposit\n";
+    cout << "===========================================\n";
+    cout << "\nYour Balance is: " << currentClient.accountBalance << "$" << endl;
+    BalanceDepositCalculation(currentClient, ReadDepositAmount());
 }
 
 void PerformATMMainMenuOption(enATMMainMenuOptions ATMMainMenuOption)
@@ -381,40 +422,35 @@ void PerformATMMainMenuOption(enATMMainMenuOptions ATMMainMenuOption)
     {
     case enATMMainMenuOptions::ATMMainMenuOpt_quickWithdraw:
     {
-        // system("cls");
         ShowQuickWithdrawScreen();
         GoBackToATMMainMenu();
         break;
     }
     case enATMMainMenuOptions::ATMMainMenuOpt_normalWithdraw:
-        // system("cls");
         ShowNormalWithdrawScreen();
         GoBackToATMMainMenu();
         break;
 
     case enATMMainMenuOptions::ATMMainMenuOpt_deposit:
-        // system("cls");
-        // ShowDeleteClientScreen();
-        // GoBackToATMMainMenu();
+        ShowDepositScreen();
+        GoBackToATMMainMenu();
         break;
 
     case enATMMainMenuOptions::ATMMainMenuOpt_checkBalance:
-        // system("cls");
         ShowCheckBalanceScreen();
         GoBackToATMMainMenu();
         break;
 
     case enATMMainMenuOptions::ATMMainMenuOpt_logout:
-        // system("cls");
+        system("cls");
         Login();
-
         break;
     }
 }
 
 void ShowATMMainMenu()
 {
-    // system("cls");
+    system("cls");
     cout << "===========================================\n";
     cout << "\t    ATM Main Menu Screen\n";
     cout << "===========================================\n";
@@ -454,7 +490,6 @@ void Login()
 
 int main()
 {
-    WelcomeMessage();
 
     Login();
 
