@@ -222,7 +222,53 @@ short ReadQuickWithdrawOption()
     return choice;
 }
 
-void CalculationQuickWithdraw(stClient &currentClient, short withdrawalAmount)
+string ConvertRecordToLine(stClient client, string separator = "#//#")
+{
+    string clientRecord = "";
+
+    clientRecord += client.accountNumber + separator;
+    clientRecord += client.pinCode + separator;
+    clientRecord += client.name + separator;
+    clientRecord += client.phone + separator;
+    clientRecord += to_string(client.accountBalance);
+
+    return clientRecord;
+}
+
+vector<stClient> UpdateClientBalance(vector<stClient> vecClients)
+{
+    for (stClient &c : vecClients)
+    {
+        if (c.accountNumber == currentClient.accountNumber)
+        {
+            c.accountBalance = currentClient.accountBalance;
+            break;
+        }
+    }
+
+    return vecClients;
+}
+
+void SaveClientsDataToFile(string fileName, vector<stClient> vecClients)
+{
+    fstream myFile;
+    myFile.open(fileName, ios::out); // Write Mode.
+
+    string dataLine;
+
+    if (myFile.is_open())
+    {
+        for (stClient &c : vecClients)
+        {
+            dataLine = ConvertRecordToLine(c);
+            myFile << dataLine << endl;
+        }
+
+        myFile.close();
+    }
+}
+
+void BalanceWithdrawalCalculation(stClient &currentClient, short withdrawalAmount)
 {
     char answer = 'n';
 
@@ -241,6 +287,10 @@ void CalculationQuickWithdraw(stClient &currentClient, short withdrawalAmount)
             cout << "\nThe withdrawal amount is greater than your balance." << endl;
         }
     }
+
+    vector<stClient> vecClients = LoadClientsDataFromFile(clientsFileName);
+    vecClients = UpdateClientBalance(vecClients);
+    SaveClientsDataToFile(clientsFileName, vecClients);
 }
 
 void PerformQuickWithdrawOption(enQuickWithdrawOptions quickWithdrawOption)
@@ -248,35 +298,35 @@ void PerformQuickWithdrawOption(enQuickWithdrawOptions quickWithdrawOption)
     switch (quickWithdrawOption)
     {
     case enQuickWithdrawOptions::quickWithdrawOpt_20:
-        CalculationQuickWithdraw(currentClient, 20);
+        BalanceWithdrawalCalculation(currentClient, 20);
         break;
 
     case enQuickWithdrawOptions::quickWithdrawOpt_50:
-        CalculationQuickWithdraw(currentClient, 50);
+        BalanceWithdrawalCalculation(currentClient, 50);
         break;
 
     case enQuickWithdrawOptions::quickWithdrawOpt_100:
-        CalculationQuickWithdraw(currentClient, 100);
+        BalanceWithdrawalCalculation(currentClient, 100);
         break;
 
     case enQuickWithdrawOptions::quickWithdrawOpt_200:
-        CalculationQuickWithdraw(currentClient, 200);
+        BalanceWithdrawalCalculation(currentClient, 200);
         break;
 
     case enQuickWithdrawOptions::quickWithdrawOpt_400:
-        CalculationQuickWithdraw(currentClient, 400);
+        BalanceWithdrawalCalculation(currentClient, 400);
         break;
 
     case enQuickWithdrawOptions::quickWithdrawOpt_600:
-        CalculationQuickWithdraw(currentClient, 600);
+        BalanceWithdrawalCalculation(currentClient, 600);
         break;
 
     case enQuickWithdrawOptions::quickWithdrawOpt_800:
-        CalculationQuickWithdraw(currentClient, 800);
+        BalanceWithdrawalCalculation(currentClient, 800);
         break;
 
     case enQuickWithdrawOptions::quickWithdrawOpt_1000:
-        CalculationQuickWithdraw(currentClient, 1000);
+        BalanceWithdrawalCalculation(currentClient, 1000);
         break;
 
     case enQuickWithdrawOptions::quickWithdrawOpt_exit:
@@ -298,7 +348,7 @@ void ShowQuickWithdrawScreen()
     cout << "[9] Exit.\n";
     cout << "===========================================\n";
 
-    cout << "\nYour Balance is: " << currentClient.accountBalance << endl;
+    cout << "\nYour Balance is: " << currentClient.accountBalance << "$" << endl;
     PerformQuickWithdrawOption((enQuickWithdrawOptions)ReadQuickWithdrawOption());
 }
 
