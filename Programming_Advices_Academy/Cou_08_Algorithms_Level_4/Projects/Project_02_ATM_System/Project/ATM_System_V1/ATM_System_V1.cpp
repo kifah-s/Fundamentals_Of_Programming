@@ -352,6 +352,29 @@ void ShowQuickWithdrawScreen()
     PerformQuickWithdrawOption((enQuickWithdrawOptions)ReadQuickWithdrawOption());
 }
 
+short ReadWithdrawAmount()
+{
+    short withdrawAmount = 0;
+
+    do
+    {
+        cout << "\nPlease, enter an amount (multiple of 5's): ";
+        cin >> withdrawAmount;
+    } while (withdrawAmount % 5 != 0);
+
+    return withdrawAmount;
+}
+
+void ShowNormalWithdrawScreen()
+{
+    // system("cls");
+    cout << "===========================================\n";
+    cout << "\t  Normal Withdraw\n";
+    cout << "===========================================\n";
+    cout << "\nYour Balance is: " << currentClient.accountBalance << "$" << endl;
+    BalanceWithdrawalCalculation(currentClient, ReadWithdrawAmount());
+}
+
 void PerformATMMainMenuOption(enATMMainMenuOptions ATMMainMenuOption)
 {
     switch (ATMMainMenuOption)
@@ -365,8 +388,8 @@ void PerformATMMainMenuOption(enATMMainMenuOptions ATMMainMenuOption)
     }
     case enATMMainMenuOptions::ATMMainMenuOpt_normalWithdraw:
         // system("cls");
-        // ShowAddNewClientsScreen();
-        // GoBackToATMMainMenu();
+        ShowNormalWithdrawScreen();
+        GoBackToATMMainMenu();
         break;
 
     case enATMMainMenuOptions::ATMMainMenuOpt_deposit:
