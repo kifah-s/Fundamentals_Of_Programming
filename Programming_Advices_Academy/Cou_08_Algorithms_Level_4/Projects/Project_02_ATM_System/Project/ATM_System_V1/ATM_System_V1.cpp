@@ -41,6 +41,20 @@ enum enATMMainMenuOptions
     ATMMainMenuOpt_logout = 5
 };
 
+enum enQuickWithdrawOptions
+{
+    quickWithdrawOpt_20 = 1,
+    quickWithdrawOpt_50 = 2,
+    quickWithdrawOpt_100 = 3,
+    quickWithdrawOpt_200 = 4,
+    quickWithdrawOpt_400 = 5,
+    quickWithdrawOpt_600 = 6,
+    quickWithdrawOpt_800 = 7,
+    quickWithdrawOpt_1000 = 8,
+    quickWithdrawOpt_exit = 9,
+
+};
+
 void WelcomeMessage()
 {
     cout << "\n\nWelcome to the Project ..\n"
@@ -189,35 +203,114 @@ void GoBackToATMMainMenu()
     ShowATMMainMenu();
 }
 
-void CheckBalanceScreen()
+void ShowCheckBalanceScreen()
 {
-    system("cls");
+    // system("cls");
     cout << "===========================================\n";
     cout << "\t  Check Balance Screen\n";
     cout << "===========================================\n";
+
+    cout << "\nYour Balance is: " << currentClient.accountBalance << "$" << endl;
 }
 
-short GetClientBalance()
+short ReadQuickWithdrawOption()
 {
-    return currentClient.accountBalance;
+    short choice = 0;
+    cout << "\nChoose what to withdraw from [1 to 8]: ";
+    cin >> choice;
+
+    return choice;
 }
 
-void ShowCheckBalanceScreen()
+void CalculationQuickWithdraw(stClient &currentClient, short withdrawalAmount)
 {
-    CheckBalanceScreen();
+    char answer = 'n';
 
-    cout << "\nYour Balance is: " << GetClientBalance();
+    cout << "\n\nAre you sure you want perfrom this transaction? (y/n): ";
+    cin >> answer;
+
+    if (answer == 'y' || answer == 'Y')
+    {
+        if (currentClient.accountBalance >= withdrawalAmount)
+        {
+            currentClient.accountBalance -= withdrawalAmount;
+            cout << "\nDone successfully. new balance is: " << currentClient.accountBalance << "$" << endl;
+        }
+        else
+        {
+            cout << "\nThe withdrawal amount is greater than your balance." << endl;
+        }
+    }
 }
 
-void PerfromATMMainMenuOption(enATMMainMenuOptions ATMMainMenuOption)
+void PerformQuickWithdrawOption(enQuickWithdrawOptions quickWithdrawOption)
+{
+    switch (quickWithdrawOption)
+    {
+    case enQuickWithdrawOptions::quickWithdrawOpt_20:
+        CalculationQuickWithdraw(currentClient, 20);
+        break;
+
+    case enQuickWithdrawOptions::quickWithdrawOpt_50:
+        CalculationQuickWithdraw(currentClient, 50);
+        break;
+
+    case enQuickWithdrawOptions::quickWithdrawOpt_100:
+        CalculationQuickWithdraw(currentClient, 100);
+        break;
+
+    case enQuickWithdrawOptions::quickWithdrawOpt_200:
+        CalculationQuickWithdraw(currentClient, 200);
+        break;
+
+    case enQuickWithdrawOptions::quickWithdrawOpt_400:
+        CalculationQuickWithdraw(currentClient, 400);
+        break;
+
+    case enQuickWithdrawOptions::quickWithdrawOpt_600:
+        CalculationQuickWithdraw(currentClient, 600);
+        break;
+
+    case enQuickWithdrawOptions::quickWithdrawOpt_800:
+        CalculationQuickWithdraw(currentClient, 800);
+        break;
+
+    case enQuickWithdrawOptions::quickWithdrawOpt_1000:
+        CalculationQuickWithdraw(currentClient, 1000);
+        break;
+
+    case enQuickWithdrawOptions::quickWithdrawOpt_exit:
+        ShowATMMainMenu();
+        break;
+    }
+}
+
+void ShowQuickWithdrawScreen()
+{
+    // system("cls");
+    cout << "===========================================\n";
+    cout << "\t  Quick Withdraw\n";
+    cout << "===========================================\n";
+    cout << "[1] 20          [2] 50\n";
+    cout << "[3] 100         [4] 200\n";
+    cout << "[5] 400         [6] 600\n";
+    cout << "[7] 800         [8] 1000\n";
+    cout << "[9] Exit.\n";
+    cout << "===========================================\n";
+
+    cout << "\nYour Balance is: " << currentClient.accountBalance << endl;
+    PerformQuickWithdrawOption((enQuickWithdrawOptions)ReadQuickWithdrawOption());
+}
+
+void PerformATMMainMenuOption(enATMMainMenuOptions ATMMainMenuOption)
 {
     switch (ATMMainMenuOption)
     {
     case enATMMainMenuOptions::ATMMainMenuOpt_quickWithdraw:
     {
         // system("cls");
-        // ShowQuickWithdrawScreen();
-        // GoBackToATMMainMenu();
+        ShowQuickWithdrawScreen();
+        GoBackToATMMainMenu();
         break;
     }
     case enATMMainMenuOptions::ATMMainMenuOpt_normalWithdraw:
@@ -233,22 +326,22 @@ void PerfromATMMainMenuOption(enATMMainMenuOptions ATMMainMenuOption)
         break;
 
     case enATMMainMenuOptions::ATMMainMenuOpt_checkBalance:
-        system("cls");
+        // system("cls");
         ShowCheckBalanceScreen();
         GoBackToATMMainMenu();
         break;
 
     case enATMMainMenuOptions::ATMMainMenuOpt_logout:
-        system("cls");
+        // system("cls");
         Login();
 
         break;
     }
 }
 
-void ATMMainMenuScreen()
+void ShowATMMainMenu()
 {
-    system("cls");
+    // system("cls");
     cout << "===========================================\n";
     cout << "\t    ATM Main Menu Screen\n";
     cout << "===========================================\n";
@@ -258,12 +351,8 @@ void ATMMainMenuScreen()
     cout << "[4] Check Balance.\n";
     cout << "[5] Logout.\n";
     cout << "===========================================\n";
-}
 
-void ShowATMMainMenu()
-{
-    ATMMainMenuScreen();
-    PerfromATMMainMenuOption((enATMMainMenuOptions)ReadATMMainMenuOption());
+    PerformATMMainMenuOption((enATMMainMenuOptions)ReadATMMainMenuOption());
 }
 
 void Login()
