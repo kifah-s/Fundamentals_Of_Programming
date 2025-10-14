@@ -1,3 +1,3 @@
-## Lesson 00: .
+## Lesson 00: Introduction.
 
 ---
