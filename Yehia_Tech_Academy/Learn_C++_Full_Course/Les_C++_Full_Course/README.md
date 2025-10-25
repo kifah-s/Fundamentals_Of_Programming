@@ -1,3 +1,0 @@
-## Lesson: C++ Full Course.
-
----
