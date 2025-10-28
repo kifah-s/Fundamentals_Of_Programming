@@ -1,4 +1,4 @@
-## Playlist: Learn C++ (OOP).
+## Playlist: Learn C++ (Object Oriented Programming).
 
 ---
 
