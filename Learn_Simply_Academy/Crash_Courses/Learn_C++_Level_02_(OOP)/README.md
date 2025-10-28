@@ -1,4 +1,4 @@
-## Playlist: Learn C++ Basics Level 02 (OOP).
+## Playlist: Learn C++ Level 02 (OOP).
 
 ---
 
