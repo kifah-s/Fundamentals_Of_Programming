@@ -1,4 +1,4 @@
-## Playlist: Learn C++ Basics Level 01.
+## Playlist: Learn C++ Basics.
 
 ---
 
