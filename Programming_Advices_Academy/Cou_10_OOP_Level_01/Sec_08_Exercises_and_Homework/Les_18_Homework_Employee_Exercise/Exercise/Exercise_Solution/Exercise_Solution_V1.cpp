@@ -34,78 +34,30 @@ public:
     }
 
     // Read Only.
-    int GetID()
-    {
-        return _ID;
-    }
+    int GetID() { return _ID; }
 
-    void SetFirstName(string firstName)
-    {
-        _firstName = firstName;
-    }
-    string GetFirstName()
-    {
-        return _firstName;
-    }
+    void SetFirstName(string firstName) { _firstName = firstName; }
+    string GetFirstName() { return _firstName; }
 
-    void SetLastName(string lastName)
-    {
-        _lastName = lastName;
-    }
-    string GetlastName()
-    {
-        return _lastName;
-    }
+    void SetLastName(string lastName) { _lastName = lastName; }
+    string GetlastName() { return _lastName; }
 
-    string GetFullName()
-    {
-        return _firstName + " " + _lastName;
-    }
+    string GetFullName() { return _firstName + " " + _lastName; }
 
-    void SetTitle(string title)
-    {
-        _title = title;
-    }
-    string GetTitle()
-    {
-        return _title;
-    }
+    void SetTitle(string title) { _title = title; }
+    string GetTitle() { return _title; }
 
-    void SetEmail(string email)
-    {
-        _email = email;
-    }
-    string GetEmail()
-    {
-        return _email;
-    }
+    void SetEmail(string email) { _email = email; }
+    string GetEmail() { return _email; }
 
-    void SetPhone(string phone)
-    {
-        _phone = phone;
-    }
-    string GetPhone()
-    {
-        return _phone;
-    }
+    void SetPhone(string phone) { _phone = phone; }
+    string GetPhone() { return _phone; }
 
-    void SetSalary(string salary)
-    {
-        _salary = salary;
-    }
-    string GetSalary()
-    {
-        return _salary;
-    }
-    
-    void SetDepartment(string department)
-    {
-        _department = department;
-    }
-    string GetDepartment()
-    {
-        return _department;
-    }
+    void SetSalary(string salary) { _salary = salary; }
+    string GetSalary() { return _salary; }
+
+    void SetDepartment(string department) { _department = department; }
+    string GetDepartment() { return _department; }
 
     void PrintInfo()
     {
