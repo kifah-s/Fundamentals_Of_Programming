@@ -170,7 +170,7 @@ public:
 
     void Print()
     {
-        clsPerson::Print();
+        // clsPerson::Print();
 
         cout << "\nInfo:";
         cout << "\n___________________";
