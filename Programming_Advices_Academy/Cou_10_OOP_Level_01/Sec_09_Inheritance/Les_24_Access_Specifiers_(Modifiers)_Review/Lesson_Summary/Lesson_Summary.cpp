@@ -1,0 +1,58 @@
+#include <iostream>
+
+using namespace std;
+
+void WelcomeMessage()
+{
+    cout << "\n\nWelcome to the Lesson Summary ..\n"
+         << endl;
+}
+
+class clsA
+{
+private:
+    // only accessible inside this class, neither derived classes nor outside class.
+    int _Var1;
+
+    void _Fun1()
+    {
+        cout << "Function 1";
+    }
+
+protected:
+    // only accessible inside this class and all derived classes, but not outside class.
+    int Var2;
+
+    void Fun2()
+    {
+        cout << "Function 1";
+    }
+
+public:
+    // Accessible inside this class, all derived classes, and outside class.
+    int Var3;
+
+    void Fun3()
+    {
+        cout << "Function 1";
+    }
+};
+
+class clsB : public clsA
+{
+public:
+    void Func1()
+    {
+        cout << clsA::Var2;
+    }
+};
+
+int main()
+{
+    WelcomeMessage();
+
+    cout << endl
+         << endl;
+
+    return 0;
+}
