@@ -1,0 +1,56 @@
+#include <iostream>
+
+using namespace std;
+
+void WelcomeMessage()
+{
+    cout << "\n\nWelcome to the Lesson Summary ..\n"
+         << endl;
+}
+
+class clsPerson
+{
+    class clsAddress
+    {
+    public:
+        string AddressLine1;
+        string AddressLine2;
+        string City;
+        string Country;
+
+        void Print()
+        {
+            cout << "\nAddress:\n";
+            cout << AddressLine1 << endl;
+            cout << AddressLine2 << endl;
+            cout << City << endl;
+            cout << Country << endl;
+        }
+    };
+
+public:
+    string FullName;
+    clsAddress Address;
+
+    clsPerson()
+    {
+        FullName = "Mohammed Abu-Hadhoud";
+        Address.AddressLine1 = "Building 10";
+        Address.AddressLine2 = "Queen Rania Street";
+        Address.City = "Amman";
+        Address.Country = "Jordan";
+    }
+};
+
+int main()
+{
+    WelcomeMessage();
+
+    clsPerson Person1;
+    Person1.Address.Print();
+
+    cout << endl
+         << endl;
+
+    return 0;
+}
