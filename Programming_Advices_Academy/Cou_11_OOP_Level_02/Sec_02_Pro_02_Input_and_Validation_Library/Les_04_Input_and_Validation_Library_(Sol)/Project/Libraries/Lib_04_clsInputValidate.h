@@ -4,8 +4,8 @@
 #include <string>
 #include <limits>
 
-#include "clsString.h"
-#include "clsDate.h"
+#include "Lib_01_clsString.h"
+#include "Lib_02_clsDate.h"
 
 using namespace std;
 
@@ -63,15 +63,13 @@ public:
     static bool IsDateBetween(clsDate Date, clsDate From, clsDate To)
     {
         // Date>=From && Date<=To
-        if ((clsDate::IsDate1AfterDate2(Date, From) || clsDate::IsDate1EqualDate2(Date, From)) &&
-            (clsDate::IsDate1BeforeDate2(Date, To) || clsDate::IsDate1EqualDate2(Date, To)))
+        if ((clsDate::IsDate1AfterDate2(Date, From) || clsDate::IsDate1EqualDate2(Date, From)) && (clsDate::IsDate1BeforeDate2(Date, To) || clsDate::IsDate1EqualDate2(Date, To)))
         {
             return true;
         }
 
         // Date>=To && Date<=From
-        if ((clsDate::IsDate1AfterDate2(Date, To) || clsDate::IsDate1EqualDate2(Date, To)) &&
-            (clsDate::IsDate1BeforeDate2(Date, From) || clsDate::IsDate1EqualDate2(Date, From)))
+        if ((clsDate::IsDate1AfterDate2(Date, To) || clsDate::IsDate1EqualDate2(Date, To)) && (clsDate::IsDate1BeforeDate2(Date, From) || clsDate::IsDate1EqualDate2(Date, From)))
         {
             return true;
         }
