@@ -1,4 +1,7 @@
 #include <iostream>
+#include <iomanip>
+
+#include "Classes/UI/Main_Menu/clsMainScreen.h"
 
 using namespace std;
 
@@ -11,6 +14,8 @@ void WelcomeMessage()
 int main()
 {
     WelcomeMessage();
+
+    clsMainScreen::ShowMainMenu();
 
     cout << endl
          << endl;
