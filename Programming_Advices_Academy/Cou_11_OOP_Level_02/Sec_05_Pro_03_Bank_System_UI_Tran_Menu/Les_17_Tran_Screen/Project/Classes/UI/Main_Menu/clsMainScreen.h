@@ -103,45 +103,60 @@ private:
             break;
         }
         case enMainMenuOptions::eAddNewClient:
+        {
             system("cls");
             _ShowAddNewClientsScreen();
             _GoBackToMainMenu();
             break;
+        }
 
         case enMainMenuOptions::eDeleteClient:
+        {
             system("cls");
             _ShowDeleteClientScreen();
             _GoBackToMainMenu();
             break;
+        }
 
         case enMainMenuOptions::eUpdateClient:
+        {
             system("cls");
             _ShowUpdateClientScreen();
             _GoBackToMainMenu();
             break;
+        }
 
         case enMainMenuOptions::eFindClient:
+        {
             system("cls");
             _ShowFindClientScreen();
             _GoBackToMainMenu();
             break;
+        }
 
         case enMainMenuOptions::eShowTransactionsMenu:
+        {
             system("cls");
             _ShowTransactionsMenu();
+            _GoBackToMainMenu();
             break;
+        }
 
         case enMainMenuOptions::eManageUsers:
+        {
             system("cls");
             _ShowManageUsersMenu();
+            _GoBackToMainMenu();
             break;
+        }
 
         case enMainMenuOptions::eExit:
+        {
             system("cls");
             _ShowEndScreen();
             // Login();
-
             break;
+        }
         }
     }
 

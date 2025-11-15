@@ -265,7 +265,7 @@ public:
 
         case enMode::AddNewMode:
         {
-            // This will add new record to file or database.
+            // This will add new record to file or database
             if (clsBankClient::IsClientExist(_AccountNumber))
             {
                 return enSaveResults::svFailedAccountNumberExists;
@@ -274,15 +274,13 @@ public:
             {
                 _AddNew();
 
-                // We need to set the mode to update after add new.
+                // We need to set the mode to update after add new
                 _Mode = enMode::UpdateMode;
                 return enSaveResults::svSucceeded;
             }
             break;
         }
         }
-
-        return enSaveResults::svFailedEmptyObject;
     }
 
     static bool IsClientExist(string AccountNumber)
