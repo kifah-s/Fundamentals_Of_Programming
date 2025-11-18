@@ -1,0 +1,49 @@
+#pragma once
+
+#include <iostream>
+#include <iomanip>
+
+#include "../UI/clsScreen.h"
+#include "../UI/Man_Use_Menu/clsUser.h"
+#include "../UI/Main_Menu/clsMainScreen.h"
+#include "Global.h"
+
+class clsLoginScreen : protected clsScreen
+{
+private:
+    static void _Login()
+    {
+        bool LoginFailed = false;
+        string Username, Password;
+
+        do
+        {
+            if (LoginFailed)
+            {
+                cout << "\nInvalid Username/Password!\n\n";
+            }
+
+            cout << "Enter Username? ";
+            cin >> Username;
+
+            cout << "Enter Password? ";
+            cin >> Password;
+
+            CurrentUser = clsUser::Find(Username, Password);
+            
+
+            LoginFailed = CurrentUser.IsEmpty();
+
+        } while (LoginFailed);
+
+        clsMainScreen::ShowMainMenu();
+    }
+
+public:
+    static void ShowLoginScreen()
+    {
+        system("cls");
+        _DrawScreenHeader("\t  Login Screen");
+        _Login();
+    }
+};
