@@ -1,4 +1,7 @@
 #include <iostream>
+#include <iomanip>
+
+#include "Classes/Login_and_Per/clsLoginScreen.h"
 
 using namespace std;
 
@@ -11,6 +14,14 @@ void WelcomeMessage()
 int main()
 {
     WelcomeMessage();
+
+    while (true)
+    {
+        if (!clsLoginScreen::ShowLoginScreen())
+        {
+            break;
+        }
+    }
 
     cout << endl
          << endl;
