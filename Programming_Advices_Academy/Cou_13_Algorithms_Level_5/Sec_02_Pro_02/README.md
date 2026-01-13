@@ -1,3 +1,3 @@
-## Section 00: .
+## Section 02: Project 02 - MyQueue.
 
 ---
