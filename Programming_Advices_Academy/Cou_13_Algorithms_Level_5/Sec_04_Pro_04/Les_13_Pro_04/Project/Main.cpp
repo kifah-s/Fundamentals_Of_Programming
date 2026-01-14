@@ -1,0 +1,35 @@
+#include <iostream>
+
+#include "Classes/DS/clsDynamicArray.h"
+
+using namespace std;
+
+void WelcomeMessage()
+{
+    cout << "\n\nWelcome to the Project ..\n"
+         << endl;
+}
+
+int main()
+{
+    WelcomeMessage();
+
+    clsDynamicArray<int> MyDynamicArray(5);
+
+    MyDynamicArray.SetItem(0, 10);
+    MyDynamicArray.SetItem(1, 20);
+    MyDynamicArray.SetItem(2, 30);
+    MyDynamicArray.SetItem(3, 40);
+    MyDynamicArray.SetItem(4, 50);
+
+    cout << "\nIs Empty?  " << MyDynamicArray.IsEmpty();
+    cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
+    cout << "\nArray Items: \n";
+
+    MyDynamicArray.PrintList();
+
+    cout << endl
+         << endl;
+
+    return 0;
+}
