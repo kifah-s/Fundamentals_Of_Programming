@@ -1,3 +1,3 @@
-## My Projects in This Course ..
+## Projects ..
 
 ---
