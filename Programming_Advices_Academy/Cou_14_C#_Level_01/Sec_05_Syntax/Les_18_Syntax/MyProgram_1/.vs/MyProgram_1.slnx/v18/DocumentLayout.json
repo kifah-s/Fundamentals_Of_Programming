@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Ambition\\My_GitHub_Account\\Fundamentals_Of_Programming\\Programming_Advices_Academy\\Cou_14_C#_Level_01\\Sec_05_Syntax\\Les_18_Syntax\\MyProgram_1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FCCD05C0-FDF3-4DC2-94F5-539046199601}|MyProgram_1\\MyProgram_1.csproj|d:\\ambition\\my_github_account\\fundamentals_of_programming\\programming_advices_academy\\cou_14_c#_level_01\\sec_05_syntax\\les_18_syntax\\myprogram_1\\myprogram_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCCD05C0-FDF3-4DC2-94F5-539046199601}|MyProgram_1\\MyProgram_1.csproj|solutionrelative:myprogram_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Ambition\\My_GitHub_Account\\Fundamentals_Of_Programming\\Programming_Advices_Academy\\Cou_14_C#_Level_01\\Sec_05_Syntax\\Les_18_Syntax\\MyProgram_1\\MyProgram_1\\Program.cs",
+              "RelativeDocumentMoniker": "MyProgram_1\\Program.cs",
+              "ToolTip": "D:\\Ambition\\My_GitHub_Account\\Fundamentals_Of_Programming\\Programming_Advices_Academy\\Cou_14_C#_Level_01\\Sec_05_Syntax\\Les_18_Syntax\\MyProgram_1\\MyProgram_1\\Program.cs",
+              "RelativeToolTip": "MyProgram_1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-01T16:16:56.056Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
