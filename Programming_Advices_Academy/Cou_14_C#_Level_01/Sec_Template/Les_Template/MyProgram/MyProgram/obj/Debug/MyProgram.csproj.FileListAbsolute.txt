@@ -1,0 +1,7 @@
+D:\Ambition\My_GitHub_Account\Fundamentals_Of_Programming\Programming_Advices_Academy\Cou_14_C#_Level_01\Sec_Template\Les_Template\MyProgram\MyProgram\bin\Debug\MyProgram.exe.config
+D:\Ambition\My_GitHub_Account\Fundamentals_Of_Programming\Programming_Advices_Academy\Cou_14_C#_Level_01\Sec_Template\Les_Template\MyProgram\MyProgram\bin\Debug\MyProgram.exe
+D:\Ambition\My_GitHub_Account\Fundamentals_Of_Programming\Programming_Advices_Academy\Cou_14_C#_Level_01\Sec_Template\Les_Template\MyProgram\MyProgram\bin\Debug\MyProgram.pdb
+D:\Ambition\My_GitHub_Account\Fundamentals_Of_Programming\Programming_Advices_Academy\Cou_14_C#_Level_01\Sec_Template\Les_Template\MyProgram\MyProgram\obj\Debug\MyProgram.csproj.AssemblyReference.cache
+D:\Ambition\My_GitHub_Account\Fundamentals_Of_Programming\Programming_Advices_Academy\Cou_14_C#_Level_01\Sec_Template\Les_Template\MyProgram\MyProgram\obj\Debug\MyProgram.csproj.CoreCompileInputs.cache
+D:\Ambition\My_GitHub_Account\Fundamentals_Of_Programming\Programming_Advices_Academy\Cou_14_C#_Level_01\Sec_Template\Les_Template\MyProgram\MyProgram\obj\Debug\MyProgram.exe
+D:\Ambition\My_GitHub_Account\Fundamentals_Of_Programming\Programming_Advices_Academy\Cou_14_C#_Level_01\Sec_Template\Les_Template\MyProgram\MyProgram\obj\Debug\MyProgram.pdb
