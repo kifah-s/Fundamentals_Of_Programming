@@ -1,0 +1,15 @@
+﻿using System;
+
+namespace MyProgram
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("{0} {1}", "Welcome to", "ProgrammingAvices");
+            Console.WriteLine("Hi MyName is: {0} I live in {1}", "Mohammed", "Jordan");
+
+            Console.ReadKey();
+        }
+    }
+}
