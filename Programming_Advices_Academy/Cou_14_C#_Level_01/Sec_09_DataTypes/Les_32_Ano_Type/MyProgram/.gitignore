@@ -1,0 +1,39 @@
+## Visual Studio Temporary Files
+.vs/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+
+## Visual Studio Solution User Options
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+
+## JetBrains Rider (If you use it)
+.idea/
+
+## Windows temporary files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
