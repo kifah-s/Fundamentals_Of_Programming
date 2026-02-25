@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MyProject
+namespace MDI_Sample
 {
     internal static class Program
     {

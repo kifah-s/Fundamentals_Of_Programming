@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MyProject.Properties
+namespace MDI_Sample.Properties
 {
 
 
