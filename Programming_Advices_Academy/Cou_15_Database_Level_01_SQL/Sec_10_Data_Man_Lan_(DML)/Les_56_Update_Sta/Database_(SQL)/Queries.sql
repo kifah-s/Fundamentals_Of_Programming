@@ -1,0 +1,25 @@
+
+
+
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+
+-----------------------------------------------------
+
+--this will show all data in the table
+select * from Employees;
+
+-- this will update one filed at a time
+Update Employees set Name ='Mohammed Abu-Hadhoud'  where ID=2;
+
+-- this will update multiple fields at a time.
+Update Employees 
+set Name ='Mohammed Abu-Hadhoud' ,  Salary=5000 where ID=2;
+
+-- this will increase the salary by 200 for all employees that their salaries are less than 500
+update Employees set Salary = Salary+ 200 where  Salary < 500 ;
+
+-- this will increase the salary by 10% for all employees that their salaries are less than or equal 1000
+update Employees 
+set Salary = Salary *1.1 where  Salary <= 1000;
