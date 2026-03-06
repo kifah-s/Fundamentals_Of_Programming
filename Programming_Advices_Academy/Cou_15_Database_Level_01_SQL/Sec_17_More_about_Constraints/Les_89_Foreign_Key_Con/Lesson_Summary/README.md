@@ -35,24 +35,27 @@ CREATE TABLE Orders (
 ```
 ---
 
-####SQL FOREIGN KEY on ALTER TABLE
+#### SQL FOREIGN KEY on ALTER TABLE
 
 To create a FOREIGN KEY constraint on the "PersonID" column when the "Orders" table is already created, use the following SQL:
-
+```
 ALTER TABLE Orders
 ADD FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
+```
 
 To allow naming of a FOREIGN KEY constraint, and for defining a FOREIGN KEY constraint on multiple columns, use the following SQL syntax:
-
+```
 ALTER TABLE Orders
 ADD CONSTRAINT FK_PersonOrder
 FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
+```
 
 ---
 
 #### DROP a FOREIGN KEY Constraint
 
 To drop a FOREIGN KEY constraint, use the following SQL:
-
+```
 ALTER TABLE Orders
 DROP CONSTRAINT FK_PersonOrder;
+```

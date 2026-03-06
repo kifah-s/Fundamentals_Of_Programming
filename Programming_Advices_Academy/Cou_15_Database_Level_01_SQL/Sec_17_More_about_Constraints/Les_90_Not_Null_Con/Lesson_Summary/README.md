@@ -21,6 +21,7 @@ CREATE TABLE Persons (
 #### SQL NOT NULL on ALTER TABLE
 
 To create a NOT NULL constraint on the "Age" column when the "Persons" table is already created, use the following SQL:
-
+```
 ALTER TABLE Persons
 ALTER COLUMN Age int NOT NULL;
+```

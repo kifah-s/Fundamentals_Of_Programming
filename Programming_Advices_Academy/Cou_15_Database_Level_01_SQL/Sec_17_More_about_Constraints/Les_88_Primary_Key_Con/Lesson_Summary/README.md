@@ -3,6 +3,7 @@
 ---
 
 #### SQL PRIMARY KEY Constraint
+
 The PRIMARY KEY constraint uniquely identifies each record in a table.
 
 Primary keys must contain UNIQUE values, and cannot contain NULL values.
@@ -41,14 +42,16 @@ Note: In the example above there is only ONE PRIMARY KEY (PK_Person). However, t
 #### SQL PRIMARY KEY on ALTER TABLE
 
 To create a PRIMARY KEY constraint on the "ID" column when the table is already created, use the following SQL:
-
+```
 ALTER TABLE Persons
 ADD PRIMARY KEY (ID);
+```
 
 To allow naming of a PRIMARY KEY constraint, and for defining a PRIMARY KEY constraint on multiple columns, use the following SQL syntax:
-
+```
 ALTER TABLE Persons
 ADD CONSTRAINT PK_Person PRIMARY KEY (ID,LastName);
+```
 
 Note: If you use ALTER TABLE to add a primary key, the primary key column(s) must have been declared to not contain NULL values (when the table was first created).
 
@@ -57,6 +60,7 @@ Note: If you use ALTER TABLE to add a primary key, the primary key column(s) mus
 #### DROP a PRIMARY KEY Constraint
 
 To drop a PRIMARY KEY constraint, use the following SQL:
-
+```
 ALTER TABLE Persons
 DROP CONSTRAINT PK_Person;
+```
