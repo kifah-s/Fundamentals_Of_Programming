@@ -363,7 +363,8 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # Custom Large Files for Database Projects
-*.bak
-*.zip
-*.csv
-*.sql
+# *.bak
+# *.zip
+# *.csv
+# *.sql
+# *.xlsx

@@ -1,0 +1,4 @@
+
+
+ALTER TABLE Employees
+DROP COLUMN Gender;
