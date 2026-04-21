@@ -1,0 +1,5 @@
+## Lesson Summary.
+
+---
+
+- Inner Join.
