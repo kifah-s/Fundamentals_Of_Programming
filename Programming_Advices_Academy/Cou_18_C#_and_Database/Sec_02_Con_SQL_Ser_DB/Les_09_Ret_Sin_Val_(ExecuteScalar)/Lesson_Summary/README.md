@@ -2,3 +2,4 @@
 
 ---
 
+ExecuteScalar  ->  Single Value.
