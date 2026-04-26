@@ -2,4 +2,4 @@
 
 ---
 
-ExecuteScalar  ->  Single Value.
+- ExecuteScalar()  ->  Single Value.
