@@ -39,6 +39,7 @@ namespace L2_BusLay
             this.DateOfBirth = DateTime.Now;
             this.CountryID = -1;
             this.ImagePath = "";
+
             Mode = enMode.AddNew;
         }
 
@@ -60,6 +61,7 @@ namespace L2_BusLay
         private bool _AddNewContact()
         {
             // Call DataAccess Layer.
+
             this.ID = clsContactDataAccess.AddNewContact(this.FirstName, this.LastName, this.Email, this.Phone, this.Address, this.DateOfBirth, this.CountryID, this.ImagePath);
 
             return (this.ID != -1);
@@ -67,7 +69,7 @@ namespace L2_BusLay
 
         private bool _UpdateContact()
         {
-            // Call DataAccess Layer.
+            // Call DataAccess Layer 
 
             return clsContactDataAccess.UpdateContact(this.ID, this.FirstName, this.LastName, this.Email, this.Phone, this.Address, this.DateOfBirth, this.CountryID, this.ImagePath);
         }
@@ -75,7 +77,9 @@ namespace L2_BusLay
         public static clsContact Find(int ID)
         {
             string FirstName = "", LastName = "", Email = "", Phone = "", Address = "", ImagePath = "";
+
             DateTime DateOfBirth = DateTime.Now;
+
             int CountryID = -1;
 
             if (clsContactDataAccess.GetContactInfoByID(ID, ref FirstName, ref LastName, ref Email, ref Phone, ref Address, ref DateOfBirth, ref CountryID, ref ImagePath))
@@ -96,7 +100,6 @@ namespace L2_BusLay
                     {
                         if (_AddNewContact())
                         {
-
                             Mode = enMode.Update;
                             return true;
                         }
@@ -122,6 +125,11 @@ namespace L2_BusLay
         public static bool DeleteContact(int ID)
         {
             return clsContactDataAccess.DeleteContact(ID);
+        }
+
+        public static bool isContactExist(int ID)
+        {
+            return clsContactDataAccess.IsContactExist(ID);
         }
     }
 }

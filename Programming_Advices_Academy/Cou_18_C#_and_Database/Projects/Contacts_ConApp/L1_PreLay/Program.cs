@@ -41,7 +41,7 @@ namespace L1_PreLay
 
             if (Contact1.Save())
             {
-                Console.WriteLine("Contact Added Successfully with id=" + Contact1.ID);
+                Console.WriteLine("Contact Added Successfully with id = " + Contact1.ID);
             }
 
         }
@@ -53,8 +53,8 @@ namespace L1_PreLay
             if (Contact1 != null)
             {
                 // Update whatever info you want.
-                Contact1.FirstName = "Fadi2";
-                Contact1.LastName = "Maher2";
+                Contact1.FirstName = "Lina";
+                Contact1.LastName = "Maher";
                 Contact1.Email = "A2@a.com";
                 Contact1.Phone = "2222";
                 Contact1.Address = "222";
@@ -66,11 +66,29 @@ namespace L1_PreLay
                 {
                     Console.WriteLine("Contact updated Successfully ");
                 }
-
             }
             else
             {
                 Console.WriteLine("Not found!");
+            }
+        }
+
+        static void testDeleteContact(int ID)
+        {
+            if (clsContact.isContactExist(ID))
+            {
+                if (clsContact.DeleteContact(ID))
+                {
+                    Console.WriteLine("Contact Deleted Successfully.");
+                }
+                else
+                {
+                    Console.WriteLine("Faild to delete contact.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("The contact with id = " + ID + " is not found");
             }
         }
 
@@ -84,15 +102,27 @@ namespace L1_PreLay
             {
                 Console.WriteLine($"{row["ContactID"]},  {row["FirstName"]} {row["LastName"]}");
             }
+        }
 
+        static void testIsContactExist(int ID)
+        {
+            if (clsContact.isContactExist(ID))
+            {
+                Console.WriteLine("Yes, Contact is there.");
+            }
+            else
+            {
+                Console.WriteLine("No, Contact Is not there.");
+            }
         }
 
         static void Main(string[] args)
         {
-            testFindContact(1);
-            //testAddNewContact();
+            //testFindContact(1);
+            testAddNewContact();
             //testUpdateContact(1);
             //ListContacts();
+            //testIsContactExist(1);
 
             Console.ReadKey();
         }

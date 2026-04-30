@@ -36,7 +36,16 @@ namespace L3_DataAccLay
                     Address = (string)reader["Address"];
                     DateOfBirth = (DateTime)reader["DateOfBirth"];
                     CountryID = (int)reader["CountryID"];
-                    ImagePath = (string)reader["ImagePath"];
+
+                    //ImagePath: allows null in database so we should handle null
+                    if (reader["ImagePath"] != DBNull.Value)
+                    {
+                        ImagePath = (string)reader["ImagePath"];
+                    }
+                    else
+                    {
+                        ImagePath = "";
+                    }
 
                 }
                 else
@@ -46,8 +55,6 @@ namespace L3_DataAccLay
                 }
 
                 reader.Close();
-
-
             }
             catch (Exception ex)
             {
@@ -65,14 +72,15 @@ namespace L3_DataAccLay
         public static int AddNewContact(string FirstName, string LastName, string Email, string Phone, string Address, DateTime DateOfBirth, int CountryID, string ImagePath)
         {
             // This function will return the new contact id if succeeded and -1 if not.
+            int ContactID = -1;
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
 
             string query = @"INSERT INTO Contacts
-                            (FirstName, LastName, Email, Phone, Address,DateOfBirth, CountryID,ImagePath)
+                            (FirstName, LastName, Email, Phone, Address, DateOfBirth, CountryID, ImagePath)
                             VALUES
-                            (@FirstName, @LastName, @Email, @Phone, @Address,@DateOfBirth @CountryID,@ImagePath);
-                            SELECT SCOPE_IDENTITY();";
+                            (@FirstName, @LastName, @Email, @Phone, @Address, @DateOfBirth, @CountryID, @ImagePath);
+                             SELECT SCOPE_IDENTITY();";
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -83,7 +91,15 @@ namespace L3_DataAccLay
             command.Parameters.AddWithValue("@Address", Address);
             command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
             command.Parameters.AddWithValue("@CountryID", CountryID);
-            command.Parameters.AddWithValue("@ImagePath", ImagePath);
+
+            if (ImagePath != "")
+            {
+                command.Parameters.AddWithValue("@ImagePath", ImagePath);
+            }
+            else
+            {
+                command.Parameters.AddWithValue("@ImagePath", System.DBNull.Value);
+            }
 
             try
             {
@@ -91,23 +107,21 @@ namespace L3_DataAccLay
 
                 object result = command.ExecuteScalar();
 
-                connection.Close();
-
                 if (result != null && int.TryParse(result.ToString(), out int insertedID))
                 {
-                    return insertedID;
-                }
-                else
-                {
-                    return -1;
+                    ContactID = insertedID;
                 }
             }
             catch (Exception ex)
             {
-                // Console.WriteLine("Error: " + ex.Message);
+                //Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
             }
 
-            return -1;
+            return ContactID;
         }
 
         public static bool UpdateContact(int ID, string FirstName, string LastName, string Email, string Phone, string Address, DateTime DateOfBirth, int CountryID, string ImagePath)
@@ -116,7 +130,7 @@ namespace L3_DataAccLay
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
 
-            string query = @"Update  Contacts  
+            string query = @"Update Contacts  
                             set FirstName = @FirstName, 
                                 LastName = @LastName, 
                                 Email = @Email, 
@@ -137,18 +151,25 @@ namespace L3_DataAccLay
             command.Parameters.AddWithValue("@Address", Address);
             command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
             command.Parameters.AddWithValue("@CountryID", CountryID);
-            command.Parameters.AddWithValue("@ImagePath", ImagePath);
+
+            if (ImagePath != "")
+            {
+                command.Parameters.AddWithValue("@ImagePath", ImagePath);
+            }
+            else
+            {
+                command.Parameters.AddWithValue("@ImagePath", System.DBNull.Value);
+            }
 
             try
             {
                 connection.Open();
 
                 rowsAffected = command.ExecuteNonQuery();
-
             }
             catch (Exception ex)
             {
-                // Console.WriteLine("Error: " + ex.Message);
+                //Console.WriteLine("Error: " + ex.Message);
                 return false;
             }
             finally
@@ -181,7 +202,6 @@ namespace L3_DataAccLay
                 }
 
                 reader.Close();
-                connection.Close();
             }
             catch (Exception ex)
             {
@@ -223,6 +243,41 @@ namespace L3_DataAccLay
             }
 
             return (rowsAffected > 0);
+        }
+
+        public static bool IsContactExist(int ID)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+
+            string query = "SELECT Found = 1 FROM Contacts WHERE ContactID = @ContactID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@ContactID", ID);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                isFound = reader.HasRows;
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
         }
     }
 }
