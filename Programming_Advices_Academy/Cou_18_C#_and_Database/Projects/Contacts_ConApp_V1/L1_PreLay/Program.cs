@@ -119,10 +119,11 @@ namespace L1_PreLay
         static void Main(string[] args)
         {
             //testFindContact(1);
-            testAddNewContact();
-            //testUpdateContact(1);
+            //testAddNewContact();
+            //testUpdateContact(15);
+            //testDeleteContact(15);
             //ListContacts();
-            //testIsContactExist(1);
+            testIsContactExist(1);
 
             Console.ReadKey();
         }
