@@ -43,7 +43,6 @@ namespace L1_PreLay
             {
                 Console.WriteLine("Contact Added Successfully with id = " + Contact1.ID);
             }
-
         }
 
         static void testUpdateContact(int ID)
