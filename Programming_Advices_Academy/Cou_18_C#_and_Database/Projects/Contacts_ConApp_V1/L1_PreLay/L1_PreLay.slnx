@@ -1,5 +1,0 @@
-<Solution>
-  <Project Path="../L2_BusLay/L2_BusLay.csproj" Id="b3082659-442e-4aa9-ad83-894cca268b6c" />
-  <Project Path="../L3_DBLay/L3_DataAccLay.csproj" Id="4127dadf-2c63-4daa-81cb-6688005ffade" />
-  <Project Path="L1_PreLay.csproj" Id="fe35a455-5072-4a80-b326-29eaa081dbff" />
-</Solution>
