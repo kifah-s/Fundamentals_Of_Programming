@@ -117,6 +117,125 @@ namespace L1_PreLay
             }
         }
 
+        // ----------------- Country ----------------- //
+
+        static void TestFindCountryByID(int ID)
+        {
+            clsCountry country1 = clsCountry.Find(ID);
+
+            if (country1 != null)
+            {
+                Console.WriteLine(country1.countryName);
+            }
+            else
+            {
+                Console.WriteLine("Country [" + ID + "] Not found!");
+            }
+        }
+
+        static void TestFindCountryByName(string countryName)
+        {
+            clsCountry country1 = clsCountry.Find(countryName);
+
+            if (country1 != null)
+            {
+                Console.WriteLine("Country [" + countryName + "] isFound with ID = " + country1.ID);
+            }
+            else
+            {
+                Console.WriteLine("Country [" + countryName + "] Is Not found!");
+            }
+        }
+
+        static void TestIsCountryExistByID(int ID)
+        {
+            if (clsCountry.IsCountryExist(ID))
+            {
+                Console.WriteLine("Yes, Country is there.");
+            }
+            else
+            {
+                Console.WriteLine("No, Country Is not there.");
+            }
+
+        }
+
+        static void TestIsCountryExistByName(string countryName)
+        {
+            if (clsCountry.IsCountryExist(countryName))
+            {
+                Console.WriteLine("Yes, Country is there.");
+            }
+            else
+            {
+                Console.WriteLine("No, Country Is not there.");
+            }
+        }
+
+        static void TestAddNewCountry()
+        {
+            clsCountry country1 = new clsCountry();
+
+            country1.countryName = "Lebanon";
+
+            if (country1.Save())
+            {
+                Console.WriteLine("Country Added Successfully with id = " + country1.ID);
+            }
+
+        }
+
+        static void TestUpdateCountry(int ID)
+        {
+            clsCountry country1 = clsCountry.Find(ID);
+
+            if (country1 != null)
+            {
+                // update whatever info you want.
+                country1.countryName = "Syria";
+
+                if (country1.Save())
+                {
+                    Console.WriteLine("Country updated Successfully ");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Country is you want to update is Not found!");
+            }
+        }
+
+        static void TestDeleteCountry(int ID)
+        {
+            if (clsCountry.IsCountryExist(ID))
+            {
+                if (clsCountry.DeleteCountry(ID))
+                {
+                    Console.WriteLine("Country Deleted Successfully.");
+                }
+                else
+                {
+                    Console.WriteLine("Faild to delete Country.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Faild to delete: The Country with id = " + ID + " is not found");
+            }
+
+        }
+
+        static void ListCountries()
+        {
+            DataTable dataTable = clsCountry.GetAllCountries();
+
+            Console.WriteLine("Coutries Data:");
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                Console.WriteLine($"{row["CountryID"]},  {row["CountryName"]}");
+            }
+        }
 
         static void Main(string[] args)
         {
@@ -125,7 +244,20 @@ namespace L1_PreLay
             //TestUpdateContact(16);
             //TestDeleteContact(16);
             //ListContacts();
-            TestIsContactExist(5);
+            //TestIsContactExist(5);
+
+            // ----------------- Country ----------------- //
+
+            //TestFindCountryByID(1);
+            //TestFindCountryByName("Canada");
+            //TestIsCountryExistByID(1);
+            //TestIsCountryExistByName("Canada");
+            //TestAddNewCountry();
+            //TestUpdateCountry(6);
+            //TestDeleteCountry(6);
+            //ListCountries();
+
+            // ----------------- ................ ----------------- //
 
             Console.ReadKey();
         }

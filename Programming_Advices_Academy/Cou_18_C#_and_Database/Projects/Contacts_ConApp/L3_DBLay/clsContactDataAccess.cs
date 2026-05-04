@@ -70,7 +70,6 @@ namespace L3_DataAccLay
             return isFound;
         }
 
-
         public static int AddNewContact(string firstName, string lastName, string email, string phone, string address, DateTime dateOfBirth, int countryID, string imagePath)
         {
             // This function will return the new contact id if succeeded and -1 if not.
