@@ -1,3 +1,3 @@
-## Contacts Project - Console App - V2.
+## Contacts Project - Console App.
 
 ---
