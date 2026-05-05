@@ -6,7 +6,7 @@ namespace L3_DataAccLay
 {
     public class clsCountryDataAccess
     {
-        public static bool GetCountryInfoByID(int ID, ref string countryName)
+        public static bool GetCountryInfoByID(int ID, ref string countryName, ref string code, ref string phoneCode)
         {
             bool isFound = false;
 
@@ -32,6 +32,24 @@ namespace L3_DataAccLay
                     isFound = true;
 
                     countryName = (string)reader["CountryName"];
+
+                    if (reader["Code"] != DBNull.Value)
+                    {
+                        code = (string)reader["Code"];
+                    }
+                    else
+                    {
+                        code = "";
+                    }
+
+                    if (reader["PhoneCode"] != DBNull.Value)
+                    {
+                        phoneCode = (string)reader["PhoneCode"];
+                    }
+                    else
+                    {
+                        phoneCode = "";
+                    }
                 }
                 else
                 {
@@ -54,7 +72,7 @@ namespace L3_DataAccLay
             return isFound;
         }
 
-        public static bool GetCountryInfoByName(string countryName, ref int ID)
+        public static bool GetCountryInfoByName(string countryName, ref int ID, ref string code, ref string phoneCode)
         {
             bool isFound = false;
 
@@ -80,6 +98,24 @@ namespace L3_DataAccLay
                     isFound = true;
 
                     ID = (int)reader["CountryID"];
+
+                    if (reader["Code"] != DBNull.Value)
+                    {
+                        code = (string)reader["Code"];
+                    }
+                    else
+                    {
+                        code = "";
+                    }
+
+                    if (reader["PhoneCode"] != DBNull.Value)
+                    {
+                        phoneCode = (string)reader["PhoneCode"];
+                    }
+                    else
+                    {
+                        phoneCode = "";
+                    }
                 }
                 else
                 {
@@ -176,20 +212,38 @@ namespace L3_DataAccLay
             return isFound;
         }
 
-        public static int AddNewCountry(string countryName)
+        public static int AddNewCountry(string countryName, string code, string phoneCode)
         {
             // This function will return the new country id if succeeded and -1 if not.
             int countryID = -1;
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
 
-            string query = @"INSERT INTO Countries (CountryName)
-                             VALUES (@CountryName);
+            string query = @"INSERT INTO Countries (CountryName, Code, PhoneCode)
+                             VALUES (@CountryName, @Code, @PhoneCode);
                              SELECT SCOPE_IDENTITY();";
 
             SqlCommand command = new SqlCommand(query, connection);
 
             command.Parameters.AddWithValue("@CountryName", countryName);
+
+            if (code != "")
+            {
+                command.Parameters.AddWithValue("@Code", code);
+            }
+            else
+            {
+                command.Parameters.AddWithValue("@Code", System.DBNull.Value);
+            }
+
+            if (phoneCode != "")
+            {
+                command.Parameters.AddWithValue("@PhoneCode", phoneCode);
+            }
+            else
+            {
+                command.Parameters.AddWithValue("@PhoneCode", System.DBNull.Value);
+            }
 
             try
             {
@@ -215,20 +269,24 @@ namespace L3_DataAccLay
             return countryID;
         }
 
-        public static bool UpdateCountry(int ID, string countryName)
+        public static bool UpdateCountry(int ID, string countryName, string code, string phoneCode)
         {
             int rowsAffected = 0;
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
 
             string query = @"Update Countries  
-                            set CountryName = @CountryName
-                            where CountryID = @CountryID";
+                            set CountryName = @CountryName,
+                                Code = @Code,
+                                PhoneCode = @PhoneCode
+                                where CountryID = @CountryID";
 
             SqlCommand command = new SqlCommand(query, connection);
 
             command.Parameters.AddWithValue("@CountryID", ID);
             command.Parameters.AddWithValue("@CountryName", countryName);
+            command.Parameters.AddWithValue("@Code", code);
+            command.Parameters.AddWithValue("@PhoneCode", phoneCode);
 
             try
             {

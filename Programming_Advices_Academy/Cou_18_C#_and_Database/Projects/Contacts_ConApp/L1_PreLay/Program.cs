@@ -125,7 +125,9 @@ namespace L1_PreLay
 
             if (country1 != null)
             {
-                Console.WriteLine(country1.countryName);
+                Console.WriteLine($"Name: {country1.countryName}");
+                Console.WriteLine($"Code: {country1.code}");
+                Console.WriteLine($"PhoneCode: {country1.phoneCode}");
             }
             else
             {
@@ -140,6 +142,9 @@ namespace L1_PreLay
             if (country1 != null)
             {
                 Console.WriteLine("Country [" + countryName + "] isFound with ID = " + country1.ID);
+                Console.WriteLine($"Name: {country1.countryName}");
+                Console.WriteLine($"Code: {country1.code}");
+                Console.WriteLine($"PhoneCode: {country1.phoneCode}");
             }
             else
             {
@@ -177,6 +182,8 @@ namespace L1_PreLay
             clsCountry country1 = new clsCountry();
 
             country1.countryName = "Lebanon";
+            country1.code = "222";
+            country1.phoneCode = "001";
 
             if (country1.Save())
             {
@@ -193,6 +200,8 @@ namespace L1_PreLay
             {
                 // update whatever info you want.
                 country1.countryName = "Syria";
+                country1.code = "222";
+                country1.phoneCode = "001";
 
                 if (country1.Save())
                 {
@@ -233,7 +242,7 @@ namespace L1_PreLay
 
             foreach (DataRow row in dataTable.Rows)
             {
-                Console.WriteLine($"{row["CountryID"]},  {row["CountryName"]}");
+                Console.WriteLine($"{row["CountryID"]},  {row["CountryName"]}, {row["Code"]}, {row["PhoneCode"]}");
             }
         }
 
@@ -253,9 +262,9 @@ namespace L1_PreLay
             //TestIsCountryExistByID(1);
             //TestIsCountryExistByName("Canada");
             //TestAddNewCountry();
-            //TestUpdateCountry(6);
+            //TestUpdateCountry(7);
             //TestDeleteCountry(6);
-            //ListCountries();
+            ListCountries();
 
             // ----------------- ................ ----------------- //
 

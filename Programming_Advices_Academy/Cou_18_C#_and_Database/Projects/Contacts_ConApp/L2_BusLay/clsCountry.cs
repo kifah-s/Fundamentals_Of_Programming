@@ -1,5 +1,4 @@
 ﻿using L3_DataAccLay;
-using System;
 using System.Data;
 
 namespace L2_BusLay
@@ -13,6 +12,12 @@ namespace L2_BusLay
 
         public string countryName { set; get; }
 
+        public string code { set; get; }
+
+        public string phoneCode { set; get; }
+
+
+
         public clsCountry()
         {
             this.ID = -1;
@@ -21,10 +26,12 @@ namespace L2_BusLay
             Mode = enMode.addNew;
         }
 
-        private clsCountry(int ID, string countryName)
+        private clsCountry(int ID, string countryName, string code, string phoneCode)
         {
             this.ID = ID;
             this.countryName = countryName;
+            this.code = code;
+            this.code = phoneCode;
 
             Mode = enMode.update;
         }
@@ -32,7 +39,7 @@ namespace L2_BusLay
         private bool _AddNewCountry()
         {
             // Call DataAccess Layer .
-            this.ID = clsCountryDataAccess.AddNewCountry(this.countryName);
+            this.ID = clsCountryDataAccess.AddNewCountry(this.countryName, this.code, this.phoneCode);
 
             return (this.ID != -1);
         }
@@ -40,19 +47,22 @@ namespace L2_BusLay
         private bool _UpdateContact()
         {
             // Call DataAccess Layer.
-            return clsCountryDataAccess.UpdateCountry(this.ID, this.countryName);
+            return clsCountryDataAccess.UpdateCountry(this.ID, this.countryName, this.code, this.phoneCode);
         }
 
         public static clsCountry Find(int ID)
         {
             string countryName = "";
-            DateTime dateOfBirth = DateTime.Now;
+            string code = "";
+            string phoneCode = "";
 
-            int countryID = -1;
+            // DateTime dateOfBirth = DateTime.Now;
+            // int countryID = -1;
 
-            if (clsCountryDataAccess.GetCountryInfoByID(ID, ref countryName))
+
+            if (clsCountryDataAccess.GetCountryInfoByID(ID, ref countryName, ref code, ref phoneCode))
             {
-                return new clsCountry(ID, countryName);
+                return new clsCountry(ID, countryName, code, phoneCode);
             }
             else
             {
@@ -63,10 +73,12 @@ namespace L2_BusLay
         public static clsCountry Find(string countryName)
         {
             int ID = -1;
+            string code = "";
+            string phoneCode = "";
 
-            if (clsCountryDataAccess.GetCountryInfoByName(countryName, ref ID))
+            if (clsCountryDataAccess.GetCountryInfoByName(countryName, ref ID, ref code, ref phoneCode))
             {
-                return new clsCountry(ID, countryName);
+                return new clsCountry(ID, countryName, code, phoneCode);
             }
             else
             {
