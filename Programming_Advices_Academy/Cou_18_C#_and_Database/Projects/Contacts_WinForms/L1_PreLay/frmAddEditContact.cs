@@ -20,9 +20,13 @@ namespace L1_PreLay
             _ContactID = ContactID;
 
             if (_ContactID == -1)
+            {
                 _Mode = enMode.AddNew;
+            }
             else
+            {
                 _Mode = enMode.Update;
+            }
         }
 
         private void _FillCountriesInComoboBox()
@@ -31,23 +35,22 @@ namespace L1_PreLay
 
             foreach (DataRow row in dtCountries.Rows)
             {
-
                 cbCountry.Items.Add(row["CountryName"]);
-
             }
-
         }
 
         private void _LoadData()
         {
-
             _FillCountriesInComoboBox();
+
             cbCountry.SelectedIndex = 0;
 
             if (_Mode == enMode.AddNew)
             {
                 lblMode.Text = "Add New Contact";
+
                 _Contact = new clsContact();
+
                 return;
             }
 
@@ -56,6 +59,7 @@ namespace L1_PreLay
             if (_Contact == null)
             {
                 MessageBox.Show("This form will be closed because No Contact with ID = " + _ContactID);
+
                 this.Close();
 
                 return;
@@ -77,9 +81,8 @@ namespace L1_PreLay
 
             llRemoveImage.Visible = (_Contact.imagePath != "");
 
-            //this will select the country in the combobox.
+            // This will select the country in the combobox.
             cbCountry.SelectedIndex = cbCountry.FindString(clsCountry.Find(_Contact.countryID).countryName);
-
         }
 
         private void frmContact_Load(object sender, EventArgs e)
@@ -100,20 +103,26 @@ namespace L1_PreLay
             _Contact.countryID = CountryID;
 
             if (pictureBox1.ImageLocation != null)
+            {
                 _Contact.imagePath = pictureBox1.ImageLocation;
+            }
             else
+            {
                 _Contact.imagePath = "";
+            }
 
             if (_Contact.Save())
+            {
                 MessageBox.Show("Data Saved Successfully.");
+            }
             else
+            {
                 MessageBox.Show("Error: Data Is not Saved Successfully.");
+            }
 
             _Mode = enMode.Update;
             lblMode.Text = "Edit Contact ID = " + _Contact.ID;
             lblContactID.Text = _Contact.ID.ToString();
-
-
         }
 
         struct CountryItem
@@ -131,7 +140,6 @@ namespace L1_PreLay
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
-
         }
 
         private void llOpenFileDialog_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -153,11 +161,8 @@ namespace L1_PreLay
 
         private void llRemoveImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
             pictureBox1.ImageLocation = null;
             llRemoveImage.Visible = false;
-
-
         }
     }
 }

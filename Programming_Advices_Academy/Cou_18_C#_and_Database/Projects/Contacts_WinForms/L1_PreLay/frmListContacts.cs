@@ -33,33 +33,31 @@ namespace L1_PreLay
         {
             if (MessageBox.Show("Are you sure you want to delete contact [" + dgvAllContacts.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                //Perform Delele and refresh
+                // Perform Delele and refresh.
                 if (clsContact.DeleteContact((int)dgvAllContacts.CurrentRow.Cells[0].Value))
                 {
                     MessageBox.Show("Contact Deleted Successfully.");
+
                     _RefreshContactsList();
                 }
-
                 else
+                {
                     MessageBox.Show("Contact is not deleted.");
-
+                }
             }
-
-
         }
 
         private void frmListContacts_Load(object sender, EventArgs e)
         {
-
             _RefreshContactsList();
-
-
         }
 
         private void btnAddNewContact_Click(object sender, EventArgs e)
         {
             frmAddEditContact frm = new frmAddEditContact(-1);
+
             frm.ShowDialog();
+
             _RefreshContactsList();
         }
     }
