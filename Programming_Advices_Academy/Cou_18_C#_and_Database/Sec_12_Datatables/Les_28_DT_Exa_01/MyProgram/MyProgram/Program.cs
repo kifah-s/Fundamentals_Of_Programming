@@ -24,11 +24,8 @@ namespace MyProgram
             Console.WriteLine("\nEmployees List:\n");
             foreach (DataRow recordRow in employeesDatatyple.Rows)
             {
-                Console.WriteLine($"ID: {recordRow["ID"]}\t Name: {recordRow["Name"]}\t Country: {recordRow["Country"]}\t" +
-                                 $" Salary: {recordRow["Salary"]}\t Date: {recordRow["Date"]}");
+                Console.WriteLine($"ID: {recordRow["ID"]}\t Name: {recordRow["Name"]}\t Country: {recordRow["Country"]}\t Salary: {recordRow["Salary"]}\t Date: {recordRow["Date"]}");
             }
-
-
         }
     }
 }
