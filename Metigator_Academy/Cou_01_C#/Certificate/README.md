@@ -1,3 +1,0 @@
-## Certificate 00: .
-
----
