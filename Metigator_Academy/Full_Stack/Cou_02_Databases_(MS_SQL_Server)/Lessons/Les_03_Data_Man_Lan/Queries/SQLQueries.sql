@@ -96,3 +96,110 @@ GO
 
 ------------------------------------------------------------------------------------------
 
+-- USE BarberDB;
+
+-- SELECT * FROM CustomersSchema.Users;
+
+-- SELECT *
+-- FROM CustomersSchema.Users
+-- ORDER BY phoneNumber;
+
+-- SELECT *
+-- FROM CustomersSchema.Users
+-- ORDER BY phoneNumber DESC;
+
+-- SELECT *
+-- FROM CustomersSchema.Users
+-- ORDER BY userName;
+
+-- SELECT *
+-- FROM CustomersSchema.Users
+-- ORDER BY userName DESC;
+
+-- SELECT *
+-- FROM CustomersSchema.Users
+-- WHERE user_ID > 2
+-- ORDER BY userName DESC;
+
+------------------------------------------------------------------------------------------
+
+-- CREATE DATABASE SalesDB;
+
+-- USE SalesDB;
+
+-- CREATE TABLE sales
+-- (
+-- 		Product VARCHAR(100),
+-- 		Category VARCHAR(100),
+-- 		Price INT
+-- );
+
+-- INSERT INTO sales (Product, Category, Price)
+--		   	  VALUES ('iPhone', 'Electronics', 1000),
+--		  	 	     ('Shirt', 'Clothing', 50),
+--		  	 	     ('Laptop', 'Electronics', 1500),
+--		  	 	     ('Dress', 'Clothing', 120),
+--		  	 	     ('Blender', 'Home Appliances', 80);
+
+-- SELECT * FROM sales;
+
+-- SELECT Category, SUM(Price) AS Total_Sales
+-- FROM sales
+-- GROUP BY Category;
+
+-- SELECT Category, SUM(Price) AS Total_Sales
+-- FROM sales
+-- GROUP BY Category
+-- HAVING SUM(Price) > 500;
+
+-- SELECT * FROM sales;
+
+-- SELECT Product
+-- FROM sales
+-- GROUP BY Product
+
+-- SELECT Category
+-- FROM sales
+-- GROUP BY Category
+
+-- SELECT Category, COUNT(*)
+-- FROM sales
+-- GROUP BY Category
+
+-- SELECT * FROM sales;
+
+-- SELECT Category, COUNT(*) AS Number_of_Products
+-- FROM Sales
+-- GROUP BY Category;
+
+-- SELECT * FROM sales;
+
+-- SELECT Category, COUNT(*) AS Number_of_Products
+-- FROM Sales
+-- WHERE Price > 100
+-- GROUP BY Category;
+
+-- SELECT Category, SUM(Price) AS Total_Sales
+-- FROM Sales
+-- GROUP BY Category
+-- HAVING SUM(Price) > 100;
+
+-- SELECT Category, SUM(Price)
+-- FROM Sales
+-- WHERE Price > 50            -- 1. Check individual rows first (exclude very cheap products)
+-- GROUP BY Category           -- 2. Group the remaining products into sets
+-- HAVING COUNT(Product) >= 2; -- 3. Check the groups (show only categories with 2 or more products)
+
+------------------------------------------------------------------------------------------
+
+-- SELECT * FROM sales;
+
+-- SELECT Category FROM sales;
+
+-- SELECT DISTINCT Category FROM sales;
+
+-- SELECT Count(DISTINCT Category) AS Unique_Category FROM sales;
+
+-- SELECT DISTINCT Category, Price FROM sales;
+
+------------------------------------------------------------------------------------------
