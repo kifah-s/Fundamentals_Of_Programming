@@ -203,3 +203,121 @@ GO
 -- SELECT DISTINCT Category, Price FROM sales;
 
 ------------------------------------------------------------------------------------------
+
+-- USE SalesDB;
+
+-- CREATE TABLE Customers
+-- (
+-- 		CustomerID INT PRIMARY KEY,
+-- 		Name VARCHAR(50) NOT NULL
+-- )
+
+-- INSERT INTO Customers (CustomerID, Name) VALUES (1, 'Ahmed');
+-- INSERT INTO Customers (CustomerID, Name) VALUES (2, 'Sara');
+-- INSERT INTO Customers (CustomerID, Name) VALUES (3, 'Khalid');
+
+-- CREATE TABLE Orders (
+--     OrderID INT PRIMARY KEY,
+--     Amount DECIMAL(10, 2) NOT NULL,
+--     -- CustomerID INT REFERENCES Customers(CustomerID)
+--     CustomerID INT,
+--     FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+-- );
+
+-- INSERT INTO Orders (OrderID, Amount, CustomerID) VALUES (101, 500.00, 1);
+-- INSERT INTO Orders (OrderID, Amount, CustomerID) VALUES (102, 300.00, 2);
+-- INSERT INTO Orders (OrderID, Amount, CustomerID) VALUES (103, 700.00, 1);
+
+----------------------
+
+-- SELECT Customers.Name, Orders.Amount
+-- FROM Customers INNER JOIN Orders
+-- ON Customers.CustomerID = Orders.CustomerID;
+
+
+-- SELECT Customers.Name, Orders.Amount
+-- FROM Customers LEFT JOIN Orders
+-- ON Customers.CustomerID = Orders.CustomerID;
+
+
+-- SELECT Customers.Name, Orders.Amount
+-- FROM Customers RIGHT JOIN Orders
+-- ON Customers.CustomerID = Orders.CustomerID;
+
+----------------------
+
+-- SELECT Customers.Name, Orders.Amount
+-- FROM Customers, Orders
+-- WHERE Customers.CustomerID = Orders.CustomerID;
+
+-- SELECT Customers.Name, Orders.Amount
+-- FROM Customers INNER JOIN Orders
+-- ON Customers.CustomerID = Orders.CustomerID;
+
+----------------------
+
+-- SELECT Customers.Name, Orders.Amount
+-- FROM Customers, Orders
+-- WHERE Customers.CustomerID = Orders.CustomerID;
+
+-- SELECT Customers.Name, Orders.Amount
+-- FROM Customers INNER JOIN Orders
+-- ON Customers.CustomerID = Orders.CustomerID;
+
+----------------------
+
+-- SELECT * FROM Customers;
+-- SELECT * FROM Orders;
+
+-- SELECT Customers.Name, Orders.Amount
+-- FROM Customers, Orders;
+
+-- SELECT Customers.Name, Orders.Amount
+-- FROM Customers, Orders
+-- WHERE Customers.CustomerID = Orders.CustomerID;
+
+-- SELECT Customers.Name, Orders.Amount
+-- FROM Customers INNER JOIN Orders
+-- ON Customers.CustomerID = Orders.CustomerID;
+
+-- SELECT Customers.Name, Orders.Amount
+-- FROM Customers LEFT JOIN Orders
+-- ON Customers.CustomerID = Orders.CustomerID;
+
+-- SELECT Customers.Name, Orders.Amount
+-- FROM Customers RIGHT JOIN Orders
+-- ON Customers.CustomerID = Orders.CustomerID;
+
+-- SELECT Customers.Name, Orders.Amount
+-- FROM Customers Full JOIN Orders
+-- ON Customers.CustomerID = Orders.CustomerID;
+
+------------------------------------------------------------------------------------------
+
+-- SELECT Orders.Amount * 2
+-- FROM Orders;
+
+-- SELECT Orders.Amount * 2 AS Tax
+-- FROM Orders;
+
+-- SELECT Orders.Amount * 2 AS 'Amount * 2'
+-- FROM Orders;
+
+-- SELECT Customers.Name, Orders.Amount
+-- FROM Customers INNER JOIN Orders
+-- ON Customers.CustomerID = Orders.CustomerID;
+
+-- SELECT C.Name, O.Amount
+-- FROM Customers AS C INNER JOIN Orders AS O
+-- ON C.CustomerID = O.CustomerID;
+
+-- SELECT C.Name, O.Amount
+-- FROM Customers C INNER JOIN Orders O
+-- ON C.CustomerID = O.CustomerID;
+
+-- SELECT C.Name AS 'الاسم', O.Amount AS 'المبيعات'
+-- FROM Customers AS C INNER JOIN Orders AS O
+-- ON C.CustomerID = O.CustomerID;
+
+------------------------------------------------------------------------------------------
+
