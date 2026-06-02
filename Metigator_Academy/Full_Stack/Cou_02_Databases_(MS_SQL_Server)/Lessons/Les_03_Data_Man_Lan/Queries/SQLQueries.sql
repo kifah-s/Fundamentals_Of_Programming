@@ -321,3 +321,23 @@ GO
 
 ------------------------------------------------------------------------------------------
 
+-- UPDATE Customers
+-- SET Name = 'kifah'
+-- WHERE CustomerID = 1;
+
+-- DELETE FROM Customers
+-- WHERE CustomerID = 3;
+
+-- INSERT INTO Customers (CustomerID, Name) VALUES (3, 'Khaled');
+
+-- UPDATE Customers
+-- SET Name = 'Kifah'
+-- WHERE CustomerID = 1;
+
+------------------------------------------------------------------------------------------
+
+-- SELECT *
+-- FROM Employees
+-- WHERE Salary > (SELECT AVG(Salary) FROM Employees);
+
+------------------------------------------------------------------------------------------
