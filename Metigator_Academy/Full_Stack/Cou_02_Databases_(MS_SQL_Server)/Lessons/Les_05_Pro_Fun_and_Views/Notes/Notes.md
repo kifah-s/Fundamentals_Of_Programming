@@ -4,6 +4,4 @@
 
 - Don't Repeat Yourself.
 
-- 
-
 ---
