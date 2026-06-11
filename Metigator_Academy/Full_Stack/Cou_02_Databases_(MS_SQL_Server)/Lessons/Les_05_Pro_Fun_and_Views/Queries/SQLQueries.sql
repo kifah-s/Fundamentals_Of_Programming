@@ -70,3 +70,22 @@
 
 ------------------------------------------------------------------------
 
+-- SELECT ABS(-100);
+
+-- SELECT GETDATE();
+
+-- SELECT LEN('This is some text');
+
+-- SELECT UPPER('kifah');
+
+------------------------------------------------------------------------
+
+-- CREATE VIEW View_EmployeeDetails
+-- AS
+-- SELECT *
+-- FROM Employees
+
+-- SELECT * FROM View_EmployeeDetails;
+
+------------------------------------------------------------------------
+
