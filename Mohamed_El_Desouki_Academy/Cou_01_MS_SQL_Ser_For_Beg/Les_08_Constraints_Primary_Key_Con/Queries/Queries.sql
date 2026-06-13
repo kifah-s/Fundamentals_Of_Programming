@@ -31,7 +31,7 @@ CREATE TABLE sales_schema.Customers
 	street VARCHAR(30) NOT NULL,
 	zip_code VARCHAR(5),
 
-	constraint customers_pk PRIMARY KEY (customer_id)
+	CONSTRAINT customers_pk PRIMARY KEY (customer_id)
 );
 
 
@@ -40,7 +40,7 @@ CREATE TABLE production.Categories
 	categorie_id INT,
 	categorie_name VARCHAR(50) NOT NULL,
 
-	constraint categories_pk PRIMARY KEY (categorie_id)
+	CONSTRAINT categories_pk PRIMARY KEY (categorie_id)
 );
 
 
@@ -49,7 +49,7 @@ CREATE TABLE production.Brands
 	brand_id INT,
 	brand_name VARCHAR(50) NOT NULL,
 
-	constraint brands_pk PRIMARY KEY (brand_id)
+	CONSTRAINT brands_pk PRIMARY KEY (brand_id)
 );
 
 ----------------------------------------------------------------
