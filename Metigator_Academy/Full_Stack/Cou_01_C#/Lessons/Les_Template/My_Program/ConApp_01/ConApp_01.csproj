@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{57BBF483-0509-4593-861E-7B599059A41C}</ProjectGuid>
+    <ProjectGuid>{F46004A5-2AD5-4702-995D-A9D5D65470A3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>My_Program</RootNamespace>
-    <AssemblyName>My_Program</AssemblyName>
+    <RootNamespace>ConApp_01</RootNamespace>
+    <AssemblyName>ConApp_01</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
