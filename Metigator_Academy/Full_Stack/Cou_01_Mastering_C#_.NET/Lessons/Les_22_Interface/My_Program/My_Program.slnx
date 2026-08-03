@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="ConApp_01/ConApp_01.csproj" />
+  <Project Path="ConApp_02/ConApp_02.csproj" Id="ef3ba44a-c0a9-4221-a5fd-f367f12ac30c" />
+  <Project Path="ConApp_03/ConApp_03.csproj" Id="9e9d0dd7-e1d8-43f1-b51f-8f6f28bf2830" />
+</Solution>
