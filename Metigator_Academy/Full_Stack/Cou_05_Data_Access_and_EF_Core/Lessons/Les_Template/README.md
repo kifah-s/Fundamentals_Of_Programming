@@ -1,3 +1,3 @@
-## Lesson 46: Tuple Type.
+## Lesson 00: .
 
 ---
