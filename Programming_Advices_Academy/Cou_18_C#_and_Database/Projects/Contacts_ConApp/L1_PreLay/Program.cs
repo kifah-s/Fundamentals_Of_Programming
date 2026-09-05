@@ -253,7 +253,7 @@ namespace L1_PreLay
             //TestUpdateContact(16);
             //TestDeleteContact(16);
             //ListContacts();
-            //TestIsContactExist(5);
+            TestIsContactExist(5);
 
             // ----------------- Country ----------------- //
 
@@ -264,7 +264,7 @@ namespace L1_PreLay
             //TestAddNewCountry();
             //TestUpdateCountry(7);
             //TestDeleteCountry(6);
-            ListCountries();
+            //ListCountries();
 
             // ----------------- ................ ----------------- //
 

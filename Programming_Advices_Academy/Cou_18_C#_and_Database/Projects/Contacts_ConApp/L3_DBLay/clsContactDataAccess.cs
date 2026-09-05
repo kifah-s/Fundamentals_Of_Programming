@@ -6,7 +6,7 @@ namespace L3_DataAccLay
 {
     public class clsContactDataAccess
     {
-        public static bool GetContactInfoByID(int ID, ref string firstName, ref string lastName, ref string email, ref string phone, ref string address, ref DateTime dateOdBirth, ref int countryID, ref string imageBath)
+        public static bool GetContactInfoByID(int ID, ref string firstName, ref string lastName, ref string email, ref string phone, ref string address, ref DateTime dateOfBirth, ref int countryID, ref string imageBath)
         {
             bool isFound = false;
 
@@ -36,7 +36,7 @@ namespace L3_DataAccLay
                     email = (string)reader["Email"];
                     phone = (string)reader["Phone"];
                     address = (string)reader["Address"];
-                    dateOdBirth = (DateTime)reader["DateOfBirth"];
+                    dateOfBirth = (DateTime)reader["DateOfBirth"];
                     countryID = (int)reader["CountryID"];
 
                     // ImagePath: allows null in database so we should handle null.
