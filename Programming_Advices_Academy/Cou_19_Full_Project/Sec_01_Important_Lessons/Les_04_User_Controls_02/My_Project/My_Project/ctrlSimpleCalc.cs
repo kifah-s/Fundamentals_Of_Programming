@@ -1,0 +1,20 @@
+﻿namespace My_Project
+{
+    public partial class ctrlSimpleCalc : UserControl
+    {
+        public ctrlSimpleCalc()
+        {
+            InitializeComponent();
+        }
+
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            lblResult.Text = (int.Parse(textBox1.Text) + int.Parse(textBox2.Text)).ToString();
+        }
+
+        public float Result
+        {
+            get { return (float)Convert.ToDouble(lblResult.Text); }
+        }
+    }
+}
