@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="../DVLD_Business/DVLD_Business.csproj" Id="c3ead208-01e3-4ce6-85ef-7e7a5b7c85bb" />
-  <Project Path="../DVLD_DataAccess/DVLD_DataAccess.csproj" Id="cd447fa3-bf22-4b7b-b114-becb21b0b831" />
+  <Project Path="../DVLD_Business/DVLD_Business.csproj" />
+  <Project Path="../DVLD_DataAccess/DVLD_DataAccess.csproj" />
   <Project Path="DVLD.csproj" />
 </Solution>
