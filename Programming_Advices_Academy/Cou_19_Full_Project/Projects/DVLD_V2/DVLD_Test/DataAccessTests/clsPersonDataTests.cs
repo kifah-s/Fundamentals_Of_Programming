@@ -162,5 +162,27 @@ namespace DVLD_Test.DataAccessTests
                 Console.WriteLine("[WARNING] No records found in the People table or failed to connect.");
             }
         }
+
+
+        public static void TestDeletePerson(int personIDToDelete)
+        {
+            Console.WriteLine($"[INFO] Attempting to delete person with ID: {personIDToDelete}...");
+
+            bool isDeleted = clsPersonData.DeletePerson(personIDToDelete);
+
+
+            if (isDeleted)
+            {
+                Console.WriteLine($"[SUCCESS] Person with ID ({personIDToDelete}) was deleted successfully.");
+            }
+            else
+            {
+                Console.WriteLine($"[FAILED] Failed to delete person with ID ({personIDToDelete}).");
+                Console.WriteLine("Possible reasons:");
+                Console.WriteLine(" - The PersonID does not exist in the database.");
+                Console.WriteLine(" - The record is referenced as a Foreign Key in another table (e.g., Users, Drivers, Applications).");
+                Console.WriteLine(" - Database connection issues.");
+            }
+        }
     }
 }
