@@ -10,7 +10,8 @@ namespace DVLD_Test
             //clsPersonDataTests.GetPersonInfoByIDTest(1);
             //clsPersonDataTests.GetPersonInfoByNationalNoTest("N1");
             //clsPersonDataTests.TestAddNewPerson();
-            clsPersonDataTests.TestUpdatePerson(1030);
+            //clsPersonDataTests.TestUpdatePerson(1030);
+            clsPersonDataTests.TestGetAllPeople();
 
 
 

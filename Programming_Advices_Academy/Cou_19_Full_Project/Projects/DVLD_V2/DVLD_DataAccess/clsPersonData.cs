@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using System.Data;
 
 namespace DVLD_DataAccess
 {
@@ -338,6 +339,54 @@ namespace DVLD_DataAccess
 
             return (rowsAffected > 0);
         }
+
+
+        public static DataTable GetAllPeople()
+        {
+            DataTable dt = new DataTable();
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+
+            string query = @"SELECT People.PersonID, People.NationalNo, People.FirstName, People.SecondName, People.ThirdName,
+                            People.LastName, People.DateOfBirth, People.Gendor,
+	                        CASE
+                            WHEN People.Gendor = 0
+                            THEN 'Male'
+                            ELSE 'Female'
+                            END as GendorCaption,
+                            People.Address, People.Phone, People.Email, People.NationalityCountryID, Countries.CountryName, People.ImagePath
+                            FROM People
+                            INNER JOIN Countries
+                            ON People.NationalityCountryID = Countries.CountryID
+                            ORDER BY People.FirstName";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    dt.Load(reader);
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                // Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return dt;
+        }
+
 
 
     }

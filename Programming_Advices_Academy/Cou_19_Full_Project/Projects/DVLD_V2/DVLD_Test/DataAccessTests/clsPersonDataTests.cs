@@ -1,4 +1,5 @@
 ﻿using DVLD_DataAccess;
+using System.Data;
 
 
 namespace DVLD_Test.DataAccessTests
@@ -38,6 +39,7 @@ namespace DVLD_Test.DataAccessTests
             }
         }
 
+
         public static void TestGetPersonInfoByNationalNo(string personNationalNo)
         {
             string firstName = "", secondName = "", thirdName = "", lastName = "";
@@ -70,6 +72,7 @@ namespace DVLD_Test.DataAccessTests
             }
         }
 
+
         public static void TestAddNewPerson()
         {
             string firstName = "John";
@@ -99,6 +102,7 @@ namespace DVLD_Test.DataAccessTests
             TestGetPersonInfoByID(newPersonID);
         }
 
+
         public static void TestUpdatePerson(int personIDToUpdate)
         {
             string firstName = "John";
@@ -126,6 +130,37 @@ namespace DVLD_Test.DataAccessTests
             }
 
             TestGetPersonInfoByID(personIDToUpdate);
+        }
+
+
+        public static void TestGetAllPeople()
+        {
+            DataTable dtPeople = clsPersonData.GetAllPeople();
+
+            if (dtPeople != null && dtPeople.Rows.Count > 0)
+            {
+                Console.WriteLine($"[SUCCESS] Total People Found: {dtPeople.Rows.Count}\n");
+
+                Console.WriteLine($"{"ID",-5} | {"National No",-12} | {"Full Name",-36} | {"Gender",-8} | {"Country",-15}");
+                Console.WriteLine(new string('-', 80));
+
+                foreach (DataRow row in dtPeople.Rows)
+                {
+                    int personID = Convert.ToInt32(row["PersonID"]);
+                    string nationalNo = row["NationalNo"].ToString();
+
+                    string fullName = $"{row["FirstName"]} {row["SecondName"]} {row["ThirdName"]} {row["LastName"]}".Replace("  ", " ").Trim();
+
+                    string genderCaption = row["GendorCaption"].ToString();
+                    string countryName = row["CountryName"].ToString();
+
+                    Console.WriteLine($"{personID,-5} | {nationalNo,-12} | {fullName,-36} | {genderCaption,-8} | {countryName,-15}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("[WARNING] No records found in the People table or failed to connect.");
+            }
         }
     }
 }
