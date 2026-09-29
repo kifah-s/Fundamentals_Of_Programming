@@ -184,5 +184,22 @@ namespace DVLD_Test.DataAccessTests
                 Console.WriteLine(" - Database connection issues.");
             }
         }
+
+
+        public static void TestIsPersonExist(int personIDToExist)
+        {
+            bool isFound = clsPersonData.IsPersonExist(personIDToExist);
+
+            if (isFound)
+            {
+                Console.WriteLine($"[SUCCESS] Person with ID ({personIDToExist}) exists in the database.");
+            }
+            else
+            {
+                Console.WriteLine($"[FAILED] Person with ID ({personIDToExist}) was NOT found.");
+            }
+
+            TestGetPersonInfoByID(personIDToExist);
+        }
     }
 }

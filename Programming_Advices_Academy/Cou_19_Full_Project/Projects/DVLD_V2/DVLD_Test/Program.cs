@@ -12,7 +12,8 @@ namespace DVLD_Test
             //clsPersonDataTests.TestAddNewPerson();
             //clsPersonDataTests.TestUpdatePerson(1030);
             //clsPersonDataTests.TestGetAllPeople();
-            clsPersonDataTests.TestDeletePerson(1030);
+            //clsPersonDataTests.TestDeletePerson(1030);
+            clsPersonDataTests.TestIsPersonExist(9999);
 
 
 
