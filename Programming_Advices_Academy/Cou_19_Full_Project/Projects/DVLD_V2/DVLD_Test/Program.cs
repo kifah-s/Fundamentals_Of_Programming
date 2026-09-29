@@ -6,6 +6,8 @@ namespace DVLD_Test
     {
         static void Main(string[] args)
         {
+            // clsPersonDataTests ..
+
             //clsPersonDataTests.GetPersonInfoByIDTest(1);
             //clsPersonDataTests.GetPersonInfoByNationalNoTest("N1");
             //clsPersonDataTests.TestAddNewPerson();
@@ -13,9 +15,13 @@ namespace DVLD_Test
             //clsPersonDataTests.TestGetAllPeople();
             //clsPersonDataTests.TestDeletePerson(1030);
             //clsPersonDataTests.TestIsPersonExist(9999);
-            clsPersonDataTests.TestIsPersonExist("N500");
+            //clsPersonDataTests.TestIsPersonExist("N500");
 
+            // ---------------------------------------------------------------
 
+            // clsCountryDataTests ..
+
+            clsCountryDataTests.TestGetCountryInfoByID(1);
 
             Console.ReadLine();
         }
