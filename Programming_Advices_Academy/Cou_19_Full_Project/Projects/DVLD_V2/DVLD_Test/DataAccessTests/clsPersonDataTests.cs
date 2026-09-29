@@ -201,5 +201,21 @@ namespace DVLD_Test.DataAccessTests
 
             TestGetPersonInfoByID(personIDToExist);
         }
+
+        public static void TestIsPersonExist(string nationalNoToExist)
+        {
+            bool isFound = clsPersonData.IsPersonExist(nationalNoToExist);
+
+            if (isFound)
+            {
+                Console.WriteLine($"[SUCCESS] Person with NationalNo ({nationalNoToExist}) exists in the database.");
+            }
+            else
+            {
+                Console.WriteLine($"[FAILED] Person with NationalNo ({nationalNoToExist}) was NOT found.");
+            }
+
+            TestGetPersonInfoByNationalNo(nationalNoToExist);
+        }
     }
 }

@@ -6,14 +6,14 @@ namespace DVLD_Test
     {
         static void Main(string[] args)
         {
-
             //clsPersonDataTests.GetPersonInfoByIDTest(1);
             //clsPersonDataTests.GetPersonInfoByNationalNoTest("N1");
             //clsPersonDataTests.TestAddNewPerson();
             //clsPersonDataTests.TestUpdatePerson(1030);
             //clsPersonDataTests.TestGetAllPeople();
             //clsPersonDataTests.TestDeletePerson(1030);
-            clsPersonDataTests.TestIsPersonExist(9999);
+            //clsPersonDataTests.TestIsPersonExist(9999);
+            clsPersonDataTests.TestIsPersonExist("N500");
 
 
 
