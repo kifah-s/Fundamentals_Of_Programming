@@ -21,6 +21,23 @@ namespace DVLD_Test.DataAccessTests
         }
 
 
+        public static void TestGetCountryInfoByName(string existingCountryName)
+        {
+            int countryID = 0;
+
+            if (clsCountryData.GetCountryInfoByName(existingCountryName, ref countryID))
+            {
+                Console.WriteLine($"[SUCCESS] Country Found!");
+                Console.WriteLine($"Country Name   : {existingCountryName}");
+                Console.WriteLine($"Country ID : {countryID}\n");
+            }
+            else
+            {
+                Console.WriteLine($"[FAILED] Country with Name ({existingCountryName}) was NOT found.\n");
+            }
+        }
+
+
 
     }
 }
