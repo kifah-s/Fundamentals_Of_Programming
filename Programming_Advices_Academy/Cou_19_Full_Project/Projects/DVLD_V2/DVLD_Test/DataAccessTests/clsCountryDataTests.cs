@@ -1,4 +1,5 @@
 ﻿using DVLD_DataAccess;
+using System.Data;
 
 namespace DVLD_Test.DataAccessTests
 {
@@ -38,6 +39,29 @@ namespace DVLD_Test.DataAccessTests
         }
 
 
+        public static void TestGetAllCountries()
+        {
+            DataTable dtCountries = clsCountryData.GetAllCountries();
 
+            if (dtCountries != null && dtCountries.Rows.Count > 0)
+            {
+                Console.WriteLine($"[SUCCESS] Total Countries Found: {dtCountries.Rows.Count}\n");
+
+                Console.WriteLine($"{"ID",-5} | {"Country Name",-30}");
+                Console.WriteLine(new string('-', 40));
+
+                foreach (DataRow row in dtCountries.Rows)
+                {
+                    int countryID = Convert.ToInt32(row["CountryID"]);
+                    string countryName = row["CountryName"].ToString();
+
+                    Console.WriteLine($"{countryID,-5} | {countryName,-30}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("[WARNING] No records found in the Countries table or failed to connect.");
+            }
+        }
     }
 }

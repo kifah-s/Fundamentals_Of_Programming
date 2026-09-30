@@ -22,7 +22,8 @@ namespace DVLD_Test
             // clsCountryDataTests ..
 
             //clsCountryDataTests.TestGetCountryInfoByID(1);
-            clsCountryDataTests.TestGetCountryInfoByName("Italy");
+            //clsCountryDataTests.TestGetCountryInfoByName("Italy");
+            clsCountryDataTests.TestGetAllCountries();
 
             Console.ReadLine();
         }
