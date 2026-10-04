@@ -1,4 +1,6 @@
-﻿namespace DVLD_Business
+﻿using DVLD_DataAccess;
+
+namespace DVLD_Business
 {
     public class clsPerson
     {
@@ -70,8 +72,58 @@
         }
 
 
+        private bool _AddNewPerson()
+        {
+            // Call DataAccess Layer.
+            this.personID = clsPersonData.AddNewPerson(this.firstName, this.secondName, this.thirdName, this.lastName, this.nationalNo, this.dateOfBirth, this.gendor, this.address, this.phone, this.email, this.nationalityCountryID, this.imagePath);
 
+            return (this.personID != -1);
+        }
 
+        private bool _UpdatePerson()
+        {
+            // Call Data Access.
+            return clsPersonData.UpdatePerson(this.personID, this.firstName, this.secondName, this.thirdName, this.lastName, this.nationalNo, this.dateOfBirth, this.gendor, this.address, this.phone, this.email, this.nationalityCountryID, this.imagePath);
+        }
 
+        public static clsPerson Find(int personID)
+        {
+            string firstName = "", secondName = "", thirdName = "", lastName = "", nationalNo = "", email = "", phone = "", address = "", imagePath = "";
+            DateTime dateOfBirth = DateTime.Now;
+            int nationalityCountryID = -1;
+            short gendor = 0;
+
+            bool isFound = clsPersonData.GetPersonInfoByID(personID, ref firstName, ref secondName, ref thirdName, ref lastName, ref nationalNo, ref dateOfBirth, ref gendor, ref address, ref phone, ref email, ref nationalityCountryID, ref imagePath);
+
+            if (isFound)
+            {
+                // We return new object of that person with the right data.
+                return new clsPerson(personID, firstName, secondName, thirdName, lastName, nationalNo, dateOfBirth, gendor, address, phone, email, nationalityCountryID, imagePath);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public static clsPerson Find(string nationalNo)
+        {
+            string firstName = "", secondName = "", thirdName = "", lastName = "", email = "", phone = "", address = "", imagePath = "";
+            DateTime dateOfBirth = DateTime.Now;
+            int personID = -1, nationalityCountryID = -1;
+            short gendor = 0;
+
+            bool isFound = clsPersonData.GetPersonInfoByNationalNo(nationalNo, ref personID, ref firstName, ref secondName, ref thirdName, ref lastName, ref dateOfBirth, ref gendor, ref address, ref phone, ref email, ref nationalityCountryID, ref imagePath);
+
+            if (isFound)
+            {
+                // We return new object of that person with the right data.
+                return new clsPerson(personID, firstName, secondName, thirdName, lastName, nationalNo, dateOfBirth, gendor, address, phone, email, nationalityCountryID, imagePath);
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

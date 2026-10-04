@@ -93,7 +93,7 @@ namespace DVLD_DataAccess
         }
 
 
-        public static bool GetPersonByNationalNo(string nationalNo, ref int personID, ref string firstName, ref string secondName, ref string thirdName, ref string lastName, ref DateTime dateOfBirth, ref short gendor, ref string address, ref string phone, ref string email, ref int nationalityCountryID, ref string imagePath)
+        public static bool GetPersonInfoByNationalNo(string nationalNo, ref int personID, ref string firstName, ref string secondName, ref string thirdName, ref string lastName, ref DateTime dateOfBirth, ref short gendor, ref string address, ref string phone, ref string email, ref int nationalityCountryID, ref string imagePath)
         {
             bool isFound = false;
 
@@ -187,10 +187,8 @@ namespace DVLD_DataAccess
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
 
-            string query = @"INSERT INTO People (FirstName, SecondName, ThirdName, LastName, NationalNo, DateOfBirth,
-                                                Gendor, Address, Phone, Email, NationalityCountryID, ImagePath)
-                            VALUES(@FirstName, @SecondName, @ThirdName, @LastName, @NationalNo, @DateOfBirth, @Gendor,
-                                                @Address, @Phone, @Email, @NationalityCountryID, @ImagePath);
+            string query = @"INSERT INTO People (FirstName, SecondName, ThirdName, LastName, NationalNo, DateOfBirth, Gendor, Address, Phone, Email, NationalityCountryID, ImagePath)
+                            VALUES(@FirstName, @SecondName, @ThirdName, @LastName, @NationalNo, @DateOfBirth, @Gendor, @Address, @Phone, @Email, @NationalityCountryID, @ImagePath);
                             SELECT SCOPE_IDENTITY()";
 
             SqlCommand command = new SqlCommand(query, connection);

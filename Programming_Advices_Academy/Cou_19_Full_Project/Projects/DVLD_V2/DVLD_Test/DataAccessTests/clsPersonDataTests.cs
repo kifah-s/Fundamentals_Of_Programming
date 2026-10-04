@@ -48,7 +48,7 @@ namespace DVLD_Test.DataAccessTests
             short gendor = 0;
             int personID = 1, nationalityCountryID = 0;
 
-            bool isFound = clsPersonData.GetPersonByNationalNo(personNationalNo, ref personID, ref firstName, ref secondName, ref thirdName, ref lastName, ref dateOfBirth, ref gendor, ref address, ref phone, ref email, ref nationalityCountryID, ref imagePath);
+            bool isFound = clsPersonData.GetPersonInfoByNationalNo(personNationalNo, ref personID, ref firstName, ref secondName, ref thirdName, ref lastName, ref dateOfBirth, ref gendor, ref address, ref phone, ref email, ref nationalityCountryID, ref imagePath);
 
             if (isFound)
             {
