@@ -1,4 +1,5 @@
 ﻿using DVLD_Business;
+using DVLD_Test.DataAccessTests;
 
 namespace DVLD_Test.BusinessTests
 {
@@ -36,6 +37,9 @@ namespace DVLD_Test.BusinessTests
             }
         }
 
-
+        public static void TestGetAllCountries()
+        {
+            clsCountryDataTests.TestGetAllCountries();
+        }
     }
 }

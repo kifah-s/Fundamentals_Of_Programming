@@ -1,4 +1,5 @@
 ﻿using DVLD_DataAccess;
+using System.Data;
 
 namespace DVLD_Business
 {
@@ -47,5 +48,9 @@ namespace DVLD_Business
             }
         }
 
+        public static DataTable GetAllCountries()
+        {
+            return clsCountryData.GetAllCountries();
+        }
     }
 }

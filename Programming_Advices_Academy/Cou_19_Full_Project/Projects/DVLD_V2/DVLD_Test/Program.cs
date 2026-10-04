@@ -29,7 +29,8 @@ namespace DVLD_Test
 
             // clsCountryTests ..
             //clsCountryTests.TestFindCountry(1);
-            clsCountryTests.TestFindCountry("syria");
+            //clsCountryTests.TestFindCountry("syria");
+            clsCountryTests.TestGetAllCountries();
 
             Console.ReadLine();
         }
