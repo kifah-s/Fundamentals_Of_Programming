@@ -1,4 +1,4 @@
-﻿using DVLD_Test.DataAccessTests;
+﻿using DVLD_Test.BusinessTests;
 
 namespace DVLD_Test
 {
@@ -8,7 +8,7 @@ namespace DVLD_Test
         {
             // clsPersonDataTests ..
 
-            //clsPersonDataTests.GetPersonInfoByIDTest(1);
+            //clsPersonDataTests.TestGetPersonInfoByID(1);
             //clsPersonDataTests.GetPersonInfoByNationalNoTest("N1");
             //clsPersonDataTests.TestAddNewPerson();
             //clsPersonDataTests.TestUpdatePerson(1030);
@@ -23,7 +23,13 @@ namespace DVLD_Test
 
             //clsCountryDataTests.TestGetCountryInfoByID(1);
             //clsCountryDataTests.TestGetCountryInfoByName("Italy");
-            clsCountryDataTests.TestGetAllCountries();
+            //clsCountryDataTests.TestGetAllCountries();
+
+            // ---------------------------------------------------------------
+
+            // clsCountryTests ..
+            //clsCountryTests.TestFindCountry(1);
+            clsCountryTests.TestFindCountry("syria");
 
             Console.ReadLine();
         }

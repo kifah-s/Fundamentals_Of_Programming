@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DVLD_Business\DVLD_Business.csproj" />
     <ProjectReference Include="..\DVLD_DataAccess\DVLD_DataAccess.csproj" />
   </ItemGroup>
 
