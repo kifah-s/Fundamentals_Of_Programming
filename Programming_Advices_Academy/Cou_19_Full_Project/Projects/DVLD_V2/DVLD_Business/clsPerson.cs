@@ -1,4 +1,5 @@
 ﻿using DVLD_DataAccess;
+using System.Data;
 
 namespace DVLD_Business
 {
@@ -124,6 +125,51 @@ namespace DVLD_Business
             {
                 return null;
             }
+        }
+
+        public bool Save()
+        {
+            switch (mode)
+            {
+                case enMode.addNew:
+                    {
+                        if (_AddNewPerson())
+                        {
+                            mode = enMode.update;
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                case enMode.update:
+                    {
+                        return _UpdatePerson();
+                    }
+            }
+
+            return false;
+        }
+
+        public static DataTable GetAllPeople()
+        {
+            return clsPersonData.GetAllPeople();
+        }
+
+        public static bool DeletePerson(int personID)
+        {
+            return clsPersonData.DeletePerson(personID);
+        }
+
+        public static bool IsPersonExist(int personID)
+        {
+            return clsPersonData.IsPersonExist(personID);
+        }
+
+        public static bool IsPersonExist(string nationalNo)
+        {
+            return clsPersonData.IsPersonExist(nationalNo);
         }
     }
 }
