@@ -63,15 +63,6 @@ namespace DVLD.People
                 lblTitle.Text = "Update Person";
             }
 
-            // Set default image for the person.
-            if (rbMale.Checked)
-            {
-                pbPersonImage.Image = Resources.businessman;
-            }
-            else
-            {
-                pbPersonImage.Image = Resources.woman;
-            }
 
             // Hide / Show the remove image button in case there is no image for the person.
             btnRemoveImage.Visible = (pbPersonImage.ImageLocation != null);
@@ -91,7 +82,18 @@ namespace DVLD.People
             txtThirdName.Text = "";
             txtLastName.Text = "";
             txtNationalNo.Text = "";
+
             rbMale.Checked = true;
+            // Set default image for the person.
+            if (rbMale.Checked)
+            {
+                pbPersonImage.Image = Resources.businessman;
+            }
+            else
+            {
+                pbPersonImage.Image = Resources.woman;
+            }
+
             txtPhone.Text = "";
             txtEmail.Text = "";
             txtAddress.Text = "";
@@ -143,7 +145,7 @@ namespace DVLD.People
             btnRemoveImage.Visible = (_Person.imagePath != null);
         }
 
-        private void rbMale_Click()
+        private void rbMale_Click(object sender, EventArgs e)
         {
             // Change the default image to male incase there is no image set.
             if (pbPersonImage.ImageLocation == null)
@@ -152,7 +154,7 @@ namespace DVLD.People
             }
         }
 
-        private void rbFemale_Click()
+        private void rbFemale_Click(object sender, EventArgs e)
         {
             // Change the default image to female incase there is no image set.
             if (pbPersonImage.ImageLocation == null)
@@ -160,8 +162,6 @@ namespace DVLD.People
                 pbPersonImage.Image = Resources.woman;
             }
         }
-
-
 
         private void frmAddUpdatePerson_Load(object sender, EventArgs e)
         {
@@ -172,5 +172,7 @@ namespace DVLD.People
                 _LoadData();
             }
         }
+
+
     }
 }

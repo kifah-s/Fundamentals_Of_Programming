@@ -180,7 +180,7 @@
             // dtpDateOfBirth
             // 
             dtpDateOfBirth.CalendarFont = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dtpDateOfBirth.CustomFormat = "dd/mm/yyyy";
+            dtpDateOfBirth.CustomFormat = "dd/M/yyyy";
             dtpDateOfBirth.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpDateOfBirth.Format = DateTimePickerFormat.Custom;
             dtpDateOfBirth.Location = new Point(395, 97);
@@ -217,6 +217,7 @@
             rbFemale.TabStop = true;
             rbFemale.Text = "Female";
             rbFemale.UseVisualStyleBackColor = true;
+            rbFemale.Click += rbFemale_Click;
             // 
             // rbMale
             // 
@@ -229,6 +230,7 @@
             rbMale.TabStop = true;
             rbMale.Text = "Male";
             rbMale.UseVisualStyleBackColor = true;
+            rbMale.Click += rbMale_Click;
             // 
             // txtPhone
             // 
