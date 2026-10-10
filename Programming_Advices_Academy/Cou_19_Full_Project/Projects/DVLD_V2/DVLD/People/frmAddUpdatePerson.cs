@@ -73,17 +73,40 @@ namespace DVLD.People
                 pbPersonImage.Image = Resources.woman;
             }
 
+            // Hide / Show the remove image button in case there is no image for the person.
+            btnRemoveImage.Visible = (pbPersonImage.ImageLocation != null);
 
+            // We set the max date to 18 years from today, and set the default value the same.
+            dtpDateOfBirth.MaxDate = DateTime.Now.AddYears(-18);
+            dtpDateOfBirth.Value = dtpDateOfBirth.MaxDate;
+
+            // Should not allow adding age more than 100 years.
+            dtpDateOfBirth.MinDate = DateTime.Now.AddYears(-100);
+
+            // This will set default country to syria.
+            cbCountry.SelectedIndex = cbCountry.FindString("syria");
+
+            txtFirstName.Text = "";
+            txtSecondName.Text = "";
+            txtThirdName.Text = "";
+            txtLastName.Text = "";
+            txtNationalNo.Text = "";
+            rbMale.Checked = true;
+            txtPhone.Text = "";
+            txtEmail.Text = "";
+            txtAddress.Text = "";
         }
+
+
 
         private void frmAddUpdatePerson_Load(object sender, EventArgs e)
         {
             _ResetDefaultValue();
 
-            //    //if (_Mode == enMode.Update)
-            //    //    _LoadData();
+            //if (_mode == enMode.update)
+            //{
+            //    _LoadData();
+            //}
         }
-
-
     }
 }
