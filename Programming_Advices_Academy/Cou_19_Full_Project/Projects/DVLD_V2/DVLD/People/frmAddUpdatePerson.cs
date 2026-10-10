@@ -97,16 +97,80 @@ namespace DVLD.People
             txtAddress.Text = "";
         }
 
+        private void _LoadData()
+        {
+            _Person = clsPerson.Find(_personID);
+
+            if (_Person == null)
+            {
+                MessageBox.Show("No Person with ID: " + _personID, "Person Not Found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                this.Close();
+                return;
+            }
+
+            // The following code will not be executed if the person was not found.
+            lblPersonID.Text = _personID.ToString();
+
+            txtFirstName.Text = _Person.firstName;
+            txtSecondName.Text = _Person.secondName;
+            txtThirdName.Text = _Person.thirdName;
+            txtLastName.Text = _Person.lastName;
+            txtNationalNo.Text = _Person.nationalNo;
+            dtpDateOfBirth.Value = _Person.dateOfBirth;
+
+            if (_Person.gendor == 0)
+            {
+                rbMale.Checked = true;
+            }
+            else
+            {
+                rbFemale.Checked = true;
+            }
+
+            txtAddress.Text = _Person.address;
+            txtPhone.Text = _Person.phone;
+            txtEmail.Text = _Person.email;
+            cbCountry.SelectedIndex = cbCountry.FindString(_Person.countryInfo.countryName);
+
+            // Load person image incase it was set.
+            if (_Person.imagePath != "")
+            {
+                pbPersonImage.ImageLocation = _Person.imagePath;
+            }
+
+
+            // Hide / Show the remove image button in case there is no image for the person.
+            btnRemoveImage.Visible = (_Person.imagePath != null);
+        }
+
+        private void rbMale_Click()
+        {
+            // Change the default image to male incase there is no image set.
+            if (pbPersonImage.ImageLocation == null)
+            {
+                pbPersonImage.Image = Resources.businessman;
+            }
+        }
+
+        private void rbFemale_Click()
+        {
+            // Change the default image to female incase there is no image set.
+            if (pbPersonImage.ImageLocation == null)
+            {
+                pbPersonImage.Image = Resources.woman;
+            }
+        }
+
 
 
         private void frmAddUpdatePerson_Load(object sender, EventArgs e)
         {
             _ResetDefaultValue();
 
-            //if (_mode == enMode.update)
-            //{
-            //    _LoadData();
-            //}
+            if (_mode == enMode.update)
+            {
+                _LoadData();
+            }
         }
     }
 }
