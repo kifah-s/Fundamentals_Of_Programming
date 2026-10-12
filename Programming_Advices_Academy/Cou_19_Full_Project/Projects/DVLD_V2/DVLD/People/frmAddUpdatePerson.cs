@@ -280,6 +280,22 @@ namespace DVLD.People
             }
         }
 
+        private void btnSetImage_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                // Process the selected file.
+                string selectedFilePath = openFileDialog1.FileName;
+                pbPersonImage.Load(selectedFilePath);
+                btnRemoveImage.Visible = true;
+                // ......
+            }
+        }
+
         private void frmAddUpdatePerson_Load(object sender, EventArgs e)
         {
             _ResetDefaultValue();
@@ -289,7 +305,5 @@ namespace DVLD.People
                 _LoadData();
             }
         }
-
-
     }
 }

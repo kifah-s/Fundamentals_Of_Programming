@@ -61,6 +61,7 @@
             label3 = new Label();
             label2 = new Label();
             lblPersonID = new Label();
+            openFileDialog1 = new OpenFileDialog();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbPersonImage).BeginInit();
             SuspendLayout();
@@ -145,6 +146,7 @@
             btnSetImage.TabIndex = 29;
             btnSetImage.Text = "Set Image";
             btnSetImage.UseVisualStyleBackColor = true;
+            btnSetImage.Click += btnSetImage_Click;
             // 
             // pbPersonImage
             // 
@@ -432,6 +434,10 @@
             lblPersonID.TabIndex = 3;
             lblPersonID.Text = "N/A";
             // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
             // frmAddUpdatePerson
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
@@ -490,5 +496,6 @@
         private System.Windows.Forms.Button btnSetImage;
         private System.Windows.Forms.PictureBox pbPersonImage;
         private System.Windows.Forms.Label lblPersonID;
+        private OpenFileDialog openFileDialog1;
     }
 }
