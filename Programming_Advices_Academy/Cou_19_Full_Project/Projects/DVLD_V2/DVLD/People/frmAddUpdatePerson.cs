@@ -1,6 +1,7 @@
 ﻿using DVLD.Global_Classes;
 using DVLD.Properties;
 using DVLD_Business;
+using System.ComponentModel;
 using System.Data;
 
 namespace DVLD.People
@@ -312,6 +313,25 @@ namespace DVLD.People
             btnRemoveImage.Visible = false;
         }
 
+
+        private void ValidateEmptyTextBox(object sender, CancelEventArgs e)
+        {
+            // First: set AutoValidate property of your Form to EnableAllowFocusChange in designer. !!!!
+
+            TextBox temp = ((TextBox)sender);
+
+            if (string.IsNullOrEmpty(temp.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(temp, "This field is required!");
+            }
+            else
+            {
+                // e.Cancel = false;
+                errorProvider1.SetError(temp, null);
+            }
+        }
+
         private void frmAddUpdatePerson_Load(object sender, EventArgs e)
         {
             _ResetDefaultValue();
@@ -320,6 +340,7 @@ namespace DVLD.People
             {
                 _LoadData();
             }
+
         }
 
 

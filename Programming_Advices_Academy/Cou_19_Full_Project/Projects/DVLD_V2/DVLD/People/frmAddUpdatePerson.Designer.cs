@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lblTitle = new Label();
             label1 = new Label();
             groupBox1 = new GroupBox();
@@ -62,8 +63,10 @@
             label2 = new Label();
             lblPersonID = new Label();
             openFileDialog1 = new OpenFileDialog();
+            errorProvider1 = new ErrorProvider(components);
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbPersonImage).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // lblTitle
@@ -209,6 +212,7 @@
             txtAddress.Name = "txtAddress";
             txtAddress.Size = new Size(507, 112);
             txtAddress.TabIndex = 24;
+            txtAddress.Validating += ValidateEmptyTextBox;
             // 
             // rbFemale
             // 
@@ -243,6 +247,7 @@
             txtPhone.Name = "txtPhone";
             txtPhone.Size = new Size(238, 23);
             txtPhone.TabIndex = 21;
+            txtPhone.Validating += ValidateEmptyTextBox;
             // 
             // txtEmail
             // 
@@ -275,6 +280,7 @@
             txtThirdName.Name = "txtThirdName";
             txtThirdName.Size = new Size(170, 23);
             txtThirdName.TabIndex = 17;
+            txtThirdName.Validating += ValidateEmptyTextBox;
             // 
             // txtSecondName
             // 
@@ -283,6 +289,7 @@
             txtSecondName.Name = "txtSecondName";
             txtSecondName.Size = new Size(170, 23);
             txtSecondName.TabIndex = 16;
+            txtSecondName.Validating += ValidateEmptyTextBox;
             // 
             // txtFirstName
             // 
@@ -291,6 +298,7 @@
             txtFirstName.Name = "txtFirstName";
             txtFirstName.Size = new Size(170, 23);
             txtFirstName.TabIndex = 15;
+            txtFirstName.Validating += ValidateEmptyTextBox;
             // 
             // label13
             // 
@@ -439,6 +447,10 @@
             // 
             openFileDialog1.FileName = "openFileDialog1";
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
             // frmAddUpdatePerson
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
@@ -457,6 +469,7 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbPersonImage).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
 
@@ -498,5 +511,6 @@
         private System.Windows.Forms.PictureBox pbPersonImage;
         private System.Windows.Forms.Label lblPersonID;
         private OpenFileDialog openFileDialog1;
+        private ErrorProvider errorProvider1;
     }
 }
