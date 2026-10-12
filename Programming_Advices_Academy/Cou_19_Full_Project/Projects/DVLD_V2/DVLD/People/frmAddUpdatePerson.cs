@@ -1,4 +1,5 @@
-﻿using DVLD.Properties;
+﻿using DVLD.Global_Classes;
+using DVLD.Properties;
 using DVLD_Business;
 using System.Data;
 
@@ -177,12 +178,20 @@ namespace DVLD.People
                     // Then we copy the new image to the image folder after we rename it.
                     string sourceImageFile = pbPersonImage.ImageLocation.ToString();
 
-                    if ()
+                    if (clsUtil.CopyImageToProjectImagesFolder(ref sourceImageFile))
                     {
-
+                        pbPersonImage.ImageLocation = sourceImageFile;
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error Copying Image File", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
                     }
                 }
             }
+
+            return true;
         }
 
         private void rbMale_Click(object sender, EventArgs e)
