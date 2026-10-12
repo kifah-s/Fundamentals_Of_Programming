@@ -194,6 +194,74 @@ namespace DVLD.People
             return true;
         }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (!this.ValidateChildren())
+            {
+                // Here we don't continue because the form is not valid.
+                MessageBox.Show("Some fields are not valid!, put the mouse over the red icon(s) to see the error", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+            }
+
+            if (!_HandlePersonImage())
+            {
+                return;
+            }
+
+            int nationalityCountryID = clsCountry.Find(cbCountry.Text).countryID;
+
+            _Person.firstName = txtFirstName.Text.Trim();
+            _Person.secondName = txtSecondName.Text.Trim();
+            _Person.thirdName = txtThirdName.Text.Trim();
+            _Person.lastName = txtLastName.Text.Trim();
+
+            _Person.nationalNo = txtNationalNo.Text.Trim();
+            _Person.email = txtEmail.Text.Trim();
+            _Person.phone = txtPhone.Text.Trim();
+            _Person.address = txtAddress.Text.Trim();
+
+            _Person.dateOfBirth = dtpDateOfBirth.Value;
+
+            if (rbMale.Checked)
+            {
+                _Person.gendor = (short)enGendor.male;
+            }
+            else
+            {
+                _Person.gendor = (short)enGendor.female;
+            }
+
+            _Person.nationalityCountryID = nationalityCountryID;
+
+            if (pbPersonImage.ImageLocation != null)
+            {
+                _Person.imagePath = pbPersonImage.ImageLocation;
+            }
+            else
+            {
+                _Person.imagePath = "";
+            }
+
+            if (_Person.Save())
+            {
+                lblPersonID.Text = _Person.personID.ToString();
+
+                // Change form mode to update.
+                _mode = enMode.update;
+                lblTitle.Text = "Update Person";
+
+                MessageBox.Show("Data Saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Trigger the event to send data back to the caller form.
+                DataBack?.Invoke(this, _Person.personID);
+            }
+            else
+            {
+                MessageBox.Show("Error: Data Is not Saved Successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void rbMale_Click(object sender, EventArgs e)
         {
             // Change the default image to male incase there is no image set.
