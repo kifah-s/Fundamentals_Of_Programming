@@ -145,6 +145,46 @@ namespace DVLD.People
             btnRemoveImage.Visible = (_Person.imagePath != null);
         }
 
+        private bool _HandlePersonImage()
+        {
+            /*
+            This procedure will handle the person image,
+            it will take care of deleting the old image from the folder,
+            in case the image changed,
+            and it will rename the new image with guid and place it in the images folder.
+            */
+
+            // _Person.ImagePath contains the old Image, we check if it changed then we copy the new image.
+
+            if (_Person.imagePath != pbPersonImage.ImageLocation)
+            {
+                if (_Person.imagePath != "")
+                {
+                    // First we delete the old image from the folder in case there is any.
+                    try
+                    {
+                        File.Delete(_Person.imagePath);
+                    }
+                    catch (IOException)
+                    {
+                        // We could not delete the file.
+                        // Log it later.
+                    }
+                }
+
+                if (pbPersonImage.ImageLocation != null)
+                {
+                    // Then we copy the new image to the image folder after we rename it.
+                    string sourceImageFile = pbPersonImage.ImageLocation.ToString();
+
+                    if ()
+                    {
+
+                    }
+                }
+            }
+        }
+
         private void rbMale_Click(object sender, EventArgs e)
         {
             // Change the default image to male incase there is no image set.
