@@ -296,6 +296,22 @@ namespace DVLD.People
             }
         }
 
+        private void btnRemoveImage_Click(object sender, EventArgs e)
+        {
+            pbPersonImage.ImageLocation = null;
+
+            if (rbMale.Checked)
+            {
+                pbPersonImage.Image = Resources.businessman;
+            }
+            else
+            {
+                pbPersonImage.Image = Resources.woman;
+            }
+
+            btnRemoveImage.Visible = false;
+        }
+
         private void frmAddUpdatePerson_Load(object sender, EventArgs e)
         {
             _ResetDefaultValue();
@@ -305,5 +321,7 @@ namespace DVLD.People
                 _LoadData();
             }
         }
+
+
     }
 }

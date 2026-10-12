@@ -135,6 +135,7 @@
             btnRemoveImage.TabIndex = 30;
             btnRemoveImage.Text = "Remove Image";
             btnRemoveImage.UseVisualStyleBackColor = true;
+            btnRemoveImage.Click += btnRemoveImage_Click;
             // 
             // btnSetImage
             // 
