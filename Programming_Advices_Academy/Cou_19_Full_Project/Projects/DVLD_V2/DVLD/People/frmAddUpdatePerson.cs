@@ -361,5 +361,30 @@ namespace DVLD.People
                 errorProvider1.SetError(txtEmail, null);
             }
         }
+
+        private void txtNationalNo_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtNationalNo.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtNationalNo, "This field is required !!");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtNationalNo, null);
+            }
+
+            // Make sure the national number is not used by another person.
+            if (txtNationalNo.Text.Trim() != _Person.nationalNo && clsPerson.IsPersonExist(txtNationalNo.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtNationalNo, "National Number is used for another person!");
+            }
+            else
+            {
+                errorProvider1.SetError(txtNationalNo, null);
+            }
+        }
     }
 }

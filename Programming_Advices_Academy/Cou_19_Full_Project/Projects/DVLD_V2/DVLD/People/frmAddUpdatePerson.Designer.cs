@@ -265,6 +265,7 @@
             txtNationalNo.Name = "txtNationalNo";
             txtNationalNo.Size = new Size(170, 23);
             txtNationalNo.TabIndex = 19;
+            txtNationalNo.Validating += txtNationalNo_Validating;
             // 
             // txtLastName
             // 
