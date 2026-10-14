@@ -351,9 +351,14 @@ namespace DVLD.People
             }
 
             // Validate email format.
-            if ()
+            if (!clsValidation.ValidateEmail(txtEmail.Text))
             {
-
+                e.Cancel = true;
+                errorProvider1.SetError(txtEmail, "Invalid Email Address Format!");
+            }
+            else
+            {
+                errorProvider1.SetError(txtEmail, null);
             }
         }
     }
