@@ -256,6 +256,7 @@
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(170, 23);
             txtEmail.TabIndex = 20;
+            txtEmail.Validating += txtEmail_Validating;
             // 
             // txtNationalNo
             // 
@@ -455,6 +456,7 @@
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoValidate = AutoValidate.EnableAllowFocusChange;
             BackColor = Color.White;
             ClientSize = new Size(878, 490);
             Controls.Add(lblPersonID);

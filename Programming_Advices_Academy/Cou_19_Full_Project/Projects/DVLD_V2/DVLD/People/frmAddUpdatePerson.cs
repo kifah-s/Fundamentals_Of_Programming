@@ -313,7 +313,6 @@ namespace DVLD.People
             btnRemoveImage.Visible = false;
         }
 
-
         private void ValidateEmptyTextBox(object sender, CancelEventArgs e)
         {
             // First: set AutoValidate property of your Form to EnableAllowFocusChange in designer. !!!!
@@ -343,6 +342,19 @@ namespace DVLD.People
 
         }
 
+        private void txtEmail_Validating(object sender, CancelEventArgs e)
+        {
+            // No need to validate the email incase it's empty.
+            if (txtEmail.Text.Trim() == "")
+            {
+                return;
+            }
 
+            // Validate email format.
+            if ()
+            {
+
+            }
+        }
     }
 }
