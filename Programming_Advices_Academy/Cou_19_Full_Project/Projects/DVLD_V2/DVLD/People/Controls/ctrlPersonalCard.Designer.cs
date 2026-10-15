@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
+            SuspendLayout();
             // 
             // ctrlPersonalCard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "ctrlPersonalCard";
-            this.Size = new System.Drawing.Size(876, 347);
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "ctrlPersonalCard";
+            Size = new Size(864, 492);
+            ResumeLayout(false);
 
         }
 
