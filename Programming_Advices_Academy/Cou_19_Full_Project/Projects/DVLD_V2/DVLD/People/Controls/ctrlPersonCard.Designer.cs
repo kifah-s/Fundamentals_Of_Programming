@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            groupBox1 = new GroupBox();
+            gbPersonInformation = new GroupBox();
             btnEditPersonInfo = new Button();
             pbPersonImage = new PictureBox();
             lblCountry = new Label();
@@ -49,39 +49,39 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            groupBox1.SuspendLayout();
+            gbPersonInformation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbPersonImage).BeginInit();
             SuspendLayout();
             // 
-            // groupBox1
+            // gbPersonInformation
             // 
-            groupBox1.Controls.Add(btnEditPersonInfo);
-            groupBox1.Controls.Add(pbPersonImage);
-            groupBox1.Controls.Add(lblCountry);
-            groupBox1.Controls.Add(lblPhone);
-            groupBox1.Controls.Add(lblDateOfBirth);
-            groupBox1.Controls.Add(label9);
-            groupBox1.Controls.Add(label8);
-            groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(lblAddress);
-            groupBox1.Controls.Add(lblEmail);
-            groupBox1.Controls.Add(lblGendor);
-            groupBox1.Controls.Add(lblNationalNO);
-            groupBox1.Controls.Add(lblFullName);
-            groupBox1.Controls.Add(lblPersonID);
-            groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(21, 20);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(686, 284);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Person Information";
+            gbPersonInformation.Controls.Add(btnEditPersonInfo);
+            gbPersonInformation.Controls.Add(pbPersonImage);
+            gbPersonInformation.Controls.Add(lblCountry);
+            gbPersonInformation.Controls.Add(lblPhone);
+            gbPersonInformation.Controls.Add(lblDateOfBirth);
+            gbPersonInformation.Controls.Add(label9);
+            gbPersonInformation.Controls.Add(label8);
+            gbPersonInformation.Controls.Add(label7);
+            gbPersonInformation.Controls.Add(lblAddress);
+            gbPersonInformation.Controls.Add(lblEmail);
+            gbPersonInformation.Controls.Add(lblGendor);
+            gbPersonInformation.Controls.Add(lblNationalNO);
+            gbPersonInformation.Controls.Add(lblFullName);
+            gbPersonInformation.Controls.Add(lblPersonID);
+            gbPersonInformation.Controls.Add(label6);
+            gbPersonInformation.Controls.Add(label5);
+            gbPersonInformation.Controls.Add(label4);
+            gbPersonInformation.Controls.Add(label3);
+            gbPersonInformation.Controls.Add(label2);
+            gbPersonInformation.Controls.Add(label1);
+            gbPersonInformation.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gbPersonInformation.Location = new Point(6, 8);
+            gbPersonInformation.Name = "gbPersonInformation";
+            gbPersonInformation.Size = new Size(686, 284);
+            gbPersonInformation.TabIndex = 0;
+            gbPersonInformation.TabStop = false;
+            gbPersonInformation.Text = "Person Information";
             // 
             // btnEditPersonInfo
             // 
@@ -292,13 +292,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(groupBox1);
+            Controls.Add(gbPersonInformation);
             Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Margin = new Padding(4, 3, 4, 3);
             Name = "ctrlPersonCard";
-            Size = new Size(736, 331);
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            Size = new Size(707, 302);
+            gbPersonInformation.ResumeLayout(false);
+            gbPersonInformation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbPersonImage).EndInit();
             ResumeLayout(false);
 
@@ -306,7 +306,7 @@
 
         #endregion
 
-        private GroupBox groupBox1;
+        private GroupBox gbPersonInformation;
         private Label label6;
         private Label label5;
         private Label label4;

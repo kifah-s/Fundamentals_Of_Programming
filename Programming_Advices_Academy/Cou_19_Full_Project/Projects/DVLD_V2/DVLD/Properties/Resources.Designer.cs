@@ -283,16 +283,6 @@ namespace DVLD.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap stamp__1_ {
-            get {
-                object obj = ResourceManager.GetObject("stamp (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap test {
             get {
                 object obj = ResourceManager.GetObject("test", resourceCulture);
@@ -346,6 +336,42 @@ namespace DVLD.Properties {
         internal static System.Drawing.Bitmap worldwide_shipping {
             get {
                 object obj = ResourceManager.GetObject("worldwide-shipping", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stamp_2
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("stamp_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AddPer_32
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("AddPer_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SearchPer
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("SearchPer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
