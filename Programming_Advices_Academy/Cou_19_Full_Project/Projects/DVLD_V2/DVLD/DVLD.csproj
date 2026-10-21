@@ -18,6 +18,9 @@
 
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+
+		<!-- Suppress WFO1000 error for all properties -->
+		<NoWarn>$(NoWarn);WFO1000</NoWarn>
 	</PropertyGroup>
 
 	<ItemGroup>

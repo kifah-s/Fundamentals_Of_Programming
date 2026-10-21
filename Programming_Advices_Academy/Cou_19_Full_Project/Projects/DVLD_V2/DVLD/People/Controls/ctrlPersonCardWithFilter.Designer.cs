@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             gbFilter = new GroupBox();
             btnAddNewPerson = new Button();
             btnFindPerson = new Button();
@@ -35,7 +36,9 @@
             cbFilterBy = new ComboBox();
             label1 = new Label();
             ctrlPersonCard1 = new ctrlPersonCard();
+            errorProvider1 = new ErrorProvider(components);
             gbFilter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // gbFilter
@@ -65,6 +68,7 @@
             btnAddNewPerson.Size = new Size(36, 36);
             btnAddNewPerson.TabIndex = 4;
             btnAddNewPerson.UseVisualStyleBackColor = false;
+            btnAddNewPerson.Click += btnAddNewPerson_Click;
             // 
             // btnFindPerson
             // 
@@ -77,6 +81,7 @@
             btnFindPerson.Size = new Size(36, 36);
             btnFindPerson.TabIndex = 3;
             btnFindPerson.UseVisualStyleBackColor = false;
+            btnFindPerson.Click += btnFindPerson_Click;
             // 
             // txtFilterValue
             // 
@@ -85,6 +90,7 @@
             txtFilterValue.Name = "txtFilterValue";
             txtFilterValue.Size = new Size(243, 25);
             txtFilterValue.TabIndex = 2;
+            txtFilterValue.KeyPress += txtFilterValue_KeyPress;
             // 
             // cbFilterBy
             // 
@@ -109,11 +115,15 @@
             // 
             ctrlPersonCard1.AutoValidate = AutoValidate.EnableAllowFocusChange;
             ctrlPersonCard1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ctrlPersonCard1.Location = new Point(-10, 77);
+            ctrlPersonCard1.Location = new Point(5, 77);
             ctrlPersonCard1.Margin = new Padding(4, 3, 4, 3);
             ctrlPersonCard1.Name = "ctrlPersonCard1";
             ctrlPersonCard1.Size = new Size(724, 309);
             ctrlPersonCard1.TabIndex = 2;
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
             // 
             // ctrlPersonCardWithFilter
             // 
@@ -123,8 +133,10 @@
             Controls.Add(ctrlPersonCard1);
             Name = "ctrlPersonCardWithFilter";
             Size = new Size(730, 406);
+            Load += ctrlPersonCardWithFilter_Load;
             gbFilter.ResumeLayout(false);
             gbFilter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
         }
 
@@ -137,5 +149,6 @@
         private Button btnFindPerson;
         private Button btnAddNewPerson;
         private ctrlPersonCard ctrlPersonCard1;
+        private ErrorProvider errorProvider1;
     }
 }
