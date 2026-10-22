@@ -1,0 +1,22 @@
+﻿namespace DVLD.People
+{
+    public partial class frmShowPersonInfo : Form
+    {
+        public frmShowPersonInfo(int personID)
+        {
+            InitializeComponent();
+            ctrlPersonCard1.LoadPersonInfo(personID);
+        }
+
+        public frmShowPersonInfo(string nationalNo)
+        {
+            InitializeComponent();
+            ctrlPersonCard1.LoadPersonInfo(nationalNo);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}
