@@ -1,4 +1,6 @@
-﻿namespace DVLD
+﻿using DVLD.People;
+
+namespace DVLD
 {
     internal static class Program
     {
@@ -14,6 +16,7 @@
             Application.Run(new frmMain());
 
             //Application.Run(new frmAddUpdatePerson());
+            Application.Run(new frmFindPerson());
         }
     }
 }

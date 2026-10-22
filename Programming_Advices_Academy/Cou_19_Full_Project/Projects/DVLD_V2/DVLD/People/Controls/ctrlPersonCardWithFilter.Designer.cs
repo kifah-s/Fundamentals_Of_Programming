@@ -131,8 +131,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(gbFilter);
             Controls.Add(ctrlPersonCard1);
+            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "ctrlPersonCardWithFilter";
-            Size = new Size(730, 406);
+            Size = new Size(753, 414);
             Load += ctrlPersonCardWithFilter_Load;
             gbFilter.ResumeLayout(false);
             gbFilter.PerformLayout();
