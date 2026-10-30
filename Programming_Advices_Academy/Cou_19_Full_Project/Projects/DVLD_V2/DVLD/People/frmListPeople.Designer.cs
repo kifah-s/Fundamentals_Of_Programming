@@ -34,12 +34,12 @@
             cbFilterBy = new ComboBox();
             txtFilterValue = new TextBox();
             btnAddPerson = new Button();
-            dataGridView1 = new DataGridView();
+            dgvPeople = new DataGridView();
             label2 = new Label();
             lblRecordsCount = new Label();
             btnClose = new Button();
             ((System.ComponentModel.ISupportInitialize)pbPersonImage).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvPeople).BeginInit();
             SuspendLayout();
             // 
             // pbPersonImage
@@ -100,14 +100,14 @@
             btnAddPerson.TabIndex = 5;
             btnAddPerson.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvPeople
             // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 212);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(833, 233);
-            dataGridView1.TabIndex = 6;
+            dgvPeople.BackgroundColor = Color.White;
+            dgvPeople.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPeople.Location = new Point(12, 212);
+            dgvPeople.Name = "dgvPeople";
+            dgvPeople.Size = new Size(833, 233);
+            dgvPeople.TabIndex = 6;
             // 
             // label2
             // 
@@ -146,13 +146,14 @@
             // 
             // frmListPeople
             // 
+            AcceptButton = btnAddPerson;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(857, 505);
             Controls.Add(btnClose);
             Controls.Add(lblRecordsCount);
             Controls.Add(label2);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvPeople);
             Controls.Add(btnAddPerson);
             Controls.Add(txtFilterValue);
             Controls.Add(cbFilterBy);
@@ -162,7 +163,7 @@
             Name = "frmListPeople";
             Text = "frmListPeople";
             ((System.ComponentModel.ISupportInitialize)pbPersonImage).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvPeople).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -175,7 +176,7 @@
         private ComboBox cbFilterBy;
         private TextBox txtFilterValue;
         private Button btnAddPerson;
-        private DataGridView dataGridView1;
+        private DataGridView dgvPeople;
         private Label label2;
         private Label lblRecordsCount;
         private Button btnClose;
