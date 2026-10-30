@@ -162,6 +162,7 @@
             Controls.Add(pbPersonImage);
             Name = "frmListPeople";
             Text = "frmListPeople";
+            Load += frmListPeople_Load;
             ((System.ComponentModel.ISupportInitialize)pbPersonImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvPeople).EndInit();
             ResumeLayout(false);
