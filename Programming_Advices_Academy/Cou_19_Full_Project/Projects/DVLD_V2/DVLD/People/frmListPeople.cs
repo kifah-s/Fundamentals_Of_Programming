@@ -167,6 +167,15 @@ namespace DVLD.People
             lblRecordsCount.Text = dgvPeople.Rows.Count.ToString();
         }
 
+        private void cbFilterBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtFilterValue.Visible = (cbFilterBy.Text != "None");
 
+            if (txtFilterValue.Visible)
+            {
+                txtFilterValue.Text = "";
+                txtFilterValue.Focus();
+            }
+        }
     }
 }

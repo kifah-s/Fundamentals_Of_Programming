@@ -82,6 +82,7 @@
             cbFilterBy.Name = "cbFilterBy";
             cbFilterBy.Size = new Size(344, 25);
             cbFilterBy.TabIndex = 3;
+            cbFilterBy.SelectedIndexChanged += cbFilterBy_SelectedIndexChanged;
             // 
             // txtFilterValue
             // 
