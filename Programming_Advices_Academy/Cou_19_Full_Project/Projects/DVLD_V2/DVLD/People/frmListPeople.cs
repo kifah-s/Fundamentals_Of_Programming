@@ -185,5 +185,13 @@ namespace DVLD.People
             Form frm = new frmShowPersonInfo(personID);
             frm.ShowDialog();
         }
+
+        private void addNewPersonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddUpdatePerson();
+            frm.ShowDialog();
+
+            _RefreshPeopleList();
+        }
     }
 }
