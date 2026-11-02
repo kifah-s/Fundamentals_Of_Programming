@@ -69,6 +69,104 @@ namespace DVLD.People
             }
         }
 
+        private void txtFilterValue_TextChanged(object sender, EventArgs e)
+        {
+            string filterColumn = "";
+
+            // Map Selected Filter to real Column name.
+            switch (cbFilterBy.Text)
+            {
+                case "Person ID":
+                    {
+                        filterColumn = "PersonID";
+                        break;
+                    }
+
+                case "National No.":
+                    {
+                        filterColumn = "NationalNo";
+                        break;
+                    }
+
+                case "First Name":
+                    {
+                        filterColumn = "FirstName";
+                        break;
+                    }
+
+                case "Second Name":
+                    {
+                        filterColumn = "SecondName";
+                        break;
+                    }
+
+                case "Third Name":
+                    {
+                        filterColumn = "ThirdName";
+                        break;
+                    }
+
+                case "Last Name":
+                    {
+                        filterColumn = "LastName";
+                        break;
+                    }
+
+                case "Nationality":
+                    {
+                        filterColumn = "CountryName";
+                        break;
+                    }
+
+                case "Gendor":
+                    {
+                        filterColumn = "GendorCaption";
+                        break;
+                    }
+
+                case "Phone":
+                    {
+                        filterColumn = "Phone";
+                        break;
+                    }
+
+                case "Email":
+                    {
+                        filterColumn = "Email";
+                        break;
+                    }
+
+                default:
+                    {
+                        filterColumn = "None";
+                        break;
+                    }
+
+
+            }
+
+            // Reset the filters in case nothing selected or filter value contains nothing.
+            if (txtFilterValue.Text.Trim() == "" || filterColumn == "None")
+            {
+                _dtPeople.DefaultView.RowFilter = "";
+                lblRecordsCount.Text = dgvPeople.Rows.Count.ToString();
+
+                return;
+            }
+
+            if (filterColumn == "PersonID")
+            {
+                // In this case we deal with integer not string.
+                _dtPeople.DefaultView.RowFilter = string.Format("[{0}] = {1}", filterColumn, txtFilterValue.Text.Trim());
+            }
+            else
+            {
+                _dtPeople.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", filterColumn, txtFilterValue.Text.Trim());
+            }
+
+            lblRecordsCount.Text = dgvPeople.Rows.Count.ToString();
+        }
+
 
     }
 }

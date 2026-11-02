@@ -90,6 +90,7 @@
             txtFilterValue.Name = "txtFilterValue";
             txtFilterValue.Size = new Size(334, 25);
             txtFilterValue.TabIndex = 4;
+            txtFilterValue.TextChanged += txtFilterValue_TextChanged;
             // 
             // btnAddPerson
             // 
