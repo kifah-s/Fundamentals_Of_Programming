@@ -110,6 +110,7 @@
             btnAddPerson.Size = new Size(57, 48);
             btnAddPerson.TabIndex = 5;
             btnAddPerson.UseVisualStyleBackColor = true;
+            btnAddPerson.Click += btnAddPerson_Click;
             // 
             // dgvPeople
             // 
@@ -154,6 +155,7 @@
             btnClose.TabIndex = 9;
             btnClose.Text = "Close";
             btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
             // 
             // cmsPeople
             // 
