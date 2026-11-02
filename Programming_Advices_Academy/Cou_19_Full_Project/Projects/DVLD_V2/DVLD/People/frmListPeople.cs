@@ -177,5 +177,13 @@ namespace DVLD.People
                 txtFilterValue.Focus();
             }
         }
+
+        private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int personID = (int)dgvPeople.CurrentRow.Cells[0].Value;
+
+            Form frm = new frmShowPersonInfo(personID);
+            frm.ShowDialog();
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             pbPersonImage = new PictureBox();
             lblTitle = new Label();
             label1 = new Label();
@@ -38,8 +39,16 @@
             label2 = new Label();
             lblRecordsCount = new Label();
             btnClose = new Button();
+            cmsPeople = new ContextMenuStrip(components);
+            showDetailsToolStripMenuItem = new ToolStripMenuItem();
+            addNewPersonToolStripMenuItem = new ToolStripMenuItem();
+            editToolStripMenuItem = new ToolStripMenuItem();
+            deleteToolStripMenuItem = new ToolStripMenuItem();
+            sendEmailToolStripMenuItem = new ToolStripMenuItem();
+            phoneCallToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)pbPersonImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvPeople).BeginInit();
+            cmsPeople.SuspendLayout();
             SuspendLayout();
             // 
             // pbPersonImage
@@ -146,12 +155,62 @@
             btnClose.Text = "Close";
             btnClose.UseVisualStyleBackColor = false;
             // 
+            // cmsPeople
+            // 
+            cmsPeople.Items.AddRange(new ToolStripItem[] { showDetailsToolStripMenuItem, addNewPersonToolStripMenuItem, editToolStripMenuItem, deleteToolStripMenuItem, sendEmailToolStripMenuItem, phoneCallToolStripMenuItem });
+            cmsPeople.Name = "cmsPeople";
+            cmsPeople.Size = new Size(181, 158);
+            // 
+            // showDetailsToolStripMenuItem
+            // 
+            showDetailsToolStripMenuItem.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            showDetailsToolStripMenuItem.Image = Properties.Resources.list;
+            showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
+            showDetailsToolStripMenuItem.Size = new Size(180, 22);
+            showDetailsToolStripMenuItem.Text = "Show Details";
+            showDetailsToolStripMenuItem.Click += showDetailsToolStripMenuItem_Click;
+            // 
+            // addNewPersonToolStripMenuItem
+            // 
+            addNewPersonToolStripMenuItem.Image = Properties.Resources.add_friend;
+            addNewPersonToolStripMenuItem.Name = "addNewPersonToolStripMenuItem";
+            addNewPersonToolStripMenuItem.Size = new Size(180, 22);
+            addNewPersonToolStripMenuItem.Text = "Add New Person";
+            // 
+            // editToolStripMenuItem
+            // 
+            editToolStripMenuItem.Image = Properties.Resources.edit;
+            editToolStripMenuItem.Name = "editToolStripMenuItem";
+            editToolStripMenuItem.Size = new Size(180, 22);
+            editToolStripMenuItem.Text = "Edit";
+            // 
+            // deleteToolStripMenuItem
+            // 
+            deleteToolStripMenuItem.Image = Properties.Resources.delete;
+            deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            deleteToolStripMenuItem.Size = new Size(180, 22);
+            deleteToolStripMenuItem.Text = "Delete";
+            // 
+            // sendEmailToolStripMenuItem
+            // 
+            sendEmailToolStripMenuItem.Image = Properties.Resources.file;
+            sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
+            sendEmailToolStripMenuItem.Size = new Size(180, 22);
+            sendEmailToolStripMenuItem.Text = "Send Email";
+            // 
+            // phoneCallToolStripMenuItem
+            // 
+            phoneCallToolStripMenuItem.Image = Properties.Resources.phone_call;
+            phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
+            phoneCallToolStripMenuItem.Size = new Size(180, 22);
+            phoneCallToolStripMenuItem.Text = "Phone Call";
+            // 
             // frmListPeople
             // 
             AcceptButton = btnAddPerson;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(857, 505);
+            ClientSize = new Size(855, 496);
             Controls.Add(btnClose);
             Controls.Add(lblRecordsCount);
             Controls.Add(label2);
@@ -167,6 +226,7 @@
             Load += frmListPeople_Load;
             ((System.ComponentModel.ISupportInitialize)pbPersonImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvPeople).EndInit();
+            cmsPeople.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -183,5 +243,12 @@
         private Label label2;
         private Label lblRecordsCount;
         private Button btnClose;
+        private ContextMenuStrip cmsPeople;
+        private ToolStripMenuItem showDetailsToolStripMenuItem;
+        private ToolStripMenuItem addNewPersonToolStripMenuItem;
+        private ToolStripMenuItem editToolStripMenuItem;
+        private ToolStripMenuItem deleteToolStripMenuItem;
+        private ToolStripMenuItem sendEmailToolStripMenuItem;
+        private ToolStripMenuItem phoneCallToolStripMenuItem;
     }
 }
