@@ -246,5 +246,22 @@ namespace DVLD.People
         {
             this.Close();
         }
+
+        private void dgvPeople_DoubleClick(object sender, EventArgs e)
+        {
+            int personID = (int)dgvPeople.CurrentRow.Cells[0].Value;
+
+            Form frm = new frmShowPersonInfo(personID);
+            frm.ShowDialog();
+        }
+
+        private void txtFilterValue_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // We allow number in case person id is selected.
+            if (cbFilterBy.Text == "Person ID")
+            {
+                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            }
+        }
     }
 }
