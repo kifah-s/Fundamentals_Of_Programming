@@ -200,6 +200,7 @@
             sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
             sendEmailToolStripMenuItem.Size = new Size(162, 22);
             sendEmailToolStripMenuItem.Text = "Send Email";
+            sendEmailToolStripMenuItem.Click += sendEmailToolStripMenuItem_Click;
             // 
             // phoneCallToolStripMenuItem
             // 
@@ -207,6 +208,7 @@
             phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
             phoneCallToolStripMenuItem.Size = new Size(162, 22);
             phoneCallToolStripMenuItem.Text = "Phone Call";
+            phoneCallToolStripMenuItem.Click += phoneCallToolStripMenuItem_Click;
             // 
             // frmListPeople
             // 
