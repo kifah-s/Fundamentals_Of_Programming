@@ -204,6 +204,27 @@ namespace DVLD.People
             _RefreshPeopleList();
         }
 
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int personID = (int)dgvPeople.CurrentRow.Cells[0].Value;
+
+            if (MessageBox.Show("Are you sure you want to delete Person [" + personID + "]", "Confirm Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                // Perform Delete and refresh.
+                if (clsPerson.DeletePerson(personID))
+                {
+                    MessageBox.Show("Person Deleted Successfully.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    _RefreshPeopleList();
+                }
+                else
+                {
+                    MessageBox.Show("Person was not deleted because it has data linked to it.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
 
     }
 }
