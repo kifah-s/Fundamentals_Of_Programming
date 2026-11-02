@@ -159,14 +159,14 @@
             // 
             cmsPeople.Items.AddRange(new ToolStripItem[] { showDetailsToolStripMenuItem, addNewPersonToolStripMenuItem, editToolStripMenuItem, deleteToolStripMenuItem, sendEmailToolStripMenuItem, phoneCallToolStripMenuItem });
             cmsPeople.Name = "cmsPeople";
-            cmsPeople.Size = new Size(181, 158);
+            cmsPeople.Size = new Size(163, 136);
             // 
             // showDetailsToolStripMenuItem
             // 
             showDetailsToolStripMenuItem.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             showDetailsToolStripMenuItem.Image = Properties.Resources.list;
             showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            showDetailsToolStripMenuItem.Size = new Size(180, 22);
+            showDetailsToolStripMenuItem.Size = new Size(162, 22);
             showDetailsToolStripMenuItem.Text = "Show Details";
             showDetailsToolStripMenuItem.Click += showDetailsToolStripMenuItem_Click;
             // 
@@ -174,7 +174,7 @@
             // 
             addNewPersonToolStripMenuItem.Image = Properties.Resources.add_friend;
             addNewPersonToolStripMenuItem.Name = "addNewPersonToolStripMenuItem";
-            addNewPersonToolStripMenuItem.Size = new Size(180, 22);
+            addNewPersonToolStripMenuItem.Size = new Size(162, 22);
             addNewPersonToolStripMenuItem.Text = "Add New Person";
             addNewPersonToolStripMenuItem.Click += addNewPersonToolStripMenuItem_Click;
             // 
@@ -182,28 +182,29 @@
             // 
             editToolStripMenuItem.Image = Properties.Resources.edit;
             editToolStripMenuItem.Name = "editToolStripMenuItem";
-            editToolStripMenuItem.Size = new Size(180, 22);
+            editToolStripMenuItem.Size = new Size(162, 22);
             editToolStripMenuItem.Text = "Edit";
+            editToolStripMenuItem.Click += editToolStripMenuItem_Click;
             // 
             // deleteToolStripMenuItem
             // 
             deleteToolStripMenuItem.Image = Properties.Resources.delete;
             deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            deleteToolStripMenuItem.Size = new Size(180, 22);
+            deleteToolStripMenuItem.Size = new Size(162, 22);
             deleteToolStripMenuItem.Text = "Delete";
             // 
             // sendEmailToolStripMenuItem
             // 
             sendEmailToolStripMenuItem.Image = Properties.Resources.file;
             sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            sendEmailToolStripMenuItem.Size = new Size(180, 22);
+            sendEmailToolStripMenuItem.Size = new Size(162, 22);
             sendEmailToolStripMenuItem.Text = "Send Email";
             // 
             // phoneCallToolStripMenuItem
             // 
             phoneCallToolStripMenuItem.Image = Properties.Resources.phone_call;
             phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
-            phoneCallToolStripMenuItem.Size = new Size(180, 22);
+            phoneCallToolStripMenuItem.Size = new Size(162, 22);
             phoneCallToolStripMenuItem.Text = "Phone Call";
             // 
             // frmListPeople

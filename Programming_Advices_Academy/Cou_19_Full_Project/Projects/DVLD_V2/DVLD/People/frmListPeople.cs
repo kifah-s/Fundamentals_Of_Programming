@@ -193,5 +193,17 @@ namespace DVLD.People
 
             _RefreshPeopleList();
         }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int personID = (int)dgvPeople.CurrentRow.Cells[0].Value;
+
+            Form frm = new frmAddUpdatePerson(personID);
+            frm.ShowDialog();
+
+            _RefreshPeopleList();
+        }
+
+
     }
 }
