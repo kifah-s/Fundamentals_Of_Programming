@@ -55,6 +55,7 @@
             // 
             // gbPersonInformation
             // 
+            gbPersonInformation.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             gbPersonInformation.Controls.Add(btnEditPersonInfo);
             gbPersonInformation.Controls.Add(pbPersonImage);
             gbPersonInformation.Controls.Add(lblCountry);
@@ -85,6 +86,7 @@
             // 
             // btnEditPersonInfo
             // 
+            btnEditPersonInfo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnEditPersonInfo.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEditPersonInfo.Location = new Point(465, 49);
             btnEditPersonInfo.Name = "btnEditPersonInfo";
@@ -96,6 +98,7 @@
             // 
             // pbPersonImage
             // 
+            pbPersonImage.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pbPersonImage.BackColor = Color.White;
             pbPersonImage.BackgroundImageLayout = ImageLayout.Zoom;
             pbPersonImage.BorderStyle = BorderStyle.FixedSingle;
@@ -112,7 +115,7 @@
             // 
             lblCountry.AutoSize = true;
             lblCountry.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCountry.Location = new Point(350, 187);
+            lblCountry.Location = new Point(297, 187);
             lblCountry.Name = "lblCountry";
             lblCountry.Size = new Size(57, 21);
             lblCountry.TabIndex = 17;
@@ -122,7 +125,7 @@
             // 
             lblPhone.AutoSize = true;
             lblPhone.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPhone.Location = new Point(350, 141);
+            lblPhone.Location = new Point(284, 141);
             lblPhone.Name = "lblPhone";
             lblPhone.Size = new Size(57, 21);
             lblPhone.TabIndex = 16;
@@ -132,7 +135,7 @@
             // 
             lblDateOfBirth.AutoSize = true;
             lblDateOfBirth.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDateOfBirth.Location = new Point(350, 95);
+            lblDateOfBirth.Location = new Point(334, 49);
             lblDateOfBirth.Name = "lblDateOfBirth";
             lblDateOfBirth.Size = new Size(57, 21);
             lblDateOfBirth.TabIndex = 15;
@@ -162,7 +165,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(227, 95);
+            label7.Location = new Point(227, 49);
             label7.Name = "label7";
             label7.Size = new Size(117, 21);
             label7.TabIndex = 12;
@@ -172,7 +175,7 @@
             // 
             lblAddress.AutoSize = true;
             lblAddress.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblAddress.Location = new Point(350, 233);
+            lblAddress.Location = new Point(296, 233);
             lblAddress.Name = "lblAddress";
             lblAddress.Size = new Size(57, 21);
             lblAddress.TabIndex = 11;
@@ -182,7 +185,7 @@
             // 
             lblEmail.AutoSize = true;
             lblEmail.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblEmail.Location = new Point(124, 233);
+            lblEmail.Location = new Point(57, 233);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(57, 21);
             lblEmail.TabIndex = 10;
@@ -192,7 +195,7 @@
             // 
             lblGendor.AutoSize = true;
             lblGendor.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblGendor.Location = new Point(124, 187);
+            lblGendor.Location = new Point(71, 187);
             lblGendor.Name = "lblGendor";
             lblGendor.Size = new Size(57, 21);
             lblGendor.TabIndex = 9;
@@ -202,7 +205,7 @@
             // 
             lblNationalNO.AutoSize = true;
             lblNationalNO.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNationalNO.Location = new Point(124, 141);
+            lblNationalNO.Location = new Point(108, 141);
             lblNationalNO.Name = "lblNationalNO";
             lblNationalNO.Size = new Size(57, 21);
             lblNationalNO.TabIndex = 8;
@@ -212,7 +215,7 @@
             // 
             lblFullName.AutoSize = true;
             lblFullName.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblFullName.Location = new Point(124, 95);
+            lblFullName.Location = new Point(60, 95);
             lblFullName.Name = "lblFullName";
             lblFullName.Size = new Size(57, 21);
             lblFullName.TabIndex = 7;
@@ -222,7 +225,7 @@
             // 
             lblPersonID.AutoSize = true;
             lblPersonID.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPersonID.Location = new Point(124, 49);
+            lblPersonID.Location = new Point(87, 49);
             lblPersonID.Name = "lblPersonID";
             lblPersonID.Size = new Size(57, 21);
             lblPersonID.TabIndex = 6;

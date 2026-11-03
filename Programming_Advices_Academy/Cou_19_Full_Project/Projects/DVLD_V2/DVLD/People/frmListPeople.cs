@@ -26,10 +26,30 @@ namespace DVLD.People
 
         private void frmListPeople_Load(object sender, EventArgs e)
         {
+            //dgvPeople.DataSource = _dtPeople;
+
+            //cbFilterBy.SelectedIndex = 0;
+
+            //lblRecordsCount.Text = dgvPeople.Rows.Count.ToString();
+
             dgvPeople.DataSource = _dtPeople;
-
+            cbFilterBy.Items.Clear();
+            cbFilterBy.Items.AddRange(new object[]
+            {
+                "None",
+                "Person ID",
+                "National No.",
+                "First Name",
+                "Second Name",
+                "Third Name",
+                "Last Name",
+                "Gendor",
+                "Date Of Birth",
+                "Nationality",
+                "Phone",
+                "Email"
+            });
             cbFilterBy.SelectedIndex = 0;
-
             lblRecordsCount.Text = dgvPeople.Rows.Count.ToString();
 
             if (dgvPeople.Rows.Count > 0)
@@ -157,7 +177,9 @@ namespace DVLD.People
             if (filterColumn == "PersonID")
             {
                 // In this case we deal with integer not string.
-                _dtPeople.DefaultView.RowFilter = string.Format("[{0}] = {1}", filterColumn, txtFilterValue.Text.Trim());
+                //_dtPeople.DefaultView.RowFilter = string.Format("[{0}] = {1}", filterColumn, txtFilterValue.Text.Trim());
+
+                _dtPeople.DefaultView.RowFilter = $"Convert([PersonID], 'System.String') LIKE '{txtFilterValue.Text.Trim()}%'";
             }
             else
             {

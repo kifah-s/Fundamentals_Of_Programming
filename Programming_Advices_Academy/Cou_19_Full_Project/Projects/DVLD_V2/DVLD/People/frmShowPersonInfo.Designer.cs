@@ -35,15 +35,17 @@
             // 
             // ctrlPersonCard1
             // 
+            ctrlPersonCard1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ctrlPersonCard1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ctrlPersonCard1.Location = new Point(13, 77);
+            ctrlPersonCard1.Location = new Point(0, 62);
             ctrlPersonCard1.Margin = new Padding(4, 3, 4, 3);
             ctrlPersonCard1.Name = "ctrlPersonCard1";
-            ctrlPersonCard1.Size = new Size(707, 302);
+            ctrlPersonCard1.Size = new Size(704, 335);
             ctrlPersonCard1.TabIndex = 0;
             // 
             // lblTitle
             // 
+            lblTitle.Anchor = AnchorStyles.Top;
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitle.ForeColor = Color.Red;
@@ -55,11 +57,12 @@
             // 
             // btnClose
             // 
+            btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnClose.BackColor = Color.White;
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnClose.ForeColor = Color.Red;
-            btnClose.Location = new Point(605, 385);
+            btnClose.Location = new Point(583, 338);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(100, 38);
             btnClose.TabIndex = 3;
@@ -71,7 +74,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(728, 450);
+            ClientSize = new Size(713, 409);
             Controls.Add(btnClose);
             Controls.Add(lblTitle);
             Controls.Add(ctrlPersonCard1);

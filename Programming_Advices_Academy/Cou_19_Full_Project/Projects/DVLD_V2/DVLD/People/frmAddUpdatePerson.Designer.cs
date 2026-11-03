@@ -175,6 +175,8 @@
             // 
             // btnClose
             // 
+            btnClose.BackColor = Color.Transparent;
+            btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnClose.ForeColor = Color.Red;
             btnClose.Location = new Point(207, 338);
@@ -182,7 +184,8 @@
             btnClose.Size = new Size(114, 32);
             btnClose.TabIndex = 3;
             btnClose.Text = "Close";
-            btnClose.UseVisualStyleBackColor = true;
+            btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
             // 
             // dtpDateOfBirth
             // 

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            menuStrip1 = new MenuStrip();
+            msMainMenue = new MenuStrip();
             applicationsToolStripMenuItem = new ToolStripMenuItem();
             drivingLicensesServicesToolStripMenuItem = new ToolStripMenuItem();
             newDrivingLicenseToolStripMenuItem = new ToolStripMenuItem();
@@ -53,20 +53,20 @@
             changePasswordToolStripMenuItem = new ToolStripMenuItem();
             signOutToolStripMenuItem = new ToolStripMenuItem();
             pictureBox1 = new PictureBox();
-            menuStrip1.SuspendLayout();
+            msMainMenue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // menuStrip1
+            // msMainMenue
             // 
-            menuStrip1.ImageScalingSize = new Size(64, 64);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { applicationsToolStripMenuItem, peopleToolStripMenuItem, driversToolStripMenuItem, usersToolStripMenuItem, accountSettingsToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(7, 2, 0, 2);
-            menuStrip1.Size = new Size(1046, 72);
-            menuStrip1.TabIndex = 0;
-            menuStrip1.Text = "menuStrip1";
+            msMainMenue.ImageScalingSize = new Size(64, 64);
+            msMainMenue.Items.AddRange(new ToolStripItem[] { applicationsToolStripMenuItem, peopleToolStripMenuItem, driversToolStripMenuItem, usersToolStripMenuItem, accountSettingsToolStripMenuItem });
+            msMainMenue.Location = new Point(0, 0);
+            msMainMenue.Name = "msMainMenue";
+            msMainMenue.Padding = new Padding(7, 2, 0, 2);
+            msMainMenue.Size = new Size(1046, 72);
+            msMainMenue.TabIndex = 0;
+            msMainMenue.Text = "menuStrip1";
             // 
             // applicationsToolStripMenuItem
             // 
@@ -83,7 +83,7 @@
             drivingLicensesServicesToolStripMenuItem.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             drivingLicensesServicesToolStripMenuItem.Image = Properties.Resources.drivers_license;
             drivingLicensesServicesToolStripMenuItem.Name = "drivingLicensesServicesToolStripMenuItem";
-            drivingLicensesServicesToolStripMenuItem.Size = new Size(311, 70);
+            drivingLicensesServicesToolStripMenuItem.Size = new Size(263, 24);
             drivingLicensesServicesToolStripMenuItem.Text = "Driving Licenses Services";
             // 
             // newDrivingLicenseToolStripMenuItem
@@ -127,7 +127,7 @@
             manageApplicationsToolStripMenuItem.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             manageApplicationsToolStripMenuItem.Image = Properties.Resources.portfolio;
             manageApplicationsToolStripMenuItem.Name = "manageApplicationsToolStripMenuItem";
-            manageApplicationsToolStripMenuItem.Size = new Size(311, 70);
+            manageApplicationsToolStripMenuItem.Size = new Size(263, 24);
             manageApplicationsToolStripMenuItem.Text = "Manage Applications";
             // 
             // localDrivingLicenseApplicationsToolStripMenuItem
@@ -150,28 +150,28 @@
             detainLicensesToolStripMenuItem.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             detainLicensesToolStripMenuItem.Image = Properties.Resources.stamp_2;
             detainLicensesToolStripMenuItem.Name = "detainLicensesToolStripMenuItem";
-            detainLicensesToolStripMenuItem.Size = new Size(311, 70);
+            detainLicensesToolStripMenuItem.Size = new Size(263, 24);
             detainLicensesToolStripMenuItem.Text = "Detain Licenses";
             // 
             // manageDetainLicensesToolStripMenuItem
             // 
             manageDetainLicensesToolStripMenuItem.Image = Properties.Resources.project_management;
             manageDetainLicensesToolStripMenuItem.Name = "manageDetainLicensesToolStripMenuItem";
-            manageDetainLicensesToolStripMenuItem.Size = new Size(294, 70);
+            manageDetainLicensesToolStripMenuItem.Size = new Size(246, 24);
             manageDetainLicensesToolStripMenuItem.Text = "Manage Detain Licenses";
             // 
             // detainLicensesToolStripMenuItem2
             // 
             detainLicensesToolStripMenuItem2.Image = Properties.Resources.compliance;
             detainLicensesToolStripMenuItem2.Name = "detainLicensesToolStripMenuItem2";
-            detainLicensesToolStripMenuItem2.Size = new Size(294, 70);
+            detainLicensesToolStripMenuItem2.Size = new Size(246, 24);
             detainLicensesToolStripMenuItem2.Text = "Detain Licenses";
             // 
             // releaseDetainLicensesToolStripMenuItem
             // 
             releaseDetainLicensesToolStripMenuItem.Image = Properties.Resources.notes;
             releaseDetainLicensesToolStripMenuItem.Name = "releaseDetainLicensesToolStripMenuItem";
-            releaseDetainLicensesToolStripMenuItem.Size = new Size(294, 70);
+            releaseDetainLicensesToolStripMenuItem.Size = new Size(246, 24);
             releaseDetainLicensesToolStripMenuItem.Text = "Release Detain Licenses";
             // 
             // manageApplicationTypesToolStripMenuItem
@@ -179,7 +179,7 @@
             manageApplicationTypesToolStripMenuItem.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             manageApplicationTypesToolStripMenuItem.Image = Properties.Resources.website;
             manageApplicationTypesToolStripMenuItem.Name = "manageApplicationTypesToolStripMenuItem";
-            manageApplicationTypesToolStripMenuItem.Size = new Size(311, 70);
+            manageApplicationTypesToolStripMenuItem.Size = new Size(263, 24);
             manageApplicationTypesToolStripMenuItem.Text = "Manage Application Types";
             // 
             // manageTestTypesToolStripMenuItem
@@ -187,7 +187,7 @@
             manageTestTypesToolStripMenuItem.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             manageTestTypesToolStripMenuItem.Image = Properties.Resources.resume;
             manageTestTypesToolStripMenuItem.Name = "manageTestTypesToolStripMenuItem";
-            manageTestTypesToolStripMenuItem.Size = new Size(311, 70);
+            manageTestTypesToolStripMenuItem.Size = new Size(263, 24);
             manageTestTypesToolStripMenuItem.Text = "Manage Test Types";
             // 
             // peopleToolStripMenuItem
@@ -197,6 +197,7 @@
             peopleToolStripMenuItem.Name = "peopleToolStripMenuItem";
             peopleToolStripMenuItem.Size = new Size(139, 68);
             peopleToolStripMenuItem.Text = "People";
+            peopleToolStripMenuItem.Click += peopleToolStripMenuItem_Click;
             // 
             // driversToolStripMenuItem
             // 
@@ -266,16 +267,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1046, 545);
             Controls.Add(pictureBox1);
-            Controls.Add(menuStrip1);
+            Controls.Add(msMainMenue);
             IsMdiContainer = true;
-            MainMenuStrip = menuStrip1;
+            MainMenuStrip = msMainMenue;
             Margin = new Padding(4, 3, 4, 3);
             Name = "frmMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Main";
             WindowState = FormWindowState.Maximized;
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
+            msMainMenue.ResumeLayout(false);
+            msMainMenue.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -284,7 +285,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip msMainMenue;
         private System.Windows.Forms.ToolStripMenuItem applicationsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem peopleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem driversToolStripMenuItem;

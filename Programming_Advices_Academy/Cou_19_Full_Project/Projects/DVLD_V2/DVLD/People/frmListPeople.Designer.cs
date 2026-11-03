@@ -36,9 +36,6 @@
             txtFilterValue = new TextBox();
             btnAddPerson = new Button();
             dgvPeople = new DataGridView();
-            label2 = new Label();
-            lblRecordsCount = new Label();
-            btnClose = new Button();
             cmsPeople = new ContextMenuStrip(components);
             showDetailsToolStripMenuItem = new ToolStripMenuItem();
             addNewPersonToolStripMenuItem = new ToolStripMenuItem();
@@ -46,6 +43,9 @@
             deleteToolStripMenuItem = new ToolStripMenuItem();
             sendEmailToolStripMenuItem = new ToolStripMenuItem();
             phoneCallToolStripMenuItem = new ToolStripMenuItem();
+            label2 = new Label();
+            lblRecordsCount = new Label();
+            btnClose = new Button();
             ((System.ComponentModel.ISupportInitialize)pbPersonImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvPeople).BeginInit();
             cmsPeople.SuspendLayout();
@@ -53,6 +53,7 @@
             // 
             // pbPersonImage
             // 
+            pbPersonImage.Anchor = AnchorStyles.Top;
             pbPersonImage.Image = Properties.Resources.group;
             pbPersonImage.Location = new Point(344, 12);
             pbPersonImage.Name = "pbPersonImage";
@@ -63,6 +64,7 @@
             // 
             // lblTitle
             // 
+            lblTitle.Anchor = AnchorStyles.Top;
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitle.ForeColor = Color.Red;
@@ -77,7 +79,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(12, 185);
+            label1.Location = new Point(12, 182);
             label1.Name = "label1";
             label1.Size = new Size(80, 21);
             label1.TabIndex = 2;
@@ -87,7 +89,7 @@
             // 
             cbFilterBy.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cbFilterBy.FormattingEnabled = true;
-            cbFilterBy.Location = new Point(98, 181);
+            cbFilterBy.Location = new Point(98, 182);
             cbFilterBy.Name = "cbFilterBy";
             cbFilterBy.Size = new Size(344, 25);
             cbFilterBy.TabIndex = 3;
@@ -105,26 +107,94 @@
             // 
             // btnAddPerson
             // 
+            btnAddPerson.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnAddPerson.BackColor = Color.White;
             btnAddPerson.Image = Properties.Resources.AddPerson;
             btnAddPerson.Location = new Point(788, 158);
             btnAddPerson.Name = "btnAddPerson";
             btnAddPerson.Size = new Size(57, 48);
             btnAddPerson.TabIndex = 5;
-            btnAddPerson.UseVisualStyleBackColor = true;
+            btnAddPerson.UseVisualStyleBackColor = false;
             btnAddPerson.Click += btnAddPerson_Click;
             // 
             // dgvPeople
             // 
+            dgvPeople.AllowUserToAddRows = false;
+            dgvPeople.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvPeople.BackgroundColor = Color.White;
             dgvPeople.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPeople.ContextMenuStrip = cmsPeople;
             dgvPeople.Location = new Point(12, 212);
             dgvPeople.Name = "dgvPeople";
             dgvPeople.Size = new Size(833, 233);
             dgvPeople.TabIndex = 6;
             dgvPeople.DoubleClick += dgvPeople_DoubleClick;
             // 
+            // cmsPeople
+            // 
+            cmsPeople.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmsPeople.Items.AddRange(new ToolStripItem[] { showDetailsToolStripMenuItem, addNewPersonToolStripMenuItem, editToolStripMenuItem, deleteToolStripMenuItem, sendEmailToolStripMenuItem, phoneCallToolStripMenuItem });
+            cmsPeople.Name = "cmsPeople";
+            cmsPeople.Size = new Size(175, 136);
+            // 
+            // showDetailsToolStripMenuItem
+            // 
+            showDetailsToolStripMenuItem.Font = new Font("Segoe UI", 9.75F);
+            showDetailsToolStripMenuItem.Image = Properties.Resources.list;
+            showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
+            showDetailsToolStripMenuItem.Size = new Size(174, 22);
+            showDetailsToolStripMenuItem.Text = "Show Details";
+            showDetailsToolStripMenuItem.Click += showDetailsToolStripMenuItem_Click;
+            // 
+            // addNewPersonToolStripMenuItem
+            // 
+            addNewPersonToolStripMenuItem.Font = new Font("Segoe UI", 9.75F);
+            addNewPersonToolStripMenuItem.Image = Properties.Resources.Add_Person_72;
+            addNewPersonToolStripMenuItem.ImageTransparentColor = Color.White;
+            addNewPersonToolStripMenuItem.Name = "addNewPersonToolStripMenuItem";
+            addNewPersonToolStripMenuItem.Size = new Size(174, 22);
+            addNewPersonToolStripMenuItem.Text = "Add New Person";
+            addNewPersonToolStripMenuItem.Click += addNewPersonToolStripMenuItem_Click;
+            // 
+            // editToolStripMenuItem
+            // 
+            editToolStripMenuItem.Font = new Font("Segoe UI", 9.75F);
+            editToolStripMenuItem.Image = Properties.Resources.edit;
+            editToolStripMenuItem.Name = "editToolStripMenuItem";
+            editToolStripMenuItem.Size = new Size(174, 22);
+            editToolStripMenuItem.Text = "Edit";
+            editToolStripMenuItem.Click += editToolStripMenuItem_Click;
+            // 
+            // deleteToolStripMenuItem
+            // 
+            deleteToolStripMenuItem.Font = new Font("Segoe UI", 9.75F);
+            deleteToolStripMenuItem.Image = Properties.Resources.delete;
+            deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            deleteToolStripMenuItem.Size = new Size(174, 22);
+            deleteToolStripMenuItem.Text = "Delete";
+            deleteToolStripMenuItem.Click += deleteToolStripMenuItem_Click;
+            // 
+            // sendEmailToolStripMenuItem
+            // 
+            sendEmailToolStripMenuItem.Font = new Font("Segoe UI", 9.75F);
+            sendEmailToolStripMenuItem.Image = Properties.Resources.file;
+            sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
+            sendEmailToolStripMenuItem.Size = new Size(174, 22);
+            sendEmailToolStripMenuItem.Text = "Send Email";
+            sendEmailToolStripMenuItem.Click += sendEmailToolStripMenuItem_Click;
+            // 
+            // phoneCallToolStripMenuItem
+            // 
+            phoneCallToolStripMenuItem.Font = new Font("Segoe UI", 9.75F);
+            phoneCallToolStripMenuItem.Image = Properties.Resources.phone;
+            phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
+            phoneCallToolStripMenuItem.Size = new Size(174, 22);
+            phoneCallToolStripMenuItem.Text = "Phone Call";
+            phoneCallToolStripMenuItem.Click += phoneCallToolStripMenuItem_Click;
+            // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
@@ -136,6 +206,7 @@
             // 
             // lblRecordsCount
             // 
+            lblRecordsCount.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             lblRecordsCount.AutoSize = true;
             lblRecordsCount.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblRecordsCount.ForeColor = Color.Black;
@@ -147,6 +218,7 @@
             // 
             // btnClose
             // 
+            btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnClose.BackColor = Color.White;
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -158,61 +230,6 @@
             btnClose.Text = "Close";
             btnClose.UseVisualStyleBackColor = false;
             btnClose.Click += btnClose_Click;
-            // 
-            // cmsPeople
-            // 
-            cmsPeople.Items.AddRange(new ToolStripItem[] { showDetailsToolStripMenuItem, addNewPersonToolStripMenuItem, editToolStripMenuItem, deleteToolStripMenuItem, sendEmailToolStripMenuItem, phoneCallToolStripMenuItem });
-            cmsPeople.Name = "cmsPeople";
-            cmsPeople.Size = new Size(163, 136);
-            // 
-            // showDetailsToolStripMenuItem
-            // 
-            showDetailsToolStripMenuItem.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            showDetailsToolStripMenuItem.Image = Properties.Resources.list;
-            showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            showDetailsToolStripMenuItem.Size = new Size(162, 22);
-            showDetailsToolStripMenuItem.Text = "Show Details";
-            showDetailsToolStripMenuItem.Click += showDetailsToolStripMenuItem_Click;
-            // 
-            // addNewPersonToolStripMenuItem
-            // 
-            addNewPersonToolStripMenuItem.Image = Properties.Resources.add_friend;
-            addNewPersonToolStripMenuItem.Name = "addNewPersonToolStripMenuItem";
-            addNewPersonToolStripMenuItem.Size = new Size(162, 22);
-            addNewPersonToolStripMenuItem.Text = "Add New Person";
-            addNewPersonToolStripMenuItem.Click += addNewPersonToolStripMenuItem_Click;
-            // 
-            // editToolStripMenuItem
-            // 
-            editToolStripMenuItem.Image = Properties.Resources.edit;
-            editToolStripMenuItem.Name = "editToolStripMenuItem";
-            editToolStripMenuItem.Size = new Size(162, 22);
-            editToolStripMenuItem.Text = "Edit";
-            editToolStripMenuItem.Click += editToolStripMenuItem_Click;
-            // 
-            // deleteToolStripMenuItem
-            // 
-            deleteToolStripMenuItem.Image = Properties.Resources.delete;
-            deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            deleteToolStripMenuItem.Size = new Size(162, 22);
-            deleteToolStripMenuItem.Text = "Delete";
-            deleteToolStripMenuItem.Click += deleteToolStripMenuItem_Click;
-            // 
-            // sendEmailToolStripMenuItem
-            // 
-            sendEmailToolStripMenuItem.Image = Properties.Resources.file;
-            sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            sendEmailToolStripMenuItem.Size = new Size(162, 22);
-            sendEmailToolStripMenuItem.Text = "Send Email";
-            sendEmailToolStripMenuItem.Click += sendEmailToolStripMenuItem_Click;
-            // 
-            // phoneCallToolStripMenuItem
-            // 
-            phoneCallToolStripMenuItem.Image = Properties.Resources.phone_call;
-            phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
-            phoneCallToolStripMenuItem.Size = new Size(162, 22);
-            phoneCallToolStripMenuItem.Text = "Phone Call";
-            phoneCallToolStripMenuItem.Click += phoneCallToolStripMenuItem_Click;
             // 
             // frmListPeople
             // 
