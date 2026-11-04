@@ -30,5 +30,34 @@ namespace DVLD_Test.DataAccessTests
                 Console.WriteLine($"No user found with ID: {testUserID}");
             }
         }
+
+        public static void TestGetUserInfoByPersonID(int testPersonID)
+        {
+            // Variables to store the retrieved data
+            int userID = -1;
+            string userName = "";
+            string password = "";
+            bool isActive = false;
+
+            Console.WriteLine($"--- Searching for Person ID: {testPersonID} ---");
+
+            // Call the function being tested
+            bool isFound = clsUserData.GetUserInfoByPersonID(testPersonID, ref userID, ref userName, ref password, ref isActive);
+
+            if (isFound)
+            {
+                Console.WriteLine("User found successfully:");
+                Console.WriteLine($"  - User ID: {userID}");
+                Console.WriteLine($"  - User Name: {userName}");
+                Console.WriteLine($"  - Password:  {password}");
+                Console.WriteLine($"  - Is Active: {isActive}");
+            }
+            else
+            {
+                Console.WriteLine($"No user found with ID: {testPersonID}");
+            }
+        }
+
+
     }
 }
