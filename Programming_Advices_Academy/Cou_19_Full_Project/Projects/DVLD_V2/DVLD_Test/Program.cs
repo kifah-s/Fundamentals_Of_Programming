@@ -1,4 +1,4 @@
-﻿using DVLD_Test.BusinessTests;
+﻿using DVLD_Test.DataAccessTests;
 
 namespace DVLD_Test
 {
@@ -28,9 +28,22 @@ namespace DVLD_Test
             // ---------------------------------------------------------------
 
             // clsCountryTests ..
+
             //clsCountryTests.TestFindCountry(1);
             //clsCountryTests.TestFindCountry("syria");
-            clsCountryTests.TestGetAllCountries();
+            //clsCountryTests.TestGetAllCountries();
+
+            // ---------------------------------------------------------------
+
+            // clsUserDataTests ..
+
+            clsUserDataTests.TestGetUserInfoByUserID(1);
+
+
+
+
+
+
 
             Console.ReadLine();
         }
