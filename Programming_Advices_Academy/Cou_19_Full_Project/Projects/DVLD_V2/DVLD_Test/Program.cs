@@ -38,7 +38,8 @@ namespace DVLD_Test
             // clsUserDataTests ..
 
             //clsUserDataTests.TestGetUserInfoByUserID(1);
-            clsUserDataTests.TestGetUserInfoByPersonID(1025);
+            //clsUserDataTests.TestGetUserInfoByPersonID(1025);
+            clsUserDataTests.TestGetUserInfoByUsernameAndPassword("user4", "12345");
 
 
 

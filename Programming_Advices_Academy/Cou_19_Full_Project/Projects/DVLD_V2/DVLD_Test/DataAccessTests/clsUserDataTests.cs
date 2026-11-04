@@ -20,6 +20,7 @@ namespace DVLD_Test.DataAccessTests
             if (isFound)
             {
                 Console.WriteLine("User found successfully:");
+                Console.WriteLine($"  - User ID: {testUserID}");
                 Console.WriteLine($"  - Person ID: {personID}");
                 Console.WriteLine($"  - User Name: {userName}");
                 Console.WriteLine($"  - Password:  {password}");
@@ -47,6 +48,7 @@ namespace DVLD_Test.DataAccessTests
             if (isFound)
             {
                 Console.WriteLine("User found successfully:");
+                Console.WriteLine($"  - Person ID: {testPersonID}");
                 Console.WriteLine($"  - User ID: {userID}");
                 Console.WriteLine($"  - User Name: {userName}");
                 Console.WriteLine($"  - Password:  {password}");
@@ -58,6 +60,31 @@ namespace DVLD_Test.DataAccessTests
             }
         }
 
+        public static void TestGetUserInfoByUsernameAndPassword(string testUserName, string testPassword)
+        {
+            // Variables to store the retrieved data
+            int userID = -1;
+            int personID = -1;
+            bool isActive = false;
 
+            Console.WriteLine($"--- Searching for User Name: {testUserName} and Password: {testPassword} ---");
+
+            // Call the function being tested
+            bool isFound = clsUserData.GetUserInfoByUsernameAndPassword(testUserName, testPassword, ref userID, ref personID, ref isActive);
+
+            if (isFound)
+            {
+                Console.WriteLine("User found successfully:");
+                Console.WriteLine($"  - User Name: {testUserName}");
+                Console.WriteLine($"  - Password:  {testPassword}");
+                Console.WriteLine($"  - User ID: {userID}");
+                Console.WriteLine($"  - Person ID: {personID}");
+                Console.WriteLine($"  - Is Active: {isActive}");
+            }
+            else
+            {
+                Console.WriteLine($"No user found with User Name: {testUserName} and Password: {testPassword}");
+            }
+        }
     }
 }
