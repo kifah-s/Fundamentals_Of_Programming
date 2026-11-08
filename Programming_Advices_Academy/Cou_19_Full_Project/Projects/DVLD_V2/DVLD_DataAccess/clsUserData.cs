@@ -200,5 +200,46 @@ namespace DVLD_DataAccess
 
             return userID;
         }
+
+        public static bool UpdateUser(int userID, int personID, string userName, string password, bool isActive)
+        {
+            int rowsAffected = 0;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+
+            string query = @"UPDATE Users
+                             SET PersonID = @personID, 
+                             UserName = @userName, 
+                             Password = @password, 
+                             IsActive = @isActive 
+                             WHERE UserID = @userID;";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@userID", userID);
+            command.Parameters.AddWithValue("@personID", personID);
+            command.Parameters.AddWithValue("@userName", userName);
+            command.Parameters.AddWithValue("@password", password);
+            command.Parameters.AddWithValue("@isActive", isActive);
+
+            try
+            {
+                connection.Open();
+
+                rowsAffected = command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+
+                return false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return (rowsAffected > 0);
+        }
     }
 }

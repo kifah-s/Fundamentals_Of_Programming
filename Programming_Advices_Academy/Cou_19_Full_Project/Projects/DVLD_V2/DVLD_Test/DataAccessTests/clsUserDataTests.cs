@@ -114,5 +114,38 @@ namespace DVLD_Test.DataAccessTests
                 Console.WriteLine("Note: Make sure that the PersonID exists in the Persons table and the database connection is correct.");
             }
         }
+
+        public static void TestUpdateUser()
+        {
+            // 1. Specify an existing UserID in the Users table that you want to update
+            int testUserID = 19; // Change this to a valid UserID that exists in your database
+
+            // 2. Specify an existing PersonID (foreign key constraint)
+            int testPersonID = 1; // Make sure this PersonID exists in the Persons table
+
+            // 3. Prepare the updated values
+            string testUserName = "user_" + DateTime.Now.Ticks.ToString().Substring(10);
+            string testPassword = "NewPass456";
+            bool testIsActive = false; // You can change this to true or false
+
+            Console.WriteLine($"Testing update for UserID: {testUserID}...");
+
+            // Call the UpdateUser function
+            bool isUpdated = clsUserData.UpdateUser(testUserID, testPersonID, testUserName, testPassword, testIsActive);
+
+            // Verify the result
+            if (isUpdated)
+            {
+                Console.WriteLine($"Test passed! User with ID {testUserID} was updated successfully.");
+                Console.WriteLine($"New Username: {testUserName}");
+                Console.WriteLine($"New Password: {testPassword}");
+                Console.WriteLine($"Is Active: {testIsActive}");
+            }
+            else
+            {
+                Console.WriteLine($"Test failed! The user with ID {testUserID} was not updated.");
+                Console.WriteLine("Note: Make sure that the UserID and PersonID exist in the database and connection is correct.");
+            }
+        }
     }
 }
