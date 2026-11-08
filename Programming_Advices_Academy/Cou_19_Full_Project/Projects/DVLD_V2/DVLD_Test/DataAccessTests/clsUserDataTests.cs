@@ -86,5 +86,33 @@ namespace DVLD_Test.DataAccessTests
                 Console.WriteLine($"No user found with User Name: {testUserName} and Password: {testPassword}");
             }
         }
+
+        public static void TestAddNewUser()
+        {
+            // 1. Put a real and existing PersonID in the Persons table (to avoid Foreign Key issues)
+            int testPersonID = 1; // Modify this number to match an existing ID in your database
+
+            // 2. Use a unique username each time (by adding Ticks or a random number) to avoid unique key violation errors
+            string testUserName = "user_" + DateTime.Now.Ticks.ToString().Substring(10);
+            string testPassword = "Password123";
+            bool testIsActive = true;
+
+            Console.WriteLine("Testing new user addition...");
+
+            // Call the function you wrote
+            int newUserID = clsUserData.AddNewUser(testPersonID, testUserName, testPassword, testIsActive);
+
+            // Verify the result
+            if (newUserID != -1)
+            {
+                Console.WriteLine($"Test passed! User added successfully.");
+                Console.WriteLine($"The newly generated UserID is: {newUserID}");
+            }
+            else
+            {
+                Console.WriteLine("Test failed! The user was not added.");
+                Console.WriteLine("Note: Make sure that the PersonID exists in the Persons table and the database connection is correct.");
+            }
+        }
     }
 }

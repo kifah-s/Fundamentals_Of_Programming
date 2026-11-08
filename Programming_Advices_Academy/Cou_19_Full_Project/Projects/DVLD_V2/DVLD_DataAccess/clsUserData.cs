@@ -158,5 +158,47 @@ namespace DVLD_DataAccess
 
             return isFound;
         }
+
+        public static int AddNewUser(int personID, string userName, string password, bool isActive)
+        {
+            // This function will return the new person id if succeeded and -1 if not.
+            int userID = -1;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+
+            string query = @"INSERT INTO Users (PersonID, UserName, Password, IsActive)
+                             VALUES (@personID, @userName, @password, @isActive);
+                             SELECT SCOPE_IDENTITY();";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@personID", personID);
+            command.Parameters.AddWithValue("@userName", userName);
+            command.Parameters.AddWithValue("@password", password);
+            command.Parameters.AddWithValue("@isActive", isActive);
+
+            try
+            {
+                connection.Open();
+
+                object result = command.ExecuteScalar();
+
+                if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                {
+                    userID = insertedID;
+                }
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return userID;
+        }
     }
 }
