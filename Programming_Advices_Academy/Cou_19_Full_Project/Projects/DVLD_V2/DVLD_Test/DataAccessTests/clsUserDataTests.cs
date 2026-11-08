@@ -1,4 +1,5 @@
 ﻿using DVLD_DataAccess;
+using System.Data;
 
 namespace DVLD_Test.DataAccessTests
 {
@@ -145,6 +146,31 @@ namespace DVLD_Test.DataAccessTests
             {
                 Console.WriteLine($"Test failed! The user with ID {testUserID} was not updated.");
                 Console.WriteLine("Note: Make sure that the UserID and PersonID exist in the database and connection is correct.");
+            }
+        }
+
+        public static void TestGetAllUsers()
+        {
+            Console.WriteLine("Testing GetAllUsers function...");
+
+            // Call the function to retrieve all users into a DataTable
+            DataTable dtUsers = clsUserData.GetAllUsers();
+
+            // Check if the DataTable is not null and has rows
+            if (dtUsers != null && dtUsers.Rows.Count > 0)
+            {
+                Console.WriteLine($"Test passed! Successfully retrieved {dtUsers.Rows.Count} user(s).\n");
+                Console.WriteLine("--- Users List ---");
+
+                // Loop through the rows and display user details
+                foreach (DataRow row in dtUsers.Rows)
+                {
+                    Console.WriteLine($"UserID: {row["UserID"]} | PersonID: {row["PersonID"]} | Full Name: {row["FullName"]} | Username: {row["UserName"]} | IsActive: {row["IsActive"]}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("The test ran successfully, but the Users table is empty or no data was returned.");
             }
         }
     }
