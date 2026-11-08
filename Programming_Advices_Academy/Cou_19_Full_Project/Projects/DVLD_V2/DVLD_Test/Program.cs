@@ -42,7 +42,8 @@ namespace DVLD_Test
             //clsUserDataTests.TestGetUserInfoByUsernameAndPassword("user4", "12345");
             //clsUserDataTests.TestAddNewUser();
             //clsUserDataTests.TestUpdateUser();
-            clsUserDataTests.TestGetAllUsers();
+            //clsUserDataTests.TestGetAllUsers();
+            clsUserDataTests.TestDeleteUser();
 
 
 

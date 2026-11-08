@@ -173,5 +173,27 @@ namespace DVLD_Test.DataAccessTests
                 Console.WriteLine("The test ran successfully, but the Users table is empty or no data was returned.");
             }
         }
+
+        public static void TestDeleteUser()
+        {
+            // 1. Specify an existing UserID in the Users table that you want to delete
+            int testUserID = 19; // Change this to a valid UserID that you want to test deletion for
+
+            Console.WriteLine($"Testing deletion for UserID: {testUserID}...");
+
+            // Call the DeleteUser function (replace clsUserData with your actual class name if needed)
+            bool isDeleted = clsUserData.DeleteUser(testUserID);
+
+            // Verify the result
+            if (isDeleted)
+            {
+                Console.WriteLine($"Test passed! User with ID {testUserID} was deleted successfully.");
+            }
+            else
+            {
+                Console.WriteLine($"Test failed! The user with ID {testUserID} was not deleted.");
+                Console.WriteLine("Note: Make sure that the UserID exists in the database, or check if it's protected by a Foreign Key constraint (such as related records in other tables).");
+            }
+        }
     }
 }
