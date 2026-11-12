@@ -349,5 +349,40 @@ namespace DVLD_DataAccess
 
             return isFound;
         }
+
+        public static bool IsUserExist(string userName)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+
+            string query = "SELECT Found = 1 FROM Users WHERE UserName = @userName";
+
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            cmd.Parameters.AddWithValue(@"userName", userName);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                isFound = reader.HasRows;
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
     }
 }

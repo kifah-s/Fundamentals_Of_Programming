@@ -44,14 +44,15 @@ namespace DVLD_Test
             //clsUserDataTests.TestUpdateUser();
             //clsUserDataTests.TestGetAllUsers();
             //clsUserDataTests.TestDeleteUser();
-            clsUserDataTests.TestIsUserExist();
+            //clsUserDataTests.TestIsUserExist(1);
+            clsUserDataTests.TestIsUserExist("user4");
 
 
 
 
 
 
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }

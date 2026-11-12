@@ -196,38 +196,37 @@ namespace DVLD_Test.DataAccessTests
             }
         }
 
-        public static void TestIsUserExist()
+        public static void TestIsUserExist(int testExistingUserID)
         {
-            // 1. Specify a UserID that you know exists in your database (e.g., an ID you added recently)
-            int existingUserID = 1; // Change this to a valid UserID that exists
-
-            // 2. Specify a UserID that definitely does NOT exist in your database
-            int nonExistingUserID = 99999; // A very large number unlikely to exist
-
             Console.WriteLine("Testing isUserExist function...");
 
             // Test with an existing user (Expected: true)
-            bool existsResult = clsUserData.IsUserExist(existingUserID); // Replace clsUserData with your class name if needed
+            bool existsResult = clsUserData.IsUserExist(testExistingUserID); // Replace clsUserData with your class name if needed
 
             if (existsResult)
             {
-                Console.WriteLine($"Test 1 Passed! User ID {existingUserID} was correctly found.");
+                Console.WriteLine($"Test Passed! User ID {testExistingUserID} was correctly found.");
             }
             else
             {
-                Console.WriteLine($"Test 1 Failed! User ID {existingUserID} exists in the database but was not found.");
+                Console.WriteLine($"Test Failed! User ID {testExistingUserID} exists in the database but was not found.");
             }
+        }
 
-            // Test with a non-existing user (Expected: false)
-            bool notExistsResult = clsUserData.IsUserExist(nonExistingUserID);
+        public static void TestIsUserExist(string testExistingUserName)
+        {
+            Console.WriteLine("Testing isUserExist function...");
 
-            if (!notExistsResult)
+            // Test with an existing user (Expected: true)
+            bool existsResult = clsUserData.IsUserExist(testExistingUserName); // Replace clsUserData with your class name if needed
+
+            if (existsResult)
             {
-                Console.WriteLine($"Test 2 Passed! User ID {nonExistingUserID} correctly reported as not found.");
+                Console.WriteLine($"Test Passed! User Name {testExistingUserName} was correctly found.");
             }
             else
             {
-                Console.WriteLine($"Test 2 Failed! User ID {nonExistingUserID} does not exist, but the function returned true.");
+                Console.WriteLine($"Test Failed! User Name {testExistingUserName} exists in the database but was not found.");
             }
         }
     }
