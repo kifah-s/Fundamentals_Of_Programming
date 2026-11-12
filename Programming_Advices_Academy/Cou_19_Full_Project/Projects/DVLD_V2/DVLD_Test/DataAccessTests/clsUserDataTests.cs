@@ -195,5 +195,40 @@ namespace DVLD_Test.DataAccessTests
                 Console.WriteLine("Note: Make sure that the UserID exists in the database, or check if it's protected by a Foreign Key constraint (such as related records in other tables).");
             }
         }
+
+        public static void TestIsUserExist()
+        {
+            // 1. Specify a UserID that you know exists in your database (e.g., an ID you added recently)
+            int existingUserID = 1; // Change this to a valid UserID that exists
+
+            // 2. Specify a UserID that definitely does NOT exist in your database
+            int nonExistingUserID = 99999; // A very large number unlikely to exist
+
+            Console.WriteLine("Testing isUserExist function...");
+
+            // Test with an existing user (Expected: true)
+            bool existsResult = clsUserData.IsUserExist(existingUserID); // Replace clsUserData with your class name if needed
+
+            if (existsResult)
+            {
+                Console.WriteLine($"Test 1 Passed! User ID {existingUserID} was correctly found.");
+            }
+            else
+            {
+                Console.WriteLine($"Test 1 Failed! User ID {existingUserID} exists in the database but was not found.");
+            }
+
+            // Test with a non-existing user (Expected: false)
+            bool notExistsResult = clsUserData.IsUserExist(nonExistingUserID);
+
+            if (!notExistsResult)
+            {
+                Console.WriteLine($"Test 2 Passed! User ID {nonExistingUserID} correctly reported as not found.");
+            }
+            else
+            {
+                Console.WriteLine($"Test 2 Failed! User ID {nonExistingUserID} does not exist, but the function returned true.");
+            }
+        }
     }
 }

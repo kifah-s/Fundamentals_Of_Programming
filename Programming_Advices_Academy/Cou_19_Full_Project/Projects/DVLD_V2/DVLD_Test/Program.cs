@@ -43,8 +43,8 @@ namespace DVLD_Test
             //clsUserDataTests.TestAddNewUser();
             //clsUserDataTests.TestUpdateUser();
             //clsUserDataTests.TestGetAllUsers();
-            clsUserDataTests.TestDeleteUser();
-
+            //clsUserDataTests.TestDeleteUser();
+            clsUserDataTests.TestIsUserExist();
 
 
 
