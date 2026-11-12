@@ -201,7 +201,7 @@ namespace DVLD_Test.DataAccessTests
             Console.WriteLine("Testing isUserExist function...");
 
             // Test with an existing user (Expected: true)
-            bool existsResult = clsUserData.IsUserExist(testExistingUserID); // Replace clsUserData with your class name if needed
+            bool existsResult = clsUserData.IsUserExist(testExistingUserID);
 
             if (existsResult)
             {
@@ -218,7 +218,7 @@ namespace DVLD_Test.DataAccessTests
             Console.WriteLine("Testing isUserExist function...");
 
             // Test with an existing user (Expected: true)
-            bool existsResult = clsUserData.IsUserExist(testExistingUserName); // Replace clsUserData with your class name if needed
+            bool existsResult = clsUserData.IsUserExist(testExistingUserName);
 
             if (existsResult)
             {
@@ -227,6 +227,23 @@ namespace DVLD_Test.DataAccessTests
             else
             {
                 Console.WriteLine($"Test Failed! User Name {testExistingUserName} exists in the database but was not found.");
+            }
+        }
+
+        public static void TestIsUserExistForPersonID(int testExistingPersonID)
+        {
+            Console.WriteLine("Testing isUserExist function...");
+
+            // Test with an existing user (Expected: true)
+            bool existsResult = clsUserData.IsUserExistForPersonID(testExistingPersonID);
+
+            if (existsResult)
+            {
+                Console.WriteLine($"Test Passed! Person ID {testExistingPersonID} was correctly found.");
+            }
+            else
+            {
+                Console.WriteLine($"Test Failed! Person ID {testExistingPersonID} exists in the database but was not found.");
             }
         }
     }
