@@ -263,5 +263,25 @@ namespace DVLD_Test.DataAccessTests
                 Console.WriteLine($"Test Failed! Person ID {testExistingPersonID} exists in the database but was not found.");
             }
         }
+
+        public static void TestChangePassword(int testUserID, string newPassword)
+        {
+            Console.WriteLine($"Testing password change for UserID: {testUserID}...");
+
+            // Call the ChangePassword function (replace clsUserData with your actual class name if needed)
+            bool isChanged = clsUserData.ChangePassword(testUserID, newPassword);
+
+            // Verify the result
+            if (isChanged)
+            {
+                Console.WriteLine($"Test passed! Password for User ID {testUserID} was updated successfully.");
+                Console.WriteLine($"New Password set to: {newPassword}");
+            }
+            else
+            {
+                Console.WriteLine($"Test failed! The password was not changed.");
+                Console.WriteLine("Note: Make sure that the UserID exists in the database and the connection string is correct.");
+            }
+        }
     }
 }

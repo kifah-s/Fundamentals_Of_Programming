@@ -1,6 +1,4 @@
-﻿using DVLD_Test.DataAccessTests;
-
-namespace DVLD_Test
+﻿namespace DVLD_Test
 {
     internal class Program
     {
@@ -47,9 +45,10 @@ namespace DVLD_Test
             //clsUserDataTests.TestIsUserExist(1);
             //clsUserDataTests.TestIsUserExist("user4");
             //clsUserDataTests.TestIsUserExistForPersonID(1025);
-            clsUserDataTests.TestDoesPersonHaveUser(1025);
+            //clsUserDataTests.TestDoesPersonHaveUser(1025);
+            //clsUserDataTests.TestChangePassword(17, "12345");
 
-
+            // ---------------------------------------------------------------
 
 
 

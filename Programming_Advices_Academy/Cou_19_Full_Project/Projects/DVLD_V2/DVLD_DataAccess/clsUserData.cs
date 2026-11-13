@@ -454,5 +454,39 @@ namespace DVLD_DataAccess
 
             return isFound;
         }
+
+        public static bool ChangePassword(int userID, string newPassword)
+        {
+            int rowsAffected = 0;
+
+            SqlConnection con = new SqlConnection(clsDataAccessSettings.connectionString);
+
+            string query = @"UPDATE Users
+                             SET Password = @newPassword
+                             WHERE UserID = @userID";
+
+            SqlCommand com = new SqlCommand(query, con);
+
+            com.Parameters.AddWithValue("@userID", userID);
+            com.Parameters.AddWithValue("@newPassword", newPassword);
+
+            try
+            {
+                con.Open();
+
+                rowsAffected = com.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                // Console.WriteLine("Error: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            return (rowsAffected > 0);
+        }
     }
 }
