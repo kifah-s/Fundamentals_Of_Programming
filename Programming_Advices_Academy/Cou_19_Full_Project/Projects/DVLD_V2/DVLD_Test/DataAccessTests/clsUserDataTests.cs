@@ -246,5 +246,22 @@ namespace DVLD_Test.DataAccessTests
                 Console.WriteLine($"Test Failed! Person ID {testExistingPersonID} exists in the database but was not found.");
             }
         }
+
+        public static void TestDoesPersonHaveUser(int testExistingPersonID)
+        {
+            Console.WriteLine("Testing isUserExist function...");
+
+            // Test with an existing user (Expected: true)
+            bool existsResult = clsUserData.DoesPersonHaveUser(testExistingPersonID);
+
+            if (existsResult)
+            {
+                Console.WriteLine($"Test Passed! Person ID {testExistingPersonID} was correctly found.");
+            }
+            else
+            {
+                Console.WriteLine($"Test Failed! Person ID {testExistingPersonID} exists in the database but was not found.");
+            }
+        }
     }
 }

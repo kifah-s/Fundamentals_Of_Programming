@@ -46,7 +46,8 @@ namespace DVLD_Test
             //clsUserDataTests.TestDeleteUser();
             //clsUserDataTests.TestIsUserExist(1);
             //clsUserDataTests.TestIsUserExist("user4");
-            clsUserDataTests.TestIsUserExistForPersonID(1025);
+            //clsUserDataTests.TestIsUserExistForPersonID(1025);
+            clsUserDataTests.TestDoesPersonHaveUser(1025);
 
 
 
