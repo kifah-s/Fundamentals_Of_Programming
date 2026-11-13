@@ -59,6 +59,44 @@ namespace DVLD_Business
             return clsUserData.UpdateUser(this.userID, this.personID, this.userName, this.password, this.isActive);
         }
 
+        public static clsUser FindByUserID(int userID)
+        {
+            int personID = -1;
+            string userName = "", password = "";
+            bool isActive = false;
+
+            bool isFound = clsUserData.GetUserInfoByUserID(userID, ref personID, ref userName, ref password, ref isActive);
+
+            if (isFound)
+            {
+                // We return new object of that User with the right data.
+                return new clsUser(userID, personID, userName, password, isActive);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public static clsUser FindByPersonID(int personID)
+        {
+            int userID = -1;
+            string userName = "", password = "";
+            bool isActive = false;
+
+            bool isFound = clsUserData.GetUserInfoByPersonID(personID, ref userID, ref userName, ref password, ref isActive);
+
+            if (isFound)
+            {
+                // We return new object of that User with the right data.
+                return new clsUser(userID, userID, userName, password, isActive);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
 
     }
 }
