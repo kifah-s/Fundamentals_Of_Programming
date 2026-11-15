@@ -15,6 +15,7 @@
 
             //Application.Run(new frmAddUpdatePerson());
             //Application.Run(new frmFindPerson());
+            //Application.Run(new frmAddUpdateUser());
         }
     }
 }

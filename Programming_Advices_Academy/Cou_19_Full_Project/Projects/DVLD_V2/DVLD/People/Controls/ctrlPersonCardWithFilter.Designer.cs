@@ -52,7 +52,7 @@
             gbFilter.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gbFilter.Location = new Point(11, 1);
             gbFilter.Name = "gbFilter";
-            gbFilter.Size = new Size(686, 84);
+            gbFilter.Size = new Size(702, 84);
             gbFilter.TabIndex = 1;
             gbFilter.TabStop = false;
             gbFilter.Text = "Filter";
