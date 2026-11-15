@@ -127,6 +127,8 @@ namespace DVLD.People.Controls
 
         private void ctrlPersonCardWithFilter_Load(object sender, EventArgs e)
         {
+            if (DesignMode) return;
+
             cbFilterBy.SelectedIndex = 0;
 
             txtFilterValue.Focus();
