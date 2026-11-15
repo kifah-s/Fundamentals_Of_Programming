@@ -43,7 +43,7 @@
             // 
             // gbFilter
             // 
-            gbFilter.BackColor = SystemColors.Control;
+            gbFilter.BackColor = Color.White;
             gbFilter.Controls.Add(btnAddNewPerson);
             gbFilter.Controls.Add(btnFindPerson);
             gbFilter.Controls.Add(txtFilterValue);
@@ -129,6 +129,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             Controls.Add(gbFilter);
             Controls.Add(ctrlPersonCard1);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);

@@ -56,6 +56,7 @@
             // gbPersonInformation
             // 
             gbPersonInformation.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            gbPersonInformation.BackColor = Color.White;
             gbPersonInformation.Controls.Add(btnEditPersonInfo);
             gbPersonInformation.Controls.Add(pbPersonImage);
             gbPersonInformation.Controls.Add(lblCountry);
@@ -87,13 +88,14 @@
             // btnEditPersonInfo
             // 
             btnEditPersonInfo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnEditPersonInfo.BackColor = Color.Transparent;
             btnEditPersonInfo.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEditPersonInfo.Location = new Point(465, 49);
             btnEditPersonInfo.Name = "btnEditPersonInfo";
             btnEditPersonInfo.Size = new Size(215, 30);
             btnEditPersonInfo.TabIndex = 19;
             btnEditPersonInfo.Text = "Edit Person Info";
-            btnEditPersonInfo.UseVisualStyleBackColor = true;
+            btnEditPersonInfo.UseVisualStyleBackColor = false;
             btnEditPersonInfo.Click += btnEditPersonInfo_Click;
             // 
             // pbPersonImage

@@ -130,6 +130,7 @@
             // 
             // btnRemoveImage
             // 
+            btnRemoveImage.BackColor = Color.Transparent;
             btnRemoveImage.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRemoveImage.ForeColor = Color.Black;
             btnRemoveImage.Location = new Point(611, 338);
@@ -137,11 +138,12 @@
             btnRemoveImage.Size = new Size(233, 32);
             btnRemoveImage.TabIndex = 30;
             btnRemoveImage.Text = "Remove Image";
-            btnRemoveImage.UseVisualStyleBackColor = true;
+            btnRemoveImage.UseVisualStyleBackColor = false;
             btnRemoveImage.Click += btnRemoveImage_Click;
             // 
             // btnSetImage
             // 
+            btnSetImage.BackColor = Color.Transparent;
             btnSetImage.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSetImage.ForeColor = Color.Black;
             btnSetImage.Location = new Point(611, 300);
@@ -149,7 +151,7 @@
             btnSetImage.Size = new Size(233, 32);
             btnSetImage.TabIndex = 29;
             btnSetImage.Text = "Set Image";
-            btnSetImage.UseVisualStyleBackColor = true;
+            btnSetImage.UseVisualStyleBackColor = false;
             btnSetImage.Click += btnSetImage_Click;
             // 
             // pbPersonImage
@@ -164,13 +166,14 @@
             // 
             // btnSave
             // 
+            btnSave.BackColor = Color.Transparent;
             btnSave.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSave.Location = new Point(357, 338);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(114, 32);
             btnSave.TabIndex = 27;
             btnSave.Text = "Save";
-            btnSave.UseVisualStyleBackColor = true;
+            btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
             // 
             // btnClose

@@ -74,6 +74,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(713, 409);
             Controls.Add(btnClose);
             Controls.Add(lblTitle);

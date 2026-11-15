@@ -90,13 +90,14 @@
             // 
             // btnPersonInfoNext
             // 
+            btnPersonInfoNext.BackColor = Color.Transparent;
             btnPersonInfoNext.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnPersonInfoNext.Location = new Point(597, 391);
             btnPersonInfoNext.Name = "btnPersonInfoNext";
             btnPersonInfoNext.Size = new Size(114, 32);
             btnPersonInfoNext.TabIndex = 28;
             btnPersonInfoNext.Text = "Next";
-            btnPersonInfoNext.UseVisualStyleBackColor = true;
+            btnPersonInfoNext.UseVisualStyleBackColor = false;
             // 
             // ctrlPersonCardWithFilter1
             // 
@@ -215,17 +216,18 @@
             // 
             // btnSave
             // 
+            btnSave.BackColor = Color.Transparent;
             btnSave.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSave.Location = new Point(414, 547);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(114, 32);
             btnSave.TabIndex = 28;
             btnSave.Text = "Save";
-            btnSave.UseVisualStyleBackColor = true;
+            btnSave.UseVisualStyleBackColor = false;
             // 
             // btnClose
             // 
-            btnClose.BackColor = Color.Transparent;
+            btnClose.BackColor = Color.White;
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnClose.ForeColor = Color.Red;

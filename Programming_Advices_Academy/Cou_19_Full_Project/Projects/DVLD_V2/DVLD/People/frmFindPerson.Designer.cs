@@ -35,6 +35,7 @@
             // 
             // ctrlPersonCardWithFilter1
             // 
+            ctrlPersonCardWithFilter1.BackColor = Color.Transparent;
             ctrlPersonCardWithFilter1.FilterEnabled = true;
             ctrlPersonCardWithFilter1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ctrlPersonCardWithFilter1.Location = new Point(12, 60);
@@ -72,7 +73,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Control;
+            BackColor = Color.White;
             ClientSize = new Size(739, 513);
             Controls.Add(btnClose);
             Controls.Add(lblTitle);

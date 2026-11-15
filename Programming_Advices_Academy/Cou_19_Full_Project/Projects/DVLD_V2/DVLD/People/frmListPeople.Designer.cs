@@ -236,6 +236,7 @@
             AcceptButton = btnAddPerson;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(855, 496);
             Controls.Add(btnClose);
             Controls.Add(lblRecordsCount);
