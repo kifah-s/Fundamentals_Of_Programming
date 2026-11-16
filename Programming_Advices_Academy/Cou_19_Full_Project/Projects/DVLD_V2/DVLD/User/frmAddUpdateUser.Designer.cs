@@ -58,7 +58,7 @@
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitle.ForeColor = Color.Red;
-            lblTitle.Location = new Point(218, 9);
+            lblTitle.Location = new Point(218, 11);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(292, 37);
             lblTitle.TabIndex = 0;
@@ -69,7 +69,7 @@
             // 
             tcUserInfo.Controls.Add(tpPersonalInfo);
             tcUserInfo.Controls.Add(tpLoginInfo);
-            tcUserInfo.Location = new Point(12, 78);
+            tcUserInfo.Location = new Point(12, 56);
             tcUserInfo.Name = "tcUserInfo";
             tcUserInfo.SelectedIndex = 0;
             tcUserInfo.Size = new Size(731, 462);
@@ -98,6 +98,7 @@
             btnPersonInfoNext.TabIndex = 28;
             btnPersonInfoNext.Text = "Next";
             btnPersonInfoNext.UseVisualStyleBackColor = false;
+            btnPersonInfoNext.Click += btnPersonInfoNext_Click;
             // 
             // ctrlPersonCardWithFilter1
             // 
@@ -147,6 +148,7 @@
             txtConfirmPassword.Name = "txtConfirmPassword";
             txtConfirmPassword.Size = new Size(202, 23);
             txtConfirmPassword.TabIndex = 7;
+            txtConfirmPassword.Validating += txtConfirmPassword_Validating;
             // 
             // txtPassword
             // 
@@ -155,6 +157,7 @@
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(202, 23);
             txtPassword.TabIndex = 6;
+            txtPassword.Validating += txtPassword_Validating;
             // 
             // txtUserName
             // 
@@ -163,6 +166,7 @@
             txtUserName.Name = "txtUserName";
             txtUserName.Size = new Size(202, 23);
             txtUserName.TabIndex = 5;
+            txtUserName.Validating += txtUserName_Validating;
             // 
             // lblUserID
             // 
@@ -218,12 +222,13 @@
             // 
             btnSave.BackColor = Color.Transparent;
             btnSave.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSave.Location = new Point(414, 547);
+            btnSave.Location = new Point(414, 524);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(114, 32);
             btnSave.TabIndex = 28;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
             // 
             // btnClose
             // 
@@ -231,7 +236,7 @@
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnClose.ForeColor = Color.Red;
-            btnClose.Location = new Point(178, 547);
+            btnClose.Location = new Point(178, 524);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(114, 32);
             btnClose.TabIndex = 29;
@@ -247,13 +252,15 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(767, 591);
+            ClientSize = new Size(758, 567);
             Controls.Add(btnClose);
             Controls.Add(btnSave);
             Controls.Add(tcUserInfo);
             Controls.Add(lblTitle);
             Name = "frmAddUpdateUser";
             Text = "frmAddUpdateUser";
+            Activated += frmAddUpdateUser_Activated;
+            Load += frmAddUpdateUser_Load;
             tcUserInfo.ResumeLayout(false);
             tpPersonalInfo.ResumeLayout(false);
             tpLoginInfo.ResumeLayout(false);

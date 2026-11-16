@@ -1,4 +1,6 @@
-﻿namespace DVLD
+﻿using DVLD.User;
+
+namespace DVLD
 {
     internal static class Program
     {
@@ -11,11 +13,11 @@
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new frmMain());
+            //Application.Run(new frmMain());
 
             //Application.Run(new frmAddUpdatePerson());
             //Application.Run(new frmFindPerson());
-            //Application.Run(new frmAddUpdateUser());
+            Application.Run(new frmAddUpdateUser());
         }
     }
 }
