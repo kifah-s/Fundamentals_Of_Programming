@@ -258,7 +258,7 @@
             Controls.Add(tcUserInfo);
             Controls.Add(lblTitle);
             Name = "frmAddUpdateUser";
-            Text = "frmAddUpdateUser";
+            Text = "Add - Update User";
             Activated += frmAddUpdateUser_Activated;
             Load += frmAddUpdateUser_Load;
             tcUserInfo.ResumeLayout(false);

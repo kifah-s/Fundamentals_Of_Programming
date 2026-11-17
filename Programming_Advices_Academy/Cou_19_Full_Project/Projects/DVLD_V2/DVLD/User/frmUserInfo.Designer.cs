@@ -63,7 +63,7 @@
             Controls.Add(btnClose);
             Controls.Add(ctrlUserCard1);
             Name = "frmUserInfo";
-            Text = "frmUserInfo";
+            Text = "User Info";
             Load += frmUserInfo_Load;
             ResumeLayout(false);
         }
