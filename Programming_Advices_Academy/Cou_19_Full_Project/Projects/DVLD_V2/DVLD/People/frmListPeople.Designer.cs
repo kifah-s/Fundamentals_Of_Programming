@@ -109,6 +109,9 @@
             // 
             btnAddPerson.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnAddPerson.BackColor = Color.White;
+            btnAddPerson.FlatAppearance.BorderColor = Color.White;
+            btnAddPerson.FlatAppearance.BorderSize = 0;
+            btnAddPerson.FlatStyle = FlatStyle.Flat;
             btnAddPerson.Image = Properties.Resources.AddPerson;
             btnAddPerson.Location = new Point(788, 158);
             btnAddPerson.Name = "btnAddPerson";

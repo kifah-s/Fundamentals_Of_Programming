@@ -60,12 +60,14 @@
             // btnAddNewPerson
             // 
             btnAddNewPerson.BackColor = Color.White;
+            btnAddNewPerson.BackgroundImageLayout = ImageLayout.Zoom;
+            btnAddNewPerson.FlatAppearance.BorderSize = 0;
             btnAddNewPerson.FlatStyle = FlatStyle.Flat;
             btnAddNewPerson.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAddNewPerson.Image = Properties.Resources.AddPer_32;
-            btnAddNewPerson.Location = new Point(641, 32);
+            btnAddNewPerson.Location = new Point(654, 32);
             btnAddNewPerson.Name = "btnAddNewPerson";
-            btnAddNewPerson.Size = new Size(36, 36);
+            btnAddNewPerson.Size = new Size(36, 38);
             btnAddNewPerson.TabIndex = 4;
             btnAddNewPerson.UseVisualStyleBackColor = false;
             btnAddNewPerson.Click += btnAddNewPerson_Click;
@@ -73,10 +75,12 @@
             // btnFindPerson
             // 
             btnFindPerson.BackColor = Color.White;
+            btnFindPerson.BackgroundImageLayout = ImageLayout.Zoom;
+            btnFindPerson.FlatAppearance.BorderSize = 0;
             btnFindPerson.FlatStyle = FlatStyle.Flat;
             btnFindPerson.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnFindPerson.Image = Properties.Resources.SearchPer;
-            btnFindPerson.Location = new Point(594, 32);
+            btnFindPerson.Location = new Point(608, 32);
             btnFindPerson.Name = "btnFindPerson";
             btnFindPerson.Size = new Size(36, 36);
             btnFindPerson.TabIndex = 3;
@@ -134,7 +138,7 @@
             Controls.Add(ctrlPersonCard1);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "ctrlPersonCardWithFilter";
-            Size = new Size(753, 414);
+            Size = new Size(733, 399);
             Load += ctrlPersonCardWithFilter_Load;
             gbFilter.ResumeLayout(false);
             gbFilter.PerformLayout();
