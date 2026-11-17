@@ -42,5 +42,91 @@ namespace DVLD.User
 
             ctrlUserCard1.LoadUserInfo(_userID);
         }
+
+        private void txtCurrentPassword_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtCurrentPassword.Text.Trim()))
+            {
+                e.Cancel = true;
+
+                errorProvider1.SetError(txtCurrentPassword, "Username cannot be blank");
+
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtCurrentPassword, null);
+            }
+
+            if (_User.password != txtCurrentPassword.Text.Trim())
+            {
+                e.Cancel = true;
+
+                errorProvider1.SetError(txtCurrentPassword, "Current password is wrong!");
+
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtCurrentPassword, null);
+            }
+        }
+
+        private void txtNewPassword_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtNewPassword.Text.Trim()))
+            {
+                e.Cancel = true;
+
+                errorProvider1.SetError(txtNewPassword, "New Password cannot be blank");
+            }
+            else
+            {
+                errorProvider1.SetError(txtNewPassword, null);
+            }
+        }
+
+        private void txtConfirmPassword_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (txtConfirmPassword.Text.Trim() != txtNewPassword.Text.Trim())
+            {
+                e.Cancel = true;
+
+                errorProvider1.SetError(txtConfirmPassword, "Password Confirmation does not match New Password!");
+            }
+            else
+            {
+                errorProvider1.SetError(txtConfirmPassword, null);
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (!this.ValidateChildren())
+            {
+                // Here we don't continue because the form is not valid.
+                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+            }
+
+            _User.password = txtNewPassword.Text;
+
+            if (_User.Save())
+            {
+                MessageBox.Show("Password Changed Successfully.", "Saved.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                _ResetDefaultValues();
+            }
+            else
+            {
+                MessageBox.Show("An Erro Occured, Password did not change.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

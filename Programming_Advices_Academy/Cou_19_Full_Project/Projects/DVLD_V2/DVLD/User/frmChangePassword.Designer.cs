@@ -86,6 +86,7 @@
             txtCurrentPassword.Name = "txtCurrentPassword";
             txtCurrentPassword.Size = new Size(240, 23);
             txtCurrentPassword.TabIndex = 4;
+            txtCurrentPassword.Validating += txtCurrentPassword_Validating;
             // 
             // txtNewPassword
             // 
@@ -93,6 +94,7 @@
             txtNewPassword.Name = "txtNewPassword";
             txtNewPassword.Size = new Size(240, 23);
             txtNewPassword.TabIndex = 5;
+            txtNewPassword.Validating += txtNewPassword_Validating;
             // 
             // txtConfirmPassword
             // 
@@ -100,6 +102,7 @@
             txtConfirmPassword.Name = "txtConfirmPassword";
             txtConfirmPassword.Size = new Size(240, 23);
             txtConfirmPassword.TabIndex = 6;
+            txtConfirmPassword.Validating += txtConfirmPassword_Validating;
             // 
             // btnClose
             // 
@@ -113,6 +116,7 @@
             btnClose.TabIndex = 30;
             btnClose.Text = "Close";
             btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
             // 
             // btnSave
             // 
@@ -124,6 +128,7 @@
             btnSave.TabIndex = 31;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
             // 
             // errorProvider1
             // 
