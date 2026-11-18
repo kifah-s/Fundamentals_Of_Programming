@@ -92,6 +92,7 @@
             cbFilterBy.Name = "cbFilterBy";
             cbFilterBy.Size = new Size(225, 23);
             cbFilterBy.TabIndex = 3;
+            cbFilterBy.SelectedIndexChanged += cbFilterBy_SelectedIndexChanged;
             // 
             // cbIsActive
             // 
@@ -100,6 +101,7 @@
             cbIsActive.Name = "cbIsActive";
             cbIsActive.Size = new Size(106, 23);
             cbIsActive.TabIndex = 4;
+            cbIsActive.SelectedIndexChanged += cbIsActive_SelectedIndexChanged;
             // 
             // txtFilterValue
             // 
@@ -107,6 +109,7 @@
             txtFilterValue.Name = "txtFilterValue";
             txtFilterValue.Size = new Size(239, 23);
             txtFilterValue.TabIndex = 5;
+            txtFilterValue.TextChanged += txtFilterValue_TextChanged;
             // 
             // btnAddUser
             // 
