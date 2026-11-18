@@ -23,7 +23,12 @@ namespace DVLD.User
 
             dgvUsers.DataSource = _dtAllUsers;
 
-            cbFilterBy.SelectedIndex = 0;
+            if (cbFilterBy.Items.Count > 0)
+            {
+                cbFilterBy.SelectedIndex = 0;
+            }
+
+            //cbFilterBy.SelectedIndex = 0;
 
             lblRecordsCount.Text = dgvUsers.Rows.Count.ToString();
 
@@ -135,6 +140,15 @@ namespace DVLD.User
             lblRecordsCount.Text = _dtAllUsers.Rows.Count.ToString();
         }
 
+        private void txtFilterValue_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // We allow number incase person id or user id is selected.
+            if (cbFilterBy.Text == "Person ID" || cbFilterBy.Text == "User ID")
+            {
+                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            }
+        }
+
         private void cbIsActive_SelectedIndexChanged(object sender, EventArgs e)
         {
             string filterColumn = "IsActive";
@@ -171,6 +185,72 @@ namespace DVLD.User
             }
 
             lblRecordsCount.Text = _dtAllUsers.Rows.Count.ToString();
+        }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateUser frm = new frmAddUpdateUser();
+            frm.ShowDialog();
+
+            frmListUsers_Load(null, null);
+        }
+
+        private void dgvUsers_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int userID = (int)dgvUsers.CurrentRow.Cells[0].Value;
+
+            frmUserInfo frm = new frmUserInfo(userID);
+            frm.ShowDialog();
+        }
+
+        private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int userID = (int)dgvUsers.CurrentRow.Cells[0].Value;
+
+            frmUserInfo frm = new frmUserInfo(userID);
+            frm.ShowDialog();
+        }
+
+        private void addNewUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateUser frm = new frmAddUpdateUser();
+            frm.ShowDialog();
+
+            frmListUsers_Load(null, null);
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int userID = (int)dgvUsers.CurrentRow.Cells[0].Value;
+
+            frmAddUpdateUser frm = new frmAddUpdateUser(userID);
+            frm.ShowDialog();
+
+            frmListUsers_Load(null, null);
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int userID = (int)dgvUsers.CurrentRow.Cells[0].Value;
+
+            if (clsUser.DeleteUser(userID))
+            {
+                MessageBox.Show("User has been deleted successfully", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                frmListUsers_Load(null, null);
+            }
+            else
+            {
+                MessageBox.Show("User is not deleted due to data connected to it.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int userID = (int)dgvUsers.CurrentRow.Cells[0].Value;
+            frmChangePassword Frm1 = new frmChangePassword(userID);
+
+            Frm1.ShowDialog();
         }
     }
 }

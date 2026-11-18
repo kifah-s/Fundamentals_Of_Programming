@@ -84,7 +84,7 @@
             drivingLicensesServicesToolStripMenuItem.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             drivingLicensesServicesToolStripMenuItem.Image = Properties.Resources.drivers_license;
             drivingLicensesServicesToolStripMenuItem.Name = "drivingLicensesServicesToolStripMenuItem";
-            drivingLicensesServicesToolStripMenuItem.Size = new Size(311, 70);
+            drivingLicensesServicesToolStripMenuItem.Size = new Size(263, 24);
             drivingLicensesServicesToolStripMenuItem.Text = "Driving Licenses Services";
             // 
             // newDrivingLicenseToolStripMenuItem
@@ -128,7 +128,7 @@
             manageApplicationsToolStripMenuItem.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             manageApplicationsToolStripMenuItem.Image = Properties.Resources.portfolio;
             manageApplicationsToolStripMenuItem.Name = "manageApplicationsToolStripMenuItem";
-            manageApplicationsToolStripMenuItem.Size = new Size(311, 70);
+            manageApplicationsToolStripMenuItem.Size = new Size(263, 24);
             manageApplicationsToolStripMenuItem.Text = "Manage Applications";
             // 
             // localDrivingLicenseApplicationsToolStripMenuItem
@@ -151,7 +151,7 @@
             detainLicensesToolStripMenuItem.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             detainLicensesToolStripMenuItem.Image = Properties.Resources.stamp_2;
             detainLicensesToolStripMenuItem.Name = "detainLicensesToolStripMenuItem";
-            detainLicensesToolStripMenuItem.Size = new Size(311, 70);
+            detainLicensesToolStripMenuItem.Size = new Size(263, 24);
             detainLicensesToolStripMenuItem.Text = "Detain Licenses";
             // 
             // manageDetainLicensesToolStripMenuItem
@@ -180,7 +180,7 @@
             manageApplicationTypesToolStripMenuItem.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             manageApplicationTypesToolStripMenuItem.Image = Properties.Resources.website;
             manageApplicationTypesToolStripMenuItem.Name = "manageApplicationTypesToolStripMenuItem";
-            manageApplicationTypesToolStripMenuItem.Size = new Size(311, 70);
+            manageApplicationTypesToolStripMenuItem.Size = new Size(263, 24);
             manageApplicationTypesToolStripMenuItem.Text = "Manage Application Types";
             // 
             // manageTestTypesToolStripMenuItem
@@ -188,7 +188,7 @@
             manageTestTypesToolStripMenuItem.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             manageTestTypesToolStripMenuItem.Image = Properties.Resources.resume;
             manageTestTypesToolStripMenuItem.Name = "manageTestTypesToolStripMenuItem";
-            manageTestTypesToolStripMenuItem.Size = new Size(311, 70);
+            manageTestTypesToolStripMenuItem.Size = new Size(263, 24);
             manageTestTypesToolStripMenuItem.Text = "Manage Test Types";
             // 
             // peopleToolStripMenuItem
@@ -215,6 +215,7 @@
             usersToolStripMenuItem.Name = "usersToolStripMenuItem";
             usersToolStripMenuItem.Size = new Size(127, 68);
             usersToolStripMenuItem.Text = "Users";
+            usersToolStripMenuItem.Click += usersToolStripMenuItem_Click;
             // 
             // accountSettingsToolStripMenuItem
             // 

@@ -45,9 +45,9 @@ namespace DVLD.User
 
         public void LoadUserInfo(int userID)
         {
-            // _userID = userID;
+            //_userID = userID;
 
-            _User = clsUser.FindByPersonID(userID);
+            _User = clsUser.FindByUserID(userID);
 
             if (_User == null)
             {

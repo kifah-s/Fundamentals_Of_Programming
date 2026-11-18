@@ -37,9 +37,6 @@
             txtFilterValue = new TextBox();
             btnAddUser = new Button();
             dgvUsers = new DataGridView();
-            btnClose = new Button();
-            lblRecordsCount = new Label();
-            label2 = new Label();
             cmsUsers = new ContextMenuStrip(components);
             showDetailsToolStripMenuItem = new ToolStripMenuItem();
             addNewUserToolStripMenuItem = new ToolStripMenuItem();
@@ -48,6 +45,9 @@
             changePasswordToolStripMenuItem = new ToolStripMenuItem();
             sendEmailToolStripMenuItem = new ToolStripMenuItem();
             phoneCallToolStripMenuItem = new ToolStripMenuItem();
+            btnClose = new Button();
+            lblRecordsCount = new Label();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pbPersonsImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvUsers).BeginInit();
             cmsUsers.SuspendLayout();
@@ -55,6 +55,7 @@
             // 
             // pbPersonsImage
             // 
+            pbPersonsImage.Anchor = AnchorStyles.Top;
             pbPersonsImage.Image = Properties.Resources.management_2;
             pbPersonsImage.Location = new Point(327, 12);
             pbPersonsImage.Name = "pbPersonsImage";
@@ -65,6 +66,7 @@
             // 
             // lblTitle
             // 
+            lblTitle.Anchor = AnchorStyles.Top;
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitle.ForeColor = Color.Red;
@@ -88,6 +90,7 @@
             // cbFilterBy
             // 
             cbFilterBy.FormattingEnabled = true;
+            cbFilterBy.Items.AddRange(new object[] { "None", "User ID", "User Name", "Person ID", "Full Name", "Is Active" });
             cbFilterBy.Location = new Point(107, 218);
             cbFilterBy.Name = "cbFilterBy";
             cbFilterBy.Size = new Size(225, 23);
@@ -97,6 +100,7 @@
             // cbIsActive
             // 
             cbIsActive.FormattingEnabled = true;
+            cbIsActive.Items.AddRange(new object[] { "All", "Yes", "No" });
             cbIsActive.Location = new Point(338, 218);
             cbIsActive.Name = "cbIsActive";
             cbIsActive.Size = new Size(106, 23);
@@ -110,9 +114,11 @@
             txtFilterValue.Size = new Size(239, 23);
             txtFilterValue.TabIndex = 5;
             txtFilterValue.TextChanged += txtFilterValue_TextChanged;
+            txtFilterValue.KeyPress += txtFilterValue_KeyPress;
             // 
             // btnAddUser
             // 
+            btnAddUser.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnAddUser.BackColor = Color.Transparent;
             btnAddUser.BackgroundImage = Properties.Resources.user_1;
             btnAddUser.BackgroundImageLayout = ImageLayout.Zoom;
@@ -123,15 +129,89 @@
             btnAddUser.Size = new Size(44, 41);
             btnAddUser.TabIndex = 6;
             btnAddUser.UseVisualStyleBackColor = false;
+            btnAddUser.Click += btnAddUser_Click;
             // 
             // dgvUsers
             // 
+            dgvUsers.AllowUserToAddRows = false;
+            dgvUsers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvUsers.BackgroundColor = Color.White;
             dgvUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvUsers.ContextMenuStrip = cmsUsers;
             dgvUsers.Location = new Point(12, 247);
             dgvUsers.Name = "dgvUsers";
             dgvUsers.Size = new Size(834, 258);
             dgvUsers.TabIndex = 7;
+            dgvUsers.CellContentDoubleClick += dgvUsers_CellContentDoubleClick;
+            // 
+            // cmsUsers
+            // 
+            cmsUsers.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmsUsers.Items.AddRange(new ToolStripItem[] { showDetailsToolStripMenuItem, addNewUserToolStripMenuItem, editToolStripMenuItem, deleteToolStripMenuItem, changePasswordToolStripMenuItem, sendEmailToolStripMenuItem, phoneCallToolStripMenuItem });
+            cmsUsers.Name = "cmsPeople";
+            cmsUsers.Size = new Size(181, 158);
+            // 
+            // showDetailsToolStripMenuItem
+            // 
+            showDetailsToolStripMenuItem.Font = new Font("Segoe UI", 9.75F);
+            showDetailsToolStripMenuItem.Image = Properties.Resources.list;
+            showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
+            showDetailsToolStripMenuItem.Size = new Size(180, 22);
+            showDetailsToolStripMenuItem.Text = "Show Details";
+            showDetailsToolStripMenuItem.Click += showDetailsToolStripMenuItem_Click;
+            // 
+            // addNewUserToolStripMenuItem
+            // 
+            addNewUserToolStripMenuItem.Font = new Font("Segoe UI", 9.75F);
+            addNewUserToolStripMenuItem.Image = Properties.Resources.Add_Person_72;
+            addNewUserToolStripMenuItem.ImageTransparentColor = Color.White;
+            addNewUserToolStripMenuItem.Name = "addNewUserToolStripMenuItem";
+            addNewUserToolStripMenuItem.Size = new Size(180, 22);
+            addNewUserToolStripMenuItem.Text = "Add New User";
+            addNewUserToolStripMenuItem.Click += addNewUserToolStripMenuItem_Click;
+            // 
+            // editToolStripMenuItem
+            // 
+            editToolStripMenuItem.Font = new Font("Segoe UI", 9.75F);
+            editToolStripMenuItem.Image = Properties.Resources.edit;
+            editToolStripMenuItem.Name = "editToolStripMenuItem";
+            editToolStripMenuItem.Size = new Size(180, 22);
+            editToolStripMenuItem.Text = "Edit";
+            editToolStripMenuItem.Click += editToolStripMenuItem_Click;
+            // 
+            // deleteToolStripMenuItem
+            // 
+            deleteToolStripMenuItem.Font = new Font("Segoe UI", 9.75F);
+            deleteToolStripMenuItem.Image = Properties.Resources.delete;
+            deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            deleteToolStripMenuItem.Size = new Size(180, 22);
+            deleteToolStripMenuItem.Text = "Delete";
+            deleteToolStripMenuItem.Click += deleteToolStripMenuItem_Click;
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            changePasswordToolStripMenuItem.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            changePasswordToolStripMenuItem.Image = Properties.Resources.secure;
+            changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            changePasswordToolStripMenuItem.Size = new Size(180, 22);
+            changePasswordToolStripMenuItem.Text = "Change Password";
+            changePasswordToolStripMenuItem.Click += changePasswordToolStripMenuItem_Click;
+            // 
+            // sendEmailToolStripMenuItem
+            // 
+            sendEmailToolStripMenuItem.Font = new Font("Segoe UI", 9.75F);
+            sendEmailToolStripMenuItem.Image = Properties.Resources.file;
+            sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
+            sendEmailToolStripMenuItem.Size = new Size(180, 22);
+            sendEmailToolStripMenuItem.Text = "Send Email";
+            // 
+            // phoneCallToolStripMenuItem
+            // 
+            phoneCallToolStripMenuItem.Font = new Font("Segoe UI", 9.75F);
+            phoneCallToolStripMenuItem.Image = Properties.Resources.phone;
+            phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
+            phoneCallToolStripMenuItem.Size = new Size(180, 22);
+            phoneCallToolStripMenuItem.Text = "Phone Call";
             // 
             // btnClose
             // 
@@ -171,70 +251,6 @@
             label2.Size = new Size(74, 21);
             label2.TabIndex = 10;
             label2.Text = "Records:";
-            // 
-            // cmsUsers
-            // 
-            cmsUsers.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cmsUsers.Items.AddRange(new ToolStripItem[] { showDetailsToolStripMenuItem, addNewUserToolStripMenuItem, editToolStripMenuItem, deleteToolStripMenuItem, changePasswordToolStripMenuItem, sendEmailToolStripMenuItem, phoneCallToolStripMenuItem });
-            cmsUsers.Name = "cmsPeople";
-            cmsUsers.Size = new Size(181, 158);
-            // 
-            // showDetailsToolStripMenuItem
-            // 
-            showDetailsToolStripMenuItem.Font = new Font("Segoe UI", 9.75F);
-            showDetailsToolStripMenuItem.Image = Properties.Resources.list;
-            showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            showDetailsToolStripMenuItem.Size = new Size(180, 22);
-            showDetailsToolStripMenuItem.Text = "Show Details";
-            // 
-            // addNewUserToolStripMenuItem
-            // 
-            addNewUserToolStripMenuItem.Font = new Font("Segoe UI", 9.75F);
-            addNewUserToolStripMenuItem.Image = Properties.Resources.Add_Person_72;
-            addNewUserToolStripMenuItem.ImageTransparentColor = Color.White;
-            addNewUserToolStripMenuItem.Name = "addNewUserToolStripMenuItem";
-            addNewUserToolStripMenuItem.Size = new Size(180, 22);
-            addNewUserToolStripMenuItem.Text = "Add New User";
-            // 
-            // editToolStripMenuItem
-            // 
-            editToolStripMenuItem.Font = new Font("Segoe UI", 9.75F);
-            editToolStripMenuItem.Image = Properties.Resources.edit;
-            editToolStripMenuItem.Name = "editToolStripMenuItem";
-            editToolStripMenuItem.Size = new Size(180, 22);
-            editToolStripMenuItem.Text = "Edit";
-            // 
-            // deleteToolStripMenuItem
-            // 
-            deleteToolStripMenuItem.Font = new Font("Segoe UI", 9.75F);
-            deleteToolStripMenuItem.Image = Properties.Resources.delete;
-            deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            deleteToolStripMenuItem.Size = new Size(180, 22);
-            deleteToolStripMenuItem.Text = "Delete";
-            // 
-            // changePasswordToolStripMenuItem
-            // 
-            changePasswordToolStripMenuItem.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            changePasswordToolStripMenuItem.Image = Properties.Resources.secure;
-            changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            changePasswordToolStripMenuItem.Size = new Size(180, 22);
-            changePasswordToolStripMenuItem.Text = "Change Password";
-            // 
-            // sendEmailToolStripMenuItem
-            // 
-            sendEmailToolStripMenuItem.Font = new Font("Segoe UI", 9.75F);
-            sendEmailToolStripMenuItem.Image = Properties.Resources.file;
-            sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            sendEmailToolStripMenuItem.Size = new Size(180, 22);
-            sendEmailToolStripMenuItem.Text = "Send Email";
-            // 
-            // phoneCallToolStripMenuItem
-            // 
-            phoneCallToolStripMenuItem.Font = new Font("Segoe UI", 9.75F);
-            phoneCallToolStripMenuItem.Image = Properties.Resources.phone;
-            phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
-            phoneCallToolStripMenuItem.Size = new Size(180, 22);
-            phoneCallToolStripMenuItem.Text = "Phone Call";
             // 
             // frmListUsers
             // 

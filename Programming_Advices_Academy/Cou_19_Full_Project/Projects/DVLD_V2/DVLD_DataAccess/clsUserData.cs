@@ -31,7 +31,7 @@ namespace DVLD_DataAccess
                     personID = (int)reader["PersonID"];
                     userName = (string)reader["UserName"];
                     password = (string)reader["Password"];
-                    isActive = (bool)reader["ISActive"];
+                    isActive = (bool)reader["IsActive"];
                 }
                 else
                 {
