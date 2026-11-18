@@ -79,7 +79,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(12, 219);
+            label1.Location = new Point(12, 217);
             label1.Name = "label1";
             label1.Size = new Size(89, 25);
             label1.TabIndex = 2;
@@ -143,6 +143,7 @@
             btnClose.TabIndex = 12;
             btnClose.Text = "Close";
             btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
             // 
             // lblRecordsCount
             // 
@@ -251,6 +252,7 @@
             Controls.Add(pbPersonsImage);
             Name = "frmListUsers";
             Text = "frmListUsers";
+            Load += frmListUsers_Load;
             ((System.ComponentModel.ISupportInitialize)pbPersonsImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvUsers).EndInit();
             cmsUsers.ResumeLayout(false);
