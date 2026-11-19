@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             splitContainer1 = new SplitContainer();
-            pictureBox1 = new PictureBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
             label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            txtUserName = new TextBox();
-            txtPassword = new TextBox();
-            chkRememberMe = new CheckBox();
-            btnLogin = new Button();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
             btnClose = new Button();
+            btnLogin = new Button();
+            chkRememberMe = new CheckBox();
+            txtPassword = new TextBox();
+            txtUserName = new TextBox();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -79,49 +79,6 @@
             splitContainer1.SplitterDistance = 394;
             splitContainer1.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.IconLogo;
-            pictureBox1.Location = new Point(79, 44);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(220, 189);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(118, 251);
-            label1.Name = "label1";
-            label1.Size = new Size(132, 30);
-            label1.TabIndex = 1;
-            label1.Text = "Welcome To";
-            // 
-            // label2
-            // 
-            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(48, 284);
-            label2.Name = "label2";
-            label2.Size = new Size(267, 74);
-            label2.TabIndex = 2;
-            label2.Text = "Driving && Vehicle License Department";
-            label2.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // label3
-            // 
-            label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(79, 360);
-            label3.Name = "label3";
-            label3.Size = new Size(213, 41);
-            label3.TabIndex = 3;
-            label3.Text = "(DVLD) System";
-            label3.TextAlign = ContentAlignment.TopCenter;
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -134,66 +91,62 @@
             label4.Text = "Version 2.0";
             label4.TextAlign = ContentAlignment.TopCenter;
             // 
-            // label5
+            // label3
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Black;
-            label5.Location = new Point(87, 71);
-            label5.Name = "label5";
-            label5.Size = new Size(237, 30);
-            label5.TabIndex = 5;
-            label5.Text = "Login To Your Account";
-            label5.TextAlign = ContentAlignment.TopCenter;
+            label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(79, 360);
+            label3.Name = "label3";
+            label3.Size = new Size(213, 41);
+            label3.TabIndex = 3;
+            label3.Text = "(DVLD) System";
+            label3.TextAlign = ContentAlignment.TopCenter;
             // 
-            // label6
+            // label2
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.Black;
-            label6.Location = new Point(8, 140);
-            label6.Name = "label6";
-            label6.Size = new Size(105, 21);
-            label6.TabIndex = 6;
-            label6.Text = "• UserName:";
-            label6.TextAlign = ContentAlignment.TopCenter;
+            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(48, 284);
+            label2.Name = "label2";
+            label2.Size = new Size(267, 74);
+            label2.TabIndex = 2;
+            label2.Text = "Driving && Vehicle License Department";
+            label2.TextAlign = ContentAlignment.TopCenter;
             // 
-            // label7
+            // label1
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.Black;
-            label7.Location = new Point(8, 173);
-            label7.Name = "label7";
-            label7.Size = new Size(97, 21);
-            label7.TabIndex = 7;
-            label7.Text = "• Password:";
-            label7.TextAlign = ContentAlignment.TopCenter;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(118, 251);
+            label1.Name = "label1";
+            label1.Size = new Size(132, 30);
+            label1.TabIndex = 1;
+            label1.Text = "Welcome To";
             // 
-            // txtUserName
+            // pictureBox1
             // 
-            txtUserName.Location = new Point(117, 138);
-            txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(252, 23);
-            txtUserName.TabIndex = 8;
+            pictureBox1.Image = Properties.Resources.IconLogo;
+            pictureBox1.Location = new Point(79, 44);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(220, 189);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
-            // txtPassword
+            // btnClose
             // 
-            txtPassword.Location = new Point(117, 173);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(252, 23);
-            txtPassword.TabIndex = 9;
-            // 
-            // chkRememberMe
-            // 
-            chkRememberMe.AutoSize = true;
-            chkRememberMe.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            chkRememberMe.Location = new Point(117, 214);
-            chkRememberMe.Name = "chkRememberMe";
-            chkRememberMe.Size = new Size(120, 21);
-            chkRememberMe.TabIndex = 10;
-            chkRememberMe.Text = "Remember Me.";
-            chkRememberMe.UseVisualStyleBackColor = true;
+            btnClose.BackColor = Color.White;
+            btnClose.BackgroundImage = Properties.Resources.CloseBlack;
+            btnClose.BackgroundImageLayout = ImageLayout.Zoom;
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatStyle = FlatStyle.Flat;
+            btnClose.Location = new Point(371, 9);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(25, 22);
+            btnClose.TabIndex = 12;
+            btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
             // 
             // btnLogin
             // 
@@ -209,19 +162,68 @@
             btnLogin.Text = "LogIn";
             btnLogin.TextAlign = ContentAlignment.TopCenter;
             btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // 
-            // btnClose
+            // chkRememberMe
             // 
-            btnClose.BackColor = Color.White;
-            btnClose.BackgroundImage = Properties.Resources.CloseBlack;
-            btnClose.BackgroundImageLayout = ImageLayout.Zoom;
-            btnClose.FlatAppearance.BorderSize = 0;
-            btnClose.FlatStyle = FlatStyle.Flat;
-            btnClose.Location = new Point(371, 9);
-            btnClose.Name = "btnClose";
-            btnClose.Size = new Size(25, 22);
-            btnClose.TabIndex = 12;
-            btnClose.UseVisualStyleBackColor = false;
+            chkRememberMe.AutoSize = true;
+            chkRememberMe.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            chkRememberMe.Location = new Point(117, 214);
+            chkRememberMe.Name = "chkRememberMe";
+            chkRememberMe.Size = new Size(120, 21);
+            chkRememberMe.TabIndex = 10;
+            chkRememberMe.Text = "Remember Me.";
+            chkRememberMe.UseVisualStyleBackColor = true;
+            // 
+            // txtPassword
+            // 
+            txtPassword.Location = new Point(117, 173);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(252, 23);
+            txtPassword.TabIndex = 9;
+            // 
+            // txtUserName
+            // 
+            txtUserName.Location = new Point(117, 138);
+            txtUserName.Name = "txtUserName";
+            txtUserName.Size = new Size(252, 23);
+            txtUserName.TabIndex = 8;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.Black;
+            label7.Location = new Point(8, 173);
+            label7.Name = "label7";
+            label7.Size = new Size(97, 21);
+            label7.TabIndex = 7;
+            label7.Text = "• Password:";
+            label7.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.Black;
+            label6.Location = new Point(8, 140);
+            label6.Name = "label6";
+            label6.Size = new Size(105, 21);
+            label6.TabIndex = 6;
+            label6.Text = "• UserName:";
+            label6.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.Black;
+            label5.Location = new Point(87, 71);
+            label5.Name = "label5";
+            label5.Size = new Size(237, 30);
+            label5.TabIndex = 5;
+            label5.Text = "Login To Your Account";
+            label5.TextAlign = ContentAlignment.TopCenter;
             // 
             // frmLogin
             // 
