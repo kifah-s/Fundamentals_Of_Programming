@@ -140,7 +140,7 @@
             dgvUsers.ContextMenuStrip = cmsUsers;
             dgvUsers.Location = new Point(12, 247);
             dgvUsers.Name = "dgvUsers";
-            dgvUsers.Size = new Size(834, 258);
+            dgvUsers.Size = new Size(834, 265);
             dgvUsers.TabIndex = 7;
             dgvUsers.CellContentDoubleClick += dgvUsers_CellContentDoubleClick;
             // 
@@ -220,7 +220,7 @@
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnClose.ForeColor = Color.Red;
-            btnClose.Location = new Point(745, 511);
+            btnClose.Location = new Point(745, 518);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(100, 38);
             btnClose.TabIndex = 12;
@@ -234,7 +234,7 @@
             lblRecordsCount.AutoSize = true;
             lblRecordsCount.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblRecordsCount.ForeColor = Color.Black;
-            lblRecordsCount.Location = new Point(83, 508);
+            lblRecordsCount.Location = new Point(83, 515);
             lblRecordsCount.Name = "lblRecordsCount";
             lblRecordsCount.Size = new Size(24, 21);
             lblRecordsCount.TabIndex = 11;
@@ -246,7 +246,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(12, 508);
+            label2.Location = new Point(12, 515);
             label2.Name = "label2";
             label2.Size = new Size(74, 21);
             label2.TabIndex = 10;
@@ -257,7 +257,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(858, 553);
+            ClientSize = new Size(858, 560);
             Controls.Add(btnClose);
             Controls.Add(lblRecordsCount);
             Controls.Add(label2);
@@ -270,6 +270,7 @@
             Controls.Add(lblTitle);
             Controls.Add(pbPersonsImage);
             Name = "frmListUsers";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmListUsers";
             Load += frmListUsers_Load;
             ((System.ComponentModel.ISupportInitialize)pbPersonsImage).EndInit();

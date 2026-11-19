@@ -243,6 +243,11 @@ namespace DVLD.User
         {
             ctrlPersonCardWithFilter1.FilterFocus();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 

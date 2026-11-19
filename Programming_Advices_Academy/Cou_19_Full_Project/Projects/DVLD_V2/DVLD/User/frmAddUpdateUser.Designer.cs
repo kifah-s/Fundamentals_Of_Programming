@@ -55,7 +55,7 @@
             // 
             // lblTitle
             // 
-            lblTitle.AutoSize = true;
+            lblTitle.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblTitle.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitle.ForeColor = Color.Red;
             lblTitle.Location = new Point(218, 11);
@@ -72,7 +72,7 @@
             tcUserInfo.Location = new Point(12, 56);
             tcUserInfo.Name = "tcUserInfo";
             tcUserInfo.SelectedIndex = 0;
-            tcUserInfo.Size = new Size(731, 462);
+            tcUserInfo.Size = new Size(731, 480);
             tcUserInfo.TabIndex = 1;
             // 
             // tpPersonalInfo
@@ -84,7 +84,7 @@
             tpPersonalInfo.Location = new Point(4, 24);
             tpPersonalInfo.Name = "tpPersonalInfo";
             tpPersonalInfo.Padding = new Padding(3);
-            tpPersonalInfo.Size = new Size(723, 434);
+            tpPersonalInfo.Size = new Size(723, 452);
             tpPersonalInfo.TabIndex = 0;
             tpPersonalInfo.Text = "Personal Info";
             // 
@@ -92,7 +92,7 @@
             // 
             btnPersonInfoNext.BackColor = Color.Transparent;
             btnPersonInfoNext.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnPersonInfoNext.Location = new Point(597, 391);
+            btnPersonInfoNext.Location = new Point(599, 415);
             btnPersonInfoNext.Name = "btnPersonInfoNext";
             btnPersonInfoNext.Size = new Size(114, 32);
             btnPersonInfoNext.TabIndex = 28;
@@ -108,7 +108,7 @@
             ctrlPersonCardWithFilter1.Location = new Point(-4, 6);
             ctrlPersonCardWithFilter1.Name = "ctrlPersonCardWithFilter1";
             ctrlPersonCardWithFilter1.ShowAddPerson = true;
-            ctrlPersonCardWithFilter1.Size = new Size(720, 425);
+            ctrlPersonCardWithFilter1.Size = new Size(720, 450);
             ctrlPersonCardWithFilter1.TabIndex = 0;
             // 
             // tpLoginInfo
@@ -222,7 +222,7 @@
             // 
             btnSave.BackColor = Color.Transparent;
             btnSave.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSave.Location = new Point(414, 524);
+            btnSave.Location = new Point(414, 542);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(114, 32);
             btnSave.TabIndex = 28;
@@ -236,12 +236,13 @@
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnClose.ForeColor = Color.Red;
-            btnClose.Location = new Point(178, 524);
+            btnClose.Location = new Point(180, 542);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(114, 32);
             btnClose.TabIndex = 29;
             btnClose.Text = "Close";
             btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
             // 
             // errorProvider1
             // 
@@ -252,12 +253,15 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(758, 567);
+            ClientSize = new Size(758, 586);
             Controls.Add(btnClose);
             Controls.Add(btnSave);
             Controls.Add(tcUserInfo);
             Controls.Add(lblTitle);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmAddUpdateUser";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Add - Update User";
             Activated += frmAddUpdateUser_Activated;
             Load += frmAddUpdateUser_Load;
@@ -267,7 +271,6 @@
             tpLoginInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

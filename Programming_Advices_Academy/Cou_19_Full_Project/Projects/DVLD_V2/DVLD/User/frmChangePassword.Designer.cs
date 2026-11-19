@@ -45,16 +45,16 @@
             // ctrlUserCard1
             // 
             ctrlUserCard1.BackColor = Color.White;
-            ctrlUserCard1.Location = new Point(0, 0);
+            ctrlUserCard1.Location = new Point(12, 0);
             ctrlUserCard1.Name = "ctrlUserCard1";
-            ctrlUserCard1.Size = new Size(701, 414);
+            ctrlUserCard1.Size = new Size(701, 450);
             ctrlUserCard1.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 417);
+            label1.Location = new Point(23, 465);
             label1.Name = "label1";
             label1.Size = new Size(151, 21);
             label1.TabIndex = 1;
@@ -64,7 +64,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(11, 464);
+            label2.Location = new Point(22, 512);
             label2.Name = "label2";
             label2.Size = new Size(125, 21);
             label2.TabIndex = 2;
@@ -74,7 +74,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(11, 507);
+            label3.Location = new Point(22, 555);
             label3.Name = "label3";
             label3.Size = new Size(152, 21);
             label3.TabIndex = 3;
@@ -82,7 +82,7 @@
             // 
             // txtCurrentPassword
             // 
-            txtCurrentPassword.Location = new Point(169, 415);
+            txtCurrentPassword.Location = new Point(180, 463);
             txtCurrentPassword.Name = "txtCurrentPassword";
             txtCurrentPassword.Size = new Size(240, 23);
             txtCurrentPassword.TabIndex = 4;
@@ -90,7 +90,7 @@
             // 
             // txtNewPassword
             // 
-            txtNewPassword.Location = new Point(169, 462);
+            txtNewPassword.Location = new Point(180, 510);
             txtNewPassword.Name = "txtNewPassword";
             txtNewPassword.Size = new Size(240, 23);
             txtNewPassword.TabIndex = 5;
@@ -98,7 +98,7 @@
             // 
             // txtConfirmPassword
             // 
-            txtConfirmPassword.Location = new Point(169, 505);
+            txtConfirmPassword.Location = new Point(180, 553);
             txtConfirmPassword.Name = "txtConfirmPassword";
             txtConfirmPassword.Size = new Size(240, 23);
             txtConfirmPassword.TabIndex = 6;
@@ -110,7 +110,7 @@
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnClose.ForeColor = Color.Red;
-            btnClose.Location = new Point(432, 496);
+            btnClose.Location = new Point(443, 544);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(114, 32);
             btnClose.TabIndex = 30;
@@ -122,7 +122,7 @@
             // 
             btnSave.BackColor = Color.Transparent;
             btnSave.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSave.Location = new Point(572, 496);
+            btnSave.Location = new Point(576, 544);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(114, 32);
             btnSave.TabIndex = 31;
@@ -139,7 +139,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(698, 537);
+            ClientSize = new Size(698, 603);
             Controls.Add(btnSave);
             Controls.Add(btnClose);
             Controls.Add(txtConfirmPassword);
@@ -149,7 +149,10 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(ctrlUserCard1);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmChangePassword";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Change Password";
             Load += frmChangePassword_Load;
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();

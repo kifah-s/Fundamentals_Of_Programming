@@ -129,7 +129,12 @@ namespace DVLD.People.Controls
         {
             if (DesignMode) return;
 
-            cbFilterBy.SelectedIndex = 0;
+            //cbFilterBy.SelectedIndex = 0;
+
+            if (cbFilterBy.Items.Count > 0)
+            {
+                cbFilterBy.SelectedIndex = 0;
+            }
 
             txtFilterValue.Focus();
         }

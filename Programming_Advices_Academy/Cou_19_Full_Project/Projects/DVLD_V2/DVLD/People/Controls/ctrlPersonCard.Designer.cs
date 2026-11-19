@@ -80,7 +80,7 @@
             gbPersonInformation.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gbPersonInformation.Location = new Point(6, 8);
             gbPersonInformation.Name = "gbPersonInformation";
-            gbPersonInformation.Size = new Size(686, 284);
+            gbPersonInformation.Size = new Size(686, 317);
             gbPersonInformation.TabIndex = 0;
             gbPersonInformation.TabStop = false;
             gbPersonInformation.Text = "Person Information";
@@ -108,7 +108,7 @@
             pbPersonImage.Image = Properties.Resources.businessman;
             pbPersonImage.Location = new Point(465, 95);
             pbPersonImage.Name = "pbPersonImage";
-            pbPersonImage.Size = new Size(215, 159);
+            pbPersonImage.Size = new Size(215, 197);
             pbPersonImage.SizeMode = PictureBoxSizeMode.Zoom;
             pbPersonImage.TabIndex = 18;
             pbPersonImage.TabStop = false;
@@ -177,7 +177,7 @@
             // 
             lblAddress.AutoSize = true;
             lblAddress.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblAddress.Location = new Point(296, 233);
+            lblAddress.Location = new Point(75, 271);
             lblAddress.Name = "lblAddress";
             lblAddress.Size = new Size(57, 21);
             lblAddress.TabIndex = 11;
@@ -237,7 +237,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(227, 233);
+            label6.Location = new Point(6, 271);
             label6.Name = "label6";
             label6.Size = new Size(78, 21);
             label6.TabIndex = 5;
@@ -301,7 +301,7 @@
             Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Margin = new Padding(4, 3, 4, 3);
             Name = "ctrlPersonCard";
-            Size = new Size(707, 302);
+            Size = new Size(707, 340);
             gbPersonInformation.ResumeLayout(false);
             gbPersonInformation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbPersonImage).EndInit();

@@ -41,7 +41,7 @@
             ctrlPersonCardWithFilter1.Location = new Point(12, 60);
             ctrlPersonCardWithFilter1.Name = "ctrlPersonCardWithFilter1";
             ctrlPersonCardWithFilter1.ShowAddPerson = true;
-            ctrlPersonCardWithFilter1.Size = new Size(730, 406);
+            ctrlPersonCardWithFilter1.Size = new Size(730, 404);
             ctrlPersonCardWithFilter1.TabIndex = 0;
             // 
             // lblTitle
@@ -61,7 +61,7 @@
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnClose.ForeColor = Color.Red;
-            btnClose.Location = new Point(611, 449);
+            btnClose.Location = new Point(627, 483);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(100, 38);
             btnClose.TabIndex = 2;
@@ -74,7 +74,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(739, 513);
+            ClientSize = new Size(739, 533);
             Controls.Add(btnClose);
             Controls.Add(lblTitle);
             Controls.Add(ctrlPersonCardWithFilter1);
@@ -82,6 +82,7 @@
             ForeColor = SystemColors.ControlText;
             Margin = new Padding(4, 3, 4, 3);
             Name = "frmFindPerson";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmFindPerson";
             ResumeLayout(false);
             PerformLayout();

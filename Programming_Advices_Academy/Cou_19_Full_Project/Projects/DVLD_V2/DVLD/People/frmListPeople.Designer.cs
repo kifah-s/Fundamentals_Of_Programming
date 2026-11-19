@@ -89,6 +89,7 @@
             // 
             cbFilterBy.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cbFilterBy.FormattingEnabled = true;
+            cbFilterBy.Items.AddRange(new object[] { "None", "Person ID", "National No.", "First Name", "Second Name", "Third Name", "Last Name", "Nationality", "Gendor", "Phone", "Email" });
             cbFilterBy.Location = new Point(98, 182);
             cbFilterBy.Name = "cbFilterBy";
             cbFilterBy.Size = new Size(344, 25);
@@ -252,6 +253,7 @@
             Controls.Add(lblTitle);
             Controls.Add(pbPersonImage);
             Name = "frmListPeople";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmListPeople";
             Load += frmListPeople_Load;
             ((System.ComponentModel.ISupportInitialize)pbPersonImage).EndInit();

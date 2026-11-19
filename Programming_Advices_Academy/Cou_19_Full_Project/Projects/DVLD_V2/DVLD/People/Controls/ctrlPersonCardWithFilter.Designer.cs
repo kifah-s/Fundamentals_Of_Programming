@@ -100,6 +100,7 @@
             // 
             cbFilterBy.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cbFilterBy.FormattingEnabled = true;
+            cbFilterBy.Items.AddRange(new object[] { "National No.", "Person ID" });
             cbFilterBy.Location = new Point(86, 43);
             cbFilterBy.Name = "cbFilterBy";
             cbFilterBy.Size = new Size(243, 25);
@@ -122,7 +123,7 @@
             ctrlPersonCard1.Location = new Point(5, 77);
             ctrlPersonCard1.Margin = new Padding(4, 3, 4, 3);
             ctrlPersonCard1.Name = "ctrlPersonCard1";
-            ctrlPersonCard1.Size = new Size(724, 309);
+            ctrlPersonCard1.Size = new Size(724, 339);
             ctrlPersonCard1.TabIndex = 2;
             // 
             // errorProvider1
@@ -138,7 +139,7 @@
             Controls.Add(ctrlPersonCard1);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "ctrlPersonCardWithFilter";
-            Size = new Size(733, 399);
+            Size = new Size(733, 426);
             Load += ctrlPersonCardWithFilter_Load;
             gbFilter.ResumeLayout(false);
             gbFilter.PerformLayout();

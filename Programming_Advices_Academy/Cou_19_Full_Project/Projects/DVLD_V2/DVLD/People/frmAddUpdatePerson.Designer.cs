@@ -473,6 +473,7 @@
             Font = new Font("Tahoma", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "frmAddUpdatePerson";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Add / Edit Person Info.";
             Load += frmAddUpdatePerson_Load;
             groupBox1.ResumeLayout(false);

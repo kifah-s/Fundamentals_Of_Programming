@@ -28,7 +28,7 @@ namespace DVLD.User
         {
             _ResetDefaultValues();
 
-            _User = clsUser.FindByPersonID(_userID);
+            _User = clsUser.FindByUserID(_userID);
 
             if (_User == null)
             {
