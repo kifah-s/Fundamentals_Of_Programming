@@ -231,7 +231,7 @@
             currentUserInfoToolStripMenuItem.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             currentUserInfoToolStripMenuItem.Image = Properties.Resources.project;
             currentUserInfoToolStripMenuItem.Name = "currentUserInfoToolStripMenuItem";
-            currentUserInfoToolStripMenuItem.Size = new Size(202, 24);
+            currentUserInfoToolStripMenuItem.Size = new Size(250, 70);
             currentUserInfoToolStripMenuItem.Text = "Current User Info";
             // 
             // changePasswordToolStripMenuItem
@@ -239,7 +239,7 @@
             changePasswordToolStripMenuItem.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             changePasswordToolStripMenuItem.Image = Properties.Resources.reset_password;
             changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            changePasswordToolStripMenuItem.Size = new Size(202, 24);
+            changePasswordToolStripMenuItem.Size = new Size(250, 70);
             changePasswordToolStripMenuItem.Text = "Change Password";
             // 
             // signOutToolStripMenuItem
@@ -247,8 +247,9 @@
             signOutToolStripMenuItem.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             signOutToolStripMenuItem.Image = Properties.Resources.logout;
             signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            signOutToolStripMenuItem.Size = new Size(202, 24);
+            signOutToolStripMenuItem.Size = new Size(250, 70);
             signOutToolStripMenuItem.Text = "Sign Out";
+            signOutToolStripMenuItem.Click += signOutToolStripMenuItem_Click;
             // 
             // pictureBox1
             // 

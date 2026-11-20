@@ -1,4 +1,5 @@
-﻿using DVLD_Business;
+﻿using DVLD.Global_Classes;
+using DVLD_Business;
 
 namespace DVLD.Login
 {
@@ -26,14 +27,50 @@ namespace DVLD.Login
                 if (chkRememberMe.Checked)
                 {
                     // Store username and password.
+                    clsGlobal.RememberUsernameAndPassword(userName, password);
 
                 }
                 else
                 {
-                    txtUserName.Focus();
-                    MessageBox.Show("Invalid Username/Password.", "Wrong Credentials", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // store empty username and password.
+                    clsGlobal.RememberUsernameAndPassword("", "");
                 }
 
+                // Incase the user is not active.
+                if (!user.isActive)
+                {
+                    txtUserName.Focus();
+
+                    MessageBox.Show("Your account is not Active, Contact Admin.", "In Active Account", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    return;
+                }
+
+                clsGlobal.currentUser = user;
+                this.Hide();
+                frmMain frm = new frmMain(this);
+                frm.ShowDialog();
+            }
+            else
+            {
+                txtUserName.Focus();
+                MessageBox.Show("Invalid Username/Password.", "Wrong Credentials", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            string userName = "", password = "";
+
+            if (clsGlobal.GetStoredCredential(ref userName, ref password))
+            {
+                txtUserName.Text = userName;
+                txtPassword.Text = password;
+                chkRememberMe.Checked = true;
+            }
+            else
+            {
+                chkRememberMe.Checked = false;
             }
         }
     }

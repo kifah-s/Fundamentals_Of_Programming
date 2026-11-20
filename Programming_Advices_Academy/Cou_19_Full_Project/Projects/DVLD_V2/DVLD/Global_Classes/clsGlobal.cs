@@ -2,7 +2,7 @@
 
 namespace DVLD.Global_Classes
 {
-    internal class clsGlobal
+    internal static class clsGlobal
     {
         public static clsUser currentUser;
 
