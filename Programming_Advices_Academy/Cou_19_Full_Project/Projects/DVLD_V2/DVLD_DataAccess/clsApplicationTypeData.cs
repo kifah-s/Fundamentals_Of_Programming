@@ -87,7 +87,7 @@ namespace DVLD_DataAccess
             return dt;
         }
 
-        public static int addNewApplicationType(string title, float fees)
+        public static int AddNewApplicationType(string title, float fees)
         {
             int applicationTypeID = -1;
 
