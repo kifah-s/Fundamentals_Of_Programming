@@ -86,5 +86,44 @@ namespace DVLD_DataAccess
 
             return dt;
         }
+
+        public static int addNewApplicationType(string title, float fees)
+        {
+            int applicationTypeID = -1;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+
+            string query = @"INSERT INTO ApplicationTypes(ApplicationTypeTitle, ApplicationFees)
+                            Values(@title, @fees)
+
+                            SELECT SCOPE_IDENTITY();";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue(@"title", title);
+            command.Parameters.AddWithValue(@"fees", fees);
+
+            try
+            {
+                connection.Open();
+
+                object result = command.ExecuteScalar();
+
+                if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                {
+                    applicationTypeID = insertedID;
+                }
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return applicationTypeID;
+        }
     }
 }

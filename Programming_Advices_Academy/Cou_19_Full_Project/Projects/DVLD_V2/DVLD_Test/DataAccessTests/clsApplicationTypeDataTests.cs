@@ -40,5 +40,19 @@ namespace DVLD_Test.DataAccessTests
                 Console.WriteLine("[EMPTY / ERROR] DataTable has no rows or an exception occurred.");
             }
         }
+
+        public static void TestAddNewApplicationType(string title, float fees)
+        {
+            int newID = clsApplicationTypeData.addNewApplicationType(title, fees);
+
+            if (newID != -1)
+            {
+                Console.WriteLine($"[PASS] Inserted successfully! New ApplicationTypeID: {newID} | Title: {title} | Fees: {fees}");
+            }
+            else
+            {
+                Console.WriteLine($"[FAIL] Could not insert ApplicationType with Title: {title}");
+            }
+        }
     }
 }
