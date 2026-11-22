@@ -125,7 +125,7 @@
             tpLoginInfo.Location = new Point(4, 24);
             tpLoginInfo.Name = "tpLoginInfo";
             tpLoginInfo.Padding = new Padding(3);
-            tpLoginInfo.Size = new Size(723, 434);
+            tpLoginInfo.Size = new Size(723, 452);
             tpLoginInfo.TabIndex = 1;
             tpLoginInfo.Text = "Login Info";
             tpLoginInfo.UseVisualStyleBackColor = true;

@@ -471,7 +471,8 @@
             Controls.Add(label1);
             Controls.Add(lblTitle);
             Font = new Font("Tahoma", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmAddUpdatePerson";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Add / Edit Person Info.";

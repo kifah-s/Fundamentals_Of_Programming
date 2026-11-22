@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace DVLD.Applications.Application_Types
+{
+    public partial class frmListApplicationTypes : Form
+    {
+        public frmListApplicationTypes()
+        {
+            InitializeComponent();
+        }
+    }
+}
