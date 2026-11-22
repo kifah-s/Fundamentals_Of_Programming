@@ -36,5 +36,12 @@ namespace DVLD
 
             this.Close();
         }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmChangePassword frm = new frmChangePassword(clsGlobal.currentUser.userID);
+
+            frm.ShowDialog();
+        }
     }
 }

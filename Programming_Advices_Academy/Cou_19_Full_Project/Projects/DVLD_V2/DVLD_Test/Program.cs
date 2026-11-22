@@ -53,7 +53,8 @@ namespace DVLD_Test
             // ---------------------------------------------------------------
 
             // clsApplicationTypeDataTests ..
-            clsApplicationTypeDataTests.TestGetApplicationTypeInfoByID(10);
+            //clsApplicationTypeDataTests.TestGetApplicationTypeInfoByID(10);
+            clsApplicationTypeDataTests.TestGetAllApplicationTypes();
 
 
             Console.ReadKey();
