@@ -1,4 +1,6 @@
-﻿namespace DVLD_Test
+﻿using DVLD_Test.DataAccessTests;
+
+namespace DVLD_Test
 {
     internal class Program
     {
@@ -50,7 +52,8 @@
 
             // ---------------------------------------------------------------
 
-
+            // clsApplicationTypeDataTests ..
+            clsApplicationTypeDataTests.TestGetApplicationTypeInfoByID(10);
 
 
             Console.ReadKey();
