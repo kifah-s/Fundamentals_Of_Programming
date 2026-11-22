@@ -54,5 +54,19 @@ namespace DVLD_Test.DataAccessTests
                 Console.WriteLine($"[FAIL] Could not insert ApplicationType with Title: {title}");
             }
         }
+
+        public static void TestUpdateApplicationType(int applicationTypeID, string newTitle, float newFees)
+        {
+            bool isUpdated = clsApplicationTypeData.UpdateApplicationType(applicationTypeID, newTitle, newFees);
+
+            if (isUpdated)
+            {
+                Console.WriteLine($"[PASS] Updated successfully! ID: {applicationTypeID} | New Title: {newTitle} | New Fees: {newFees}");
+            }
+            else
+            {
+                Console.WriteLine($"[FAIL] Update failed (ID {applicationTypeID} not found or an error occurred).");
+            }
+        }
     }
 }
