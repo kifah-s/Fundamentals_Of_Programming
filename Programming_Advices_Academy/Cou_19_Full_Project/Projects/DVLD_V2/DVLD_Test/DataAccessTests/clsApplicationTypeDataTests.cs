@@ -43,7 +43,7 @@ namespace DVLD_Test.DataAccessTests
 
         public static void TestAddNewApplicationType(string title, float fees)
         {
-            int newID = clsApplicationTypeData.addNewApplicationType(title, fees);
+            int newID = clsApplicationTypeData.AddNewApplicationType(title, fees);
 
             if (newID != -1)
             {

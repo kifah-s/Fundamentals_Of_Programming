@@ -32,11 +32,11 @@
             pbApplicationTypesmage = new PictureBox();
             lblTitle = new Label();
             dgvApplicationTypes = new DataGridView();
+            cmsApplicationTypes = new ContextMenuStrip(components);
+            editApplicationTypeToolStripMenuItem = new ToolStripMenuItem();
             btnClose = new Button();
             lblRecordsCount = new Label();
             label2 = new Label();
-            cmsApplicationTypes = new ContextMenuStrip(components);
-            editApplicationTypeToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)pbApplicationTypesmage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvApplicationTypes).BeginInit();
             cmsApplicationTypes.SuspendLayout();
@@ -69,6 +69,7 @@
             // 
             dgvApplicationTypes.AllowUserToAddRows = false;
             dgvApplicationTypes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvApplicationTypes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvApplicationTypes.BackgroundColor = Color.White;
             dgvApplicationTypes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvApplicationTypes.ContextMenuStrip = cmsApplicationTypes;
@@ -76,6 +77,21 @@
             dgvApplicationTypes.Name = "dgvApplicationTypes";
             dgvApplicationTypes.Size = new Size(776, 198);
             dgvApplicationTypes.TabIndex = 7;
+            // 
+            // cmsApplicationTypes
+            // 
+            cmsApplicationTypes.Items.AddRange(new ToolStripItem[] { editApplicationTypeToolStripMenuItem });
+            cmsApplicationTypes.Name = "cmsApplicationTypes";
+            cmsApplicationTypes.Size = new Size(198, 26);
+            // 
+            // editApplicationTypeToolStripMenuItem
+            // 
+            editApplicationTypeToolStripMenuItem.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            editApplicationTypeToolStripMenuItem.Image = Properties.Resources.edit_2;
+            editApplicationTypeToolStripMenuItem.Name = "editApplicationTypeToolStripMenuItem";
+            editApplicationTypeToolStripMenuItem.Size = new Size(197, 22);
+            editApplicationTypeToolStripMenuItem.Text = "Edit Application Type";
+            editApplicationTypeToolStripMenuItem.Click += editApplicationTypeToolStripMenuItem_Click;
             // 
             // btnClose
             // 
@@ -90,6 +106,7 @@
             btnClose.TabIndex = 12;
             btnClose.Text = "Close";
             btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
             // 
             // lblRecordsCount
             // 
@@ -97,7 +114,7 @@
             lblRecordsCount.AutoSize = true;
             lblRecordsCount.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblRecordsCount.ForeColor = Color.Black;
-            lblRecordsCount.Location = new Point(96, 432);
+            lblRecordsCount.Location = new Point(86, 432);
             lblRecordsCount.Name = "lblRecordsCount";
             lblRecordsCount.Size = new Size(24, 21);
             lblRecordsCount.TabIndex = 11;
@@ -115,20 +132,6 @@
             label2.TabIndex = 10;
             label2.Text = "Records: ";
             // 
-            // cmsApplicationTypes
-            // 
-            cmsApplicationTypes.Items.AddRange(new ToolStripItem[] { editApplicationTypeToolStripMenuItem });
-            cmsApplicationTypes.Name = "cmsApplicationTypes";
-            cmsApplicationTypes.Size = new Size(198, 26);
-            // 
-            // editApplicationTypeToolStripMenuItem
-            // 
-            editApplicationTypeToolStripMenuItem.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            editApplicationTypeToolStripMenuItem.Image = Properties.Resources.edit_2;
-            editApplicationTypeToolStripMenuItem.Name = "editApplicationTypeToolStripMenuItem";
-            editApplicationTypeToolStripMenuItem.Size = new Size(197, 22);
-            editApplicationTypeToolStripMenuItem.Text = "Edit Application Type";
-            // 
             // frmListApplicationTypes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -143,7 +146,9 @@
             Controls.Add(lblTitle);
             Controls.Add(pbApplicationTypesmage);
             Name = "frmListApplicationTypes";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Manage Application Types";
+            Load += frmListApplicationTypes_Load;
             ((System.ComponentModel.ISupportInitialize)pbApplicationTypesmage).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvApplicationTypes).EndInit();
             cmsApplicationTypes.ResumeLayout(false);

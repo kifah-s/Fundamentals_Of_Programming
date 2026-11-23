@@ -113,6 +113,7 @@
             txtTitle.Name = "txtTitle";
             txtTitle.Size = new Size(333, 23);
             txtTitle.TabIndex = 5;
+            txtTitle.Validating += txtTitle_Validating;
             // 
             // txtFees
             // 
@@ -120,6 +121,7 @@
             txtFees.Name = "txtFees";
             txtFees.Size = new Size(333, 23);
             txtFees.TabIndex = 6;
+            txtFees.Validating += txtFees_Validating;
             // 
             // btnClose
             // 
@@ -144,6 +146,7 @@
             btnSave.TabIndex = 28;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
             // 
             // errorProvider1
             // 
@@ -171,6 +174,7 @@
             Name = "frmEditApplicationType";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Update Application Type";
+            Load += frmEditApplicationType_Load;
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();

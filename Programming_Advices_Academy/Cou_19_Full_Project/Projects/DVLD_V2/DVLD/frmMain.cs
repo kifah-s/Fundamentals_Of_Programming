@@ -1,4 +1,5 @@
-﻿using DVLD.Global_Classes;
+﻿using DVLD.Applications.Application_Types;
+using DVLD.Global_Classes;
 using DVLD.Login;
 using DVLD.People;
 using DVLD.User;
@@ -40,6 +41,20 @@ namespace DVLD
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmChangePassword frm = new frmChangePassword(clsGlobal.currentUser.userID);
+
+            frm.ShowDialog();
+        }
+
+        private void currentUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUserInfo frm = new frmUserInfo(clsGlobal.currentUser.userID);
+
+            frm.ShowDialog();
+        }
+
+        private void manageApplicationTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListApplicationTypes frm = new frmListApplicationTypes();
 
             frm.ShowDialog();
         }

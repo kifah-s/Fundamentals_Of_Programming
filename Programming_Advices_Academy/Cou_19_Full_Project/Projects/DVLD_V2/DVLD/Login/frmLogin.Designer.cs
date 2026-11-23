@@ -160,7 +160,6 @@
             btnLogin.Size = new Size(88, 35);
             btnLogin.TabIndex = 11;
             btnLogin.Text = "LogIn";
-            btnLogin.TextAlign = ContentAlignment.TopCenter;
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
             // 

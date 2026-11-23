@@ -561,5 +561,14 @@ namespace DVLD.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
+        internal static System.Drawing.Bitmap edit_2
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("edit_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
