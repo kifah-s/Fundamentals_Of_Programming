@@ -55,6 +55,20 @@
             //clsApplicationTypeDataTests.TestGetAllApplicationTypes();
             //clsApplicationTypeDataTests.TestAddNewApplicationType("Test 1", 20);
 
+            // ---------------------------------------------------------------
+
+            // clsTestTypeDataTests ..
+            //clsTestTypeDataTests.TestGetTestTypeInfoByID(1);
+            //clsTestTypeDataTests.TestGetAllTestTypes();
+            //clsTestTypeDataTests.TestAddNewTestType("Test1", "kkkkkkkk", 50);
+
+            // ---------------------------------------------------------------
+
+
+
+
+
+
             Console.ReadKey();
         }
     }
