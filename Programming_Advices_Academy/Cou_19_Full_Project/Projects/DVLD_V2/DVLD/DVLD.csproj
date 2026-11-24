@@ -163,8 +163,4 @@
 
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="Tests\Test_Types\" />
-	</ItemGroup>
-
 </Project>

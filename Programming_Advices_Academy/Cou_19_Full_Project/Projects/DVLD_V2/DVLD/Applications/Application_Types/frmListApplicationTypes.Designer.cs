@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            pbApplicationTypesmage = new PictureBox();
+            pbApplicationTypesImage = new PictureBox();
             lblTitle = new Label();
             dgvApplicationTypes = new DataGridView();
             cmsApplicationTypes = new ContextMenuStrip(components);
@@ -37,21 +37,21 @@
             btnClose = new Button();
             lblRecordsCount = new Label();
             label2 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pbApplicationTypesmage).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbApplicationTypesImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvApplicationTypes).BeginInit();
             cmsApplicationTypes.SuspendLayout();
             SuspendLayout();
             // 
-            // pbApplicationTypesmage
+            // pbApplicationTypesImage
             // 
-            pbApplicationTypesmage.Anchor = AnchorStyles.Top;
-            pbApplicationTypesmage.Image = Properties.Resources.project_management;
-            pbApplicationTypesmage.Location = new Point(299, 12);
-            pbApplicationTypesmage.Name = "pbApplicationTypesmage";
-            pbApplicationTypesmage.Size = new Size(191, 152);
-            pbApplicationTypesmage.SizeMode = PictureBoxSizeMode.Zoom;
-            pbApplicationTypesmage.TabIndex = 0;
-            pbApplicationTypesmage.TabStop = false;
+            pbApplicationTypesImage.Anchor = AnchorStyles.Top;
+            pbApplicationTypesImage.Image = Properties.Resources.project_management;
+            pbApplicationTypesImage.Location = new Point(299, 12);
+            pbApplicationTypesImage.Name = "pbApplicationTypesImage";
+            pbApplicationTypesImage.Size = new Size(191, 152);
+            pbApplicationTypesImage.SizeMode = PictureBoxSizeMode.Zoom;
+            pbApplicationTypesImage.TabIndex = 0;
+            pbApplicationTypesImage.TabStop = false;
             // 
             // lblTitle
             // 
@@ -144,12 +144,12 @@
             Controls.Add(label2);
             Controls.Add(dgvApplicationTypes);
             Controls.Add(lblTitle);
-            Controls.Add(pbApplicationTypesmage);
+            Controls.Add(pbApplicationTypesImage);
             Name = "frmListApplicationTypes";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Manage Application Types";
             Load += frmListApplicationTypes_Load;
-            ((System.ComponentModel.ISupportInitialize)pbApplicationTypesmage).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbApplicationTypesImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvApplicationTypes).EndInit();
             cmsApplicationTypes.ResumeLayout(false);
             ResumeLayout(false);
@@ -158,7 +158,7 @@
 
         #endregion
 
-        private PictureBox pbApplicationTypesmage;
+        private PictureBox pbApplicationTypesImage;
         private Label lblTitle;
         private DataGridView dgvApplicationTypes;
         private Button btnClose;
