@@ -297,5 +297,62 @@ namespace DVLD_DataAccess
 
             return activeApplicationID;
         }
+
+        public static bool DoesPersonHaveActiveApplication(int PersonID, int ApplicationTypeID)
+        {
+            // Incase the ActiveApplication ID != -1 return true.
+            return (GetActiveApplicationID(PersonID, ApplicationTypeID) != -1);
+        }
+
+        public static int GetActiveApplicationIDForLicenseClass(int personID, int applicationTypeID, int licenseClassID)
+        {
+            int activeApplicationID = -1;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+
+            string query = @"SELECT ActiveApplicationID = Applications.ApplicationID  
+                            From
+                            Applications
+                            INNER JOIN
+                            LocalDrivingLicenseApplications
+                            ON
+                            Applications.ApplicationID = LocalDrivingLicenseApplications.ApplicationID
+                            WHERE
+                            ApplicantPersonID = @applicantPersonID 
+                            and ApplicationTypeID = @applicationTypeID 
+							and LocalDrivingLicenseApplications.LicenseClassID = @licenseClassID
+                            and ApplicationStatus = 1";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@applicantPersonID", personID);
+            command.Parameters.AddWithValue("@applicationTypeID", applicationTypeID);
+            command.Parameters.AddWithValue("@licenseClassID", licenseClassID);
+
+            try
+            {
+                connection.Open();
+
+                object result = command.ExecuteScalar();
+
+                if (result != null && int.TryParse(result.ToString(), out int appID))
+                {
+                    activeApplicationID = appID;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Console.WriteLine("Error: " + ex.Message);
+                return activeApplicationID;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return activeApplicationID;
+        }
+
+
     }
 }

@@ -139,5 +139,21 @@ namespace DVLD_Test.DataAccessTests
                 );
             }
         }
+
+        public static void TestGetActiveApplicationIDForLicenseClass(int personID, int applicationTypeID, int licenseClassID)
+        {
+            int activeApplicationID = clsApplicationData.GetActiveApplicationIDForLicenseClass(personID, applicationTypeID, licenseClassID);
+
+            if (activeApplicationID != -1)
+            {
+                Console.WriteLine($"[PASS] Active Local Application found! ActiveApplicationID: {activeApplicationID} " + $"(PersonID: {personID}, ApplicationTypeID: {applicationTypeID}, LicenseClassID: {licenseClassID}, Status = 1)");
+            }
+            else
+            {
+                Console.WriteLine($"[NOT FOUND / -1] No active application (Status = 1) found for " + $"PersonID: {personID}, ApplicationTypeID: {applicationTypeID}, LicenseClassID: {licenseClassID}.");
+            }
+        }
+
+
     }
 }
