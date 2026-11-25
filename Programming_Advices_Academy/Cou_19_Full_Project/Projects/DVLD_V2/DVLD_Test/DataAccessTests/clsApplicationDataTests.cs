@@ -154,6 +154,18 @@ namespace DVLD_Test.DataAccessTests
             }
         }
 
+        public static void TestUpdateStatus(int applicationID, short newStatus)
+        {
+            bool isUpdated = clsApplicationData.UpdateStatus(applicationID, newStatus);
 
+            if (isUpdated)
+            {
+                Console.WriteLine($"[PASS] Updated status for Application #{applicationID} to NewStatus = {newStatus} (LastStatusDate updated to now).");
+            }
+            else
+            {
+                Console.WriteLine($"[FAIL] Could not update status for Application #{applicationID}. Check ID existence or constraints.");
+            }
+        }
     }
 }

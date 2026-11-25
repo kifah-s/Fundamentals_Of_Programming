@@ -353,6 +353,43 @@ namespace DVLD_DataAccess
             return activeApplicationID;
         }
 
+        public static bool UpdateStatus(int applicationID, short newStatus)
+        {
+            int rowsAffected = 0;
 
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+
+            string query = @"UPDATE Applications
+                             SET
+                             ApplicationStatus = @newStatus, 
+                             LastStatusDate = @lastStatusDate
+                             WHERE
+                             ApplicationID = @applicationID;";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@applicationID", applicationID);
+            command.Parameters.AddWithValue("@newStatus", newStatus);
+            command.Parameters.AddWithValue("@lastStatusDate", DateTime.Now);
+
+            try
+            {
+                connection.Open();
+
+                rowsAffected = command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                // Console.WriteLine("Error: " + ex.Message);
+                return false;
+            }
+
+            finally
+            {
+                connection.Close();
+            }
+
+            return (rowsAffected > 0);
+        }
     }
 }

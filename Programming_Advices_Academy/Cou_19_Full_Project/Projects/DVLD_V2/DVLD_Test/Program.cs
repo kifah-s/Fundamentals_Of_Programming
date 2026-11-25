@@ -74,7 +74,8 @@ namespace DVLD_Test
             //clsApplicationDataTests.TestDeleteApplication(138);
             //clsApplicationDataTests.TestIsApplicationExist(132);
             //clsApplicationDataTests.TestGetActiveApplicationID(personID: 1, applicationTypeID: 1);
-            clsApplicationDataTests.TestGetActiveApplicationIDForLicenseClass(1, 1, 3);
+            //clsApplicationDataTests.TestGetActiveApplicationIDForLicenseClass(1, 1, 3);
+            clsApplicationDataTests.TestUpdateStatus(132, 2);
 
 
             // ---------------------------------------------------------------
