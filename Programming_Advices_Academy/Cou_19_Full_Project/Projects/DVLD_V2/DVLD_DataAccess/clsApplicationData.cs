@@ -91,5 +91,56 @@ namespace DVLD_DataAccess
 
             return dt;
         }
+
+        public static int AddNewApplication(int applicantPersonID, DateTime applicationDate, int applicationTypeID, byte applicationStatus, DateTime lastStatusDate, float paidFees, int createdByUserID)
+        {
+            // This function will return the new person id if succeeded and -1 if not.
+            int applicationID = -1;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+
+            string query = @"INSERT INTO Applications
+                            (ApplicantPersonID, ApplicationDate, ApplicationTypeID,
+                             ApplicationStatus, LastStatusDate, PaidFees, CreatedByUserID)
+                             VALUES
+                            (@applicantPersonID, @applicationDate, @applicationTypeID,
+                             @applicationStatus, @lastStatusDate, @paidFees, @createdByUserID);
+
+                             SELECT SCOPE_IDENTITY();";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@applicantPersonID", applicantPersonID);
+            command.Parameters.AddWithValue("@applicationDate", applicationDate);
+            command.Parameters.AddWithValue("@applicationTypeID", applicationTypeID);
+            command.Parameters.AddWithValue("@applicationStatus", applicationStatus);
+            command.Parameters.AddWithValue("@lastStatusDate", lastStatusDate);
+            command.Parameters.AddWithValue("@paidFees", paidFees);
+            command.Parameters.AddWithValue("@createdByUserID", createdByUserID);
+
+            try
+            {
+                connection.Open();
+
+                object result = command.ExecuteScalar();
+
+                if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                {
+                    applicationID = insertedID;
+                }
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return applicationID;
+        }
+
+
     }
 }

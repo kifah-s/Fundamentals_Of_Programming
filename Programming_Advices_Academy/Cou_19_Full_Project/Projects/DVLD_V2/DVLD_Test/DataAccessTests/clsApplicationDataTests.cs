@@ -61,5 +61,21 @@ namespace DVLD_Test.DataAccessTests
                 Console.WriteLine("[EMPTY / ERROR] No applications found or an exception occurred.");
             }
         }
+
+        public static void TestAddNewApplication(int applicantPersonID, DateTime applicationDate, int applicationTypeID, byte applicationStatus, DateTime lastStatusDate, float paidFees, int createdByUserID)
+        {
+            int newApplicationID = clsApplicationData.AddNewApplication(applicantPersonID, applicationDate, applicationTypeID, applicationStatus,
+                                                                        lastStatusDate, paidFees, createdByUserID);
+
+            if (newApplicationID != -1)
+            {
+                Console.WriteLine($"[PASS] Inserted Application! New ApplicationID: {newApplicationID}");
+                Console.WriteLine($"PersonID: {applicantPersonID} | TypeID: {applicationTypeID} | " + $"Status: {applicationStatus} | PaidFees: {paidFees} | UserID: {createdByUserID}");
+            }
+            else
+            {
+                Console.WriteLine("[FAIL] Could not insert Application. Check foreign keys (PersonID, ApplicationTypeID, UserID) or SQL constraints.");
+            }
+        }
     }
 }
