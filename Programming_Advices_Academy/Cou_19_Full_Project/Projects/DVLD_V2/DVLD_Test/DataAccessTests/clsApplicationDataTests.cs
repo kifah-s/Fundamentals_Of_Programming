@@ -93,5 +93,19 @@ namespace DVLD_Test.DataAccessTests
                 Console.WriteLine($"[FAIL] Could not update Application #{applicationID}. Check ID existence, foreign keys, or SQL constraints.");
             }
         }
+
+        public static void TestDeleteApplication(int applicationID)
+        {
+            bool isDeleted = clsApplicationData.DeleteApplication(applicationID);
+
+            if (isDeleted)
+            {
+                Console.WriteLine($"[PASS] Deleted Application #{applicationID} successfully.");
+            }
+            else
+            {
+                Console.WriteLine($"[FAIL / NOT FOUND] Could not delete Application #{applicationID}. It may not exist or may be referenced by another table (Foreign Key).");
+            }
+        }
     }
 }

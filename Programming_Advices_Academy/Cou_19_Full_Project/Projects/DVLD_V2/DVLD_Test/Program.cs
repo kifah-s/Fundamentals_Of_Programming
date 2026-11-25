@@ -70,7 +70,8 @@ namespace DVLD_Test
             //clsApplicationDataTests.TestGetApplicationInfoByID(110);
             //clsApplicationDataTests.TestGetAllApplications();
             //clsApplicationDataTests.TestAddNewApplication(1, DateTime.Now, 5, 1, DateTime.Now, 15, 1);
-            clsApplicationDataTests.TestUpdateApplication(138, 1, DateTime.Now, 1, 2, DateTime.Now, 10, 1);
+            //clsApplicationDataTests.TestUpdateApplication(138, 1, DateTime.Now, 1, 2, DateTime.Now, 10, 1);
+            clsApplicationDataTests.TestDeleteApplication(138);
 
 
             // ---------------------------------------------------------------

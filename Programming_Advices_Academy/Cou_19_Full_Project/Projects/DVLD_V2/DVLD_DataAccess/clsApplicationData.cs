@@ -161,14 +161,14 @@ namespace DVLD_DataAccess
 
             SqlCommand command = new SqlCommand(query, connection);
 
-            command.Parameters.AddWithValue("applicationID", applicationID);
-            command.Parameters.AddWithValue("applicantPersonID", applicantPersonID);
-            command.Parameters.AddWithValue("applicationDate", applicationDate);
-            command.Parameters.AddWithValue("applicationTypeID", applicationTypeID);
-            command.Parameters.AddWithValue("applicationStatus", applicationStatus);
-            command.Parameters.AddWithValue("lastStatusDate", lastStatusDate);
-            command.Parameters.AddWithValue("paidFees", paidFees);
-            command.Parameters.AddWithValue("createdByUserID", createdByUserID);
+            command.Parameters.AddWithValue("@applicationID", applicationID);
+            command.Parameters.AddWithValue("@applicantPersonID", applicantPersonID);
+            command.Parameters.AddWithValue("@applicationDate", applicationDate);
+            command.Parameters.AddWithValue("@applicationTypeID", applicationTypeID);
+            command.Parameters.AddWithValue("@applicationStatus", applicationStatus);
+            command.Parameters.AddWithValue("@lastStatusDate", lastStatusDate);
+            command.Parameters.AddWithValue("@paidFees", paidFees);
+            command.Parameters.AddWithValue("@createdByUserID", createdByUserID);
 
             try
             {
@@ -186,9 +186,40 @@ namespace DVLD_DataAccess
                 connection.Close();
             }
 
-            return (applicationID > 0);
+            return (rowsAffected > 0);
         }
 
+        public static bool DeleteApplication(int applicationID)
+        {
+            int rowsAffected = 0;
 
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+
+            string query = @"DELETE Applications 
+                             WHERE
+                             ApplicationID = @applicationID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@applicationID", applicationID);
+
+            try
+            {
+                connection.Open();
+
+                rowsAffected = command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                // Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return (rowsAffected > 0);
+        }
     }
 }
