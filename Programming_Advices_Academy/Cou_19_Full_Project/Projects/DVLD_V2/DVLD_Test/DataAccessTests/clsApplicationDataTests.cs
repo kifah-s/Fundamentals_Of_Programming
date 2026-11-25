@@ -1,4 +1,5 @@
 ﻿using DVLD_DataAccess;
+using System.Data;
 
 namespace DVLD_Test.DataAccessTests
 {
@@ -30,6 +31,34 @@ namespace DVLD_Test.DataAccessTests
             else
             {
                 Console.WriteLine($"[NOT FOUND / ERROR] No Application found with ID: {applicationID}");
+            }
+        }
+
+        public static void TestGetAllApplications()
+        {
+            DataTable dt = clsApplicationData.GetAllApplications();
+
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                Console.WriteLine($"[PASS] Total Applications: {dt.Rows.Count}");
+                Console.WriteLine("--------------------------------------------------------------------------------");
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    Console.WriteLine(
+                        $"AppID: {row["ApplicationID"]} | " +
+                        $"PersonID: {row["ApplicantPersonID"]} | " +
+                        $"TypeID: {row["ApplicationTypeID"]} | " +
+                        $"Status: {row["ApplicationStatus"]} | " +
+                        $"Date: {row["ApplicationDate"]} | " +
+                        $"PaidFees: {row["PaidFees"]} | " +
+                        $"UserID: {row["CreatedByUserID"]}"
+                    );
+                }
+            }
+            else
+            {
+                Console.WriteLine("[EMPTY / ERROR] No applications found or an exception occurred.");
             }
         }
     }

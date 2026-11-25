@@ -67,8 +67,8 @@ namespace DVLD_Test
             // ---------------------------------------------------------------
 
             // clsApplicationDataTests ..
-            clsApplicationDataTests.TestGetApplicationInfoByID(110);
-
+            //clsApplicationDataTests.TestGetApplicationInfoByID(110);
+            clsApplicationDataTests.TestGetAllApplications();
 
             // ---------------------------------------------------------------
 
