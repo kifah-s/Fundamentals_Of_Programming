@@ -107,5 +107,19 @@ namespace DVLD_Test.DataAccessTests
                 Console.WriteLine($"[FAIL / NOT FOUND] Could not delete Application #{applicationID}. It may not exist or may be referenced by another table (Foreign Key).");
             }
         }
+
+        public static void TestIsApplicationExist(int applicationID)
+        {
+            bool isFound = clsApplicationData.IsApplicationExist(applicationID);
+
+            if (isFound)
+            {
+                Console.WriteLine($"[PASS] Application #{applicationID} EXISTS.");
+            }
+            else
+            {
+                Console.WriteLine($"[PASS / NOT FOUND] Application #{applicationID} DOES NOT EXIST.");
+            }
+        }
     }
 }
