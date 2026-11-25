@@ -77,5 +77,21 @@ namespace DVLD_Test.DataAccessTests
                 Console.WriteLine("[FAIL] Could not insert Application. Check foreign keys (PersonID, ApplicationTypeID, UserID) or SQL constraints.");
             }
         }
+
+        public static void TestUpdateApplication(int applicationID, int applicantPersonID, DateTime applicationDate, int applicationTypeID, byte applicationStatus, DateTime lastStatusDate, float paidFees, int createdByUserID)
+        {
+            bool isUpdated = clsApplicationData.UpdateApplication(applicationID, applicantPersonID, applicationDate, applicationTypeID,
+                                                                  applicationStatus, lastStatusDate, paidFees, createdByUserID);
+
+            if (isUpdated)
+            {
+                Console.WriteLine($"[PASS] Updated Application #{applicationID} successfully.");
+                Console.WriteLine($"PersonID: {applicantPersonID} | TypeID: {applicationTypeID} | " + $"Status: {applicationStatus} | PaidFees: {paidFees} | UserID: {createdByUserID}");
+            }
+            else
+            {
+                Console.WriteLine($"[FAIL] Could not update Application #{applicationID}. Check ID existence, foreign keys, or SQL constraints.");
+            }
+        }
     }
 }

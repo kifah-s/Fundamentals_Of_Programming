@@ -141,6 +141,54 @@ namespace DVLD_DataAccess
             return applicationID;
         }
 
+        public static bool UpdateApplication(int applicationID, int applicantPersonID, DateTime applicationDate, int applicationTypeID, byte applicationStatus, DateTime lastStatusDate, float paidFees, int createdByUserID)
+        {
+            int rowsAffected = 0;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+
+            string query = @"UPDATE Applications  
+                            SET
+                                ApplicantPersonID = @applicantPersonID,
+                                ApplicationDate = @applicationDate,
+                                ApplicationTypeID = @applicationTypeID,
+                                ApplicationStatus = @applicationStatus, 
+                                LastStatusDate = @lastStatusDate,
+                                PaidFees = @paidFees,
+                                CreatedByUserID = @createdByUserID
+                            WHERE
+                                ApplicationID=@applicationID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("applicationID", applicationID);
+            command.Parameters.AddWithValue("applicantPersonID", applicantPersonID);
+            command.Parameters.AddWithValue("applicationDate", applicationDate);
+            command.Parameters.AddWithValue("applicationTypeID", applicationTypeID);
+            command.Parameters.AddWithValue("applicationStatus", applicationStatus);
+            command.Parameters.AddWithValue("lastStatusDate", lastStatusDate);
+            command.Parameters.AddWithValue("paidFees", paidFees);
+            command.Parameters.AddWithValue("createdByUserID", createdByUserID);
+
+            try
+            {
+                connection.Open();
+
+                rowsAffected = command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                // Console.WriteLine("Error: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return (applicationID > 0);
+        }
+
 
     }
 }
