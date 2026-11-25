@@ -256,5 +256,46 @@ namespace DVLD_DataAccess
 
             return isFound;
         }
+
+        public static int GetActiveApplicationID(int personID, int applicationTypeID)
+        {
+            int activeApplicationID = -1;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+
+            string query = @"SELECT ActiveApplicationID = ApplicationID
+                             FROM Applications
+                             WHERE ApplicantPersonID = @applicantPersonID
+                             and ApplicationTypeID = @applicationTypeID
+                             and ApplicationStatus = 1";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@applicantPersonID", personID);
+            command.Parameters.AddWithValue("@applicationTypeID", applicationTypeID);
+
+            try
+            {
+                connection.Open();
+
+                object result = command.ExecuteScalar();
+
+                if (result != null && int.TryParse(result.ToString(), out int appID))
+                {
+                    activeApplicationID = appID;
+                }
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+                return activeApplicationID;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return activeApplicationID;
+        }
     }
 }

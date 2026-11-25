@@ -121,5 +121,23 @@ namespace DVLD_Test.DataAccessTests
                 Console.WriteLine($"[PASS / NOT FOUND] Application #{applicationID} DOES NOT EXIST.");
             }
         }
+
+        public static void TestGetActiveApplicationID(int personID, int applicationTypeID)
+        {
+            int activeApplicationID = clsApplicationData.GetActiveApplicationID(personID, applicationTypeID);
+
+            if (activeApplicationID != -1)
+            {
+                Console.WriteLine(
+                    $"[PASS] Active Application found! ActiveApplicationID: {activeApplicationID} " + $"(PersonID: {personID}, ApplicationTypeID: {applicationTypeID}, Status = 1)"
+                );
+            }
+            else
+            {
+                Console.WriteLine(
+                    $"[NOT FOUND / -1] No active application (Status = 1) found for " + $"PersonID: {personID} and ApplicationTypeID: {applicationTypeID}."
+                );
+            }
+        }
     }
 }
