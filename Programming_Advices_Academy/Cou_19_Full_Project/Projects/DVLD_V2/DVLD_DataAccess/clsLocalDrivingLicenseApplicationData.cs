@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using System.Data;
 
 namespace DVLD_DataAccess
 {
@@ -105,6 +106,46 @@ namespace DVLD_DataAccess
             }
 
             return isFound;
+        }
+
+        public static DataTable GetAllLocalDrivingLicenseApplications()
+        {
+            DataTable dt = new DataTable();
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+
+            string query = @"SELECT *
+                             FROM
+                             LocalDrivingLicenseApplications_View
+                             ORDER BY
+                             ApplicationDate DESC";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    dt.Load(reader);
+                }
+
+                reader.Close();
+            }
+
+            catch (Exception ex)
+            {
+                // Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return dt;
         }
     }
 }
