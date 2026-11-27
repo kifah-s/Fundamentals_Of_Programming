@@ -108,5 +108,19 @@ namespace DVLD_Test.DataAccessTests
                 Console.WriteLine($"[FAIL / NOT FOUND] Could not delete LocalDrivingLicenseApplication #{localDrivingLicenseApplicationID}. It may not exist or may be referenced by another table (e.g. TestAppointments).");
             }
         }
+
+        public static void TestDoesPassTestType(int localDrivingLicenseApplicationID, int testTypeID)
+        {
+            bool isPassed = clsLocalDrivingLicenseApplicationData.DoesPassTestType(localDrivingLicenseApplicationID, testTypeID);
+
+            if (isPassed)
+            {
+                Console.WriteLine($"[PASS] LocalDrivingLicenseApplication #{localDrivingLicenseApplicationID} PASSED TestType #{testTypeID}.");
+            }
+            else
+            {
+                Console.WriteLine($"[FALSE / NOT PASSED] LocalDrivingLicenseApplication #{localDrivingLicenseApplicationID} has NOT passed TestType #{testTypeID} (or no test record exists).");
+            }
+        }
     }
 }

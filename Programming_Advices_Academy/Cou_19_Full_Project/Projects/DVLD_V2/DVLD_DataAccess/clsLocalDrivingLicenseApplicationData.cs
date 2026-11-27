@@ -261,5 +261,58 @@ namespace DVLD_DataAccess
 
             return (rowsAffected > 0);
         }
+
+        public static bool DoesPassTestType(int localDrivingLicenseApplicationID, int testTypeID)
+        {
+            bool Result = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+
+            string query = @"SELECT TOP 1 TestResult
+                             FROM
+                             LocalDrivingLicenseApplications
+                             INNER JOIN
+                             TestAppointments
+                             ON
+                             LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID = TestAppointments.LocalDrivingLicenseApplicationID
+                             INNER JOIN
+                             Tests
+                             ON
+                             TestAppointments.TestAppointmentID = Tests.TestAppointmentID
+                             WHERE
+                             (LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID = @localDrivingLicenseApplicationID) 
+                             AND
+                             (TestAppointments.TestTypeID = @testTypeID)
+                             ORDER BY
+                             TestAppointments.TestAppointmentID DESC";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@localDrivingLicenseApplicationID", localDrivingLicenseApplicationID);
+            command.Parameters.AddWithValue("@testTypeID", testTypeID);
+
+            try
+            {
+                connection.Open();
+
+                object result = command.ExecuteScalar();
+
+                if (result != null && bool.TryParse(result.ToString(), out bool returnedResult))
+                {
+                    Result = returnedResult;
+                }
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return Result;
+        }
     }
 }
