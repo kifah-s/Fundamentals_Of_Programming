@@ -82,7 +82,8 @@ namespace DVLD_Test
             // clsLocalDrivingLicenseApplicationDataTests ..
             //clsLocalDrivingLicenseApplicationDataTests.TestGetLocalDrivingLicenseApplicationInfoByID(36);
             //clsLocalDrivingLicenseApplicationDataTests.TestGetLocalDrivingLicenseApplicationInfoByApplicationID(110);
-            clsLocalDrivingLicenseApplicationDataTests.TestGetAllLocalDrivingLicenseApplications();
+            //clsLocalDrivingLicenseApplicationDataTests.TestGetAllLocalDrivingLicenseApplications();
+            clsLocalDrivingLicenseApplicationDataTests.TestAddNewLocalDrivingLicenseApplication(110, 1);
 
             // ---------------------------------------------------------------
 

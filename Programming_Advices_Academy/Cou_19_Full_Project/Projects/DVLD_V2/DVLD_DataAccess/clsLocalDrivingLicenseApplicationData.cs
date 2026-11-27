@@ -147,5 +147,49 @@ namespace DVLD_DataAccess
 
             return dt;
         }
+
+        public static int AddNewLocalDrivingLicenseApplication(int applicationID, int licenseClassID)
+        {
+            // This function will return the new person id if succeeded and -1 if not.
+            int localDrivingLicenseApplicationID = -1;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+
+            string query = @"INSERT INTO
+                             LocalDrivingLicenseApplications (ApplicationID, LicenseClassID)
+                             VALUES
+                             (@applicationID, @licenseClassID);
+
+                             SELECT SCOPE_IDENTITY();";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@applicationID", applicationID);
+            command.Parameters.AddWithValue("@licenseClassID", licenseClassID);
+
+            try
+            {
+                connection.Open();
+
+                object result = command.ExecuteScalar();
+
+                if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                {
+                    localDrivingLicenseApplicationID = insertedID;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+            }
+
+            finally
+            {
+                connection.Close();
+            }
+
+            return localDrivingLicenseApplicationID;
+        }
     }
 }

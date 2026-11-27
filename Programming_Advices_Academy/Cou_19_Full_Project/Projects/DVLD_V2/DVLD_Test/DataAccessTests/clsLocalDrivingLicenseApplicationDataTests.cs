@@ -65,5 +65,20 @@ namespace DVLD_Test.DataAccessTests
             }
         }
 
+        public static void TestAddNewLocalDrivingLicenseApplication(int applicationID, int licenseClassID)
+        {
+            int newID = clsLocalDrivingLicenseApplicationData.AddNewLocalDrivingLicenseApplication(applicationID, licenseClassID);
+
+            if (newID != -1)
+            {
+                Console.WriteLine($"[PASS] Added new LocalDrivingLicenseApplication! New ID: {newID}");
+                Console.WriteLine($"ApplicationID: {applicationID} | LicenseClassID: {licenseClassID}");
+            }
+            else
+            {
+                Console.WriteLine($"[FAIL] Could not add LocalDrivingLicenseApplication. Check ApplicationID ({applicationID}), LicenseClassID ({licenseClassID}), or constraints.");
+            }
+        }
+
     }
 }
