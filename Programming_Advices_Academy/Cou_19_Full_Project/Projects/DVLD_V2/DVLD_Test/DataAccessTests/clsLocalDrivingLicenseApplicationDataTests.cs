@@ -122,5 +122,19 @@ namespace DVLD_Test.DataAccessTests
                 Console.WriteLine($"[FALSE / NOT PASSED] LocalDrivingLicenseApplication #{localDrivingLicenseApplicationID} has NOT passed TestType #{testTypeID} (or no test record exists).");
             }
         }
+
+        public static void TestDoesAttendTestType(int localDrivingLicenseApplicationID, int testTypeID)
+        {
+            bool isAttended = clsLocalDrivingLicenseApplicationData.DoesAttendTestType(localDrivingLicenseApplicationID, testTypeID);
+
+            if (isAttended)
+            {
+                Console.WriteLine($"[PASS] LocalDrivingLicenseApplication #{localDrivingLicenseApplicationID} ATTENDED TestType #{testTypeID} (test record exists).");
+            }
+            else
+            {
+                Console.WriteLine($"[FALSE / NOT ATTENDED] LocalDrivingLicenseApplication #{localDrivingLicenseApplicationID} has NO recorded test for TestType #{testTypeID}.");
+            }
+        }
     }
 }
