@@ -366,5 +366,55 @@ namespace DVLD_DataAccess
 
             return IsFound;
         }
+
+        public static byte TotalTrialsPerTest(int localDrivingLicenseApplicationID, int testTypeID)
+        {
+            byte TotalTrialsPerTest = 0;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+
+            string query = @"SELECT TotalTrialsPerTest = count(TestID)
+                             FROM
+                             LocalDrivingLicenseApplications
+                             INNER JOIN
+                             TestAppointments
+                             ON
+                             LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID = TestAppointments.LocalDrivingLicenseApplicationID
+                             INNER JOIN
+                             Tests
+                             ON
+                             TestAppointments.TestAppointmentID = Tests.TestAppointmentID
+                             WHERE
+                             (LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID = @localDrivingLicenseApplicationID) 
+                             AND
+                             (TestAppointments.TestTypeID = @testTypeID)";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@localDrivingLicenseApplicationID", localDrivingLicenseApplicationID);
+            command.Parameters.AddWithValue("@testTypeID", testTypeID);
+
+            try
+            {
+                connection.Open();
+
+                object result = command.ExecuteScalar();
+
+                if (result != null && byte.TryParse(result.ToString(), out byte Trials))
+                {
+                    TotalTrialsPerTest = Trials;
+                }
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return TotalTrialsPerTest;
+        }
     }
 }

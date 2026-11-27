@@ -136,5 +136,12 @@ namespace DVLD_Test.DataAccessTests
                 Console.WriteLine($"[FALSE / NOT ATTENDED] LocalDrivingLicenseApplication #{localDrivingLicenseApplicationID} has NO recorded test for TestType #{testTypeID}.");
             }
         }
+
+        public static void TestTotalTrialsPerTest(int localDrivingLicenseApplicationID, int testTypeID)
+        {
+            byte trialsCount = clsLocalDrivingLicenseApplicationData.TotalTrialsPerTest(localDrivingLicenseApplicationID, testTypeID);
+
+            Console.WriteLine($"[TEST] LocalDrivingLicenseApplication #{localDrivingLicenseApplicationID} | " + $"TestType #{testTypeID} => TotalTrialsPerTest: {trialsCount}");
+        }
     }
 }
