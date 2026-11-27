@@ -228,5 +228,38 @@ namespace DVLD_DataAccess
 
             return (rowsAffected > 0);
         }
+
+        public static bool DeleteLocalDrivingLicenseApplication(int localDrivingLicenseApplicationID)
+        {
+            int rowsAffected = 0;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+
+            string query = @"Delete LocalDrivingLicenseApplications 
+                             WHERE
+                             LocalDrivingLicenseApplicationID = @localDrivingLicenseApplicationID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@localDrivingLicenseApplicationID", localDrivingLicenseApplicationID);
+
+            try
+            {
+                connection.Open();
+
+                rowsAffected = command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                // Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return (rowsAffected > 0);
+        }
     }
 }

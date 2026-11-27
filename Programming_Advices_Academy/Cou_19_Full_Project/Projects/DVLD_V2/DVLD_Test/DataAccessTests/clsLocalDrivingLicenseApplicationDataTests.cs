@@ -94,5 +94,19 @@ namespace DVLD_Test.DataAccessTests
                 Console.WriteLine($"[FAIL] Could not update LocalDrivingLicenseApplication #{localDrivingLicenseApplicationID}. Check ID existence, foreign keys, or SQL constraints.");
             }
         }
+
+        public static void TestDeleteLocalDrivingLicenseApplication(int localDrivingLicenseApplicationID)
+        {
+            bool isDeleted = clsLocalDrivingLicenseApplicationData.DeleteLocalDrivingLicenseApplication(localDrivingLicenseApplicationID);
+
+            if (isDeleted)
+            {
+                Console.WriteLine($"[PASS] Deleted LocalDrivingLicenseApplication #{localDrivingLicenseApplicationID} successfully.");
+            }
+            else
+            {
+                Console.WriteLine($"[FAIL / NOT FOUND] Could not delete LocalDrivingLicenseApplication #{localDrivingLicenseApplicationID}. It may not exist or may be referenced by another table (e.g. TestAppointments).");
+            }
+        }
     }
 }
