@@ -80,5 +80,19 @@ namespace DVLD_Test.DataAccessTests
             }
         }
 
+        public static void TestUpdateLocalDrivingLicenseApplication(int localDrivingLicenseApplicationID, int applicationID, int licenseClassID)
+        {
+            bool isUpdated = clsLocalDrivingLicenseApplicationData.UpdateLocalDrivingLicenseApplication(localDrivingLicenseApplicationID, applicationID, licenseClassID);
+
+            if (isUpdated)
+            {
+                Console.WriteLine($"[PASS] Updated LocalDrivingLicenseApplication #{localDrivingLicenseApplicationID} successfully.");
+                Console.WriteLine($"ApplicationID: {applicationID} | LicenseClassID: {licenseClassID}");
+            }
+            else
+            {
+                Console.WriteLine($"[FAIL] Could not update LocalDrivingLicenseApplication #{localDrivingLicenseApplicationID}. Check ID existence, foreign keys, or SQL constraints.");
+            }
+        }
     }
 }
