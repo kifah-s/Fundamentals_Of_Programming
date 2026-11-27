@@ -55,5 +55,56 @@ namespace DVLD_DataAccess
 
             return isFound;
         }
+
+        public static bool GetLocalDrivingLicenseApplicationInfoByApplicationID(int applicationID, ref int localDrivingLicenseApplicationID, ref int licenseClassID)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+
+            string query = @"SELECT *
+                             FROM
+                             LocalDrivingLicenseApplications
+                             WHERE
+                             ApplicationID = @applicationID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@applicationID", applicationID);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    // The record was found
+                    isFound = true;
+
+                    localDrivingLicenseApplicationID = (int)reader["LocalDrivingLicenseApplicationID"];
+                    licenseClassID = (int)reader["LicenseClassID"];
+                }
+                else
+                {
+                    // The record was not found
+                    isFound = false;
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
     }
 }
