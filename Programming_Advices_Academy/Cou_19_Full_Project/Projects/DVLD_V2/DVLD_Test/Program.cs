@@ -1,6 +1,4 @@
-﻿using DVLD_Test.DataAccessTests;
-
-namespace DVLD_Test
+﻿namespace DVLD_Test
 {
     internal class Program
     {
@@ -88,8 +86,8 @@ namespace DVLD_Test
             //clsLocalDrivingLicenseApplicationDataTests.TestDeleteLocalDrivingLicenseApplication(46);
             //clsLocalDrivingLicenseApplicationDataTests.TestDoesPassTestType(36, 2);
             //clsLocalDrivingLicenseApplicationDataTests.TestDoesAttendTestType(36, 2);
-            clsLocalDrivingLicenseApplicationDataTests.TestTotalTrialsPerTest(localDrivingLicenseApplicationID: 1, testTypeID: 2);
-
+            //clsLocalDrivingLicenseApplicationDataTests.TestTotalTrialsPerTest(localDrivingLicenseApplicationID: 1, testTypeID: 2);
+            //clsLocalDrivingLicenseApplicationDataTests.TestIsThereAnActiveScheduledTest(localDrivingLicenseApplicationID: 1, testTypeID: 2);
 
             // ---------------------------------------------------------------
 

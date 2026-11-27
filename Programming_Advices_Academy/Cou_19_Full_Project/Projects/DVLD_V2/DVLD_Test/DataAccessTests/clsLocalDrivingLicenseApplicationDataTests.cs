@@ -143,5 +143,19 @@ namespace DVLD_Test.DataAccessTests
 
             Console.WriteLine($"[TEST] LocalDrivingLicenseApplication #{localDrivingLicenseApplicationID} | " + $"TestType #{testTypeID} => TotalTrialsPerTest: {trialsCount}");
         }
+
+        public static void TestIsThereAnActiveScheduledTest(int localDrivingLicenseApplicationID, int testTypeID)
+        {
+            bool hasActiveAppointment = clsLocalDrivingLicenseApplicationData.IsThereAnActiveScheduledTest(localDrivingLicenseApplicationID, testTypeID);
+
+            if (hasActiveAppointment)
+            {
+                Console.WriteLine($"[TRUE / ACTIVE] LocalDrivingLicenseApplication #{localDrivingLicenseApplicationID} HAS an active (unlocked) appointment for TestType #{testTypeID}.");
+            }
+            else
+            {
+                Console.WriteLine($"[FALSE / NO ACTIVE] LocalDrivingLicenseApplication #{localDrivingLicenseApplicationID} has NO active appointment for TestType #{testTypeID}.");
+            }
+        }
     }
 }
